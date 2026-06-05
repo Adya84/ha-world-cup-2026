@@ -214,7 +214,6 @@ The dashboard now safely falls back to `TBC` where venue/stadium data is not ava
 
 Copy everything inside the block below into Home Assistant's Raw Configuration Editor.
 
-```yaml
 views:
   - type: sections
     sections:
@@ -224,9 +223,146 @@ views:
             heading_style: title
           - type: markdown
             content: |
-              <h2>🏆 Group A</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} A</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group A', 'GROUP_A'] %}
@@ -271,9 +407,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group B</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} B</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group B', 'GROUP_B'] %}
@@ -318,9 +591,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group E</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} E</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group E', 'GROUP_E'] %}
@@ -365,9 +775,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group F</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} F</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group F', 'GROUP_F'] %}
@@ -412,9 +959,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group I</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} I</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group I', 'GROUP_I'] %}
@@ -459,9 +1143,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group J</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} J</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group J', 'GROUP_J'] %}
@@ -511,9 +1332,146 @@ views:
             heading_style: title
           - type: markdown
             content: |
-              <h2>🏆 Group C</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} C</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group C', 'GROUP_C'] %}
@@ -558,9 +1516,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group D</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} D</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group D', 'GROUP_D'] %}
@@ -605,9 +1700,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group G</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} G</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group G', 'GROUP_G'] %}
@@ -652,9 +1884,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group H</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} H</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group H', 'GROUP_H'] %}
@@ -699,9 +2068,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group K</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} K</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group K', 'GROUP_K'] %}
@@ -746,9 +2252,146 @@ views:
                 }
           - type: markdown
             content: |
-              <h2>🏆 Group L</h2> <table>
+              {% set lang = states('input_select.world_cup_language') %}
+              {% set T = {
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+              }.get(lang, {}) %}
+
+              <h2>🏆 {{ T.group | default('Group') }} L</h2>
+              <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>{{ T.pos | default('Pos') }}</th><th>{{ T.team | default('Team') }}</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>{{ T.pts | default('Pts') }}</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group L', 'GROUP_L'] %}
@@ -796,10 +2439,145 @@ views:
       card:
         type: markdown
         text_only: true
-        content: |-
+        content: |
+          {% set lang = states('input_select.world_cup_language') %}
+          {% set T = {
+          'English': {
+            'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+            'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+            'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+            'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+            'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+            'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+            'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+            'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+            'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+          },
+          'French': {
+            'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+            'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+            'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+            'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+            'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+            'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+            'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+            'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+            'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+          },
+          'German': {
+            'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+            'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+            'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+            'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+            'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+            'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+            'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+            'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+            'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+          },
+          'Spanish': {
+            'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+            'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+            'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+            'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+            'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+            'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+            'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+            'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+            'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+          },
+          'Italian': {
+            'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+            'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+            'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+            'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+            'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+            'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+            'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+            'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+            'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+          },
+          'Dutch': {
+            'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+            'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+            'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+            'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+            'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+            'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+            'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+            'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+            'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+          },
+          'Portuguese': {
+            'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+            'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+            'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+            'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+            'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+            'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+            'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+            'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+            'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+          },
+          'Arabic': {
+            'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+            'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+            'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+            'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+            'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+            'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+            'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+            'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+            'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+          },
+          'Japanese': {
+            'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+            'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+            'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+            'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+            'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+            'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+            'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+            'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+            'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+          },
+          'Korean': {
+            'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+            'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+            'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+            'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+            'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+            'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+            'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+            'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+            'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+          },
+          'Swedish': {
+            'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+            'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+            'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+            'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+            'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+            'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+            'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+            'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+            'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+          },
+          'Norwegian': {
+            'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+            'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+            'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+            'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+            'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+            'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+            'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+            'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+            'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+          }
+          }.get(lang, {}) %}
 
           # 🏆 FIFA WORLD CUP 2026
-          Group Stage
+          {{ T.group | default('Group') }} Stage
 
           **USA • Canada • Mexico 2026**
     badges: []
@@ -824,7 +2602,7 @@ views:
     cards: []
     max_columns: 4
     title: 🏆 FIFA WORLD CUP 2026 Group Stage
-    icon: ''
+    icon: ""
     show_icon_and_title: true
   - type: sections
     max_columns: 4
@@ -837,7 +2615,158 @@ views:
             heading_style: title
           - type: markdown
             content: >
-              # 🏟️ Fixtures & Stadiums
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
 
 
               {% set matches = state_attr('sensor.world_cup_fixtures',
@@ -846,34 +2775,28 @@ views:
 
               {% if matches | count == 0 %}
 
-              No fixtures available.
+              {{ T.no_fixtures | default('No fixtures available.') }}
 
               {% else %}
 
 
               <table>
                 <tr>
-                  <th>Date</th>
-                  <th>KO</th>
-                  <th>Match</th>
-                  <th>Stadium</th>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
                   <th></th>
                 </tr>
 
                 {% for m in matches[:20] %}
-                {% set status =
-                  '🕒' if m.status in ['TIMED', 'SCHEDULED']
-                  else '🔴' if m.status == 'IN_PLAY'
-                  else '⏸️' if m.status == 'PAUSED'
-                  else '🏁' if m.status == 'FINISHED'
-                  else '•'
-                %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
                 <tr>
                   <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
                   <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
                   <td>{{ m.home }} v {{ m.away }}</td>
                   <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
-                  <td>{{ status }}</td>
+                  <td>{{ status_icon }}</td>
                 </tr>
                 {% endfor %}
               </table>
@@ -881,11 +2804,12 @@ views:
 
               {% endif %}
 
+
               <div style="margin-top:10px; color:#00ffff;">
-                🕒 Scheduled &nbsp;&nbsp;
-                🔴 Live &nbsp;&nbsp;
-                ⏸️ Half Time &nbsp;&nbsp;
-                🏁 Full Time
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
               </div>
             card_mod:
               style: |
@@ -938,343 +2862,973 @@ views:
             heading_style: title
           - type: markdown
             content: >
-              # 🏆 GOLDEN BOOT RACE
-
-
-              {% set scorers = state_attr('sensor.world_cup_top_scorers',
-              'scorers') or [] %}
-
-
-              {% if scorers | count == 0 %}
-
-              ⚽ No goals scored yet
-
-              {% else %}
-
-              {% for p in scorers[:10] %}
-
-              <div class="scorer-row">
-                <span class="rank">
-                  {% if loop.index == 1 %}🥇
-                  {% elif loop.index == 2 %}🥈
-                  {% elif loop.index == 3 %}🥉
-                  {% else %}{{ loop.index }}.
-                  {% endif %}
-                </span>
-                <span class="player">{{ p.name }}</span>
-                <span class="team">{{ p.team }}</span>
-                <span class="goals">{{ p.goals }} ⚽</span>
-              </div>
-
-              {% endfor %}
-
-              {% endif %}
-            card_mod:
-              style:
-                ha-markdown$: |
-                  h1 {
-                    text-align: center;
-                    font-size: 22px;
-                    margin-bottom: 18px;
-                    color: #ffffff;
-                    text-shadow:
-                      0 0 8px rgba(0,255,255,0.9),
-                      0 0 18px rgba(0,255,255,0.55);
-                  }
-
-                  .scorer-row {
-                    display: grid;
-                    grid-template-columns: 42px 1fr 90px 58px;
-                    align-items: center;
-                    gap: 8px;
-                    margin: 8px 0;
-                    padding: 10px 12px;
-                    border-radius: 14px;
-                    background: rgba(0,255,255,0.07);
-                    border: 1px solid rgba(0,255,255,0.18);
-                  }
-
-                  .rank {
-                    font-size: 18px;
-                    text-align: center;
-                  }
-
-                  .player {
-                    font-weight: 700;
-                    color: #ffffff;
-                  }
-
-                  .team {
-                    font-size: 12px;
-                    color: rgba(255,255,255,0.7);
-                    text-align: right;
-                  }
-
-                  .goals {
-                    font-weight: 800;
-                    color: #00ffff;
-                    text-align: right;
-                    text-shadow: 0 0 8px rgba(0,255,255,0.7);
-                  }
-                .: |
-                  ha-card {
-                    background: rgba(5,14,24,0.38) !important;
-                    backdrop-filter: blur(10px);
-                    border-radius: 24px;
-                    border: 2px solid rgba(0,255,255,0.38);
-                    box-shadow:
-                      0 0 20px rgba(0,255,255,0.25),
-                      inset 0 0 14px rgba(0,255,255,0.08);
-                    padding: 14px;
-                    overflow: hidden;
-                  }
-          - type: markdown
-            content: >
-              {% set scorers =
-              state_attr('sensor.world_cup_top_scorers','scorers') or [] %}
-
-
-              # 👟 GOLDEN BOOT PODIUM
-
-
-              {% if scorers|count >= 3 %}
-
-
-              <div class="podium">
-
-
-              <div class="second">
-
-              <div class="player">{{ scorers[1].name }}</div>
-
-              <div class="team">{{ scorers[1].team }}</div>
-
-              <div class="goals">{{ scorers[1].goals }} ⚽</div>
-
-              <div class="step silver">2</div>
-
-              </div>
-
-
-              <div class="first">
-
-              <div class="player winner">{{ scorers[0].name }}</div>
-
-              <div class="team">{{ scorers[0].team }}</div>
-
-              <div class="goals">{{ scorers[0].goals }} ⚽</div>
-
-              <div class="step gold">👟</div>
-
-              </div>
-
-
-              <div class="third">
-
-              <div class="player">{{ scorers[2].name }}</div>
-
-              <div class="team">{{ scorers[2].team }}</div>
-
-              <div class="goals">{{ scorers[2].goals }} ⚽</div>
-
-              <div class="step bronze">3</div>
-
-              </div>
-
-
-              </div>
-
-
-              {% else %}
-
-              Waiting for scorer data...
-
-              {% endif %}
-            card_mod:
-              style:
-                ha-markdown$: |
-                  h1 {
-                    text-align: center;
-                    font-size: 22px;
-                    margin-bottom: 18px;
-                    color: #ffffff;
-                    text-shadow:
-                      0 0 8px rgba(0,255,255,0.9),
-                      0 0 18px rgba(0,255,255,0.55);
-                  }
-
-                  .scorer-row {
-                    display: grid;
-                    grid-template-columns: 42px 1fr 90px 58px;
-                    align-items: center;
-                    gap: 8px;
-                    margin: 8px 0;
-                    padding: 10px 12px;
-                    border-radius: 14px;
-                    background: rgba(0,255,255,0.07);
-                    border: 1px solid rgba(0,255,255,0.18);
-                  }
-
-                  .rank {
-                    font-size: 18px;
-                    text-align: center;
-                  }
-
-                  .player {
-                    font-weight: 700;
-                    color: #ffffff;
-                  }
-
-                  .team {
-                    font-size: 12px;
-                    color: rgba(255,255,255,0.7);
-                    text-align: right;
-                  }
-
-                  .goals {
-                    font-weight: 800;
-                    color: #00ffff;
-                    text-align: right;
-                    text-shadow: 0 0 8px rgba(0,255,255,0.7);
-                  }
-                .: |
-                  ha-card {
-                    background: rgba(5,14,24,0.38) !important;
-                    backdrop-filter: blur(10px);
-                    border-radius: 24px;
-                    border: 2px solid rgba(0,255,255,0.38);
-                    box-shadow:
-                      0 0 20px rgba(0,255,255,0.25),
-                      inset 0 0 14px rgba(0,255,255,0.08);
-                    padding: 14px;
-                    overflow: hidden;
-                  }
-          - type: markdown
-            content: >
-              # 🎯 TOP ASSISTS
-
-
-              {% set assists = state_attr('sensor.world_cup_top_assists',
-              'assists') or [] %}
-
-
-              {% if assists | count == 0 %}
-
-              🎯 No assists yet
-
-              {% else %}
-
-              {% for p in assists[:10] %}
-
-              <div class="assist-row">
-                <span class="rank">
-                  {% if loop.index == 1 %}🎯👑
-                  {% elif loop.index == 2 %}🎯
-                  {% elif loop.index == 3 %}🎯
-                  {% else %}{{ loop.index }}.
-                  {% endif %}
-                </span>
-                <span class="player">{{ p.name }}</span>
-                <span class="team">{{ p.team }}</span>
-                <span class="assists">{{ p.assists }} 🎯</span>
-              </div>
-
-              {% endfor %}
-
-              {% endif %}
-            card_mod:
-              style:
-                ha-markdown$: |
-                  h1 {
-                    text-align: center;
-                    font-size: 22px;
-                    margin-bottom: 18px;
-                    color: #ffffff;
-                    text-shadow:
-                      0 0 8px rgba(0,255,255,0.9),
-                      0 0 18px rgba(0,255,255,0.55);
-                  }
-
-                  .scorer-row {
-                    display: grid;
-                    grid-template-columns: 42px 1fr 90px 58px;
-                    align-items: center;
-                    gap: 8px;
-                    margin: 8px 0;
-                    padding: 10px 12px;
-                    border-radius: 14px;
-                    background: rgba(0,255,255,0.07);
-                    border: 1px solid rgba(0,255,255,0.18);
-                  }
-
-                  .rank {
-                    font-size: 18px;
-                    text-align: center;
-                  }
-
-                  .player {
-                    font-weight: 700;
-                    color: #ffffff;
-                  }
-
-                  .team {
-                    font-size: 12px;
-                    color: rgba(255,255,255,0.7);
-                    text-align: right;
-                  }
-
-                  .goals {
-                    font-weight: 800;
-                    color: #00ffff;
-                    text-align: right;
-                    text-shadow: 0 0 8px rgba(0,255,255,0.7);
-                  }
-                .: |
-                  ha-card {
-                    background: rgba(5,14,24,0.38) !important;
-                    backdrop-filter: blur(10px);
-                    border-radius: 24px;
-                    border: 2px solid rgba(0,255,255,0.38);
-                    box-shadow:
-                      0 0 20px rgba(0,255,255,0.25),
-                      inset 0 0 14px rgba(0,255,255,0.08);
-                    padding: 14px;
-                    overflow: hidden;
-                  }
-          - type: markdown
-            content: >
-              ## ⚽ Latest Results
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
 
 
               {% set matches = state_attr('sensor.world_cup_fixtures',
               'matches') or [] %}
 
-              {% set results = matches | selectattr('status', 'eq', 'FINISHED')
-              | list %}
 
+              {% if matches | count == 0 %}
 
-              {% if results | count == 0 %}
-                No matches completed yet.
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
               {% else %}
 
 
               <table>
                 <tr>
-                  <th>Match</th>
-                  <th>Score</th>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
                 </tr>
 
-                {% for m in results[-10:] | reverse %}
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
                 <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
                   <td>{{ m.home }} v {{ m.away }}</td>
-                  <td>{{ m.homeScore }} - {{ m.awayScore }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
                 </tr>
                 {% endfor %}
-
               </table>
 
 
               {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
+            card_mod:
+              style:
+                ha-markdown$: |
+                  h1 {
+                    text-align: center;
+                    font-size: 22px;
+                    margin-bottom: 18px;
+                    color: #ffffff;
+                    text-shadow:
+                      0 0 8px rgba(0,255,255,0.9),
+                      0 0 18px rgba(0,255,255,0.55);
+                  }
+
+                  .scorer-row {
+                    display: grid;
+                    grid-template-columns: 42px 1fr 90px 58px;
+                    align-items: center;
+                    gap: 8px;
+                    margin: 8px 0;
+                    padding: 10px 12px;
+                    border-radius: 14px;
+                    background: rgba(0,255,255,0.07);
+                    border: 1px solid rgba(0,255,255,0.18);
+                  }
+
+                  .rank {
+                    font-size: 18px;
+                    text-align: center;
+                  }
+
+                  .player {
+                    font-weight: 700;
+                    color: #ffffff;
+                  }
+
+                  .team {
+                    font-size: 12px;
+                    color: rgba(255,255,255,0.7);
+                    text-align: right;
+                  }
+
+                  .goals {
+                    font-weight: 800;
+                    color: #00ffff;
+                    text-align: right;
+                    text-shadow: 0 0 8px rgba(0,255,255,0.7);
+                  }
+                .: |
+                  ha-card {
+                    background: rgba(5,14,24,0.38) !important;
+                    backdrop-filter: blur(10px);
+                    border-radius: 24px;
+                    border: 2px solid rgba(0,255,255,0.38);
+                    box-shadow:
+                      0 0 20px rgba(0,255,255,0.25),
+                      inset 0 0 14px rgba(0,255,255,0.08);
+                    padding: 14px;
+                    overflow: hidden;
+                  }
+          - type: markdown
+            content: >
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
+
+
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
+
+
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
+              {% else %}
+
+
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+
+              {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
+            card_mod:
+              style:
+                ha-markdown$: |
+                  h1 {
+                    text-align: center;
+                    font-size: 22px;
+                    margin-bottom: 18px;
+                    color: #ffffff;
+                    text-shadow:
+                      0 0 8px rgba(0,255,255,0.9),
+                      0 0 18px rgba(0,255,255,0.55);
+                  }
+
+                  .scorer-row {
+                    display: grid;
+                    grid-template-columns: 42px 1fr 90px 58px;
+                    align-items: center;
+                    gap: 8px;
+                    margin: 8px 0;
+                    padding: 10px 12px;
+                    border-radius: 14px;
+                    background: rgba(0,255,255,0.07);
+                    border: 1px solid rgba(0,255,255,0.18);
+                  }
+
+                  .rank {
+                    font-size: 18px;
+                    text-align: center;
+                  }
+
+                  .player {
+                    font-weight: 700;
+                    color: #ffffff;
+                  }
+
+                  .team {
+                    font-size: 12px;
+                    color: rgba(255,255,255,0.7);
+                    text-align: right;
+                  }
+
+                  .goals {
+                    font-weight: 800;
+                    color: #00ffff;
+                    text-align: right;
+                    text-shadow: 0 0 8px rgba(0,255,255,0.7);
+                  }
+                .: |
+                  ha-card {
+                    background: rgba(5,14,24,0.38) !important;
+                    backdrop-filter: blur(10px);
+                    border-radius: 24px;
+                    border: 2px solid rgba(0,255,255,0.38);
+                    box-shadow:
+                      0 0 20px rgba(0,255,255,0.25),
+                      inset 0 0 14px rgba(0,255,255,0.08);
+                    padding: 14px;
+                    overflow: hidden;
+                  }
+          - type: markdown
+            content: >
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
+
+
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
+
+
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
+              {% else %}
+
+
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+
+              {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
+            card_mod:
+              style:
+                ha-markdown$: |
+                  h1 {
+                    text-align: center;
+                    font-size: 22px;
+                    margin-bottom: 18px;
+                    color: #ffffff;
+                    text-shadow:
+                      0 0 8px rgba(0,255,255,0.9),
+                      0 0 18px rgba(0,255,255,0.55);
+                  }
+
+                  .scorer-row {
+                    display: grid;
+                    grid-template-columns: 42px 1fr 90px 58px;
+                    align-items: center;
+                    gap: 8px;
+                    margin: 8px 0;
+                    padding: 10px 12px;
+                    border-radius: 14px;
+                    background: rgba(0,255,255,0.07);
+                    border: 1px solid rgba(0,255,255,0.18);
+                  }
+
+                  .rank {
+                    font-size: 18px;
+                    text-align: center;
+                  }
+
+                  .player {
+                    font-weight: 700;
+                    color: #ffffff;
+                  }
+
+                  .team {
+                    font-size: 12px;
+                    color: rgba(255,255,255,0.7);
+                    text-align: right;
+                  }
+
+                  .goals {
+                    font-weight: 800;
+                    color: #00ffff;
+                    text-align: right;
+                    text-shadow: 0 0 8px rgba(0,255,255,0.7);
+                  }
+                .: |
+                  ha-card {
+                    background: rgba(5,14,24,0.38) !important;
+                    backdrop-filter: blur(10px);
+                    border-radius: 24px;
+                    border: 2px solid rgba(0,255,255,0.38);
+                    box-shadow:
+                      0 0 20px rgba(0,255,255,0.25),
+                      inset 0 0 14px rgba(0,255,255,0.08);
+                    padding: 14px;
+                    overflow: hidden;
+                  }
+          - type: markdown
+            content: >
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
+
+
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
+
+
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
+              {% else %}
+
+
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+
+              {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1309,21 +3863,202 @@ views:
             heading_style: title
           - type: markdown
             content: >
-              <center> 🏆<br> <b>FIFA WORLD CUP</b><br> <b>2026</b><br> USA •
-              CANADA • MEXICO<br><br>
+              {% set lang = states('input_select.world_cup_language') %}
 
-              <b>PRE TOURNAMENT</b><br> <span
-              style="font-size:52px;font-weight:900;color:#00ffff;"> {{
-              states('sensor.world_cup_countdown') }} </span><br> DAYS TO
-              GO<br><br>
+              {% set T = {
 
-              <b style="font-size:28px;color:#00ffff;"> {{
-              states('sensor.world_cup_total_matches_played') }} / 104 </b><br>
-              MATCHES PLAYED<br><br>
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
 
-              ⚽ {{ states('sensor.world_cup_total_goals') }} GOALS<br> 📈 {{
-              states('sensor.world_cup_goals_per_match') }} GOALS / MATCH
-              </center>
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
+
+
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
+
+
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
+              {% else %}
+
+
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+
+              {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1340,19 +4075,202 @@ views:
                 }
           - type: markdown
             content: >
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
+
+
               {% set matches = state_attr('sensor.world_cup_fixtures',
-              'matches') or [] %} {% set live = matches | selectattr('status',
-              'eq', 'IN_PLAY') | list %}
+              'matches') or [] %}
 
-              <h2>🔴 Live Matches</h2>
 
-              {% if live | count == 0 %}
-                <p>No live matches right now.</p>
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
               {% else %}
-                {% for m in live %}
-                  <h3>{{ m.home }} {{ m.homeScore }} - {{ m.awayScore }} {{ m.away }}</h3>
+
+
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
                 {% endfor %}
+              </table>
+
+
               {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1404,34 +4322,202 @@ views:
             heading_style: title
           - type: markdown
             content: >
-              # ⏳ Tournament Countdown
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
 
 
-              {% set kickoff = as_datetime('2026-06-11 20:00:00') %}
-
-              {% set days = ((as_timestamp(kickoff) - as_timestamp(now())) /
-              86400) | int %}
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
 
 
-              🏆 World Cup starts in
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
 
 
-              # {{ days }} Days
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
+              {% else %}
 
 
-              {% if days <= 1 %}
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
 
-              ## 🏆 KICKOFF IMMINENT 🏆
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
 
-              {% elif days <= 3 %}
-
-              ## ⚽ Almost Time!
-
-              {% elif days <= 7 %}
-
-              ## 🏟️ One Week To Go
 
               {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1479,19 +4565,202 @@ views:
                 }
           - type: markdown
             content: >
-              # ⚽ Next Kick-Off
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
+
 
               {% set matches = state_attr('sensor.world_cup_fixtures',
-              'matches') or [] %} {% set upcoming = matches |
-              selectattr('status','in',['TIMED','SCHEDULED']) | list %}
+              'matches') or [] %}
 
-              {% if upcoming %}
-                {{ upcoming[0].home }} v {{ upcoming[0].away }}
 
-                🕒 {{ as_timestamp(upcoming[0].utcDate) | timestamp_custom('%d %b %H:%M', true) }}
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
               {% else %}
-                No upcoming fixtures found.
+
+
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+
               {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1503,7 +4772,7 @@ views:
                   padding: 14px;
                 }
     header: {}
-    icon: ''
+    icon: ""
     show_icon_and_title: true
     cards: []
     background:
@@ -1532,48 +4801,202 @@ views:
         cards:
           - type: markdown
             content: >
-              <h1>🏆 Knockout Stage</h1>
+              {% set lang = states('input_select.world_cup_language') %}
 
-              <h3>Live bracket will fill automatically when knockout fixtures
-              appear.</h3>
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
 
 
               {% set matches = state_attr('sensor.world_cup_fixtures',
               'matches') or [] %}
 
-              {% set ko = matches | rejectattr('stage', 'eq', 'GROUP_STAGE') |
-              list %}
 
+              {% if matches | count == 0 %}
 
-              {% if ko | count == 0 %}
-                <p>No knockout fixtures available yet.</p>
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
               {% else %}
 
 
               <table>
                 <tr>
-                  <th>Stage</th>
-                  <th>Date</th>
-                  <th>KO</th>
-                  <th>Match</th>
-                  <th>Status</th>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
                 </tr>
 
-                {% for m in ko %}
-                {% set status = 'Scheduled' if m.status == 'TIMED' else 'Scheduled' if m.status == 'SCHEDULED' else 'LIVE' if m.status == 'IN_PLAY' else 'Half Time' if m.status == 'PAUSED' else 'Finished' if m.status == 'FINISHED' else m.status %}
-
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
                 <tr>
-                  <td>{{ m.stage | replace('_', ' ') | title if m.stage else '-' }}</td>
                   <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
                   <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
                   <td>{{ m.home }} v {{ m.away }}</td>
-                  <td>{{ status }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
                 </tr>
                 {% endfor %}
               </table>
 
 
               {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1616,58 +5039,202 @@ views:
                 }
           - type: markdown
             content: >
-              # 🏆 Knockout Stage
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
 
 
-              {% set played = states('sensor.world_cup_total_matches_played') |
-              int(0) %}
-
-              {% set stage = states('sensor.world_cup_current_stage') %}
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
 
 
-              {% if played == 0 %}
-                {% set teams = 48 %}
-                {% set fixed_stage = 'Pre Tournament' %}
-              {% elif stage == 'Group Stage' %}
-                {% set teams = 48 %}
-                {% set fixed_stage = stage %}
-              {% elif stage == 'Last 32' %}
-                {% set teams = 32 %}
-                {% set fixed_stage = stage %}
-              {% elif stage == 'Last 16' %}
-                {% set teams = 16 %}
-                {% set fixed_stage = stage %}
-              {% elif stage == 'Quarter Finals' %}
-                {% set teams = 8 %}
-                {% set fixed_stage = stage %}
-              {% elif stage == 'Semi Finals' %}
-                {% set teams = 4 %}
-                {% set fixed_stage = stage %}
-              {% elif stage == 'Final' %}
-                {% set teams = 2 %}
-                {% set fixed_stage = stage %}
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
+
+
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
               {% else %}
-                {% set teams = 48 %}
-                {% set fixed_stage = stage %}
+
+
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+
               {% endif %}
 
 
-              ## {{ fixed_stage }}
-
-
-              ### 🌍 Teams Remaining
-
-              # {{ teams }}
-
-
-              ### ❌ Eliminated
-
-              # {{ 48 - teams }}
-
-
-              ### ⚽ Matches Remaining
-
-              # {{ states('sensor.world_cup_matches_remaining') }}
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1704,37 +5271,202 @@ views:
             heading_style: title
           - type: markdown
             content: >
-              # 📊 Tournament Progress
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
 
 
-              {% set played = states('sensor.world_cup_total_matches_played') |
-              int(0) %}
-
-              {% set total = 104 %}
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
 
 
-              Matches Played:
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
 
 
-              ## {{ played }}
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
+              {% else %}
 
 
-              Total Matches:
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
 
 
-              ## {{ total }}
+              {% endif %}
 
 
-              Matches Remaining:
-
-
-              ## {{ total - played }}
-
-
-              Progress:
-
-
-              ## {{ ((played / total) * 100) | round(1) }}%
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1756,23 +5488,203 @@ views:
           - type: heading
             heading_style: title
           - type: markdown
-            content: |
-              # 🏆 Tournament Records
+            content: >
+              {% set lang = states('input_select.world_cup_language') %}
 
-              ## 🔥 Biggest Win
-              # {{ states('sensor.world_cup_biggest_win') }}
+              {% set T = {
 
-              ## 🚀 Highest Scoring Match
-              # {{ states('sensor.world_cup_highest_scoring_match') }}
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
 
-              ## ⚽ Top Scoring Team
-              # {{ states('sensor.world_cup_top_scoring_team') }}
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
 
-              ## 🛡️ Best Defence
-              # {{ states('sensor.world_cup_best_defence') }}
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
 
-              ## 📰 Latest Result
-              # {{ states('sensor.world_cup_latest_result') }}
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
+
+
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
+
+
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
+              {% else %}
+
+
+              <table>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
+
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+
+              {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1811,7 +5723,144 @@ views:
       card:
         type: markdown
         text_only: true
-        content: 🏆 KNOCKOUT STAGE
+        content: |
+          {% set lang = states('input_select.world_cup_language') %}
+          {% set T = {
+          'English': {
+            'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+            'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+            'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+            'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+            'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+            'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+            'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+            'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+            'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+          },
+          'French': {
+            'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+            'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+            'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+            'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+            'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+            'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+            'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+            'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+            'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+          },
+          'German': {
+            'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+            'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+            'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+            'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+            'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+            'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+            'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+            'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+            'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+          },
+          'Spanish': {
+            'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+            'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+            'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+            'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+            'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+            'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+            'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+            'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+            'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+          },
+          'Italian': {
+            'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+            'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+            'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+            'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+            'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+            'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+            'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+            'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+            'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+          },
+          'Dutch': {
+            'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+            'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+            'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+            'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+            'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+            'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+            'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+            'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+            'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+          },
+          'Portuguese': {
+            'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+            'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+            'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+            'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+            'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+            'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+            'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+            'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+            'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+          },
+          'Arabic': {
+            'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+            'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+            'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+            'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+            'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+            'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+            'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+            'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+            'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+          },
+          'Japanese': {
+            'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+            'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+            'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+            'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+            'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+            'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+            'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+            'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+            'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+          },
+          'Korean': {
+            'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+            'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+            'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+            'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+            'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+            'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+            'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+            'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+            'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+          },
+          'Swedish': {
+            'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+            'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+            'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+            'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+            'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+            'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+            'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+            'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+            'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+          },
+          'Norwegian': {
+            'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+            'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+            'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+            'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+            'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+            'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+            'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+            'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+            'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+          }
+          }.get(lang, {}) %}
+
+          🏆 {{ T.knockout_stage | default('Knockout Stage') }}
     background:
       opacity: 60
       alignment: center
@@ -1838,35 +5887,203 @@ views:
       - type: grid
         cards:
           - type: markdown
-            content: |
-              # 🏟️ World Cup Stadiums
+            content: >
+              {% set lang = states('input_select.world_cup_language') %}
 
-              <table width="100%">
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
+
+
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
+
+
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
+
+
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
+              {% else %}
+
+
+              <table>
                 <tr>
-                  <th>Country</th>
-                  <th>Stadium</th>
-                  <th>City</th>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
                 </tr>
 
-                <tr><td>🇺🇸 USA</td><td>MetLife Stadium</td><td>New York/New Jersey</td></tr>
-                <tr><td>🇺🇸 USA</td><td>AT&T Stadium</td><td>Dallas</td></tr>
-                <tr><td>🇺🇸 USA</td><td>SoFi Stadium</td><td>Los Angeles</td></tr>
-                <tr><td>🇺🇸 USA</td><td>Mercedes-Benz Stadium</td><td>Atlanta</td></tr>
-                <tr><td>🇺🇸 USA</td><td>Lincoln Financial Field</td><td>Philadelphia</td></tr>
-                <tr><td>🇺🇸 USA</td><td>NRG Stadium</td><td>Houston</td></tr>
-                <tr><td>🇺🇸 USA</td><td>Hard Rock Stadium</td><td>Miami</td></tr>
-                <tr><td>🇺🇸 USA</td><td>Lumen Field</td><td>Seattle</td></tr>
-                <tr><td>🇺🇸 USA</td><td>Levi's Stadium</td><td>San Francisco</td></tr>
-                <tr><td>🇺🇸 USA</td><td>Arrowhead Stadium</td><td>Kansas City</td></tr>
-                <tr><td>🇺🇸 USA</td><td>Gillette Stadium</td><td>Boston</td></tr>
-
-                <tr><td>🇨🇦 Canada</td><td>BC Place</td><td>Vancouver</td></tr>
-                <tr><td>🇨🇦 Canada</td><td>BMO Field</td><td>Toronto</td></tr>
-
-                <tr><td>🇲🇽 Mexico</td><td>Estadio Azteca</td><td>Mexico City</td></tr>
-                <tr><td>🇲🇽 Mexico</td><td>Estadio BBVA</td><td>Monterrey</td></tr>
-                <tr><td>🇲🇽 Mexico</td><td>Estadio Akron</td><td>Guadalajara</td></tr>
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
               </table>
+
+
+              {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -1912,61 +6129,202 @@ views:
             heading_style: title
           - type: markdown
             content: >
-              # 📊 World Cup Stats Hub
+              {% set lang = states('input_select.world_cup_language') %}
+
+              {% set T = {
+
+              'English': {
+                'group':'Group','team':'Team','pos':'Pos','pts':'Pts','country':'Country','stadium':'Stadium','city':'City','date':'Date','ko':'KO','match':'Match','score':'Score','stage':'Stage','status':'Status',
+                'fixtures_stadiums':'Fixtures & Stadiums','no_fixtures':'No fixtures available.','scheduled':'Scheduled','live':'Live','half_time':'Half Time','full_time':'Full Time',
+                'golden_boot_race':'Golden Boot Race','no_goals':'No goals scored yet','golden_boot_podium':'Golden Boot Podium','waiting_scorer_data':'Waiting for scorer data...',
+                'top_assists':'Top Assists','no_assists':'No assists yet','latest_results':'Latest Results','no_matches_completed':'No matches completed yet.',
+                'pre_tournament':'Pre Tournament','days_to_go':'Days To Go','matches_played':'Matches Played','goals':'Goals','goals_per_match':'Goals / Match',
+                'live_matches':'Live Matches','no_live_matches':'No live matches right now.','tournament_countdown':'Tournament Countdown','world_cup_starts_in':'World Cup starts in','days':'Days','kickoff_imminent':'Kickoff Imminent','almost_time':'Almost Time!','one_week_to_go':'One Week To Go','next_kickoff':'Next Kick-Off','no_upcoming':'No upcoming fixtures found.',
+                'knockout_stage':'Knockout Stage','live_bracket':'Live bracket will fill automatically when knockout fixtures appear.','no_knockout':'No knockout fixtures available yet.','teams_remaining':'Teams Remaining','eliminated':'Eliminated','matches_remaining':'Matches Remaining',
+                'tournament_progress':'Tournament Progress','total_matches':'Total Matches','progress':'Progress','tournament_records':'Tournament Records','biggest_win':'Biggest Win','highest_scoring_match':'Highest Scoring Match','top_scoring_team':'Top Scoring Team','best_defence':'Best Defence','latest_result':'Latest Result',
+                'stats_hub':'World Cup Stats Hub','world_cup_stadiums':'World Cup Stadiums','current_stage':'Current Stage','days_until_kickoff':'Days Until Kickoff','days_until_final':'Days Until Final','teams_entered':'Teams Entered','teams_eliminated':'Teams Eliminated','total_goals':'Total Goals','live_goals':'Live Goals','top_scorer':'Top Scorer','top_assist':'Top Assist'
+              },
+
+              'French': {
+                'group':'Groupe','team':'Équipe','pos':'Pos','pts':'Pts','country':'Pays','stadium':'Stade','city':'Ville','date':'Date','ko':'Coup d’envoi','match':'Match','score':'Score','stage':'Phase','status':'Statut',
+                'fixtures_stadiums':'Matchs & Stades','no_fixtures':'Aucun match disponible.','scheduled':'Programmé','live':'En direct','half_time':'Mi-temps','full_time':'Terminé',
+                'golden_boot_race':'Course au Soulier d’Or','no_goals':'Aucun but marqué pour le moment','golden_boot_podium':'Podium du Soulier d’Or','waiting_scorer_data':'En attente des données des buteurs...',
+                'top_assists':'Meilleurs passeurs','no_assists':'Aucune passe décisive pour le moment','latest_results':'Derniers résultats','no_matches_completed':'Aucun match terminé pour le moment.',
+                'pre_tournament':'Avant tournoi','days_to_go':'Jours restants','matches_played':'Matchs joués','goals':'Buts','goals_per_match':'Buts / match',
+                'live_matches':'Matchs en direct','no_live_matches':'Aucun match en direct actuellement.','tournament_countdown':'Compte à rebours du tournoi','world_cup_starts_in':'La Coupe du Monde commence dans','days':'Jours','kickoff_imminent':'Coup d’envoi imminent','almost_time':'C’est presque l’heure !','one_week_to_go':'Plus qu’une semaine','next_kickoff':'Prochain coup d’envoi','no_upcoming':'Aucun match à venir trouvé.',
+                'knockout_stage':'Phase finale','live_bracket':'Le tableau se remplira automatiquement quand les matchs seront disponibles.','no_knockout':'Aucun match de phase finale disponible pour le moment.','teams_remaining':'Équipes restantes','eliminated':'Éliminées','matches_remaining':'Matchs restants',
+                'tournament_progress':'Progression du tournoi','total_matches':'Total des matchs','progress':'Progression','tournament_records':'Records du tournoi','biggest_win':'Plus large victoire','highest_scoring_match':'Match le plus prolifique','top_scoring_team':'Meilleure attaque','best_defence':'Meilleure défense','latest_result':'Dernier résultat',
+                'stats_hub':'Centre des statistiques','world_cup_stadiums':'Stades de la Coupe du Monde','current_stage':'Phase actuelle','days_until_kickoff':'Jours avant le coup d’envoi','days_until_final':'Jours avant la finale','teams_entered':'Équipes engagées','teams_eliminated':'Équipes éliminées','total_goals':'Total des buts','live_goals':'Buts en direct','top_scorer':'Meilleur buteur','top_assist':'Meilleur passeur'
+              },
+
+              'German': {
+                'group':'Gruppe','team':'Team','pos':'Pos','pts':'Pkt','country':'Land','stadium':'Stadion','city':'Stadt','date':'Datum','ko':'Anstoß','match':'Spiel','score':'Ergebnis','stage':'Phase','status':'Status',
+                'fixtures_stadiums':'Spielplan & Stadien','no_fixtures':'Keine Spiele verfügbar.','scheduled':'Geplant','live':'Live','half_time':'Halbzeit','full_time':'Beendet',
+                'golden_boot_race':'Rennen um den Goldenen Schuh','no_goals':'Noch keine Tore erzielt','golden_boot_podium':'Podium Goldener Schuh','waiting_scorer_data':'Warte auf Torschützendaten...',
+                'top_assists':'Top-Vorlagen','no_assists':'Noch keine Vorlagen','latest_results':'Aktuelle Ergebnisse','no_matches_completed':'Noch keine Spiele beendet.',
+                'pre_tournament':'Vor dem Turnier','days_to_go':'Tage übrig','matches_played':'Gespielte Spiele','goals':'Tore','goals_per_match':'Tore / Spiel',
+                'live_matches':'Live-Spiele','no_live_matches':'Derzeit keine Live-Spiele.','tournament_countdown':'Turnier-Countdown','world_cup_starts_in':'Die WM beginnt in','days':'Tage','kickoff_imminent':'Anstoß steht bevor','almost_time':'Fast soweit!','one_week_to_go':'Noch eine Woche','next_kickoff':'Nächster Anstoß','no_upcoming':'Keine kommenden Spiele gefunden.',
+                'knockout_stage':'K.-o.-Phase','live_bracket':'Der Spielplan füllt sich automatisch, sobald K.-o.-Spiele verfügbar sind.','no_knockout':'Noch keine K.-o.-Spiele verfügbar.','teams_remaining':'Verbleibende Teams','eliminated':'Ausgeschieden','matches_remaining':'Verbleibende Spiele',
+                'tournament_progress':'Turnierfortschritt','total_matches':'Spiele gesamt','progress':'Fortschritt','tournament_records':'Turnierrekorde','biggest_win':'Höchster Sieg','highest_scoring_match':'Torreichstes Spiel','top_scoring_team':'Torgefährlichstes Team','best_defence':'Beste Abwehr','latest_result':'Letztes Ergebnis',
+                'stats_hub':'Statistikzentrum','world_cup_stadiums':'WM-Stadien','current_stage':'Aktuelle Phase','days_until_kickoff':'Tage bis zum Anstoß','days_until_final':'Tage bis zum Finale','teams_entered':'Teilnehmende Teams','teams_eliminated':'Ausgeschiedene Teams','total_goals':'Tore gesamt','live_goals':'Live-Tore','top_scorer':'Top-Torschütze','top_assist':'Top-Vorlage'
+              },
+
+              'Spanish': {
+                'group':'Grupo','team':'Equipo','pos':'Pos','pts':'Pts','country':'País','stadium':'Estadio','city':'Ciudad','date':'Fecha','ko':'Inicio','match':'Partido','score':'Marcador','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Partidos y Estadios','no_fixtures':'No hay partidos disponibles.','scheduled':'Programado','live':'En vivo','half_time':'Descanso','full_time':'Finalizado',
+                'golden_boot_race':'Carrera por la Bota de Oro','no_goals':'Aún no se han marcado goles','golden_boot_podium':'Podio de la Bota de Oro','waiting_scorer_data':'Esperando datos de goleadores...',
+                'top_assists':'Máximos asistentes','no_assists':'Aún no hay asistencias','latest_results':'Últimos resultados','no_matches_completed':'Aún no hay partidos finalizados.',
+                'pre_tournament':'Pre torneo','days_to_go':'Días restantes','matches_played':'Partidos jugados','goals':'Goles','goals_per_match':'Goles / partido',
+                'live_matches':'Partidos en vivo','no_live_matches':'No hay partidos en vivo ahora.','tournament_countdown':'Cuenta atrás del torneo','world_cup_starts_in':'La Copa del Mundo empieza en','days':'Días','kickoff_imminent':'Inicio inminente','almost_time':'¡Ya casi!','one_week_to_go':'Falta una semana','next_kickoff':'Próximo inicio','no_upcoming':'No se encontraron próximos partidos.',
+                'knockout_stage':'Fase eliminatoria','live_bracket':'El cuadro se completará automáticamente cuando aparezcan los partidos.','no_knockout':'Aún no hay partidos de eliminatoria disponibles.','teams_remaining':'Equipos restantes','eliminated':'Eliminados','matches_remaining':'Partidos restantes',
+                'tournament_progress':'Progreso del torneo','total_matches':'Partidos totales','progress':'Progreso','tournament_records':'Récords del torneo','biggest_win':'Mayor victoria','highest_scoring_match':'Partido con más goles','top_scoring_team':'Equipo más goleador','best_defence':'Mejor defensa','latest_result':'Último resultado',
+                'stats_hub':'Centro de estadísticas','world_cup_stadiums':'Estadios de la Copa del Mundo','current_stage':'Fase actual','days_until_kickoff':'Días hasta el inicio','days_until_final':'Días hasta la final','teams_entered':'Equipos participantes','teams_eliminated':'Equipos eliminados','total_goals':'Goles totales','live_goals':'Goles en vivo','top_scorer':'Máximo goleador','top_assist':'Máximo asistente'
+              },
+
+              'Italian': {
+                'group':'Gruppo','team':'Squadra','pos':'Pos','pts':'Pt','country':'Paese','stadium':'Stadio','city':'Città','date':'Data','ko':'Calcio d’inizio','match':'Partita','score':'Risultato','stage':'Fase','status':'Stato',
+                'fixtures_stadiums':'Partite e Stadi','no_fixtures':'Nessuna partita disponibile.','scheduled':'Programmato','live':'In diretta','half_time':'Intervallo','full_time':'Finita',
+                'golden_boot_race':'Corsa alla Scarpa d’Oro','no_goals':'Ancora nessun gol','golden_boot_podium':'Podio Scarpa d’Oro','waiting_scorer_data':'In attesa dei dati marcatori...',
+                'top_assists':'Migliori assist','no_assists':'Ancora nessun assist','latest_results':'Ultimi risultati','no_matches_completed':'Nessuna partita completata.',
+                'pre_tournament':'Pre torneo','days_to_go':'Giorni rimanenti','matches_played':'Partite giocate','goals':'Gol','goals_per_match':'Gol / partita',
+                'live_matches':'Partite in diretta','no_live_matches':'Nessuna partita in diretta ora.','tournament_countdown':'Conto alla rovescia','world_cup_starts_in':'La Coppa del Mondo inizia tra','days':'Giorni','kickoff_imminent':'Calcio d’inizio imminente','almost_time':'Ci siamo quasi!','one_week_to_go':'Manca una settimana','next_kickoff':'Prossimo calcio d’inizio','no_upcoming':'Nessuna partita futura trovata.',
+                'knockout_stage':'Fase a eliminazione','live_bracket':'Il tabellone si compilerà automaticamente quando appariranno le partite.','no_knockout':'Nessuna partita a eliminazione disponibile.','teams_remaining':'Squadre rimaste','eliminated':'Eliminate','matches_remaining':'Partite rimanenti',
+                'tournament_progress':'Avanzamento torneo','total_matches':'Partite totali','progress':'Avanzamento','tournament_records':'Record del torneo','biggest_win':'Vittoria più larga','highest_scoring_match':'Partita con più gol','top_scoring_team':'Squadra più prolifica','best_defence':'Miglior difesa','latest_result':'Ultimo risultato',
+                'stats_hub':'Centro statistiche','world_cup_stadiums':'Stadi della Coppa del Mondo','current_stage':'Fase attuale','days_until_kickoff':'Giorni al calcio d’inizio','days_until_final':'Giorni alla finale','teams_entered':'Squadre iscritte','teams_eliminated':'Squadre eliminate','total_goals':'Gol totali','live_goals':'Gol live','top_scorer':'Capocannoniere','top_assist':'Miglior assistman'
+              },
+
+              'Dutch': {
+                'group':'Groep','team':'Team','pos':'Pos','pts':'Ptn','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Aftrap','match':'Wedstrijd','score':'Score','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Wedstrijden & Stadions','no_fixtures':'Geen wedstrijden beschikbaar.','scheduled':'Gepland','live':'Live','half_time':'Rust','full_time':'Afgelopen',
+                'golden_boot_race':'Gouden Schoen-race','no_goals':'Nog geen doelpunten','golden_boot_podium':'Gouden Schoen-podium','waiting_scorer_data':'Wachten op topscorergegevens...',
+                'top_assists':'Top assists','no_assists':'Nog geen assists','latest_results':'Laatste uitslagen','no_matches_completed':'Nog geen wedstrijden afgerond.',
+                'pre_tournament':'Voor het toernooi','days_to_go':'Dagen te gaan','matches_played':'Gespeelde wedstrijden','goals':'Doelpunten','goals_per_match':'Doelpunten / wedstrijd',
+                'live_matches':'Live wedstrijden','no_live_matches':'Nu geen live wedstrijden.','tournament_countdown':'Toernooi-aftelling','world_cup_starts_in':'Het WK begint over','days':'Dagen','kickoff_imminent':'Aftrap nadert','almost_time':'Bijna zover!','one_week_to_go':'Nog één week','next_kickoff':'Volgende aftrap','no_upcoming':'Geen komende wedstrijden gevonden.',
+                'knockout_stage':'Knock-outfase','live_bracket':'Het schema wordt automatisch gevuld zodra knock-outwedstrijden verschijnen.','no_knockout':'Nog geen knock-outwedstrijden beschikbaar.','teams_remaining':'Teams over','eliminated':'Uitgeschakeld','matches_remaining':'Wedstrijden over',
+                'tournament_progress':'Toernooivoortgang','total_matches':'Totaal wedstrijden','progress':'Voortgang','tournament_records':'Toernooirecords','biggest_win':'Grootste zege','highest_scoring_match':'Doelpuntrijkste wedstrijd','top_scoring_team':'Meest scorende team','best_defence':'Beste verdediging','latest_result':'Laatste uitslag',
+                'stats_hub':'WK statistieken','world_cup_stadiums':'WK-stadions','current_stage':'Huidige fase','days_until_kickoff':'Dagen tot aftrap','days_until_final':'Dagen tot finale','teams_entered':'Deelnemende teams','teams_eliminated':'Uitgeschakelde teams','total_goals':'Totaal doelpunten','live_goals':'Live doelpunten','top_scorer':'Topscorer','top_assist':'Top assist'
+              },
+
+              'Portuguese': {
+                'group':'Grupo','team':'Equipe','pos':'Pos','pts':'Pts','country':'País','stadium':'Estádio','city':'Cidade','date':'Data','ko':'Início','match':'Jogo','score':'Placar','stage':'Fase','status':'Estado',
+                'fixtures_stadiums':'Jogos e Estádios','no_fixtures':'Nenhum jogo disponível.','scheduled':'Agendado','live':'Ao vivo','half_time':'Intervalo','full_time':'Finalizado',
+                'golden_boot_race':'Corrida pela Chuteira de Ouro','no_goals':'Ainda nenhum gol marcado','golden_boot_podium':'Pódio da Chuteira de Ouro','waiting_scorer_data':'Aguardando dados dos artilheiros...',
+                'top_assists':'Mais assistências','no_assists':'Ainda sem assistências','latest_results':'Últimos resultados','no_matches_completed':'Nenhum jogo finalizado ainda.',
+                'pre_tournament':'Pré-torneio','days_to_go':'Dias restantes','matches_played':'Jogos disputados','goals':'Gols','goals_per_match':'Gols / jogo',
+                'live_matches':'Jogos ao vivo','no_live_matches':'Nenhum jogo ao vivo agora.','tournament_countdown':'Contagem regressiva','world_cup_starts_in':'A Copa do Mundo começa em','days':'Dias','kickoff_imminent':'Início iminente','almost_time':'Quase na hora!','one_week_to_go':'Falta uma semana','next_kickoff':'Próximo início','no_upcoming':'Nenhum jogo futuro encontrado.',
+                'knockout_stage':'Fase eliminatória','live_bracket':'A chave será preenchida automaticamente quando os jogos aparecerem.','no_knockout':'Nenhum jogo eliminatório disponível ainda.','teams_remaining':'Equipes restantes','eliminated':'Eliminadas','matches_remaining':'Jogos restantes',
+                'tournament_progress':'Progresso do torneio','total_matches':'Total de jogos','progress':'Progresso','tournament_records':'Recordes do torneio','biggest_win':'Maior vitória','highest_scoring_match':'Jogo com mais gols','top_scoring_team':'Equipe com mais gols','best_defence':'Melhor defesa','latest_result':'Último resultado',
+                'stats_hub':'Central de estatísticas','world_cup_stadiums':'Estádios da Copa do Mundo','current_stage':'Fase atual','days_until_kickoff':'Dias até o início','days_until_final':'Dias até a final','teams_entered':'Equipes participantes','teams_eliminated':'Equipes eliminadas','total_goals':'Total de gols','live_goals':'Gols ao vivo','top_scorer':'Artilheiro','top_assist':'Líder de assistências'
+              },
+
+              'Arabic': {
+                'group':'المجموعة','team':'الفريق','pos':'المركز','pts':'النقاط','country':'الدولة','stadium':'الملعب','city':'المدينة','date':'التاريخ','ko':'البداية','match':'المباراة','score':'النتيجة','stage':'المرحلة','status':'الحالة',
+                'fixtures_stadiums':'المباريات والملاعب','no_fixtures':'لا توجد مباريات متاحة.','scheduled':'مجدولة','live':'مباشر','half_time':'نهاية الشوط الأول','full_time':'انتهت',
+                'golden_boot_race':'سباق الحذاء الذهبي','no_goals':'لم تُسجل أهداف بعد','golden_boot_podium':'منصة الحذاء الذهبي','waiting_scorer_data':'بانتظار بيانات الهدافين...',
+                'top_assists':'أكثر التمريرات الحاسمة','no_assists':'لا توجد تمريرات حاسمة بعد','latest_results':'آخر النتائج','no_matches_completed':'لا توجد مباريات مكتملة بعد.',
+                'pre_tournament':'قبل البطولة','days_to_go':'الأيام المتبقية','matches_played':'المباريات الملعوبة','goals':'الأهداف','goals_per_match':'الأهداف / مباراة',
+                'live_matches':'المباريات المباشرة','no_live_matches':'لا توجد مباريات مباشرة الآن.','tournament_countdown':'العد التنازلي للبطولة','world_cup_starts_in':'كأس العالم يبدأ خلال','days':'أيام','kickoff_imminent':'البداية وشيكة','almost_time':'اقترب الوقت!','one_week_to_go':'أسبوع واحد متبقٍ','next_kickoff':'البداية القادمة','no_upcoming':'لم يتم العثور على مباريات قادمة.',
+                'knockout_stage':'مرحلة خروج المغلوب','live_bracket':'سيتم ملء الجدول تلقائياً عند ظهور مباريات خروج المغلوب.','no_knockout':'لا توجد مباريات خروج مغلوب متاحة بعد.','teams_remaining':'الفرق المتبقية','eliminated':'المستبعدة','matches_remaining':'المباريات المتبقية',
+                'tournament_progress':'تقدم البطولة','total_matches':'إجمالي المباريات','progress':'التقدم','tournament_records':'أرقام البطولة','biggest_win':'أكبر فوز','highest_scoring_match':'أكثر مباراة أهدافاً','top_scoring_team':'أكثر فريق تسجيلاً','best_defence':'أفضل دفاع','latest_result':'آخر نتيجة',
+                'stats_hub':'مركز الإحصائيات','world_cup_stadiums':'ملاعب كأس العالم','current_stage':'المرحلة الحالية','days_until_kickoff':'أيام حتى البداية','days_until_final':'أيام حتى النهائي','teams_entered':'الفرق المشاركة','teams_eliminated':'الفرق المستبعدة','total_goals':'إجمالي الأهداف','live_goals':'الأهداف المباشرة','top_scorer':'الهداف','top_assist':'أفضل صانع أهداف'
+              },
+
+              'Japanese': {
+                'group':'グループ','team':'チーム','pos':'順位','pts':'勝点','country':'国','stadium':'スタジアム','city':'都市','date':'日付','ko':'開始','match':'試合','score':'スコア','stage':'ステージ','status':'状態',
+                'fixtures_stadiums':'試合日程とスタジアム','no_fixtures':'試合日程はありません。','scheduled':'予定','live':'ライブ','half_time':'ハーフタイム','full_time':'終了',
+                'golden_boot_race':'ゴールデンブーツ争い','no_goals':'まだゴールはありません','golden_boot_podium':'ゴールデンブーツ表彰台','waiting_scorer_data':'得点者データを待っています...',
+                'top_assists':'アシストランキング','no_assists':'まだアシストはありません','latest_results':'最新結果','no_matches_completed':'終了した試合はまだありません。',
+                'pre_tournament':'大会前','days_to_go':'残り日数','matches_played':'消化試合','goals':'ゴール','goals_per_match':'ゴール / 試合',
+                'live_matches':'ライブ試合','no_live_matches':'現在ライブ試合はありません。','tournament_countdown':'大会カウントダウン','world_cup_starts_in':'ワールドカップ開幕まで','days':'日','kickoff_imminent':'キックオフ間近','almost_time':'もうすぐです！','one_week_to_go':'あと1週間','next_kickoff':'次のキックオフ','no_upcoming':'今後の試合が見つかりません。',
+                'knockout_stage':'決勝トーナメント','live_bracket':'決勝トーナメントの試合が出ると自動で反映されます。','no_knockout':'決勝トーナメントの試合はまだありません。','teams_remaining':'残りチーム','eliminated':'敗退','matches_remaining':'残り試合',
+                'tournament_progress':'大会進行状況','total_matches':'総試合数','progress':'進行率','tournament_records':'大会記録','biggest_win':'最大得点差勝利','highest_scoring_match':'最多得点試合','top_scoring_team':'最多得点チーム','best_defence':'最少失点','latest_result':'最新結果',
+                'stats_hub':'統計ハブ','world_cup_stadiums':'ワールドカップ スタジアム','current_stage':'現在のステージ','days_until_kickoff':'開幕までの日数','days_until_final':'決勝までの日数','teams_entered':'参加チーム','teams_eliminated':'敗退チーム','total_goals':'総ゴール数','live_goals':'ライブゴール','top_scorer':'得点王','top_assist':'アシスト王'
+              },
+
+              'Korean': {
+                'group':'조','team':'팀','pos':'순위','pts':'승점','country':'국가','stadium':'경기장','city':'도시','date':'날짜','ko':'킥오프','match':'경기','score':'스코어','stage':'단계','status':'상태',
+                'fixtures_stadiums':'경기 일정 및 경기장','no_fixtures':'경기 일정이 없습니다.','scheduled':'예정','live':'라이브','half_time':'하프타임','full_time':'종료',
+                'golden_boot_race':'골든 부트 경쟁','no_goals':'아직 득점이 없습니다','golden_boot_podium':'골든 부트 포디움','waiting_scorer_data':'득점자 데이터를 기다리는 중...',
+                'top_assists':'도움 순위','no_assists':'아직 도움이 없습니다','latest_results':'최근 결과','no_matches_completed':'완료된 경기가 없습니다.',
+                'pre_tournament':'대회 전','days_to_go':'남은 일수','matches_played':'진행된 경기','goals':'골','goals_per_match':'골 / 경기',
+                'live_matches':'라이브 경기','no_live_matches':'현재 라이브 경기가 없습니다.','tournament_countdown':'대회 카운트다운','world_cup_starts_in':'월드컵 시작까지','days':'일','kickoff_imminent':'킥오프 임박','almost_time':'거의 시작입니다!','one_week_to_go':'일주일 남음','next_kickoff':'다음 킥오프','no_upcoming':'예정된 경기를 찾을 수 없습니다.',
+                'knockout_stage':'토너먼트','live_bracket':'토너먼트 경기가 나오면 자동으로 채워집니다.','no_knockout':'아직 토너먼트 경기가 없습니다.','teams_remaining':'남은 팀','eliminated':'탈락','matches_remaining':'남은 경기',
+                'tournament_progress':'대회 진행률','total_matches':'전체 경기','progress':'진행률','tournament_records':'대회 기록','biggest_win':'최대 점수차 승리','highest_scoring_match':'최다 득점 경기','top_scoring_team':'최다 득점 팀','best_defence':'최고 수비','latest_result':'최근 결과',
+                'stats_hub':'통계 허브','world_cup_stadiums':'월드컵 경기장','current_stage':'현재 단계','days_until_kickoff':'킥오프까지 일수','days_until_final':'결승까지 일수','teams_entered':'참가 팀','teams_eliminated':'탈락 팀','total_goals':'총 득점','live_goals':'라이브 골','top_scorer':'득점 선두','top_assist':'도움 선두'
+              },
+
+              'Swedish': {
+                'group':'Grupp','team':'Lag','pos':'Pos','pts':'Poäng','country':'Land','stadium':'Stadion','city':'Stad','date':'Datum','ko':'Avspark','match':'Match','score':'Resultat','stage':'Fas','status':'Status',
+                'fixtures_stadiums':'Matcher & Arenor','no_fixtures':'Inga matcher tillgängliga.','scheduled':'Planerad','live':'Live','half_time':'Halvtid','full_time':'Slut',
+                'golden_boot_race':'Kampen om Guldskon','no_goals':'Inga mål ännu','golden_boot_podium':'Guldskon-podium','waiting_scorer_data':'Väntar på målskyttedata...',
+                'top_assists':'Assistligan','no_assists':'Inga assist ännu','latest_results':'Senaste resultat','no_matches_completed':'Inga matcher färdigspelade ännu.',
+                'pre_tournament':'Före turneringen','days_to_go':'Dagar kvar','matches_played':'Spelade matcher','goals':'Mål','goals_per_match':'Mål / match',
+                'live_matches':'Livematcher','no_live_matches':'Inga livematcher just nu.','tournament_countdown':'Turneringsnedräkning','world_cup_starts_in':'VM börjar om','days':'Dagar','kickoff_imminent':'Avspark nära','almost_time':'Snart dags!','one_week_to_go':'En vecka kvar','next_kickoff':'Nästa avspark','no_upcoming':'Inga kommande matcher hittades.',
+                'knockout_stage':'Slutspel','live_bracket':'Slutspelsträdet fylls automatiskt när matcher visas.','no_knockout':'Inga slutspelsmatcher tillgängliga ännu.','teams_remaining':'Lag kvar','eliminated':'Utslagna','matches_remaining':'Matcher kvar',
+                'tournament_progress':'Turneringsframsteg','total_matches':'Totalt matcher','progress':'Framsteg','tournament_records':'Turneringsrekord','biggest_win':'Största seger','highest_scoring_match':'Målrikaste match','top_scoring_team':'Målgladaste lag','best_defence':'Bästa försvar','latest_result':'Senaste resultat',
+                'stats_hub':'Statistikcenter','world_cup_stadiums':'VM-arenor','current_stage':'Aktuell fas','days_until_kickoff':'Dagar till avspark','days_until_final':'Dagar till final','teams_entered':'Deltagande lag','teams_eliminated':'Utslagna lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Skytteligaledare','top_assist':'Assistledare'
+              },
+
+              'Norwegian': {
+                'group':'Gruppe','team':'Lag','pos':'Pos','pts':'Poeng','country':'Land','stadium':'Stadion','city':'By','date':'Dato','ko':'Avspark','match':'Kamp','score':'Resultat','stage':'Fase','status':'Status',
+                'fixtures_stadiums':'Kamper og stadioner','no_fixtures':'Ingen kamper tilgjengelig.','scheduled':'Planlagt','live':'Live','half_time':'Pause','full_time':'Ferdig',
+                'golden_boot_race':'Kampen om Gullstøvelen','no_goals':'Ingen mål ennå','golden_boot_podium':'Gullstøvel-podium','waiting_scorer_data':'Venter på målscorerdata...',
+                'top_assists':'Assisttoppen','no_assists':'Ingen assist ennå','latest_results':'Siste resultater','no_matches_completed':'Ingen kamper er ferdige ennå.',
+                'pre_tournament':'Før turneringen','days_to_go':'Dager igjen','matches_played':'Spilte kamper','goals':'Mål','goals_per_match':'Mål / kamp',
+                'live_matches':'Livekamper','no_live_matches':'Ingen livekamper akkurat nå.','tournament_countdown':'Turneringsnedtelling','world_cup_starts_in':'VM starter om','days':'Dager','kickoff_imminent':'Avspark nærmer seg','almost_time':'Snart klart!','one_week_to_go':'Én uke igjen','next_kickoff':'Neste avspark','no_upcoming':'Ingen kommende kamper funnet.',
+                'knockout_stage':'Sluttspill','live_bracket':'Sluttspilltreet fylles automatisk når kampene dukker opp.','no_knockout':'Ingen sluttspillkamper tilgjengelig ennå.','teams_remaining':'Lag igjen','eliminated':'Eliminert','matches_remaining':'Kamper igjen',
+                'tournament_progress':'Turneringsframgang','total_matches':'Totalt kamper','progress':'Framgang','tournament_records':'Turneringsrekorder','biggest_win':'Største seier','highest_scoring_match':'Mest målrike kamp','top_scoring_team':'Mestscorende lag','best_defence':'Beste forsvar','latest_result':'Siste resultat',
+                'stats_hub':'Statistikksenter','world_cup_stadiums':'VM-stadioner','current_stage':'Nåværende fase','days_until_kickoff':'Dager til avspark','days_until_final':'Dager til finale','teams_entered':'Deltakende lag','teams_eliminated':'Eliminerte lag','total_goals':'Totalt mål','live_goals':'Livemål','top_scorer':'Toppscorer','top_assist':'Assistkonge'
+              }
+
+              }.get(lang, {}) %}
 
 
-              {% set played = states('sensor.world_cup_total_matches_played') |
-              int(0) %}
-
-              {% set stage = states('sensor.world_cup_current_stage') %}
+              # 🏟️ {{ T.fixtures_stadiums | default('Fixtures & Stadiums') }}
 
 
-              {% if played == 0 %}
-                {% set teams = 48 %}
-              {% elif stage == 'Group Stage' %}
-                {% set teams = 48 %}
-              {% elif stage == 'Last 32' %}
-                {% set teams = 32 %}
-              {% elif stage == 'Last 16' %}
-                {% set teams = 16 %}
-              {% elif stage == 'Quarter Finals' %}
-                {% set teams = 8 %}
-              {% elif stage == 'Semi Finals' %}
-                {% set teams = 4 %}
-              {% elif stage == 'Final' %}
-                {% set teams = 2 %}
+              {% set matches = state_attr('sensor.world_cup_fixtures',
+              'matches') or [] %}
+
+
+              {% if matches | count == 0 %}
+
+              {{ T.no_fixtures | default('No fixtures available.') }}
+
               {% else %}
-                {% set teams = 48 %}
-              {% endif %}
 
 
               <table>
-                <tr><td>🏆 Current Stage</td><td>{{ states('sensor.world_cup_current_stage') }}</td></tr>
-                <tr><td>⏳ Days Until Kickoff</td><td>{{ states('sensor.world_cup_countdown') }}</td></tr>
-                <tr><td>🏁 Days Until Final</td><td>{{ states('sensor.world_cup_days_until_final') }}</td></tr>
-                <tr><td>📈 Tournament Progress</td><td>{{ states('sensor.world_cup_progress') }}%</td></tr>
-                <tr><td>⚽ Matches Played</td><td>{{ states('sensor.world_cup_total_matches_played') }} / 104</td></tr>
-                <tr><td>🧮 Matches Remaining</td><td>{{ states('sensor.world_cup_matches_remaining') }}</td></tr>
+                <tr>
+                  <th>{{ T.date | default('Date') }}</th>
+                  <th>{{ T.ko | default('KO') }}</th>
+                  <th>{{ T.match | default('Match') }}</th>
+                  <th>{{ T.stadium | default('Stadium') }}</th>
+                  <th></th>
+                </tr>
 
-                {% if played == 0 %}
-                <tr><td>🌍 Teams Entered</td><td>48</td></tr>
-                <tr><td>❌ Teams Eliminated</td><td>0</td></tr>
-                {% else %}
-                <tr><td>🌍 Teams Remaining</td><td>{{ teams }}</td></tr>
-                <tr><td>❌ Teams Eliminated</td><td>{{ 48 - teams }}</td></tr>
-                {% endif %}
-
-                <tr><td>⚽ Total Goals</td><td>{{ states('sensor.world_cup_total_goals') }}</td></tr>
-                <tr><td>📊 Goals Per Match</td><td>{{ states('sensor.world_cup_goals_per_match') }}</td></tr>
-                <tr><td>🔴 Live Goals</td><td>{{ states('sensor.world_cup_live_goals') }}</td></tr>
-                <tr><td>🔥 Biggest Win</td><td>{{ states('sensor.world_cup_biggest_win') }}</td></tr>
-                <tr><td>🚀 Highest Scoring Match</td><td>{{ states('sensor.world_cup_highest_scoring_match') }}</td></tr>
-                <tr><td>📰 Latest Result</td><td>{{ states('sensor.world_cup_latest_result') }}</td></tr>
-                <tr><td>👟 Top Scorer</td><td>{{ states('sensor.world_cup_top_scorer') }}</td></tr>
-                <tr><td>🎯 Top Assist</td><td>{{ states('sensor.world_cup_top_assist') }}</td></tr>
-                <tr><td>⚽ Top Scoring Team</td><td>{{ states('sensor.world_cup_top_scoring_team') }}</td></tr>
-                <tr><td>🛡️ Best Defence</td><td>{{ states('sensor.world_cup_best_defence') }}</td></tr>
+                {% for m in matches[:20] %}
+                {% set status_icon = '🕒' if m.status in ['TIMED', 'SCHEDULED'] else '🔴' if m.status == 'IN_PLAY' else '⏸️' if m.status == 'PAUSED' else '🏁' if m.status == 'FINISHED' else '•' %}
+                <tr>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%d %b', true) }}</td>
+                  <td>{{ as_timestamp(m.utcDate) | timestamp_custom('%H:%M', true) }}</td>
+                  <td>{{ m.home }} v {{ m.away }}</td>
+                  <td>{{ m.venue if m.venue is defined else 'TBC' }}</td>
+                  <td>{{ status_icon }}</td>
+                </tr>
+                {% endfor %}
               </table>
+
+
+              {% endif %}
+
+
+              <div style="margin-top:10px; color:#00ffff;">
+                🕒 {{ T.scheduled | default('Scheduled') }} &nbsp;&nbsp;
+                🔴 {{ T.live | default('Live') }} &nbsp;&nbsp;
+                ⏸️ {{ T.half_time | default('Half Time') }} &nbsp;&nbsp;
+                🏁 {{ T.full_time | default('Full Time') }}
+              </div>
             card_mod:
               style: |
                 ha-card {
@@ -2035,4 +6393,16 @@ views:
             - {}
             - media_content_type: app
               media_content_id: media-source://image_upload
-```
+  - type: sections
+    max_columns: 4
+    title: Language
+    path: language
+    sections:
+      - type: grid
+        cards:
+          - type: entities
+            title: 🌍 Language
+            entities:
+              - entity: input_select.world_cup_language
+                name: Dashboard Language
+
