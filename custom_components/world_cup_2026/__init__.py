@@ -27,11 +27,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Set up the World Cup 2026 integration from a config entry."""
     demo_mode: bool = entry.options.get(OPT_DEMO_MODE, DEFAULT_DEMO_MODE)
 
-    if demo_mode:
-        _LOGGER.info(
-            "World Cup 2026: demo mode enabled — loading fixture data, no API calls"
-        )
-
     api = WorldCupAPI(api_key=entry.data[CONF_API_KEY], demo_mode=demo_mode)
     coordinator = WorldCupCoordinator(hass, api)
 
@@ -56,7 +51,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     frontend.async_register_built_in_panel(
         hass,
-        component_name=DOMAIN,
+        component_name="custom",
         sidebar_title=PANEL_TITLE,
         sidebar_icon=PANEL_ICON,
         frontend_url_path=PANEL_PATH,
@@ -71,7 +66,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         require_admin=False,
     )
 
-    _LOGGER.warning("World Cup 2026 sidebar panel registration code has run")
+    _LOGGER.warning("World Cup 2026 sidebar app registered")
 
     entry.async_on_unload(entry.add_update_listener(_async_reload_entry))
 
@@ -84,7 +79,7 @@ async def _async_reload_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
 
 
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Unload a config entry and clean up hass.data."""
+    """Unload a config entry."""
     unloaded = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
 
     if unloaded:
