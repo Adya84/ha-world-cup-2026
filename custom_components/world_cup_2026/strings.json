@@ -1,4 +1,3 @@
-```json
 {
   "config": {
     "step": {
@@ -38,29 +37,41 @@
   },
   "entity": {
     "sensor": {
+      "fixtures": {
+        "name": "Fixtures"
+      },
+      "standings": {
+        "name": "Standings"
+      },
       "next_match": {
         "name": "Next Match"
       },
-      "live_match": {
-        "name": "Live Match"
+      "live_matches": {
+        "name": "Live Matches"
       },
-      "latest_result": {
-        "name": "Latest Result"
+      "today_matches": {
+        "name": "Today Matches"
       },
-      "group_standings": {
-        "name": "Group Standings"
+      "tomorrow_matches": {
+        "name": "Tomorrow Matches"
       },
-      "knockout_stage": {
-        "name": "Knockout Stage"
+      "completed_matches": {
+        "name": "Completed Matches"
       },
-      "tournament_progress": {
-        "name": "Tournament Progress"
+      "group_fixtures": {
+        "name": "{group}"
       },
-      "matches_played": {
-        "name": "Matches Played"
+      "stage_fixtures": {
+        "name": "{stage}"
+      },
+      "total_matches_played": {
+        "name": "Total Matches Played"
       },
       "matches_remaining": {
         "name": "Matches Remaining"
+      },
+      "progress": {
+        "name": "Progress"
       },
       "total_goals": {
         "name": "Total Goals"
@@ -68,55 +79,102 @@
       "goals_per_match": {
         "name": "Goals Per Match"
       },
-      "current_stage": {
-        "name": "Current Stage"
-      },
       "teams_remaining": {
         "name": "Teams Remaining"
       },
-      "teams_eliminated": {
-        "name": "Teams Eliminated"
-      },
-      "live_goals": {
-        "name": "Live Goals"
-      },
-      "countdown_to_kickoff": {
-        "name": "Countdown To Kick-Off"
-      },
-      "days_until_final": {
-        "name": "Days Until Final"
-      },
-      "top_scorer": {
-        "name": "Top Scorer"
+      "current_stage": {
+        "name": "Current Stage"
       },
       "top_scorers": {
         "name": "Top Scorers"
       },
-      "player_statistics": {
-        "name": "Player Statistics"
+      "top_scorer": {
+        "name": "Top Scorer"
       },
-      "enhanced_player_statistics": {
-        "name": "Enhanced Player Statistics"
+      "top_assists": {
+        "name": "Top Assists"
       },
-      "betting_statistics": {
-        "name": "Betting Statistics"
+      "top_assist": {
+        "name": "Top Assist"
       },
-      "match_statistics": {
-        "name": "Match Statistics"
+      "biggest_win": {
+        "name": "Biggest Win"
       },
-      "team_statistics": {
-        "name": "Team Statistics"
+      "highest_scoring_match": {
+        "name": "Highest Scoring Match"
       },
-      "tournament_leaders": {
-        "name": "Tournament Leaders"
+      "latest_result": {
+        "name": "Latest Result"
       },
-      "match_predictions": {
-        "name": "Match Predictions"
+      "top_scoring_team": {
+        "name": "Top Scoring Team"
       },
-      "demo_fixtures": {
-        "name": "Demo Fixtures"
+      "best_defence": {
+        "name": "Best Defence"
+      },
+      "eliminated_teams": {
+        "name": "Eliminated Teams"
+      },
+      "live_goals": {
+        "name": "Live Goals"
+      },
+      "countdown": {
+        "name": "Countdown"
+      },
+      "days_until_final": {
+        "name": "Days Until Final"
+      },
+      "stadiums": {
+        "name": "Stadiums"
+      },
+      "host_cities": {
+        "name": "Host Cities"
+      },
+      "final_venue": {
+        "name": "Final Venue"
+      },
+      "group_leaders": {
+        "name": "Group Leaders"
+      },
+      "extra_time_matches": {
+        "name": "Extra Time Matches"
+      },
+      "penalty_shootouts": {
+        "name": "Penalty Shootouts"
+      },
+      "top_scorer_no_penalties": {
+        "name": "Top Scorer No Penalties"
+      },
+      "goal_contributions": {
+        "name": "Goal Contributions"
+      },
+      "penalty_goals": {
+        "name": "Penalty Goals"
+      },
+      "btts_rate": {
+        "name": "BTTS Rate"
+      },
+      "over_2_5_goals_rate": {
+        "name": "Over 2.5 Goals Rate"
+      },
+      "draw_rate": {
+        "name": "Draw Rate"
+      },
+      "clean_sheets": {
+        "name": "Clean Sheets"
+      },
+      "unbeaten_teams": {
+        "name": "Unbeaten Teams"
+      },
+      "comebacks": {
+        "name": "Comebacks"
+      },
+      "first_half_goals": {
+        "name": "First Half Goals"
+      },
+      "second_half_goals": {
+        "name": "Second Half Goals"
       }
     }
   }
 }
-```
