@@ -1,74 +1,25 @@
-# ⚽ FIFA World Cup 2026 for Home Assistant
+⚽ Home Assistant World Cup 2026
 
-# 💙 Support Development
+A comprehensive Home Assistant integration for the FIFA World Cup 2026, providing live fixtures, results, standings, statistics, player data, tournament analytics and a ready-to-import dashboard.
 
-If you enjoy this integration and would like to support future development, please consider making a donation.
+🌟 Features
 
-## ☕ Donate via PayPal
+⚽ Live Match Data
 
-### 👉 https://paypal.me/graffidoodle
+* Live Fixtures
+* Match Results
+* Group Standings
+* Live Match Status
+* Match Statistics
+* Goal Scorers
+* Match Countdown
+* Kick-Off Information
 
-Donations help support:
+🏆 Tournament Tracking
 
-* New Features
-* Dashboard Enhancements
-* Additional Statistics
-* Tournament Improvements
-* Ongoing Maintenance
+Track every stage of the FIFA World Cup 2026:
 
-Thank you for your support.
-
----
-
-Live FIFA World Cup 2026 fixtures, standings, groups, knockout stages, player statistics and tournament records directly inside Home Assistant.
-
-Track every match of the 2026 FIFA World Cup from kick-off to the Final with live updates, tournament statistics and custom dashboard cards.
-
----
-
-# 🏆 Features
-
-## ⚽ Fixtures & Results
-
-* Next Match
-* Live Matches
-* Today's Matches
-* Tomorrow's Matches
-* Completed Matches
-* Latest Result
-* Full Tournament Fixture List
-
-## 🌍 Group Stage Tracking
-
-Monitor all 12 World Cup groups:
-
-* Group A
-* Group B
-* Group C
-* Group D
-* Group E
-* Group F
-* Group G
-* Group H
-* Group I
-* Group J
-* Group K
-* Group L
-
-Includes:
-
-* Position
-* Played
-* Wins
-* Draws
-* Losses
-* Goal Difference
-* Points
-
-## 🏆 Knockout Stages
-
-Track the entire knockout tournament:
-
+* Group Stage
 * Last 32
 * Last 16
 * Quarter Finals
@@ -76,21 +27,87 @@ Track the entire knockout tournament:
 * Third Place Playoff
 * Final
 
-## 📊 Tournament Statistics
+📊 Tournament Statistics
 
 * Tournament Progress
 * Matches Played
 * Matches Remaining
-* Total Goals
+* Total Goals Scored
 * Goals Per Match
-* Current Stage
+* Current Tournament Stage
 * Teams Remaining
 * Teams Eliminated
-* Live Goals
+* Live Goals Counter
 * Countdown To Kick-Off
 * Days Until Final
 
-## 👟 Player Statistics
+👤 Player Statistics
+
+* Top Goal Scorers
+* Enhanced Player Statistics
+* Tournament Leaders
+* Player Performance Data
+
+📈 Advanced Analytics
+
+* Betting & Statistics Sensors
+* Computed Tournament Metrics
+* Team Performance Data
+* Additional API Statistics
+* Match Insights
+
+🎨 Dashboard Included
+
+Ready-to-import Home Assistant dashboard featuring:
+
+* Group Standings
+* Fixtures & Results
+* Knockout Tournament Tracking
+* Tournament Statistics
+* Player Statistics
+* Live Match Information
+
+🧪 Demo Mode
+
+No API access required to test the integration.
+
+* Demo Fixtures Included
+* Dashboard Testing
+* Full Sensor Preview
+
+🚀 Version 2.1.0
+
+New Features
+
+* Goal Scorer Support
+* Enhanced Player Statistics
+* Betting & Statistics Sensors
+* Additional API Data Sensors
+* Improved Dashboard
+* Smarter Data Polling
+* Improved Home Assistant Architecture
+* Bundled Demo Fixtures
+
+🙏 Contributors
+
+Thank you to everyone who has helped improve the World Cup 2026 integration.
+
+Special thanks to Fabbbrrr for contributing major enhancements included in v2.1.0, including:
+
+* Enhanced player statistics
+* Additional tournament sensors
+* Betting & statistics sensors
+* Dashboard improvements
+* Home Assistant architecture improvements
+* Demo fixture support for HACS installations
+
+Community contributions help make this integration better for everyone.
+
+❤️ Support Development
+
+If you enjoy this project and would like to support future development:
+
+https://paypal.me/graffidoodle## 👟 Player Statistics
 
 ### Golden Boot
 
