@@ -651,7 +651,7 @@ def get_team_goal_stats(coordinator):
 
 class WorldCupFixturesSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "fixtures"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_fixtures"
 
     @property
@@ -675,7 +675,7 @@ class WorldCupFixturesSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupStandingsSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "standings"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_standings"
 
     @property
@@ -715,7 +715,7 @@ class WorldCupStandingsSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupNextMatchSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "next_match"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_next_match"
 
     @property
@@ -740,7 +740,7 @@ class WorldCupNextMatchSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupLiveMatchesSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "live_matches"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_live_matches"
 
     @property
@@ -759,7 +759,7 @@ class WorldCupLiveMatchesSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTodayMatchesSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "today_matches"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_today_matches"
 
     @property
@@ -780,7 +780,7 @@ class WorldCupTodayMatchesSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTomorrowMatchesSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "tomorrow_matches"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_tomorrow_matches"
 
     @property
@@ -801,7 +801,7 @@ class WorldCupTomorrowMatchesSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupCompletedMatchesSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "completed_matches"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_completed_matches"
 
     @property
@@ -824,7 +824,7 @@ class WorldCupGroupFixturesSensor(CoordinatorEntity, SensorEntity):
         group_name = group.replace("GROUP_", "Group ")
         self._attr_translation_key = "group_fixtures"
         self._attr_translation_placeholders = {"group": group_name}
-        self._attr_has_entity_name = False
+        self._attr_has_entity_name = True
         self._attr_unique_id = f"world_cup_{group.lower()}"
 
     @property
@@ -848,7 +848,7 @@ class WorldCupStageFixturesSensor(CoordinatorEntity, SensorEntity):
         self.stage = stage
         self._attr_translation_key = "stage_fixtures"
         self._attr_translation_placeholders = {"stage": clean_stage_name(stage).title()}
-        self._attr_has_entity_name = False
+        self._attr_has_entity_name = True
         self._attr_unique_id = f"world_cup_{stage.lower()}"
 
     @property
@@ -868,7 +868,7 @@ class WorldCupStageFixturesSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTotalMatchesPlayedSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "total_matches_played"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_total_matches_played"
 
     @property
@@ -878,7 +878,7 @@ class WorldCupTotalMatchesPlayedSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupMatchesRemainingSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "matches_remaining"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_matches_remaining"
 
     @property
@@ -889,7 +889,7 @@ class WorldCupMatchesRemainingSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupProgressSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "progress"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_progress"
     _attr_native_unit_of_measurement = "%"
 
@@ -901,7 +901,7 @@ class WorldCupProgressSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTotalGoalsSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "total_goals"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_total_goals"
 
     @property
@@ -916,7 +916,7 @@ class WorldCupTotalGoalsSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupGoalsPerMatchSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "goals_per_match"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_goals_per_match"
 
     @property
@@ -936,7 +936,7 @@ class WorldCupGoalsPerMatchSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTeamsRemainingSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "teams_remaining"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_teams_remaining"
 
     def _all_teams(self):
@@ -1094,7 +1094,7 @@ class WorldCupTeamsRemainingSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupCurrentStageSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "current_stage"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_current_stage"
 
     @property
@@ -1123,7 +1123,7 @@ class WorldCupCurrentStageSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTopScorersSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "top_scorers"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_top_scorers"
 
     @property
@@ -1142,7 +1142,7 @@ class WorldCupTopScorersSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTopScorerSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "top_scorer"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_top_scorer"
 
     @property
@@ -1171,7 +1171,7 @@ class WorldCupTopScorerSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTopAssistsSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "top_assists"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_top_assists"
 
     @property
@@ -1196,7 +1196,7 @@ class WorldCupTopAssistsSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTopAssistSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "top_assist"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_top_assist"
 
     @property
@@ -1227,7 +1227,7 @@ class WorldCupTopAssistSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupBiggestWinSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "biggest_win"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_biggest_win"
 
     @property
@@ -1289,7 +1289,7 @@ class WorldCupBiggestWinSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupHighestScoringMatchSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "highest_scoring_match"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_highest_scoring_match"
 
     @property
@@ -1347,7 +1347,7 @@ class WorldCupHighestScoringMatchSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupLatestResultSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "latest_result"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_latest_result"
 
     @property
@@ -1381,7 +1381,7 @@ class WorldCupLatestResultSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupTopScoringTeamSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "top_scoring_team"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_top_scoring_team"
 
     @property
@@ -1403,7 +1403,7 @@ class WorldCupTopScoringTeamSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupBestDefenceSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "best_defence"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_best_defence"
 
     @property
@@ -1425,7 +1425,7 @@ class WorldCupBestDefenceSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupEliminatedTeamsSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "eliminated_teams"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_eliminated_teams"
 
     @property
@@ -1438,7 +1438,7 @@ class WorldCupEliminatedTeamsSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupLiveGoalsSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "live_goals"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_live_goals"
 
     @property
@@ -1464,7 +1464,7 @@ class WorldCupLiveGoalsSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupCountdownSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "countdown"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_countdown"
     _attr_native_unit_of_measurement = "days"
 
@@ -1478,7 +1478,7 @@ class WorldCupCountdownSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupDaysUntilFinalSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "days_until_final"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_days_until_final"
     _attr_native_unit_of_measurement = "days"
 
@@ -1491,7 +1491,7 @@ class WorldCupDaysUntilFinalSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupStadiumsSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "stadiums"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_stadiums"
 
     @property
@@ -1519,7 +1519,7 @@ class WorldCupStadiumsSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupHostCitiesSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "host_cities"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_host_cities"
 
     @property
@@ -1540,7 +1540,7 @@ class WorldCupTopScorerNoPenSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_top_scorer_no_pen"
     _attr_translation_key = "top_scorer_no_penalties"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     def _ranked(self) -> list:
         scorers = [format_scorer(s) for s in get_scorers(self.coordinator)]
@@ -1573,7 +1573,7 @@ class WorldCupGoalContributionsSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_goal_contributions"
     _attr_translation_key = "goal_contributions"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     def _ranked(self) -> list:
         scorers = [format_scorer(s) for s in get_scorers(self.coordinator)]
@@ -1605,7 +1605,7 @@ class WorldCupPenaltyGoalsSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_penalty_goals"
     _attr_translation_key = "penalty_goals"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     @property
     def native_value(self) -> int:
@@ -1635,7 +1635,7 @@ class WorldCupBttsRateSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_btts_rate"
     _attr_translation_key = "btts_rate"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_native_unit_of_measurement = "%"
 
     @property
@@ -1662,7 +1662,7 @@ class WorldCupOver25Sensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_over_2_5_rate"
     _attr_translation_key = "over_2_5_goals_rate"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_native_unit_of_measurement = "%"
 
     @property
@@ -1696,7 +1696,7 @@ class WorldCupDrawRateSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_draw_rate"
     _attr_translation_key = "draw_rate"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_native_unit_of_measurement = "%"
 
     @property
@@ -1726,7 +1726,7 @@ class WorldCupCleanSheetsSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_clean_sheets"
     _attr_translation_key = "clean_sheets"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     def _team_clean_sheets(self) -> dict:
         cs: dict = {}
@@ -1764,7 +1764,7 @@ class WorldCupUnbeatenTeamsSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_unbeaten_teams"
     _attr_translation_key = "unbeaten_teams"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     def _unbeaten(self) -> list:
         played: dict = {}
@@ -1799,7 +1799,7 @@ class WorldCupComebacksSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_comebacks"
     _attr_translation_key = "comebacks"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     def _comeback_matches(self) -> list:
         return [m for m in finished_matches(self.coordinator) if is_comeback(m)]
@@ -1829,7 +1829,7 @@ class WorldCupFirstHalfGoalsSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_first_half_goals"
     _attr_translation_key = "first_half_goals"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     @property
     def native_value(self) -> int:
@@ -1856,7 +1856,7 @@ class WorldCupSecondHalfGoalsSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_second_half_goals"
     _attr_translation_key = "second_half_goals"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     @property
     def native_value(self) -> int:
@@ -1886,7 +1886,7 @@ class WorldCupGroupLeadersSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_group_leaders"
     _attr_translation_key = "group_leaders"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     def _compute_leaders(self) -> list:
         """
@@ -1931,7 +1931,7 @@ class WorldCupExtraTimeSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_extra_time_matches"
     _attr_translation_key = "extra_time_matches"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     def _et_matches(self) -> list:
         return [
@@ -1953,7 +1953,7 @@ class WorldCupPenaltyShootoutSensor(CoordinatorEntity, SensorEntity):
 
     _attr_unique_id = "world_cup_penalty_shootouts"
     _attr_translation_key = "penalty_shootouts"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
 
     def _pen_matches(self) -> list:
         return [
@@ -1972,7 +1972,7 @@ class WorldCupPenaltyShootoutSensor(CoordinatorEntity, SensorEntity):
 
 class WorldCupFinalVenueSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "final_venue"
-    _attr_has_entity_name = False
+    _attr_has_entity_name = True
     _attr_unique_id = "world_cup_final_venue"
 
     @property
