@@ -1402,7 +1402,7 @@ class WorldCupTopScoringTeamSensor(CoordinatorEntity, SensorEntity):
 
 
 class WorldCupBestDefenceSensor(CoordinatorEntity, SensorEntity):
-    _attr_translation_key = "best_defence"
+    _attr_translation_key = "zzzz_test_missing"
     _attr_has_entity_name = True
     _attr_unique_id = "world_cup_best_defence"
 
