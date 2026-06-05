@@ -1,10 +1,12 @@
-⚽ Home Assistant World Cup 2026
+# ⚽ Home Assistant World Cup 2026
 
 A comprehensive Home Assistant integration for the FIFA World Cup 2026, providing live fixtures, results, standings, statistics, player data, tournament analytics and a ready-to-import dashboard.
 
-🌟 Features
+---
 
-⚽ Live Match Data
+## 🌟 Features
+
+### ⚽ Live Match Data
 
 * Live Fixtures
 * Match Results
@@ -15,7 +17,9 @@ A comprehensive Home Assistant integration for the FIFA World Cup 2026, providin
 * Match Countdown
 * Kick-Off Information
 
-🏆 Tournament Tracking
+---
+
+### 🏆 Tournament Tracking
 
 Track every stage of the FIFA World Cup 2026:
 
@@ -27,7 +31,9 @@ Track every stage of the FIFA World Cup 2026:
 * Third Place Playoff
 * Final
 
-📊 Tournament Statistics
+---
+
+### 📊 Tournament Statistics
 
 * Tournament Progress
 * Matches Played
@@ -41,14 +47,18 @@ Track every stage of the FIFA World Cup 2026:
 * Countdown To Kick-Off
 * Days Until Final
 
-👤 Player Statistics
+---
+
+### 👤 Player Statistics
 
 * Top Goal Scorers
 * Enhanced Player Statistics
 * Tournament Leaders
 * Player Performance Data
 
-📈 Advanced Analytics
+---
+
+### 📈 Advanced Analytics
 
 * Betting & Statistics Sensors
 * Computed Tournament Metrics
@@ -56,7 +66,26 @@ Track every stage of the FIFA World Cup 2026:
 * Additional API Statistics
 * Match Insights
 
-🎨 Dashboard Included
+---
+
+### 🌍 Multi-Language Support
+
+Automatically follows the Home Assistant user's selected language.
+
+Currently includes:
+
+* English
+* French
+* German
+* Spanish
+* Italian
+* Dutch
+
+More languages can easily be added through community contributions.
+
+---
+
+### 🎨 Dashboard Included
 
 Ready-to-import Home Assistant dashboard featuring:
 
@@ -67,7 +96,9 @@ Ready-to-import Home Assistant dashboard featuring:
 * Player Statistics
 * Live Match Information
 
-🧪 Demo Mode
+---
+
+### 🧪 Demo Mode
 
 No API access required to test the integration.
 
@@ -75,10 +106,16 @@ No API access required to test the integration.
 * Dashboard Testing
 * Full Sensor Preview
 
-🚀 Version 2.1.0
+---
 
-New Features
+# 🚀 Version 2.2.0
 
+### New Features
+
+* Multi-language support
+* Automatic Home Assistant language detection
+* English, French, German, Spanish, Italian and Dutch translations
+* Translation-ready sensor architecture
 * Goal Scorer Support
 * Enhanced Player Statistics
 * Betting & Statistics Sensors
@@ -88,26 +125,34 @@ New Features
 * Improved Home Assistant Architecture
 * Bundled Demo Fixtures
 
-🙏 Contributors
+---
+
+## 🙏 Contributors
 
 Thank you to everyone who has helped improve the World Cup 2026 integration.
 
-Special thanks to Fabbbrrr for contributing major enhancements included in v2.1.0, including:
+Special thanks to Fabbbrrr for contributing enhancements including:
 
 * Enhanced player statistics
 * Additional tournament sensors
 * Betting & statistics sensors
 * Dashboard improvements
-* Home Assistant architecture improvements
-* Demo fixture support for HACS installations
+* Architecture improvements
+* Demo fixture support
 
 Community contributions help make this integration better for everyone.
 
-❤️ Support Development
+---
+
+## ❤️ Support Development
 
 If you enjoy this project and would like to support future development:
 
-https://paypal.me/graffidoodle## 👟 Player Statistics
+https://paypal.me/graffidoodle
+
+---
+
+## 👟 Player Statistics
 
 ### Golden Boot
 
@@ -119,6 +164,8 @@ https://paypal.me/graffidoodle## 👟 Player Statistics
 
 * Top Assist Provider
 * Top Assists Table
+
+---
 
 ## 🔥 Tournament Records
 
@@ -141,7 +188,7 @@ https://paypal.me/graffidoodle## 👟 Player Statistics
 5. Add:
 
 ```text
-https://github.com/Fabbbrrr/ha-world-cup-2026
+https://github.com/Adya84/ha-world-cup-2026
 ```
 
 6. Select **Integration**
@@ -178,13 +225,15 @@ World Cup 2026
 
 # 🧪 Demo Mode
 
-If you want to explore the integration and build dashboards before the tournament starts (or when no live matches are available), you can enable **Demo mode**:
+If you want to explore the integration and build dashboards before the tournament starts (or when no live matches are available), you can enable **Demo Mode**:
 
 1. Go to **Settings → Devices & Services → World Cup 2026 → Configure**
-2. Toggle **Demo mode** on
-3. Click **Submit** — the integration reloads automatically
+2. Toggle **Demo Mode** on
+3. Click **Submit**
 
-Demo mode loads pre-built fixture data locally instead of calling the API. All sensors populate with realistic tournament data so you can design and test your dashboards immediately. Turn it off the same way when you want live data.
+The integration reloads automatically.
+
+Demo mode loads pre-built fixture data locally instead of calling the API, allowing dashboards and sensors to populate with realistic tournament data immediately.
 
 ---
 
@@ -230,7 +279,7 @@ sensor.world_cup_third_place
 sensor.world_cup_final
 ```
 
-## Statistics Sensors
+## Tournament Statistics
 
 ```text
 sensor.world_cup_total_goals
@@ -268,7 +317,7 @@ sensor.world_cup_goal_contributions
 sensor.world_cup_penalty_goals
 ```
 
-## Betting & Match Stats
+## Betting & Match Statistics
 
 ```text
 sensor.world_cup_btts_rate
@@ -295,7 +344,7 @@ sensor.world_cup_penalty_shootouts
 
 To avoid Home Assistant state size limitations, the fixtures sensor limits stored match attributes.
 
-Tournament progress calculations use the official World Cup total of:
+Tournament progress calculations use the official FIFA World Cup 2026 total of:
 
 ```text
 104 Matches
@@ -307,9 +356,9 @@ ensuring accurate progress tracking throughout the tournament.
 
 # 🔄 Data Source
 
-Match data and standings are provided by:
+Match data, standings and player statistics are provided by:
 
-Football-Data.org
+**Football-Data.org**
 
 Updates occur automatically throughout the tournament.
 
@@ -323,6 +372,12 @@ It is not affiliated with FIFA, Football-Data.org, Home Assistant or HACS.
 
 ---
 
-Originally created by **Adrian Apel** ([@Adya84](https://github.com/Adya84/ha-world-cup-2026)).
+## 👨‍💻 Author
 
-Forked and maintained by **[@Fabbbrrr](https://github.com/Fabbbrrr)**.
+Created and maintained by **Adrian Apel**.
+
+GitHub:
+
+https://github.com/Adya84/ha-world-cup-2026
+
+Special thanks to all contributors who have helped improve the integration.
