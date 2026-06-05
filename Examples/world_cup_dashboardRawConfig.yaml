@@ -9,7 +9,7 @@ views:
             content: |
               <h2>🏆 Group A</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group A', 'GROUP_A'] %}
@@ -23,6 +23,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -56,7 +57,7 @@ views:
             content: |
               <h2>🏆 Group B</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group B', 'GROUP_B'] %}
@@ -70,6 +71,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -103,7 +105,7 @@ views:
             content: |
               <h2>🏆 Group E</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group E', 'GROUP_E'] %}
@@ -117,6 +119,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -150,7 +153,7 @@ views:
             content: |
               <h2>🏆 Group F</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group F', 'GROUP_F'] %}
@@ -164,6 +167,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -197,7 +201,7 @@ views:
             content: |
               <h2>🏆 Group I</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group I', 'GROUP_I'] %}
@@ -211,6 +215,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -244,7 +249,7 @@ views:
             content: |
               <h2>🏆 Group J</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group J', 'GROUP_J'] %}
@@ -258,6 +263,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -296,7 +302,7 @@ views:
             content: |
               <h2>🏆 Group C</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group C', 'GROUP_C'] %}
@@ -310,6 +316,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -343,7 +350,7 @@ views:
             content: |
               <h2>🏆 Group D</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group D', 'GROUP_D'] %}
@@ -357,6 +364,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -390,7 +398,7 @@ views:
             content: |
               <h2>🏆 Group G</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group G', 'GROUP_G'] %}
@@ -404,6 +412,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -437,7 +446,7 @@ views:
             content: |
               <h2>🏆 Group H</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group H', 'GROUP_H'] %}
@@ -451,6 +460,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -484,7 +494,7 @@ views:
             content: |
               <h2>🏆 Group K</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group K', 'GROUP_K'] %}
@@ -498,6 +508,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -531,7 +542,7 @@ views:
             content: |
               <h2>🏆 Group L</h2> <table>
                 <tr>
-                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th>
+                  <th>Pos</th><th>Team</th><th>P</th><th>W</th><th>D</th><th>L</th><th>GD</th><th>Pts</th><th>Form</th>
                 </tr>
                 {% set s = state_attr('sensor.world_cup_standings', 'standings') or [] %}
                 {% for g in s if g.group in ['Group L', 'GROUP_L'] %}
@@ -545,6 +556,7 @@ views:
                   <td>{{ t.lost }}</td>
                   <td>{{ t.goalDifference }}</td>
                   <td><b>{{ t.points }}</b></td>
+                  <td>{% set fc = {'W':'#00cc55','D':'#f0a500','L':'#e03030'} %}{% for r in (t.form or '').split(',') if r in ['W','D','L'] %}<span style="background:{{ fc[r] }};color:#000;padding:1px 4px;border-radius:3px;font-size:10px;font-weight:800;margin:1px;">{{ r }}</span>{% endfor %}</td>
                 </tr>
                 {% endfor %}
                 {% endfor %}
@@ -1026,6 +1038,155 @@ views:
                   }
           - type: markdown
             content: >
+              # 🎯 NON-PENALTY TOP SCORER
+
+
+              {% set scorers = state_attr('sensor.world_cup_top_scorer_no_pen',
+              'scorers') or [] %}
+
+
+              {% if scorers | count == 0 %}
+
+              ⚽ No non-penalty goals yet
+
+              {% else %}
+
+              {% for p in scorers[:10] %}
+
+              <div class="scorer-row">
+                <span class="rank">
+                  {% if loop.index == 1 %}🥇
+                  {% elif loop.index == 2 %}🥈
+                  {% elif loop.index == 3 %}🥉
+                  {% else %}{{ loop.index }}.
+                  {% endif %}
+                </span>
+                <span class="player">{{ p.name }}</span>
+                <span class="team">{{ p.team }}</span>
+                <span class="goals">{{ p.nonPenaltyGoals }} ⚽</span>
+              </div>
+
+              {% endfor %}
+
+              {% endif %}
+            card_mod:
+              style:
+                ha-markdown$: |
+                  h1 {
+                    text-align: center;
+                    font-size: 22px;
+                    margin-bottom: 18px;
+                    color: #ffffff;
+                    text-shadow:
+                      0 0 8px rgba(0,255,255,0.9),
+                      0 0 18px rgba(0,255,255,0.55);
+                  }
+
+                  .scorer-row {
+                    display: grid;
+                    grid-template-columns: 42px 1fr 90px 58px;
+                    align-items: center;
+                    gap: 8px;
+                    margin: 8px 0;
+                    padding: 10px 12px;
+                    border-radius: 14px;
+                    background: rgba(0,255,255,0.07);
+                    border: 1px solid rgba(0,255,255,0.18);
+                  }
+
+                  .rank { font-size: 18px; text-align: center; }
+                  .player { font-weight: 700; color: #ffffff; }
+                  .team { font-size: 12px; color: rgba(255,255,255,0.7); text-align: right; }
+                  .goals { font-weight: 800; color: #00ffff; text-align: right; text-shadow: 0 0 8px rgba(0,255,255,0.7); }
+                .: |
+                  ha-card {
+                    background: rgba(5,14,24,0.38) !important;
+                    backdrop-filter: blur(10px);
+                    border-radius: 24px;
+                    border: 2px solid rgba(0,255,255,0.38);
+                    box-shadow:
+                      0 0 20px rgba(0,255,255,0.25),
+                      inset 0 0 14px rgba(0,255,255,0.08);
+                    padding: 14px;
+                    overflow: hidden;
+                  }
+          - type: markdown
+            content: >
+              # ⚡ GOAL CONTRIBUTIONS (G+A)
+
+
+              {% set players = state_attr('sensor.world_cup_goal_contributions',
+              'players') or [] %}
+
+
+              {% if players | count == 0 %}
+
+              No data yet
+
+              {% else %}
+
+              {% for p in players[:10] %}
+
+              <div class="ga-row">
+                <span class="rank">
+                  {% if loop.index == 1 %}👑
+                  {% elif loop.index == 2 %}🥈
+                  {% elif loop.index == 3 %}🥉
+                  {% else %}{{ loop.index }}.
+                  {% endif %}
+                </span>
+                <span class="player">{{ p.name }}</span>
+                <span class="team">{{ p.team }}</span>
+                <span class="ga">{{ p.goalContributions }} <small>({{ p.goals }}G+{{ p.assists }}A)</small></span>
+              </div>
+
+              {% endfor %}
+
+              {% endif %}
+            card_mod:
+              style:
+                ha-markdown$: |
+                  h1 {
+                    text-align: center;
+                    font-size: 22px;
+                    margin-bottom: 18px;
+                    color: #ffffff;
+                    text-shadow:
+                      0 0 8px rgba(255,200,0,0.9),
+                      0 0 18px rgba(255,200,0,0.55);
+                  }
+
+                  .ga-row {
+                    display: grid;
+                    grid-template-columns: 42px 1fr 90px 80px;
+                    align-items: center;
+                    gap: 8px;
+                    margin: 8px 0;
+                    padding: 10px 12px;
+                    border-radius: 14px;
+                    background: rgba(255,200,0,0.07);
+                    border: 1px solid rgba(255,200,0,0.18);
+                  }
+
+                  .rank { font-size: 18px; text-align: center; }
+                  .player { font-weight: 700; color: #ffffff; }
+                  .team { font-size: 12px; color: rgba(255,255,255,0.7); text-align: right; }
+                  .ga { font-weight: 800; color: #ffc800; text-align: right; }
+                  small { font-size: 10px; color: rgba(255,200,0,0.7); }
+                .: |
+                  ha-card {
+                    background: rgba(5,14,24,0.38) !important;
+                    backdrop-filter: blur(10px);
+                    border-radius: 24px;
+                    border: 2px solid rgba(255,200,0,0.35);
+                    box-shadow:
+                      0 0 20px rgba(255,200,0,0.20),
+                      inset 0 0 14px rgba(255,200,0,0.06);
+                    padding: 14px;
+                    overflow: hidden;
+                  }
+          - type: markdown
+            content: >
               ## ⚽ Latest Results
 
 
@@ -1044,13 +1205,15 @@ views:
               <table>
                 <tr>
                   <th>Match</th>
-                  <th>Score</th>
+                  <th>FT</th>
+                  <th>HT</th>
                 </tr>
 
                 {% for m in results[-10:] | reverse %}
                 <tr>
                   <td>{{ m.home }} v {{ m.away }}</td>
-                  <td>{{ m.homeScore }} - {{ m.awayScore }}</td>
+                  <td>{{ m.homeScore }} - {{ m.awayScore }}{% if m.duration == 'EXTRA_TIME' %} <span style="color:#f0a500;font-size:10px;">AET</span>{% elif m.duration == 'PENALTY_SHOOTOUT' %} <span style="color:#f0a500;font-size:10px;">PSO</span>{% endif %}</td>
+                  <td style="color:rgba(255,255,255,0.6);font-size:11px;">{% if m.halfTimeHome is not none %}{{ m.halfTimeHome }}-{{ m.halfTimeAway }}{% else %}-{% endif %}</td>
                 </tr>
                 {% endfor %}
 
@@ -1133,7 +1296,7 @@ views:
                 <p>No live matches right now.</p>
               {% else %}
                 {% for m in live %}
-                  <h3>{{ m.home }} {{ m.homeScore }} - {{ m.awayScore }} {{ m.away }}</h3>
+                  <h3>{{ m.home }} {{ m.homeScore }} - {{ m.awayScore }} {{ m.away }}{% if m.minute %} <span style="color:#ff4444;font-size:14px;">{{ m.minute }}'</span>{% endif %}</h3>
                 {% endfor %}
               {% endif %}
             card_mod:
@@ -1539,6 +1702,143 @@ views:
           - type: heading
             heading_style: title
           - type: markdown
+            content: >
+              # 🏆 Group Leaders
+
+
+              {% set leaders = state_attr('sensor.world_cup_group_leaders',
+              'leaders') or [] %}
+
+
+              {% if leaders | count == 0 %}
+                <p>Group stage not started yet.</p>
+              {% else %}
+
+              <table>
+                <tr>
+                  <th>Group</th>
+                  <th>Leader</th>
+                  <th>Pts</th>
+                  <th>GD</th>
+                </tr>
+
+                {% for l in leaders %}
+                <tr>
+                  <td><b>{{ l.group | replace('Group ', '') }}</b></td>
+                  <td>{{ l.team }}</td>
+                  <td><b>{{ l.points }}</b></td>
+                  <td>{{ l.goalDifference }}</td>
+                </tr>
+                {% endfor %}
+
+              </table>
+
+              {% endif %}
+            card_mod:
+              style: |
+                ha-card {
+                  background: rgba(5,14,24,0.45);
+                  border: 2px solid rgba(0,255,255,0.45);
+                  border-radius: 22px;
+                  box-shadow: 0 0 20px rgba(0,255,255,0.30);
+                  color: white;
+                  padding: 14px;
+                }
+
+                h1 {
+                  color: #00ffff;
+                  text-align: center;
+                  margin-top: 0;
+                  text-shadow: 0 0 10px rgba(0,255,255,0.7);
+                }
+
+                table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  font-size: 13px;
+                }
+
+                th {
+                  color: #00ffff;
+                  text-align: left;
+                  padding: 5px;
+                  border-bottom: 1px solid rgba(0,255,255,0.35);
+                }
+
+                td {
+                  padding: 5px;
+                  border-bottom: 1px solid rgba(255,255,255,0.12);
+                }
+          - type: markdown
+            content: |
+              # ⏱️ Extra Time & Shootouts
+
+              <table>
+                <tr>
+                  <th>Metric</th>
+                  <th>Count</th>
+                </tr>
+                <tr>
+                  <td>⏱️ Extra Time Matches</td>
+                  <td><b>{{ states('sensor.world_cup_extra_time_matches') }}</b></td>
+                </tr>
+                <tr>
+                  <td>🅿️ Penalty Shootouts</td>
+                  <td><b>{{ states('sensor.world_cup_penalty_shootouts') }}</b></td>
+                </tr>
+                <tr>
+                  <td>🔄 Comebacks</td>
+                  <td><b>{{ states('sensor.world_cup_comebacks') }}</b></td>
+                </tr>
+              </table>
+            card_mod:
+              style: |
+                ha-card {
+                  background: rgba(5,14,24,0.45);
+                  border: 2px solid rgba(0,255,255,0.45);
+                  border-radius: 22px;
+                  box-shadow: 0 0 20px rgba(0,255,255,0.30);
+                  color: white;
+                  padding: 14px;
+                  text-align: center;
+                }
+
+                h1 {
+                  color: #00ffff;
+                  text-align: center;
+                  margin-top: 0;
+                  text-shadow: 0 0 10px rgba(0,255,255,0.7);
+                }
+
+                table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  font-size: 14px;
+                }
+
+                th {
+                  color: #00ffff;
+                  text-align: left;
+                  padding: 6px;
+                  border-bottom: 1px solid rgba(0,255,255,0.35);
+                }
+
+                td {
+                  padding: 6px;
+                  border-bottom: 1px solid rgba(255,255,255,0.12);
+                }
+
+                td:last-child {
+                  text-align: right;
+                  font-size: 20px;
+                  color: #00ffff;
+                  text-shadow: 0 0 8px rgba(0,255,255,0.7);
+                }
+      - type: grid
+        cards:
+          - type: heading
+            heading_style: title
+          - type: markdown
             content: |
               # 🏆 Tournament Records
 
@@ -1618,6 +1918,235 @@ views:
     title: 📊 World Cup Stats Hub
     path: stats
     sections:
+      - type: grid
+        cards:
+          - type: heading
+            heading_style: title
+          - type: markdown
+            content: >
+              # 🎰 Betting Analytics
+
+
+              <div class="stat-grid">
+
+              <div class="stat-card">
+                <div class="label">🤝 BTTS Rate</div>
+                <div class="value">{{ states('sensor.world_cup_btts_rate') }}%</div>
+                <div class="sub">Both teams scored</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="label">🎯 Over 2.5 Goals</div>
+                <div class="value">{{ states('sensor.world_cup_over_2_5_rate') }}%</div>
+                <div class="sub">Matches with 3+ goals</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="label">🤝 Draw Rate</div>
+                <div class="value">{{ states('sensor.world_cup_draw_rate') }}%</div>
+                <div class="sub">Matches ending level</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="label">🧤 Clean Sheets</div>
+                <div class="value">{{ states('sensor.world_cup_clean_sheets') }}</div>
+                <div class="sub">Shutouts this tournament</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="label">💪 Unbeaten Teams</div>
+                <div class="value">{{ states('sensor.world_cup_unbeaten_teams') }}</div>
+                <div class="sub">Yet to lose</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="label">🔄 Comebacks</div>
+                <div class="value">{{ states('sensor.world_cup_comebacks') }}</div>
+                <div class="sub">Wins from behind</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="label">1️⃣ 1st Half Goals</div>
+                <div class="value">{{ states('sensor.world_cup_first_half_goals') }}</div>
+                <div class="sub">Goals before HT</div>
+              </div>
+
+              <div class="stat-card">
+                <div class="label">2️⃣ 2nd Half Goals</div>
+                <div class="value">{{ states('sensor.world_cup_second_half_goals') }}</div>
+                <div class="sub">Goals after HT</div>
+              </div>
+
+              </div>
+            card_mod:
+              style:
+                ha-markdown$: |
+                  h1 {
+                    text-align: center;
+                    margin-top: 0;
+                    margin-bottom: 20px;
+                    color: #ffffff;
+                    text-shadow:
+                      0 0 8px rgba(0,255,255,0.9),
+                      0 0 18px rgba(0,255,255,0.55);
+                  }
+
+                  .stat-grid {
+                    display: grid;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 10px;
+                  }
+
+                  .stat-card {
+                    background: rgba(0,255,255,0.07);
+                    border: 1px solid rgba(0,255,255,0.25);
+                    border-radius: 14px;
+                    padding: 12px;
+                    text-align: center;
+                  }
+
+                  .label {
+                    font-size: 12px;
+                    color: rgba(255,255,255,0.75);
+                    margin-bottom: 4px;
+                  }
+
+                  .value {
+                    font-size: 28px;
+                    font-weight: 900;
+                    color: #00ffff;
+                    text-shadow: 0 0 10px rgba(0,255,255,0.7);
+                    line-height: 1.1;
+                  }
+
+                  .sub {
+                    font-size: 10px;
+                    color: rgba(255,255,255,0.5);
+                    margin-top: 4px;
+                  }
+                .: |
+                  ha-card {
+                    background: rgba(5,14,24,0.45);
+                    border: 2px solid rgba(0,255,255,0.45);
+                    border-radius: 24px;
+                    box-shadow: 0 0 20px rgba(0,255,255,0.25);
+                    padding: 18px;
+                    color: white;
+                  }
+          - type: markdown
+            content: >
+              # 👟 Player Analytics
+
+
+              {% set no_pen = state_attr('sensor.world_cup_top_scorer_no_pen',
+              'scorers') or [] %}
+
+              {% set ga = state_attr('sensor.world_cup_goal_contributions',
+              'players') or [] %}
+
+              {% set pen_attrs = state_attr('sensor.world_cup_penalty_goals',
+              'players') or [] %}
+
+
+              ## 🎯 Non-Penalty Top Scorer
+
+              {% if no_pen %}
+              **{{ no_pen[0].name }}** ({{ no_pen[0].team }}) — {{ no_pen[0].nonPenaltyGoals }} goals
+              ({{ no_pen[0].goals }} total, {{ no_pen[0].penalties }} pen)
+              {% else %}
+              No data yet
+              {% endif %}
+
+
+              ---
+
+
+              ## ⚡ Goal Contributions Leader
+
+              {% if ga %}
+              **{{ ga[0].name }}** ({{ ga[0].team }}) — {{ ga[0].goalContributions }} G+A
+              ({{ ga[0].goals }}G + {{ ga[0].assists }}A)
+              {% else %}
+              No data yet
+              {% endif %}
+
+
+              ---
+
+
+              ## 🅿️ Penalty Goals
+
+              Total: **{{ states('sensor.world_cup_penalty_goals') }}** penalties scored
+
+              {% set total_g = state_attr('sensor.world_cup_penalty_goals',
+              'total_goals') | int(0) %}
+
+              {% set total_p = states('sensor.world_cup_penalty_goals') | int(0) %}
+
+              {% if total_g > 0 %}
+              {{ state_attr('sensor.world_cup_penalty_goals', 'penalty_percentage') }}% of all goals from the spot
+              {% endif %}
+
+
+              {% if pen_attrs %}
+
+              <table>
+                <tr><th>Player</th><th>Team</th><th>Pens</th></tr>
+                {% for p in pen_attrs[:5] %}
+                <tr>
+                  <td>{{ p.name }}</td>
+                  <td>{{ p.team }}</td>
+                  <td>{{ p.penalties }}</td>
+                </tr>
+                {% endfor %}
+              </table>
+
+              {% endif %}
+            card_mod:
+              style: |
+                ha-card {
+                  background: rgba(5,14,24,0.45);
+                  border: 2px solid rgba(255,200,0,0.45);
+                  border-radius: 24px;
+                  box-shadow: 0 0 20px rgba(255,200,0,0.20);
+                  padding: 18px;
+                  color: white;
+                }
+
+                h2 {
+                  color: #ffc800;
+                  margin-top: 16px;
+                  margin-bottom: 4px;
+                }
+
+                h2:first-child {
+                  margin-top: 0;
+                }
+
+                table {
+                  width: 100%;
+                  border-collapse: collapse;
+                  font-size: 13px;
+                  margin-top: 8px;
+                }
+
+                th {
+                  color: #ffc800;
+                  text-align: left;
+                  padding: 5px;
+                  border-bottom: 1px solid rgba(255,200,0,0.35);
+                }
+
+                td {
+                  padding: 5px;
+                  border-bottom: 1px solid rgba(255,255,255,0.10);
+                }
+
+                hr {
+                  border: none;
+                  border-top: 1px solid rgba(255,255,255,0.15);
+                  margin: 14px 0;
+                }
       - type: grid
         cards:
           - type: markdown
@@ -1749,6 +2278,23 @@ views:
                 <tr><td>🎯 Top Assist</td><td>{{ states('sensor.world_cup_top_assist') }}</td></tr>
                 <tr><td>⚽ Top Scoring Team</td><td>{{ states('sensor.world_cup_top_scoring_team') }}</td></tr>
                 <tr><td>🛡️ Best Defence</td><td>{{ states('sensor.world_cup_best_defence') }}</td></tr>
+                <tr><td colspan="2" style="color:#00ffff;font-size:11px;padding-top:10px;letter-spacing:1px;">BETTING ANALYTICS</td></tr>
+                <tr><td>🤝 BTTS Rate</td><td>{{ states('sensor.world_cup_btts_rate') }}%</td></tr>
+                <tr><td>🎯 Over 2.5 Rate</td><td>{{ states('sensor.world_cup_over_2_5_rate') }}%</td></tr>
+                <tr><td>🤝 Draw Rate</td><td>{{ states('sensor.world_cup_draw_rate') }}%</td></tr>
+                <tr><td>🧤 Clean Sheets</td><td>{{ states('sensor.world_cup_clean_sheets') }}</td></tr>
+                <tr><td>💪 Unbeaten Teams</td><td>{{ states('sensor.world_cup_unbeaten_teams') }}</td></tr>
+                <tr><td>🔄 Comebacks</td><td>{{ states('sensor.world_cup_comebacks') }}</td></tr>
+                <tr><td>1️⃣ 1st Half Goals</td><td>{{ states('sensor.world_cup_first_half_goals') }}</td></tr>
+                <tr><td>2️⃣ 2nd Half Goals</td><td>{{ states('sensor.world_cup_second_half_goals') }}</td></tr>
+                <tr><td colspan="2" style="color:#00ffff;font-size:11px;padding-top:10px;letter-spacing:1px;">PLAYER ANALYTICS</td></tr>
+                <tr><td>🎯 Non-Pen Top Scorer</td><td>{{ states('sensor.world_cup_top_scorer_no_pen') }}</td></tr>
+                <tr><td>⚡ Goal Contributions</td><td>{{ states('sensor.world_cup_goal_contributions') }}</td></tr>
+                <tr><td>🅿️ Penalty Goals</td><td>{{ states('sensor.world_cup_penalty_goals') }}</td></tr>
+                <tr><td colspan="2" style="color:#00ffff;font-size:11px;padding-top:10px;letter-spacing:1px;">KNOCKOUT TRACKING</td></tr>
+                <tr><td>🏆 Group Leaders</td><td>{{ states('sensor.world_cup_group_leaders') }}</td></tr>
+                <tr><td>⏱️ Extra Time Matches</td><td>{{ states('sensor.world_cup_extra_time_matches') }}</td></tr>
+                <tr><td>🅿️ Penalty Shootouts</td><td>{{ states('sensor.world_cup_penalty_shootouts') }}</td></tr>
               </table>
             card_mod:
               style: |

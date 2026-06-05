@@ -1,9 +1,9 @@
-from datetime import datetime, timezone, timedelta
+from datetime import date, datetime, timezone, timedelta
 
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.helpers.update_coordinator import CoordinatorEntity
 
-from .api import WorldCupAPI
+from .const import DOMAIN
 from .coordinator import WorldCupCoordinator
 
 
@@ -333,10 +333,8 @@ def get_match_venue(home, away, match_number=None):
 
 
 async def async_setup_entry(hass, entry, async_add_entities):
-    api = WorldCupAPI(entry.data["api_key"])
-    coordinator = WorldCupCoordinator(hass, api)
-
-    await coordinator.async_config_entry_first_refresh()
+    """Set up sensors from the coordinator stored by __init__.py."""
+    coordinator: WorldCupCoordinator = hass.data[DOMAIN][entry.entry_id]
 
     sensors = [
         WorldCupFixturesSensor(coordinator),
@@ -374,6 +372,26 @@ async def async_setup_entry(hass, entry, async_add_entities):
         WorldCupStadiumsSensor(coordinator),
         WorldCupHostCitiesSensor(coordinator),
         WorldCupFinalVenueSensor(coordinator),
+
+        # Phase 2 additions
+        WorldCupGroupLeadersSensor(coordinator),
+        WorldCupExtraTimeSensor(coordinator),
+        WorldCupPenaltyShootoutSensor(coordinator),
+
+        # Phase 4 additions
+        WorldCupTopScorerNoPenSensor(coordinator),
+        WorldCupGoalContributionsSensor(coordinator),
+        WorldCupPenaltyGoalsSensor(coordinator),
+
+        # Phase 3 additions
+        WorldCupBttsRateSensor(coordinator),
+        WorldCupOver25Sensor(coordinator),
+        WorldCupDrawRateSensor(coordinator),
+        WorldCupCleanSheetsSensor(coordinator),
+        WorldCupUnbeatenTeamsSensor(coordinator),
+        WorldCupComebacksSensor(coordinator),
+        WorldCupFirstHalfGoalsSensor(coordinator),
+        WorldCupSecondHalfGoalsSensor(coordinator),
     ]
 
     for group in [
@@ -411,7 +429,9 @@ def get_scorers(coordinator):
 def format_match(m, match_number=None):
     home = m.get("homeTeam", {})
     away = m.get("awayTeam", {})
-    score = m.get("score", {}).get("fullTime", {})
+    score_meta = m.get("score", {}) or {}
+    score = score_meta.get("fullTime", {}) or {}
+    half_time = score_meta.get("halfTime", {}) or {}
 
     home_name = home.get("shortName") or home.get("name") or "TBD"
     away_name = away.get("shortName") or away.get("name") or "TBD"
@@ -431,23 +451,50 @@ def format_match(m, match_number=None):
         "away": away_name,
         "homeScore": score.get("home"),
         "awayScore": score.get("away"),
+        # Phase 2 additions
+        "halfTimeHome": half_time.get("home"),
+        "halfTimeAway": half_time.get("away"),
+        "duration": score_meta.get("duration"),   # REGULAR | EXTRA_TIME | PENALTY_SHOOTOUT | None
+        "winner": score_meta.get("winner"),        # HOME_TEAM | AWAY_TEAM | DRAW | None
+        "minute": m.get("minute"),                 # int when IN_PLAY/PAUSED, else None
     }
 
 
-def format_scorer(s):
-    player = s.get("player", {})
-    team = s.get("team", {})
+def format_scorer(s: dict) -> dict:
+    player = s.get("player") or {}
+    team = s.get("team") or {}
+
+    goals = s.get("goals") or 0
+    assists = s.get("assists") or 0
+    penalties = s.get("penalties") or 0
+    non_pen_goals = max(goals - penalties, 0)
+
+    dob = player.get("dateOfBirth")
+    age = None
+    if dob:
+        try:
+            born = date.fromisoformat(dob)
+            today = date.today()
+            age = today.year - born.year - (
+                (today.month, today.day) < (born.month, born.day)
+            )
+        except (ValueError, TypeError):
+            age = None
 
     return {
         "name": player.get("name") or "Unknown",
         "firstName": player.get("firstName"),
         "lastName": player.get("lastName"),
-        "dateOfBirth": player.get("dateOfBirth"),
+        "dateOfBirth": dob,
+        "age": age,                          # computed from dateOfBirth; None if unavailable
         "nationality": player.get("nationality"),
+        "position": player.get("position"),  # e.g. "Attacker", "Midfielder"
         "team": team.get("shortName") or team.get("name") or "Unknown",
-        "goals": s.get("goals") or 0,
-        "assists": s.get("assists") or 0,
-        "penalties": s.get("penalties") or 0,
+        "goals": goals,
+        "assists": assists,
+        "penalties": penalties,
+        "nonPenaltyGoals": non_pen_goals,    # goals - penalties (never negative)
+        "goalContributions": goals + assists, # G+A combined
     }
 
 
@@ -493,6 +540,64 @@ def live_matches(coordinator):
         m for m in get_matches(coordinator)
         if m.get("status") in ["IN_PLAY", "PAUSED"]
     ]
+
+
+def knockout_finished_matches(coordinator):
+    """Finished matches that are not group stage."""
+    return [
+        m for m in finished_matches(coordinator)
+        if m.get("stage") != "GROUP_STAGE"
+    ]
+
+
+# ---------------------------------------------------------------------------
+# Phase 3 helper functions — computed stats
+# ---------------------------------------------------------------------------
+
+def both_scored(match: dict) -> bool:
+    """True if both teams scored at least one goal in a finished match."""
+    home, away = full_time_score(match)
+    return home is not None and away is not None and home > 0 and away > 0
+
+
+def total_goals(match: dict) -> int:
+    """Total goals in a finished match. Returns 0 if scores are unavailable."""
+    home, away = full_time_score(match)
+    return (home or 0) + (away or 0)
+
+
+def was_draw(match: dict) -> bool:
+    """True if match ended level at full time (includes 0-0)."""
+    home, away = full_time_score(match)
+    return home is not None and away is not None and home == away
+
+
+def half_time_score(match: dict) -> tuple:
+    """Return (home_ht, away_ht) from the halfTime score node."""
+    ht = (match.get("score") or {}).get("halfTime") or {}
+    return ht.get("home"), ht.get("away")
+
+
+def is_comeback(match: dict) -> bool:
+    """
+    True if the team that was LOSING at half-time ended up drawing or winning.
+    A 0-0 half-time is NOT a comeback — nobody was losing.
+    Requires both halfTime and fullTime scores to be available.
+    """
+    ht_home, ht_away = half_time_score(match)
+    ft_home, ft_away = full_time_score(match)
+
+    if any(v is None for v in [ht_home, ht_away, ft_home, ft_away]):
+        return False
+
+    if ht_home > ht_away:
+        # Away was losing at HT — check if they drew or won at FT
+        return ft_away >= ft_home
+    if ht_away > ht_home:
+        # Home was losing at HT — check if they drew or won at FT
+        return ft_home >= ft_away
+
+    return False  # level at HT — not a comeback scenario
 
 
 def full_time_score(match):
@@ -594,6 +699,7 @@ class WorldCupStandingsSensor(CoordinatorEntity, SensorEntity):
                     "goalsAgainst": team.get("goalsAgainst"),
                     "goalDifference": team.get("goalDifference"),
                     "points": team.get("points"),
+                    "form": team.get("form") or "",  # e.g. "W,W,D" — Phase 2
                 })
 
             clean.append({
@@ -1390,6 +1496,431 @@ class WorldCupHostCitiesSensor(CoordinatorEntity, SensorEntity):
     @property
     def extra_state_attributes(self):
         return {"cities": get_host_cities()}
+
+
+class WorldCupTopScorerNoPenSensor(CoordinatorEntity, SensorEntity):
+    """
+    Top scorer by non-penalty goals (total goals minus penalty goals).
+    Players with 0 non-penalty goals are excluded — this ranks pure goalscorers,
+    not penalty specialists.
+    """
+
+    _attr_unique_id = "world_cup_top_scorer_no_pen"
+    _attr_name = "World Cup Top Scorer (No Penalties)"
+
+    def _ranked(self) -> list:
+        scorers = [format_scorer(s) for s in get_scorers(self.coordinator)]
+        scorers = [s for s in scorers if s["nonPenaltyGoals"] > 0]
+        scorers.sort(
+            key=lambda x: (x["nonPenaltyGoals"], x["goals"]),
+            reverse=True,
+        )
+        return scorers
+
+    @property
+    def native_value(self) -> str:
+        ranked = self._ranked()
+        if not ranked:
+            return "No scorers yet"
+        top = ranked[0]
+        return f"{top['name']} - {top['nonPenaltyGoals']} goals (excl. pens)"
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        return {"scorers": self._ranked()[:20]}
+
+
+class WorldCupGoalContributionsSensor(CoordinatorEntity, SensorEntity):
+    """
+    Goal contributions (Goals + Assists) leaderboard.
+    Tiebreak: goals first, then assists.
+    Only players with at least 1 goal or 1 assist are included.
+    """
+
+    _attr_unique_id = "world_cup_goal_contributions"
+    _attr_name = "World Cup Goal Contributions"
+
+    def _ranked(self) -> list:
+        scorers = [format_scorer(s) for s in get_scorers(self.coordinator)]
+        scorers = [s for s in scorers if s["goalContributions"] > 0]
+        scorers.sort(
+            key=lambda x: (x["goalContributions"], x["goals"], x["assists"]),
+            reverse=True,
+        )
+        return scorers
+
+    @property
+    def native_value(self) -> str:
+        ranked = self._ranked()
+        if not ranked:
+            return "No data yet"
+        top = ranked[0]
+        return f"{top['name']} - {top['goalContributions']} (G+A)"
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        return {"players": self._ranked()[:20]}
+
+
+class WorldCupPenaltyGoalsSensor(CoordinatorEntity, SensorEntity):
+    """
+    Total penalty goals scored in the tournament.
+    Attributes include per-player breakdown and penalty % of all goals.
+    """
+
+    _attr_unique_id = "world_cup_penalty_goals"
+    _attr_name = "World Cup Penalty Goals"
+
+    @property
+    def native_value(self) -> int:
+        return sum((s.get("penalties") or 0) for s in get_scorers(self.coordinator))
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        scorers = [format_scorer(s) for s in get_scorers(self.coordinator)]
+        pen_scorers = sorted(
+            [s for s in scorers if s["penalties"] > 0],
+            key=lambda x: x["penalties"],
+            reverse=True,
+        )
+        total_goals_all = sum(s["goals"] for s in scorers)
+        total_pens = self.native_value
+        return {
+            "total_penalty_goals": total_pens,
+            "total_goals": total_goals_all,
+            "penalty_percentage": round(total_pens / total_goals_all * 100, 1)
+            if total_goals_all else 0,
+            "players": pen_scorers[:20],
+        }
+
+
+class WorldCupBttsRateSensor(CoordinatorEntity, SensorEntity):
+    """Both Teams to Score (BTTS) rate — % of finished matches where both teams scored."""
+
+    _attr_unique_id = "world_cup_btts_rate"
+    _attr_name = "World Cup BTTS Rate"
+    _attr_native_unit_of_measurement = "%"
+
+    @property
+    def native_value(self) -> float:
+        played = finished_matches(self.coordinator)
+        if not played:
+            return 0.0
+        count = sum(1 for m in played if both_scored(m))
+        return round(count / len(played) * 100, 1)
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        played = finished_matches(self.coordinator)
+        btts = [m for m in played if both_scored(m)]
+        return {
+            "btts_count": len(btts),
+            "matches_played": len(played),
+            "btts_matches": [format_match(m) for m in btts[-10:]],
+        }
+
+
+class WorldCupOver25Sensor(CoordinatorEntity, SensorEntity):
+    """% of finished matches with 3 or more total goals (over 2.5 line)."""
+
+    _attr_unique_id = "world_cup_over_2_5_rate"
+    _attr_name = "World Cup Over 2.5 Goals Rate"
+    _attr_native_unit_of_measurement = "%"
+
+    @property
+    def native_value(self) -> float:
+        played = finished_matches(self.coordinator)
+        if not played:
+            return 0.0
+        count = sum(1 for m in played if total_goals(m) >= 3)
+        return round(count / len(played) * 100, 1)
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        played = finished_matches(self.coordinator)
+        over = [m for m in played if total_goals(m) >= 3]
+        return {
+            "over_count": len(over),
+            "under_count": len(played) - len(over),
+            "matches_played": len(played),
+            "average_goals": round(
+                sum(total_goals(m) for m in played) / len(played), 2
+            ) if played else 0,
+        }
+
+
+class WorldCupDrawRateSensor(CoordinatorEntity, SensorEntity):
+    """
+    % of finished matches ending level at full time.
+    Knockout matches that went to ET/pens at 1-1 still count as a draw here
+    (correct for this stat — it measures 90-minute outcomes).
+    """
+
+    _attr_unique_id = "world_cup_draw_rate"
+    _attr_name = "World Cup Draw Rate"
+    _attr_native_unit_of_measurement = "%"
+
+    @property
+    def native_value(self) -> float:
+        played = finished_matches(self.coordinator)
+        if not played:
+            return 0.0
+        count = sum(1 for m in played if was_draw(m))
+        return round(count / len(played) * 100, 1)
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        played = finished_matches(self.coordinator)
+        draws = [m for m in played if was_draw(m)]
+        return {
+            "draw_count": len(draws),
+            "matches_played": len(played),
+        }
+
+
+class WorldCupCleanSheetsSensor(CoordinatorEntity, SensorEntity):
+    """
+    Clean sheets across the tournament.
+    native_value: total clean sheet instances (both teams in a 0-0 each get one).
+    Attributes: teams ranked by clean sheet count.
+    """
+
+    _attr_unique_id = "world_cup_clean_sheets"
+    _attr_name = "World Cup Clean Sheets"
+
+    def _team_clean_sheets(self) -> dict:
+        cs: dict = {}
+        for match in finished_matches(self.coordinator):
+            home, away = get_home_away_names(match)
+            home_score, away_score = full_time_score(match)
+            if home_score is None or away_score is None:
+                continue
+            if home_score == 0:
+                cs[away] = cs.get(away, 0) + 1
+            if away_score == 0:
+                cs[home] = cs.get(home, 0) + 1
+        return cs
+
+    @property
+    def native_value(self) -> int:
+        return sum(self._team_clean_sheets().values())
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        cs = self._team_clean_sheets()
+        ranked = sorted(
+            [{"team": t, "cleanSheets": n} for t, n in cs.items()],
+            key=lambda x: x["cleanSheets"],
+            reverse=True,
+        )
+        return {
+            "total_clean_sheets": self.native_value,
+            "teams": ranked[:20],
+        }
+
+
+class WorldCupUnbeatenTeamsSensor(CoordinatorEntity, SensorEntity):
+    """Teams that have played at least one match and not yet lost."""
+
+    _attr_unique_id = "world_cup_unbeaten_teams"
+    _attr_name = "World Cup Unbeaten Teams"
+
+    def _unbeaten(self) -> list:
+        played: dict = {}
+        lost: set = set()
+
+        for match in finished_matches(self.coordinator):
+            home, away = get_home_away_names(match)
+            home_score, away_score = full_time_score(match)
+            if home_score is None or away_score is None:
+                continue
+            played[home] = played.get(home, 0) + 1
+            played[away] = played.get(away, 0) + 1
+            if home_score < away_score:
+                lost.add(home)
+            elif away_score < home_score:
+                lost.add(away)
+
+        return sorted(t for t, n in played.items() if n > 0 and t not in lost)
+
+    @property
+    def native_value(self) -> int:
+        return len(self._unbeaten())
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        teams = self._unbeaten()
+        return {"count": len(teams), "teams": teams}
+
+
+class WorldCupComebacksSensor(CoordinatorEntity, SensorEntity):
+    """Matches where the HT-losing team came back to draw or win at FT."""
+
+    _attr_unique_id = "world_cup_comebacks"
+    _attr_name = "World Cup Comebacks"
+
+    def _comeback_matches(self) -> list:
+        return [m for m in finished_matches(self.coordinator) if is_comeback(m)]
+
+    def _format_comeback(self, m: dict) -> dict:
+        base = format_match(m)
+        ht_home, ht_away = half_time_score(m)
+        base["halfTimeHome"] = ht_home
+        base["halfTimeAway"] = ht_away
+        return base
+
+    @property
+    def native_value(self) -> int:
+        return len(self._comeback_matches())
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        matches = self._comeback_matches()
+        return {
+            "count": len(matches),
+            "matches": [self._format_comeback(m) for m in matches],
+        }
+
+
+class WorldCupFirstHalfGoalsSensor(CoordinatorEntity, SensorEntity):
+    """Total goals scored in the first half across all finished matches."""
+
+    _attr_unique_id = "world_cup_first_half_goals"
+    _attr_name = "World Cup First Half Goals"
+
+    @property
+    def native_value(self) -> int:
+        total = 0
+        for match in finished_matches(self.coordinator):
+            ht_home, ht_away = half_time_score(match)
+            total += (ht_home or 0) + (ht_away or 0)
+        return total
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        played = finished_matches(self.coordinator)
+        first_half = self.native_value
+        all_goals = sum(total_goals(m) for m in played)
+        return {
+            "first_half_goals": first_half,
+            "total_goals": all_goals,
+            "first_half_percentage": round(first_half / all_goals * 100, 1) if all_goals else 0,
+        }
+
+
+class WorldCupSecondHalfGoalsSensor(CoordinatorEntity, SensorEntity):
+    """Goals scored after half-time (fullTime minus halfTime) across all finished matches."""
+
+    _attr_unique_id = "world_cup_second_half_goals"
+    _attr_name = "World Cup Second Half Goals"
+
+    @property
+    def native_value(self) -> int:
+        total = 0
+        for match in finished_matches(self.coordinator):
+            ft_home, ft_away = full_time_score(match)
+            ht_home, ht_away = half_time_score(match)
+            if any(v is None for v in [ft_home, ft_away, ht_home, ht_away]):
+                continue
+            total += max((ft_home - ht_home) + (ft_away - ht_away), 0)
+        return total
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        played = finished_matches(self.coordinator)
+        second_half = self.native_value
+        all_goals = sum(total_goals(m) for m in played)
+        return {
+            "second_half_goals": second_half,
+            "total_goals": all_goals,
+            "second_half_percentage": round(second_half / all_goals * 100, 1) if all_goals else 0,
+        }
+
+
+class WorldCupGroupLeadersSensor(CoordinatorEntity, SensorEntity):
+    """Current leader (1st place) of each World Cup group."""
+
+    _attr_unique_id = "world_cup_group_leaders"
+    _attr_name = "World Cup Group Leaders"
+
+    def _compute_leaders(self) -> list:
+        """
+        Returns one entry per group that has at least 1 game played.
+        Each entry: { group, team, points, played, won, draw, lost, goalDifference, form }
+        Groups with no games played yet are omitted.
+        The API returns the table pre-sorted (points desc, GD desc) — no re-sort needed.
+        """
+        leaders = []
+        for group in get_standings(self.coordinator):
+            table = group.get("table") or []
+            active = [row for row in table if (row.get("playedGames") or 0) > 0]
+            if not active:
+                continue
+            top = active[0]
+            team_data = top.get("team", {}) or {}
+            leaders.append({
+                "group": group.get("group"),
+                "team": team_data.get("shortName") or team_data.get("name") or "Unknown",
+                "points": top.get("points") or 0,
+                "played": top.get("playedGames") or 0,
+                "won": top.get("won") or 0,
+                "draw": top.get("draw") or 0,
+                "lost": top.get("lost") or 0,
+                "goalDifference": top.get("goalDifference") or 0,
+                "form": top.get("form") or "",
+            })
+        return leaders
+
+    @property
+    def native_value(self) -> int:
+        """Number of groups with at least one game played."""
+        return len(self._compute_leaders())
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        return {"leaders": self._compute_leaders()}
+
+
+class WorldCupExtraTimeSensor(CoordinatorEntity, SensorEntity):
+    """Knockout matches decided in extra time (excludes penalty shootouts)."""
+
+    _attr_unique_id = "world_cup_extra_time_matches"
+    _attr_name = "World Cup Extra Time Matches"
+
+    def _et_matches(self) -> list:
+        return [
+            m for m in knockout_finished_matches(self.coordinator)
+            if (m.get("score") or {}).get("duration") == "EXTRA_TIME"
+        ]
+
+    @property
+    def native_value(self) -> int:
+        return len(self._et_matches())
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        return {"matches": [format_match(m) for m in self._et_matches()]}
+
+
+class WorldCupPenaltyShootoutSensor(CoordinatorEntity, SensorEntity):
+    """Knockout matches decided by penalty shootout."""
+
+    _attr_unique_id = "world_cup_penalty_shootouts"
+    _attr_name = "World Cup Penalty Shootouts"
+
+    def _pen_matches(self) -> list:
+        return [
+            m for m in knockout_finished_matches(self.coordinator)
+            if (m.get("score") or {}).get("duration") == "PENALTY_SHOOTOUT"
+        ]
+
+    @property
+    def native_value(self) -> int:
+        return len(self._pen_matches())
+
+    @property
+    def extra_state_attributes(self) -> dict:
+        return {"matches": [format_match(m) for m in self._pen_matches()]}
 
 
 class WorldCupFinalVenueSensor(CoordinatorEntity, SensorEntity):
