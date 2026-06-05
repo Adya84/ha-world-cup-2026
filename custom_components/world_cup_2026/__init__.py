@@ -2,7 +2,10 @@
 from __future__ import annotations
 
 import logging
+from pathlib import Path
 
+from homeassistant.components import frontend
+from homeassistant.components.http import StaticPathConfig
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 
@@ -14,18 +17,13 @@ _LOGGER = logging.getLogger(__name__)
 
 PLATFORMS = ["sensor"]
 
+PANEL_PATH = "world-cup-2026"
+PANEL_TITLE = "World Cup 2026"
+PANEL_ICON = "mdi:soccer"
+
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """
-    Set up the World Cup 2026 integration from a config entry.
-
-    Creates the API client and coordinator, performs the first data fetch,
-    stores the coordinator in hass.data so platform setup (sensor.py) can
-    retrieve it without duplicating setup logic.
-
-    Also registers an options-update listener so that saving new options
-    (e.g. toggling demo mode) automatically reloads the integration.
-    """
+    """Set up the World Cup 2026 integration from a config entry."""
     demo_mode: bool = entry.options.get(OPT_DEMO_MODE, DEFAULT_DEMO_MODE)
 
     if demo_mode:
@@ -36,7 +34,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     api = WorldCupAPI(api_key=entry.data[CONF_API_KEY], demo_mode=demo_mode)
     coordinator = WorldCupCoordinator(hass, api)
 
-    # First refresh raises ConfigEntryNotReady on failure, which HA handles gracefully.
     await coordinator.async_config_entry_first_refresh()
 
     hass.data.setdefault(DOMAIN, {})
@@ -44,7 +41,37 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
-    # When the user saves options, reload the entry so the new settings take effect.
+    # Register frontend files
+    frontend_dir = Path(__file__).parent / "frontend"
+
+    await hass.http.async_register_static_paths(
+        [
+            StaticPathConfig(
+                f"/{DOMAIN}_frontend",
+                str(frontend_dir),
+                False,
+            )
+        ]
+    )
+
+    # Register sidebar panel
+    frontend.async_register_built_in_panel(
+        hass,
+        component_name="custom",
+        sidebar_title=PANEL_TITLE,
+        sidebar_icon=PANEL_ICON,
+        frontend_url_path=PANEL_PATH,
+        config={
+            "_panel_custom": {
+                "name": "world-cup-2026-panel",
+                "module_url": f"/{DOMAIN}_frontend/world-cup-2026-panel.js",
+                "embed_iframe": False,
+                "trust_external": False,
+            }
+        },
+        require_admin=False,
+    )
+
     entry.async_on_unload(entry.add_update_listener(_async_reload_entry))
 
     return True
@@ -58,6 +85,8 @@ async def _async_reload_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
 async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     """Unload a config entry and clean up hass.data."""
     unloaded = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
+
     if unloaded:
         hass.data[DOMAIN].pop(entry.entry_id, None)
+
     return unloaded
