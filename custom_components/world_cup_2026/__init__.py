@@ -37,7 +37,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
-    frontend_dir = Path(__file__).parent / "frontend"
+    frontend_dir = Path(__file__).parent / "frontend" / "dist"
 
     await hass.http.async_register_static_paths(
         [
@@ -58,15 +58,15 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         config={
             "_panel_custom": {
                 "name": "world-cup-2026-panel",
-                "module_url": f"{FRONTEND_URL}/world-cup-2026-panel.js",
-                "embed_iframe": False,
+                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js",
+                "embed_iframe": True,
                 "trust_external": False,
             }
         },
         require_admin=False,
     )
 
-    _LOGGER.warning("World Cup 2026 sidebar app registered")
+    _LOGGER.info("World Cup 2026 app registered")
 
     entry.async_on_unload(entry.add_update_listener(_async_reload_entry))
 
