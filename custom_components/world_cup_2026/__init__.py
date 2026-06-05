@@ -10,6 +10,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.core import HomeAssistant
 
 from .api import WorldCupAPI
+from .app.websocket import async_register_websocket_api
 from .const import CONF_API_KEY, DEFAULT_DEMO_MODE, DOMAIN, OPT_DEMO_MODE
 from .coordinator import WorldCupCoordinator
 
@@ -34,6 +35,8 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     hass.data.setdefault(DOMAIN, {})
     hass.data[DOMAIN][entry.entry_id] = coordinator
+
+    await async_register_websocket_api(hass)
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
