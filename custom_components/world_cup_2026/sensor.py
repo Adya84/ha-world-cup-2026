@@ -820,7 +820,7 @@ class WorldCupCompletedMatchesSensor(CoordinatorEntity, SensorEntity):
 class WorldCupGroupFixturesSensor(CoordinatorEntity, SensorEntity):
     def __init__(self, coordinator, group):
         super().__init__(coordinator)
-        self.group = group
+        self._wc_group = group
         group_name = group.replace("GROUP_", "Group ")
         self._attr_translation_key = "group_fixtures"
         self._attr_translation_placeholders = {"group": group_name}
@@ -837,7 +837,7 @@ class WorldCupGroupFixturesSensor(CoordinatorEntity, SensorEntity):
             "matches": [
                 format_match(m)
                 for m in get_matches(self.coordinator)
-                if m.get("group") == self.group
+                if m.get("group") == self._wc_group
             ]
         }
 
