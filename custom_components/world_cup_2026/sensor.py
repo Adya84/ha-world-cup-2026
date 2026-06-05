@@ -1230,6 +1230,9 @@ class WorldCupBiggestWinSensor(CoordinatorEntity, SensorEntity):
     _attr_has_entity_name = True
     _attr_unique_id = "world_cup_biggest_win"
 
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
+
     @property
     def native_value(self):
         biggest = None
@@ -1402,9 +1405,12 @@ class WorldCupTopScoringTeamSensor(CoordinatorEntity, SensorEntity):
 
 
 class WorldCupBestDefenceSensor(CoordinatorEntity, SensorEntity):
-    _attr_translation_key = "zzzz_test_missing"
+    _attr_translation_key = "best_defence"
     _attr_has_entity_name = True
     _attr_unique_id = "world_cup_best_defence"
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
 
     @property
     def native_value(self):
@@ -1637,6 +1643,9 @@ class WorldCupBttsRateSensor(CoordinatorEntity, SensorEntity):
     _attr_translation_key = "btts_rate"
     _attr_has_entity_name = True
     _attr_native_unit_of_measurement = "%"
+
+    def __init__(self, coordinator):
+        super().__init__(coordinator)
 
     @property
     def native_value(self) -> float:
