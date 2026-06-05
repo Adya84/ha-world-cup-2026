@@ -20,6 +20,7 @@ PLATFORMS = ["sensor"]
 PANEL_PATH = "world-cup-2026"
 PANEL_TITLE = "World Cup 2026"
 PANEL_ICON = "mdi:soccer"
+FRONTEND_URL = f"/{DOMAIN}_frontend"
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
@@ -41,36 +42,36 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
 
     await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
 
-    # Register frontend files
     frontend_dir = Path(__file__).parent / "frontend"
 
     await hass.http.async_register_static_paths(
         [
             StaticPathConfig(
-                f"/{DOMAIN}_frontend",
+                FRONTEND_URL,
                 str(frontend_dir),
                 False,
             )
         ]
     )
 
-    # Register sidebar panel
     frontend.async_register_built_in_panel(
         hass,
-        component_name="custom",
+        component_name=DOMAIN,
         sidebar_title=PANEL_TITLE,
         sidebar_icon=PANEL_ICON,
         frontend_url_path=PANEL_PATH,
         config={
             "_panel_custom": {
                 "name": "world-cup-2026-panel",
-                "module_url": f"/{DOMAIN}_frontend/world-cup-2026-panel.js",
+                "module_url": f"{FRONTEND_URL}/world-cup-2026-panel.js",
                 "embed_iframe": False,
                 "trust_external": False,
             }
         },
         require_admin=False,
     )
+
+    _LOGGER.warning("World Cup 2026 sidebar panel registration code has run")
 
     entry.async_on_unload(entry.add_update_listener(_async_reload_entry))
 
