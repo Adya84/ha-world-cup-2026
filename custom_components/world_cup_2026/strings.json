@@ -1,3 +1,4 @@
+```json
 {
   "config": {
     "step": {
@@ -8,7 +9,7 @@
           "api_key": "API Key"
         },
         "data_description": {
-          "api_key": "Your personal API key from football-data.org (free tier is sufficient)"
+          "api_key": "Your personal API key from football-data.org. The free tier is sufficient."
         }
       }
     },
@@ -34,5 +35,88 @@
         }
       }
     }
+  },
+  "entity": {
+    "sensor": {
+      "next_match": {
+        "name": "Next Match"
+      },
+      "live_match": {
+        "name": "Live Match"
+      },
+      "latest_result": {
+        "name": "Latest Result"
+      },
+      "group_standings": {
+        "name": "Group Standings"
+      },
+      "knockout_stage": {
+        "name": "Knockout Stage"
+      },
+      "tournament_progress": {
+        "name": "Tournament Progress"
+      },
+      "matches_played": {
+        "name": "Matches Played"
+      },
+      "matches_remaining": {
+        "name": "Matches Remaining"
+      },
+      "total_goals": {
+        "name": "Total Goals"
+      },
+      "goals_per_match": {
+        "name": "Goals Per Match"
+      },
+      "current_stage": {
+        "name": "Current Stage"
+      },
+      "teams_remaining": {
+        "name": "Teams Remaining"
+      },
+      "teams_eliminated": {
+        "name": "Teams Eliminated"
+      },
+      "live_goals": {
+        "name": "Live Goals"
+      },
+      "countdown_to_kickoff": {
+        "name": "Countdown To Kick-Off"
+      },
+      "days_until_final": {
+        "name": "Days Until Final"
+      },
+      "top_scorer": {
+        "name": "Top Scorer"
+      },
+      "top_scorers": {
+        "name": "Top Scorers"
+      },
+      "player_statistics": {
+        "name": "Player Statistics"
+      },
+      "enhanced_player_statistics": {
+        "name": "Enhanced Player Statistics"
+      },
+      "betting_statistics": {
+        "name": "Betting Statistics"
+      },
+      "match_statistics": {
+        "name": "Match Statistics"
+      },
+      "team_statistics": {
+        "name": "Team Statistics"
+      },
+      "tournament_leaders": {
+        "name": "Tournament Leaders"
+      },
+      "match_predictions": {
+        "name": "Match Predictions"
+      },
+      "demo_fixtures": {
+        "name": "Demo Fixtures"
+      }
+    }
   }
 }
+```
