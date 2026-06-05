@@ -3,6 +3,7 @@ class WorldCup2026Panel extends HTMLElement {
     super();
     this._hass = null;
     this._page = "overview";
+    this._loaded = false;
     this._data = {
       overview: null,
       live: [],
@@ -14,7 +15,6 @@ class WorldCup2026Panel extends HTMLElement {
 
   set hass(hass) {
     this._hass = hass;
-
     if (!this._loaded) {
       this._loaded = true;
       this.loadAll();
@@ -23,6 +23,15 @@ class WorldCup2026Panel extends HTMLElement {
 
   connectedCallback() {
     this.renderLoading();
+  }
+
+  esc(value) {
+    return String(value ?? "")
+      .replaceAll("&", "&amp;")
+      .replaceAll("<", "&lt;")
+      .replaceAll(">", "&gt;")
+      .replaceAll('"', "&quot;")
+      .replaceAll("'", "&#039;");
   }
 
   async callApi(type) {
@@ -36,7 +45,6 @@ class WorldCup2026Panel extends HTMLElement {
       this._data.fixtures = await this.callApi("world_cup_2026/get_fixtures");
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
       this._data.scorers = await this.callApi("world_cup_2026/get_scorers");
-
       this.render();
     } catch (err) {
       this.renderError(err);
@@ -48,21 +56,42 @@ class WorldCup2026Panel extends HTMLElement {
     this.render();
   }
 
+  formatDate(value) {
+    if (!value) return "";
+    try {
+      return new Date(value).toLocaleString([], {
+        weekday: "short",
+        day: "2-digit",
+        month: "short",
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } catch {
+      return value;
+    }
+  }
+
   renderLoading() {
     this.innerHTML = `
+      ${this.styles()}
       <div class="wc-app">
-        <div class="wc-loading">Loading World Cup 2026...</div>
+        <div class="wc-shell">
+          <div class="wc-card">Loading World Cup 2026...</div>
+        </div>
       </div>
     `;
   }
 
   renderError(err) {
     this.innerHTML = `
+      ${this.styles()}
       <div class="wc-app">
-        <div class="wc-card">
-          <h1>World Cup 2026</h1>
-          <p>Could not load app data.</p>
-          <pre>${JSON.stringify(err, null, 2)}</pre>
+        <div class="wc-shell">
+          <div class="wc-card">
+            <h1>World Cup 2026</h1>
+            <p>Could not load app data.</p>
+            <pre>${this.esc(JSON.stringify(err, null, 2))}</pre>
+          </div>
         </div>
       </div>
     `;
@@ -74,8 +103,9 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-app {
           min-height: 100vh;
           background:
-            radial-gradient(circle at top left, rgba(0,180,255,0.22), transparent 30%),
-            linear-gradient(135deg, #07111f, #102a3f);
+            radial-gradient(circle at top left, rgba(0,180,255,0.25), transparent 28%),
+            radial-gradient(circle at bottom right, rgba(0,255,180,0.12), transparent 26%),
+            linear-gradient(135deg, #06101f, #102a3f);
           color: white;
           font-family: Arial, sans-serif;
           padding: 22px;
@@ -83,7 +113,7 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-shell {
-          max-width: 1280px;
+          max-width: 1320px;
           margin: 0 auto;
         }
 
@@ -96,9 +126,8 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-title {
-          font-size: 34px;
+          font-size: 36px;
           font-weight: 900;
-          letter-spacing: -0.5px;
         }
 
         .wc-subtitle {
@@ -106,13 +135,18 @@ class WorldCup2026Panel extends HTMLElement {
           margin-top: 5px;
         }
 
-        .wc-pill {
-          background: rgba(255,255,255,0.1);
-          border: 1px solid rgba(255,255,255,0.18);
+        .wc-pill, .wc-badge {
+          background: rgba(255,255,255,0.12);
+          border: 1px solid rgba(255,255,255,0.20);
           border-radius: 999px;
-          padding: 10px 14px;
+          padding: 9px 13px;
           font-size: 13px;
           white-space: nowrap;
+        }
+
+        .wc-live {
+          background: rgba(255,40,40,0.25);
+          border-color: rgba(255,80,80,0.55);
         }
 
         .wc-nav {
@@ -131,11 +165,12 @@ class WorldCup2026Panel extends HTMLElement {
           padding: 10px 16px;
           cursor: pointer;
           white-space: nowrap;
+          font-weight: 700;
         }
 
         .wc-nav button.active {
-          background: rgba(255,255,255,0.28);
-          border-color: rgba(255,255,255,0.42);
+          background: rgba(45,190,255,0.34);
+          border-color: rgba(120,220,255,0.7);
         }
 
         .wc-card {
@@ -144,6 +179,7 @@ class WorldCup2026Panel extends HTMLElement {
           border-radius: 22px;
           padding: 20px;
           box-shadow: 0 20px 50px rgba(0,0,0,0.20);
+          margin-bottom: 16px;
         }
 
         .wc-grid {
@@ -162,13 +198,13 @@ class WorldCup2026Panel extends HTMLElement {
 
         .wc-stat strong {
           display: block;
-          font-size: 28px;
+          font-size: 30px;
           margin-bottom: 5px;
         }
 
         .wc-section-title {
-          font-size: 22px;
-          font-weight: 800;
+          font-size: 23px;
+          font-weight: 900;
           margin: 0 0 14px;
         }
 
@@ -190,16 +226,23 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-score {
           font-size: 22px;
           font-weight: 900;
+          text-align: center;
         }
 
         .wc-muted {
           opacity: 0.7;
           font-size: 13px;
+          margin-top: 3px;
+        }
+
+        .wc-table-wrap {
+          overflow-x: auto;
         }
 
         .wc-table {
           width: 100%;
           border-collapse: collapse;
+          min-width: 700px;
         }
 
         .wc-table th,
@@ -209,6 +252,12 @@ class WorldCup2026Panel extends HTMLElement {
           text-align: left;
         }
 
+        .wc-table th {
+          opacity: 0.75;
+          font-size: 12px;
+          text-transform: uppercase;
+        }
+
         .wc-empty {
           opacity: 0.72;
           padding: 18px;
@@ -216,32 +265,39 @@ class WorldCup2026Panel extends HTMLElement {
           border-radius: 16px;
         }
 
-        @media (max-width: 700px) {
-          .wc-app {
-            padding: 14px;
-          }
+        .wc-two {
+          display: grid;
+          grid-template-columns: 1.4fr 1fr;
+          gap: 16px;
+        }
 
-          .wc-header {
-            display: block;
-          }
+        .wc-bracket {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(180px, 1fr));
+          gap: 14px;
+          overflow-x: auto;
+        }
 
-          .wc-title {
-            font-size: 28px;
-          }
+        .wc-round-title {
+          font-weight: 900;
+          margin-bottom: 10px;
+        }
 
-          .wc-pill {
-            display: inline-block;
-            margin-top: 12px;
-          }
+        .wc-bracket-match {
+          background: rgba(255,255,255,0.07);
+          border: 1px solid rgba(255,255,255,0.10);
+          border-radius: 14px;
+          padding: 12px;
+          margin-bottom: 10px;
+        }
 
-          .wc-row {
-            grid-template-columns: 1fr;
-            text-align: center;
-          }
-
-          .wc-table {
-            font-size: 13px;
-          }
+        @media (max-width: 800px) {
+          .wc-app { padding: 14px; }
+          .wc-header { display: block; }
+          .wc-title { font-size: 28px; }
+          .wc-pill { display: inline-block; margin-top: 12px; }
+          .wc-row { grid-template-columns: 1fr; text-align: center; }
+          .wc-two { grid-template-columns: 1fr; }
         }
       </style>
     `;
@@ -271,21 +327,32 @@ class WorldCup2026Panel extends HTMLElement {
 
   overviewPage() {
     const o = this._data.overview || {};
+    const fixtures = this._data.fixtures || [];
+    const nextMatch = fixtures.find(m => ["TIMED", "SCHEDULED"].includes(m.status)) || fixtures[0];
+    const topScorer = (this._data.scorers || [])[0];
 
     return `
       <div class="wc-grid">
         <div class="wc-stat"><strong>${o.matches_total ?? 104}</strong>Total Matches</div>
-        <div class="wc-stat"><strong>${o.matches_loaded ?? 0}</strong>Loaded Matches</div>
+        <div class="wc-stat"><strong>${o.matches_loaded ?? 0}</strong>Loaded</div>
         <div class="wc-stat"><strong>${o.matches_played ?? 0}</strong>Played</div>
         <div class="wc-stat"><strong>${o.matches_remaining ?? 104}</strong>Remaining</div>
         <div class="wc-stat"><strong>${o.live_matches ?? 0}</strong>Live Now</div>
         <div class="wc-stat"><strong>${o.top_scorers ?? 0}</strong>Scorers</div>
       </div>
 
-      <div class="wc-card">
-        <div class="wc-section-title">Tournament Status</div>
-        <p>Demo mode: <strong>${o.demo_mode ? "On" : "Off"}</strong></p>
-        <p>Last update: <strong>${o.last_update_success ? "OK" : "Failed"}</strong></p>
+      <div class="wc-two">
+        <div class="wc-card">
+          <div class="wc-section-title">Next Match</div>
+          ${nextMatch ? this.matchRow(nextMatch) : `<div class="wc-empty">No upcoming match loaded.</div>`}
+        </div>
+
+        <div class="wc-card">
+          <div class="wc-section-title">Tournament Status</div>
+          <p>Demo mode: <strong>${o.demo_mode ? "On" : "Off"}</strong></p>
+          <p>Last update: <strong>${o.last_update_success ? "OK" : "Failed"}</strong></p>
+          <p>Top scorer: <strong>${this.esc(topScorer?.player?.name || topScorer?.name || "Not available")}</strong></p>
+        </div>
       </div>
     `;
   }
@@ -299,7 +366,7 @@ class WorldCup2026Panel extends HTMLElement {
 
     return `
       <div class="wc-card">
-        <div class="wc-section-title">Live Matches</div>
+        <div class="wc-section-title">Live Matches <span class="wc-badge wc-live">LIVE</span></div>
         <div class="wc-list">
           ${live.map(m => this.matchRow(m)).join("")}
         </div>
@@ -308,7 +375,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   fixturesPage() {
-    const fixtures = (this._data.fixtures || []).slice(0, 40);
+    const fixtures = this._data.fixtures || [];
 
     return `
       <div class="wc-card">
@@ -329,13 +396,16 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <div class="wc-row">
         <div>
-          <strong>${m.homeTeam || "TBC"}</strong>
-          <div class="wc-muted">${m.group || m.stage || ""}</div>
+          <strong>${this.esc(m.homeTeam || "TBC")}</strong>
+          <div class="wc-muted">${this.esc(m.group || m.stage || "")}</div>
         </div>
-        <div class="wc-score">${homeScore} - ${awayScore}</div>
         <div>
-          <strong>${m.awayTeam || "TBC"}</strong>
-          <div class="wc-muted">${m.status || ""}</div>
+          <div class="wc-score">${homeScore} - ${awayScore}</div>
+          <div class="wc-muted">${this.esc(this.formatDate(m.utcDate))}</div>
+        </div>
+        <div>
+          <strong>${this.esc(m.awayTeam || "TBC")}</strong>
+          <div class="wc-muted">${this.esc(m.status || "")}</div>
         </div>
       </div>
     `;
@@ -344,62 +414,127 @@ class WorldCup2026Panel extends HTMLElement {
   groupsPage() {
     const groups = this._data.groups || [];
 
-    return `
+    if (!groups.length) {
+      return `<div class="wc-card"><div class="wc-section-title">Groups A-L</div><div class="wc-empty">No group standings loaded yet.</div></div>`;
+    }
+
+    return groups.map(group => `
       <div class="wc-card">
-        <div class="wc-section-title">Groups A-L</div>
-        ${groups.length ? `
-          <pre style="white-space:pre-wrap;overflow:auto;">${JSON.stringify(groups, null, 2)}</pre>
-        ` : `
-          <div class="wc-empty">No group standings loaded yet.</div>
-        `}
+        <div class="wc-section-title">${this.esc(group.group || "Group")}</div>
+        <div class="wc-table-wrap">
+          <table class="wc-table">
+            <thead>
+              <tr>
+                <th>Pos</th>
+                <th>Team</th>
+                <th>P</th>
+                <th>W</th>
+                <th>D</th>
+                <th>L</th>
+                <th>GF</th>
+                <th>GA</th>
+                <th>GD</th>
+                <th>Pts</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${(group.table || []).map(team => `
+                <tr>
+                  <td>${team.position ?? ""}</td>
+                  <td><strong>${this.esc(team.team?.name || "")}</strong></td>
+                  <td>${team.playedGames ?? 0}</td>
+                  <td>${team.won ?? 0}</td>
+                  <td>${team.draw ?? 0}</td>
+                  <td>${team.lost ?? 0}</td>
+                  <td>${team.goalsFor ?? 0}</td>
+                  <td>${team.goalsAgainst ?? 0}</td>
+                  <td>${team.goalDifference ?? 0}</td>
+                  <td><strong>${team.points ?? 0}</strong></td>
+                </tr>
+              `).join("")}
+            </tbody>
+          </table>
+        </div>
       </div>
-    `;
+    `).join("");
   }
 
   playersPage() {
-    const scorers = (this._data.scorers || []).slice(0, 20);
+    const scorers = (this._data.scorers || []).slice(0, 30);
 
     return `
       <div class="wc-card">
         <div class="wc-section-title">Top Scorers</div>
         ${scorers.length ? `
-          <table class="wc-table">
-            <thead>
-              <tr>
-                <th>Player</th>
-                <th>Team</th>
-                <th>Goals</th>
-              </tr>
-            </thead>
-            <tbody>
-              ${scorers.map(s => `
+          <div class="wc-table-wrap">
+            <table class="wc-table">
+              <thead>
                 <tr>
-                  <td>${s.player?.name || s.name || "Unknown"}</td>
-                  <td>${s.team?.name || s.team || ""}</td>
-                  <td>${s.goals ?? "-"}</td>
+                  <th>#</th>
+                  <th>Player</th>
+                  <th>Team</th>
+                  <th>Goals</th>
                 </tr>
-              `).join("")}
-            </tbody>
-          </table>
+              </thead>
+              <tbody>
+                ${scorers.map((s, i) => `
+                  <tr>
+                    <td>${i + 1}</td>
+                    <td><strong>${this.esc(s.player?.name || s.name || "Unknown")}</strong></td>
+                    <td>${this.esc(s.team?.name || s.team || "")}</td>
+                    <td><strong>${s.goals ?? "-"}</strong></td>
+                  </tr>
+                `).join("")}
+              </tbody>
+            </table>
+          </div>
         ` : `<div class="wc-empty">No player statistics loaded yet.</div>`}
       </div>
     `;
   }
 
   knockoutPage() {
+    const rounds = [
+      "Round of 32",
+      "Round of 16",
+      "Quarter Finals",
+      "Semi Finals",
+      "Final",
+    ];
+
     return `
       <div class="wc-card">
         <div class="wc-section-title">Knockout Bracket</div>
-        <div class="wc-empty">Bracket view ready. We’ll wire this to knockout-stage fixtures next.</div>
+        <div class="wc-bracket">
+          ${rounds.map(round => `
+            <div>
+              <div class="wc-round-title">${round}</div>
+              <div class="wc-bracket-match">TBC<br><span class="wc-muted">v</span><br>TBC</div>
+              <div class="wc-bracket-match">TBC<br><span class="wc-muted">v</span><br>TBC</div>
+            </div>
+          `).join("")}
+        </div>
       </div>
     `;
   }
 
   recordsPage() {
+    const fixtures = this._data.fixtures || [];
+    const finished = fixtures.filter(m => m.homeScore !== null && m.awayScore !== null);
+    const highest = [...finished].sort((a, b) =>
+      ((b.homeScore || 0) + (b.awayScore || 0)) - ((a.homeScore || 0) + (a.awayScore || 0))
+    )[0];
+
     return `
+      <div class="wc-grid">
+        <div class="wc-stat"><strong>${fixtures.length}</strong>Fixtures Loaded</div>
+        <div class="wc-stat"><strong>${finished.length}</strong>Completed</div>
+        <div class="wc-stat"><strong>${this._data.scorers?.length || 0}</strong>Scorers</div>
+      </div>
+
       <div class="wc-card">
         <div class="wc-section-title">Tournament Records</div>
-        <div class="wc-empty">Records screen ready. Next we can connect this to your tournament record entities/data.</div>
+        ${highest ? this.matchRow(highest) : `<div class="wc-empty">Records will populate once matches are played.</div>`}
       </div>
     `;
   }
@@ -429,16 +564,13 @@ class WorldCup2026Panel extends HTMLElement {
           </div>
 
           ${this.nav()}
-
           ${this.pageContent()}
         </div>
       </div>
     `;
 
     this.querySelectorAll("[data-page]").forEach((button) => {
-      button.addEventListener("click", () => {
-        this.changePage(button.dataset.page);
-      });
+      button.addEventListener("click", () => this.changePage(button.dataset.page));
     });
   }
 }
