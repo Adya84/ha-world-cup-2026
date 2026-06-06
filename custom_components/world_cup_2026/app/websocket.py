@@ -44,65 +44,24 @@ def _serialise_match(match):
     }
 
 
-def _serialise_leaderboard_player(player, index):
-    if not isinstance(player, dict):
-        return {
-            "position": index + 1,
-            "name": str(player),
-            "points": 0,
-        }
-
-    name = (
-        player.get("name")
-        or player.get("player")
-        or player.get("Player")
-        or player.get("entrant")
-        or player.get("Entrant")
-        or player.get("username")
-        or "Unknown"
-    )
-
-    points = (
-        player.get("points")
-        or player.get("Points")
-        or player.get("score")
-        or player.get("Score")
-        or player.get("total")
-        or player.get("Total")
-        or 0
-    )
-
-    try:
-        points = int(points)
-    except (TypeError, ValueError):
-        points = 0
-
-    return {
-        "position": player.get("position") or player.get("Position") or index + 1,
-        "name": name,
-        "points": points,
-    }
+def _send_not_loaded(connection, msg):
+    connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
 
 
-@websocket_api.websocket_command(
-    {
-        vol.Required("type"): "world_cup_2026/get_overview",
-    }
-)
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_overview"})
 @websocket_api.async_response
 async def websocket_get_overview(hass, connection, msg) -> None:
     coordinator = _get_coordinator(hass)
 
     if coordinator is None:
-        connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
+        _send_not_loaded(connection, msg)
         return
 
     data = coordinator.data or {}
-
     matches = data.get("matches", [])
     standings = data.get("standings", [])
     scorers = data.get("scorers", [])
-    leaderboard = data.get("leaderboard", [])
+    statistics = data.get("statistics", {})
 
     live_matches = [m for m in matches if m.get("status") in LIVE_STATUSES]
     finished_matches = [m for m in matches if m.get("status") in FINISHED_STATUSES]
@@ -111,31 +70,29 @@ async def websocket_get_overview(hass, connection, msg) -> None:
         msg["id"],
         {
             "title": "World Cup 2026",
-            "matches_total": 104,
+            "matches_total": statistics.get("matches_total", 104),
             "matches_loaded": len(matches),
-            "matches_played": len(finished_matches),
-            "matches_remaining": max(104 - len(finished_matches), 0),
+            "matches_played": statistics.get("matches_played", len(finished_matches)),
+            "matches_remaining": statistics.get("matches_remaining", max(104 - len(finished_matches), 0)),
             "live_matches": len(live_matches),
             "groups": len(standings) or 12,
             "top_scorers": len(scorers),
-            "leaderboard_players": len(leaderboard),
+            "total_goals": statistics.get("total_goals", 0),
+            "goals_per_match": statistics.get("goals_per_match", 0),
+            "progress": statistics.get("progress", 0),
             "last_update_success": coordinator.last_update_success,
             "demo_mode": getattr(coordinator.api, "demo_mode", False),
         },
     )
 
 
-@websocket_api.websocket_command(
-    {
-        vol.Required("type"): "world_cup_2026/get_live_matches",
-    }
-)
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_live_matches"})
 @websocket_api.async_response
 async def websocket_get_live_matches(hass, connection, msg) -> None:
     coordinator = _get_coordinator(hass)
 
     if coordinator is None:
-        connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
+        _send_not_loaded(connection, msg)
         return
 
     matches = (coordinator.data or {}).get("matches", [])
@@ -147,17 +104,13 @@ async def websocket_get_live_matches(hass, connection, msg) -> None:
     )
 
 
-@websocket_api.websocket_command(
-    {
-        vol.Required("type"): "world_cup_2026/get_fixtures",
-    }
-)
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_fixtures"})
 @websocket_api.async_response
 async def websocket_get_fixtures(hass, connection, msg) -> None:
     coordinator = _get_coordinator(hass)
 
     if coordinator is None:
-        connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
+        _send_not_loaded(connection, msg)
         return
 
     matches = (coordinator.data or {}).get("matches", [])
@@ -168,17 +121,13 @@ async def websocket_get_fixtures(hass, connection, msg) -> None:
     )
 
 
-@websocket_api.websocket_command(
-    {
-        vol.Required("type"): "world_cup_2026/get_groups",
-    }
-)
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_groups"})
 @websocket_api.async_response
 async def websocket_get_groups(hass, connection, msg) -> None:
     coordinator = _get_coordinator(hass)
 
     if coordinator is None:
-        connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
+        _send_not_loaded(connection, msg)
         return
 
     connection.send_result(
@@ -187,17 +136,13 @@ async def websocket_get_groups(hass, connection, msg) -> None:
     )
 
 
-@websocket_api.websocket_command(
-    {
-        vol.Required("type"): "world_cup_2026/get_scorers",
-    }
-)
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_scorers"})
 @websocket_api.async_response
 async def websocket_get_scorers(hass, connection, msg) -> None:
     coordinator = _get_coordinator(hass)
 
     if coordinator is None:
-        connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
+        _send_not_loaded(connection, msg)
         return
 
     connection.send_result(
@@ -206,39 +151,49 @@ async def websocket_get_scorers(hass, connection, msg) -> None:
     )
 
 
-@websocket_api.websocket_command(
-    {
-        vol.Required("type"): "world_cup_2026/get_leaderboard",
-    }
-)
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_statistics"})
 @websocket_api.async_response
-async def websocket_get_leaderboard(hass, connection, msg) -> None:
+async def websocket_get_statistics(hass, connection, msg) -> None:
     coordinator = _get_coordinator(hass)
 
     if coordinator is None:
-        connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
+        _send_not_loaded(connection, msg)
         return
 
-    data = coordinator.data or {}
-
-    leaderboard = (
-        data.get("leaderboard")
-        or data.get("players")
-        or data.get("entries")
-        or []
+    connection.send_result(
+        msg["id"],
+        (coordinator.data or {}).get("statistics", {}),
     )
 
-    serialised = [
-        _serialise_leaderboard_player(player, index)
-        for index, player in enumerate(leaderboard)
-    ]
 
-    serialised.sort(key=lambda item: item.get("points", 0), reverse=True)
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_records"})
+@websocket_api.async_response
+async def websocket_get_records(hass, connection, msg) -> None:
+    coordinator = _get_coordinator(hass)
 
-    for index, player in enumerate(serialised):
-        player["position"] = index + 1
+    if coordinator is None:
+        _send_not_loaded(connection, msg)
+        return
 
-    connection.send_result(msg["id"], serialised)
+    connection.send_result(
+        msg["id"],
+        (coordinator.data or {}).get("records", {}),
+    )
+
+
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_venues"})
+@websocket_api.async_response
+async def websocket_get_venues(hass, connection, msg) -> None:
+    coordinator = _get_coordinator(hass)
+
+    if coordinator is None:
+        _send_not_loaded(connection, msg)
+        return
+
+    connection.send_result(
+        msg["id"],
+        (coordinator.data or {}).get("venues", {}),
+    )
 
 
 async def async_register_websocket_api(hass) -> None:
@@ -247,4 +202,6 @@ async def async_register_websocket_api(hass) -> None:
     websocket_api.async_register_command(hass, websocket_get_fixtures)
     websocket_api.async_register_command(hass, websocket_get_groups)
     websocket_api.async_register_command(hass, websocket_get_scorers)
-    websocket_api.async_register_command(hass, websocket_get_leaderboard)
+    websocket_api.async_register_command(hass, websocket_get_statistics)
+    websocket_api.async_register_command(hass, websocket_get_records)
+    websocket_api.async_register_command(hass, websocket_get_venues)
