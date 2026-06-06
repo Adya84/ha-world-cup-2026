@@ -44,6 +44,46 @@ def _serialise_match(match):
     }
 
 
+def _serialise_leaderboard_player(player, index):
+    if not isinstance(player, dict):
+        return {
+            "position": index + 1,
+            "name": str(player),
+            "points": 0,
+        }
+
+    name = (
+        player.get("name")
+        or player.get("player")
+        or player.get("Player")
+        or player.get("entrant")
+        or player.get("Entrant")
+        or player.get("username")
+        or "Unknown"
+    )
+
+    points = (
+        player.get("points")
+        or player.get("Points")
+        or player.get("score")
+        or player.get("Score")
+        or player.get("total")
+        or player.get("Total")
+        or 0
+    )
+
+    try:
+        points = int(points)
+    except (TypeError, ValueError):
+        points = 0
+
+    return {
+        "position": player.get("position") or player.get("Position") or index + 1,
+        "name": name,
+        "points": points,
+    }
+
+
 @websocket_api.websocket_command(
     {
         vol.Required("type"): "world_cup_2026/get_overview",
@@ -62,6 +102,7 @@ async def websocket_get_overview(hass, connection, msg) -> None:
     matches = data.get("matches", [])
     standings = data.get("standings", [])
     scorers = data.get("scorers", [])
+    leaderboard = data.get("leaderboard", [])
 
     live_matches = [m for m in matches if m.get("status") in LIVE_STATUSES]
     finished_matches = [m for m in matches if m.get("status") in FINISHED_STATUSES]
@@ -77,6 +118,7 @@ async def websocket_get_overview(hass, connection, msg) -> None:
             "live_matches": len(live_matches),
             "groups": len(standings) or 12,
             "top_scorers": len(scorers),
+            "leaderboard_players": len(leaderboard),
             "last_update_success": coordinator.last_update_success,
             "demo_mode": getattr(coordinator.api, "demo_mode", False),
         },
@@ -164,9 +206,45 @@ async def websocket_get_scorers(hass, connection, msg) -> None:
     )
 
 
+@websocket_api.websocket_command(
+    {
+        vol.Required("type"): "world_cup_2026/get_leaderboard",
+    }
+)
+@websocket_api.async_response
+async def websocket_get_leaderboard(hass, connection, msg) -> None:
+    coordinator = _get_coordinator(hass)
+
+    if coordinator is None:
+        connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
+        return
+
+    data = coordinator.data or {}
+
+    leaderboard = (
+        data.get("leaderboard")
+        or data.get("players")
+        or data.get("entries")
+        or []
+    )
+
+    serialised = [
+        _serialise_leaderboard_player(player, index)
+        for index, player in enumerate(leaderboard)
+    ]
+
+    serialised.sort(key=lambda item: item.get("points", 0), reverse=True)
+
+    for index, player in enumerate(serialised):
+        player["position"] = index + 1
+
+    connection.send_result(msg["id"], serialised)
+
+
 async def async_register_websocket_api(hass) -> None:
     websocket_api.async_register_command(hass, websocket_get_overview)
     websocket_api.async_register_command(hass, websocket_get_live_matches)
     websocket_api.async_register_command(hass, websocket_get_fixtures)
     websocket_api.async_register_command(hass, websocket_get_groups)
     websocket_api.async_register_command(hass, websocket_get_scorers)
+    websocket_api.async_register_command(hass, websocket_get_leaderboard)
