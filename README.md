@@ -1,35 +1,18 @@
 # ⚽ Home Assistant World Cup 2026
 
-A complete FIFA World Cup 2026 experience for Home Assistant.
+A complete FIFA World Cup 2026 integration for Home Assistant.
 
-Track every match, team, player, stadium and tournament statistic from the largest FIFA World Cup ever held, featuring **48 teams**, **12 groups**, **104 matches** and host venues across the United States, Canada and Mexico.
+Track every fixture, result, player, team, group, stadium and tournament statistic from the largest FIFA World Cup ever held.
 
-Version 4.0 transforms the integration into a complete World Cup platform with advanced analytics, tournament records, stadium information, multi-language support, dedicated dashboards and enhanced player tracking.
+Featuring **48 teams**, **12 groups**, **104 matches**, and host venues across the **United States**, **Canada** and **Mexico**.
+
+The integration provides live match data, tournament analytics, player statistics, venue information, multi-language dashboards and a complete World Cup experience directly inside Home Assistant.
 
 ---
 
-## ❤️ Support Development
-
-If you enjoy using the World Cup 2026 integration and would like to support future development, donations are greatly appreciated.
-
-Your support helps fund:
-
-* New features and sensors
-* Dashboard improvements
-* Bug fixes and maintenance
-* Translation support
-* Future tournament integrations
-* API testing and development time
-
-Every contribution, no matter how small, helps keep the project active and improving.
-
-### ☕ Buy Me A Coffee
-
-Donate via PayPal:
-
-https://paypal.me/graffidoodle
-
-Thank you for supporting the project! ⚽🏆
+![Version](https://img.shields.io/badge/version-3.2.0-blue)
+![Home Assistant](https://img.shields.io/badge/Home%20Assistant-Compatible-green)
+![World Cup](https://img.shields.io/badge/FIFA%20World%20Cup-2026-gold)
 
 ---
 
@@ -37,27 +20,28 @@ Thank you for supporting the project! ⚽🏆
 
 ## ⚽ Live Match Data
 
+Track the tournament in real-time with:
+
 * Live Fixtures
 * Match Results
-* Group Standings
 * Live Match Status
-* Goal Scorers
+* Group Standings
 * Match Statistics
+* Goal Scorers
 * Match Countdown
 * Kick-Off Information
 * Today's Matches
 * Tomorrow's Matches
 * Completed Matches
 * Live Goals Counter
-* Fixtures With Stadiums
 * Match Venue Data
-* Live Tournament Overview
+* Fixtures With Stadium Information
 
 ---
 
 ## 🏆 Tournament Tracking
 
-Track every stage of the FIFA World Cup 2026:
+Follow every stage of the FIFA World Cup 2026:
 
 * Group Stage
 * Round of 32
@@ -67,13 +51,13 @@ Track every stage of the FIFA World Cup 2026:
 * Third Place Playoff
 * Final
 
-Includes dedicated tracking for tournament progression and knockout stages.
+Includes dedicated knockout stage tracking and tournament progression monitoring.
 
 ---
 
 ## 📊 Statistics Hub
 
-Version 4.0 introduces a dedicated Statistics Hub.
+Version 3.2 introduces a dedicated Statistics Hub providing advanced tournament analytics.
 
 Includes:
 
@@ -86,16 +70,16 @@ Includes:
 * BTTS Rate
 * Over 2.5 Goals Rate
 * Live Match Count
-* Tournament Completion Percentage
 * Group Statistics
+* Tournament Completion Percentage
 * Team Performance Metrics
-* Tournament Analytics
+* Advanced Tournament Analytics
 
 ---
 
 ## 🔥 Tournament Records
 
-Track major World Cup records in real-time:
+Track major World Cup records throughout the tournament:
 
 * Biggest Win
 * Highest Scoring Match
@@ -111,6 +95,8 @@ Track major World Cup records in real-time:
 
 ## 👤 Player Statistics
 
+Enhanced player tracking includes:
+
 * Golden Boot Race
 * Top Scorers
 * Top Assists
@@ -118,31 +104,31 @@ Track major World Cup records in real-time:
 * Non-Penalty Goals
 * Penalty Goals
 * Tournament Leaders
-* Enhanced Player Statistics
 * Playmaker Tracking
+* Enhanced Player Statistics
 
 ---
 
-## 🏟️ Stadium & Venue Information
+## 🏟️ Stadium & Host City Information
 
-Comprehensive World Cup venue support:
+Comprehensive venue support including:
 
 * Stadium Directory
 * Host City Information
+* Final Venue Information
 * Venue Capacities
 * Match Venue Mapping
-* USA Host Stadiums
-* Canada Host Stadiums
-* Mexico Host Stadiums
-* Final Venue Information
+* USA Stadiums
+* Canada Stadiums
+* Mexico Stadiums
 
-Includes all official World Cup 2026 host stadiums.
+Includes all official FIFA World Cup 2026 host venues.
 
 ---
 
 ## 🏆 Knockout Centre
 
-Dedicated knockout stage tracking:
+Dedicated knockout tournament tracking featuring:
 
 * Round of 32
 * Round of 16
@@ -151,13 +137,12 @@ Dedicated knockout stage tracking:
 * Third Place Playoff
 * Final
 
-Features:
+Additional tracking:
 
-* Knockout Bracket View
-* Stage Progression
 * Qualified Teams
 * Eliminated Teams
-* Final Tracking
+* Tournament Progression
+* Final Match Tracking
 
 ---
 
@@ -178,7 +163,7 @@ Built-in dashboard language support:
 * Swedish 🇸🇪
 * Norwegian 🇳🇴
 
-Language selection can be controlled directly within Home Assistant.
+Dashboard language can be selected directly within Home Assistant using the included language helper.
 
 ---
 
@@ -195,7 +180,7 @@ Ready-to-import dashboard featuring:
 * Tournament Records
 * Knockout Centre
 * Golden Boot Race
-* Player Statistics
+* Top Scorers
 * Top Assists
 * Stadium Information
 * Host Cities
@@ -209,7 +194,7 @@ Ready-to-import dashboard featuring:
 
 No API access required.
 
-Includes:
+Demo mode includes:
 
 * Demo Fixtures
 * Demo Results
@@ -218,68 +203,105 @@ Includes:
 * Full Dashboard Preview
 * Offline Development Support
 
+Perfect for testing before the tournament begins.
+
 ---
 
-# 🚀 Version 4.0.0
+# 🚀 Version 3.2.0
 
-## Major Release
+## Major Feature Update
 
-Version 4.0 is the largest update to date.
+Version 3.2 significantly expands the World Cup 2026 integration with advanced analytics, tournament records, venue information and enhanced dashboard functionality.
 
-The integration has evolved from a fixture tracker into a complete FIFA World Cup platform for Home Assistant.
-
-### New In Version 4.0.0
+### New In Version 3.2.0
 
 * Statistics Hub
 * Tournament Records Engine
+* Biggest Win Tracking
+* Highest Scoring Match Tracking
+* Top Scoring Team Tracking
+* Best Defence Tracking
+* Team Goal Statistics
+* Tournament Progress Metrics
+* Draw Rate Analytics
+* BTTS Analytics
+* Over 2.5 Goals Analytics
 * Stadium Directory
 * Host City Information
 * Final Venue Tracking
-* Team Goal Statistics
-* Biggest Win Tracking
-* Highest Scoring Match Tracking
-* Best Defence Tracking
-* Tournament Progress Metrics
-* Enhanced Analytics
-* Draw Rate Tracking
-* BTTS Tracking
-* Over 2.5 Goals Tracking
-* Knockout Centre
+* Enhanced Knockout Tracking
 * Improved Live Match Centre
-* Enhanced Dashboard Navigation
-* Improved Mobile Layout
-* Improved Sensor Architecture
+* Improved Dashboard Navigation
+* Enhanced Mobile Layout
+* Expanded Multi-Language Support
+* Improved Dashboard Language Selector
+* Improved Demo Mode
 * Faster Data Processing
+* Improved Sensor Architecture
 * State Size Optimisation
 * Improved Home Assistant Compatibility
-* Expanded Multi-Language Support
-* Enhanced Demo Mode
+
+---
+
+## 📦 Included Sensors
+
+The integration provides sensors covering:
+
+* Tournament Information
+* Live Match Data
+* Fixtures & Results
+* Group Standings
+* Player Statistics
+* Tournament Analytics
+* Betting Metrics
+* Tournament Records
+* Venue Information
+* Knockout Tracking
+* Stadium Data
+* Host Cities
+* Final Venue Information
 
 ---
 
 ## 🙏 Contributors
 
-Thank you to everyone who has contributed to the World Cup 2026 project.
+Thank you to everyone who has helped improve the World Cup 2026 integration.
 
-Special thanks to Fabbbrrr for helping develop:
+Special thanks to Fabbbrrr for contributing enhancements including:
 
 * Enhanced Player Statistics
-* Tournament Analytics
-* Additional Sensors
-* Dashboard Improvements
+* Additional Tournament Sensors
+* Analytics Improvements
+* Betting & Statistics Sensors
+* Dashboard Enhancements
 * Architecture Improvements
 * Demo Fixture Support
 
-Community contributions continue to make this project better for everyone.
+Community contributions help make the project better for everyone.
 
 ---
 
-## ❤️ Support Development
+# ❤️ Support Development
 
 If you enjoy using the World Cup 2026 integration and would like to support future development, donations are greatly appreciated.
 
-### ☕ Buy Me A Coffee
+Your support helps fund:
+
+* New Features
+* Dashboard Improvements
+* Bug Fixes
+* Maintenance
+* Translation Support
+* Future Tournament Integrations
+* API Testing
+* Development Time
+
+Every contribution helps keep the project active and improving.
+
+## ☕ Buy Me A Coffee
+
+Donate via PayPal:
 
 https://paypal.me/graffidoodle
 
-Thank you for supporting the project and helping make World Cup 2026 the ultimate Home Assistant football integration. ⚽🏆
+Thank you for supporting the project! ⚽🏆
