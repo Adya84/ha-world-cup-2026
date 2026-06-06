@@ -1,246 +1,85 @@
-# 🖼️ Adding a Background Image to a Home Assistant Dashboard
+# 🖼️ Adding a Dashboard Background Image (Simple Method)
 
-This guide explains how to add a custom background image to your Home Assistant dashboard.
+Home Assistant now allows you to set a dashboard background directly without editing YAML.
 
----
-
-# Method 1 - Using the WWW Folder (Recommended)
-
-## Step 1 - Upload Your Image
-
-Using File Editor, Samba or Studio Code Server, upload your image to:
-
-```text
-/config/www/
-```
-
-Example:
-
-```text
-/config/www/worldcup.png
-```
-
----
-
-## Step 2 - Test the Image
-
-Open the image in your browser:
-
-```text
-http://YOUR_HOME_ASSISTANT_IP:8123/local/worldcup.png
-```
-
-Example:
-
-```text
-http://192.168.1.100:8123/local/worldcup.png
-```
-
-If the image loads, Home Assistant can access it correctly.
-
----
-
-## Step 3 - Install Card Mod
-
-If not already installed:
-
-1. Open HACS
-2. Search for:
-
-```text
-card-mod
-```
-
-3. Install
-4. Restart Home Assistant
-
----
-
-## Step 4 - Add Background Image
+## Step 1
 
 Open your dashboard.
 
 Click:
 
 ```text
-⋮ → Edit Dashboard
+⋮ (Top Right)
 ```
 
 Then:
 
 ```text
-Raw Configuration Editor
-```
-
-Add:
-
-```yaml
-views:
-  - title: World Cup 2026
-    path: world-cup
-    theme: Backend-selected
-    cards: []
-    card_mod:
-      style: |
-        :host {
-          --lovelace-background: url('/local/worldcup.png') center center fixed;
-          background-size: cover;
-        }
+Edit Dashboard
 ```
 
 ---
 
-# Method 2 - Dashboard Background (Recommended for Full Screen Images)
-
-Navigate to:
-
-```text
-Settings → Dashboards
-```
-
-Open your dashboard.
+## Step 2
 
 Click:
-
-```text
-Edit Dashboard
-```
-
-Select:
 
 ```text
 Change Background
 ```
 
-Enter:
+---
+
+## Step 3
+
+Select:
 
 ```text
-/local/worldcup.png
+Upload Image
 ```
 
-Save.
-
-This method uses Home Assistant's built-in dashboard background support.
-
----
-
-# Method 3 - Picture Card
-
-To display an image as a card:
-
-```yaml
-type: picture
-image: /local/worldcup.png
-```
-
----
-
-# Method 4 - Full Width Banner Image
+Choose your image from your computer.
 
 Example:
 
-```yaml
-type: picture
-image: /local/worldcup.png
-tap_action:
-  action: none
-hold_action:
-  action: none
-```
-
-Useful for:
-
-* Tournament Banners
-* Team Logos
-* Sponsor Images
-* Dashboard Headers
-
----
-
-# Recommended Image Sizes
-
-### Desktop Background
-
 ```text
-1920 x 1080
-```
-
-### Mobile Background
-
-```text
-1080 x 1920
-```
-
-### Header Banner
-
-```text
-1920 x 500
-```
-
-### Logo
-
-```text
-512 x 512
+worldcup.png
 ```
 
 ---
 
-# Troubleshooting
+## Step 4
 
-### Image Not Loading
+Wait for the upload to complete.
 
-Check:
-
-```text
-/config/www/worldcup.png
-```
-
-Exists.
-
-Then test:
-
-```text
-http://YOUR_HOME_ASSISTANT_IP:8123/local/worldcup.png
-```
+Home Assistant will automatically apply the image as your dashboard background.
 
 ---
 
-### Image Appears Blurry
+## Step 5
 
-Use:
+Click:
 
 ```text
-1920 x 1080
+Save
 ```
 
-or higher resolution.
+Your dashboard will now use the uploaded image as its background.
 
 ---
 
-### Background Not Updating
+## Tips
 
-Press:
+✅ Use high-resolution images (1920×1080 or higher)
 
-```text
-Ctrl + F5
-```
+✅ Darker images work best behind dashboard cards
 
-or clear browser cache.
+✅ PNG or JPG formats are supported
 
----
-
-# Example
-
-Image location:
+✅ You can change or remove the image at any time via:
 
 ```text
-/config/www/worldcup.png
+Edit Dashboard → Change Background
 ```
 
-Dashboard image URL:
-
-```text
-/local/worldcup.png
-```
-
-This is the most common and recommended method for adding custom images to Home Assistant dashboards.
+That's it — no YAML editing required. ⚽🏆
