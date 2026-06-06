@@ -1,12 +1,12 @@
 # ⚽ Home Assistant World Cup 2026
 
-A complete FIFA World Cup 2026 integration for Home Assistant.
+A complete FIFA World Cup 2026 integration and dedicated tournament application for Home Assistant.
 
 Track every fixture, result, player, team, group, stadium and tournament statistic from the largest FIFA World Cup ever held.
 
 Featuring **48 teams**, **12 groups**, **104 matches**, and host venues across the **United States**, **Canada** and **Mexico**.
 
-The integration provides live match data, tournament analytics, player statistics, venue information, multi-language dashboards and a complete World Cup experience directly inside Home Assistant.
+Version 3.2 introduces a dedicated World Cup application with built-in navigation, advanced tournament analytics, records tracking, venue information and enhanced dashboard functionality.
 
 ---
 
@@ -17,6 +17,27 @@ The integration provides live match data, tournament analytics, player statistic
 ---
 
 # 🌟 Features
+
+## 🧭 Dedicated World Cup Application
+
+Version 3.2 includes a fully featured World Cup application built directly into Home Assistant.
+
+Navigate instantly between:
+
+* Overview
+* Live Centre
+* Fixtures & Results
+* Group Standings
+* Knockout Centre
+* Player Statistics
+* Golden Boot Race
+* Tournament Records
+* Statistics Hub
+* Stadium & Venue Information
+
+Designed for desktop, tablet and mobile devices with modern navigation and a dedicated World Cup experience.
+
+---
 
 ## ⚽ Live Match Data
 
@@ -57,7 +78,7 @@ Includes dedicated knockout stage tracking and tournament progression monitoring
 
 ## 📊 Statistics Hub
 
-Version 3.2 introduces a dedicated Statistics Hub providing advanced tournament analytics.
+A dedicated Statistics Hub providing advanced tournament analytics.
 
 Includes:
 
@@ -211,11 +232,21 @@ Perfect for testing before the tournament begins.
 
 ## Major Feature Update
 
-Version 3.2 significantly expands the World Cup 2026 integration with advanced analytics, tournament records, venue information and enhanced dashboard functionality.
+Version 3.2 significantly expands the World Cup 2026 integration with advanced analytics, tournament records, venue information and a dedicated World Cup application.
 
 ### New In Version 3.2.0
 
+* Dedicated World Cup Application
+* Built-In Sidebar Navigation
+* Overview Page
+* Live Centre
+* Fixtures & Results Page
+* Group Standings Page
+* Knockout Centre
+* Player Statistics Page
+* Tournament Records Page
 * Statistics Hub
+* Stadium & Venue Information Page
 * Tournament Records Engine
 * Biggest Win Tracking
 * Highest Scoring Match Tracking
@@ -230,9 +261,8 @@ Version 3.2 significantly expands the World Cup 2026 integration with advanced a
 * Host City Information
 * Final Venue Tracking
 * Enhanced Knockout Tracking
-* Improved Live Match Centre
 * Improved Dashboard Navigation
-* Enhanced Mobile Layout
+* Improved Mobile Navigation
 * Expanded Multi-Language Support
 * Improved Dashboard Language Selector
 * Improved Demo Mode
@@ -302,6 +332,6 @@ Every contribution helps keep the project active and improving.
 
 Donate via PayPal:
 
-https://paypal.me/graffidoodle
+**https://paypal.me/graffidoodle**
 
-Thank you for supporting the project! ⚽🏆
+Thank you for supporting the project and helping make World Cup 2026 the ultimate Home Assistant football integration. ⚽🏆
