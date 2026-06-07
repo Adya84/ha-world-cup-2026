@@ -36,6 +36,7 @@ class WorldCup2026Panel extends HTMLElement {
   disconnectedCallback() {
     if (this._refreshInterval) {
       clearInterval(this._refreshInterval);
+      this._refreshInterval = null;
     }
   }
 
@@ -74,6 +75,10 @@ class WorldCup2026Panel extends HTMLElement {
     } catch (err) {
       this.renderError(err);
     }
+  }
+
+  goBackToHomeAssistant() {
+    window.location.href = "/lovelace/0?refresh=" + Date.now();
   }
 
   changePage(page) {
@@ -137,18 +142,18 @@ class WorldCup2026Panel extends HTMLElement {
     const name = this.cleanTeamName(team);
 
     const fixes = {
-      "USA": "United States",
-      "US": "United States",
+      USA: "United States",
+      US: "United States",
       "South Korea": "Korea Republic",
-      "Türkiye": "Turkey",
+      Türkiye: "Turkey",
       "Bosnia & Herz": "Bosnia and Herzegovina",
       "Bosnia-Herzegovina": "Bosnia and Herzegovina",
       "Ivory Coast": "Côte d'Ivoire",
-      "Curacao": "Curaçao",
-      "Uraguay": "Uruguay",
+      Curacao: "Curaçao",
+      Uraguay: "Uruguay",
       "DR Congo": "Democratic Republic of Congo",
       "Congo DR": "Democratic Republic of Congo",
-      "UAE": "United Arab Emirates",
+      UAE: "United Arab Emirates",
       "Republic of Ireland": "Ireland",
       "Cabo Verde": "Cape Verde",
       "Cape Verde Islands": "Cape Verde",
@@ -161,97 +166,96 @@ class WorldCup2026Panel extends HTMLElement {
     const name = this.teamLabel(team).toLowerCase();
 
     const codes = {
-      "argentina": "ar",
-      "australia": "au",
-      "austria": "at",
-      "belgium": "be",
+      argentina: "ar",
+      australia: "au",
+      austria: "at",
+      belgium: "be",
       "bosnia and herzegovina": "ba",
-      "brazil": "br",
-      "canada": "ca",
-      "colombia": "co",
+      brazil: "br",
+      canada: "ca",
+      colombia: "co",
       "costa rica": "cr",
-      "croatia": "hr",
-      "curaçao": "cw",
-      "curacao": "cw",
-      "czechia": "cz",
+      croatia: "hr",
+      curaçao: "cw",
+      curacao: "cw",
+      czechia: "cz",
       "czech republic": "cz",
-      "denmark": "dk",
-      "ecuador": "ec",
-      "egypt": "eg",
-      "england": "gb-eng",
-      "france": "fr",
-      "germany": "de",
-      "ghana": "gh",
-      "haiti": "ht",
-      "honduras": "hn",
-      "iran": "ir",
-      "italy": "it",
+      denmark: "dk",
+      ecuador: "ec",
+      egypt: "eg",
+      england: "gb-eng",
+      france: "fr",
+      germany: "de",
+      ghana: "gh",
+      haiti: "ht",
+      honduras: "hn",
+      iran: "ir",
+      italy: "it",
       "ivory coast": "ci",
       "côte d'ivoire": "ci",
-      "jamaica": "jm",
-      "japan": "jp",
+      jamaica: "jm",
+      japan: "jp",
       "korea republic": "kr",
       "south korea": "kr",
-      "mexico": "mx",
-      "morocco": "ma",
-      "netherlands": "nl",
+      mexico: "mx",
+      morocco: "ma",
+      netherlands: "nl",
       "new zealand": "nz",
-      "nigeria": "ng",
-      "norway": "no",
-      "panama": "pa",
-      "paraguay": "py",
-      "poland": "pl",
-      "portugal": "pt",
-      "qatar": "qa",
+      nigeria: "ng",
+      norway: "no",
+      panama: "pa",
+      paraguay: "py",
+      poland: "pl",
+      portugal: "pt",
+      qatar: "qa",
       "saudi arabia": "sa",
-      "scotland": "gb-sct",
-      "senegal": "sn",
-      "serbia": "rs",
+      scotland: "gb-sct",
+      senegal: "sn",
+      serbia: "rs",
       "south africa": "za",
-      "spain": "es",
-      "sweden": "se",
-      "switzerland": "ch",
-      "tunisia": "tn",
-      "turkey": "tr",
-      "ukraine": "ua",
-      "uruguay": "uy",
+      spain: "es",
+      sweden: "se",
+      switzerland: "ch",
+      tunisia: "tn",
+      turkey: "tr",
+      ukraine: "ua",
+      uruguay: "uy",
       "united states": "us",
-      "usa": "us",
-      "wales": "gb-wls",
-      "algeria": "dz",
+      usa: "us",
+      wales: "gb-wls",
+      algeria: "dz",
       "cape verde": "cv",
+      "cabo verde": "cv",
+      "cape verde islands": "cv",
       "dr congo": "cd",
       "congo dr": "cd",
       "democratic republic of congo": "cd",
-      "cameroon": "cm",
-      "mali": "ml",
+      cameroon: "cm",
+      mali: "ml",
       "burkina faso": "bf",
-      "uzbekistan": "uz",
-      "jordan": "jo",
-      "iraq": "iq",
+      uzbekistan: "uz",
+      jordan: "jo",
+      iraq: "iq",
       "united arab emirates": "ae",
-      "uae": "ae",
-      "oman": "om",
-      "china": "cn",
-      "bolivia": "bo",
-      "venezuela": "ve",
-      "peru": "pe",
-      "chile": "cl",
+      uae: "ae",
+      oman: "om",
+      china: "cn",
+      bolivia: "bo",
+      venezuela: "ve",
+      peru: "pe",
+      chile: "cl",
       "el salvador": "sv",
       "trinidad and tobago": "tt",
-      "guatemala": "gt",
+      guatemala: "gt",
       "republic of ireland": "ie",
-     "ireland": "ie",
-     "romania": "ro",
-     "slovakia": "sk",
-     "slovenia": "si",
-     "albania": "al",
-     "greece": "gr",
-     "georgia": "ge",
-     "hungary": "hu",
-     "cape verde": "cv",
-     "cabo verde": "cv",
-     "cape verde islands": "cv",
+      ireland: "ie",
+      romania: "ro",
+      slovakia: "sk",
+      slovenia: "si",
+      albania: "al",
+      greece: "gr",
+      georgia: "ge",
+      hungary: "hu",
     };
 
     return codes[name] || "";
@@ -374,7 +378,8 @@ class WorldCup2026Panel extends HTMLElement {
           margin-top: 5px;
         }
 
-        .wc-pill, .wc-badge {
+        .wc-pill,
+        .wc-badge {
           background: rgba(255,255,255,0.12);
           border: 1px solid rgba(255,255,255,0.20);
           border-radius: 999px;
@@ -383,7 +388,7 @@ class WorldCup2026Panel extends HTMLElement {
           white-space: nowrap;
         }
 
-        .wc-home-button {
+        .wc-back-button {
           cursor: pointer;
           background: rgba(255,255,255,0.10);
           color: white;
@@ -1138,8 +1143,8 @@ class WorldCup2026Panel extends HTMLElement {
             </div>
 
             <div style="display:flex;gap:10px;align-items:center;">
-              <button class="wc-pill wc-home-button" onclick="window.location.href='/'">
-                🏠 Home
+              <button class="wc-pill wc-back-button" id="wc-back-button" type="button">
+                ← Back
               </button>
 
               <div class="wc-pill">
@@ -1160,7 +1165,19 @@ class WorldCup2026Panel extends HTMLElement {
         this.changePage(page);
       };
     });
+
+    const backButton = this.querySelector("#wc-back-button");
+
+    if (backButton) {
+      backButton.onclick = (e) => {
+        e.preventDefault();
+        e.stopPropagation();
+        this.goBackToHomeAssistant();
+      };
+    }
   }
 }
 
-customElements.define("world-cup-2026-panel", WorldCup2026Panel);
+if (!customElements.get("world-cup-2026-panel")) {
+  customElements.define("world-cup-2026-panel", WorldCup2026Panel);
+}
