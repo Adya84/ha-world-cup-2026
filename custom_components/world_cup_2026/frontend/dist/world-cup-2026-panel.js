@@ -113,6 +113,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Goals",
         assists: "Assists",
         language: "Dashboard Language",
+        controlCentre: 'World Cup 2026 Control Centre',
+        overviewSubtitle: 'Live tournament dashboard with fixtures, results, groups, player stats, venues, records and knockout tracking in one place.',
+        tournamentIntelligence: 'Tournament Intelligence',
+        upNext: 'Up next',
+        matchSpotlight: 'Match Spotlight',
+        upcomingFixtures: 'Upcoming Fixtures',
+        latest: 'Latest',
+        recentResults: 'Recent Results',
+        playerWatch: 'Player Watch',
+        fixturesSubtitle: 'A cleaner World Cup match centre with match-day sections, bold score cards, flags, venue details and clearer live/result badges.',
+        days: 'Days',
+        versus: 'v',
         conceded: "conceded",
       },
 
@@ -209,6 +221,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Buts",
         assists: "Passes",
         language: "Langue du Tableau de Bord",
+        controlCentre: 'Centre de Contrôle Coupe du Monde 2026',
+        overviewSubtitle: 'Tableau de bord du tournoi avec matchs, résultats, groupes, statistiques joueurs, stades, records et phase finale au même endroit.',
+        tournamentIntelligence: 'Analyse du Tournoi',
+        upNext: 'À venir',
+        matchSpotlight: 'Match à la Une',
+        upcomingFixtures: 'Prochains Matchs',
+        latest: 'Dernier',
+        recentResults: 'Résultats Récents',
+        playerWatch: 'Suivi des Joueurs',
+        fixturesSubtitle: 'Un centre des matchs plus clair avec journées, cartes de score, drapeaux, stades et badges de statut lisibles.',
+        days: 'Jours',
+        versus: 'v',
         conceded: "encaissés",
       },
 
@@ -305,6 +329,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Tore",
         assists: "Vorlagen",
         language: "Dashboard-Sprache",
+        controlCentre: 'WM 2026 Kontrollzentrum',
+        overviewSubtitle: 'Live-Turnierdashboard mit Spielen, Ergebnissen, Gruppen, Spielerstatistiken, Stadien, Rekorden und K.o.-Runde an einem Ort.',
+        tournamentIntelligence: 'Turnieranalyse',
+        upNext: 'Als Nächstes',
+        matchSpotlight: 'Spiel im Fokus',
+        upcomingFixtures: 'Kommende Spiele',
+        latest: 'Neueste',
+        recentResults: 'Aktuelle Ergebnisse',
+        playerWatch: 'Spielerüberblick',
+        fixturesSubtitle: 'Ein übersichtlicheres WM-Spielzentrum mit Spieltagen, starken Ergebniskarten, Flaggen, Stadiondetails und klaren Statusanzeigen.',
+        days: 'Tage',
+        versus: 'gegen',
         conceded: "kassiert",
       },
 
@@ -401,6 +437,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Goles",
         assists: "Asistencias",
         language: "Idioma del Panel",
+        controlCentre: 'Centro de Control Mundial 2026',
+        overviewSubtitle: 'Panel en vivo del torneo con partidos, resultados, grupos, estadísticas de jugadores, sedes, récords y eliminatorias en un solo lugar.',
+        tournamentIntelligence: 'Análisis del Torneo',
+        upNext: 'Próximo',
+        matchSpotlight: 'Partido Destacado',
+        upcomingFixtures: 'Próximos Partidos',
+        latest: 'Último',
+        recentResults: 'Resultados Recientes',
+        playerWatch: 'Seguimiento de Jugadores',
+        fixturesSubtitle: 'Un centro de partidos más claro con jornadas, tarjetas de marcador, banderas, sedes y estados más legibles.',
+        days: 'Días',
+        versus: 'v',
         conceded: "encajados",
       },
 
@@ -497,6 +545,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Gol",
         assists: "Assist",
         language: "Lingua Dashboard",
+        controlCentre: 'Centro di Controllo Mondiale 2026',
+        overviewSubtitle: 'Dashboard live del torneo con partite, risultati, gruppi, statistiche giocatori, stadi, record e fase finale in un unico posto.',
+        tournamentIntelligence: 'Analisi Torneo',
+        upNext: 'Prossimo',
+        matchSpotlight: 'Partita in Evidenza',
+        upcomingFixtures: 'Prossime Partite',
+        latest: 'Ultimi',
+        recentResults: 'Risultati Recenti',
+        playerWatch: 'Osservati Speciali',
+        fixturesSubtitle: 'Un centro partite più chiaro con giornate, schede punteggio, bandiere, stadi e badge di stato leggibili.',
+        days: 'Giorni',
+        versus: 'v',
         conceded: "subiti",
       },
 
@@ -593,6 +653,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Doelpunten",
         assists: "Assists",
         language: "Dashboardtaal",
+        controlCentre: 'WK 2026 Controlecentrum',
+        overviewSubtitle: 'Live toernooidashboard met wedstrijden, uitslagen, groepen, spelerstatistieken, stadions, records en knock-out in één plek.',
+        tournamentIntelligence: 'Toernooi-inzicht',
+        upNext: 'Volgende',
+        matchSpotlight: 'Wedstrijd in de Spotlight',
+        upcomingFixtures: 'Komende Wedstrijden',
+        latest: 'Laatste',
+        recentResults: 'Recente Uitslagen',
+        playerWatch: 'Spelersvolger',
+        fixturesSubtitle: 'Een duidelijker wedstrijdcentrum met speeldagen, scorekaarten, vlaggen, stadiondetails en heldere statusbadges.',
+        days: 'Dagen',
+        versus: 'v',
         conceded: "tegen",
       },
 
@@ -689,6 +761,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "الأهداف",
         assists: "التمريرات",
         language: "لغة اللوحة",
+        controlCentre: 'مركز تحكم كأس العالم 2026',
+        overviewSubtitle: 'لوحة بطولة مباشرة تشمل المباريات والنتائج والمجموعات وإحصائيات اللاعبين والملاعب والأرقام والأدوار الإقصائية في مكان واحد.',
+        tournamentIntelligence: 'تحليل البطولة',
+        upNext: 'التالي',
+        matchSpotlight: 'تسليط الضوء على المباراة',
+        upcomingFixtures: 'المباريات القادمة',
+        latest: 'الأحدث',
+        recentResults: 'النتائج الأخيرة',
+        playerWatch: 'متابعة اللاعبين',
+        fixturesSubtitle: 'مركز مباريات أوضح مع أقسام أيام المباريات وبطاقات نتائج وأعلام وتفاصيل ملاعب وحالات مباشرة أوضح.',
+        days: 'أيام',
+        versus: 'ضد',
         conceded: "استقبل",
       },
 
@@ -785,6 +869,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Golos",
         assists: "Assistências",
         language: "Idioma do Painel",
+        controlCentre: 'Centro de Controlo Mundial 2026',
+        overviewSubtitle: 'Painel ao vivo do torneio com jogos, resultados, grupos, estatísticas de jogadores, estádios, recordes e eliminatórias num só local.',
+        tournamentIntelligence: 'Análise do Torneio',
+        upNext: 'A seguir',
+        matchSpotlight: 'Jogo em Destaque',
+        upcomingFixtures: 'Próximos Jogos',
+        latest: 'Mais recente',
+        recentResults: 'Resultados Recentes',
+        playerWatch: 'Acompanhar Jogadores',
+        fixturesSubtitle: 'Um centro de jogos mais claro com dias de jogo, cartões de resultado, bandeiras, estádios e estados mais visíveis.',
+        days: 'Dias',
+        versus: 'v',
         conceded: "sofridos",
       },
 
@@ -881,6 +977,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "得点",
         assists: "アシスト",
         language: "ダッシュボード言語",
+        controlCentre: 'ワールドカップ2026 コントロールセンター',
+        overviewSubtitle: '試合、結果、グループ、選手統計、会場、記録、決勝トーナメントを一か所で確認できるライブ大会ダッシュボード。',
+        tournamentIntelligence: '大会分析',
+        upNext: '次へ',
+        matchSpotlight: '注目の試合',
+        upcomingFixtures: '今後の試合',
+        latest: '最新',
+        recentResults: '最近の結果',
+        playerWatch: '選手ウォッチ',
+        fixturesSubtitle: '試合日ごとの区分、スコアカード、旗、会場情報、分かりやすい状態表示を備えた見やすい試合センター。',
+        days: '日',
+        versus: '対',
         conceded: "失点",
       },
 
@@ -977,6 +1085,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "골",
         assists: "도움",
         language: "대시보드 언어",
+        controlCentre: '월드컵 2026 컨트롤 센터',
+        overviewSubtitle: '경기, 결과, 조별 순위, 선수 통계, 경기장, 기록, 토너먼트를 한곳에서 보는 라이브 대회 대시보드입니다.',
+        tournamentIntelligence: '대회 분석',
+        upNext: '다음',
+        matchSpotlight: '주목 경기',
+        upcomingFixtures: '예정 경기',
+        latest: '최신',
+        recentResults: '최근 결과',
+        playerWatch: '선수 확인',
+        fixturesSubtitle: '경기일 섹션, 점수 카드, 국기, 경기장 정보, 명확한 상태 배지를 갖춘 더 깔끔한 경기 센터입니다.',
+        days: '일',
+        versus: '대',
         conceded: "실점",
       },
 
@@ -1073,6 +1193,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Mål",
         assists: "Assist",
         language: "Dashboard-språk",
+        controlCentre: 'VM 2026 Kontrollcenter',
+        overviewSubtitle: 'Live turneringspanel med matcher, resultat, grupper, spelarstatistik, arenor, rekord och slutspel på ett ställe.',
+        tournamentIntelligence: 'Turneringsanalys',
+        upNext: 'Nästa',
+        matchSpotlight: 'Match i Fokus',
+        upcomingFixtures: 'Kommande Matcher',
+        latest: 'Senaste',
+        recentResults: 'Senaste Resultat',
+        playerWatch: 'Spelarbevakning',
+        fixturesSubtitle: 'Ett tydligare matchcenter med matchdagssektioner, resultatrutor, flaggor, arenadetaljer och tydliga statusmärken.',
+        days: 'Dagar',
+        versus: 'mot',
         conceded: "insläppta",
       },
 
@@ -1169,6 +1301,18 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Mål",
         assists: "Målgivende",
         language: "Dashboardspråk",
+        controlCentre: 'VM 2026 Kontrollsenter',
+        overviewSubtitle: 'Live turneringspanel med kamper, resultater, grupper, spillerstatistikk, arenaer, rekorder og utslagsspill på ett sted.',
+        tournamentIntelligence: 'Turneringsanalyse',
+        upNext: 'Neste',
+        matchSpotlight: 'Kamp i Fokus',
+        upcomingFixtures: 'Kommende Kamper',
+        latest: 'Siste',
+        recentResults: 'Siste Resultater',
+        playerWatch: 'Spilleroversikt',
+        fixturesSubtitle: 'Et tydeligere kampsenter med kampdager, resultatkort, flagg, arenadetaljer og klare statusmerker.',
+        days: 'Dager',
+        versus: 'mot',
         conceded: "sluppet inn",
       },
     };
@@ -1240,7 +1384,8 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   goBackToHomeAssistant() {
-    window.location.href = "/lovelace/0?refresh=" + Date.now();
+     history.back();
+
   }
 
   changePage(page) {
@@ -2022,6 +2167,370 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
 
+        .overview-pro-page {
+          display: grid;
+          gap: 16px;
+        }
+
+        .overview-hero {
+          display: grid;
+          grid-template-columns: minmax(0, 1.5fr) minmax(260px, 0.55fr);
+          gap: 18px;
+          overflow: hidden;
+          position: relative;
+          background:
+            radial-gradient(circle at top left, rgba(45,190,255,0.22), transparent 34%),
+            radial-gradient(circle at bottom right, rgba(255,215,80,0.16), transparent 32%),
+            rgba(255,255,255,0.09);
+        }
+
+        .overview-hero::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          border-radius: 22px;
+          border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .overview-hero-main,
+        .overview-hero-side {
+          position: relative;
+          z-index: 1;
+        }
+
+        .overview-kicker,
+        .overview-small-label {
+          font-size: 11px;
+          font-weight: 900;
+          letter-spacing: 1.4px;
+          text-transform: uppercase;
+          color: rgba(155,225,255,0.95);
+          margin-bottom: 7px;
+        }
+
+        .overview-hero-title {
+          font-size: clamp(30px, 4vw, 54px);
+          line-height: 0.95;
+          font-weight: 1000;
+          text-shadow: 0 12px 30px rgba(0,0,0,0.45);
+          margin-bottom: 12px;
+        }
+
+        .overview-hero-subtitle {
+          max-width: 820px;
+          color: rgba(255,255,255,0.78);
+          font-size: 15px;
+          line-height: 1.45;
+        }
+
+        .overview-progress-wrap {
+          margin-top: 22px;
+          max-width: 680px;
+        }
+
+        .overview-progress-top {
+          display: flex;
+          justify-content: space-between;
+          gap: 10px;
+          margin-bottom: 8px;
+          font-size: 12px;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.8px;
+        }
+
+        .overview-progress-bar {
+          height: 12px;
+          overflow: hidden;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.12);
+          border: 1px solid rgba(255,255,255,0.16);
+        }
+
+        .overview-progress-bar div {
+          height: 100%;
+          border-radius: inherit;
+          background: linear-gradient(90deg, rgba(45,190,255,0.88), rgba(255,215,80,0.88));
+          box-shadow: 0 0 22px rgba(45,190,255,0.38);
+        }
+
+        .overview-action-row {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 9px;
+          margin-top: 18px;
+        }
+
+        .overview-action-button {
+          cursor: pointer;
+          color: white;
+          border: 1px solid rgba(255,255,255,0.18);
+          background: rgba(255,255,255,0.11);
+          border-radius: 999px;
+          padding: 10px 14px;
+          font-size: 12px;
+          font-weight: 900;
+          backdrop-filter: blur(10px);
+        }
+
+        .overview-action-button:hover {
+          background: rgba(45,190,255,0.28);
+          border-color: rgba(120,220,255,0.65);
+        }
+
+        .overview-hero-side {
+          display: grid;
+          gap: 12px;
+          align-content: stretch;
+        }
+
+        .overview-status-card {
+          min-height: 132px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 7px;
+          padding: 18px;
+          border-radius: 20px;
+          background: rgba(0,0,0,0.20);
+          border: 1px solid rgba(255,255,255,0.14);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+
+        .overview-status-card.is-live {
+          background: linear-gradient(135deg, rgba(255,40,40,0.28), rgba(255,255,255,0.08));
+          border-color: rgba(255,90,90,0.44);
+        }
+
+        .overview-status-card span,
+        .overview-status-card em,
+        .overview-stat-tile span,
+        .overview-stat-tile em,
+        .overview-info-list span,
+        .overview-info-list em {
+          color: rgba(255,255,255,0.70);
+          font-style: normal;
+          font-size: 12px;
+          font-weight: 800;
+        }
+
+        .overview-status-card strong {
+          font-size: 40px;
+          line-height: 1;
+          font-weight: 1000;
+        }
+
+        .overview-stat-grid {
+          display: grid;
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+          gap: 12px;
+        }
+
+        .overview-stat-tile {
+          min-height: 112px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          border-radius: 18px;
+          padding: 15px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.12);
+          box-shadow: 0 14px 34px rgba(0,0,0,0.15);
+        }
+
+        .overview-stat-tile strong {
+          font-size: 34px;
+          line-height: 1;
+          font-weight: 1000;
+        }
+
+        .overview-stat-tile em {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .overview-main-grid {
+          display: grid;
+          grid-template-columns: minmax(0, 1.25fr) minmax(340px, 0.75fr);
+          gap: 16px;
+          align-items: stretch;
+        }
+
+        .overview-lower-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 16px;
+        }
+
+        .overview-panel {
+          margin-bottom: 0;
+        }
+
+        .overview-panel-heading {
+          display: flex;
+          justify-content: space-between;
+          gap: 12px;
+          align-items: flex-start;
+          margin-bottom: 14px;
+        }
+
+        .overview-panel-heading .wc-section-title {
+          margin: 0;
+        }
+
+        .overview-date-pill {
+          flex: 0 0 auto;
+          border-radius: 999px;
+          padding: 8px 11px;
+          background: rgba(255,255,255,0.11);
+          border: 1px solid rgba(255,255,255,0.14);
+          font-size: 12px;
+          font-weight: 900;
+          color: rgba(255,255,255,0.78);
+        }
+
+        .overview-feature-panel .fixture-card {
+          min-height: 210px;
+        }
+
+        .overview-info-list {
+          display: grid;
+          gap: 10px;
+        }
+
+        .overview-info-list div {
+          display: grid;
+          grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.2fr);
+          gap: 6px 12px;
+          align-items: center;
+          padding: 12px;
+          border-radius: 14px;
+          background: rgba(255,255,255,0.07);
+          border: 1px solid rgba(255,255,255,0.09);
+        }
+
+        .overview-info-list strong {
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 14px;
+        }
+
+        .overview-info-list em {
+          grid-column: 2;
+        }
+
+        .overview-mini-match-list,
+        .overview-player-list {
+          display: grid;
+          gap: 10px;
+        }
+
+        .overview-mini-match {
+          padding: 12px;
+          border-radius: 16px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .overview-mini-top,
+        .overview-mini-date {
+          display: flex;
+          justify-content: space-between;
+          gap: 8px;
+          color: rgba(255,255,255,0.66);
+          font-size: 11px;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .overview-mini-top em {
+          font-style: normal;
+          color: rgba(255,255,255,0.86);
+        }
+
+        .overview-mini-teams {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+          align-items: center;
+          gap: 10px;
+          margin: 10px 0;
+        }
+
+        .overview-mini-teams div {
+          min-width: 0;
+          display: flex;
+          align-items: center;
+          gap: 7px;
+        }
+
+        .overview-mini-teams div:last-child {
+          justify-content: flex-end;
+          text-align: right;
+        }
+
+        .overview-mini-teams strong {
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 13px;
+        }
+
+        .overview-mini-teams b {
+          padding: 8px 10px;
+          border-radius: 12px;
+          background: rgba(0,0,0,0.24);
+          border: 1px solid rgba(255,255,255,0.12);
+          font-size: 13px;
+        }
+
+        .overview-player-row {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr) minmax(0, 0.85fr) auto;
+          gap: 10px;
+          align-items: center;
+          padding: 11px 12px;
+          border-radius: 14px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.09);
+        }
+
+        .overview-player-row span {
+          width: 25px;
+          height: 25px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
+          background: rgba(45,190,255,0.26);
+          font-size: 12px;
+          font-weight: 1000;
+        }
+
+        .overview-player-row strong,
+        .overview-player-row em {
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .overview-player-row em {
+          color: rgba(255,255,255,0.62);
+          font-size: 12px;
+          font-style: normal;
+        }
+
+        .overview-player-row b {
+          font-size: 18px;
+        }
+
+
 
         .fixtures-page-card {
           padding: 20px;
@@ -2350,6 +2859,59 @@ class WorldCup2026Panel extends HTMLElement {
           display: none;
         }
 
+
+        @media (max-width: 1300px) {
+          .overview-stat-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+
+          .overview-lower-grid {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media (max-width: 950px) {
+          .overview-hero,
+          .overview-main-grid,
+          .overview-lower-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .overview-hero-side {
+            grid-template-columns: 1fr 1fr;
+          }
+        }
+
+        @media (max-width: 650px) {
+          .overview-stat-grid,
+          .overview-hero-side {
+            grid-template-columns: 1fr;
+          }
+
+          .overview-hero-title {
+            font-size: 32px;
+          }
+
+          .overview-info-list div,
+          .overview-player-row {
+            grid-template-columns: 1fr;
+          }
+
+          .overview-info-list em {
+            grid-column: auto;
+          }
+
+          .overview-mini-teams {
+            grid-template-columns: 1fr;
+            text-align: left;
+          }
+
+          .overview-mini-teams div:last-child {
+            justify-content: flex-start;
+            text-align: left;
+          }
+        }
+
         @media (max-width: 1200px) {
           .wc-groups-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2525,32 +3087,196 @@ class WorldCup2026Panel extends HTMLElement {
   overviewPage() {
     const o = this._data.overview || {};
     const fixtures = this._data.fixtures || [];
-    const nextMatch = fixtures.find(m => ["TIMED", "SCHEDULED"].includes(m.status)) || fixtures[0];
-    const topScorer = (this._data.scorers || [])[0];
+    const scorers = this._data.scorers || [];
+    const stats = this._data.statistics || {};
+    const records = this._data.records || {};
+    const venues = this._data.venues || {};
+    const groups = this._data.groups || [];
+
+    const sortedFixtures = [...fixtures].sort((a, b) => {
+      const aTime = new Date(a.utcDate || a.date || 0).getTime();
+      const bTime = new Date(b.utcDate || b.date || 0).getTime();
+      return aTime - bTime;
+    });
+
+    const finishedStatuses = ["FINISHED", "FT", "AET", "PEN"];
+    const liveStatuses = ["IN_PLAY", "LIVE", "PAUSED"];
+    const upcomingStatuses = ["TIMED", "SCHEDULED"];
+
+    const playedCount = o.matches_played ?? sortedFixtures.filter(m => finishedStatuses.includes(m.status)).length;
+    const loadedCount = o.matches_loaded ?? sortedFixtures.length;
+    const totalMatches = o.matches_total ?? 104;
+    const remainingCount = o.matches_remaining ?? Math.max(totalMatches - playedCount, 0);
+    const liveMatches = sortedFixtures.filter(m => liveStatuses.includes(m.status));
+    const upcomingMatches = sortedFixtures.filter(m => upcomingStatuses.includes(m.status)).slice(0, 4);
+    const recentResults = sortedFixtures.filter(m => finishedStatuses.includes(m.status)).slice(-4).reverse();
+    const nextMatch = upcomingMatches[0] || sortedFixtures.find(m => !finishedStatuses.includes(m.status)) || sortedFixtures[0];
+    const topScorer = scorers[0];
+    const progress = Number(o.progress ?? stats.progress ?? (totalMatches ? Math.round((playedCount / totalMatches) * 100) : 0));
+    const safeProgress = Math.max(0, Math.min(100, Number.isFinite(progress) ? progress : 0));
+    const totalGoals = o.total_goals ?? stats.total_goals ?? 0;
+    const goalsPerMatch = stats.goals_per_match ?? (playedCount ? (totalGoals / playedCount).toFixed(2) : 0);
+    const stadiumCount = venues.stadiums?.length ?? 0;
+    const loadedGroups = groups.length;
+    const finalVenue = venues.final_venue;
+    const topTeam = records.top_scoring_team;
+    const bestDefence = records.best_defence;
 
     return `
-      <div class="wc-grid">
-        <div class="wc-stat"><strong>${o.matches_total ?? 104}</strong>${this.t("totalMatches")}</div>
-        <div class="wc-stat"><strong>${o.matches_loaded ?? 0}</strong>${this.t("loaded")}</div>
-        <div class="wc-stat"><strong>${o.matches_played ?? 0}</strong>${this.t("played")}</div>
-        <div class="wc-stat"><strong>${o.matches_remaining ?? 104}</strong>${this.t("remaining")}</div>
-        <div class="wc-stat"><strong>${o.live_matches ?? 0}</strong>${this.t("liveNow")}</div>
-        <div class="wc-stat"><strong>${o.total_goals ?? 0}</strong>${this.t("totalGoals")}</div>
+      <div class="overview-pro-page">
+        <div class="overview-hero wc-card">
+          <div class="overview-hero-main">
+            <div class="overview-kicker">${this.t("controlCentre")}</div>
+            <div class="overview-hero-title">${this.t("title")}</div>
+            <div class="overview-hero-subtitle">${this.t("overviewSubtitle")}</div>
+
+            <div class="overview-progress-wrap">
+              <div class="overview-progress-top">
+                <span>${this.t("progress")}</span>
+                <strong>${safeProgress}%</strong>
+              </div>
+              <div class="overview-progress-bar">
+                <div style="width:${safeProgress}%;"></div>
+              </div>
+            </div>
+
+            <div class="overview-action-row">
+              <button class="overview-action-button" data-page="fixtures" type="button">${this.t("fixturesResults")}</button>
+              <button class="overview-action-button" data-page="groups" type="button">${this.t("groups")}</button>
+              <button class="overview-action-button" data-page="knockout" type="button">${this.t("knockout")}</button>
+              <button class="overview-action-button" data-page="stats" type="button">${this.t("stats")}</button>
+            </div>
+          </div>
+
+          <div class="overview-hero-side">
+            <div class="overview-status-card ${liveMatches.length ? "is-live" : ""}">
+              <span>${this.t("liveNow")}</span>
+              <strong>${liveMatches.length}</strong>
+              <em>${liveMatches.length ? this.t("liveStatus") : this.t("scheduled")}</em>
+            </div>
+            <div class="overview-status-card">
+              <span>${this.t("lastUpdate")}</span>
+              <strong>${o.last_update_success ? this.t("ok") : this.t("failed")}</strong>
+              <em>${this.t("demoMode")}: ${o.demo_mode ? this.t("on") : this.t("off")}</em>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-stat-grid">
+          <div class="overview-stat-tile"><span>${this.t("totalMatches")}</span><strong>${totalMatches}</strong><em>${loadedCount} ${this.t("loaded").toLowerCase()}</em></div>
+          <div class="overview-stat-tile"><span>${this.t("played")}</span><strong>${playedCount}</strong><em>${remainingCount} ${this.t("remaining").toLowerCase()}</em></div>
+          <div class="overview-stat-tile"><span>${this.t("totalGoals")}</span><strong>${totalGoals}</strong><em>${goalsPerMatch} ${this.t("goalsPerMatch")}</em></div>
+          <div class="overview-stat-tile"><span>${this.t("groups")}</span><strong>${loadedGroups || 12}</strong><em>${this.t("groupsAL")}</em></div>
+          <div class="overview-stat-tile"><span>${this.t("stadiums")}</span><strong>${stadiumCount}</strong><em>${this.t("worldCupStadiums")}</em></div>
+          <div class="overview-stat-tile"><span>${this.t("topScorer")}</span><strong>${this.esc(topScorer?.goals ?? 0)}</strong><em>${this.esc(topScorer?.player?.name || topScorer?.name || this.t("notAvailable"))}</em></div>
+        </div>
+
+        <div class="overview-main-grid">
+          <div class="overview-panel wc-card overview-feature-panel">
+            <div class="overview-panel-heading">
+              <div>
+                <div class="overview-small-label">${this.t("nextMatch")}</div>
+                <div class="wc-section-title">${this.t("matchSpotlight")}</div>
+              </div>
+              ${nextMatch ? `<span class="overview-date-pill">${this.esc(this.formatDate(nextMatch.utcDate || nextMatch.date))}</span>` : ""}
+            </div>
+            ${nextMatch ? this.fixtureCard(nextMatch) : `<div class="wc-empty">${this.t("noUpcomingMatch")}</div>`}
+          </div>
+
+          <div class="overview-panel wc-card">
+            <div class="overview-panel-heading">
+              <div>
+                <div class="overview-small-label">${this.t("tournamentStatus")}</div>
+                <div class="wc-section-title">${this.t("tournamentIntelligence")}</div>
+              </div>
+            </div>
+
+            <div class="overview-info-list">
+              <div><span>${this.t("topScoringTeam")}</span><strong>${this.esc(topTeam?.team ? this.teamLabel(topTeam.team) : this.t("notAvailable"))}</strong><em>${topTeam?.goalsFor ?? 0} ${this.t("goals").toLowerCase()}</em></div>
+              <div><span>${this.t("bestDefence")}</span><strong>${this.esc(bestDefence?.team ? this.teamLabel(bestDefence.team) : this.t("notAvailable"))}</strong><em>${bestDefence?.goalsAgainst ?? 0} ${this.t("conceded")}</em></div>
+              <div><span>${this.t("finalVenue")}</span><strong>${this.esc(finalVenue?.stadium || this.t("notAvailable"))}</strong><em>${this.esc(finalVenue ? `${finalVenue.city}, ${finalVenue.country}` : this.t("venues"))}</em></div>
+              <div><span>${this.t("matchesPlayed")}</span><strong>${playedCount} / ${totalMatches}</strong><em>${safeProgress}% ${this.t("progress").toLowerCase()}</em></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="overview-lower-grid">
+          <div class="overview-panel wc-card">
+            <div class="overview-panel-heading">
+              <div>
+                <div class="overview-small-label">${this.t("upNext")}</div>
+                <div class="wc-section-title">${this.t("upcomingFixtures")}</div>
+              </div>
+              <span class="overview-date-pill">${upcomingMatches.length}</span>
+            </div>
+            ${upcomingMatches.length ? `
+              <div class="overview-mini-match-list">
+                ${upcomingMatches.map(m => this.overviewMiniMatch(m)).join("")}
+              </div>
+            ` : `<div class="wc-empty">${this.t("noUpcomingMatch")}</div>`}
+          </div>
+
+          <div class="overview-panel wc-card">
+            <div class="overview-panel-heading">
+              <div>
+                <div class="overview-small-label">${this.t("latest")}</div>
+                <div class="wc-section-title">${this.t("recentResults")}</div>
+              </div>
+              <span class="overview-date-pill">${recentResults.length}</span>
+            </div>
+            ${recentResults.length ? `
+              <div class="overview-mini-match-list">
+                ${recentResults.map(m => this.overviewMiniMatch(m, true)).join("")}
+              </div>
+            ` : `<div class="wc-empty">${this.t("noResult")}</div>`}
+          </div>
+
+          <div class="overview-panel wc-card">
+            <div class="overview-panel-heading">
+              <div>
+                <div class="overview-small-label">${this.t("goldenBoot")}</div>
+                <div class="wc-section-title">${this.t("playerWatch")}</div>
+              </div>
+            </div>
+            ${scorers.length ? `
+              <div class="overview-player-list">
+                ${scorers.slice(0, 5).map((s, i) => `
+                  <div class="overview-player-row">
+                    <span>${i + 1}</span>
+                    <strong>${this.esc(s.player?.name || s.name || this.t("unknown"))}</strong>
+                    <em>${this.esc(this.teamLabel(s.team?.name || s.team || ""))}</em>
+                    <b>${s.goals ?? 0}</b>
+                  </div>
+                `).join("")}
+              </div>
+            ` : `<div class="wc-empty">${this.t("noPlayerStats")}</div>`}
+          </div>
+        </div>
       </div>
+    `;
+  }
 
-      <div class="wc-two">
-        <div class="wc-card">
-          <div class="wc-section-title">${this.t("nextMatch")}</div>
-          ${nextMatch ? this.matchRow(nextMatch) : `<div class="wc-empty">${this.t("noUpcomingMatch")}</div>`}
-        </div>
+  overviewMiniMatch(m, showScore = false) {
+    const homeTeam = this.getHomeTeam(m);
+    const awayTeam = this.getAwayTeam(m);
+    const homeScore = this.getHomeScore(m);
+    const awayScore = this.getAwayScore(m);
+    const scoreText = showScore || (homeScore !== "-" || awayScore !== "-") ? `${homeScore} - ${awayScore}` : this.t("versus");
+    const status = this.statusLabel(m.status);
+    const stage = m.group || this.stageLabel(m.stage) || "";
 
-        <div class="wc-card">
-          <div class="wc-section-title">${this.t("tournamentStatus")}</div>
-          <p>${this.t("demoMode")}: <strong>${o.demo_mode ? this.t("on") : this.t("off")}</strong></p>
-          <p>${this.t("lastUpdate")}: <strong>${o.last_update_success ? this.t("ok") : this.t("failed")}</strong></p>
-          <p>${this.t("progress")}: <strong>${o.progress ?? 0}%</strong></p>
-          <p>${this.t("topScorer")}: <strong>${this.esc(topScorer?.player?.name || topScorer?.name || this.t("notAvailable"))}</strong></p>
+    return `
+      <div class="overview-mini-match">
+        <div class="overview-mini-top">
+          <span>${this.esc(stage || this.t("fixtures"))}</span>
+          <em>${this.esc(status)}</em>
         </div>
+        <div class="overview-mini-teams">
+          <div>${this.flag(homeTeam, true)}<strong>${this.esc(this.teamLabel(homeTeam))}</strong></div>
+          <b>${this.esc(scoreText)}</b>
+          <div>${this.flag(awayTeam, true)}<strong>${this.esc(this.teamLabel(awayTeam))}</strong></div>
+        </div>
+        <div class="overview-mini-date">${this.esc(this.formatDate(m.utcDate || m.date))}</div>
       </div>
     `;
   }
@@ -2569,7 +3295,7 @@ class WorldCup2026Panel extends HTMLElement {
 
     return `
       <div class="wc-card">
-        <div class="wc-section-title">${this.t("live")} <span class="wc-badge wc-live">LIVE</span></div>
+        <div class="wc-section-title">${this.t("live")} <span class="wc-badge wc-live">${this.t("liveStatus")}</span></div>
         <div class="wc-list">
           ${live.map(m => this.matchRow(m)).join("")}
         </div>
@@ -2622,21 +3348,21 @@ class WorldCup2026Panel extends HTMLElement {
               <div class="wc-section-title">${this.t("fixturesResults")}</div>
               ${liveCount ? `<span class="wc-badge wc-live">${liveCount} ${this.t("liveStatus")}</span>` : ""}
             </div>
-            <div class="fixtures-subtitle">A cleaner World Cup match centre with match-day sections, bold score cards, flags, venue details and clearer live/result badges.</div>
+            <div class="fixtures-subtitle">${this.t("fixturesSubtitle")}</div>
           </div>
           <div class="fixtures-summary-grid">
             <div class="fixtures-summary-box"><strong>${sortedFixtures.length}</strong><span>${this.t("loaded")}</span></div>
             <div class="fixtures-summary-box"><strong>${playedCount}</strong><span>${this.t("played")}</span></div>
             <div class="fixtures-summary-box"><strong>${remainingCount}</strong><span>${this.t("remaining")}</span></div>
             <div class="fixtures-summary-box"><strong>${liveCount}</strong><span>${this.t("liveNow")}</span></div>
-            <div class="fixtures-summary-box"><strong>${dayCount}</strong><span>Days</span></div>
+            <div class="fixtures-summary-box"><strong>${dayCount}</strong><span>${this.t("days")}</span></div>
           </div>
         </div>
 
         ${nextMatch ? `
           <div class="fixtures-next-strip">
             <span>${this.t("nextMatch")}</span>
-            <strong>${this.esc(this.teamLabel(this.getHomeTeam(nextMatch)))} v ${this.esc(this.teamLabel(this.getAwayTeam(nextMatch)))}</strong>
+            <strong>${this.esc(this.teamLabel(this.getHomeTeam(nextMatch)))} ${this.t("versus")} ${this.esc(this.teamLabel(this.getAwayTeam(nextMatch)))}</strong>
             <em>${this.esc(this.formatDate(nextMatch.utcDate || nextMatch.date))}</em>
           </div>
         ` : ""}
@@ -2796,7 +3522,7 @@ class WorldCup2026Panel extends HTMLElement {
 
           <div class="fixture-middle">
             <div class="wc-score">${homeScore} - ${awayScore}</div>
-            <div class="fixture-vs">v</div>
+            <div class="fixture-vs">${this.t("versus")}</div>
           </div>
 
           ${this.teamFlagBlock(awayTeam)}
@@ -3140,7 +3866,7 @@ class WorldCup2026Panel extends HTMLElement {
       </div>
     `;
 
-    this.querySelectorAll(".wc-nav button").forEach((button) => {
+    this.querySelectorAll(".wc-nav button, .overview-action-button").forEach((button) => {
       button.onclick = () => {
         const page = button.getAttribute("data-page");
         this.changePage(page);
