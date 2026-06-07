@@ -150,13 +150,16 @@ async def websocket_get_scorers(hass, connection, msg) -> None:
             [
                 {
                     "name": player.get("player") or player.get("name"),
+                    "player": player.get("player") or player.get("name"),
                     "team": player.get("team"),
                     "goals": player.get("goals", 0),
                     "assists": player.get("assists", 0),
                     "penalties": player.get("penalties", 0),
                     "matches": player.get("matches", 0),
                     "yellow_cards": player.get("yellow_cards", 0),
+                    "yellowCards": player.get("yellow_cards", 0),
                     "red_cards": player.get("red_cards", 0),
+                    "redCards": player.get("red_cards", 0),
                     "minutes": player.get("minutes", 0),
                     "last_updated": player.get("last_updated"),
                 }
@@ -169,6 +172,7 @@ async def websocket_get_scorers(hass, connection, msg) -> None:
             "golden_boot_error",
             str(err),
         )
+
 
 @websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_statistics"})
 @websocket_api.async_response
