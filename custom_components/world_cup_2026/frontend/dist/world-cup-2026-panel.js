@@ -33,7 +33,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Fixtures",
         groups: "Groups",
         knockout: "Knockout",
-        players: "Players",
+        players: "Golden Boot",
         records: "Records",
         stats: "Stats Hub",
         venues: "Venues",
@@ -78,6 +78,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "No team goal data yet.",
         noDefensiveData: "No defensive data yet.",
         matchesPlayed: "Matches Played",
+        yellowCards: "Yellow Cards",
+        redCards: "Red Cards",
+        minutes: "Minutes",
         goalsPerMatch: "Goals / Match",
         draws: "Draws",
         drawRate: "Draw Rate",
@@ -116,6 +119,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'World Cup 2026 Control Centre',
         overviewSubtitle: 'Live tournament dashboard with fixtures, results, groups, player stats, venues, records and knockout tracking in one place.',
         tournamentIntelligence: 'Tournament Intelligence',
+        goldenBootCentre: 'Golden Boot Centre',
+        leaderSpotlight: 'Leader Spotlight',
+        playersTracked: 'Players Tracked',
+        totalAssists: 'Total Assists',
+        totalYellowCards: 'Total Yellow Cards',
+        totalRedCards: 'Total Red Cards',
         upNext: 'Up next',
         matchSpotlight: 'Match Spotlight',
         upcomingFixtures: 'Upcoming Fixtures',
@@ -141,7 +150,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Matchs",
         groups: "Groupes",
         knockout: "Phase Finale",
-        players: "Joueurs",
+        players: "Soulier d'Or",
         records: "Records",
         stats: "Stats",
         venues: "Stades",
@@ -186,6 +195,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "Aucune donnée de buts.",
         noDefensiveData: "Aucune donnée défensive.",
         matchesPlayed: "Matchs Joués",
+        yellowCards: "Cartons Jaunes",
+        redCards: "Cartons Rouges",
+        minutes: "Minutes",
         goalsPerMatch: "Buts / Match",
         draws: "Nuls",
         drawRate: "Taux de Nuls",
@@ -224,6 +236,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'Centre de Contrôle Coupe du Monde 2026',
         overviewSubtitle: 'Tableau de bord du tournoi avec matchs, résultats, groupes, statistiques joueurs, stades, records et phase finale au même endroit.',
         tournamentIntelligence: 'Analyse du Tournoi',
+        goldenBootCentre: 'Centre du Soulier d’Or',
+        leaderSpotlight: 'Leader à la Une',
+        playersTracked: 'Joueurs Suivis',
+        totalAssists: 'Total Passes',
+        totalYellowCards: 'Total Cartons Jaunes',
+        totalRedCards: 'Total Cartons Rouges',
         upNext: 'À venir',
         matchSpotlight: 'Match à la Une',
         upcomingFixtures: 'Prochains Matchs',
@@ -249,7 +267,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Spiele",
         groups: "Gruppen",
         knockout: "K.o.-Runde",
-        players: "Spieler",
+        players: "Goldener Schuh",
         records: "Rekorde",
         stats: "Statistiken",
         venues: "Stadien",
@@ -294,6 +312,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "Noch keine Tordaten.",
         noDefensiveData: "Noch keine Defensivdaten.",
         matchesPlayed: "Gespielte Spiele",
+        yellowCards: "Gelbe Karten",
+        redCards: "Rote Karten",
+        minutes: "Minuten",
         goalsPerMatch: "Tore / Spiel",
         draws: "Unentschieden",
         drawRate: "Remis-Quote",
@@ -332,6 +353,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'WM 2026 Kontrollzentrum',
         overviewSubtitle: 'Live-Turnierdashboard mit Spielen, Ergebnissen, Gruppen, Spielerstatistiken, Stadien, Rekorden und K.o.-Runde an einem Ort.',
         tournamentIntelligence: 'Turnieranalyse',
+        goldenBootCentre: 'Zentrum Goldener Schuh',
+        leaderSpotlight: 'Führender Spieler',
+        playersTracked: 'Verfolgte Spieler',
+        totalAssists: 'Vorlagen Gesamt',
+        totalYellowCards: 'Gelbe Karten Gesamt',
+        totalRedCards: 'Rote Karten Gesamt',
         upNext: 'Als Nächstes',
         matchSpotlight: 'Spiel im Fokus',
         upcomingFixtures: 'Kommende Spiele',
@@ -357,7 +384,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Partidos",
         groups: "Grupos",
         knockout: "Eliminatorias",
-        players: "Jugadores",
+        players: "Bota de Oro",
         records: "Récords",
         stats: "Estadísticas",
         venues: "Sedes",
@@ -402,6 +429,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "No hay datos de goles.",
         noDefensiveData: "No hay datos defensivos.",
         matchesPlayed: "Partidos Jugados",
+        yellowCards: "Tarjetas Amarillas",
+        redCards: "Tarjetas Rojas",
+        minutes: "Minutos",
         goalsPerMatch: "Goles / Partido",
         draws: "Empates",
         drawRate: "Porcentaje de Empates",
@@ -440,6 +470,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'Centro de Control Mundial 2026',
         overviewSubtitle: 'Panel en vivo del torneo con partidos, resultados, grupos, estadísticas de jugadores, sedes, récords y eliminatorias en un solo lugar.',
         tournamentIntelligence: 'Análisis del Torneo',
+        goldenBootCentre: 'Centro Bota de Oro',
+        leaderSpotlight: 'Líder Destacado',
+        playersTracked: 'Jugadores Seguidos',
+        totalAssists: 'Asistencias Totales',
+        totalYellowCards: 'Tarjetas Amarillas Totales',
+        totalRedCards: 'Tarjetas Rojas Totales',
         upNext: 'Próximo',
         matchSpotlight: 'Partido Destacado',
         upcomingFixtures: 'Próximos Partidos',
@@ -465,7 +501,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Partite",
         groups: "Gruppi",
         knockout: "Eliminazione",
-        players: "Giocatori",
+        players: "Scarpa d'Oro",
         records: "Record",
         stats: "Statistiche",
         venues: "Stadi",
@@ -510,6 +546,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "Nessun dato gol squadra.",
         noDefensiveData: "Nessun dato difensivo.",
         matchesPlayed: "Partite Giocate",
+        yellowCards: "Cartellini Gialli",
+        redCards: "Cartellini Rossi",
+        minutes: "Minuti",
         goalsPerMatch: "Gol / Partita",
         draws: "Pareggi",
         drawRate: "Percentuale Pareggi",
@@ -548,6 +587,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'Centro di Controllo Mondiale 2026',
         overviewSubtitle: 'Dashboard live del torneo con partite, risultati, gruppi, statistiche giocatori, stadi, record e fase finale in un unico posto.',
         tournamentIntelligence: 'Analisi Torneo',
+        goldenBootCentre: 'Centro Scarpa d’Oro',
+        leaderSpotlight: 'Leader in Evidenza',
+        playersTracked: 'Giocatori Monitorati',
+        totalAssists: 'Assist Totali',
+        totalYellowCards: 'Cartellini Gialli Totali',
+        totalRedCards: 'Cartellini Rossi Totali',
         upNext: 'Prossimo',
         matchSpotlight: 'Partita in Evidenza',
         upcomingFixtures: 'Prossime Partite',
@@ -573,7 +618,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Wedstrijden",
         groups: "Groepen",
         knockout: "Knock-out",
-        players: "Spelers",
+        players: "Gouden Schoen",
         records: "Records",
         stats: "Statistieken",
         venues: "Stadions",
@@ -618,6 +663,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "Geen doelpuntgegevens.",
         noDefensiveData: "Geen verdedigingsgegevens.",
         matchesPlayed: "Gespeelde Wedstrijden",
+        yellowCards: "Gele Kaarten",
+        redCards: "Rode Kaarten",
+        minutes: "Minuten",
         goalsPerMatch: "Doelpunten / Wedstrijd",
         draws: "Gelijkspel",
         drawRate: "Gelijkspelpercentage",
@@ -656,6 +704,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'WK 2026 Controlecentrum',
         overviewSubtitle: 'Live toernooidashboard met wedstrijden, uitslagen, groepen, spelerstatistieken, stadions, records en knock-out in één plek.',
         tournamentIntelligence: 'Toernooi-inzicht',
+        goldenBootCentre: 'Gouden Schoen Centrum',
+        leaderSpotlight: 'Leider in de Spotlight',
+        playersTracked: 'Gevolgde Spelers',
+        totalAssists: 'Totaal Assists',
+        totalYellowCards: 'Totaal Gele Kaarten',
+        totalRedCards: 'Totaal Rode Kaarten',
         upNext: 'Volgende',
         matchSpotlight: 'Wedstrijd in de Spotlight',
         upcomingFixtures: 'Komende Wedstrijden',
@@ -681,7 +735,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "المباريات",
         groups: "المجموعات",
         knockout: "الأدوار الإقصائية",
-        players: "اللاعبون",
+        players: "الحذاء الذهبي",
         records: "الأرقام القياسية",
         stats: "الإحصائيات",
         venues: "الملاعب",
@@ -726,6 +780,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "لا توجد بيانات أهداف.",
         noDefensiveData: "لا توجد بيانات دفاعية.",
         matchesPlayed: "المباريات الملعوبة",
+        yellowCards: "البطاقات الصفراء",
+        redCards: "البطاقات الحمراء",
+        minutes: "الدقائق",
         goalsPerMatch: "أهداف / مباراة",
         draws: "تعادلات",
         drawRate: "نسبة التعادل",
@@ -764,6 +821,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'مركز تحكم كأس العالم 2026',
         overviewSubtitle: 'لوحة بطولة مباشرة تشمل المباريات والنتائج والمجموعات وإحصائيات اللاعبين والملاعب والأرقام والأدوار الإقصائية في مكان واحد.',
         tournamentIntelligence: 'تحليل البطولة',
+        goldenBootCentre: 'مركز الحذاء الذهبي',
+        leaderSpotlight: 'تسليط الضوء على المتصدر',
+        playersTracked: 'اللاعبون المتابعون',
+        totalAssists: 'إجمالي التمريرات',
+        totalYellowCards: 'إجمالي البطاقات الصفراء',
+        totalRedCards: 'إجمالي البطاقات الحمراء',
         upNext: 'التالي',
         matchSpotlight: 'تسليط الضوء على المباراة',
         upcomingFixtures: 'المباريات القادمة',
@@ -789,7 +852,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Jogos",
         groups: "Grupos",
         knockout: "Eliminatórias",
-        players: "Jogadores",
+        players: "Bota de Ouro",
         records: "Recordes",
         stats: "Estatísticas",
         venues: "Estádios",
@@ -834,6 +897,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "Sem dados de golos.",
         noDefensiveData: "Sem dados defensivos.",
         matchesPlayed: "Jogos Jogados",
+        yellowCards: "Cartões Amarelos",
+        redCards: "Cartões Vermelhos",
+        minutes: "Minutos",
         goalsPerMatch: "Golos / Jogo",
         draws: "Empates",
         drawRate: "Taxa de Empates",
@@ -872,6 +938,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'Centro de Controlo Mundial 2026',
         overviewSubtitle: 'Painel ao vivo do torneio com jogos, resultados, grupos, estatísticas de jogadores, estádios, recordes e eliminatórias num só local.',
         tournamentIntelligence: 'Análise do Torneio',
+        goldenBootCentre: 'Centro da Bota de Ouro',
+        leaderSpotlight: 'Líder em Destaque',
+        playersTracked: 'Jogadores Acompanhados',
+        totalAssists: 'Assistências Totais',
+        totalYellowCards: 'Total Cartões Amarelos',
+        totalRedCards: 'Total Cartões Vermelhos',
         upNext: 'A seguir',
         matchSpotlight: 'Jogo em Destaque',
         upcomingFixtures: 'Próximos Jogos',
@@ -897,7 +969,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "試合",
         groups: "グループ",
         knockout: "決勝トーナメント",
-        players: "選手",
+        players: "ゴールデンブーツ",
         records: "記録",
         stats: "統計",
         venues: "会場",
@@ -942,6 +1014,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "得点データはありません。",
         noDefensiveData: "守備データはありません。",
         matchesPlayed: "終了試合",
+        yellowCards: "イエローカード",
+        redCards: "レッドカード",
+        minutes: "出場時間",
         goalsPerMatch: "得点 / 試合",
         draws: "引き分け",
         drawRate: "引き分け率",
@@ -980,6 +1055,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'ワールドカップ2026 コントロールセンター',
         overviewSubtitle: '試合、結果、グループ、選手統計、会場、記録、決勝トーナメントを一か所で確認できるライブ大会ダッシュボード。',
         tournamentIntelligence: '大会分析',
+        goldenBootCentre: 'ゴールデンブーツセンター',
+        leaderSpotlight: 'トップ選手',
+        playersTracked: '追跡中の選手',
+        totalAssists: '合計アシスト',
+        totalYellowCards: '合計イエローカード',
+        totalRedCards: '合計レッドカード',
         upNext: '次へ',
         matchSpotlight: '注目の試合',
         upcomingFixtures: '今後の試合',
@@ -1005,7 +1086,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "경기",
         groups: "조별 순위",
         knockout: "토너먼트",
-        players: "선수",
+        players: "골든 부트",
         records: "기록",
         stats: "통계",
         venues: "경기장",
@@ -1050,6 +1131,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "득점 데이터가 없습니다.",
         noDefensiveData: "수비 데이터가 없습니다.",
         matchesPlayed: "진행된 경기",
+        yellowCards: "옐로카드",
+        redCards: "레드카드",
+        minutes: "출전 시간",
         goalsPerMatch: "득점 / 경기",
         draws: "무승부",
         drawRate: "무승부 비율",
@@ -1088,6 +1172,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: '월드컵 2026 컨트롤 센터',
         overviewSubtitle: '경기, 결과, 조별 순위, 선수 통계, 경기장, 기록, 토너먼트를 한곳에서 보는 라이브 대회 대시보드입니다.',
         tournamentIntelligence: '대회 분석',
+        goldenBootCentre: '골든 부트 센터',
+        leaderSpotlight: '선두 선수',
+        playersTracked: '추적 선수',
+        totalAssists: '총 도움',
+        totalYellowCards: '총 옐로카드',
+        totalRedCards: '총 레드카드',
         upNext: '다음',
         matchSpotlight: '주목 경기',
         upcomingFixtures: '예정 경기',
@@ -1113,7 +1203,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Matcher",
         groups: "Grupper",
         knockout: "Slutspel",
-        players: "Spelare",
+        players: "Guldskon",
         records: "Rekord",
         stats: "Statistik",
         venues: "Arenor",
@@ -1158,6 +1248,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "Ingen måldata.",
         noDefensiveData: "Ingen försvarsdata.",
         matchesPlayed: "Spelade Matcher",
+        yellowCards: "Gula Kort",
+        redCards: "Röda Kort",
+        minutes: "Minuter",
         goalsPerMatch: "Mål / Match",
         draws: "Oavgjorda",
         drawRate: "Oavgjortprocent",
@@ -1196,6 +1289,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'VM 2026 Kontrollcenter',
         overviewSubtitle: 'Live turneringspanel med matcher, resultat, grupper, spelarstatistik, arenor, rekord och slutspel på ett ställe.',
         tournamentIntelligence: 'Turneringsanalys',
+        goldenBootCentre: 'Guldskon Center',
+        leaderSpotlight: 'Ledare i Fokus',
+        playersTracked: 'Bevakade Spelare',
+        totalAssists: 'Totalt Assist',
+        totalYellowCards: 'Totalt Gula Kort',
+        totalRedCards: 'Totalt Röda Kort',
         upNext: 'Nästa',
         matchSpotlight: 'Match i Fokus',
         upcomingFixtures: 'Kommande Matcher',
@@ -1221,7 +1320,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixtures: "Kamper",
         groups: "Grupper",
         knockout: "Utslag",
-        players: "Spillere",
+        players: "Gullstøvelen",
         records: "Rekorder",
         stats: "Statistikk",
         venues: "Arenaer",
@@ -1266,6 +1365,9 @@ class WorldCup2026Panel extends HTMLElement {
         noTeamGoalData: "Ingen måldata.",
         noDefensiveData: "Ingen forsvarsdata.",
         matchesPlayed: "Spilte Kamper",
+        yellowCards: "Gule Kort",
+        redCards: "Røde Kort",
+        minutes: "Minutter",
         goalsPerMatch: "Mål / Kamp",
         draws: "Uavgjort",
         drawRate: "Uavgjortprosent",
@@ -1304,6 +1406,12 @@ class WorldCup2026Panel extends HTMLElement {
         controlCentre: 'VM 2026 Kontrollsenter',
         overviewSubtitle: 'Live turneringspanel med kamper, resultater, grupper, spillerstatistikk, arenaer, rekorder og utslagsspill på ett sted.',
         tournamentIntelligence: 'Turneringsanalyse',
+        goldenBootCentre: 'Gullstøvelen Senter',
+        leaderSpotlight: 'Leder i Fokus',
+        playersTracked: 'Spillere Fulgt',
+        totalAssists: 'Totalt Målgivende',
+        totalYellowCards: 'Totalt Gule Kort',
+        totalRedCards: 'Totalt Røde Kort',
         upNext: 'Neste',
         matchSpotlight: 'Kamp i Fokus',
         upcomingFixtures: 'Kommende Kamper',
@@ -1373,7 +1481,7 @@ class WorldCup2026Panel extends HTMLElement {
       this._data.live = await this.callApi("world_cup_2026/get_live_matches");
       this._data.fixtures = await this.callApi("world_cup_2026/get_fixtures");
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
-      this._data.scorers = await this.callApi("world_cup_2026/get_scorers");
+      this._data.scorers = await this.safeCall("world_cup_2026/get_scorers", []);
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
       this._data.records = await this.safeCall("world_cup_2026/get_records", {});
       this._data.venues = await this.safeCall("world_cup_2026/get_venues", {});
@@ -2946,6 +3054,229 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+
+
+        .golden-boot-hero {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 18px;
+          background:
+            linear-gradient(135deg, rgba(255,205,80,0.22), rgba(255,255,255,0.08)),
+            rgba(255,255,255,0.08);
+          border-color: rgba(255,220,120,0.34);
+        }
+
+        .golden-kicker {
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          font-size: 12px;
+          font-weight: 900;
+          opacity: 0.78;
+          margin-bottom: 6px;
+        }
+
+        .golden-title {
+          margin-bottom: 6px;
+        }
+
+        .golden-boot-icon {
+          width: 86px;
+          height: 86px;
+          border-radius: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 42px;
+          background: rgba(255,220,120,0.18);
+          border: 1px solid rgba(255,220,120,0.34);
+          box-shadow: 0 16px 36px rgba(0,0,0,0.25);
+          flex: 0 0 auto;
+        }
+
+        .golden-layout {
+          display: grid;
+          grid-template-columns: 1.7fr 0.8fr;
+          gap: 16px;
+          align-items: stretch;
+        }
+
+        .golden-leader {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          align-items: center;
+          gap: 16px;
+          padding: 16px;
+          border-radius: 20px;
+          background: rgba(255,220,120,0.14);
+          border: 1px solid rgba(255,220,120,0.28);
+          margin-bottom: 14px;
+        }
+
+        .golden-leader-medal {
+          width: 58px;
+          height: 58px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 18px;
+          font-size: 32px;
+          background: rgba(255,255,255,0.12);
+        }
+
+        .golden-leader-name {
+          font-size: 25px;
+          font-weight: 900;
+          line-height: 1.1;
+        }
+
+        .golden-leader-team,
+        .golden-player-team {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          margin-top: 7px;
+          opacity: 0.9;
+          font-weight: 800;
+        }
+
+        .golden-leader-goals {
+          text-align: center;
+          min-width: 86px;
+        }
+
+        .golden-leader-goals strong {
+          display: block;
+          font-size: 44px;
+          line-height: 1;
+        }
+
+        .golden-leader-goals span {
+          display: block;
+          font-size: 12px;
+          opacity: 0.75;
+          text-transform: uppercase;
+          font-weight: 900;
+          margin-top: 4px;
+        }
+
+        .golden-podium-grid {
+          display: grid;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 12px;
+        }
+
+        .golden-podium-item {
+          padding: 14px;
+          border-radius: 18px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.12);
+          min-width: 0;
+        }
+
+        .golden-podium-item.winner {
+          background: rgba(255,220,120,0.15);
+          border-color: rgba(255,220,120,0.30);
+        }
+
+        .golden-medal {
+          font-size: 28px;
+          margin-bottom: 8px;
+        }
+
+        .golden-player-name {
+          font-size: 17px;
+          font-weight: 900;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .golden-player-stats {
+          margin-top: 10px;
+          display: flex;
+          align-items: baseline;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+
+        .golden-player-stats strong {
+          font-size: 26px;
+        }
+
+        .golden-player-stats span {
+          opacity: 0.72;
+          font-size: 12px;
+          font-weight: 800;
+        }
+
+        .golden-summary-card {
+          display: grid;
+          gap: 10px;
+        }
+
+        .golden-mini-stat {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          gap: 12px;
+          padding: 12px 14px;
+          border-radius: 16px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .golden-mini-stat strong {
+          font-size: 25px;
+        }
+
+        .golden-mini-stat span {
+          opacity: 0.74;
+          font-weight: 800;
+          text-align: right;
+        }
+
+        .golden-table-wrap .wc-table {
+          min-width: 760px;
+        }
+
+        .golden-table th,
+        .golden-table td {
+          vertical-align: middle;
+        }
+
+        .golden-rank {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 30px;
+          height: 30px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.10);
+          font-weight: 900;
+        }
+
+        .golden-top-row .golden-rank {
+          background: rgba(255,220,120,0.22);
+          border: 1px solid rgba(255,220,120,0.30);
+        }
+
+        .golden-table-player {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          min-width: 0;
+        }
+
+        .golden-table-medal {
+          min-width: 22px;
+        }
+
+        .golden-goal-count {
+          font-size: 20px;
+        }
+
+
         .wc-venue-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -3034,6 +3365,279 @@ class WorldCup2026Panel extends HTMLElement {
           }
 
         }
+
+
+        @media (max-width: 900px) {
+          .golden-layout {
+            grid-template-columns: 1fr;
+          }
+
+          .golden-podium-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 650px) {
+          .golden-boot-hero,
+          .golden-leader {
+            grid-template-columns: 1fr;
+            display: grid;
+            text-align: center;
+          }
+
+          .golden-boot-icon,
+          .golden-leader-medal {
+            margin: 0 auto;
+          }
+
+          .golden-leader-team,
+          .golden-player-team {
+            justify-content: center;
+          }
+
+          .golden-leader-goals {
+            margin: 0 auto;
+          }
+        }
+
+
+        .golden-layout-polished {
+          grid-template-columns: minmax(0, 2.2fr) minmax(280px, 0.85fr);
+          align-items: stretch;
+        }
+
+        .golden-main-card {
+          min-width: 0;
+        }
+
+        .golden-card-head {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          flex-wrap: wrap;
+          margin-bottom: 14px;
+        }
+
+        .golden-showcase {
+          display: grid;
+          grid-template-columns: minmax(230px, 0.8fr) minmax(360px, 1.35fr);
+          gap: 14px;
+          align-items: stretch;
+        }
+
+        .golden-leader-compact {
+          grid-template-columns: 1fr;
+          text-align: center;
+          justify-items: center;
+          margin-bottom: 0;
+          min-height: 100%;
+        }
+
+        .golden-leader-compact .golden-leader-name {
+          font-size: 22px;
+        }
+
+        .golden-leader-compact .golden-leader-team {
+          justify-content: center;
+        }
+
+        .golden-leader-compact .golden-leader-goals strong {
+          font-size: 58px;
+        }
+
+        .golden-podium-grid-polished {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          align-items: stretch;
+          height: 100%;
+        }
+
+        .golden-podium-grid-polished .golden-podium-item {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          min-height: 170px;
+        }
+
+        .golden-empty-podium {
+          opacity: 0.55;
+          border-style: dashed;
+        }
+
+        .golden-summary-card .wc-section-title {
+          margin-bottom: 4px;
+        }
+
+        .golden-table-card .golden-card-head {
+          margin-bottom: 8px;
+        }
+
+        .golden-table .group-team-cell {
+          justify-content: flex-start;
+        }
+
+        @media (max-width: 1100px) {
+          .golden-layout-polished,
+          .golden-showcase {
+            grid-template-columns: 1fr;
+          }
+        }
+
+        @media (max-width: 760px) {
+          .golden-podium-grid-polished {
+            grid-template-columns: 1fr;
+          }
+
+          .golden-card-head {
+            align-items: flex-start;
+          }
+        }
+
+
+        .golden-showcase-polished {
+          align-items: stretch;
+        }
+
+        .golden-leader-main {
+          min-width: 0;
+        }
+
+        .golden-leader-strip {
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(2, minmax(0, 1fr));
+          gap: 8px;
+          margin-top: 4px;
+        }
+
+        .golden-leader-strip span {
+          display: flex;
+          flex-direction: column;
+          gap: 2px;
+          padding: 9px 10px;
+          border-radius: 13px;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.10);
+          font-size: 10px;
+          font-weight: 900;
+          text-transform: uppercase;
+          opacity: 0.88;
+        }
+
+        .golden-leader-strip strong {
+          font-size: 17px;
+          line-height: 1;
+        }
+
+        .golden-card-stat-row {
+          display: flex;
+          gap: 7px;
+          flex-wrap: wrap;
+          margin-top: 12px;
+          font-size: 11px;
+          font-weight: 900;
+          opacity: 0.82;
+        }
+
+        .golden-card-stat-row span {
+          padding: 5px 8px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .golden-card-pill {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 44px;
+          padding: 5px 8px;
+          border-radius: 999px;
+          font-weight: 900;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .golden-card-pill.yellow {
+          background: rgba(255,220,80,0.12);
+          border-color: rgba(255,220,80,0.24);
+        }
+
+        .golden-card-pill.red {
+          background: rgba(255,90,90,0.12);
+          border-color: rgba(255,90,90,0.24);
+        }
+
+        .golden-updated {
+          text-align: center;
+          font-size: 12px;
+          margin-top: 2px;
+        }
+
+        @media (max-width: 620px) {
+          .golden-table-wrap .golden-table {
+            min-width: 0;
+          }
+
+          .golden-table thead {
+            display: none;
+          }
+
+          .golden-table,
+          .golden-table tbody,
+          .golden-table tr,
+          .golden-table td {
+            display: block;
+            width: 100%;
+          }
+
+          .golden-table tr {
+            padding: 12px;
+            margin-bottom: 12px;
+            border-radius: 18px;
+            background: rgba(255,255,255,0.065);
+            border: 1px solid rgba(255,255,255,0.10);
+          }
+
+          .golden-table td {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 14px;
+            padding: 7px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+          }
+
+          .golden-table td:first-child {
+            justify-content: center;
+            padding-top: 0;
+          }
+
+          .golden-table td:last-child {
+            border-bottom: 0;
+            padding-bottom: 0;
+          }
+
+          .golden-table td[data-label]::before {
+            content: attr(data-label);
+            opacity: 0.68;
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 900;
+          }
+
+          .golden-table .group-team-cell,
+          .golden-table-player {
+            justify-content: flex-end;
+            text-align: right;
+          }
+
+          .golden-leader-strip {
+            grid-template-columns: 1fr;
+          }
+        }
+
       </style>
     `;
   }
@@ -3625,39 +4229,306 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  numberValue(...values) {
+    for (const value of values) {
+      if (value === null || value === undefined || value === "") continue;
+      const parsed = Number(value);
+      if (!Number.isNaN(parsed)) return parsed;
+    }
+    return 0;
+  }
+
+
+
+  resolvedPlayerStat(player, ...keys) {
+    const candidates = [
+      player,
+      player?.player,
+      player?.stats,
+      player?.statistics,
+      player?.discipline,
+      player?.cards,
+      player?.player?.stats,
+      player?.player?.statistics,
+      player?.player?.discipline,
+      player?.player?.cards,
+    ].filter((item) => item && typeof item === "object");
+
+    for (const source of candidates) {
+      const value = this.playerStatValue(source, ...keys);
+      if (value !== undefined && value !== null && value !== "") {
+        return value;
+      }
+    }
+
+    return undefined;
+  }
+
+  playerStatValue(player, ...keys) {
+    for (const key of keys) {
+      if (!key) continue;
+
+      if (Object.prototype.hasOwnProperty.call(player, key)) {
+        return player[key];
+      }
+
+      const camelKey = key.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
+      if (Object.prototype.hasOwnProperty.call(player, camelKey)) {
+        return player[camelKey];
+      }
+
+      const nestedParts = key.split(".");
+      if (nestedParts.length > 1) {
+        let current = player;
+        let found = true;
+        for (const part of nestedParts) {
+          if (current && Object.prototype.hasOwnProperty.call(current, part)) {
+            current = current[part];
+          } else {
+            found = false;
+            break;
+          }
+        }
+        if (found) return current;
+      }
+    }
+    return undefined;
+  }
+
   playersPage() {
-    const scorers = (this._data.scorers || []).slice(0, 30);
+    const rawScorers = Array.isArray(this._data.scorers) ? this._data.scorers : [];
+
+    const scorers = rawScorers
+      .map((s) => {
+        const team = this.teamLabel(s.team?.name || s.team?.shortName || s.team || s.nationality || "");
+
+        return {
+          name: s.player?.name || s.player || s.name || this.t("unknown"),
+          team,
+          goals: this.numberValue(this.resolvedPlayerStat(s, "goals", "scored", "goal_count", "total_goals", "totalGoals")),
+          assists: this.numberValue(this.resolvedPlayerStat(s, "assists", "assist", "assist_count", "total_assists", "totalAssists")),
+          penalties: this.numberValue(this.resolvedPlayerStat(s, "penalties", "penalty_goals", "penaltyGoals", "pens", "penalty", "penalties_scored")),
+          matches: this.numberValue(this.resolvedPlayerStat(s, "matches", "played", "appearances", "games", "matches_played", "matchesPlayed")),
+          yellowCards: this.numberValue(this.resolvedPlayerStat(
+            s,
+            "yellow_cards",
+            "yellowCards",
+            "yellow_card",
+            "yellowCard",
+            "yellows",
+            "cards_yellow",
+            "cardsYellow",
+            "cards.yellow",
+            "cards.yellow_cards",
+            "discipline.yellow_cards",
+            "discipline.yellowCards",
+            "total_yellow_cards",
+            "totalYellowCards",
+            "yellow",
+            "yc"
+          )),
+          redCards: this.numberValue(this.resolvedPlayerStat(
+            s,
+            "red_cards",
+            "redCards",
+            "red_card",
+            "redCard",
+            "reds",
+            "cards_red",
+            "cardsRed",
+            "cards.red",
+            "cards.red_cards",
+            "discipline.red_cards",
+            "discipline.redCards",
+            "total_red_cards",
+            "totalRedCards",
+            "red",
+            "rc"
+          )),
+          minutes: this.numberValue(this.resolvedPlayerStat(s, "minutes", "minutes_played", "minutesPlayed", "mins", "minute", "time_played")),
+          lastUpdated: s.last_updated || s.lastUpdated || "",
+        };
+      })
+      .sort((a, b) =>
+        b.goals - a.goals ||
+        b.assists - a.assists ||
+        a.matches - b.matches ||
+        a.minutes - b.minutes ||
+        a.name.localeCompare(b.name)
+      )
+      .slice(0, 50);
+
+    const podium = scorers.slice(0, 3);
+    const medals = ["🥇", "🥈", "🥉"];
+    const leader = scorers[0];
+    const totalGoals = scorers.reduce((total, p) => total + p.goals, 0);
+    const totalAssists = scorers.reduce((total, p) => total + p.assists, 0);
+    const totalPenalties = scorers.reduce((total, p) => total + p.penalties, 0);
+    const totalYellowCards = scorers.reduce((total, p) => total + p.yellowCards, 0);
+    const totalRedCards = scorers.reduce((total, p) => total + p.redCards, 0);
+    const totalMinutes = scorers.reduce((total, p) => total + p.minutes, 0);
+    const averageGoals = scorers.length ? (totalGoals / scorers.length).toFixed(1) : "0.0";
+    const lastUpdated = rawScorers.map((s) => s.last_updated || s.lastUpdated).filter(Boolean).sort().at(-1);
 
     return `
-      <div class="wc-card">
-        <div class="wc-section-title">${this.t("goldenBoot")}</div>
-        ${scorers.length ? `
-          <div class="wc-table-wrap">
-            <table class="wc-table">
+      <div class="wc-card golden-boot-hero">
+        <div>
+          <div class="golden-kicker">${this.t("players")}</div>
+          <div class="wc-section-title golden-title">${this.t("goldenBootCentre")}</div>
+          <div class="wc-muted">
+            ${this.t("goals")} · ${this.t("assists")} · ${this.t("penalties")} · ${this.t("matchesPlayed")} · ${this.t("yellowCards")} · ${this.t("redCards")} · ${this.t("minutes")}
+          </div>
+        </div>
+        <div class="golden-boot-icon">👟⚽</div>
+      </div>
+
+      ${scorers.length ? `
+        <div class="golden-layout golden-layout-polished">
+          <div class="wc-card golden-podium-card golden-main-card">
+            <div class="golden-card-head">
+              <div>
+                <div class="golden-kicker">${this.t("goldenBoot")}</div>
+                <div class="wc-section-title">${this.t("leaderSpotlight")}</div>
+              </div>
+              <span class="wc-badge">${scorers.length} ${this.t("playersTracked")}</span>
+            </div>
+
+            <div class="golden-showcase golden-showcase-polished">
+              ${leader ? `
+                <div class="golden-leader golden-leader-compact">
+                  <div class="golden-leader-medal">🥇</div>
+                  <div class="golden-leader-main">
+                    <div class="golden-leader-name">${this.esc(leader.name)}</div>
+                    <div class="golden-leader-team">
+                      ${this.flag(leader.team, true)}
+                      <span>${this.esc(leader.team || this.t("unknown"))}</span>
+                    </div>
+                  </div>
+                  <div class="golden-leader-goals">
+                    <strong>${leader.goals}</strong>
+                    <span>${this.t("goals")}</span>
+                  </div>
+                  <div class="golden-leader-strip">
+                    <span><strong>${leader.assists}</strong>${this.t("assists")}</span>
+                    <span><strong>${leader.penalties}</strong>${this.t("penalties")}</span>
+                    <span><strong>${leader.matches}</strong>${this.t("matchesPlayed")}</span>
+                    <span><strong>${leader.minutes}</strong>${this.t("minutes")}</span>
+                  </div>
+                </div>
+              ` : ""}
+
+              <div class="golden-podium-grid golden-podium-grid-polished">
+                ${[0, 1, 2].map((slot) => {
+                  const player = podium[slot];
+                  if (!player) {
+                    return `
+                      <div class="golden-podium-item golden-empty-podium">
+                        <div class="golden-medal">${medals[slot]}</div>
+                        <div class="golden-player-name">${this.t("tbc")}</div>
+                        <div class="wc-muted">0 ${this.t("goals")}</div>
+                      </div>
+                    `;
+                  }
+
+                  return `
+                    <div class="golden-podium-item ${slot === 0 ? "winner" : ""}">
+                      <div class="golden-medal">${medals[slot]}</div>
+                      <div class="golden-player-name">${this.esc(player.name)}</div>
+                      <div class="golden-player-team">
+                        ${this.flag(player.team, true)}
+                        <span>${this.esc(player.team || this.t("unknown"))}</span>
+                      </div>
+                      <div class="golden-player-stats">
+                        <strong>${player.goals}</strong> ${this.t("goals")}
+                        <span>${player.assists} ${this.t("assists")}</span>
+                      </div>
+                      <div class="golden-card-stat-row">
+                        <span>🟨 ${player.yellowCards}</span>
+                        <span>🟥 ${player.redCards}</span>
+                        <span>${player.matches} ${this.t("matchesPlayed")}</span>
+                      </div>
+                    </div>
+                  `;
+                }).join("")}
+              </div>
+            </div>
+          </div>
+
+          <div class="wc-card golden-summary-card">
+            <div>
+              <div class="golden-kicker">${this.t("stats")}</div>
+              <div class="wc-section-title">${this.t("tournamentIntelligence")}</div>
+            </div>
+            <div class="golden-mini-stat"><strong>${scorers.length}</strong><span>${this.t("playersTracked")}</span></div>
+            <div class="golden-mini-stat"><strong>${totalGoals}</strong><span>${this.t("totalGoals")}</span></div>
+            <div class="golden-mini-stat"><strong>${totalAssists}</strong><span>${this.t("totalAssists")}</span></div>
+            <div class="golden-mini-stat"><strong>${totalPenalties}</strong><span>${this.t("penalties")}</span></div>
+            <div class="golden-mini-stat"><strong>${totalYellowCards}</strong><span>${this.t("totalYellowCards")}</span></div>
+            <div class="golden-mini-stat"><strong>${totalRedCards}</strong><span>${this.t("totalRedCards")}</span></div>
+            <div class="golden-mini-stat"><strong>${averageGoals}</strong><span>${this.t("goalsPerMatch")}</span></div>
+            <div class="golden-mini-stat"><strong>${totalMinutes}</strong><span>${this.t("minutes")}</span></div>
+            ${lastUpdated ? `<div class="wc-muted golden-updated">${this.t("updated")}: ${this.esc(lastUpdated)}</div>` : ""}
+          </div>
+        </div>
+
+        <div class="wc-card golden-table-card">
+          <div class="golden-card-head">
+            <div>
+              <div class="golden-kicker">${this.t("playerWatch")}</div>
+              <div class="wc-section-title">${this.t("goldenBoot")}</div>
+            </div>
+            <span class="wc-badge">${this.t("goals")} · ${this.t("assists")} · ${this.t("penalties")} · 🟨 · 🟥</span>
+          </div>
+          <div class="wc-table-wrap golden-table-wrap">
+            <table class="wc-table golden-table">
               <thead>
                 <tr>
-                  <th>#</th>
+                  <th>${this.t("pos")}</th>
                   <th>${this.t("player")}</th>
                   <th>${this.t("team")}</th>
                   <th>${this.t("goals")}</th>
                   <th>${this.t("assists")}</th>
+                  <th>${this.t("penalties")}</th>
+                  <th>${this.t("matchesPlayed")}</th>
+                  <th>${this.t("yellowCards")}</th>
+                  <th>${this.t("redCards")}</th>
+                  <th>${this.t("minutes")}</th>
                 </tr>
               </thead>
               <tbody>
-                ${scorers.map((s, i) => `
-                  <tr>
-                    <td>${i + 1}</td>
-                    <td><strong>${this.esc(s.player?.name || s.name || this.t("unknown"))}</strong></td>
-                    <td>${this.esc(this.teamLabel(s.team?.name || s.team || ""))}</td>
-                    <td><strong>${s.goals ?? 0}</strong></td>
-                    <td>${s.assists ?? 0}</td>
+                ${scorers.map((player, i) => `
+                  <tr class="${i < 3 ? "golden-top-row" : ""}">
+                    <td><span class="golden-rank">${i + 1}</span></td>
+                    <td data-label="${this.t("player")}">
+                      <div class="golden-table-player">
+                        <span class="golden-table-medal">${medals[i] || ""}</span>
+                        <strong>${this.esc(player.name)}</strong>
+                      </div>
+                    </td>
+                    <td data-label="${this.t("team")}">
+                      <div class="group-team-cell">
+                        ${this.flag(player.team, true)}
+                        <strong>${this.esc(player.team || this.t("unknown"))}</strong>
+                      </div>
+                    </td>
+                    <td data-label="${this.t("goals")}"><strong class="golden-goal-count">${player.goals}</strong></td>
+                    <td data-label="${this.t("assists")}">${player.assists}</td>
+                    <td data-label="${this.t("penalties")}">${player.penalties}</td>
+                    <td data-label="${this.t("matchesPlayed")}">${player.matches}</td>
+                    <td data-label="${this.t("yellowCards")}"><span class="golden-card-pill yellow">🟨 ${player.yellowCards}</span></td>
+                    <td data-label="${this.t("redCards")}"><span class="golden-card-pill red">🟥 ${player.redCards}</span></td>
+                    <td data-label="${this.t("minutes")}">${player.minutes}</td>
                   </tr>
                 `).join("")}
               </tbody>
             </table>
           </div>
-        ` : `<div class="wc-empty">${this.t("noPlayerStats")}</div>`}
-      </div>
+        </div>
+      ` : `
+        <div class="wc-card">
+          <div class="wc-empty">${this.t("noPlayerStats")}</div>
+        </div>
+      `}
     `;
   }
 
