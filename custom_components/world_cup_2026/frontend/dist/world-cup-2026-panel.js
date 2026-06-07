@@ -1527,7 +1527,7 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-shell {
-          max-width: 1320px;
+          max-width: 1800px;
           margin: 0 auto;
         }
 
@@ -1859,125 +1859,155 @@ class WorldCup2026Panel extends HTMLElement {
           min-width: 48px;
         }
 
-
-
         .wc-groups-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
-          gap: 10px;
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 12px;
           align-items: start;
         }
 
         .wc-group-card {
-          padding: 10px 10px 9px;
-          border-radius: 16px;
+          padding: 11px 12px 10px;
+          border-radius: 17px;
           margin-bottom: 0;
         }
 
         .wc-group-card .wc-section-title {
-          font-size: 15px;
+          font-size: 17px;
           line-height: 1;
-          margin: 0 0 7px;
+          margin: 0 0 8px;
         }
 
         .wc-group-card .wc-table-wrap {
           overflow-x: hidden;
+          width: 100%;
         }
 
         .wc-group-card .wc-table {
-          min-width: 0;
           width: 100%;
+          min-width: 0;
           table-layout: fixed;
-          font-size: 9.5px;
+          border-collapse: collapse;
+          font-size: 11px;
         }
 
         .wc-group-card .wc-table th,
         .wc-group-card .wc-table td {
-          padding: 3px 2px;
+          padding: 3px 3px;
           line-height: 1.15;
           white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          border-bottom: 1px solid rgba(255,255,255,0.10);
+          vertical-align: middle;
+        }
+
+        .wc-group-card .wc-table th {
+          font-size: 9px;
+          letter-spacing: -0.2px;
+          opacity: 0.78;
+          text-align: center;
         }
 
         .wc-group-card .wc-table th:nth-child(1),
         .wc-group-card .wc-table td:nth-child(1) {
-          width: 17px;
+          width: 7%;
           text-align: center;
         }
 
         .wc-group-card .wc-table th:nth-child(2),
         .wc-group-card .wc-table td:nth-child(2) {
-          width: auto;
+          width: 43%;
+          text-align: left;
+          padding-left: 4px;
+          padding-right: 6px;
         }
 
-        .wc-group-card .wc-table th:nth-child(n+3),
-        .wc-group-card .wc-table td:nth-child(n+3) {
-          width: 17px;
+        .wc-group-card .wc-table th:nth-child(3),
+        .wc-group-card .wc-table td:nth-child(3),
+        .wc-group-card .wc-table th:nth-child(4),
+        .wc-group-card .wc-table td:nth-child(4),
+        .wc-group-card .wc-table th:nth-child(5),
+        .wc-group-card .wc-table td:nth-child(5),
+        .wc-group-card .wc-table th:nth-child(6),
+        .wc-group-card .wc-table td:nth-child(6),
+        .wc-group-card .wc-table th:nth-child(7),
+        .wc-group-card .wc-table td:nth-child(7),
+        .wc-group-card .wc-table th:nth-child(8),
+        .wc-group-card .wc-table td:nth-child(8) {
+          width: 5.5%;
           text-align: center;
         }
 
         .wc-group-card .wc-table th:nth-child(9),
-        .wc-group-card .wc-table td:nth-child(9),
-        .wc-group-card .wc-table th:nth-child(10),
-        .wc-group-card .wc-table td:nth-child(10) {
-          width: 20px;
+        .wc-group-card .wc-table td:nth-child(9) {
+          width: 8%;
+          text-align: center;
         }
 
-        .wc-group-card .wc-table th {
-          font-size: 8px;
-          letter-spacing: -0.2px;
+        .wc-group-card .wc-table th:nth-child(10),
+        .wc-group-card .wc-table td:nth-child(10) {
+          width: 9%;
+          text-align: center;
+          font-weight: 900;
         }
 
         .wc-group-card .group-team-cell {
-          gap: 4px;
+          display: flex;
+          align-items: center;
+          gap: 5px;
           min-width: 0;
+          width: 100%;
           overflow: hidden;
         }
 
         .wc-group-card .group-team-cell strong {
           display: block;
+          min-width: 0;
           overflow: hidden;
           text-overflow: ellipsis;
           white-space: nowrap;
-          min-width: 0;
-          max-width: 118px;
         }
 
         .wc-group-card .group-flag-img,
         .wc-group-card .group-flag-missing {
-          width: 17px;
-          height: 12px;
+          width: 21px;
+          height: 15px;
           font-size: 10px;
+          flex: 0 0 auto;
         }
 
-        @media (min-width: 1250px) {
-          .wc-groups-grid {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-          }
-        }
-
-        @media (max-width: 1249px) {
-          .wc-groups-grid {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-          }
-        }
-
-        @media (max-width: 900px) {
+        @media (max-width: 1200px) {
           .wc-groups-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
           }
+
+          .wc-group-card .wc-table {
+            font-size: 10.8px;
+          }
         }
 
-        @media (max-width: 620px) {
+        @media (max-width: 700px) {
           .wc-groups-grid {
             grid-template-columns: 1fr;
           }
 
-          .wc-group-card .wc-table {
-            font-size: 10px;
+          .wc-group-card {
+            padding: 10px;
           }
 
-          .wc-group-card .group-team-cell strong {
-            max-width: none;
+          .wc-group-card .wc-table {
+            font-size: 10.5px;
+          }
+
+          .wc-group-card .wc-table th {
+            font-size: 8.5px;
+          }
+
+          .wc-group-card .group-flag-img,
+          .wc-group-card .group-flag-missing {
+            width: 20px;
+            height: 14px;
           }
         }
 
