@@ -58,6 +58,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "No matches live right now.",
         fixturesResults: "Fixtures & Results",
         noFixtures: "No fixtures loaded yet.",
+        groupLabel: "Group",
         groupsAL: "Groups A-L",
         noGroups: "No group standings loaded yet.",
         noTeamsGroup: "No teams loaded for this group yet.",
@@ -153,6 +154,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "Aucun match en direct actuellement.",
         fixturesResults: "Matchs et Résultats",
         noFixtures: "Aucun match chargé.",
+        groupLabel: "Groupe",
         groupsAL: "Groupes A-L",
         noGroups: "Aucun classement chargé.",
         noTeamsGroup: "Aucune équipe chargée.",
@@ -248,6 +250,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "Derzeit keine Live-Spiele.",
         fixturesResults: "Spiele & Ergebnisse",
         noFixtures: "Noch keine Spiele geladen.",
+        groupLabel: "Gruppe",
         groupsAL: "Gruppen A-L",
         noGroups: "Noch keine Gruppentabellen.",
         noTeamsGroup: "Keine Teams geladen.",
@@ -343,6 +346,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "No hay partidos en vivo ahora.",
         fixturesResults: "Partidos y Resultados",
         noFixtures: "No hay partidos cargados.",
+        groupLabel: "Grupo",
         groupsAL: "Grupos A-L",
         noGroups: "No hay clasificación de grupos.",
         noTeamsGroup: "No hay equipos cargados.",
@@ -438,6 +442,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "Nessuna partita live ora.",
         fixturesResults: "Partite e Risultati",
         noFixtures: "Nessuna partita caricata.",
+        groupLabel: "Gruppo",
         groupsAL: "Gruppi A-L",
         noGroups: "Nessuna classifica caricata.",
         noTeamsGroup: "Nessuna squadra caricata.",
@@ -533,6 +538,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "Geen live wedstrijden nu.",
         fixturesResults: "Wedstrijden & Uitslagen",
         noFixtures: "Geen wedstrijden geladen.",
+        groupLabel: "Groep",
         groupsAL: "Groepen A-L",
         noGroups: "Geen groepsstanden geladen.",
         noTeamsGroup: "Geen teams geladen.",
@@ -628,6 +634,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "لا توجد مباريات مباشرة الآن.",
         fixturesResults: "المباريات والنتائج",
         noFixtures: "لا توجد مباريات محملة.",
+        groupLabel: "المجموعة",
         groupsAL: "المجموعات A-L",
         noGroups: "لا توجد جداول مجموعات.",
         noTeamsGroup: "لا توجد فرق محملة.",
@@ -723,6 +730,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "Nenhum jogo ao vivo agora.",
         fixturesResults: "Jogos e Resultados",
         noFixtures: "Nenhum jogo carregado.",
+        groupLabel: "Grupo",
         groupsAL: "Grupos A-L",
         noGroups: "Nenhuma classificação carregada.",
         noTeamsGroup: "Nenhuma equipa carregada.",
@@ -818,6 +826,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "現在ライブ試合はありません。",
         fixturesResults: "試合と結果",
         noFixtures: "試合はまだ読み込まれていません。",
+        groupLabel: "グループ",
         groupsAL: "グループ A-L",
         noGroups: "順位表はまだありません。",
         noTeamsGroup: "チームはまだありません。",
@@ -913,6 +922,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "현재 라이브 경기가 없습니다.",
         fixturesResults: "경기 및 결과",
         noFixtures: "경기가 아직 로드되지 않았습니다.",
+        groupLabel: "조",
         groupsAL: "A-L 조",
         noGroups: "조별 순위가 없습니다.",
         noTeamsGroup: "팀이 로드되지 않았습니다.",
@@ -1008,6 +1018,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "Inga matcher live just nu.",
         fixturesResults: "Matcher & Resultat",
         noFixtures: "Inga matcher laddade.",
+        groupLabel: "Grupp",
         groupsAL: "Grupper A-L",
         noGroups: "Inga gruppställningar laddade.",
         noTeamsGroup: "Inga lag laddade.",
@@ -1103,6 +1114,7 @@ class WorldCup2026Panel extends HTMLElement {
         noLiveMatches: "Ingen livekamper akkurat nå.",
         fixturesResults: "Kamper & Resultater",
         noFixtures: "Ingen kamper lastet.",
+        groupLabel: "Gruppe",
         groupsAL: "Grupper A-L",
         noGroups: "Ingen gruppetabeller lastet.",
         noTeamsGroup: "Ingen lag lastet.",
@@ -1300,6 +1312,38 @@ class WorldCup2026Panel extends HTMLElement {
     };
     return labels[stage] || String(stage || "").replaceAll("_", " ");
   }
+
+  groupNameLabel(groupName, index) {
+    const fallbackLetter = String.fromCharCode(65 + index);
+    const raw = String(groupName || "").trim();
+
+    let letter = fallbackLetter;
+
+    const groupCodeMatch = raw.match(/^GROUP[_\s-]?([A-Z])$/i);
+    const groupWordMatch = raw.match(/^Group\s+([A-Z])$/i);
+    const singleLetterMatch = raw.match(/^([A-Z])$/i);
+
+    if (groupCodeMatch) {
+      letter = groupCodeMatch[1].toUpperCase();
+    } else if (groupWordMatch) {
+      letter = groupWordMatch[1].toUpperCase();
+    } else if (singleLetterMatch) {
+      letter = singleLetterMatch[1].toUpperCase();
+    } else if (raw && !raw.includes("_")) {
+      return raw;
+    }
+
+    if (this._language === "ko") {
+      return `${letter}${this.t("groupLabel")}`;
+    }
+
+    if (this._language === "ja") {
+      return `${this.t("groupLabel")} ${letter}`;
+    }
+
+    return `${this.t("groupLabel")} ${letter}`;
+  }
+
 
   cleanTeamName(team) {
     return String(team || this.t("tbc"))
@@ -2230,11 +2274,13 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <div class="wc-groups-grid">
         ${groups.map((group, index) => {
-          const groupName =
+          const rawGroupName =
             group.group ||
             group.name ||
             group.stage ||
             `Group ${String.fromCharCode(65 + index)}`;
+
+          const groupName = this.groupNameLabel(rawGroupName, index);
 
           const table =
             group.table ||
@@ -2244,7 +2290,7 @@ class WorldCup2026Panel extends HTMLElement {
 
           return `
             <div class="wc-card wc-group-card">
-              <div class="wc-section-title">${this.esc(String(groupName).replace("GROUP_", "Group "))}</div>
+              <div class="wc-section-title">${this.esc(groupName)}</div>
 
               ${
                 table.length
