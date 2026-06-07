@@ -1859,6 +1859,128 @@ class WorldCup2026Panel extends HTMLElement {
           min-width: 48px;
         }
 
+
+
+        .wc-groups-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(292px, 1fr));
+          gap: 10px;
+          align-items: start;
+        }
+
+        .wc-group-card {
+          padding: 10px 10px 9px;
+          border-radius: 16px;
+          margin-bottom: 0;
+        }
+
+        .wc-group-card .wc-section-title {
+          font-size: 15px;
+          line-height: 1;
+          margin: 0 0 7px;
+        }
+
+        .wc-group-card .wc-table-wrap {
+          overflow-x: hidden;
+        }
+
+        .wc-group-card .wc-table {
+          min-width: 0;
+          width: 100%;
+          table-layout: fixed;
+          font-size: 9.5px;
+        }
+
+        .wc-group-card .wc-table th,
+        .wc-group-card .wc-table td {
+          padding: 3px 2px;
+          line-height: 1.15;
+          white-space: nowrap;
+        }
+
+        .wc-group-card .wc-table th:nth-child(1),
+        .wc-group-card .wc-table td:nth-child(1) {
+          width: 17px;
+          text-align: center;
+        }
+
+        .wc-group-card .wc-table th:nth-child(2),
+        .wc-group-card .wc-table td:nth-child(2) {
+          width: auto;
+        }
+
+        .wc-group-card .wc-table th:nth-child(n+3),
+        .wc-group-card .wc-table td:nth-child(n+3) {
+          width: 17px;
+          text-align: center;
+        }
+
+        .wc-group-card .wc-table th:nth-child(9),
+        .wc-group-card .wc-table td:nth-child(9),
+        .wc-group-card .wc-table th:nth-child(10),
+        .wc-group-card .wc-table td:nth-child(10) {
+          width: 20px;
+        }
+
+        .wc-group-card .wc-table th {
+          font-size: 8px;
+          letter-spacing: -0.2px;
+        }
+
+        .wc-group-card .group-team-cell {
+          gap: 4px;
+          min-width: 0;
+          overflow: hidden;
+        }
+
+        .wc-group-card .group-team-cell strong {
+          display: block;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          min-width: 0;
+          max-width: 118px;
+        }
+
+        .wc-group-card .group-flag-img,
+        .wc-group-card .group-flag-missing {
+          width: 17px;
+          height: 12px;
+          font-size: 10px;
+        }
+
+        @media (min-width: 1250px) {
+          .wc-groups-grid {
+            grid-template-columns: repeat(4, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 1249px) {
+          .wc-groups-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 900px) {
+          .wc-groups-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 620px) {
+          .wc-groups-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .wc-group-card .wc-table {
+            font-size: 10px;
+          }
+
+          .wc-group-card .group-team-cell strong {
+            max-width: none;
+          }
+        }
+
         .wc-venue-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -2075,74 +2197,78 @@ class WorldCup2026Panel extends HTMLElement {
       `;
     }
 
-    return groups.map((group, index) => {
-      const groupName =
-        group.group ||
-        group.name ||
-        group.stage ||
-        `Group ${String.fromCharCode(65 + index)}`;
+    return `
+      <div class="wc-groups-grid">
+        ${groups.map((group, index) => {
+          const groupName =
+            group.group ||
+            group.name ||
+            group.stage ||
+            `Group ${String.fromCharCode(65 + index)}`;
 
-      const table =
-        group.table ||
-        group.standings ||
-        group.teams ||
-        [];
+          const table =
+            group.table ||
+            group.standings ||
+            group.teams ||
+            [];
 
-      return `
-        <div class="wc-card">
-          <div class="wc-section-title">${this.esc(String(groupName).replace("GROUP_", "Group "))}</div>
+          return `
+            <div class="wc-card wc-group-card">
+              <div class="wc-section-title">${this.esc(String(groupName).replace("GROUP_", "Group "))}</div>
 
-          ${
-            table.length
-              ? `
-            <div class="wc-table-wrap">
-              <table class="wc-table">
-                <thead>
-                  <tr>
-                    <th>${this.t("pos")}</th>
-                    <th>${this.t("team")}</th>
-                    <th>P</th>
-                    <th>W</th>
-                    <th>D</th>
-                    <th>L</th>
-                    <th>GF</th>
-                    <th>GA</th>
-                    <th>GD</th>
-                    <th>Pts</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  ${table.map((team, i) => {
-                    const teamName = team.team?.name || team.team?.shortName || team.name || team.team || "";
-                    return `
+              ${
+                table.length
+                  ? `
+                <div class="wc-table-wrap">
+                  <table class="wc-table">
+                    <thead>
                       <tr>
-                        <td>${team.position ?? i + 1}</td>
-                        <td>
-                          <div class="group-team-cell">
-                            ${this.flag(teamName, true)}
-                            <strong>${this.esc(this.teamLabel(teamName))}</strong>
-                          </div>
-                        </td>
-                        <td>${team.playedGames ?? team.played ?? team.p ?? 0}</td>
-                        <td>${team.won ?? team.wins ?? team.w ?? 0}</td>
-                        <td>${team.draw ?? team.draws ?? team.d ?? 0}</td>
-                        <td>${team.lost ?? team.losses ?? team.l ?? 0}</td>
-                        <td>${team.goalsFor ?? team.gf ?? 0}</td>
-                        <td>${team.goalsAgainst ?? team.ga ?? 0}</td>
-                        <td>${team.goalDifference ?? team.gd ?? 0}</td>
-                        <td><strong>${team.points ?? team.pts ?? 0}</strong></td>
+                        <th>${this.t("pos")}</th>
+                        <th>${this.t("team")}</th>
+                        <th>P</th>
+                        <th>W</th>
+                        <th>D</th>
+                        <th>L</th>
+                        <th>GF</th>
+                        <th>GA</th>
+                        <th>GD</th>
+                        <th>Pts</th>
                       </tr>
-                    `;
-                  }).join("")}
-                </tbody>
-              </table>
+                    </thead>
+                    <tbody>
+                      ${table.map((team, i) => {
+                        const teamName = team.team?.name || team.team?.shortName || team.name || team.team || "";
+                        return `
+                          <tr>
+                            <td>${team.position ?? i + 1}</td>
+                            <td>
+                              <div class="group-team-cell">
+                                ${this.flag(teamName, true)}
+                                <strong>${this.esc(this.teamLabel(teamName))}</strong>
+                              </div>
+                            </td>
+                            <td>${team.playedGames ?? team.played ?? team.p ?? 0}</td>
+                            <td>${team.won ?? team.wins ?? team.w ?? 0}</td>
+                            <td>${team.draw ?? team.draws ?? team.d ?? 0}</td>
+                            <td>${team.lost ?? team.losses ?? team.l ?? 0}</td>
+                            <td>${team.goalsFor ?? team.gf ?? 0}</td>
+                            <td>${team.goalsAgainst ?? team.ga ?? 0}</td>
+                            <td>${team.goalDifference ?? team.gd ?? 0}</td>
+                            <td><strong>${team.points ?? team.pts ?? 0}</strong></td>
+                          </tr>
+                        `;
+                      }).join("")}
+                    </tbody>
+                  </table>
+                </div>
+              `
+                  : `<div class="wc-empty">${this.t("noTeamsGroup")}</div>`
+              }
             </div>
-          `
-              : `<div class="wc-empty">${this.t("noTeamsGroup")}</div>`
-          }
-        </div>
-      `;
-    }).join("");
+          `;
+        }).join("")}
+      </div>
+    `;
   }
 
   playersPage() {
