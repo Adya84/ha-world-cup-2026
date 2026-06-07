@@ -2021,6 +2021,335 @@ class WorldCup2026Panel extends HTMLElement {
           flex: 0 0 auto;
         }
 
+
+
+        .fixtures-page-card {
+          padding: 20px;
+          overflow: hidden;
+          background:
+            linear-gradient(135deg, rgba(10,30,58,0.72), rgba(255,255,255,0.075)),
+            rgba(255,255,255,0.08);
+        }
+
+        .fixtures-hero {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto;
+          gap: 18px;
+          align-items: stretch;
+          margin-bottom: 16px;
+        }
+
+        .fixtures-title-wrap {
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+        }
+
+        .fixtures-title-row {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          flex-wrap: wrap;
+        }
+
+        .fixtures-subtitle {
+          opacity: 0.78;
+          font-size: 13px;
+          margin-top: 2px;
+          line-height: 1.35;
+        }
+
+        .fixtures-summary-grid {
+          display: grid;
+          grid-template-columns: repeat(5, minmax(82px, 1fr));
+          gap: 10px;
+          min-width: 430px;
+        }
+
+        .fixtures-summary-box {
+          position: relative;
+          overflow: hidden;
+          background: linear-gradient(135deg, rgba(45,190,255,0.18), rgba(255,255,255,0.065));
+          border: 1px solid rgba(255,255,255,0.16);
+          border-radius: 18px;
+          padding: 13px 12px;
+          text-align: center;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 12px 28px rgba(0,0,0,0.14);
+        }
+
+        .fixtures-summary-box::after {
+          content: "";
+          position: absolute;
+          inset: auto -20px -26px auto;
+          width: 62px;
+          height: 62px;
+          border-radius: 999px;
+          background: rgba(45,190,255,0.13);
+        }
+
+        .fixtures-summary-box strong {
+          display: block;
+          font-size: 27px;
+          line-height: 1;
+          position: relative;
+          z-index: 1;
+        }
+
+        .fixtures-summary-box span {
+          display: block;
+          margin-top: 6px;
+          font-size: 10px;
+          opacity: 0.78;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          position: relative;
+          z-index: 1;
+        }
+
+        .fixtures-next-strip {
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr) auto;
+          align-items: center;
+          gap: 10px 14px;
+          margin-bottom: 16px;
+          padding: 13px 15px;
+          border-radius: 18px;
+          background: linear-gradient(135deg, rgba(45,190,255,0.24), rgba(20,70,130,0.20));
+          border: 1px solid rgba(120,220,255,0.34);
+          box-shadow: 0 14px 34px rgba(0,0,0,0.16);
+        }
+
+        .fixtures-next-strip span {
+          opacity: 0.82;
+          font-size: 11px;
+          font-weight: 950;
+          text-transform: uppercase;
+          letter-spacing: 0.7px;
+          white-space: nowrap;
+        }
+
+        .fixtures-next-strip strong {
+          font-size: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .fixtures-next-strip em {
+          opacity: 0.82;
+          font-style: normal;
+          font-size: 13px;
+          font-weight: 800;
+          white-space: nowrap;
+        }
+
+        .fixtures-days {
+          display: grid;
+          gap: 16px;
+        }
+
+        .fixtures-day-block {
+          background: rgba(0,0,0,0.16);
+          border: 1px solid rgba(255,255,255,0.11);
+          border-radius: 22px;
+          padding: 14px;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.05);
+        }
+
+        .fixtures-day-heading {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 12px;
+          margin-bottom: 12px;
+          padding: 0 3px;
+        }
+
+        .fixtures-day-heading span {
+          font-size: 17px;
+          font-weight: 950;
+        }
+
+        .fixtures-day-heading small {
+          opacity: 0.76;
+          font-weight: 900;
+          white-space: nowrap;
+          background: rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.11);
+          border-radius: 999px;
+          padding: 5px 9px;
+        }
+
+        .fixtures-card-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+          gap: 12px;
+        }
+
+        .fixture-card {
+          position: relative;
+          overflow: hidden;
+          background: linear-gradient(135deg, rgba(255,255,255,0.11), rgba(255,255,255,0.055));
+          border: 1px solid rgba(255,255,255,0.14);
+          border-radius: 20px;
+          padding: 13px;
+          box-shadow: 0 14px 32px rgba(0,0,0,0.18);
+        }
+
+        .fixture-card::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          background: radial-gradient(circle at top center, rgba(45,190,255,0.15), transparent 46%);
+          opacity: 0.75;
+        }
+
+        .fixture-card.is-live {
+          background: linear-gradient(135deg, rgba(255,48,48,0.23), rgba(255,255,255,0.055));
+          border-color: rgba(255,95,95,0.50);
+        }
+
+        .fixture-card.is-finished {
+          background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(0,0,0,0.10));
+        }
+
+        .fixture-card-top,
+        .fixture-card-footer,
+        .fixture-card-main {
+          position: relative;
+          z-index: 1;
+        }
+
+        .fixture-card-top,
+        .fixture-card-footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          color: rgba(255,255,255,0.76);
+          font-size: 11px;
+          font-weight: 850;
+        }
+
+        .fixture-card-top span,
+        .fixture-card-footer span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          min-width: 0;
+        }
+
+        .fixture-card-status {
+          color: white;
+          background: rgba(255,255,255,0.13);
+          border: 1px solid rgba(255,255,255,0.13);
+          border-radius: 999px;
+          padding: 5px 9px;
+          font-size: 10px;
+          font-weight: 950;
+          white-space: nowrap;
+          text-transform: uppercase;
+          letter-spacing: 0.25px;
+        }
+
+        .fixture-card.is-live .fixture-card-status {
+          background: rgba(255,40,40,0.34);
+          border-color: rgba(255,120,120,0.55);
+        }
+
+        .fixture-card.is-scheduled .fixture-card-status {
+          background: rgba(45,190,255,0.20);
+          border-color: rgba(120,220,255,0.38);
+        }
+
+        .fixture-stage-pill {
+          display: inline-flex;
+          align-items: center;
+          max-width: 70%;
+          background: rgba(0,0,0,0.18);
+          border: 1px solid rgba(255,255,255,0.10);
+          border-radius: 999px;
+          padding: 5px 9px;
+        }
+
+        .fixture-card-number {
+          position: absolute;
+          right: 12px;
+          bottom: 10px;
+          z-index: 0;
+          font-size: 40px;
+          font-weight: 950;
+          opacity: 0.055;
+          pointer-events: none;
+        }
+
+        .fixture-card-main {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+          align-items: center;
+          gap: 12px;
+          padding: 14px 0 12px;
+        }
+
+        .fixture-card-team {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          min-width: 0;
+          font-weight: 950;
+          font-size: 15px;
+          line-height: 1.1;
+        }
+
+        .fixture-card-team span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .fixture-card-team-away {
+          justify-content: flex-end;
+          text-align: right;
+        }
+
+        .fixture-card-team-away img,
+        .fixture-card-team-away .group-flag-missing {
+          order: 2;
+        }
+
+        .fixture-card .group-flag-img,
+        .fixture-card .group-flag-missing {
+          width: 46px;
+          height: 31px;
+          border-radius: 6px;
+          font-size: 18px;
+          box-shadow: 0 6px 14px rgba(0,0,0,0.32);
+        }
+
+        .fixture-card-score {
+          min-width: 76px;
+          text-align: center;
+          font-size: 24px;
+          font-weight: 950;
+          padding: 9px 12px;
+          border-radius: 16px;
+          background: rgba(0,0,0,0.28);
+          border: 1px solid rgba(255,255,255,0.14);
+          box-shadow: inset 0 0 22px rgba(255,255,255,0.045), 0 8px 18px rgba(0,0,0,0.16);
+        }
+
+        .fixture-card-footer {
+          border-top: 1px solid rgba(255,255,255,0.09);
+          padding-top: 10px;
+        }
+
+        .fixture-card-footer span:last-child:empty {
+          display: none;
+        }
+
         @media (max-width: 1200px) {
           .wc-groups-grid {
             grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -2107,6 +2436,41 @@ class WorldCup2026Panel extends HTMLElement {
           .wc-score {
             font-size: 18px;
           }
+
+          .fixtures-hero {
+            display: block;
+          }
+
+          .fixtures-summary-grid {
+            min-width: 0;
+            margin-top: 12px;
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .fixtures-card-grid {
+            grid-template-columns: 1fr;
+          }
+
+          .fixture-card-main {
+            gap: 7px;
+          }
+
+          .fixture-card-team {
+            font-size: 12px;
+          }
+
+          .fixture-card .group-flag-img,
+          .fixture-card .group-flag-missing {
+            width: 31px;
+            height: 22px;
+          }
+
+          .fixture-card-score {
+            min-width: 54px;
+            font-size: 18px;
+            padding: 7px 8px;
+          }
+
         }
       </style>
     `;
@@ -2216,14 +2580,202 @@ class WorldCup2026Panel extends HTMLElement {
   fixturesPage() {
     const fixtures = this._data.fixtures || [];
 
-    return `
-      <div class="wc-card">
-        <div class="wc-section-title">${this.t("fixturesResults")}</div>
-        ${fixtures.length ? `
-          <div class="wc-list">
-            ${fixtures.map(m => this.matchRow(m)).join("")}
+    if (!fixtures.length) {
+      return `
+        <div class="wc-card fixtures-page-card">
+          <div class="fixtures-hero">
+            <div>
+              <div class="wc-section-title">${this.t("fixturesResults")}</div>
+              <div class="fixtures-subtitle">${this.t("noFixtures")}</div>
+            </div>
           </div>
-        ` : `<div class="wc-empty">${this.t("noFixtures")}</div>`}
+        </div>
+      `;
+    }
+
+    const sortedFixtures = [...fixtures].sort((a, b) => {
+      const aTime = new Date(a.utcDate || a.date || 0).getTime();
+      const bTime = new Date(b.utcDate || b.date || 0).getTime();
+      return aTime - bTime;
+    });
+
+    const playedCount = sortedFixtures.filter(m => ["FINISHED", "FT", "AET", "PEN"].includes(m.status)).length;
+    const liveCount = sortedFixtures.filter(m => ["IN_PLAY", "LIVE", "PAUSED"].includes(m.status)).length;
+    const remainingCount = Math.max(sortedFixtures.length - playedCount, 0);
+    const nextMatch = sortedFixtures.find(m => ["TIMED", "SCHEDULED"].includes(m.status));
+    const dayCount = new Set(sortedFixtures.map(m => this.fixtureDateKey(m))).size;
+
+    const grouped = sortedFixtures.reduce((days, match) => {
+      const key = this.fixtureDateKey(match);
+      if (!days[key]) {
+        days[key] = [];
+      }
+      days[key].push(match);
+      return days;
+    }, {});
+
+    return `
+      <div class="fixtures-page-card wc-card">
+        <div class="fixtures-hero">
+          <div class="fixtures-title-wrap">
+            <div class="fixtures-title-row">
+              <div class="wc-section-title">${this.t("fixturesResults")}</div>
+              ${liveCount ? `<span class="wc-badge wc-live">${liveCount} ${this.t("liveStatus")}</span>` : ""}
+            </div>
+            <div class="fixtures-subtitle">A cleaner World Cup match centre with match-day sections, bold score cards, flags, venue details and clearer live/result badges.</div>
+          </div>
+          <div class="fixtures-summary-grid">
+            <div class="fixtures-summary-box"><strong>${sortedFixtures.length}</strong><span>${this.t("loaded")}</span></div>
+            <div class="fixtures-summary-box"><strong>${playedCount}</strong><span>${this.t("played")}</span></div>
+            <div class="fixtures-summary-box"><strong>${remainingCount}</strong><span>${this.t("remaining")}</span></div>
+            <div class="fixtures-summary-box"><strong>${liveCount}</strong><span>${this.t("liveNow")}</span></div>
+            <div class="fixtures-summary-box"><strong>${dayCount}</strong><span>Days</span></div>
+          </div>
+        </div>
+
+        ${nextMatch ? `
+          <div class="fixtures-next-strip">
+            <span>${this.t("nextMatch")}</span>
+            <strong>${this.esc(this.teamLabel(this.getHomeTeam(nextMatch)))} v ${this.esc(this.teamLabel(this.getAwayTeam(nextMatch)))}</strong>
+            <em>${this.esc(this.formatDate(nextMatch.utcDate || nextMatch.date))}</em>
+          </div>
+        ` : ""}
+
+        <div class="fixtures-days">
+          ${Object.entries(grouped).map(([key, matches]) => `
+            <div class="fixtures-day-block">
+              <div class="fixtures-day-heading">
+                <span>${this.esc(this.fixtureDayTitle(matches[0]))}</span>
+                <small>${matches.length} ${this.t("fixtures")}</small>
+              </div>
+              <div class="fixtures-card-grid">
+                ${matches.map(m => this.fixtureCard(m)).join("")}
+              </div>
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  fixtureDateKey(match) {
+    const value = match.utcDate || match.date;
+    if (!value) return "unknown";
+
+    try {
+      return new Date(value).toISOString().slice(0, 10);
+    } catch {
+      return String(value).slice(0, 10) || "unknown";
+    }
+  }
+
+  fixtureDayTitle(match) {
+    const value = match.utcDate || match.date;
+
+    if (!value) {
+      return this.t("unknown");
+    }
+
+    try {
+      const locales = {
+        en: "en-GB",
+        fr: "fr-FR",
+        de: "de-DE",
+        es: "es-ES",
+        it: "it-IT",
+        nl: "nl-NL",
+        ar: "ar-SA",
+        pt: "pt-PT",
+        ja: "ja-JP",
+        ko: "ko-KR",
+        sv: "sv-SE",
+        no: "nb-NO",
+      };
+
+      return new Date(value).toLocaleDateString(locales[this._language] || "en-GB", {
+        weekday: "long",
+        day: "2-digit",
+        month: "long",
+        year: "numeric",
+      });
+    } catch {
+      return value;
+    }
+  }
+
+  fixtureTime(match) {
+    const value = match.utcDate || match.date;
+
+    if (!value) {
+      return this.t("tbc");
+    }
+
+    try {
+      const locales = {
+        en: "en-GB",
+        fr: "fr-FR",
+        de: "de-DE",
+        es: "es-ES",
+        it: "it-IT",
+        nl: "nl-NL",
+        ar: "ar-SA",
+        pt: "pt-PT",
+        ja: "ja-JP",
+        ko: "ko-KR",
+        sv: "sv-SE",
+        no: "nb-NO",
+      };
+
+      return new Date(value).toLocaleTimeString(locales[this._language] || "en-GB", {
+        hour: "2-digit",
+        minute: "2-digit",
+      });
+    } catch {
+      return value;
+    }
+  }
+
+  fixtureCard(m) {
+    const homeTeam = this.getHomeTeam(m);
+    const awayTeam = this.getAwayTeam(m);
+    const homeScore = this.getHomeScore(m);
+    const awayScore = this.getAwayScore(m);
+    const status = this.statusLabel(m.status);
+    const stage = m.group || this.stageLabel(m.stage) || "";
+    const scoreText = homeScore === "-" && awayScore === "-" ? "v" : `${homeScore} - ${awayScore}`;
+    const liveClass = ["IN_PLAY", "LIVE", "PAUSED"].includes(m.status) ? " is-live" : "";
+    const finishedClass = ["FINISHED", "FT", "AET", "PEN"].includes(m.status) ? " is-finished" : "";
+    const scheduledClass = ["TIMED", "SCHEDULED"].includes(m.status) ? " is-scheduled" : "";
+    const venue = m.venue || m.stadium || m.location || "";
+    const matchNumber = m.matchday || m.matchNumber || m.number || m.id || "";
+
+    return `
+      <div class="fixture-card${liveClass}${finishedClass}${scheduledClass}">
+        <div class="fixture-card-top">
+          <span class="fixture-stage-pill">${this.esc(stage || this.t("fixtures"))}</span>
+          <strong class="fixture-card-status">${this.esc(status)}</strong>
+        </div>
+
+        <div class="fixture-card-main">
+          <div class="fixture-card-team fixture-card-team-home">
+            ${this.flag(homeTeam, true)}
+            <span>${this.esc(this.teamLabel(homeTeam))}</span>
+          </div>
+
+          <div class="fixture-card-score">${this.esc(scoreText)}</div>
+
+          <div class="fixture-card-team fixture-card-team-away">
+            ${this.flag(awayTeam, true)}
+            <span>${this.esc(this.teamLabel(awayTeam))}</span>
+          </div>
+        </div>
+
+        <div class="fixture-card-footer">
+          <span>⏱ ${this.esc(this.fixtureTime(m))}</span>
+          ${venue ? `<span>🏟 ${this.esc(venue)}</span>` : `<span></span>`}
+        </div>
+
+        ${matchNumber ? `<div class="fixture-card-number">#${this.esc(matchNumber)}</div>` : ""}
       </div>
     `;
   }
