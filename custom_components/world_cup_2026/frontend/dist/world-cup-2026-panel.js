@@ -125,6 +125,185 @@ class WorldCup2026Panel extends HTMLElement {
     return labels[stage] || String(stage || "").replaceAll("_", " ");
   }
 
+  cleanTeamName(team) {
+    return String(team || "TBC")
+      .replace(/[\u{1F1E6}-\u{1F1FF}]/gu, "")
+      .replace(/[🏴🏳️]/gu, "")
+      .replace(/\s+/g, " ")
+      .trim();
+  }
+
+  teamLabel(team) {
+    const name = this.cleanTeamName(team);
+
+    const fixes = {
+      "USA": "United States",
+      "US": "United States",
+      "South Korea": "Korea Republic",
+      "Türkiye": "Turkey",
+      "Bosnia & Herz": "Bosnia and Herzegovina",
+      "Bosnia-Herzegovina": "Bosnia and Herzegovina",
+      "Ivory Coast": "Côte d'Ivoire",
+      "Curacao": "Curaçao",
+      "Uraguay": "Uruguay",
+      "DR Congo": "Democratic Republic of Congo",
+      "Congo DR": "Democratic Republic of Congo",
+      "UAE": "United Arab Emirates",
+      "Republic of Ireland": "Ireland",
+      "Cabo Verde": "Cape Verde",
+      "Cape Verde Islands": "Cape Verde",
+    };
+
+    return fixes[name] || name || "TBC";
+  }
+
+  countryCode(team) {
+    const name = this.teamLabel(team).toLowerCase();
+
+    const codes = {
+      "argentina": "ar",
+      "australia": "au",
+      "austria": "at",
+      "belgium": "be",
+      "bosnia and herzegovina": "ba",
+      "brazil": "br",
+      "canada": "ca",
+      "colombia": "co",
+      "costa rica": "cr",
+      "croatia": "hr",
+      "curaçao": "cw",
+      "curacao": "cw",
+      "czechia": "cz",
+      "czech republic": "cz",
+      "denmark": "dk",
+      "ecuador": "ec",
+      "egypt": "eg",
+      "england": "gb-eng",
+      "france": "fr",
+      "germany": "de",
+      "ghana": "gh",
+      "haiti": "ht",
+      "honduras": "hn",
+      "iran": "ir",
+      "italy": "it",
+      "ivory coast": "ci",
+      "côte d'ivoire": "ci",
+      "jamaica": "jm",
+      "japan": "jp",
+      "korea republic": "kr",
+      "south korea": "kr",
+      "mexico": "mx",
+      "morocco": "ma",
+      "netherlands": "nl",
+      "new zealand": "nz",
+      "nigeria": "ng",
+      "norway": "no",
+      "panama": "pa",
+      "paraguay": "py",
+      "poland": "pl",
+      "portugal": "pt",
+      "qatar": "qa",
+      "saudi arabia": "sa",
+      "scotland": "gb-sct",
+      "senegal": "sn",
+      "serbia": "rs",
+      "south africa": "za",
+      "spain": "es",
+      "sweden": "se",
+      "switzerland": "ch",
+      "tunisia": "tn",
+      "turkey": "tr",
+      "ukraine": "ua",
+      "uruguay": "uy",
+      "united states": "us",
+      "usa": "us",
+      "wales": "gb-wls",
+      "algeria": "dz",
+      "cape verde": "cv",
+      "dr congo": "cd",
+      "congo dr": "cd",
+      "democratic republic of congo": "cd",
+      "cameroon": "cm",
+      "mali": "ml",
+      "burkina faso": "bf",
+      "uzbekistan": "uz",
+      "jordan": "jo",
+      "iraq": "iq",
+      "united arab emirates": "ae",
+      "uae": "ae",
+      "oman": "om",
+      "china": "cn",
+      "bolivia": "bo",
+      "venezuela": "ve",
+      "peru": "pe",
+      "chile": "cl",
+      "el salvador": "sv",
+      "trinidad and tobago": "tt",
+      "guatemala": "gt",
+      "republic of ireland": "ie",
+     "ireland": "ie",
+     "romania": "ro",
+     "slovakia": "sk",
+     "slovenia": "si",
+     "albania": "al",
+     "greece": "gr",
+     "georgia": "ge",
+     "hungary": "hu",
+     "cape verde": "cv",
+     "cabo verde": "cv",
+     "cape verde islands": "cv",
+    };
+
+    return codes[name] || "";
+  }
+
+  flag(team, small = false) {
+    const name = this.teamLabel(team);
+    const code = this.countryCode(name);
+
+    if (!code || name === "TBC") {
+      return small
+        ? `<span class="group-flag-missing">🏳️</span>`
+        : `<div class="big-flag missing-flag">🏳️</div>`;
+    }
+
+    return `
+      <img
+        class="${small ? "group-flag-img" : "big-flag-img"}"
+        src="https://flagcdn.com/w160/${code}.png"
+        alt="${this.esc(name)} flag"
+        loading="lazy"
+      />
+    `;
+  }
+
+  teamFlagBlock(team) {
+    const name = this.teamLabel(team);
+
+    return `
+      <div class="team-flag-block">
+        ${this.flag(name)}
+        <div class="team-flag-name">${this.esc(name)}</div>
+      </div>
+    `;
+  }
+
+  getHomeTeam(m) {
+    return m.homeTeam || m.home || m.team1 || m.home_team || "TBC";
+  }
+
+  getAwayTeam(m) {
+    return m.awayTeam || m.away || m.team2 || m.away_team || "TBC";
+  }
+
+  getHomeScore(m) {
+    return m.homeScore ?? m.home_score ?? m.score?.fullTime?.home ?? m.score?.home ?? "-";
+  }
+
+  getAwayScore(m) {
+    return m.awayScore ?? m.away_score ?? m.score?.fullTime?.away ?? m.score?.away ?? "-";
+  }
+
   renderLoading() {
     this.innerHTML = `
       ${this.styles()}
@@ -155,25 +334,22 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <style>
         .wc-app {
-  min-height: 100vh;
-
-  background:
-    linear-gradient(
-      rgba(6,16,31,0.55),
-      rgba(16,42,63,0.70)
-    ),
-    url("/world_cup_2026_static/worldcup.png");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-
-  color: white;
-  font-family: Arial, sans-serif;
-  padding: 22px;
-  box-sizing: border-box;
-}
+          min-height: 100vh;
+          background:
+            linear-gradient(
+              rgba(6,16,31,0.55),
+              rgba(16,42,63,0.70)
+            ),
+            url("/world_cup_2026_frontend/worldcup.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+          color: white;
+          font-family: Arial, sans-serif;
+          padding: 22px;
+          box-sizing: border-box;
+        }
 
         .wc-shell {
           max-width: 1320px;
@@ -205,6 +381,14 @@ class WorldCup2026Panel extends HTMLElement {
           padding: 9px 13px;
           font-size: 13px;
           white-space: nowrap;
+        }
+
+        .wc-home-button {
+          cursor: pointer;
+          background: rgba(255,255,255,0.10);
+          color: white;
+          border: 1px solid rgba(255,255,255,0.20);
+          font-weight: 700;
         }
 
         .wc-live {
@@ -273,29 +457,94 @@ class WorldCup2026Panel extends HTMLElement {
 
         .wc-list {
           display: grid;
-          gap: 10px;
+          gap: 14px;
         }
 
         .wc-row {
+          background: rgba(255,255,255,0.07);
+          border: 1px solid rgba(255,255,255,0.10);
+          border-radius: 14px;
+          padding: 8px;
+        }
+
+        .fixture-teams-big {
           display: grid;
           grid-template-columns: 1fr auto 1fr;
-          gap: 12px;
           align-items: center;
-          background: rgba(255,255,255,0.07);
-          border-radius: 14px;
-          padding: 12px;
+          gap: 18px;
+          width: 100%;
+        }
+
+        .team-flag-block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 8px;
+          text-align: center;
+          min-width: 0;
+        }
+
+        .big-flag-img {
+          width: 96px;
+          height: 64px;
+          object-fit: cover;
+          border-radius: 9px;
+          box-shadow: 0 0 14px rgba(0,0,0,0.50);
+          background: rgba(255,255,255,0.15);
+          border: 1px solid rgba(255,255,255,0.25);
+        }
+
+        .big-flag,
+        .missing-flag {
+          width: 96px;
+          height: 64px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 42px;
+          border-radius: 9px;
+          background: rgba(255,255,255,0.12);
+          border: 1px solid rgba(255,255,255,0.20);
+        }
+
+        .team-flag-name {
+          font-size: 12px;
+          font-weight: 900;
+          color: #fff;
+          text-shadow: 0 2px 7px rgba(0,0,0,0.85);
+          line-height: 1.15;
+          word-break: normal;
+        }
+
+        .fixture-middle {
+          text-align: center;
+          color: #fff;
+          min-width: 72px;
         }
 
         .wc-score {
-          font-size: 22px;
+          font-size: 18px;
           font-weight: 900;
           text-align: center;
+          margin-bottom: 4px;
+        }
+
+        .fixture-vs {
+          font-size: 22px;
+          font-weight: 900;
+          margin-bottom: 4px;
         }
 
         .wc-muted {
-          opacity: 0.7;
+          opacity: 0.72;
           font-size: 13px;
           margin-top: 3px;
+        }
+
+        .fixture-meta {
+          text-align: center;
+          margin-top: 12px;
         }
 
         .wc-table-wrap {
@@ -321,6 +570,35 @@ class WorldCup2026Panel extends HTMLElement {
           text-transform: uppercase;
         }
 
+        .group-team-cell {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          white-space: nowrap;
+        }
+
+        .group-flag-img {
+          width: 26px;
+          height: 18px;
+          object-fit: cover;
+          border-radius: 3px;
+          box-shadow: 0 0 5px rgba(0,0,0,0.45);
+          border: 1px solid rgba(255,255,255,0.22);
+          flex: 0 0 auto;
+        }
+
+        .group-flag-missing {
+          width: 26px;
+          height: 18px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 14px;
+          border-radius: 3px;
+          background: rgba(255,255,255,0.10);
+          flex: 0 0 auto;
+        }
+
         .wc-empty {
           opacity: 0.72;
           padding: 18px;
@@ -336,7 +614,7 @@ class WorldCup2026Panel extends HTMLElement {
 
         .wc-bracket {
           display: grid;
-          grid-template-columns: repeat(6, minmax(180px, 1fr));
+          grid-template-columns: repeat(6, minmax(220px, 1fr));
           gap: 14px;
           overflow-x: auto;
         }
@@ -354,6 +632,26 @@ class WorldCup2026Panel extends HTMLElement {
           margin-bottom: 10px;
         }
 
+        .wc-bracket-match .big-flag-img,
+        .wc-bracket-match .big-flag,
+        .wc-bracket-match .missing-flag {
+          width: 58px;
+          height: 38px;
+          font-size: 25px;
+        }
+
+        .wc-bracket-match .team-flag-name {
+          font-size: 12px;
+        }
+
+        .wc-bracket-match .fixture-teams-big {
+          gap: 8px;
+        }
+
+        .wc-bracket-match .fixture-middle {
+          min-width: 48px;
+        }
+
         .wc-venue-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
@@ -361,12 +659,50 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         @media (max-width: 800px) {
-          .wc-app { padding: 14px; }
-          .wc-header { display: block; }
-          .wc-title { font-size: 28px; }
-          .wc-pill { display: inline-block; margin-top: 12px; }
-          .wc-row { grid-template-columns: 1fr; text-align: center; }
-          .wc-two { grid-template-columns: 1fr; }
+          .wc-app {
+            padding: 14px;
+          }
+
+          .wc-header {
+            display: block;
+          }
+
+          .wc-title {
+            font-size: 28px;
+          }
+
+          .wc-pill {
+            display: inline-block;
+            margin-top: 12px;
+          }
+
+          .wc-two {
+            grid-template-columns: 1fr;
+          }
+
+          .fixture-teams-big {
+            grid-template-columns: 1fr auto 1fr;
+            gap: 10px;
+          }
+
+          .big-flag-img,
+          .big-flag,
+          .missing-flag {
+            width: 74px;
+            height: 50px;
+          }
+
+          .team-flag-name {
+            font-size: 12px;
+          }
+
+          .fixture-middle {
+            min-width: 54px;
+          }
+
+          .wc-score {
+            font-size: 18px;
+          }
         }
       </style>
     `;
@@ -433,7 +769,12 @@ class WorldCup2026Panel extends HTMLElement {
     const live = this._data.live || [];
 
     if (!live.length) {
-      return `<div class="wc-card"><div class="wc-section-title">Live Centre</div><div class="wc-empty">No matches live right now.</div></div>`;
+      return `
+        <div class="wc-card">
+          <div class="wc-section-title">Live Centre</div>
+          <div class="wc-empty">No matches live right now.</div>
+        </div>
+      `;
     }
 
     return `
@@ -462,22 +803,31 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   matchRow(m) {
-    const homeScore = m.homeScore ?? "-";
-    const awayScore = m.awayScore ?? "-";
+    const homeTeam = this.getHomeTeam(m);
+    const awayTeam = this.getAwayTeam(m);
+    const homeScore = this.getHomeScore(m);
+    const awayScore = this.getAwayScore(m);
+    const status = this.statusLabel(m.status);
+    const stage = m.group || this.stageLabel(m.stage) || "";
+    const date = this.formatDate(m.utcDate || m.date);
 
     return `
       <div class="wc-row">
-        <div>
-          <strong>${this.esc(m.homeTeam || "TBC")}</strong>
-          <div class="wc-muted">${this.esc(m.group || this.stageLabel(m.stage) || "")}</div>
+        <div class="fixture-teams-big">
+          ${this.teamFlagBlock(homeTeam)}
+
+          <div class="fixture-middle">
+            <div class="wc-score">${homeScore} - ${awayScore}</div>
+            <div class="fixture-vs">v</div>
+          </div>
+
+          ${this.teamFlagBlock(awayTeam)}
         </div>
-        <div>
-          <div class="wc-score">${homeScore} - ${awayScore}</div>
-          <div class="wc-muted">${this.esc(this.formatDate(m.utcDate))}</div>
-        </div>
-        <div>
-          <strong>${this.esc(m.awayTeam || "TBC")}</strong>
-          <div class="wc-muted">${this.esc(this.statusLabel(m.status))}</div>
+
+        <div class="fixture-meta">
+          <div class="wc-muted">${this.esc(stage)}</div>
+          <div class="wc-muted">${this.esc(date)}</div>
+          <div class="wc-muted">${this.esc(status)}</div>
         </div>
       </div>
     `;
@@ -532,20 +882,28 @@ class WorldCup2026Panel extends HTMLElement {
                   </tr>
                 </thead>
                 <tbody>
-                  ${table.map((team, i) => `
-                    <tr>
-                      <td>${team.position ?? i + 1}</td>
-                      <td><strong>${this.esc(team.team?.name || team.team?.shortName || team.name || team.team || "")}</strong></td>
-                      <td>${team.playedGames ?? team.played ?? team.p ?? 0}</td>
-                      <td>${team.won ?? team.wins ?? team.w ?? 0}</td>
-                      <td>${team.draw ?? team.draws ?? team.d ?? 0}</td>
-                      <td>${team.lost ?? team.losses ?? team.l ?? 0}</td>
-                      <td>${team.goalsFor ?? team.gf ?? 0}</td>
-                      <td>${team.goalsAgainst ?? team.ga ?? 0}</td>
-                      <td>${team.goalDifference ?? team.gd ?? 0}</td>
-                      <td><strong>${team.points ?? team.pts ?? 0}</strong></td>
-                    </tr>
-                  `).join("")}
+                  ${table.map((team, i) => {
+                    const teamName = team.team?.name || team.team?.shortName || team.name || team.team || "";
+                    return `
+                      <tr>
+                        <td>${team.position ?? i + 1}</td>
+                        <td>
+                          <div class="group-team-cell">
+                            ${this.flag(teamName, true)}
+                            <strong>${this.esc(this.teamLabel(teamName))}</strong>
+                          </div>
+                        </td>
+                        <td>${team.playedGames ?? team.played ?? team.p ?? 0}</td>
+                        <td>${team.won ?? team.wins ?? team.w ?? 0}</td>
+                        <td>${team.draw ?? team.draws ?? team.d ?? 0}</td>
+                        <td>${team.lost ?? team.losses ?? team.l ?? 0}</td>
+                        <td>${team.goalsFor ?? team.gf ?? 0}</td>
+                        <td>${team.goalsAgainst ?? team.ga ?? 0}</td>
+                        <td>${team.goalDifference ?? team.gd ?? 0}</td>
+                        <td><strong>${team.points ?? team.pts ?? 0}</strong></td>
+                      </tr>
+                    `;
+                  }).join("")}
                 </tbody>
               </table>
             </div>
@@ -580,7 +938,7 @@ class WorldCup2026Panel extends HTMLElement {
                   <tr>
                     <td>${i + 1}</td>
                     <td><strong>${this.esc(s.player?.name || s.name || "Unknown")}</strong></td>
-                    <td>${this.esc(s.team?.name || s.team || "")}</td>
+                    <td>${this.esc(this.teamLabel(s.team?.name || s.team || ""))}</td>
                     <td><strong>${s.goals ?? 0}</strong></td>
                     <td>${s.assists ?? 0}</td>
                   </tr>
@@ -617,10 +975,10 @@ class WorldCup2026Panel extends HTMLElement {
                   matches.length
                     ? matches.map(m => `
                       <div class="wc-bracket-match">
-                        <strong>${this.esc(m.homeTeam || "TBC")}</strong>
-                        <div class="wc-score">${m.homeScore ?? "-"} - ${m.awayScore ?? "-"}</div>
-                        <strong>${this.esc(m.awayTeam || "TBC")}</strong>
-                        <div class="wc-muted">${this.esc(this.formatDate(m.utcDate))}</div>
+                        ${this.matchRowInner(m)}
+                        <div class="wc-muted" style="text-align:center;margin-top:8px;">
+                          ${this.esc(this.formatDate(m.utcDate || m.date))}
+                        </div>
                       </div>
                     `).join("")
                     : `<div class="wc-bracket-match">TBC<br><span class="wc-muted">Fixtures not available yet</span></div>`
@@ -629,6 +987,25 @@ class WorldCup2026Panel extends HTMLElement {
             `;
           }).join("")}
         </div>
+      </div>
+    `;
+  }
+
+  matchRowInner(m) {
+    const homeTeam = this.getHomeTeam(m);
+    const awayTeam = this.getAwayTeam(m);
+    const homeScore = this.getHomeScore(m);
+    const awayScore = this.getAwayScore(m);
+
+    return `
+      <div class="fixture-teams-big">
+        ${this.teamFlagBlock(homeTeam)}
+
+        <div class="fixture-middle">
+          <div class="wc-score">${homeScore} - ${awayScore}</div>
+        </div>
+
+        ${this.teamFlagBlock(awayTeam)}
       </div>
     `;
   }
@@ -661,7 +1038,7 @@ class WorldCup2026Panel extends HTMLElement {
           <div class="wc-section-title">Top Scoring Team</div>
           ${
             r.top_scoring_team
-              ? `<p><strong>${this.esc(r.top_scoring_team.team)}</strong></p><p>${r.top_scoring_team.goalsFor} goals</p>`
+              ? `<p><strong>${this.esc(this.teamLabel(r.top_scoring_team.team))}</strong></p><p>${r.top_scoring_team.goalsFor} goals</p>`
               : `<div class="wc-empty">No team goal data yet.</div>`
           }
         </div>
@@ -670,7 +1047,7 @@ class WorldCup2026Panel extends HTMLElement {
           <div class="wc-section-title">Best Defence</div>
           ${
             r.best_defence
-              ? `<p><strong>${this.esc(r.best_defence.team)}</strong></p><p>${r.best_defence.goalsAgainst} conceded</p>`
+              ? `<p><strong>${this.esc(this.teamLabel(r.best_defence.team))}</strong></p><p>${r.best_defence.goalsAgainst} conceded</p>`
               : `<div class="wc-empty">No defensive data yet.</div>`
           }
         </div>
@@ -759,7 +1136,16 @@ class WorldCup2026Panel extends HTMLElement {
               <div class="wc-title">FIFA World Cup 2026</div>
               <div class="wc-subtitle">Home Assistant dedicated tournament application</div>
             </div>
-            <div class="wc-pill">Updated ${new Date().toLocaleTimeString()}</div>
+
+            <div style="display:flex;gap:10px;align-items:center;">
+              <button class="wc-pill wc-home-button" onclick="window.location.href='/'">
+                🏠 Home
+              </button>
+
+              <div class="wc-pill">
+                Updated ${new Date().toLocaleTimeString()}
+              </div>
+            </div>
           </div>
 
           ${this.nav()}
