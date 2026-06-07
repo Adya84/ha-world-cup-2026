@@ -19,8 +19,8 @@ _LOGGER = logging.getLogger(__name__)
 PLATFORMS = ["sensor"]
 
 PANEL_PATH = "world-cup-2026"
-PANEL_TITLE = "World Cup 2026"
-PANEL_ICON = "mdi:soccer"
+PANEL_TITLE = "🏆 World Cup 2026 ⚽"
+PANEL_ICON = "mdi:trophy"
 FRONTEND_URL = f"/{DOMAIN}_frontend"
 
 
@@ -62,7 +62,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
             "_panel_custom": {
                 "name": "world-cup-2026-panel",
                 "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js",
-                "embed_iframe": True,
+                "embed_iframe": False,
                 "trust_external": False,
             }
         },
