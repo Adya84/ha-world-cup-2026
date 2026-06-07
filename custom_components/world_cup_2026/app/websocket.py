@@ -6,6 +6,7 @@ import voluptuous as vol
 from homeassistant.components import websocket_api
 
 from ..const import DOMAIN
+from ..golden_boot import GoldenBootManager
 
 LIVE_STATUSES = {"IN_PLAY", "PAUSED", "LIVE", "1H", "2H", "HT"}
 FINISHED_STATUSES = {"FINISHED", "FT", "AET", "PEN"}
@@ -139,17 +140,35 @@ async def websocket_get_groups(hass, connection, msg) -> None:
 @websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_scorers"})
 @websocket_api.async_response
 async def websocket_get_scorers(hass, connection, msg) -> None:
-    coordinator = _get_coordinator(hass)
+    """Return manually tracked Golden Boot data."""
+    try:
+        manager = GoldenBootManager(hass)
+        scorers = manager.top_scorers(50)
 
-    if coordinator is None:
-        _send_not_loaded(connection, msg)
-        return
-
-    connection.send_result(
-        msg["id"],
-        (coordinator.data or {}).get("scorers", []),
-    )
-
+        connection.send_result(
+            msg["id"],
+            [
+                {
+                    "name": player.get("player") or player.get("name"),
+                    "team": player.get("team"),
+                    "goals": player.get("goals", 0),
+                    "assists": player.get("assists", 0),
+                    "penalties": player.get("penalties", 0),
+                    "matches": player.get("matches", 0),
+                    "yellow_cards": player.get("yellow_cards", 0),
+                    "red_cards": player.get("red_cards", 0),
+                    "minutes": player.get("minutes", 0),
+                    "last_updated": player.get("last_updated"),
+                }
+                for player in scorers
+            ],
+        )
+    except Exception as err:
+        connection.send_error(
+            msg["id"],
+            "golden_boot_error",
+            str(err),
+        )
 
 @websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_statistics"})
 @websocket_api.async_response
