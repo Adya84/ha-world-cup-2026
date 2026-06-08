@@ -4292,187 +4292,100 @@ class WorldCup2026Panel extends HTMLElement {
 
     const scorers = rawScorers
       .map((s) => {
-        const team = this.teamLabel(s.team?.name || s.team?.shortName || s.team || s.nationality || "");
+        const playerName =
+          typeof s.player === "string"
+            ? s.player
+            : s.player?.name || s.name || this.t("unknown");
+
+        const teamName =
+          typeof s.team === "string"
+            ? s.team
+            : s.team?.shortName || s.team?.name || s.team?.tla || s.nationality || this.t("tbc");
 
         return {
-          name: s.player?.name || s.player || s.name || this.t("unknown"),
-          team,
+          name: playerName,
+          team: this.teamLabel(teamName),
           goals: this.numberValue(this.resolvedPlayerStat(s, "goals", "scored", "goal_count", "total_goals", "totalGoals")),
           assists: this.numberValue(this.resolvedPlayerStat(s, "assists", "assist", "assist_count", "total_assists", "totalAssists")),
-          penalties: this.numberValue(this.resolvedPlayerStat(s, "penalties", "penalty_goals", "penaltyGoals", "pens", "penalty", "penalties_scored")),
-          matches: this.numberValue(this.resolvedPlayerStat(s, "matches", "played", "appearances", "games", "matches_played", "matchesPlayed")),
-          yellowCards: this.numberValue(this.resolvedPlayerStat(
-            s,
-            "yellow_cards",
-            "yellowCards",
-            "yellow_card",
-            "yellowCard",
-            "yellows",
-            "cards_yellow",
-            "cardsYellow",
-            "cards.yellow",
-            "cards.yellow_cards",
-            "discipline.yellow_cards",
-            "discipline.yellowCards",
-            "total_yellow_cards",
-            "totalYellowCards",
-            "yellow",
-            "yc"
-          )),
-          redCards: this.numberValue(this.resolvedPlayerStat(
-            s,
-            "red_cards",
-            "redCards",
-            "red_card",
-            "redCard",
-            "reds",
-            "cards_red",
-            "cardsRed",
-            "cards.red",
-            "cards.red_cards",
-            "discipline.red_cards",
-            "discipline.redCards",
-            "total_red_cards",
-            "totalRedCards",
-            "red",
-            "rc"
-          )),
-          minutes: this.numberValue(this.resolvedPlayerStat(s, "minutes", "minutes_played", "minutesPlayed", "mins", "minute", "time_played")),
-          lastUpdated: s.last_updated || s.lastUpdated || "",
+          source: s.source || "football-data.org",
         };
       })
+      .filter((player) => player.name && player.name !== this.t("unknown"))
       .sort((a, b) =>
         b.goals - a.goals ||
         b.assists - a.assists ||
-        a.matches - b.matches ||
-        a.minutes - b.minutes ||
         a.name.localeCompare(b.name)
       )
-      .slice(0, 50);
+      .slice(0, 100);
 
-    const podium = scorers.slice(0, 3);
-    const medals = ["🥇", "🥈", "🥉"];
-    const leader = scorers[0];
+    const hasScorers = scorers.length > 0;
+    const source = hasScorers ? scorers[0].source : "football-data.org";
+    const isFallback = String(source).toLowerCase().includes("fallback") || String(source).toLowerCase().includes("local");
+
     const totalGoals = scorers.reduce((total, p) => total + p.goals, 0);
     const totalAssists = scorers.reduce((total, p) => total + p.assists, 0);
-    const totalPenalties = scorers.reduce((total, p) => total + p.penalties, 0);
-    const totalYellowCards = scorers.reduce((total, p) => total + p.yellowCards, 0);
-    const totalRedCards = scorers.reduce((total, p) => total + p.redCards, 0);
-    const totalMinutes = scorers.reduce((total, p) => total + p.minutes, 0);
-    const averageGoals = scorers.length ? (totalGoals / scorers.length).toFixed(1) : "0.0";
-    const lastUpdated = rawScorers.map((s) => s.last_updated || s.lastUpdated).filter(Boolean).sort().at(-1);
+    const leader = scorers[0];
+
+    if (!hasScorers) {
+      return `
+        <section class="wc-section hero-section players-hero">
+          <div class="section-kicker">${this.t("players")}</div>
+          <h2>${this.t("goldenBootCentre")}</h2>
+          <p>Automatic Golden Boot data will appear once football-data.org publishes World Cup scorer data.</p>
+        </section>
+
+        <section class="wc-section">
+          <div class="wc-empty">
+            No Golden Boot scorer data available yet.
+          </div>
+        </section>
+      `;
+    }
 
     return `
-      <div class="wc-card golden-boot-hero">
-        <div>
-          <div class="golden-kicker">${this.t("players")}</div>
-          <div class="wc-section-title golden-title">${this.t("goldenBootCentre")}</div>
-          <div class="wc-muted">
-            ${this.t("goals")} · ${this.t("assists")} · ${this.t("penalties")} · ${this.t("matchesPlayed")} · ${this.t("yellowCards")} · ${this.t("redCards")} · ${this.t("minutes")}
-          </div>
+      <section class="wc-section hero-section players-hero">
+        <div class="section-kicker">${this.t("players")}</div>
+        <h2>${this.t("goldenBootCentre")}</h2>
+        <p>
+          ${isFallback
+            ? "Preview fallback data shown until football-data.org publishes live World Cup scorer data."
+            : "Live Golden Boot data from football-data.org."}
+        </p>
+        <div class="source-pill">
+          Source: ${this.esc(source)}
         </div>
-        <div class="golden-boot-icon">👟⚽</div>
-      </div>
+      </section>
 
-      ${scorers.length ? `
-        <div class="golden-layout golden-layout-polished">
-          <div class="wc-card golden-podium-card golden-main-card">
-            <div class="golden-card-head">
+      <div class="stats-layout">
+        <section class="wc-section">
+          <div class="section-header-row">
+            <div>
+              <div class="section-kicker">${this.t("goldenBoot")}</div>
+              <h2>${this.t("playerWatch")}</h2>
+            </div>
+            <div class="mini-pill">${scorers.length} ${this.t("playersTracked")}</div>
+          </div>
+
+          ${leader ? `
+            <div class="leader-strip">
               <div>
-                <div class="golden-kicker">${this.t("goldenBoot")}</div>
-                <div class="wc-section-title">${this.t("leaderSpotlight")}</div>
+                <div class="section-kicker">${this.t("leaderSpotlight")}</div>
+                <h3>${this.esc(leader.name)}</h3>
+                <p>${this.flag(leader.team, true)} ${this.esc(leader.team)}</p>
               </div>
-              <span class="wc-badge">${scorers.length} ${this.t("playersTracked")}</span>
-            </div>
-
-            <div class="golden-showcase golden-showcase-polished">
-              ${leader ? `
-                <div class="golden-leader golden-leader-compact">
-                  <div class="golden-leader-medal">🥇</div>
-                  <div class="golden-leader-main">
-                    <div class="golden-leader-name">${this.esc(leader.name)}</div>
-                    <div class="golden-leader-team">
-                      ${this.flag(leader.team, true)}
-                      <span>${this.esc(leader.team || this.t("unknown"))}</span>
-                    </div>
-                  </div>
-                  <div class="golden-leader-goals">
-                    <strong>${leader.goals}</strong>
-                    <span>${this.t("goals")}</span>
-                  </div>
-                  <div class="golden-leader-strip">
-                    <span><strong>${leader.assists}</strong>${this.t("assists")}</span>
-                    <span><strong>${leader.penalties}</strong>${this.t("penalties")}</span>
-                    <span><strong>${leader.matches}</strong>${this.t("matchesPlayed")}</span>
-                    <span><strong>${leader.minutes}</strong>${this.t("minutes")}</span>
-                  </div>
-                </div>
-              ` : ""}
-
-              <div class="golden-podium-grid golden-podium-grid-polished">
-                ${[0, 1, 2].map((slot) => {
-                  const player = podium[slot];
-                  if (!player) {
-                    return `
-                      <div class="golden-podium-item golden-empty-podium">
-                        <div class="golden-medal">${medals[slot]}</div>
-                        <div class="golden-player-name">${this.t("tbc")}</div>
-                        <div class="wc-muted">0 ${this.t("goals")}</div>
-                      </div>
-                    `;
-                  }
-
-                  return `
-                    <div class="golden-podium-item ${slot === 0 ? "winner" : ""}">
-                      <div class="golden-medal">${medals[slot]}</div>
-                      <div class="golden-player-name">${this.esc(player.name)}</div>
-                      <div class="golden-player-team">
-                        ${this.flag(player.team, true)}
-                        <span>${this.esc(player.team || this.t("unknown"))}</span>
-                      </div>
-                      <div class="golden-player-stats">
-                        <strong>${player.goals}</strong> ${this.t("goals")}
-                        <span>${player.assists} ${this.t("assists")}</span>
-                      </div>
-                      <div class="golden-card-stat-row">
-                        <span>🟨 ${player.yellowCards}</span>
-                        <span>🟥 ${player.redCards}</span>
-                        <span>${player.matches} ${this.t("matchesPlayed")}</span>
-                      </div>
-                    </div>
-                  `;
-                }).join("")}
+              <div class="leader-score">
+                <strong>${leader.goals}</strong>
+                <span>${this.t("goals")}</span>
+              </div>
+              <div class="leader-score">
+                <strong>${leader.assists}</strong>
+                <span>${this.t("assists")}</span>
               </div>
             </div>
-          </div>
+          ` : ""}
 
-          <div class="wc-card golden-summary-card">
-            <div>
-              <div class="golden-kicker">${this.t("stats")}</div>
-              <div class="wc-section-title">${this.t("tournamentIntelligence")}</div>
-            </div>
-            <div class="golden-mini-stat"><strong>${scorers.length}</strong><span>${this.t("playersTracked")}</span></div>
-            <div class="golden-mini-stat"><strong>${totalGoals}</strong><span>${this.t("totalGoals")}</span></div>
-            <div class="golden-mini-stat"><strong>${totalAssists}</strong><span>${this.t("totalAssists")}</span></div>
-            <div class="golden-mini-stat"><strong>${totalPenalties}</strong><span>${this.t("penalties")}</span></div>
-            <div class="golden-mini-stat"><strong>${totalYellowCards}</strong><span>${this.t("totalYellowCards")}</span></div>
-            <div class="golden-mini-stat"><strong>${totalRedCards}</strong><span>${this.t("totalRedCards")}</span></div>
-            <div class="golden-mini-stat"><strong>${averageGoals}</strong><span>${this.t("goalsPerMatch")}</span></div>
-            <div class="golden-mini-stat"><strong>${totalMinutes}</strong><span>${this.t("minutes")}</span></div>
-            ${lastUpdated ? `<div class="wc-muted golden-updated">${this.t("updated")}: ${this.esc(lastUpdated)}</div>` : ""}
-          </div>
-        </div>
-
-        <div class="wc-card golden-table-card">
-          <div class="golden-card-head">
-            <div>
-              <div class="golden-kicker">${this.t("playerWatch")}</div>
-              <div class="wc-section-title">${this.t("goldenBoot")}</div>
-            </div>
-            <span class="wc-badge">${this.t("goals")} · ${this.t("assists")} · ${this.t("penalties")} · 🟨 · 🟥</span>
-          </div>
-          <div class="wc-table-wrap golden-table-wrap">
-            <table class="wc-table golden-table">
+          <div class="table-wrap">
+            <table class="wc-table">
               <thead>
                 <tr>
                   <th>${this.t("pos")}</th>
@@ -4480,49 +4393,42 @@ class WorldCup2026Panel extends HTMLElement {
                   <th>${this.t("team")}</th>
                   <th>${this.t("goals")}</th>
                   <th>${this.t("assists")}</th>
-                  <th>${this.t("penalties")}</th>
-                  <th>${this.t("matchesPlayed")}</th>
-                  <th>${this.t("yellowCards")}</th>
-                  <th>${this.t("redCards")}</th>
-                  <th>${this.t("minutes")}</th>
                 </tr>
               </thead>
               <tbody>
-                ${scorers.map((player, i) => `
-                  <tr class="${i < 3 ? "golden-top-row" : ""}">
-                    <td><span class="golden-rank">${i + 1}</span></td>
-                    <td data-label="${this.t("player")}">
-                      <div class="golden-table-player">
-                        <span class="golden-table-medal">${medals[i] || ""}</span>
-                        <strong>${this.esc(player.name)}</strong>
-                      </div>
-                    </td>
-                    <td data-label="${this.t("team")}">
+                ${scorers.map((player, index) => `
+                  <tr>
+                    <td>${index + 1}</td>
+                    <td><strong>${this.esc(player.name)}</strong></td>
+                    <td>
                       <div class="group-team-cell">
                         ${this.flag(player.team, true)}
-                        <strong>${this.esc(player.team || this.t("unknown"))}</strong>
+                        <span>${this.esc(player.team)}</span>
                       </div>
                     </td>
-                    <td data-label="${this.t("goals")}"><strong class="golden-goal-count">${player.goals}</strong></td>
-                    <td data-label="${this.t("assists")}">${player.assists}</td>
-                    <td data-label="${this.t("penalties")}">${player.penalties}</td>
-                    <td data-label="${this.t("matchesPlayed")}">${player.matches}</td>
-                    <td data-label="${this.t("yellowCards")}"><span class="golden-card-pill yellow">🟨 ${player.yellowCards}</span></td>
-                    <td data-label="${this.t("redCards")}"><span class="golden-card-pill red">🟥 ${player.redCards}</span></td>
-                    <td data-label="${this.t("minutes")}">${player.minutes}</td>
+                    <td><strong>${player.goals}</strong></td>
+                    <td>${player.assists}</td>
                   </tr>
                 `).join("")}
               </tbody>
             </table>
           </div>
-        </div>
-      ` : `
-        <div class="wc-card">
-          <div class="wc-empty">${this.t("noPlayerStats")}</div>
-        </div>
-      `}
+        </section>
+
+        <aside class="wc-section side-panel">
+          <div class="section-kicker">${this.t("stats")}</div>
+          <h2>${this.t("tournamentIntelligence")}</h2>
+          <div class="stat-list">
+            <div><strong>${scorers.length}</strong><span>${this.t("playersTracked")}</span></div>
+            <div><strong>${totalGoals}</strong><span>${this.t("totalGoals")}</span></div>
+            <div><strong>${totalAssists}</strong><span>${this.t("totalAssists")}</span></div>
+            <div><strong>${this.esc(source)}</strong><span>Source</span></div>
+          </div>
+        </aside>
+      </div>
     `;
   }
+
 
   knockoutPage() {
     const fixtures = this._data.fixtures || [];
