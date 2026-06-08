@@ -1507,30 +1507,37 @@ class WorldCup2026Panel extends HTMLElement {
     this.render();
   }
 
+  locale() {
+    const locales = {
+      en: "en-GB",
+      fr: "fr-FR",
+      de: "de-DE",
+      es: "es-ES",
+      it: "it-IT",
+      nl: "nl-NL",
+      ar: "ar-SA",
+      pt: "pt-PT",
+      ja: "ja-JP",
+      ko: "ko-KR",
+      sv: "sv-SE",
+      no: "nb-NO",
+    };
+
+    return locales[this._language] || "en-GB";
+  }
+
   formatDate(value) {
     if (!value) return "";
-    try {
-      const locales = {
-        en: "en-GB",
-        fr: "fr-FR",
-        de: "de-DE",
-        es: "es-ES",
-        it: "it-IT",
-        nl: "nl-NL",
-        ar: "ar-SA",
-        pt: "pt-PT",
-        ja: "ja-JP",
-        ko: "ko-KR",
-        sv: "sv-SE",
-        no: "nb-NO",
-      };
 
-      return new Date(value).toLocaleString(locales[this._language] || "en-GB", {
+    try {
+      return new Date(value).toLocaleString(this.locale(), {
         weekday: "short",
         day: "2-digit",
         month: "short",
+        year: "numeric",
         hour: "2-digit",
         minute: "2-digit",
+        timeZoneName: "short",
       });
     } catch {
       return value;
@@ -3847,7 +3854,7 @@ class WorldCup2026Panel extends HTMLElement {
                 ${scorers.slice(0, 5).map((s, i) => `
                   <div class="overview-player-row">
                     <span>${i + 1}</span>
-                    <strong>${this.esc(s.player?.name || s.name || this.t("unknown"))}</strong>
+                    <strong>${this.esc(typeof s.player === "string" ? s.player : s.player?.name || s.name || this.t("unknown"))}</strong>
                     <em>${this.esc(this.teamLabel(s.team?.name || s.team || ""))}</em>
                     <b>${s.goals ?? 0}</b>
                   </div>
@@ -3993,7 +4000,21 @@ class WorldCup2026Panel extends HTMLElement {
     if (!value) return "unknown";
 
     try {
-      return new Date(value).toISOString().slice(0, 10);
+      const parts = new Intl.DateTimeFormat("en-CA", {
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit",
+      }).formatToParts(new Date(value));
+
+      const year = parts.find((part) => part.type === "year")?.value;
+      const month = parts.find((part) => part.type === "month")?.value;
+      const day = parts.find((part) => part.type === "day")?.value;
+
+      if (year && month && day) {
+        return `${year}-${month}-${day}`;
+      }
+
+      return new Date(value).toLocaleDateString("en-CA");
     } catch {
       return String(value).slice(0, 10) || "unknown";
     }
@@ -4007,22 +4028,7 @@ class WorldCup2026Panel extends HTMLElement {
     }
 
     try {
-      const locales = {
-        en: "en-GB",
-        fr: "fr-FR",
-        de: "de-DE",
-        es: "es-ES",
-        it: "it-IT",
-        nl: "nl-NL",
-        ar: "ar-SA",
-        pt: "pt-PT",
-        ja: "ja-JP",
-        ko: "ko-KR",
-        sv: "sv-SE",
-        no: "nb-NO",
-      };
-
-      return new Date(value).toLocaleDateString(locales[this._language] || "en-GB", {
+      return new Date(value).toLocaleDateString(this.locale(), {
         weekday: "long",
         day: "2-digit",
         month: "long",
@@ -4041,24 +4047,10 @@ class WorldCup2026Panel extends HTMLElement {
     }
 
     try {
-      const locales = {
-        en: "en-GB",
-        fr: "fr-FR",
-        de: "de-DE",
-        es: "es-ES",
-        it: "it-IT",
-        nl: "nl-NL",
-        ar: "ar-SA",
-        pt: "pt-PT",
-        ja: "ja-JP",
-        ko: "ko-KR",
-        sv: "sv-SE",
-        no: "nb-NO",
-      };
-
-      return new Date(value).toLocaleTimeString(locales[this._language] || "en-GB", {
+      return new Date(value).toLocaleTimeString(this.locale(), {
         hour: "2-digit",
         minute: "2-digit",
+        timeZoneName: "short",
       });
     } catch {
       return value;
