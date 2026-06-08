@@ -2110,24 +2110,7 @@ class WorldCup2026Panel extends HTMLElement {
           flex: 0 0 auto;
         }
 
-  
-      .wc-venue-image {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-        border-radius: 14px;
-        margin-bottom: 12px;
-        display: block;
-      }
-
-      .wc-venue-image-large {
-        height: 260px;
-      }
-
-      .wc-venue-card {
-        overflow: hidden;
-      }
-      .wc-empty {
+        .wc-empty {
           opacity: 0.72;
           padding: 18px;
           background: rgba(255,255,255,0.06);
@@ -4577,22 +4560,7 @@ class WorldCup2026Panel extends HTMLElement {
     const venueRealName = (venue) => venue.real_name || venue.stadium || venue.name || this.t("unknown");
     const venueMatches = (venue) => venue.matches ?? venue.matches_hosted ?? venue.match_count ?? 0;
     const venueCapacity = (venue) => Number(venue.capacity || 0).toLocaleString();
-    const venueImage = (venue) => venue.image ? `/world_cup_2026_frontend/${venue.image}` : "";
-
-    const venuePhoto = (venue, large = false) => {
-      const image = venueImage(venue);
-      if (!image) return "";
-
-      return `
-        <img
-          class="wc-venue-image${large ? " wc-venue-image-large" : ""}"
-          src="${this.esc(image)}"
-          alt="${this.esc(venueTitle(venue))}"
-          loading="lazy"
-          onerror="this.style.display='none'"
-        />
-      `;
-    };
+    const venueImageUrl = (venue) => venue?.image ? `/world_cup_2026_frontend/${venue.image}` : "";
 
     return `
       <div class="wc-grid">
@@ -4606,7 +4574,18 @@ class WorldCup2026Panel extends HTMLElement {
         finalVenue
           ? `
           <div class="wc-card">
-            ${venuePhoto(finalVenue, true)}
+            ${
+              finalVenue.image
+                ? `
+                  <img
+                    src="${this.esc(venueImageUrl(finalVenue))}"
+                    alt="${this.esc(venueTitle(finalVenue))}"
+                    loading="lazy"
+                    style="width:min(720px, 92%);height:auto;max-height:none;object-fit:contain;border-radius:14px;margin:0 auto 14px;display:block;box-shadow:0 10px 30px rgba(0,0,0,.35);"
+                  />
+                `
+                : ""
+            }
             <div class="wc-section-title">${this.t("finalVenue")}</div>
             <p><strong>${this.esc(finalVenue.flag || "")} ${this.esc(venueTitle(finalVenue))}</strong></p>
             <p class="wc-muted">Real stadium: <strong>${this.esc(venueRealName(finalVenue))}</strong></p>
@@ -4622,8 +4601,19 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="wc-section-title">${this.t("worldCupStadiums")}</div>
         <div class="wc-venue-grid">
           ${stadiums.map(venue => `
-            <div class="wc-stat wc-venue-card">
-              ${venuePhoto(venue)}
+            <div class="wc-stat">
+              ${
+                venue.image
+                  ? `
+                    <img
+                      src="${this.esc(venueImageUrl(venue))}"
+                      alt="${this.esc(venueTitle(venue))}"
+                      loading="lazy"
+                      style="width:100%;height:140px;object-fit:cover;border-radius:12px;margin-bottom:10px;"
+                    />
+                  `
+                  : ""
+              }
               <strong>${this.esc(venue.flag || "")} ${this.esc(venueTitle(venue))}</strong>
               <div class="wc-muted">Real stadium: ${this.esc(venueRealName(venue))}</div>
               <div>${this.esc(venue.city)}, ${this.esc(venue.country)}</div>
