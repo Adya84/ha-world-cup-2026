@@ -1871,6 +1871,58 @@ class WorldCup2026Panel extends HTMLElement {
           font-weight: 700;
         }
 
+        .wc-donate-button {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          text-decoration: none;
+          cursor: pointer;
+          color: white;
+          font-weight: 900;
+          background: linear-gradient(135deg, rgba(0, 112, 186, 0.95), rgba(0, 200, 255, 0.35));
+          border: 1px solid rgba(0, 200, 255, 0.55);
+          box-shadow: 0 0 16px rgba(0, 200, 255, 0.25);
+        }
+
+        .wc-donate-button:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 0 22px rgba(0, 200, 255, 0.40);
+        }
+
+        .wc-donate-footer {
+          margin-top: 22px;
+          padding: 14px 18px;
+          border-radius: 18px;
+          background: linear-gradient(135deg, rgba(0, 112, 186, 0.38), rgba(0, 200, 255, 0.14));
+          border: 1px solid rgba(0, 200, 255, 0.35);
+          box-shadow: 0 0 18px rgba(0, 200, 255, 0.16);
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          gap: 12px;
+          flex-wrap: wrap;
+          text-align: center;
+        }
+
+        .wc-donate-footer span {
+          font-weight: 800;
+          color: rgba(255,255,255,0.92);
+        }
+
+        .wc-donate-footer a {
+          color: white;
+          font-weight: 900;
+          text-decoration: none;
+          padding: 8px 14px;
+          border-radius: 999px;
+          background: rgba(0, 200, 255, 0.24);
+          border: 1px solid rgba(0, 200, 255, 0.48);
+        }
+
+        .wc-donate-footer a:hover {
+          background: rgba(0, 200, 255, 0.34);
+        }
+
         .wc-language-wrap {
           display: flex;
           flex-direction: column;
@@ -4657,6 +4709,16 @@ class WorldCup2026Panel extends HTMLElement {
                 ${this.t("back")}
               </button>
 
+              <a
+                class="wc-pill wc-donate-button"
+                href="https://paypal.me/graffidoodle"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Support this integration"
+              >
+                🍺 Donate / Buy Me a Beer
+              </a>
+
               <div class="wc-pill">
                 ${this.t("updated")} ${new Date().toLocaleTimeString()}
               </div>
@@ -4665,6 +4727,17 @@ class WorldCup2026Panel extends HTMLElement {
 
           ${this.nav()}
           ${this.pageContent()}
+
+          <div class="wc-donate-footer">
+            <span>🍺 Enjoying this integration?</span>
+            <a
+              href="https://paypal.me/graffidoodle"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Donate / Buy Me a Beer
+            </a>
+          </div>
         </div>
       </div>
     `;
