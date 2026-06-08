@@ -2110,7 +2110,24 @@ class WorldCup2026Panel extends HTMLElement {
           flex: 0 0 auto;
         }
 
-        .wc-empty {
+  
+      .wc-venue-image {
+        width: 100%;
+        height: 180px;
+        object-fit: cover;
+        border-radius: 14px;
+        margin-bottom: 12px;
+        display: block;
+      }
+
+      .wc-venue-image-large {
+        height: 260px;
+      }
+
+      .wc-venue-card {
+        overflow: hidden;
+      }
+      .wc-empty {
           opacity: 0.72;
           padding: 18px;
           background: rgba(255,255,255,0.06);
@@ -4560,13 +4577,24 @@ class WorldCup2026Panel extends HTMLElement {
     const venueRealName = (venue) => venue.real_name || venue.stadium || venue.name || this.t("unknown");
     const venueMatches = (venue) => venue.matches ?? venue.matches_hosted ?? venue.match_count ?? 0;
     const venueCapacity = (venue) => Number(venue.capacity || 0).toLocaleString();
+    const venueImage = (venue) => venue.image ? `/world_cup_2026_frontend/${venue.image}` : "";
+
+    const venuePhoto = (venue, large = false) => {
+      const image = venueImage(venue);
+      if (!image) return "";
+
+      return `
+        <img
+          class="wc-venue-image${large ? " wc-venue-image-large" : ""}"
+          src="${this.esc(image)}"
+          alt="${this.esc(venueTitle(venue))}"
+          loading="lazy"
+          onerror="this.style.display='none'"
+        />
+      `;
+    };
 
     return `
-      <div class="wc-card">
-        <div class="wc-section-title">Venues data check v3.3.1d</div>
-        <div class="wc-muted">This page is using stadium data from the JSON-backed venue payload.</div>
-      </div>
-
       <div class="wc-grid">
         <div class="wc-stat"><strong>${stadiums.length}</strong>${this.t("stadiums")}</div>
         <div class="wc-stat"><strong>${v.country_counts?.USA ?? 0}</strong>${this.t("usaVenues")}</div>
@@ -4578,6 +4606,7 @@ class WorldCup2026Panel extends HTMLElement {
         finalVenue
           ? `
           <div class="wc-card">
+            ${venuePhoto(finalVenue, true)}
             <div class="wc-section-title">${this.t("finalVenue")}</div>
             <p><strong>${this.esc(finalVenue.flag || "")} ${this.esc(venueTitle(finalVenue))}</strong></p>
             <p class="wc-muted">Real stadium: <strong>${this.esc(venueRealName(finalVenue))}</strong></p>
@@ -4593,7 +4622,8 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="wc-section-title">${this.t("worldCupStadiums")}</div>
         <div class="wc-venue-grid">
           ${stadiums.map(venue => `
-            <div class="wc-stat">
+            <div class="wc-stat wc-venue-card">
+              ${venuePhoto(venue)}
               <strong>${this.esc(venue.flag || "")} ${this.esc(venueTitle(venue))}</strong>
               <div class="wc-muted">Real stadium: ${this.esc(venueRealName(venue))}</div>
               <div>${this.esc(venue.city)}, ${this.esc(venue.country)}</div>
