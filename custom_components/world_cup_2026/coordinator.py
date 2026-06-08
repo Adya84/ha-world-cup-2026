@@ -3,7 +3,9 @@
 from __future__ import annotations
 
 from datetime import timedelta
+import json
 import logging
+from pathlib import Path
 
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
@@ -18,24 +20,68 @@ TOTAL_WORLD_CUP_MATCHES = 104
 LIVE_STATUSES = {"IN_PLAY", "PAUSED", "LIVE", "1H", "2H", "HT"}
 FINISHED_STATUSES = {"FINISHED", "FT", "AET", "PEN"}
 
-WORLD_CUP_STADIUMS = [
-    {"stadium": "MetLife Stadium", "city": "New York/New Jersey", "country": "USA", "flag": "🇺🇸", "capacity": 82500, "note": "Final venue"},
-    {"stadium": "AT&T Stadium", "city": "Dallas", "country": "USA", "flag": "🇺🇸", "capacity": 80000, "note": "Host venue"},
-    {"stadium": "SoFi Stadium", "city": "Los Angeles", "country": "USA", "flag": "🇺🇸", "capacity": 70000, "note": "Host venue"},
-    {"stadium": "Mercedes-Benz Stadium", "city": "Atlanta", "country": "USA", "flag": "🇺🇸", "capacity": 71000, "note": "Host venue"},
-    {"stadium": "Lincoln Financial Field", "city": "Philadelphia", "country": "USA", "flag": "🇺🇸", "capacity": 69000, "note": "Host venue"},
-    {"stadium": "NRG Stadium", "city": "Houston", "country": "USA", "flag": "🇺🇸", "capacity": 72000, "note": "Host venue"},
-    {"stadium": "Hard Rock Stadium", "city": "Miami", "country": "USA", "flag": "🇺🇸", "capacity": 65000, "note": "Host venue"},
-    {"stadium": "Lumen Field", "city": "Seattle", "country": "USA", "flag": "🇺🇸", "capacity": 69000, "note": "Host venue"},
-    {"stadium": "Levi's Stadium", "city": "San Francisco Bay Area", "country": "USA", "flag": "🇺🇸", "capacity": 68000, "note": "Host venue"},
-    {"stadium": "GEHA Field at Arrowhead Stadium", "city": "Kansas City", "country": "USA", "flag": "🇺🇸", "capacity": 76000, "note": "Host venue"},
-    {"stadium": "Gillette Stadium", "city": "Boston", "country": "USA", "flag": "🇺🇸", "capacity": 65000, "note": "Host venue"},
-    {"stadium": "BC Place", "city": "Vancouver", "country": "Canada", "flag": "🇨🇦", "capacity": 54500, "note": "Host venue"},
-    {"stadium": "BMO Field", "city": "Toronto", "country": "Canada", "flag": "🇨🇦", "capacity": 45000, "note": "Host venue"},
-    {"stadium": "Estadio Azteca", "city": "Mexico City", "country": "Mexico", "flag": "🇲🇽", "capacity": 87000, "note": "Opening match venue"},
-    {"stadium": "Estadio BBVA", "city": "Monterrey", "country": "Mexico", "flag": "🇲🇽", "capacity": 53500, "note": "Host venue"},
-    {"stadium": "Estadio Akron", "city": "Guadalajara", "country": "Mexico", "flag": "🇲🇽", "capacity": 48000, "note": "Host venue"},
-]
+
+def _country_flag(country):
+    """Return the flag emoji for a host country."""
+    return {
+        "USA": "🇺🇸",
+        "Canada": "🇨🇦",
+        "Mexico": "🇲🇽",
+    }.get(country, "")
+
+
+def _stadium_note(stadium):
+    """Return the current venue note used by the existing frontend."""
+    real_name = stadium.get("real_name")
+
+    if real_name == "MetLife Stadium":
+        return "Final venue"
+    if real_name == "Estadio Azteca":
+        return "Opening match venue"
+
+    return "Host venue"
+
+
+def _load_stadiums():
+    """Load stadium data from local JSON file."""
+    stadiums_file = Path(__file__).parent / "data" / "stadiums.json"
+
+    try:
+        with open(stadiums_file, encoding="utf-8") as file:
+            stadiums = json.load(file)
+    except FileNotFoundError:
+        _LOGGER.error("stadiums.json not found: %s", stadiums_file)
+        return []
+    except json.JSONDecodeError as err:
+        _LOGGER.error("Invalid stadiums.json: %s", err)
+        return []
+    except Exception as err:  # pylint: disable=broad-exception-caught
+        _LOGGER.error("Failed to load stadiums.json: %s", err)
+        return []
+
+    if not isinstance(stadiums, list):
+        _LOGGER.error("stadiums.json must contain a list of stadiums")
+        return []
+
+    return stadiums
+
+
+def _serialise_stadium(stadium):
+    """Convert local JSON stadium data into the existing frontend format."""
+    country = stadium.get("country", "")
+
+    return {
+        "name": stadium.get("name"),
+        "real_name": stadium.get("real_name"),
+        "stadium": stadium.get("real_name") or stadium.get("name", "TBC"),
+        "city": stadium.get("city", "TBC"),
+        "country": country,
+        "flag": _country_flag(country),
+        "capacity": stadium.get("capacity", 0),
+        "matches": stadium.get("matches", 0),
+        "image": stadium.get("image"),
+        "note": _stadium_note(stadium),
+    }
 
 
 def _team_name(team):
@@ -227,18 +273,20 @@ def _build_records(matches):
 
 
 def _build_venues():
+    stadiums = [_serialise_stadium(stadium) for stadium in _load_stadiums()]
+
     countries = {}
-    for venue in WORLD_CUP_STADIUMS:
+    for venue in stadiums:
         country = venue["country"]
         countries[country] = countries.get(country, 0) + 1
 
     final_venue = next(
-        (venue for venue in WORLD_CUP_STADIUMS if venue["stadium"] == "MetLife Stadium"),
-        WORLD_CUP_STADIUMS[0],
+        (venue for venue in stadiums if venue["stadium"] == "MetLife Stadium"),
+        stadiums[0] if stadiums else None,
     )
 
     return {
-        "stadiums": WORLD_CUP_STADIUMS,
+        "stadiums": stadiums,
         "host_cities": [
             {
                 "city": venue["city"],
@@ -246,7 +294,7 @@ def _build_venues():
                 "flag": venue["flag"],
                 "stadium": venue["stadium"],
             }
-            for venue in WORLD_CUP_STADIUMS
+            for venue in stadiums
         ],
         "country_counts": countries,
         "final_venue": final_venue,
