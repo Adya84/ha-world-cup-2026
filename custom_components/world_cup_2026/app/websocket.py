@@ -46,7 +46,7 @@ def _serialise_match(match):
 
 
 def _normalise_scorer(scorer):
-    """Convert football-data.org scorer data into frontend format."""
+    """Convert football-data.org/local scorer data into frontend format."""
     player = scorer.get("player", {})
     team = scorer.get("team", {})
 
@@ -61,8 +61,9 @@ def _normalise_scorer(scorer):
         team_name = team or "TBC"
 
     return {
-        "player": scorer.get("player_name") or scorer.get("name") or player_name,
-        "team": scorer.get("team_name") or team_name,
+        "player": player_name,
+        "name": player_name,
+        "team": team_name,
         "goals": scorer.get("goals", 0),
         "assists": scorer.get("assists", 0),
         "penalties": scorer.get("penalties"),
