@@ -45,6 +45,54 @@ def _serialise_match(match):
     }
 
 
+def _normalise_scorer(scorer):
+    """Convert football-data.org scorer data into frontend format."""
+    player = scorer.get("player", {})
+    team = scorer.get("team", {})
+
+    if isinstance(player, dict):
+        player_name = player.get("name") or player.get("firstName") or "Unknown"
+    else:
+        player_name = player or "Unknown"
+
+    if isinstance(team, dict):
+        team_name = team.get("shortName") or team.get("name") or team.get("tla") or "TBC"
+    else:
+        team_name = team or "TBC"
+
+    return {
+        "player": scorer.get("player_name") or scorer.get("name") or player_name,
+        "team": scorer.get("team_name") or team_name,
+        "goals": scorer.get("goals", 0),
+        "assists": scorer.get("assists", 0),
+        "penalties": scorer.get("penalties"),
+        "matches": scorer.get("matches"),
+        "yellow_cards": scorer.get("yellow_cards"),
+        "red_cards": scorer.get("red_cards"),
+        "minutes": scorer.get("minutes"),
+        "source": scorer.get("source", "football-data.org"),
+    }
+
+
+def _get_normalised_scorers(hass, coordinator):
+    """Use football-data.org scorers first, then local JSON fallback."""
+    api_scorers = (coordinator.data or {}).get("scorers", [])
+
+    if api_scorers:
+        return [_normalise_scorer(scorer) for scorer in api_scorers]
+
+    manager = GoldenBootManager(hass)
+    fallback_scorers = manager.get_scorers(limit=100)
+
+    return [
+        {
+            **_normalise_scorer(scorer),
+            "source": scorer.get("source", "local fallback"),
+        }
+        for scorer in fallback_scorers
+    ]
+
+
 def _send_not_loaded(connection, msg):
     connection.send_error(msg["id"], "not_loaded", "World Cup 2026 not loaded")
 
@@ -61,7 +109,7 @@ async def websocket_get_overview(hass, connection, msg) -> None:
     data = coordinator.data or {}
     matches = data.get("matches", [])
     standings = data.get("standings", [])
-    scorers = data.get("scorers", [])
+    scorers = _get_normalised_scorers(hass, coordinator)
     statistics = data.get("statistics", {})
 
     live_matches = [m for m in matches if m.get("status") in LIVE_STATUSES]
@@ -140,38 +188,16 @@ async def websocket_get_groups(hass, connection, msg) -> None:
 @websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_scorers"})
 @websocket_api.async_response
 async def websocket_get_scorers(hass, connection, msg) -> None:
-    """Return manually tracked Golden Boot data."""
-    try:
-        manager = GoldenBootManager(hass)
-        scorers = manager.top_scorers(50)
+    coordinator = _get_coordinator(hass)
 
-        connection.send_result(
-            msg["id"],
-            [
-                {
-                    "name": player.get("player") or player.get("name"),
-                    "player": player.get("player") or player.get("name"),
-                    "team": player.get("team"),
-                    "goals": player.get("goals", 0),
-                    "assists": player.get("assists", 0),
-                    "penalties": player.get("penalties", 0),
-                    "matches": player.get("matches", 0),
-                    "yellow_cards": player.get("yellow_cards", 0),
-                    "yellowCards": player.get("yellow_cards", 0),
-                    "red_cards": player.get("red_cards", 0),
-                    "redCards": player.get("red_cards", 0),
-                    "minutes": player.get("minutes", 0),
-                    "last_updated": player.get("last_updated"),
-                }
-                for player in scorers
-            ],
-        )
-    except Exception as err:
-        connection.send_error(
-            msg["id"],
-            "golden_boot_error",
-            str(err),
-        )
+    if coordinator is None:
+        _send_not_loaded(connection, msg)
+        return
+
+    connection.send_result(
+        msg["id"],
+        _get_normalised_scorers(hass, coordinator),
+    )
 
 
 @websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_statistics"})
