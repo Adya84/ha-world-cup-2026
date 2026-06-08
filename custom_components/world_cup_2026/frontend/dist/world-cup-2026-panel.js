@@ -4556,7 +4556,17 @@ class WorldCup2026Panel extends HTMLElement {
     const stadiums = v.stadiums || [];
     const finalVenue = v.final_venue;
 
+    const venueTitle = (venue) => venue.name || venue.stadium || venue.real_name || this.t("unknown");
+    const venueRealName = (venue) => venue.real_name || venue.stadium || venue.name || this.t("unknown");
+    const venueMatches = (venue) => venue.matches ?? venue.matches_hosted ?? venue.match_count ?? 0;
+    const venueCapacity = (venue) => Number(venue.capacity || 0).toLocaleString();
+
     return `
+      <div class="wc-card">
+        <div class="wc-section-title">Venues data check v3.3.1d</div>
+        <div class="wc-muted">This page is using stadium data from the JSON-backed venue payload.</div>
+      </div>
+
       <div class="wc-grid">
         <div class="wc-stat"><strong>${stadiums.length}</strong>${this.t("stadiums")}</div>
         <div class="wc-stat"><strong>${v.country_counts?.USA ?? 0}</strong>${this.t("usaVenues")}</div>
@@ -4569,9 +4579,11 @@ class WorldCup2026Panel extends HTMLElement {
           ? `
           <div class="wc-card">
             <div class="wc-section-title">${this.t("finalVenue")}</div>
-            <p><strong>${this.esc(finalVenue.flag)} ${this.esc(finalVenue.stadium)}</strong></p>
+            <p><strong>${this.esc(finalVenue.flag || "")} ${this.esc(venueTitle(finalVenue))}</strong></p>
+            <p class="wc-muted">Real stadium: <strong>${this.esc(venueRealName(finalVenue))}</strong></p>
             <p>${this.esc(finalVenue.city)}, ${this.esc(finalVenue.country)}</p>
-            <p>${this.t("capacity")}: <strong>${this.esc(finalVenue.capacity)}</strong></p>
+            <p>${this.t("capacity")}: <strong>${this.esc(venueCapacity(finalVenue))}</strong></p>
+            <p>Matches hosted: <strong>${this.esc(venueMatches(finalVenue))}</strong></p>
           </div>
         `
           : ""
@@ -4582,9 +4594,11 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="wc-venue-grid">
           ${stadiums.map(venue => `
             <div class="wc-stat">
-              <strong>${this.esc(venue.flag)} ${this.esc(venue.stadium)}</strong>
-              <div>${this.esc(venue.city)}</div>
-              <div class="wc-muted">${this.esc(venue.country)} · ${this.t("capacity")} ${this.esc(venue.capacity)}</div>
+              <strong>${this.esc(venue.flag || "")} ${this.esc(venueTitle(venue))}</strong>
+              <div class="wc-muted">Real stadium: ${this.esc(venueRealName(venue))}</div>
+              <div>${this.esc(venue.city)}, ${this.esc(venue.country)}</div>
+              <div class="wc-muted">${this.t("capacity")}: ${this.esc(venueCapacity(venue))}</div>
+              <div class="wc-muted">Matches hosted: <strong>${this.esc(venueMatches(venue))}</strong></div>
             </div>
           `).join("") || `<div class="wc-empty">${this.t("noVenueData")}</div>`}
         </div>
