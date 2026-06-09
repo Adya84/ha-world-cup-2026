@@ -4657,6 +4657,43 @@ class WorldCup2026Panel extends HTMLElement {
           gap: 8px;
         }
 
+
+
+        /* User requested: progress bar about 15% narrower on desktop. */
+        .overview-progress-wrap {
+          width: 85%;
+          max-width: 578px;
+        }
+
+        .overview-live-games-button.is-offline {
+          background: rgba(231, 76, 60, 0.24);
+          border-color: rgba(231, 76, 60, 0.62);
+          box-shadow: 0 0 14px rgba(231, 76, 60, 0.18);
+        }
+
+        .overview-live-games-button.is-live {
+          background: rgba(46, 204, 113, 0.24);
+          border-color: rgba(46, 204, 113, 0.68);
+          box-shadow: 0 0 14px rgba(46, 204, 113, 0.20);
+        }
+
+        .overview-live-games-button.is-offline:hover {
+          background: rgba(231, 76, 60, 0.34);
+          border-color: rgba(231, 76, 60, 0.82);
+        }
+
+        .overview-live-games-button.is-live:hover {
+          background: rgba(46, 204, 113, 0.34);
+          border-color: rgba(46, 204, 113, 0.88);
+        }
+
+        @media (max-width: 700px) {
+          .overview-progress-wrap {
+            width: 100%;
+            max-width: none;
+          }
+        }
+
       </style>
     `;
   }
@@ -4751,9 +4788,6 @@ class WorldCup2026Panel extends HTMLElement {
       <div class="overview-pro-page">
         <div class="overview-hero compact-overview-hero wc-card">
 <div class="overview-hero-main">
-            <div class="overview-hero-title compact-title">${this.t("title")}</div>
-            <div class="overview-hero-subtitle compact-subtitle">${this.t("subtitle")}</div>
-
             <div class="overview-progress-wrap">
               <div class="overview-progress-top">
                 <span>${this.t("progress")}</span>
@@ -4765,6 +4799,7 @@ class WorldCup2026Panel extends HTMLElement {
             </div>
 
             <div class="overview-action-row">
+              <button class="overview-action-button overview-live-games-button ${liveMatches.length ? "is-live" : "is-offline"}" data-page="live" type="button">${liveMatches.length ? "🟢" : "🔴"} Live Games: ${liveMatches.length}</button>
               <button class="overview-action-button" data-page="fixtures" type="button">${this.t("fixturesResults")}</button>
               <button class="overview-action-button" data-page="groups" type="button">${this.t("groups")}</button>
               <button class="overview-action-button" data-page="knockout" type="button">${this.t("knockout")}</button>
