@@ -15,6 +15,7 @@ class WorldCup2026Panel extends HTMLElement {
       statistics: {},
       records: {},
       venues: {},
+      supporters: [],
     };
   }
 
@@ -134,6 +135,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'A cleaner World Cup match centre with match-day sections, bold score cards, flags, venue details and clearer live/result badges.',
         days: 'Days',
         versus: 'v',
+        supportersNav: '🙏 Supporters',
+        supportersThankYouTitle: '🙏 Supporters & Thank You',
+        supportersIntro: 'This project started as a personal Home Assistant dashboard and has grown thanks to feedback, testing, ideas and support from the community.',
+        supportersSpecialThanks: 'Special thanks to everyone who has supported development of the World Cup 2026 integration.',
+        supportersTitle: '🍺 Supporters',
+        supporterDefaultMessage: 'Thank you for supporting development.',
+        anonymousSupporter: 'Anonymous Supporter',
+        noSupporters: 'No supporters added yet. Be the first to Buy Me a Beer and get your name listed here.',
+        wantNameAdded: 'Want your name added here?',
+        supportFutureUpdates: 'Support future updates, bug fixes and new World Cup features.',
+        donateBuyBeer: '🍺 Donate / Buy Me a Beer',
+        enjoyingIntegration: '🍺 Enjoying this integration?',
+        supportIntegration: 'Support this integration',
         conceded: "conceded",
       },
 
@@ -251,6 +265,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'Un centre des matchs plus clair avec journées, cartes de score, drapeaux, stades et badges de statut lisibles.',
         days: 'Jours',
         versus: 'v',
+        supportersNav: '🙏 Soutiens',
+        supportersThankYouTitle: '🙏 Soutiens et remerciements',
+        supportersIntro: 'Ce projet a commencé comme un tableau de bord Home Assistant personnel et a grandi grâce aux retours, tests, idées et au soutien de la communauté.',
+        supportersSpecialThanks: 'Merci à toutes les personnes qui ont soutenu le développement de l\'intégration World Cup 2026.',
+        supportersTitle: '🍺 Soutiens',
+        supporterDefaultMessage: 'Merci de soutenir le développement.',
+        anonymousSupporter: 'Soutien anonyme',
+        noSupporters: 'Aucun soutien ajouté pour le moment. Soyez le premier à offrir une bière et à faire apparaître votre nom ici.',
+        wantNameAdded: 'Vous voulez ajouter votre nom ici ?',
+        supportFutureUpdates: 'Soutenez les futures mises à jour, corrections de bugs et nouvelles fonctions de la Coupe du Monde.',
+        donateBuyBeer: '🍺 Faire un don / Offrir une bière',
+        enjoyingIntegration: '🍺 Vous aimez cette intégration ?',
+        supportIntegration: 'Soutenir cette intégration',
         conceded: "encaissés",
       },
 
@@ -368,6 +395,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'Ein übersichtlicheres WM-Spielzentrum mit Spieltagen, starken Ergebniskarten, Flaggen, Stadiondetails und klaren Statusanzeigen.',
         days: 'Tage',
         versus: 'gegen',
+        supportersNav: '🙏 Unterstützer',
+        supportersThankYouTitle: '🙏 Unterstützer & Danke',
+        supportersIntro: 'Dieses Projekt begann als persönliches Home Assistant Dashboard und ist dank Feedback, Tests, Ideen und Unterstützung der Community gewachsen.',
+        supportersSpecialThanks: 'Besonderer Dank gilt allen, die die Entwicklung der World Cup 2026 Integration unterstützt haben.',
+        supportersTitle: '🍺 Unterstützer',
+        supporterDefaultMessage: 'Danke für die Unterstützung der Entwicklung.',
+        anonymousSupporter: 'Anonymer Unterstützer',
+        noSupporters: 'Noch keine Unterstützer hinzugefügt. Sei der Erste, der ein Bier spendiert, und lass deinen Namen hier anzeigen.',
+        wantNameAdded: 'Möchtest du deinen Namen hier sehen?',
+        supportFutureUpdates: 'Unterstütze zukünftige Updates, Fehlerbehebungen und neue World-Cup-Funktionen.',
+        donateBuyBeer: '🍺 Spenden / Ein Bier ausgeben',
+        enjoyingIntegration: '🍺 Gefällt dir diese Integration?',
+        supportIntegration: 'Diese Integration unterstützen',
         conceded: "kassiert",
       },
 
@@ -602,6 +642,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'Un centro partite più chiaro con giornate, schede punteggio, bandiere, stadi e badge di stato leggibili.',
         days: 'Giorni',
         versus: 'v',
+        supportersNav: '🙏 Sostenitori',
+        supportersThankYouTitle: '🙏 Sostenitori e ringraziamenti',
+        supportersIntro: 'Questo progetto è nato come dashboard personale per Home Assistant ed è cresciuto grazie a feedback, test, idee e supporto della community.',
+        supportersSpecialThanks: 'Un ringraziamento speciale a tutti coloro che hanno sostenuto lo sviluppo dell\'integrazione World Cup 2026.',
+        supportersTitle: '🍺 Sostenitori',
+        supporterDefaultMessage: 'Grazie per sostenere lo sviluppo.',
+        anonymousSupporter: 'Sostenitore anonimo',
+        noSupporters: 'Nessun sostenitore ancora aggiunto. Sii il primo a offrirmi una birra e a far comparire il tuo nome qui.',
+        wantNameAdded: 'Vuoi aggiungere il tuo nome qui?',
+        supportFutureUpdates: 'Sostieni futuri aggiornamenti, correzioni di bug e nuove funzioni della Coppa del Mondo.',
+        donateBuyBeer: '🍺 Dona / Offrimi una birra',
+        enjoyingIntegration: '🍺 Ti piace questa integrazione?',
+        supportIntegration: 'Sostieni questa integrazione',
         conceded: "subiti",
       },
 
@@ -719,6 +772,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'Een duidelijker wedstrijdcentrum met speeldagen, scorekaarten, vlaggen, stadiondetails en heldere statusbadges.',
         days: 'Dagen',
         versus: 'v',
+        supportersNav: '🙏 Supporters',
+        supportersThankYouTitle: '🙏 Supporters & dankjewel',
+        supportersIntro: 'Dit project begon als een persoonlijk Home Assistant-dashboard en is gegroeid dankzij feedback, testen, ideeën en steun van de community.',
+        supportersSpecialThanks: 'Speciale dank aan iedereen die de ontwikkeling van de World Cup 2026-integratie heeft gesteund.',
+        supportersTitle: '🍺 Supporters',
+        supporterDefaultMessage: 'Bedankt voor je steun aan de ontwikkeling.',
+        anonymousSupporter: 'Anonieme supporter',
+        noSupporters: 'Nog geen supporters toegevoegd. Wees de eerste die een biertje koopt en je naam hier laat plaatsen.',
+        wantNameAdded: 'Wil je je naam hier toevoegen?',
+        supportFutureUpdates: 'Steun toekomstige updates, bugfixes en nieuwe World Cup-functies.',
+        donateBuyBeer: '🍺 Doneren / Biertje kopen',
+        enjoyingIntegration: '🍺 Geniet je van deze integratie?',
+        supportIntegration: 'Deze integratie steunen',
         conceded: "tegen",
       },
 
@@ -836,6 +902,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'مركز مباريات أوضح مع أقسام أيام المباريات وبطاقات نتائج وأعلام وتفاصيل ملاعب وحالات مباشرة أوضح.',
         days: 'أيام',
         versus: 'ضد',
+        supportersNav: '🙏 الداعمون',
+        supportersThankYouTitle: '🙏 الداعمون والشكر',
+        supportersIntro: 'بدأ هذا المشروع كلوحة Home Assistant شخصية، ونما بفضل الملاحظات والاختبارات والأفكار والدعم من المجتمع.',
+        supportersSpecialThanks: 'شكر خاص لكل من دعم تطوير تكامل كأس العالم 2026.',
+        supportersTitle: '🍺 الداعمون',
+        supporterDefaultMessage: 'شكراً لدعمك التطوير.',
+        anonymousSupporter: 'داعم مجهول',
+        noSupporters: 'لا يوجد داعمون بعد. كن أول من يشتري لي بيرة ويظهر اسمه هنا.',
+        wantNameAdded: 'هل تريد إضافة اسمك هنا؟',
+        supportFutureUpdates: 'ادعم التحديثات المستقبلية وإصلاح الأخطاء وميزات كأس العالم الجديدة.',
+        donateBuyBeer: '🍺 تبرع / اشترِ لي بيرة',
+        enjoyingIntegration: '🍺 هل تستمتع بهذا التكامل؟',
+        supportIntegration: 'ادعم هذا التكامل',
         conceded: "استقبل",
       },
 
@@ -953,7 +1032,150 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'Um centro de jogos mais claro com dias de jogo, cartões de resultado, bandeiras, estádios e estados mais visíveis.',
         days: 'Dias',
         versus: 'v',
+        supportersNav: '🙏 Apoiantes',
+        supportersThankYouTitle: '🙏 Apoiantes e agradecimentos',
+        supportersIntro: 'Este projeto começou como um painel pessoal do Home Assistant e cresceu graças ao feedback, testes, ideias e apoio da comunidade.',
+        supportersSpecialThanks: 'Um agradecimento especial a todos os que apoiaram o desenvolvimento da integração World Cup 2026.',
+        supportersTitle: '🍺 Apoiantes',
+        supporterDefaultMessage: 'Obrigado por apoiar o desenvolvimento.',
+        anonymousSupporter: 'Apoiante anónimo',
+        noSupporters: 'Ainda não há apoiantes. Seja o primeiro a pagar-me uma cerveja e a ter o seu nome aqui.',
+        wantNameAdded: 'Quer adicionar o seu nome aqui?',
+        supportFutureUpdates: 'Apoie futuras atualizações, correções de erros e novas funcionalidades da Copa do Mundo.',
+        donateBuyBeer: '🍺 Donar / Pagar uma cerveja',
+        enjoyingIntegration: '🍺 Está a gostar desta integração?',
+        supportIntegration: 'Apoiar esta integração',
         conceded: "sofridos",
+      },
+
+      pl: {
+        title: "Mistrzostwa Świata FIFA 2026",
+        subtitle: "Dedykowana aplikacja turniejowa dla Home Assistant",
+        back: "← Wstecz",
+        updated: "Zaktualizowano",
+        loading: "Ładowanie Mistrzostw Świata 2026...",
+        errorTitle: "Mistrzostwa Świata 2026",
+        errorText: "Nie udało się załadować danych aplikacji.",
+        overview: "Przegląd",
+        live: "Centrum Live",
+        fixtures: "Mecze",
+        groups: "Grupy",
+        knockout: "Faza pucharowa",
+        players: "Złoty But",
+        records: "Rekordy",
+        stats: "Centrum statystyk",
+        venues: "Stadiony",
+        totalMatches: "Łączna liczba meczów",
+        loaded: "Załadowano",
+        played: "Rozegrane",
+        remaining: "Pozostałe",
+        liveNow: "Na żywo",
+        totalGoals: "Łączna liczba goli",
+        nextMatch: "Następny mecz",
+        tournamentStatus: "Status turnieju",
+        demoMode: "Tryb demo",
+        on: "Włączony",
+        off: "Wyłączony",
+        lastUpdate: "Ostatnia aktualizacja",
+        ok: "OK",
+        failed: "Niepowodzenie",
+        progress: "Postęp",
+        topScorer: "Najlepszy strzelec",
+        notAvailable: "Niedostępne",
+        noUpcomingMatch: "Brak załadowanego nadchodzącego meczu.",
+        noLiveMatches: "Brak meczów na żywo.",
+        fixturesResults: "Mecze i wyniki",
+        noFixtures: "Nie załadowano jeszcze meczów.",
+        groupLabel: "Grupa",
+        groupsAL: "Grupy A-L",
+        noGroups: "Nie załadowano jeszcze tabel grup.",
+        noTeamsGroup: "Nie załadowano jeszcze drużyn w tej grupie.",
+        goldenBoot: "Wyścig o Złoty But",
+        noPlayerStats: "Nie załadowano jeszcze statystyk zawodników.",
+        knockoutBracket: "Drabinka fazy pucharowej",
+        fixturesNotAvailable: "Mecze nie są jeszcze dostępne",
+        highestMatchGoals: "Najwięcej goli w meczu",
+        biggestMargin: "Największa różnica",
+        topTeamGoals: "Najwięcej goli drużyny",
+        bestDefenceGA: "Najlepsza obrona",
+        highestScoringMatch: "Mecz z największą liczbą goli",
+        biggestWin: "Największe zwycięstwo",
+        topScoringTeam: "Najskuteczniejsza drużyna",
+        bestDefence: "Najlepsza obrona",
+        noResult: "Brak wyniku.",
+        noTeamGoalData: "Brak danych o golach drużyn.",
+        noDefensiveData: "Brak danych defensywnych.",
+        matchesPlayed: "Rozegrane mecze",
+        yellowCards: "Żółte kartki",
+        redCards: "Czerwone kartki",
+        minutes: "Minuty",
+        goalsPerMatch: "Gole / mecz",
+        draws: "Remisy",
+        drawRate: "Procent remisów",
+        bttsRate: "Obie drużyny strzelą",
+        over25Rate: "Powyżej 2,5",
+        stadiums: "Stadiony",
+        usaVenues: "Stadiony USA",
+        canadaVenues: "Stadiony Kanady",
+        mexicoVenues: "Stadiony Meksyku",
+        finalVenue: "Stadion finału",
+        capacity: "Pojemność",
+        worldCupStadiums: "Stadiony mundialu",
+        noVenueData: "Brak danych o stadionach.",
+        scheduled: "Zaplanowany",
+        liveStatus: "Na żywo",
+        paused: "Przerwa",
+        fullTime: "Koniec meczu",
+        aet: "Po dogrywce",
+        penalties: "Rzuty karne",
+        postponed: "Przełożony",
+        groupStage: "Faza grupowa",
+        round32: "1/16 finału",
+        round16: "1/8 finału",
+        quarterFinals: "Ćwierćfinały",
+        semiFinals: "Półfinały",
+        thirdPlace: "Mecz o 3. miejsce",
+        final: "Finał",
+        tbc: "Do ustalenia",
+        unknown: "Nieznane",
+        pos: "Poz.",
+        team: "Drużyna",
+        player: "Zawodnik",
+        goals: "Gole",
+        assists: "Asysty",
+        language: "Język panelu",
+        controlCentre: "Centrum kontroli World Cup 2026",
+        overviewSubtitle: "Panel turniejowy na żywo z meczami, wynikami, grupami, statystykami zawodników, stadionami, rekordami i fazą pucharową w jednym miejscu.",
+        tournamentIntelligence: "Analiza turnieju",
+        goldenBootCentre: "Centrum Złotego Buta",
+        leaderSpotlight: "Lider w centrum uwagi",
+        playersTracked: "Śledzeni zawodnicy",
+        totalAssists: "Łączna liczba asyst",
+        totalYellowCards: "Łączna liczba żółtych kartek",
+        totalRedCards: "Łączna liczba czerwonych kartek",
+        upNext: "Następne",
+        matchSpotlight: "Mecz w centrum uwagi",
+        upcomingFixtures: "Nadchodzące mecze",
+        latest: "Najnowsze",
+        recentResults: "Ostatnie wyniki",
+        playerWatch: "Obserwacja zawodników",
+        fixturesSubtitle: "Czytelniejsze centrum meczowe z podziałem na dni, kartami wyników, flagami, szczegółami stadionów i wyraźnymi statusami.",
+        days: "Dni",
+        versus: "v",
+        supportersNav: "🙏 Wspierający",
+        supportersThankYouTitle: "🙏 Wspierający i podziękowania",
+        supportersIntro: "Ten projekt rozpoczął się jako osobisty panel Home Assistant i rozwinął się dzięki opiniom, testom, pomysłom oraz wsparciu społeczności.",
+        supportersSpecialThanks: "Specjalne podziękowania dla wszystkich, którzy wsparli rozwój integracji World Cup 2026.",
+        supportersTitle: "🍺 Wspierający",
+        supporterDefaultMessage: "Dziękuję za wsparcie rozwoju projektu.",
+        anonymousSupporter: "Anonimowy wspierający",
+        noSupporters: "Nie dodano jeszcze wspierających. Bądź pierwszy, postaw mi piwo i dodaj swoje imię tutaj.",
+        wantNameAdded: "Chcesz dodać swoje imię tutaj?",
+        supportFutureUpdates: "Wesprzyj przyszłe aktualizacje, poprawki błędów i nowe funkcje mundialowe.",
+        donateBuyBeer: "🍺 Wpłać / Postaw mi piwo",
+        enjoyingIntegration: "🍺 Podoba Ci się ta integracja?",
+        supportIntegration: "Wesprzyj tę integrację",
+        conceded: "stracone",
       },
 
       ja: {
@@ -1070,6 +1292,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: '試合日ごとの区分、スコアカード、旗、会場情報、分かりやすい状態表示を備えた見やすい試合センター。',
         days: '日',
         versus: '対',
+        supportersNav: '🙏 サポーター',
+        supportersThankYouTitle: '🙏 サポーターと感謝',
+        supportersIntro: 'このプロジェクトは個人用の Home Assistant ダッシュボードとして始まり、コミュニティからのフィードバック、テスト、アイデア、支援によって成長しました。',
+        supportersSpecialThanks: 'World Cup 2026 インテグレーションの開発を支援してくださった皆様に感謝します。',
+        supportersTitle: '🍺 サポーター',
+        supporterDefaultMessage: '開発を支援していただきありがとうございます。',
+        anonymousSupporter: '匿名サポーター',
+        noSupporters: 'まだサポーターはいません。最初にビール代を支援して、ここに名前を載せましょう。',
+        wantNameAdded: 'ここに名前を追加しますか？',
+        supportFutureUpdates: '今後のアップデート、バグ修正、ワールドカップ新機能を支援できます。',
+        donateBuyBeer: '🍺 寄付 / ビールをおごる',
+        enjoyingIntegration: '🍺 このインテグレーションを楽しんでいますか？',
+        supportIntegration: 'このインテグレーションを支援',
         conceded: "失点",
       },
 
@@ -1187,6 +1422,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: '경기일 섹션, 점수 카드, 국기, 경기장 정보, 명확한 상태 배지를 갖춘 더 깔끔한 경기 센터입니다.',
         days: '일',
         versus: '대',
+        supportersNav: '🙏 후원자',
+        supportersThankYouTitle: '🙏 후원자 및 감사',
+        supportersIntro: '이 프로젝트는 개인 Home Assistant 대시보드로 시작했으며 커뮤니티의 피드백, 테스트, 아이디어와 지원 덕분에 성장했습니다.',
+        supportersSpecialThanks: 'World Cup 2026 통합 개발을 지원해 주신 모든 분들께 특별히 감사드립니다.',
+        supportersTitle: '🍺 후원자',
+        supporterDefaultMessage: '개발을 지원해 주셔서 감사합니다.',
+        anonymousSupporter: '익명 후원자',
+        noSupporters: '아직 후원자가 없습니다. 첫 번째로 맥주 한 잔을 후원하고 여기에 이름을 올려보세요.',
+        wantNameAdded: '여기에 이름을 추가하고 싶으신가요?',
+        supportFutureUpdates: '향후 업데이트, 버그 수정 및 새로운 월드컵 기능을 지원해 주세요.',
+        donateBuyBeer: '🍺 기부 / 맥주 사주기',
+        enjoyingIntegration: '🍺 이 통합을 즐기고 계신가요?',
+        supportIntegration: '이 통합 지원',
         conceded: "실점",
       },
 
@@ -1304,6 +1552,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'Ett tydligare matchcenter med matchdagssektioner, resultatrutor, flaggor, arenadetaljer och tydliga statusmärken.',
         days: 'Dagar',
         versus: 'mot',
+        supportersNav: '🙏 Supportrar',
+        supportersThankYouTitle: '🙏 Supportrar & tack',
+        supportersIntro: 'Det här projektet började som en personlig Home Assistant-panel och har vuxit tack vare feedback, tester, idéer och stöd från communityn.',
+        supportersSpecialThanks: 'Särskilt tack till alla som har stött utvecklingen av World Cup 2026-integrationen.',
+        supportersTitle: '🍺 Supportrar',
+        supporterDefaultMessage: 'Tack för att du stödjer utvecklingen.',
+        anonymousSupporter: 'Anonym supporter',
+        noSupporters: 'Inga supportrar har lagts till ännu. Var först med att bjuda på en öl och få ditt namn här.',
+        wantNameAdded: 'Vill du lägga till ditt namn här?',
+        supportFutureUpdates: 'Stöd framtida uppdateringar, buggfixar och nya World Cup-funktioner.',
+        donateBuyBeer: '🍺 Donera / Bjud på en öl',
+        enjoyingIntegration: '🍺 Gillar du den här integrationen?',
+        supportIntegration: 'Stöd den här integrationen',
         conceded: "insläppta",
       },
 
@@ -1421,6 +1682,19 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'Et tydeligere kampsenter med kampdager, resultatkort, flagg, arenadetaljer og klare statusmerker.',
         days: 'Dager',
         versus: 'mot',
+        supportersNav: '🙏 Støttespillere',
+        supportersThankYouTitle: '🙏 Støttespillere og takk',
+        supportersIntro: 'Dette prosjektet startet som et personlig Home Assistant-dashbord og har vokst takket være tilbakemeldinger, testing, ideer og støtte fra fellesskapet.',
+        supportersSpecialThanks: 'Spesiell takk til alle som har støttet utviklingen av World Cup 2026-integrasjonen.',
+        supportersTitle: '🍺 Støttespillere',
+        supporterDefaultMessage: 'Takk for at du støtter utviklingen.',
+        anonymousSupporter: 'Anonym støttespiller',
+        noSupporters: 'Ingen støttespillere er lagt til ennå. Bli den første til å kjøpe meg en øl og få navnet ditt her.',
+        wantNameAdded: 'Vil du ha navnet ditt lagt til her?',
+        supportFutureUpdates: 'Støtt fremtidige oppdateringer, feilrettinger og nye World Cup-funksjoner.',
+        donateBuyBeer: '🍺 Doner / Kjøp meg en øl',
+        enjoyingIntegration: '🍺 Liker du denne integrasjonen?',
+        supportIntegration: 'Støtt denne integrasjonen',
         conceded: "sluppet inn",
       },
     };
@@ -1475,6 +1749,23 @@ class WorldCup2026Panel extends HTMLElement {
     }
   }
 
+  async loadSupporters() {
+    try {
+      const response = await fetch("/world_cup_2026_frontend/data/supporters.json", {
+        cache: "no-store",
+      });
+
+      if (!response.ok) {
+        throw new Error("Supporters file not available");
+      }
+
+      const supporters = await response.json();
+      return Array.isArray(supporters) ? supporters : [];
+    } catch {
+      return [];
+    }
+  }
+
   async loadAll() {
     try {
       this._data.overview = await this.callApi("world_cup_2026/get_overview");
@@ -1485,6 +1776,7 @@ class WorldCup2026Panel extends HTMLElement {
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
       this._data.records = await this.safeCall("world_cup_2026/get_records", {});
       this._data.venues = await this.safeCall("world_cup_2026/get_venues", {});
+      this._data.supporters = await this.loadSupporters();
       this.render();
     } catch (err) {
       this.renderError(err);
@@ -1517,6 +1809,7 @@ class WorldCup2026Panel extends HTMLElement {
       nl: "nl-NL",
       ar: "ar-SA",
       pt: "pt-PT",
+      pl: "pl-PL",
       ja: "ja-JP",
       ko: "ko-KR",
       sv: "sv-SE",
@@ -3712,6 +4005,7 @@ class WorldCup2026Panel extends HTMLElement {
       ["records", this.t("records")],
       ["stats", this.t("stats")],
       ["venues", this.t("venues")],
+      ["supporters", this.t("supportersNav")],
     ];
 
     return `
@@ -3738,6 +4032,7 @@ class WorldCup2026Panel extends HTMLElement {
           <option value="nl" ${this._language === "nl" ? "selected" : ""}>Dutch</option>
           <option value="ar" ${this._language === "ar" ? "selected" : ""}>Arabic</option>
           <option value="pt" ${this._language === "pt" ? "selected" : ""}>Portuguese</option>
+          <option value="pl" ${this._language === "pl" ? "selected" : ""}>Polish</option>
           <option value="ja" ${this._language === "ja" ? "selected" : ""}>Japanese</option>
           <option value="ko" ${this._language === "ko" ? "selected" : ""}>Korean</option>
           <option value="sv" ${this._language === "sv" ? "selected" : ""}>Swedish</option>
@@ -4678,6 +4973,63 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  supportersPage() {
+    const supporters = Array.isArray(this._data.supporters) ? this._data.supporters : [];
+
+    const supporterCards = supporters.length
+      ? supporters.map((supporter) => {
+          const name = typeof supporter === "string" ? supporter : supporter.name;
+          const message = typeof supporter === "string"
+            ? this.t("supporterDefaultMessage")
+            : supporter.message;
+
+          return `
+            <div class="wc-stat">
+              <strong>🍺 ${this.esc(name || this.t("anonymousSupporter"))}</strong>
+              <div class="wc-muted">${this.esc(message || this.t("supporterDefaultMessage"))}</div>
+            </div>
+          `;
+        }).join("")
+      : `
+        <div class="wc-empty">
+          ${this.t("noSupporters")}
+        </div>
+      `;
+
+    return `
+      <div class="wc-card">
+        <div class="wc-section-title">${this.t("supportersThankYouTitle")}</div>
+        <p>
+          ${this.t("supportersIntro")}
+        </p>
+        <p class="wc-muted">
+          ${this.t("supportersSpecialThanks")}
+        </p>
+      </div>
+
+      <div class="wc-card">
+        <div class="wc-section-title">${this.t("supportersTitle")}</div>
+        <div class="wc-grid">
+          ${supporterCards}
+        </div>
+      </div>
+
+      <div class="wc-card" style="text-align:center;">
+        <div class="wc-section-title">${this.t("wantNameAdded")}</div>
+        <p class="wc-muted">${this.t("supportFutureUpdates")}</p>
+        <a
+          class="wc-pill wc-donate-button"
+          href="https://paypal.me/graffidoodle"
+          target="_blank"
+          rel="noopener noreferrer"
+          style="display:inline-flex;margin-top:8px;text-decoration:none;"
+        >
+          ${this.t("donateBuyBeer")}
+        </a>
+      </div>
+    `;
+  }
+
   pageContent() {
     if (this._page === "overview") return this.overviewPage();
     if (this._page === "live") return this.livePage();
@@ -4688,6 +5040,7 @@ class WorldCup2026Panel extends HTMLElement {
     if (this._page === "records") return this.recordsPage();
     if (this._page === "stats") return this.statsPage();
     if (this._page === "venues") return this.venuesPage();
+    if (this._page === "supporters") return this.supportersPage();
     return this.overviewPage();
   }
 
@@ -4714,9 +5067,9 @@ class WorldCup2026Panel extends HTMLElement {
                 href="https://paypal.me/graffidoodle"
                 target="_blank"
                 rel="noopener noreferrer"
-                title="Support this integration"
+                title="${this.t("supportIntegration")}"
               >
-                🍺 Donate / Buy Me a Beer
+                ${this.t("donateBuyBeer")}
               </a>
 
               <div class="wc-pill">
@@ -4729,13 +5082,13 @@ class WorldCup2026Panel extends HTMLElement {
           ${this.pageContent()}
 
           <div class="wc-donate-footer">
-            <span>🍺 Enjoying this integration?</span>
+            <span>${this.t("enjoyingIntegration")}</span>
             <a
               href="https://paypal.me/graffidoodle"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Donate / Buy Me a Beer
+              ${this.t("donateBuyBeer")}
             </a>
           </div>
         </div>
