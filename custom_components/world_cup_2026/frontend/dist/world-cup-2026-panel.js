@@ -2580,33 +2580,29 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-header-countdown-pill {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          flex: 1 1 auto;
-          min-width: 220px;
-          min-height: 42px;
-          padding: 8px 18px;
-          border-radius: 18px;
-          color: #e9fbff;
-          background:
-            radial-gradient(circle at top left, rgba(60, 210, 255, 0.24), transparent 45%),
-            linear-gradient(135deg, rgba(15, 42, 90, 0.82), rgba(8, 17, 44, 0.72));
-          border: 1px solid rgba(118, 225, 255, 0.38);
-          box-shadow:
-            inset 0 1px 0 rgba(255,255,255,0.12),
-            0 0 22px rgba(53, 206, 255, 0.22);
-          backdrop-filter: blur(12px);
-          -webkit-backdrop-filter: blur(12px);
-          font-size: clamp(18px, 2.2vw, 32px);
-          line-height: 1;
-          font-weight: 1000;
-          letter-spacing: 0.7px;
-          text-align: center;
-          white-space: nowrap;
-          overflow: hidden;
-          text-overflow: ellipsis;
-        }
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1 1 auto;
+  min-width: 220px;
+  min-height: 42px;
+  padding: 8px 18px;
+  border-radius: 18px;
+  color: #e9fbff;
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  font-size: clamp(18px, 2.2vw, 32px);
+  line-height: 1;
+  font-weight: 1000;
+  letter-spacing: 0.7px;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 
         .wc-header-countdown-pill.is-hidden {
           display: none !important;
