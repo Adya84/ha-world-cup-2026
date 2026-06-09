@@ -8,6 +8,73 @@ Featuring 48 teams, 12 groups, 104 matches and host venues across the United Sta
 
 ---
 
+## 📦 Installation
+
+### Option 1: Install via HACS
+
+1. Open Home Assistant.
+2. Go to **HACS**.
+3. Open the menu in the top-right corner and select **Custom repositories**.
+4. Add this repository URL:
+
+   `https://github.com/Adya84/ha-world-cup-2026`
+
+5. Select **Integration** as the category.
+6. Click **Add**.
+7. Search for **World Cup 2026** in HACS.
+8. Download and install the integration.
+9. Restart Home Assistant.
+
+### Option 2: Manual Installation
+
+1. Download or clone this repository.
+2. Copy the integration folder:
+
+   `custom_components/world_cup_2026`
+
+   into your Home Assistant configuration directory:
+
+   `config/custom_components/world_cup_2026`
+
+3. Your folder structure should look like this:
+
+   `config/custom_components/world_cup_2026/manifest.json`
+
+4. Restart Home Assistant.
+
+### Configuration
+
+1. In Home Assistant, go to **Settings**.
+2. Open **Devices & services**.
+3. Click **Add Integration**.
+4. Search for **World Cup 2026**.
+5. Enter your `football-data.org` API key when prompted.
+6. Complete the setup flow.
+
+### Demo Mode
+
+Demo mode can be enabled after setup:
+
+1. Go to **Settings → Devices & services**.
+2. Open the **World Cup 2026** integration.
+3. Click **Configure**.
+4. Enable **Demo mode**.
+5. Save the options.
+
+Demo mode loads local fixture data instead of calling the live API, which is useful for dashboard testing and development before the tournament starts.
+
+### API Key
+
+This integration uses data from `football-data.org`.
+
+You need a valid API key from:
+
+`https://www.football-data.org/`
+
+The API key is entered during the Home Assistant setup flow.
+
+---
+
 🚀 Latest Release - v3.3.1
 
 The World Cup 2026 integration continues to evolve with major improvements to the dedicated tournament application.
