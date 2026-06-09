@@ -23,7 +23,7 @@ class WorldCup2026Panel extends HTMLElement {
     return {
       en: {
         title: "FIFA World Cup 2026",
-        subtitle: "Home Assistant dedicated tournament application",
+        subtitle: "Home Assistant Tournament App",
         back: "← Back",
         updated: "Updated",
         loading: "Loading World Cup 2026...",
@@ -2218,52 +2218,95 @@ class WorldCup2026Panel extends HTMLElement {
           box-shadow: 0 0 22px rgba(0, 200, 255, 0.40);
         }
 
-        .wc-overview-beer-button {
-          position: absolute;
-          top: 12px;
-          left: 50%;
-          transform: translateX(-50%);
-          z-index: 100;
-          display: inline-flex;
+        
+.wc-overview-beer-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,215,0,0.45);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 15px;
+  box-shadow: 0 0 10px rgba(255,215,0,0.15), 0 0 20px rgba(255,215,0,0.10);
+  transition: all 0.2s ease;
+}
+
+.wc-overview-beer-button:hover {
+  border-color: rgba(255,215,0,0.8);
+  box-shadow: 0 0 15px rgba(255,215,0,0.35), 0 0 30px rgba(255,215,0,0.20);
+  transform: translateY(-1px);
+}
+
+        .wc-header-title-row {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
           align-items: center;
-          justify-content: center;
-          gap: 6px;
-          padding: 12px 22px;
-          border-radius: 999px;
-          text-decoration: none;
-          font-size: 15px;
-          line-height: 1;
-          font-weight: 900;
-          white-space: nowrap;
-          color: white;
-          background: linear-gradient(135deg, rgba(0, 112, 186, 0.95), rgba(0, 200, 255, 0.45));
-          border: 1px solid rgba(0, 200, 255, 0.55);
-          box-shadow: 0 0 18px rgba(0, 200, 255, 0.35);
+          gap: 18px;
+          width: 100%;
         }
 
-        .wc-overview-beer-button:hover {
-          transform: translateX(-50%) translateY(-1px);
-          box-shadow: 0 0 24px rgba(0, 200, 255, 0.45);
+        .wc-header-subtitle-inline {
+          text-align: right;
+          opacity: 0.72;
+          font-size: 14px;
+          font-weight: 700;
+          line-height: 1.25;
         }
 
         .supporters-feature-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 14px;
-          margin-bottom: 16px;
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          gap: 8px;
+          margin-bottom: 10px;
+        }
+
+        .supporter-card {
+          padding: 8px 10px !important;
+          min-height: auto;
+          border-radius: 12px;
         }
 
         .supporter-latest-card {
-          background: linear-gradient(135deg, rgba(255,220,120,0.16), rgba(255,255,255,0.08));
-          border-color: rgba(255,220,120,0.30);
+          padding: 7px 10px !important;
+          background: linear-gradient(135deg, rgba(255,220,120,0.14), rgba(255,255,255,0.07));
+          border-color: rgba(255,220,120,0.28);
         }
 
         .supporter-card-name {
           display: flex !important;
           align-items: center;
-          gap: 8px;
-          font-size: 22px !important;
+          gap: 6px;
+          font-size: 14px !important;
           line-height: 1.15;
+          margin-bottom: 3px;
+        }
+
+        .supporter-card .group-flag-img,
+        .supporter-card .group-flag-missing {
+          width: 22px;
+          height: 15px;
+          font-size: 11px;
+        }
+
+        .supporter-card .wc-muted {
+          font-size: 11px;
+          line-height: 1.2;
+          margin-top: 2px;
+        }
+
+        .supporter-card .wc-muted:last-child {
+          display: none;
+        }
+
+        .supporters-all-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
+          gap: 8px;
         }
 
         .wc-donate-footer {
@@ -3719,15 +3762,21 @@ class WorldCup2026Panel extends HTMLElement {
           gap: 14px;
         }
 
-        @media (max-width: 760px) {
-          .wc-overview-beer-button {
-            top: 8px;
-            padding: 9px 16px;
-            font-size: 13px;
+        @media (max-width: 900px) {
+          .wc-header-title-row {
+            grid-template-columns: 1fr;
+            justify-items: center;
+            text-align: center;
+            gap: 10px;
           }
 
-          .wc-header {
-            padding-top: 44px;
+          .wc-header-subtitle-inline {
+            text-align: center;
+          }
+
+          .wc-overview-beer-button {
+            padding: 10px 18px;
+            font-size: 14px;
           }
         }
 
@@ -5078,7 +5127,7 @@ class WorldCup2026Panel extends HTMLElement {
     const date = typeof supporter === "string" ? "" : supporter.date;
 
     return `
-      <div class="wc-stat ${isLatest ? "supporter-latest-card" : ""}">
+      <div class="wc-stat supporter-card ${isLatest ? "supporter-latest-card" : ""}">
         <strong class="supporter-card-name">
           ${country ? this.flag(country, true) : "🍺"}
           ${this.esc(name || this.t("anonymousSupporter"))}
@@ -5130,7 +5179,7 @@ class WorldCup2026Panel extends HTMLElement {
 
             <div class="wc-card">
               <div class="wc-section-title">${this.t("allSupporters")}</div>
-              <div class="wc-grid">
+              <div class="supporters-all-grid">
                 ${allSupporters.map((supporter) => this.supporterCard(supporter)).join("")}
               </div>
             </div>
@@ -5178,20 +5227,22 @@ class WorldCup2026Panel extends HTMLElement {
     this.innerHTML = `
       ${this.styles()}
       <div class="wc-app" dir="${this._language === "ar" ? "rtl" : "ltr"}">
-        <a
-          class="wc-overview-beer-button"
-          href="https://paypal.me/graffidoodle"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="${this.t("supportIntegration")}"
-        >
-          🍺 Buy Me A Beer
-        </a>
         <div class="wc-shell">
           <div class="wc-header">
-            <div>
+            <div class="wc-header-title-row">
               <div class="wc-title">${this.t("title")}</div>
-              <div class="wc-subtitle">${this.t("subtitle")}</div>
+
+              <a
+                class="wc-overview-beer-button"
+                href="https://paypal.me/graffidoodle"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="${this.t("supportIntegration")}"
+              >
+                🍺 Buy Me A Beer
+              </a>
+
+              <div class="wc-header-subtitle-inline">${this.t("subtitle")}</div>
             </div>
 
             <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
