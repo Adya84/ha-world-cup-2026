@@ -1786,8 +1786,16 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   async loadSupporters() {
-    try {
-      const response = await fetch("/world_cup_2026_frontend/data/supporters.json", {
+    const sortSupporters = (supporters) => {
+      return [...supporters].sort((a, b) => {
+        const aDate = new Date(a?.date || "1900-01-01").getTime();
+        const bDate = new Date(b?.date || "1900-01-01").getTime();
+        return bDate - aDate;
+      });
+    };
+
+    const fetchSupporters = async (url) => {
+      const response = await fetch(url, {
         cache: "no-store",
       });
 
@@ -1796,9 +1804,17 @@ class WorldCup2026Panel extends HTMLElement {
       }
 
       const supporters = await response.json();
-      return Array.isArray(supporters) ? supporters : [];
+      return Array.isArray(supporters) ? sortSupporters(supporters) : [];
+    };
+
+    try {
+      return await fetchSupporters("https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/supporters.json?t=" + Date.now());
     } catch {
-      return [];
+      try {
+        return await fetchSupporters("/world_cup_2026_frontend/data/supporters.json?t=" + Date.now());
+      } catch {
+        return [];
+      }
     }
   }
 
@@ -2260,53 +2276,22 @@ class WorldCup2026Panel extends HTMLElement {
 
         .supporters-feature-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-          gap: 8px;
-          margin-bottom: 10px;
-        }
-
-        .supporter-card {
-          padding: 8px 10px !important;
-          min-height: auto;
-          border-radius: 12px;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 14px;
+          margin-bottom: 16px;
         }
 
         .supporter-latest-card {
-          padding: 7px 10px !important;
-          background: linear-gradient(135deg, rgba(255,220,120,0.14), rgba(255,255,255,0.07));
-          border-color: rgba(255,220,120,0.28);
+          background: linear-gradient(135deg, rgba(255,220,120,0.16), rgba(255,255,255,0.08));
+          border-color: rgba(255,220,120,0.30);
         }
 
         .supporter-card-name {
           display: flex !important;
           align-items: center;
-          gap: 6px;
-          font-size: 14px !important;
-          line-height: 1.15;
-          margin-bottom: 3px;
-        }
-
-        .supporter-card .group-flag-img,
-        .supporter-card .group-flag-missing {
-          width: 22px;
-          height: 15px;
-          font-size: 11px;
-        }
-
-        .supporter-card .wc-muted {
-          font-size: 11px;
-          line-height: 1.2;
-          margin-top: 2px;
-        }
-
-        .supporter-card .wc-muted:last-child {
-          display: none;
-        }
-
-        .supporters-all-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
           gap: 8px;
+          font-size: 22px !important;
+          line-height: 1.15;
         }
 
         .wc-donate-footer {
@@ -5127,7 +5112,7 @@ class WorldCup2026Panel extends HTMLElement {
     const date = typeof supporter === "string" ? "" : supporter.date;
 
     return `
-      <div class="wc-stat supporter-card ${isLatest ? "supporter-latest-card" : ""}">
+      <div class="wc-stat ${isLatest ? "supporter-latest-card" : ""}">
         <strong class="supporter-card-name">
           ${country ? this.flag(country, true) : "🍺"}
           ${this.esc(name || this.t("anonymousSupporter"))}
@@ -5179,7 +5164,7 @@ class WorldCup2026Panel extends HTMLElement {
 
             <div class="wc-card">
               <div class="wc-section-title">${this.t("allSupporters")}</div>
-              <div class="supporters-all-grid">
+              <div class="wc-grid">
                 ${allSupporters.map((supporter) => this.supporterCard(supporter)).join("")}
               </div>
             </div>
