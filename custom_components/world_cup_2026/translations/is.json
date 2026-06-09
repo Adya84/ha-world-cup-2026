@@ -1,0 +1,180 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Heimsmeistaramót 2026",
+        "description": "Sláðu inn API-lykil þinn frá football-data.org. Ókeypis lykill er fáanlegur á https://www.football-data.org/client/register",
+        "data": {
+          "api_key": "API-lykill"
+        },
+        "data_description": {
+          "api_key": "Persónulegur API-lykill þinn frá football-data.org (ókeypis aðgangur dugir)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Ekki tókst að tengjast football-data.org. Athugaðu nettenginguna og reyndu aftur.",
+      "invalid_auth": "Ógildur API-lykill. Athugaðu lykilinn á reikningssíðu þinni á football-data.org.",
+      "unknown": "Óvænt villa kom upp. Skoðaðu annálana í Home Assistant til að fá nánari upplýsingar."
+    },
+    "abort": {
+      "already_configured": "Heimsmeistaramót 2026 er þegar stillt."
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Heimsmeistaramót 2026 — Stillingar",
+        "description": "Stilltu hegðun samþættingarinnar.",
+        "data": {
+          "demo_mode": "Kynningarhamur"
+        },
+        "data_description": {
+          "demo_mode": "Hlaðið inn prófagögnum í stað þess að kalla á lifandi API. Gagnlegt þegar þú ert að þróa mælaborð og keppni er ekki í gangi. Samþættingin endurhleður sjálfkrafa þegar þú vistar."
+        }
+      }
+    }
+  },
+  "entity": {
+    "sensor": {
+      "fixtures": {
+        "name": "Leikir"
+      },
+      "standings": {
+        "name": "Stigatafla"
+      },
+      "next_match": {
+        "name": "Næsti leikur"
+      },
+      "live_matches": {
+        "name": "Leikir í gangi"
+      },
+      "today_matches": {
+        "name": "Leikir í dag"
+      },
+      "tomorrow_matches": {
+        "name": "Leikir á morgun"
+      },
+      "completed_matches": {
+        "name": "Leikjum lokið"
+      },
+      "group_fixtures": {
+        "name": "{group}"
+      },
+      "stage_fixtures": {
+        "name": "{stage}"
+      },
+      "total_matches_played": {
+        "name": "Leikir spilaðir alls"
+      },
+      "matches_remaining": {
+        "name": "Leikir eftir"
+      },
+      "progress": {
+        "name": "Framvinda"
+      },
+      "total_goals": {
+        "name": "Mörk alls"
+      },
+      "goals_per_match": {
+        "name": "Mörk á leik"
+      },
+      "teams_remaining": {
+        "name": "Lið eftir"
+      },
+      "current_stage": {
+        "name": "Núverandi stig"
+      },
+      "top_scorers": {
+        "name": "Markahæðstur"
+      },
+      "top_scorer": {
+        "name": "Markahæðstur"
+      },
+      "top_assists": {
+        "name": "Flestar stoðsendingar"
+      },
+      "top_assist": {
+        "name": "Flestar stoðsendingar"
+      },
+      "biggest_win": {
+        "name": "Stærsti sigurinn"
+      },
+      "highest_scoring_match": {
+        "name": "Flest mörk skoruð í einum leik"
+      },
+      "latest_result": {
+        "name": "Síðustu úrslit"
+      },
+      "top_scoring_team": {
+        "name": "Markahæðsta liðið"
+      },
+      "best_defence": {
+        "name": "Besta vörnin"
+      },
+      "eliminated_teams": {
+        "name": "Lið dottin úr keppni"
+      },
+      "live_goals": {
+        "name": "Mörk í beinni"
+      },
+      "countdown": {
+        "name": "Niðurtalning"
+      },
+      "days_until_final": {
+        "name": "Dagar til úrslitaleiks"
+      },
+      "stadiums": {
+        "name": "Leikvanggar"
+      },
+      "host_cities": {
+        "name": "Gestgjafaborgir"
+      },
+      "final_venue": {
+        "name": "Leikvangur úrslitaleiks"
+      },
+      "group_leaders": {
+        "name": "Efstir í riðlinum"
+      },
+      "extra_time_matches": {
+        "name": "Leikir í framlengingu"
+      },
+      "penalty_shootouts": {
+        "name": "Vítaspyrnukeppni"
+      },
+      "top_scorer_no_penalties": {
+        "name": "Markahæðstur án vítaspyrna"
+      },
+      "goal_contributions": {
+        "name": "Þátttaka í mörkum"
+      },
+      "penalty_goals": {
+        "name": "Vítaspyrnumörk"
+      },
+      "btts_rate": {
+        "name": "Hlutfall leika þar sem bæði lið skora"
+      },
+      "over_2_5_goals_rate": {
+        "name": "Hlutfall leika með yfir 2,5 mörk"
+      },
+      "draw_rate": {
+        "name": "Hlutfall jafntefla"
+      },
+      "clean_sheets": {
+        "name": "Hreinar varnir"
+      },
+      "unbeaten_teams": {
+        "name": "Ósigurð lið"
+      },
+      "comebacks": {
+        "name": "Viðsnúningur"
+      },
+      "first_half_goals": {
+        "name": "Mörk í fyrri hálfleik"
+      },
+      "second_half_goals": {
+        "name": "Mörk í seinni hálfleik"
+      }
+    }
+  }
+}
