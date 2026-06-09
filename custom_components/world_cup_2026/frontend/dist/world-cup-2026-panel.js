@@ -5178,17 +5178,15 @@ class WorldCup2026Panel extends HTMLElement {
     this.innerHTML = `
       ${this.styles()}
       <div class="wc-app" dir="${this._language === "ar" ? "rtl" : "ltr"}">
-        ${this._page === "overview" ? `
-          <a
-            class="wc-overview-beer-button"
-            href="https://paypal.me/graffidoodle"
-            target="_blank"
-            rel="noopener noreferrer"
-            title="${this.t("supportIntegration")}"
-          >
-            🍺 Buy Me A Beer
-          </a>
-        ` : ""}
+        <a
+          class="wc-overview-beer-button"
+          href="https://paypal.me/graffidoodle"
+          target="_blank"
+          rel="noopener noreferrer"
+          title="${this.t("supportIntegration")}"
+        >
+          🍺 Buy Me A Beer
+        </a>
         <div class="wc-shell">
           <div class="wc-header">
             <div>
