@@ -280,7 +280,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'Aucun soutien ajouté pour le moment. Soyez le premier à offrir une bière et à faire apparaître votre nom ici.',
         wantNameAdded: 'Vous voulez ajouter votre nom ici ?',
         supportFutureUpdates: 'Soutenez les futures mises à jour, corrections de bugs et nouvelles fonctions de la Coupe du Monde.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 Vous voulez que votre nom apparaisse sur la page des soutiens ? Offrez-moi une bière via PayPal et votre nom pourra être ajouté à la liste des soutiens World Cup 2026 pour vous remercier de votre aide au développement.',
         donateBuyBeer: '🍺 Faire un don / Offrir une bière',
         enjoyingIntegration: '🍺 Vous aimez cette intégration ?',
         supportIntegration: 'Soutenir cette intégration',
@@ -413,7 +413,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'Noch keine Unterstützer hinzugefügt. Sei der Erste, der ein Bier spendiert, und lass deinen Namen hier anzeigen.',
         wantNameAdded: 'Möchtest du deinen Namen hier sehen?',
         supportFutureUpdates: 'Unterstütze zukünftige Updates, Fehlerbehebungen und neue World-Cup-Funktionen.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 Möchtest du deinen Namen auf der Unterstützerseite sehen? Gib mir über PayPal ein Bier aus und dein Name kann als Dank für deine Unterstützung bei der Entwicklung zur World Cup 2026 Unterstützerliste hinzugefügt werden.',
         donateBuyBeer: '🍺 Spenden / Ein Bier ausgeben',
         enjoyingIntegration: '🍺 Gefällt dir diese Integration?',
         supportIntegration: 'Diese Integration unterstützen',
@@ -534,6 +534,7 @@ class WorldCup2026Panel extends HTMLElement {
         fixturesSubtitle: 'Un centro de partidos más claro con jornadas, tarjetas de marcador, banderas, sedes y estados más legibles.',
         days: 'Días',
         versus: 'v',
+        supporterBeerMessage: '🍺 ¿Quieres que tu nombre aparezca en la página de seguidores? Invítame a una cerveza por PayPal y tu nombre podrá añadirse a la lista de seguidores de World Cup 2026 como agradecimiento por apoyar el desarrollo.',
         conceded: "encajados",
       },
 
@@ -663,7 +664,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'Nessun sostenitore ancora aggiunto. Sii il primo a offrirmi una birra e a far comparire il tuo nome qui.',
         wantNameAdded: 'Vuoi aggiungere il tuo nome qui?',
         supportFutureUpdates: 'Sostieni futuri aggiornamenti, correzioni di bug e nuove funzioni della Coppa del Mondo.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 Vuoi che il tuo nome compaia nella pagina dei sostenitori? Offrimi una birra tramite PayPal e il tuo nome potrà essere aggiunto alla lista dei sostenitori World Cup 2026 come ringraziamento per il supporto allo sviluppo.',
         donateBuyBeer: '🍺 Dona / Offrimi una birra',
         enjoyingIntegration: '🍺 Ti piace questa integrazione?',
         supportIntegration: 'Sostieni questa integrazione',
@@ -796,7 +797,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'Nog geen supporters toegevoegd. Wees de eerste die een biertje koopt en je naam hier laat plaatsen.',
         wantNameAdded: 'Wil je je naam hier toevoegen?',
         supportFutureUpdates: 'Steun toekomstige updates, bugfixes en nieuwe World Cup-functies.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 Wil je dat je naam op de Supporters-pagina verschijnt? Trakteer me op een biertje via PayPal en je naam kan als bedankje voor je steun aan de ontwikkeling worden toegevoegd aan de World Cup 2026 Supporters-lijst.',
         donateBuyBeer: '🍺 Doneren / Biertje kopen',
         enjoyingIntegration: '🍺 Geniet je van deze integratie?',
         supportIntegration: 'Deze integratie steunen',
@@ -929,7 +930,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'لا يوجد داعمون بعد. كن أول من يشتري لي بيرة ويظهر اسمه هنا.',
         wantNameAdded: 'هل تريد إضافة اسمك هنا؟',
         supportFutureUpdates: 'ادعم التحديثات المستقبلية وإصلاح الأخطاء وميزات كأس العالم الجديدة.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 هل تريد ظهور اسمك في صفحة الداعمين؟ اشترِ لي بيرة عبر PayPal ويمكن إضافة اسمك إلى قائمة داعمي World Cup 2026 كشكر على دعمك للتطوير.',
         donateBuyBeer: '🍺 تبرع / اشترِ لي بيرة',
         enjoyingIntegration: '🍺 هل تستمتع بهذا التكامل؟',
         supportIntegration: 'ادعم هذا التكامل',
@@ -1062,7 +1063,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'Ainda não há apoiantes. Seja o primeiro a pagar-me uma cerveja e a ter o seu nome aqui.',
         wantNameAdded: 'Quer adicionar o seu nome aqui?',
         supportFutureUpdates: 'Apoie futuras atualizações, correções de erros e novas funcionalidades da Copa do Mundo.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 Quer ver o seu nome na página de apoiantes? Pague-me uma cerveja pelo PayPal e o seu nome poderá ser adicionado à lista de apoiantes World Cup 2026 como agradecimento pelo apoio ao desenvolvimento.',
         donateBuyBeer: '🍺 Donar / Pagar uma cerveja',
         enjoyingIntegration: '🍺 Está a gostar desta integração?',
         supportIntegration: 'Apoiar esta integração',
@@ -1195,7 +1196,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: "Nie dodano jeszcze wspierających. Bądź pierwszy, postaw mi piwo i dodaj swoje imię tutaj.",
         wantNameAdded: "Chcesz dodać swoje imię tutaj?",
         supportFutureUpdates: "Wesprzyj przyszłe aktualizacje, poprawki błędów i nowe funkcje mundialowe.",
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 Chcesz, aby Twoje imię pojawiło się na stronie wspierających? Postaw mi piwo przez PayPal, a Twoje imię może zostać dodane do listy wspierających World Cup 2026 jako podziękowanie za wsparcie rozwoju.',
         donateBuyBeer: "🍺 Wpłać / Postaw mi piwo",
         enjoyingIntegration: "🍺 Podoba Ci się ta integracja?",
         supportIntegration: "Wesprzyj tę integrację",
@@ -1328,7 +1329,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'まだサポーターはいません。最初にビール代を支援して、ここに名前を載せましょう。',
         wantNameAdded: 'ここに名前を追加しますか？',
         supportFutureUpdates: '今後のアップデート、バグ修正、ワールドカップ新機能を支援できます。',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 サポーターページに名前を掲載したいですか？PayPalでビール代を支援すると、開発支援への感謝としてWorld Cup 2026サポーターリストに名前を追加できます。',
         donateBuyBeer: '🍺 寄付 / ビールをおごる',
         enjoyingIntegration: '🍺 このインテグレーションを楽しんでいますか？',
         supportIntegration: 'このインテグレーションを支援',
@@ -1461,7 +1462,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: '아직 후원자가 없습니다. 첫 번째로 맥주 한 잔을 후원하고 여기에 이름을 올려보세요.',
         wantNameAdded: '여기에 이름을 추가하고 싶으신가요?',
         supportFutureUpdates: '향후 업데이트, 버그 수정 및 새로운 월드컵 기능을 지원해 주세요.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 후원자 페이지에 이름을 올리고 싶으신가요? PayPal로 맥주 한 잔을 후원하면 개발 지원에 대한 감사의 의미로 World Cup 2026 후원자 목록에 이름을 추가할 수 있습니다.',
         donateBuyBeer: '🍺 기부 / 맥주 사주기',
         enjoyingIntegration: '🍺 이 통합을 즐기고 계신가요?',
         supportIntegration: '이 통합 지원',
@@ -1594,7 +1595,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'Inga supportrar har lagts till ännu. Var först med att bjuda på en öl och få ditt namn här.',
         wantNameAdded: 'Vill du lägga till ditt namn här?',
         supportFutureUpdates: 'Stöd framtida uppdateringar, buggfixar och nya World Cup-funktioner.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 Vill du att ditt namn ska visas på supportersidan? Bjud mig på en öl via PayPal så kan ditt namn läggas till i World Cup 2026-supporterlistan som tack för ditt stöd till utvecklingen.',
         donateBuyBeer: '🍺 Donera / Bjud på en öl',
         enjoyingIntegration: '🍺 Gillar du den här integrationen?',
         supportIntegration: 'Stöd den här integrationen',
@@ -1727,7 +1728,7 @@ class WorldCup2026Panel extends HTMLElement {
         noSupporters: 'Ingen støttespillere er lagt til ennå. Bli den første til å kjøpe meg en øl og få navnet ditt her.',
         wantNameAdded: 'Vil du ha navnet ditt lagt til her?',
         supportFutureUpdates: 'Støtt fremtidige oppdateringer, feilrettinger og nye World Cup-funksjoner.',
-        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
+        supporterBeerMessage: '🍺 Vil du ha navnet ditt på supportersiden? Kjøp meg en øl via PayPal, så kan navnet ditt legges til på World Cup 2026-supporterlisten som takk for at du støtter utviklingen.',
         donateBuyBeer: '🍺 Doner / Kjøp meg en øl',
         enjoyingIntegration: '🍺 Liker du denne integrasjonen?',
         supportIntegration: 'Støtt denne integrasjonen',
@@ -1951,7 +1952,20 @@ class WorldCup2026Panel extends HTMLElement {
 
 
   cleanTeamName(team) {
-    return String(team || this.t("tbc"))
+    let raw = team;
+
+    if (team && typeof team === "object") {
+      raw =
+        team.name ||
+        team.shortName ||
+        team.fullName ||
+        team.country ||
+        team.tla ||
+        team.code ||
+        this.t("tbc");
+    }
+
+    return String(raw || this.t("tbc"))
       .replace(/[\u{1F1E6}-\u{1F1FF}]/gu, "")
       .replace(/[🏴🏳️]/gu, "")
       .replace(/\s+/g, " ")
@@ -1964,6 +1978,57 @@ class WorldCup2026Panel extends HTMLElement {
     const fixes = {
       USA: "United States",
       US: "United States",
+      ARG: "Argentina",
+      AUS: "Australia",
+      AUT: "Austria",
+      BEL: "Belgium",
+      BIH: "Bosnia and Herzegovina",
+      BRA: "Brazil",
+      CAN: "Canada",
+      COL: "Colombia",
+      CRC: "Costa Rica",
+      CRO: "Croatia",
+      CZE: "Czechia",
+      DEN: "Denmark",
+      ECU: "Ecuador",
+      EGY: "Egypt",
+      ENG: "England",
+      FRA: "France",
+      GER: "Germany",
+      DEU: "Germany",
+      GHA: "Ghana",
+      HAI: "Haiti",
+      HON: "Honduras",
+      IRN: "Iran",
+      ITA: "Italy",
+      CIV: "Côte d'Ivoire",
+      JAM: "Jamaica",
+      JPN: "Japan",
+      KOR: "Korea Republic",
+      MEX: "Mexico",
+      MAR: "Morocco",
+      NED: "Netherlands",
+      NZL: "New Zealand",
+      NGA: "Nigeria",
+      NOR: "Norway",
+      PAN: "Panama",
+      PAR: "Paraguay",
+      POL: "Poland",
+      POR: "Portugal",
+      QAT: "Qatar",
+      KSA: "Saudi Arabia",
+      SCO: "Scotland",
+      SEN: "Senegal",
+      SRB: "Serbia",
+      RSA: "South Africa",
+      ESP: "Spain",
+      SWE: "Sweden",
+      SUI: "Switzerland",
+      TUN: "Tunisia",
+      TUR: "Turkey",
+      UKR: "Ukraine",
+      URU: "Uruguay",
+      WAL: "Wales",
       "South Korea": "Korea Republic",
       Türkiye: "Turkey",
       "Bosnia & Herz": "Bosnia and Herzegovina",
@@ -1980,6 +2045,68 @@ class WorldCup2026Panel extends HTMLElement {
     };
 
     return fixes[name] || name || this.t("tbc");
+  }
+
+
+
+  localizedTeamName(team) {
+    const canonicalName = this.teamLabel(team);
+
+    if (!canonicalName || canonicalName === this.t("tbc") || canonicalName === "TBC") {
+      return this.t("tbc");
+    }
+
+    const code = this.countryCode(canonicalName);
+    const key = canonicalName.toLowerCase();
+
+    const specialNames = {
+      "gb-eng": {
+        en: "England", fr: "Angleterre", de: "England", es: "Inglaterra", it: "Inghilterra", nl: "Engeland",
+        ar: "إنجلترا", pt: "Inglaterra", pl: "Anglia", ja: "イングランド", ko: "잉글랜드", sv: "England", no: "England",
+      },
+      "gb-sct": {
+        en: "Scotland", fr: "Écosse", de: "Schottland", es: "Escocia", it: "Scozia", nl: "Schotland",
+        ar: "اسكتلندا", pt: "Escócia", pl: "Szkocja", ja: "スコットランド", ko: "스코틀랜드", sv: "Skottland", no: "Skottland",
+      },
+      "gb-wls": {
+        en: "Wales", fr: "Pays de Galles", de: "Wales", es: "Gales", it: "Galles", nl: "Wales",
+        ar: "ويلز", pt: "País de Gales", pl: "Walia", ja: "ウェールズ", ko: "웨일스", sv: "Wales", no: "Wales",
+      },
+    };
+
+    const countryNameFixes = {
+      "korea republic": {
+        en: "Korea Republic", fr: "Corée du Sud", de: "Südkorea", es: "Corea del Sur", it: "Corea del Sud", nl: "Zuid-Korea",
+        ar: "كوريا الجنوبية", pt: "Coreia do Sul", pl: "Korea Południowa", ja: "韓国", ko: "대한민국", sv: "Sydkorea", no: "Sør-Korea",
+      },
+      turkey: {
+        en: "Turkey", fr: "Turquie", de: "Türkei", es: "Turquía", it: "Turchia", nl: "Turkije",
+        ar: "تركيا", pt: "Turquia", pl: "Turcja", ja: "トルコ", ko: "튀르키예", sv: "Turkiet", no: "Tyrkia",
+      },
+    };
+
+    if (specialNames[code]?.[this._language]) {
+      return specialNames[code][this._language];
+    }
+
+    if (countryNameFixes[key]?.[this._language]) {
+      return countryNameFixes[key][this._language];
+    }
+
+    if (code && !code.includes("-")) {
+      try {
+        const displayNames = new Intl.DisplayNames([this._language || "en"], { type: "region" });
+        return displayNames.of(code.toUpperCase()) || canonicalName;
+      } catch (err) {
+        return canonicalName;
+      }
+    }
+
+    return canonicalName;
+  }
+
+  localizedCountryName(country) {
+    return this.localizedTeamName(country);
   }
 
   countryCode(team) {
@@ -2103,11 +2230,12 @@ class WorldCup2026Panel extends HTMLElement {
 
   teamFlagBlock(team) {
     const name = this.teamLabel(team);
+    const displayName = this.localizedTeamName(team);
 
     return `
       <div class="team-flag-block">
         ${this.flag(name)}
-        <div class="team-flag-name">${this.esc(name)}</div>
+        <div class="team-flag-name">${this.esc(displayName)}</div>
       </div>
     `;
   }
@@ -2489,17 +2617,43 @@ class WorldCup2026Panel extends HTMLElement {
           background: rgba(0, 200, 255, 0.34);
         }
 
-        .wc-language-wrap {
+        .wc-header-controls {
           display: flex;
-          flex-direction: column;
-          gap: 4px;
+          gap: 8px;
+          align-items: center;
+          justify-content: flex-end;
+          flex-wrap: nowrap;
+          margin-left: auto;
         }
 
-        .wc-language-label {
-          font-size: 11px;
-          opacity: 0.75;
-          font-weight: 800;
-          padding-left: 6px;
+        .wc-language-wrap,
+        .wc-updated-wrap {
+          display: inline-flex;
+          flex-direction: row;
+          align-items: center;
+          gap: 0;
+          margin: 0;
+        }
+
+        .wc-language-label,
+        .wc-updated-label {
+          display: none;
+        }
+
+        .wc-language-select,
+        .wc-updated-pill,
+        .wc-header-controls .wc-back-button {
+          min-height: 34px;
+          height: 34px;
+          box-sizing: border-box;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          border-radius: 999px;
+          font-size: 12px;
+          font-weight: 850;
+          line-height: 1;
+          white-space: nowrap;
         }
 
         .wc-language-select {
@@ -2507,12 +2661,20 @@ class WorldCup2026Panel extends HTMLElement {
           background: rgba(255,255,255,0.10);
           color: white;
           border: 1px solid rgba(255,255,255,0.20);
-          border-radius: 999px;
-          padding: 9px 13px;
-          font-size: 13px;
-          font-weight: 800;
+          padding: 7px 12px;
           outline: none;
-          min-width: 150px;
+          min-width: 146px;
+        }
+
+        .wc-updated-pill {
+          background: rgba(255,255,255,0.12);
+          border: 1px solid rgba(255,255,255,0.20);
+          padding: 7px 12px;
+          min-width: 82px;
+        }
+
+        .wc-header-controls .wc-back-button {
+          padding: 7px 12px;
         }
 
         .wc-language-select option {
@@ -4169,10 +4331,17 @@ class WorldCup2026Panel extends HTMLElement {
             font-size: 28px;
           }
 
-          .wc-pill,
-          .wc-language-wrap {
-            display: inline-flex;
+          .wc-header-controls {
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: nowrap;
             margin-top: 12px;
+          }
+
+          .wc-pill,
+          .wc-language-wrap,
+          .wc-updated-wrap {
+            display: inline-flex;
           }
 
           .wc-two {
@@ -4659,10 +4828,10 @@ class WorldCup2026Panel extends HTMLElement {
 
 
 
-        /* User requested: progress bar about 15% narrower on desktop. */
+        /* User requested: progress bar twice the previous desktop width. */
         .overview-progress-wrap {
-          width: 85%;
-          max-width: 578px;
+          width: 170%;
+          max-width: 1156px;
         }
 
         .overview-live-games-button.is-offline {
@@ -4851,9 +5020,9 @@ class WorldCup2026Panel extends HTMLElement {
             </div>
 
             <div class="overview-info-list">
-              <div><span>${this.t("topScoringTeam")}</span><strong>${this.esc(topTeam?.team ? this.teamLabel(topTeam.team) : this.t("notAvailable"))}</strong><em>${topTeam?.goalsFor ?? 0} ${this.t("goals").toLowerCase()}</em></div>
-              <div><span>${this.t("bestDefence")}</span><strong>${this.esc(bestDefence?.team ? this.teamLabel(bestDefence.team) : this.t("notAvailable"))}</strong><em>${bestDefence?.goalsAgainst ?? 0} ${this.t("conceded")}</em></div>
-              <div><span>${this.t("finalVenue")}</span><strong>${this.esc(finalVenue?.stadium || this.t("notAvailable"))}</strong><em>${this.esc(finalVenue ? `${finalVenue.city}, ${finalVenue.country}` : this.t("venues"))}</em></div>
+              <div><span>${this.t("topScoringTeam")}</span><strong>${this.esc(topTeam?.team ? this.localizedTeamName(topTeam.team) : this.t("notAvailable"))}</strong><em>${topTeam?.goalsFor ?? 0} ${this.t("goals").toLowerCase()}</em></div>
+              <div><span>${this.t("bestDefence")}</span><strong>${this.esc(bestDefence?.team ? this.localizedTeamName(bestDefence.team) : this.t("notAvailable"))}</strong><em>${bestDefence?.goalsAgainst ?? 0} ${this.t("conceded")}</em></div>
+              <div><span>${this.t("finalVenue")}</span><strong>${this.esc(finalVenue?.stadium || this.t("notAvailable"))}</strong><em>${this.esc(finalVenue ? `${finalVenue.city}, ${this.localizedCountryName(finalVenue.country)}` : this.t("venues"))}</em></div>
               <div><span>${this.t("matchesPlayed")}</span><strong>${playedCount} / ${totalMatches}</strong><em>${safeProgress}% ${this.t("progress").toLowerCase()}</em></div>
             </div>
           </div>
@@ -4903,7 +5072,7 @@ class WorldCup2026Panel extends HTMLElement {
                   <div class="overview-player-row">
                     <span>${i + 1}</span>
                     <strong>${this.esc(typeof s.player === "string" ? s.player : s.player?.name || s.name || this.t("unknown"))}</strong>
-                    <em>${this.esc(this.teamLabel(s.team?.name || s.team || ""))}</em>
+                    <em>${this.esc(this.localizedTeamName(s.team?.name || s.team || ""))}</em>
                     <b>${s.goals ?? 0}</b>
                   </div>
                 `).join("")}
@@ -4933,9 +5102,9 @@ class WorldCup2026Panel extends HTMLElement {
           <em>${this.esc(status)}</em>
         </div>
         <div class="overview-mini-teams">
-          <div>${this.flag(homeTeam, true)}<strong>${this.esc(this.teamLabel(homeTeam))}</strong></div>
+          <div>${this.flag(homeTeam, true)}<strong>${this.esc(this.localizedTeamName(homeTeam))}</strong></div>
           <b>${this.esc(scoreText)}</b>
-          <div>${this.flag(awayTeam, true)}<strong>${this.esc(this.teamLabel(awayTeam))}</strong></div>
+          <div>${this.flag(awayTeam, true)}<strong>${this.esc(this.localizedTeamName(awayTeam))}</strong></div>
         </div>
         <div class="overview-mini-date">${this.esc(this.formatDate(m.utcDate || m.date))}</div>
       </div>
@@ -5023,7 +5192,7 @@ class WorldCup2026Panel extends HTMLElement {
         ${nextMatch ? `
           <div class="fixtures-next-strip">
             <span>${this.t("nextMatch")}</span>
-            <strong>${this.esc(this.teamLabel(this.getHomeTeam(nextMatch)))} ${this.t("versus")} ${this.esc(this.teamLabel(this.getAwayTeam(nextMatch)))}</strong>
+            <strong>${this.esc(this.localizedTeamName(this.getHomeTeam(nextMatch)))} ${this.t("versus")} ${this.esc(this.localizedTeamName(this.getAwayTeam(nextMatch)))}</strong>
             <em>${this.esc(this.formatDate(nextMatch.utcDate || nextMatch.date))}</em>
           </div>
         ` : ""}
@@ -5131,14 +5300,14 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="fixture-card-main">
           <div class="fixture-card-team fixture-card-team-home">
             ${this.flag(homeTeam, true)}
-            <span>${this.esc(this.teamLabel(homeTeam))}</span>
+            <span>${this.esc(this.localizedTeamName(homeTeam))}</span>
           </div>
 
           <div class="fixture-card-score">${this.esc(scoreText)}</div>
 
           <div class="fixture-card-team fixture-card-team-away">
             ${this.flag(awayTeam, true)}
-            <span>${this.esc(this.teamLabel(awayTeam))}</span>
+            <span>${this.esc(this.localizedTeamName(awayTeam))}</span>
           </div>
         </div>
 
@@ -5244,7 +5413,7 @@ class WorldCup2026Panel extends HTMLElement {
                             <td>
                               <div class="group-team-cell">
                                 ${this.flag(teamName, true)}
-                                <strong>${this.esc(this.teamLabel(teamName))}</strong>
+                                <strong>${this.esc(this.localizedTeamName(teamName))}</strong>
                               </div>
                             </td>
                             <td>${team.playedGames ?? team.played ?? team.p ?? 0}</td>
@@ -5354,7 +5523,7 @@ class WorldCup2026Panel extends HTMLElement {
 
         return {
           name: playerName,
-          team: this.teamLabel(teamName),
+          team: this.localizedTeamName(teamName),
           goals: this.numberValue(this.resolvedPlayerStat(s, "goals", "scored", "goal_count", "total_goals", "totalGoals")),
           assists: this.numberValue(this.resolvedPlayerStat(s, "assists", "assist", "assist_count", "total_assists", "totalAssists")),
           source: s.source || "football-data.org",
@@ -5567,7 +5736,7 @@ class WorldCup2026Panel extends HTMLElement {
           <div class="wc-section-title">${this.t("topScoringTeam")}</div>
           ${
             r.top_scoring_team
-              ? `<p><strong>${this.esc(this.teamLabel(r.top_scoring_team.team))}</strong></p><p>${r.top_scoring_team.goalsFor} ${this.t("goals").toLowerCase()}</p>`
+              ? `<p><strong>${this.esc(this.localizedTeamName(r.top_scoring_team.team))}</strong></p><p>${r.top_scoring_team.goalsFor} ${this.t("goals").toLowerCase()}</p>`
               : `<div class="wc-empty">${this.t("noTeamGoalData")}</div>`
           }
         </div>
@@ -5576,7 +5745,7 @@ class WorldCup2026Panel extends HTMLElement {
           <div class="wc-section-title">${this.t("bestDefence")}</div>
           ${
             r.best_defence
-              ? `<p><strong>${this.esc(this.teamLabel(r.best_defence.team))}</strong></p><p>${r.best_defence.goalsAgainst} ${this.t("conceded")}</p>`
+              ? `<p><strong>${this.esc(this.localizedTeamName(r.best_defence.team))}</strong></p><p>${r.best_defence.goalsAgainst} ${this.t("conceded")}</p>`
               : `<div class="wc-empty">${this.t("noDefensiveData")}</div>`
           }
         </div>
@@ -5639,7 +5808,7 @@ class WorldCup2026Panel extends HTMLElement {
             <div class="wc-section-title">${this.t("finalVenue")}</div>
             <p><strong>${this.esc(finalVenue.flag || "")} ${this.esc(venueTitle(finalVenue))}</strong></p>
             <p class="wc-muted">Real stadium: <strong>${this.esc(venueRealName(finalVenue))}</strong></p>
-            <p>${this.esc(finalVenue.city)}, ${this.esc(finalVenue.country)}</p>
+            <p>${this.esc(finalVenue.city)}, ${this.esc(this.localizedCountryName(finalVenue.country))}</p>
             <p>${this.t("capacity")}: <strong>${this.esc(venueCapacity(finalVenue))}</strong></p>
             <p>Matches hosted: <strong>${this.esc(venueMatches(finalVenue))}</strong></p>
           </div>
@@ -5666,7 +5835,7 @@ class WorldCup2026Panel extends HTMLElement {
               }
               <strong>${this.esc(venue.flag || "")} ${this.esc(venueTitle(venue))}</strong>
               <div class="wc-muted">Real stadium: ${this.esc(venueRealName(venue))}</div>
-              <div>${this.esc(venue.city)}, ${this.esc(venue.country)}</div>
+              <div>${this.esc(venue.city)}, ${this.esc(this.localizedCountryName(venue.country))}</div>
               <div class="wc-muted">${this.t("capacity")}: ${this.esc(venueCapacity(venue))}</div>
               <div class="wc-muted">Matches hosted: <strong>${this.esc(venueMatches(venue))}</strong></div>
             </div>
@@ -5689,7 +5858,7 @@ class WorldCup2026Panel extends HTMLElement {
   supporterCountryCounts(supporters) {
     return supporters.reduce((counts, supporter) => {
       const country = typeof supporter === "string" ? "" : this.teamLabel(supporter.country || "");
-      if (!country) return counts;
+      if (!country || country === this.t("tbc")) return counts;
       counts[country] = (counts[country] || 0) + 1;
       return counts;
     }, {});
@@ -5730,7 +5899,7 @@ class WorldCup2026Panel extends HTMLElement {
                   <div class="overview-supporter-pill">
                     ${country ? this.flag(country, true) : "🍺"}
                     <strong>${this.esc(name || this.t("anonymousSupporter"))}</strong>
-                    ${country ? `<span>${this.esc(this.teamLabel(country))}</span>` : ""}
+                    ${country ? `<span>${this.esc(this.localizedTeamName(country))}</span>` : ""}
                   </div>
                 `;
               }).join("")}
@@ -5746,7 +5915,7 @@ class WorldCup2026Panel extends HTMLElement {
         ${countries.length ? `
           <div class="overview-country-strip">
             ${countries.map(([country, count]) => `
-              <span>${this.flag(country, true)} ${this.esc(country)} <b>${count}</b></span>
+              <span>${this.flag(country, true)} ${this.esc(this.localizedCountryName(country))} <b>${count}</b></span>
             `).join("")}
           </div>
         ` : ""}
@@ -5773,7 +5942,7 @@ class WorldCup2026Panel extends HTMLElement {
           <span>${this.esc(name || this.t("anonymousSupporter"))}</span>
         </strong>
         <div class="supporter-card-meta">
-          ${country ? `<span>${this.esc(this.teamLabel(country))}</span>` : ""}
+          ${country ? `<span>${this.esc(this.localizedTeamName(country))}</span>` : ""}
           ${date ? `<span>${this.esc(date)}</span>` : ""}
         </div>
         ${message ? `<div class="supporter-card-message">${this.esc(message || this.t("supporterDefaultMessage"))}</div>` : ""}
@@ -5816,7 +5985,7 @@ class WorldCup2026Panel extends HTMLElement {
           ${countryList.length ? `
             <div class="supporter-country-grid">
               ${countryList.map(([country, count]) => `
-                <span>${this.flag(country, true)} ${this.esc(country)} <b>${count}</b></span>
+                <span>${this.flag(country, true)} ${this.esc(this.localizedCountryName(country))} <b>${count}</b></span>
               `).join("")}
             </div>
           ` : ""}
@@ -5892,29 +6061,22 @@ class WorldCup2026Panel extends HTMLElement {
                 <div class="wc-header-subtitle-inline">${this.t("subtitle")}</div>
               </div>
 
-              <a
-                class="wc-overview-beer-button"
-                href="https://paypal.me/graffidoodle"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="${this.t("supportIntegration")}"
-              >
-                🍺 Buy Me A Beer
-              </a>
+              <div></div>
 
               <div></div>
             </div>
 
-            <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+            <div class="wc-header-controls">
+              <div class="wc-updated-wrap">
+                <div class="wc-updated-label">${this.t("updated")}</div>
+                <div class="wc-updated-pill">${new Date().toLocaleTimeString()}</div>
+              </div>
+
               ${this.languageSelector()}
 
               <button class="wc-pill wc-back-button" id="wc-back-button" type="button">
                 ${this.t("back")}
               </button>
-
-              <div class="wc-pill">
-                ${this.t("updated")} ${new Date().toLocaleTimeString()}
-              </div>
             </div>
           </div>
 
