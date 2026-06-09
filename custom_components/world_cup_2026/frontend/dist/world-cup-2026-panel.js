@@ -2521,11 +2521,51 @@ class WorldCup2026Panel extends HTMLElement {
 }
 
         .wc-header-title-row {
-          display: grid;
-          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+          display: flex;
           align-items: center;
-          gap: 18px;
+          justify-content: flex-start;
+          gap: 12px;
           width: 100%;
+          min-width: 0;
+        }
+
+        .wc-header-live-pill {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-height: 24px;
+          padding: 4px 10px;
+          border-radius: 999px;
+          font-size: 11px;
+          line-height: 1;
+          font-weight: 900;
+          letter-spacing: 0.25px;
+          text-transform: uppercase;
+          white-space: nowrap;
+          max-width: min(420px, 38vw);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          flex: 0 0 auto;
+          backdrop-filter: blur(10px);
+          -webkit-backdrop-filter: blur(10px);
+        }
+
+        .wc-header-live-pill.live {
+          color: #d8ffe8;
+          background: rgba(0, 190, 85, 0.20);
+          border: 1px solid rgba(0, 255, 120, 0.62);
+          box-shadow: 0 0 14px rgba(0, 255, 120, 0.28);
+        }
+
+        .wc-header-live-pill.offline {
+          color: #ffe0e0;
+          background: rgba(210, 28, 28, 0.22);
+          border: 1px solid rgba(255, 82, 82, 0.66);
+          box-shadow: 0 0 14px rgba(255, 60, 60, 0.25);
+        }
+
+        .wc-header-scheduled-pill {
+          max-width: min(240px, 24vw);
         }
 
         .wc-title-stack {
@@ -4418,10 +4458,15 @@ class WorldCup2026Panel extends HTMLElement {
 
         @media (max-width: 900px) {
           .wc-header-title-row {
-            grid-template-columns: 1fr;
-            justify-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
             text-align: center;
-            gap: 10px;
+            gap: 8px;
+          }
+
+          .wc-header-live-pill {
+            font-size: 10px;
+            padding: 4px 8px;
           }
 
           .wc-header-subtitle-inline {
@@ -5374,18 +5419,6 @@ class WorldCup2026Panel extends HTMLElement {
             </div>
           </div>
 
-          <div class="overview-hero-side overview-top-pills">
-            <div class="overview-status-card overview-mini-pill ${liveMatches.length ? "is-live" : ""}">
-              <span>${this.t("liveNow")}</span>
-              <strong>${liveMatches.length}</strong>
-              <em>${liveMatches.length ? this.t("liveStatus") : this.t("scheduled")}</em>
-            </div>
-            <div class="overview-status-card overview-mini-pill">
-              <span>${this.t("lastUpdate")}</span>
-              <strong>${o.last_update_success ? this.t("ok") : this.t("failed")}</strong>
-              <em>${this.t("demoMode")}: ${o.demo_mode ? this.t("on") : this.t("off")}</em>
-            </div>
-          </div>
         </div>
 
 
@@ -6425,6 +6458,65 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+
+  headerLivePill() {
+    const live = this._data.live || [];
+    const liveCount = live.length;
+
+    if (!liveCount) {
+      return `<div class="wc-header-live-pill offline">🔴 No live games</div>`;
+    }
+
+    if (liveCount === 1) {
+      const match = live[0];
+      const homeTeam = this.localizedTeamName(this.getHomeTeam(match));
+      const awayTeam = this.localizedTeamName(this.getAwayTeam(match));
+      const homeScore = this.getHomeScore(match);
+      const awayScore = this.getAwayScore(match);
+      const score = homeScore !== "-" || awayScore !== "-" ? ` ${homeScore}-${awayScore}` : "";
+      return `<div class="wc-header-live-pill live">🟢 Live: ${this.esc(homeTeam)}${this.esc(score)} ${this.esc(awayTeam)}</div>`;
+    }
+
+    return `<div class="wc-header-live-pill live">🟢 ${liveCount} live games</div>`;
+  }
+
+  headerScheduledPill() {
+    const fixtures = this._data.fixtures || [];
+    const scheduledStatuses = ["TIMED", "SCHEDULED"];
+
+    const todayKey = (() => {
+      try {
+        const parts = new Intl.DateTimeFormat("en-CA", {
+          year: "numeric",
+          month: "2-digit",
+          day: "2-digit",
+        }).formatToParts(new Date());
+
+        const year = parts.find((part) => part.type === "year")?.value;
+        const month = parts.find((part) => part.type === "month")?.value;
+        const day = parts.find((part) => part.type === "day")?.value;
+
+        if (year && month && day) {
+          return `${year}-${month}-${day}`;
+        }
+
+        return new Date().toLocaleDateString("en-CA");
+      } catch {
+        return new Date().toISOString().slice(0, 10);
+      }
+    })();
+
+    const scheduledTodayCount = fixtures.filter((match) => {
+      return scheduledStatuses.includes(match.status) && this.fixtureDateKey(match) === todayKey;
+    }).length;
+
+    if (!scheduledTodayCount) {
+      return `<div class="wc-header-live-pill offline wc-header-scheduled-pill">🔴 No games today</div>`;
+    }
+
+    return `<div class="wc-header-live-pill live wc-header-scheduled-pill">🟢 ${scheduledTodayCount} ${scheduledTodayCount === 1 ? "game" : "games"} today</div>`;
+  }
+
   pageContent() {
     if (this._page === "overview") return this.overviewPage();
     if (this._page === "live") return this.livePage();
@@ -6446,14 +6538,12 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="wc-shell">
           <div class="wc-header">
             <div class="wc-header-title-row">
+              ${this.headerLivePill()}
+              ${this.headerScheduledPill()}
               <div class="wc-title-stack">
                 <div class="wc-title">${this.t("title")}</div>
                 <div class="wc-header-subtitle-inline">${this.t("subtitle")}</div>
               </div>
-
-              <div></div>
-
-              <div></div>
             </div>
 
             <div class="wc-header-controls">
