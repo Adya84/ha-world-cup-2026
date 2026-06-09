@@ -4997,6 +4997,130 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+
+        /* Compact stat bar refinement - smaller cards, bigger readable text */
+        .overview-stat-grid {
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+          gap: 6px;
+          margin-top: 8px;
+        }
+
+        .overview-stat-tile {
+          min-height: 48px;
+          padding: 6px 8px;
+          border-radius: 12px;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          gap: 1px;
+        }
+
+        .overview-stat-tile strong {
+          font-size: clamp(24px, 2.2vw, 32px);
+          line-height: 0.95;
+          margin: 0;
+          font-weight: 900;
+        }
+
+        .overview-stat-tile span,
+        .overview-stat-tile em {
+          font-size: 11px;
+          line-height: 1.05;
+          margin: 0;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        @media (max-width: 1250px) {
+          .overview-stat-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 700px) {
+          .overview-stat-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+
+          .overview-stat-tile {
+            min-height: 46px;
+            padding: 5px 7px;
+          }
+
+          .overview-stat-tile strong {
+            font-size: 24px;
+          }
+
+          .overview-stat-tile span,
+          .overview-stat-tile em {
+            font-size: 10px;
+          }
+        }
+
+
+        /* Tighten space between overview progress bar and stat pills */
+        .overview-hero.compact-overview-hero,
+        .overview-hero {
+          padding-bottom: 4px;
+          margin-bottom: -16px;
+        }
+
+        .overview-stat-grid {
+          margin-top: 0;
+        }
+
+
+
+        /* Merge overview stat pills into the bottom of the progress block */
+        .overview-progress-wrap {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+
+        .overview-progress-wrap .overview-stat-grid-in-progress {
+          margin-top: 0;
+          width: 100%;
+          display: grid;
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+          gap: 5px;
+        }
+
+        .overview-progress-wrap .overview-stat-tile {
+          min-height: 42px;
+          padding: 5px 7px;
+          border-radius: 11px;
+        }
+
+        .overview-progress-wrap .overview-stat-tile strong {
+          font-size: clamp(21px, 2vw, 29px);
+          line-height: 0.95;
+        }
+
+        .overview-progress-wrap .overview-stat-tile span,
+        .overview-progress-wrap .overview-stat-tile em {
+          font-size: 10px;
+          line-height: 1;
+        }
+
+        .overview-hero.compact-overview-hero,
+        .overview-hero {
+          padding-bottom: 8px;
+          margin-bottom: 8px;
+        }
+
+        @media (max-width: 1250px) {
+          .overview-progress-wrap .overview-stat-grid-in-progress {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 700px) {
+          .overview-progress-wrap .overview-stat-grid-in-progress {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
       </style>
     `;
   }
@@ -5100,6 +5224,15 @@ class WorldCup2026Panel extends HTMLElement {
               <div class="overview-progress-bar">
                 <div style="width:${safeProgress}%;"></div>
               </div>
+
+              <div class="overview-stat-grid overview-stat-grid-in-progress">
+                <div class="overview-stat-tile"><span>${this.t("totalMatches")}</span><strong>${totalMatches}</strong><em>${loadedCount} ${this.t("loaded").toLowerCase()}</em></div>
+                <div class="overview-stat-tile"><span>${this.t("played")}</span><strong>${playedCount}</strong><em>${remainingCount} ${this.t("remaining").toLowerCase()}</em></div>
+                <div class="overview-stat-tile"><span>${this.t("totalGoals")}</span><strong>${totalGoals}</strong><em>${goalsPerMatch} ${this.t("goalsPerMatch")}</em></div>
+                <div class="overview-stat-tile"><span>${this.t("groups")}</span><strong>${loadedGroups || 12}</strong><em>${this.t("groupsAL")}</em></div>
+                <div class="overview-stat-tile"><span>${this.t("stadiums")}</span><strong>${stadiumCount}</strong><em>${this.t("worldCupStadiums")}</em></div>
+                <div class="overview-stat-tile"><span>${this.t("topScorer")}</span><strong>${this.esc(topScorer?.goals ?? 0)}</strong><em>${this.esc(topScorer?.player?.name || topScorer?.name || this.t("notAvailable"))}</em></div>
+              </div>
             </div>
 
             <div class="overview-action-row">
@@ -5125,14 +5258,6 @@ class WorldCup2026Panel extends HTMLElement {
           </div>
         </div>
 
-        <div class="overview-stat-grid">
-          <div class="overview-stat-tile"><span>${this.t("totalMatches")}</span><strong>${totalMatches}</strong><em>${loadedCount} ${this.t("loaded").toLowerCase()}</em></div>
-          <div class="overview-stat-tile"><span>${this.t("played")}</span><strong>${playedCount}</strong><em>${remainingCount} ${this.t("remaining").toLowerCase()}</em></div>
-          <div class="overview-stat-tile"><span>${this.t("totalGoals")}</span><strong>${totalGoals}</strong><em>${goalsPerMatch} ${this.t("goalsPerMatch")}</em></div>
-          <div class="overview-stat-tile"><span>${this.t("groups")}</span><strong>${loadedGroups || 12}</strong><em>${this.t("groupsAL")}</em></div>
-          <div class="overview-stat-tile"><span>${this.t("stadiums")}</span><strong>${stadiumCount}</strong><em>${this.t("worldCupStadiums")}</em></div>
-          <div class="overview-stat-tile"><span>${this.t("topScorer")}</span><strong>${this.esc(topScorer?.goals ?? 0)}</strong><em>${this.esc(topScorer?.player?.name || topScorer?.name || this.t("notAvailable"))}</em></div>
-        </div>
 
         <div class="overview-main-grid">
           <div class="overview-panel wc-card overview-feature-panel">
