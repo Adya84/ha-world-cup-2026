@@ -4979,13 +4979,18 @@ class WorldCup2026Panel extends HTMLElement {
     const supporterCards = supporters.length
       ? supporters.map((supporter) => {
           const name = typeof supporter === "string" ? supporter : supporter.name;
+          const country = typeof supporter === "string" ? "" : supporter.country;
           const message = typeof supporter === "string"
             ? this.t("supporterDefaultMessage")
             : supporter.message;
 
           return `
             <div class="wc-stat">
-              <strong>🍺 ${this.esc(name || this.t("anonymousSupporter"))}</strong>
+              <strong>
+                ${country ? this.flag(country, true) : "🍺"}
+                ${this.esc(name || this.t("anonymousSupporter"))}
+              </strong>
+              ${country ? `<div class="wc-muted">${this.esc(this.teamLabel(country))}</div>` : ""}
               <div class="wc-muted">${this.esc(message || this.t("supporterDefaultMessage"))}</div>
             </div>
           `;
