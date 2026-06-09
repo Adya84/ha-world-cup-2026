@@ -5412,13 +5412,6 @@ class WorldCup2026Panel extends HTMLElement {
               </div>
             </div>
 
-            <div class="overview-action-row">
-              <button class="overview-action-button overview-live-games-button ${liveMatches.length ? "is-live" : "is-offline"}" data-page="live" type="button">${liveMatches.length ? "🟢" : "🔴"} Live Games: ${liveMatches.length}</button>
-              <button class="overview-action-button" data-page="fixtures" type="button">${this.t("fixturesResults")}</button>
-              <button class="overview-action-button" data-page="groups" type="button">${this.t("groups")}</button>
-              <button class="overview-action-button" data-page="knockout" type="button">${this.t("knockout")}</button>
-              <button class="overview-action-button" data-page="stats" type="button">${this.t("stats")}</button>
-            </div>
           </div>
 
         </div>
