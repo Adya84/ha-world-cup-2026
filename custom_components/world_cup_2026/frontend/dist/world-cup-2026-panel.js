@@ -6083,18 +6083,6 @@ class WorldCup2026Panel extends HTMLElement {
           ${this.nav()}
           ${this.pageContent()}
 
-          ${this._page === "supporters" ? `
-            <div class="wc-donate-footer">
-              <span>${this.t("enjoyingIntegration")}</span>
-              <a
-                href="https://paypal.me/graffidoodle"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                ${this.t("donateBuyBeer")}
-              </a>
-            </div>
-          ` : ""}
         </div>
       </div>
     `;
