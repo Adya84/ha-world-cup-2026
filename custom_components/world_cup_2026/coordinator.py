@@ -66,6 +66,11 @@ def _load_stadiums():
     return stadiums
 
 
+async def _async_load_stadiums(hass):
+    """Load stadium data without blocking the event loop."""
+    return await hass.async_add_executor_job(_load_stadiums)
+
+
 def _serialise_stadium(stadium):
     """Convert local JSON stadium data into the existing frontend format."""
     country = stadium.get("country", "")
@@ -272,8 +277,11 @@ def _build_records(matches):
     }
 
 
-def _build_venues():
-    stadiums = [_serialise_stadium(stadium) for stadium in _load_stadiums()]
+async def _build_venues(hass):
+    stadiums = [
+        _serialise_stadium(stadium)
+        for stadium in await _async_load_stadiums(hass)
+    ]
 
     countries = {}
     for venue in stadiums:
@@ -342,5 +350,5 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             "scorers": scorers,
             "statistics": _build_statistics(matches, standings, scorers),
             "records": _build_records(matches),
-            "venues": _build_venues(),
+            "venues": await _build_venues(self.hass),
         }
