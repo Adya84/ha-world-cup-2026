@@ -32,9 +32,13 @@ class GoldenBootManager:
             _LOGGER.warning("Could not load Golden Boot fallback data: %s", err)
             return []
 
-    def get_scorers(self, limit=100):
+    async def async_load(self):
+        """Load local fallback Golden Boot data without blocking."""
+        return await self.hass.async_add_executor_job(self.load)
+
+    async def async_get_scorers(self, limit=100):
         """Return local fallback scorers sorted by goals and assists."""
-        players = self.load()
+        players = await self.async_load()
 
         players.sort(
             key=lambda player: (
