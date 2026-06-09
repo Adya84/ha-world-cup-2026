@@ -5,6 +5,7 @@ class WorldCup2026Panel extends HTMLElement {
     this._page = "overview";
     this._loaded = false;
     this._refreshInterval = null;
+    this._countdownInterval = null;
     this._language = localStorage.getItem("world_cup_2026_language") || "en";
     this._data = {
       overview: null,
@@ -1890,12 +1891,21 @@ class WorldCup2026Panel extends HTMLElement {
     this._refreshInterval = setInterval(() => {
       this.loadAll();
     }, 60000);
+
+    this._countdownInterval = setInterval(() => {
+      this.updateCountdownDisplay();
+    }, 1000);
   }
 
   disconnectedCallback() {
     if (this._refreshInterval) {
       clearInterval(this._refreshInterval);
       this._refreshInterval = null;
+    }
+
+    if (this._countdownInterval) {
+      clearInterval(this._countdownInterval);
+      this._countdownInterval = null;
     }
   }
 
@@ -2569,8 +2579,42 @@ class WorldCup2026Panel extends HTMLElement {
           max-width: min(240px, 24vw);
         }
 
+        .wc-header-countdown-pill {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1 1 auto;
+          min-width: 220px;
+          min-height: 42px;
+          padding: 8px 18px;
+          border-radius: 18px;
+          color: #e9fbff;
+          background:
+            radial-gradient(circle at top left, rgba(60, 210, 255, 0.24), transparent 45%),
+            linear-gradient(135deg, rgba(15, 42, 90, 0.82), rgba(8, 17, 44, 0.72));
+          border: 1px solid rgba(118, 225, 255, 0.38);
+          box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.12),
+            0 0 22px rgba(53, 206, 255, 0.22);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          font-size: clamp(18px, 2.2vw, 32px);
+          line-height: 1;
+          font-weight: 1000;
+          letter-spacing: 0.7px;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .wc-header-countdown-pill.is-hidden {
+          display: none !important;
+        }
+
         .wc-title-stack {
           min-width: 0;
+          flex: 0 0 auto;
         }
 
         .wc-header-subtitle-inline {
@@ -4470,6 +4514,16 @@ class WorldCup2026Panel extends HTMLElement {
             padding: 4px 8px;
           }
 
+          .wc-header-countdown-pill {
+            order: 10;
+            flex: 1 1 100%;
+            width: 100%;
+            min-width: 0;
+            min-height: 40px;
+            font-size: clamp(17px, 5.2vw, 25px);
+            padding: 8px 12px;
+          }
+
           .wc-header-subtitle-inline {
             text-align: center;
           }
@@ -5412,6 +5466,13 @@ class WorldCup2026Panel extends HTMLElement {
               </div>
             </div>
 
+            <div class="overview-action-row">
+              <button class="overview-action-button overview-live-games-button ${liveMatches.length ? "is-live" : "is-offline"}" data-page="live" type="button">${liveMatches.length ? "🟢" : "🔴"} Live Games: ${liveMatches.length}</button>
+              <button class="overview-action-button" data-page="fixtures" type="button">${this.t("fixturesResults")}</button>
+              <button class="overview-action-button" data-page="groups" type="button">${this.t("groups")}</button>
+              <button class="overview-action-button" data-page="knockout" type="button">${this.t("knockout")}</button>
+              <button class="overview-action-button" data-page="stats" type="button">${this.t("stats")}</button>
+            </div>
           </div>
 
         </div>
@@ -6577,6 +6638,67 @@ class WorldCup2026Panel extends HTMLElement {
     return `<div class="wc-header-live-pill live wc-header-scheduled-pill">🟢 ${scheduledTodayCount} ${scheduledTodayCount === 1 ? "game" : "games"} today</div>`;
   }
 
+  worldCupKickoffDate() {
+    // Opening match countdown. Change this one line if FIFA changes the kickoff time.
+    return new Date("2026-06-11T20:00:00Z");
+  }
+
+  countdownParts() {
+    const target = this.worldCupKickoffDate().getTime();
+    const now = Date.now();
+    const remaining = target - now;
+
+    if (remaining <= 0) {
+      return null;
+    }
+
+    const totalSeconds = Math.floor(remaining / 1000);
+    const days = Math.floor(totalSeconds / 86400);
+    const hours = Math.floor((totalSeconds % 86400) / 3600);
+    const minutes = Math.floor((totalSeconds % 3600) / 60);
+    const seconds = totalSeconds % 60;
+
+    return { days, hours, minutes, seconds };
+  }
+
+  countdownText() {
+    const parts = this.countdownParts();
+
+    if (!parts) {
+      return "";
+    }
+
+    const pad = (value) => String(value).padStart(2, "0");
+    return `⏳ ${parts.days}D ${pad(parts.hours)}H ${pad(parts.minutes)}M ${pad(parts.seconds)}S`;
+  }
+
+  headerCountdownPill() {
+    const text = this.countdownText();
+
+    if (!text) {
+      return "";
+    }
+
+    return `<div class="wc-header-countdown-pill" id="wc-header-countdown">${this.esc(text)}</div>`;
+  }
+
+  updateCountdownDisplay() {
+    const countdown = this.querySelector("#wc-header-countdown");
+
+    if (!countdown) {
+      return;
+    }
+
+    const text = this.countdownText();
+
+    if (!text) {
+      countdown.remove();
+      return;
+    }
+
+    countdown.textContent = text;
+  }
+
   pageContent() {
     if (this._page === "overview") return this.overviewPage();
     if (this._page === "live") return this.livePage();
@@ -6605,6 +6727,7 @@ class WorldCup2026Panel extends HTMLElement {
                 <div class="wc-title">${this.t("title")}</div>
                 <div class="wc-header-subtitle-inline">${this.t("subtitle")}</div>
               </div>
+              ${this.headerCountdownPill()}
             </div>
 
             <div class="wc-header-controls">
