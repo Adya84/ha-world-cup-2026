@@ -32,6 +32,7 @@ class WorldCup2026Panel extends HTMLElement {
         overview: "Overview",
         live: "Live Centre",
         fixtures: "Fixtures",
+        results: "Results",
         groups: "Groups",
         knockout: "Knockout",
         players: "Golden Boot",
@@ -5305,6 +5306,7 @@ class WorldCup2026Panel extends HTMLElement {
       ["overview", this.t("overview")],
       ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
+      ["results", this.t("results")],
       ["groups", this.t("groups")],
       ["knockout", this.t("knockout")],
       ["players", this.t("players")],
@@ -5551,6 +5553,71 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="wc-section-title">${this.t("live")} <span class="wc-badge wc-live">${this.t("liveStatus")}</span></div>
         <div class="wc-list">
           ${live.map(m => this.matchRow(m)).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  resultsPage() {
+    const fixtures = this._data.fixtures || [];
+    const finishedStatuses = ["FINISHED", "FT", "AET", "PEN"];
+
+    const results = fixtures
+      .filter(m => finishedStatuses.includes(m.status))
+      .sort((a, b) => {
+        const aTime = new Date(a.utcDate || a.date || 0).getTime();
+        const bTime = new Date(b.utcDate || b.date || 0).getTime();
+        return bTime - aTime;
+      });
+
+    if (!results.length) {
+      return `
+        <div class="wc-card fixtures-page-card">
+          <div class="fixtures-hero">
+            <div>
+              <div class="wc-section-title">${this.t("results")}</div>
+              <div class="fixtures-subtitle">No results loaded yet.</div>
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    const grouped = results.reduce((days, match) => {
+      const key = this.fixtureDateKey(match);
+      if (!days[key]) {
+        days[key] = [];
+      }
+      days[key].push(match);
+      return days;
+    }, {});
+
+    return `
+      <div class="fixtures-page-card wc-card">
+        <div class="fixtures-hero">
+          <div class="fixtures-title-wrap">
+            <div class="fixtures-title-row">
+              <div class="wc-section-title">${this.t("results")}</div>
+            </div>
+            <div class="fixtures-subtitle">Finished matches and confirmed scores.</div>
+          </div>
+          <div class="fixtures-summary-grid">
+            <div class="fixtures-summary-box"><strong>${results.length}</strong><span>${this.t("played")}</span></div>
+          </div>
+        </div>
+
+        <div class="fixtures-days">
+          ${Object.entries(grouped).map(([key, matches]) => `
+            <div class="fixtures-day-block">
+              <div class="fixtures-day-heading">
+                <span>${this.esc(this.fixtureDayTitle(matches[0]))}</span>
+                <small>${matches.length} ${this.t("results")}</small>
+              </div>
+              <div class="fixtures-card-grid">
+                ${matches.map(m => this.fixtureCard(m)).join("")}
+              </div>
+            </div>
+          `).join("")}
         </div>
       </div>
     `;
@@ -6521,6 +6588,7 @@ class WorldCup2026Panel extends HTMLElement {
     if (this._page === "overview") return this.overviewPage();
     if (this._page === "live") return this.livePage();
     if (this._page === "fixtures") return this.fixturesPage();
+    if (this._page === "results") return this.resultsPage();
     if (this._page === "groups") return this.groupsPage();
     if (this._page === "knockout") return this.knockoutPage();
     if (this._page === "players") return this.playersPage();
