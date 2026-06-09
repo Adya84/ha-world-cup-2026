@@ -1,6 +1,9 @@
 """WebSocket API for World Cup 2026."""
 from __future__ import annotations
 
+import json
+from pathlib import Path
+
 import voluptuous as vol
 
 from homeassistant.components import websocket_api
@@ -75,7 +78,7 @@ def _normalise_scorer(scorer):
     }
 
 
-def _get_normalised_scorers(hass, coordinator):
+async def _get_normalised_scorers(hass, coordinator):
     """Use football-data.org scorers first, then local JSON fallback."""
     api_scorers = (coordinator.data or {}).get("scorers", [])
 
@@ -83,7 +86,7 @@ def _get_normalised_scorers(hass, coordinator):
         return [_normalise_scorer(scorer) for scorer in api_scorers]
 
     manager = GoldenBootManager(hass)
-    fallback_scorers = manager.get_scorers(limit=100)
+    fallback_scorers = await manager.async_get_scorers(limit=100)
 
     return [
         {
@@ -92,6 +95,27 @@ def _get_normalised_scorers(hass, coordinator):
         }
         for scorer in fallback_scorers
     ]
+
+
+def _load_supporters():
+    """Load supporters from local JSON file."""
+    supporters_file = Path(__file__).parents[1] / "data" / "supporters.json"
+
+    try:
+        with open(supporters_file, encoding="utf-8") as file:
+            data = json.load(file)
+
+        if isinstance(data, list):
+            return data
+
+        return []
+    except Exception:
+        return []
+
+
+async def _async_load_supporters(hass):
+    """Load supporters without blocking the event loop."""
+    return await hass.async_add_executor_job(_load_supporters)
 
 
 def _send_not_loaded(connection, msg):
@@ -110,7 +134,7 @@ async def websocket_get_overview(hass, connection, msg) -> None:
     data = coordinator.data or {}
     matches = data.get("matches", [])
     standings = data.get("standings", [])
-    scorers = _get_normalised_scorers(hass, coordinator)
+    scorers = await _get_normalised_scorers(hass, coordinator)
     statistics = data.get("statistics", {})
 
     live_matches = [m for m in matches if m.get("status") in LIVE_STATUSES]
@@ -197,7 +221,7 @@ async def websocket_get_scorers(hass, connection, msg) -> None:
 
     connection.send_result(
         msg["id"],
-        _get_normalised_scorers(hass, coordinator),
+        await _get_normalised_scorers(hass, coordinator),
     )
 
 
@@ -246,6 +270,15 @@ async def websocket_get_venues(hass, connection, msg) -> None:
     )
 
 
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_supporters"})
+@websocket_api.async_response
+async def websocket_get_supporters(hass, connection, msg) -> None:
+    connection.send_result(
+        msg["id"],
+        await _async_load_supporters(hass),
+    )
+
+
 async def async_register_websocket_api(hass) -> None:
     websocket_api.async_register_command(hass, websocket_get_overview)
     websocket_api.async_register_command(hass, websocket_get_live_matches)
@@ -255,3 +288,4 @@ async def async_register_websocket_api(hass) -> None:
     websocket_api.async_register_command(hass, websocket_get_statistics)
     websocket_api.async_register_command(hass, websocket_get_records)
     websocket_api.async_register_command(hass, websocket_get_venues)
+    websocket_api.async_register_command(hass, websocket_get_supporters)
