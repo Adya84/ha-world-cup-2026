@@ -2266,32 +2266,193 @@ class WorldCup2026Panel extends HTMLElement {
           width: 100%;
         }
 
+        .wc-title-stack {
+          min-width: 0;
+        }
+
         .wc-header-subtitle-inline {
-          text-align: right;
-          opacity: 0.72;
-          font-size: 14px;
+          opacity: 0.62;
+          font-size: 11px;
           font-weight: 700;
-          line-height: 1.25;
+          line-height: 1.1;
+          margin-top: 1px;
+          letter-spacing: 0.15px;
+        }
+
+
+        .overview-supporters-card {
+          background:
+            radial-gradient(circle at top left, rgba(255,220,120,0.15), transparent 34%),
+            rgba(255,255,255,0.08);
+          border-color: rgba(255,220,120,0.24);
+        }
+
+        .overview-supporters-layout {
+          display: grid;
+          grid-template-columns: minmax(0, 1.4fr) minmax(210px, 0.6fr);
+          gap: 14px;
+          align-items: stretch;
+        }
+
+        .overview-supporters-list {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+          gap: 8px;
+        }
+
+        .overview-supporter-pill {
+          display: flex;
+          align-items: center;
+          gap: 8px;
+          padding: 8px 10px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.10);
+          min-width: 0;
+        }
+
+        .overview-supporter-pill strong,
+        .overview-supporter-pill span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .overview-supporter-pill strong {
+          font-size: 13px;
+          font-weight: 950;
+        }
+
+        .overview-supporter-pill span {
+          font-size: 11px;
+          opacity: 0.72;
+        }
+
+        .overview-supporters-stats {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 8px;
+        }
+
+        .overview-supporters-stats div,
+        .supporter-summary-stat {
+          border-radius: 16px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.10);
+          padding: 12px;
+          text-align: center;
+        }
+
+        .overview-supporters-stats strong,
+        .supporter-summary-stat strong {
+          display: block;
+          font-size: 24px;
+          line-height: 1;
+          font-weight: 1000;
+          margin-bottom: 5px;
+        }
+
+        .overview-supporters-stats span,
+        .supporter-summary-stat span {
+          font-size: 11px;
+          opacity: 0.72;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+
+        .overview-country-strip,
+        .supporter-country-grid {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+          margin-top: 12px;
+        }
+
+        .overview-country-strip span,
+        .supporter-country-grid span {
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+          padding: 6px 9px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.10);
+          font-size: 12px;
+          font-weight: 850;
+        }
+
+        .overview-supporters-thanks {
+          margin-top: 12px;
+          opacity: 0.78;
+          font-size: 13px;
+          font-weight: 800;
+        }
+
+        .overview-supporters-link {
+          padding: 8px 12px;
+        }
+
+        .supporters-summary-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+          gap: 10px;
+          margin-bottom: 12px;
         }
 
         .supporters-feature-grid {
           display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-          gap: 14px;
-          margin-bottom: 16px;
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          gap: 8px;
+          margin-bottom: 12px;
+        }
+
+        .supporter-card-compact {
+          padding: 8px 10px;
+          border-radius: 12px;
+          min-height: auto;
         }
 
         .supporter-latest-card {
-          background: linear-gradient(135deg, rgba(255,220,120,0.16), rgba(255,255,255,0.08));
-          border-color: rgba(255,220,120,0.30);
+          background: linear-gradient(135deg, rgba(255,220,120,0.13), rgba(255,255,255,0.07));
+          border-color: rgba(255,220,120,0.28);
         }
 
         .supporter-card-name {
           display: flex !important;
           align-items: center;
-          gap: 8px;
-          font-size: 22px !important;
+          gap: 7px;
+          font-size: 14px !important;
           line-height: 1.15;
+          min-width: 0;
+        }
+
+        .supporter-card-name span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .supporter-card-meta {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+          margin-top: 4px;
+          font-size: 11px;
+          opacity: 0.72;
+          font-weight: 800;
+        }
+
+        .supporter-card-message {
+          margin-top: 4px;
+          font-size: 11px;
+          opacity: 0.68;
+          line-height: 1.25;
+        }
+
+        @media (max-width: 850px) {
+          .overview-supporters-layout {
+            grid-template-columns: 1fr;
+          }
         }
 
         .wc-donate-footer {
@@ -2755,6 +2916,78 @@ class WorldCup2026Panel extends HTMLElement {
             radial-gradient(circle at bottom right, rgba(255,215,80,0.16), transparent 32%),
             rgba(255,255,255,0.09);
         }
+
+        .overview-hero.compact-overview-hero,
+        .overview-hero {
+          min-height: auto;
+          padding: 12px 16px;
+          grid-template-columns: minmax(0, 1.7fr) minmax(220px, 0.5fr);
+          gap: 12px;
+        }
+
+        .overview-hero .overview-kicker {
+          display: none;
+        }
+
+        .overview-hero-title.compact-title,
+        .overview-hero-title {
+          font-size: clamp(24px, 3vw, 38px);
+          line-height: 1;
+          margin-bottom: 4px;
+        }
+
+        .overview-hero-subtitle.compact-subtitle,
+        .overview-hero-subtitle {
+          font-size: 12px;
+          line-height: 1.2;
+          opacity: 0.68;
+          max-width: 520px;
+        }
+
+        .overview-progress-wrap {
+          margin-top: 10px;
+          max-width: 520px;
+        }
+
+        .overview-progress-top {
+          margin-bottom: 5px;
+          font-size: 11px;
+        }
+
+        .overview-progress-bar {
+          height: 8px;
+        }
+
+        .overview-action-row {
+          margin-top: 10px;
+          gap: 7px;
+        }
+
+        .overview-action-button {
+          padding: 7px 11px;
+          font-size: 11px;
+        }
+
+        .overview-hero-side {
+          gap: 8px;
+        }
+
+        .overview-status-card {
+          min-height: 74px;
+          padding: 11px 13px;
+          gap: 3px;
+          border-radius: 15px;
+        }
+
+        .overview-status-card strong {
+          font-size: 26px;
+        }
+
+        .overview-status-card span,
+        .overview-status-card em {
+          font-size: 11px;
+        }
+
 
         .overview-hero::before {
           content: "";
@@ -3442,6 +3675,39 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+
+        @media (max-width: 900px) {
+          .overview-hero.compact-overview-hero,
+          .overview-hero {
+            padding: 11px;
+            gap: 10px;
+          }
+
+          .overview-hero-title.compact-title,
+          .overview-hero-title {
+            font-size: 28px;
+            text-align: center;
+          }
+
+          .overview-hero-subtitle.compact-subtitle,
+          .overview-hero-subtitle {
+            text-align: center;
+            max-width: none;
+          }
+
+          .overview-progress-wrap {
+            max-width: none;
+          }
+
+          .overview-action-row {
+            justify-content: center;
+          }
+
+          .overview-status-card {
+            min-height: 62px;
+          }
+        }
+
         @media (max-width: 950px) {
           .overview-hero,
           .overview-main-grid,
@@ -3747,6 +4013,113 @@ class WorldCup2026Panel extends HTMLElement {
           gap: 14px;
         }
 
+
+
+        /* Compact overview layout tweaks */
+        .overview-hero.compact-overview-hero,
+        .overview-hero {
+          grid-template-columns: minmax(0, 1fr) auto;
+          align-items: start;
+          padding: 10px 14px;
+          gap: 10px;
+          border-radius: 18px;
+        }
+
+        .overview-hero-title.compact-title,
+        .overview-hero-title {
+          font-size: clamp(20px, 2.2vw, 30px);
+          line-height: 1;
+          margin-bottom: 3px;
+        }
+
+        .overview-hero-subtitle.compact-subtitle,
+        .overview-hero-subtitle {
+          font-size: 11px;
+          line-height: 1.2;
+          max-width: 520px;
+          opacity: 0.7;
+        }
+
+        .overview-progress-wrap {
+          margin-top: 8px;
+          max-width: 420px;
+        }
+
+        .overview-progress-top {
+          margin-bottom: 4px;
+          font-size: 10px;
+        }
+
+        .overview-progress-bar {
+          height: 6px;
+        }
+
+        .overview-action-row {
+          margin-top: 8px;
+          gap: 6px;
+        }
+
+        .overview-action-button {
+          padding: 6px 10px;
+          font-size: 10px;
+        }
+
+        .overview-top-pills {
+          display: flex;
+          justify-content: flex-end;
+          align-items: flex-start;
+          gap: 6px;
+          min-width: 0;
+        }
+
+        .overview-status-card.overview-mini-pill {
+          min-height: 0;
+          width: auto;
+          min-width: 74px;
+          padding: 5px 8px;
+          border-radius: 999px;
+          gap: 1px;
+          text-align: center;
+        }
+
+        .overview-status-card.overview-mini-pill span,
+        .overview-status-card.overview-mini-pill em {
+          font-size: 8px;
+          line-height: 1.05;
+          letter-spacing: 0.2px;
+          white-space: nowrap;
+        }
+
+        .overview-status-card.overview-mini-pill strong {
+          font-size: 13px;
+          line-height: 1;
+        }
+
+        .overview-stat-grid {
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .overview-stat-tile {
+          min-height: 70px;
+          padding: 9px 10px;
+          border-radius: 14px;
+        }
+
+        .overview-stat-tile strong {
+          font-size: clamp(19px, 2vw, 26px);
+        }
+
+        .overview-stat-tile span,
+        .overview-stat-tile em {
+          font-size: 10px;
+          line-height: 1.1;
+        }
+
+        .overview-supporters-card {
+          margin-top: 0;
+        }
+
         @media (max-width: 900px) {
           .wc-header-title-row {
             grid-template-columns: 1fr;
@@ -3762,6 +4135,24 @@ class WorldCup2026Panel extends HTMLElement {
           .wc-overview-beer-button {
             padding: 10px 18px;
             font-size: 14px;
+          }
+        }
+
+
+
+        @media (max-width: 800px) {
+          .overview-hero.compact-overview-hero,
+          .overview-hero {
+            grid-template-columns: 1fr;
+          }
+
+          .overview-top-pills {
+            justify-content: flex-start;
+            flex-wrap: wrap;
+          }
+
+          .overview-stat-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
           }
         }
 
@@ -4120,6 +4511,152 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+
+        /* Compact overview hero - tiny status corner */
+        .overview-hero.compact-overview-hero,
+        .overview-hero {
+          position: relative;
+          min-height: auto;
+          padding: 12px 16px 14px;
+          grid-template-columns: 1fr;
+          gap: 8px;
+        }
+
+        .overview-hero-side {
+          position: absolute;
+          top: 10px;
+          right: 12px;
+          display: flex;
+          flex-direction: row;
+          gap: 6px;
+          z-index: 2;
+        }
+
+        .overview-status-card {
+          min-height: 0;
+          padding: 6px 9px;
+          border-radius: 999px;
+          gap: 0;
+          background: rgba(0,0,0,0.22);
+          border: 1px solid rgba(255,255,255,0.18);
+          box-shadow: none;
+          min-width: auto;
+        }
+
+        .overview-status-card span {
+          display: none;
+        }
+
+        .overview-status-card strong {
+          font-size: 12px;
+          line-height: 1;
+          font-weight: 900;
+        }
+
+        .overview-status-card em {
+          font-size: 10px;
+          line-height: 1;
+          opacity: 0.78;
+          margin-left: 3px;
+        }
+
+        .overview-status-card.is-live {
+          background: rgba(255,40,40,0.25);
+          border-color: rgba(255,90,90,0.45);
+        }
+
+        .overview-hero-title.compact-title,
+        .overview-hero-title {
+          font-size: clamp(24px, 3vw, 36px);
+          line-height: 1;
+          margin-bottom: 2px;
+          padding-right: 230px;
+        }
+
+        .overview-hero-subtitle.compact-subtitle,
+        .overview-hero-subtitle {
+          font-size: 11px;
+          line-height: 1.15;
+          opacity: 0.72;
+          max-width: 480px;
+          padding-right: 230px;
+        }
+
+        .overview-progress-wrap {
+          margin-top: 8px;
+          max-width: none;
+        }
+
+        .overview-action-row {
+          margin-top: 9px;
+        }
+
+        @media (max-width: 900px) {
+          .overview-hero-side {
+            position: static;
+            justify-content: center;
+            margin-bottom: 4px;
+            order: -1;
+          }
+
+          .overview-hero-title.compact-title,
+          .overview-hero-title,
+          .overview-hero-subtitle.compact-subtitle,
+          .overview-hero-subtitle {
+            padding-right: 0;
+            text-align: center;
+          }
+        }
+
+
+        /* Compact overview stat row */
+        .overview-stat-grid {
+          grid-template-columns: repeat(6, minmax(0, 1fr));
+          gap: 8px;
+        }
+
+        .overview-stat-tile {
+          min-height: 62px;
+          padding: 8px 10px;
+          border-radius: 13px;
+        }
+
+        .overview-stat-tile strong {
+          font-size: 23px;
+          line-height: 1;
+          margin-bottom: 2px;
+        }
+
+        .overview-stat-tile span,
+        .overview-stat-tile em {
+          font-size: 10px;
+          line-height: 1.15;
+        }
+
+        @media (max-width: 1250px) {
+          .overview-stat-grid {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+          }
+        }
+
+        @media (max-width: 700px) {
+          .overview-stat-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+
+        .overview-supporters-card,
+        .overview-latest-supporters-card {
+          margin-top: 16px;
+        }
+
+        .overview-supporters-card .wc-grid,
+        .overview-latest-supporters-card .wc-grid {
+          grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+          gap: 8px;
+        }
+
       </style>
     `;
   }
@@ -4209,14 +4746,13 @@ class WorldCup2026Panel extends HTMLElement {
     const finalVenue = venues.final_venue;
     const topTeam = records.top_scoring_team;
     const bestDefence = records.best_defence;
-
+    const supporters = this.sortedSupporters();
     return `
       <div class="overview-pro-page">
-        <div class="overview-hero wc-card">
+        <div class="overview-hero compact-overview-hero wc-card">
 <div class="overview-hero-main">
-            <div class="overview-kicker">${this.t("controlCentre")}</div>
-            <div class="overview-hero-title">${this.t("title")}</div>
-            <div class="overview-hero-subtitle">${this.t("overviewSubtitle")}</div>
+            <div class="overview-hero-title compact-title">${this.t("title")}</div>
+            <div class="overview-hero-subtitle compact-subtitle">${this.t("subtitle")}</div>
 
             <div class="overview-progress-wrap">
               <div class="overview-progress-top">
@@ -4236,13 +4772,13 @@ class WorldCup2026Panel extends HTMLElement {
             </div>
           </div>
 
-          <div class="overview-hero-side">
-            <div class="overview-status-card ${liveMatches.length ? "is-live" : ""}">
+          <div class="overview-hero-side overview-top-pills">
+            <div class="overview-status-card overview-mini-pill ${liveMatches.length ? "is-live" : ""}">
               <span>${this.t("liveNow")}</span>
               <strong>${liveMatches.length}</strong>
               <em>${liveMatches.length ? this.t("liveStatus") : this.t("scheduled")}</em>
             </div>
-            <div class="overview-status-card">
+            <div class="overview-status-card overview-mini-pill">
               <span>${this.t("lastUpdate")}</span>
               <strong>${o.last_update_success ? this.t("ok") : this.t("failed")}</strong>
               <em>${this.t("demoMode")}: ${o.demo_mode ? this.t("on") : this.t("off")}</em>
@@ -4340,6 +4876,8 @@ class WorldCup2026Panel extends HTMLElement {
             ` : `<div class="wc-empty">${this.t("noPlayerStats")}</div>`}
           </div>
         </div>
+
+        ${this.overviewSupportersPanel()}
       </div>
     `;
   }
@@ -5103,6 +5641,88 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  sortedSupporters() {
+    const supporters = Array.isArray(this._data.supporters) ? this._data.supporters : [];
+
+    return [...supporters].sort((a, b) => {
+      const aDate = new Date(a?.date || "1900-01-01").getTime();
+      const bDate = new Date(b?.date || "1900-01-01").getTime();
+      return bDate - aDate;
+    });
+  }
+
+  supporterCountryCounts(supporters) {
+    return supporters.reduce((counts, supporter) => {
+      const country = typeof supporter === "string" ? "" : this.teamLabel(supporter.country || "");
+      if (!country) return counts;
+      counts[country] = (counts[country] || 0) + 1;
+      return counts;
+    }, {});
+  }
+
+  overviewSupportersPanel() {
+    const supporters = this.sortedSupporters();
+
+    if (!supporters.length) {
+      return "";
+    }
+
+    const latestSupporters = supporters.slice(0, 5);
+    const countryCounts = this.supporterCountryCounts(supporters);
+    const countries = Object.entries(countryCounts)
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]))
+      .slice(0, 8);
+
+    return `
+      <div class="wc-card overview-supporters-card">
+        <div class="overview-panel-heading">
+          <div>
+            <div class="overview-small-label">🍺 Community Support</div>
+            <div class="wc-section-title">🌟 Latest Supporters</div>
+          </div>
+          <button class="overview-action-button overview-supporters-link" data-page="supporters" type="button">
+            View All ${supporters.length}
+          </button>
+        </div>
+
+        <div class="overview-supporters-layout">
+          <div>
+            <div class="overview-supporters-list">
+              ${latestSupporters.map((supporter) => {
+                const name = typeof supporter === "string" ? supporter : supporter.name;
+                const country = typeof supporter === "string" ? "" : supporter.country;
+                return `
+                  <div class="overview-supporter-pill">
+                    ${country ? this.flag(country, true) : "🍺"}
+                    <strong>${this.esc(name || this.t("anonymousSupporter"))}</strong>
+                    ${country ? `<span>${this.esc(this.teamLabel(country))}</span>` : ""}
+                  </div>
+                `;
+              }).join("")}
+            </div>
+          </div>
+
+          <div class="overview-supporters-stats">
+            <div><strong>${supporters.length}</strong><span>Total Supporters</span></div>
+            <div><strong>${countries.length}</strong><span>Countries</span></div>
+          </div>
+        </div>
+
+        ${countries.length ? `
+          <div class="overview-country-strip">
+            ${countries.map(([country, count]) => `
+              <span>${this.flag(country, true)} ${this.esc(country)} <b>${count}</b></span>
+            `).join("")}
+          </div>
+        ` : ""}
+
+        <div class="overview-supporters-thanks">
+          ❤️ Thanks to everyone helping support development of the World Cup 2026 integration.
+        </div>
+      </div>
+    `;
+  }
+
   supporterCard(supporter, isLatest = false) {
     const name = typeof supporter === "string" ? supporter : supporter.name;
     const country = typeof supporter === "string" ? "" : supporter.country;
@@ -5112,26 +5732,25 @@ class WorldCup2026Panel extends HTMLElement {
     const date = typeof supporter === "string" ? "" : supporter.date;
 
     return `
-      <div class="wc-stat ${isLatest ? "supporter-latest-card" : ""}">
+      <div class="wc-stat supporter-card-compact ${isLatest ? "supporter-latest-card" : ""}">
         <strong class="supporter-card-name">
           ${country ? this.flag(country, true) : "🍺"}
-          ${this.esc(name || this.t("anonymousSupporter"))}
+          <span>${this.esc(name || this.t("anonymousSupporter"))}</span>
         </strong>
-        ${country ? `<div class="wc-muted">${this.esc(this.teamLabel(country))}</div>` : ""}
-        ${date ? `<div class="wc-muted">${this.esc(date)}</div>` : ""}
-        <div class="wc-muted">${this.esc(message || this.t("supporterDefaultMessage"))}</div>
+        <div class="supporter-card-meta">
+          ${country ? `<span>${this.esc(this.teamLabel(country))}</span>` : ""}
+          ${date ? `<span>${this.esc(date)}</span>` : ""}
+        </div>
+        ${message ? `<div class="supporter-card-message">${this.esc(message || this.t("supporterDefaultMessage"))}</div>` : ""}
       </div>
     `;
   }
 
   supportersPage() {
-    const supporters = Array.isArray(this._data.supporters)
-      ? [...this._data.supporters].sort((a, b) => {
-          const aDate = new Date(a?.date || "1900-01-01").getTime();
-          const bDate = new Date(b?.date || "1900-01-01").getTime();
-          return bDate - aDate;
-        })
-      : [];
+    const supporters = this.sortedSupporters();
+    const countryCounts = this.supporterCountryCounts(supporters);
+    const countryList = Object.entries(countryCounts)
+      .sort((a, b) => b[1] - a[1] || a[0].localeCompare(b[0]));
 
     const latestDate = supporters[0]?.date || "";
     const latestSupporters = latestDate
@@ -5150,6 +5769,24 @@ class WorldCup2026Panel extends HTMLElement {
           ${this.t("supportersSpecialThanks")}
         </p>
       </div>
+
+      ${supporters.length ? `
+        <div class="wc-card supporters-summary-card">
+          <div class="wc-section-title">❤️ Supporters Around The World</div>
+          <div class="supporters-summary-grid">
+            <div class="supporter-summary-stat"><strong>${supporters.length}</strong><span>Total Supporters</span></div>
+            <div class="supporter-summary-stat"><strong>${countryList.length}</strong><span>Countries Supporting</span></div>
+            <div class="supporter-summary-stat"><strong>${latestDate || "—"}</strong><span>Latest Support Date</span></div>
+          </div>
+          ${countryList.length ? `
+            <div class="supporter-country-grid">
+              ${countryList.map(([country, count]) => `
+                <span>${this.flag(country, true)} ${this.esc(country)} <b>${count}</b></span>
+              `).join("")}
+            </div>
+          ` : ""}
+        </div>
+      ` : ""}
 
       ${
         supporters.length
@@ -5215,7 +5852,10 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="wc-shell">
           <div class="wc-header">
             <div class="wc-header-title-row">
-              <div class="wc-title">${this.t("title")}</div>
+              <div class="wc-title-stack">
+                <div class="wc-title">${this.t("title")}</div>
+                <div class="wc-header-subtitle-inline">${this.t("subtitle")}</div>
+              </div>
 
               <a
                 class="wc-overview-beer-button"
@@ -5227,7 +5867,7 @@ class WorldCup2026Panel extends HTMLElement {
                 🍺 Buy Me A Beer
               </a>
 
-              <div class="wc-header-subtitle-inline">${this.t("subtitle")}</div>
+              <div></div>
             </div>
 
             <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
