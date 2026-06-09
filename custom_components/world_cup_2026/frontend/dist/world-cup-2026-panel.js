@@ -140,11 +140,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'This project started as a personal Home Assistant dashboard and has grown thanks to feedback, testing, ideas and support from the community.',
         supportersSpecialThanks: 'Special thanks to everyone who has supported development of the World Cup 2026 integration.',
         supportersTitle: '🍺 Supporters',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'Thank you for supporting development.',
         anonymousSupporter: 'Anonymous Supporter',
         noSupporters: 'No supporters added yet. Be the first to Buy Me a Beer and get your name listed here.',
         wantNameAdded: 'Want your name added here?',
         supportFutureUpdates: 'Support future updates, bug fixes and new World Cup features.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 Donate / Buy Me a Beer',
         enjoyingIntegration: '🍺 Enjoying this integration?',
         supportIntegration: 'Support this integration',
@@ -270,11 +273,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'Ce projet a commencé comme un tableau de bord Home Assistant personnel et a grandi grâce aux retours, tests, idées et au soutien de la communauté.',
         supportersSpecialThanks: 'Merci à toutes les personnes qui ont soutenu le développement de l\'intégration World Cup 2026.',
         supportersTitle: '🍺 Soutiens',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'Merci de soutenir le développement.',
         anonymousSupporter: 'Soutien anonyme',
         noSupporters: 'Aucun soutien ajouté pour le moment. Soyez le premier à offrir une bière et à faire apparaître votre nom ici.',
         wantNameAdded: 'Vous voulez ajouter votre nom ici ?',
         supportFutureUpdates: 'Soutenez les futures mises à jour, corrections de bugs et nouvelles fonctions de la Coupe du Monde.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 Faire un don / Offrir une bière',
         enjoyingIntegration: '🍺 Vous aimez cette intégration ?',
         supportIntegration: 'Soutenir cette intégration',
@@ -400,11 +406,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'Dieses Projekt begann als persönliches Home Assistant Dashboard und ist dank Feedback, Tests, Ideen und Unterstützung der Community gewachsen.',
         supportersSpecialThanks: 'Besonderer Dank gilt allen, die die Entwicklung der World Cup 2026 Integration unterstützt haben.',
         supportersTitle: '🍺 Unterstützer',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'Danke für die Unterstützung der Entwicklung.',
         anonymousSupporter: 'Anonymer Unterstützer',
         noSupporters: 'Noch keine Unterstützer hinzugefügt. Sei der Erste, der ein Bier spendiert, und lass deinen Namen hier anzeigen.',
         wantNameAdded: 'Möchtest du deinen Namen hier sehen?',
         supportFutureUpdates: 'Unterstütze zukünftige Updates, Fehlerbehebungen und neue World-Cup-Funktionen.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 Spenden / Ein Bier ausgeben',
         enjoyingIntegration: '🍺 Gefällt dir diese Integration?',
         supportIntegration: 'Diese Integration unterstützen',
@@ -647,11 +656,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'Questo progetto è nato come dashboard personale per Home Assistant ed è cresciuto grazie a feedback, test, idee e supporto della community.',
         supportersSpecialThanks: 'Un ringraziamento speciale a tutti coloro che hanno sostenuto lo sviluppo dell\'integrazione World Cup 2026.',
         supportersTitle: '🍺 Sostenitori',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'Grazie per sostenere lo sviluppo.',
         anonymousSupporter: 'Sostenitore anonimo',
         noSupporters: 'Nessun sostenitore ancora aggiunto. Sii il primo a offrirmi una birra e a far comparire il tuo nome qui.',
         wantNameAdded: 'Vuoi aggiungere il tuo nome qui?',
         supportFutureUpdates: 'Sostieni futuri aggiornamenti, correzioni di bug e nuove funzioni della Coppa del Mondo.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 Dona / Offrimi una birra',
         enjoyingIntegration: '🍺 Ti piace questa integrazione?',
         supportIntegration: 'Sostieni questa integrazione',
@@ -777,11 +789,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'Dit project begon als een persoonlijk Home Assistant-dashboard en is gegroeid dankzij feedback, testen, ideeën en steun van de community.',
         supportersSpecialThanks: 'Speciale dank aan iedereen die de ontwikkeling van de World Cup 2026-integratie heeft gesteund.',
         supportersTitle: '🍺 Supporters',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'Bedankt voor je steun aan de ontwikkeling.',
         anonymousSupporter: 'Anonieme supporter',
         noSupporters: 'Nog geen supporters toegevoegd. Wees de eerste die een biertje koopt en je naam hier laat plaatsen.',
         wantNameAdded: 'Wil je je naam hier toevoegen?',
         supportFutureUpdates: 'Steun toekomstige updates, bugfixes en nieuwe World Cup-functies.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 Doneren / Biertje kopen',
         enjoyingIntegration: '🍺 Geniet je van deze integratie?',
         supportIntegration: 'Deze integratie steunen',
@@ -907,11 +922,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'بدأ هذا المشروع كلوحة Home Assistant شخصية، ونما بفضل الملاحظات والاختبارات والأفكار والدعم من المجتمع.',
         supportersSpecialThanks: 'شكر خاص لكل من دعم تطوير تكامل كأس العالم 2026.',
         supportersTitle: '🍺 الداعمون',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'شكراً لدعمك التطوير.',
         anonymousSupporter: 'داعم مجهول',
         noSupporters: 'لا يوجد داعمون بعد. كن أول من يشتري لي بيرة ويظهر اسمه هنا.',
         wantNameAdded: 'هل تريد إضافة اسمك هنا؟',
         supportFutureUpdates: 'ادعم التحديثات المستقبلية وإصلاح الأخطاء وميزات كأس العالم الجديدة.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 تبرع / اشترِ لي بيرة',
         enjoyingIntegration: '🍺 هل تستمتع بهذا التكامل؟',
         supportIntegration: 'ادعم هذا التكامل',
@@ -1037,11 +1055,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'Este projeto começou como um painel pessoal do Home Assistant e cresceu graças ao feedback, testes, ideias e apoio da comunidade.',
         supportersSpecialThanks: 'Um agradecimento especial a todos os que apoiaram o desenvolvimento da integração World Cup 2026.',
         supportersTitle: '🍺 Apoiantes',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'Obrigado por apoiar o desenvolvimento.',
         anonymousSupporter: 'Apoiante anónimo',
         noSupporters: 'Ainda não há apoiantes. Seja o primeiro a pagar-me uma cerveja e a ter o seu nome aqui.',
         wantNameAdded: 'Quer adicionar o seu nome aqui?',
         supportFutureUpdates: 'Apoie futuras atualizações, correções de erros e novas funcionalidades da Copa do Mundo.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 Donar / Pagar uma cerveja',
         enjoyingIntegration: '🍺 Está a gostar desta integração?',
         supportIntegration: 'Apoiar esta integração',
@@ -1167,11 +1188,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: "Ten projekt rozpoczął się jako osobisty panel Home Assistant i rozwinął się dzięki opiniom, testom, pomysłom oraz wsparciu społeczności.",
         supportersSpecialThanks: "Specjalne podziękowania dla wszystkich, którzy wsparli rozwój integracji World Cup 2026.",
         supportersTitle: "🍺 Wspierający",
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: "Dziękuję za wsparcie rozwoju projektu.",
         anonymousSupporter: "Anonimowy wspierający",
         noSupporters: "Nie dodano jeszcze wspierających. Bądź pierwszy, postaw mi piwo i dodaj swoje imię tutaj.",
         wantNameAdded: "Chcesz dodać swoje imię tutaj?",
         supportFutureUpdates: "Wesprzyj przyszłe aktualizacje, poprawki błędów i nowe funkcje mundialowe.",
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: "🍺 Wpłać / Postaw mi piwo",
         enjoyingIntegration: "🍺 Podoba Ci się ta integracja?",
         supportIntegration: "Wesprzyj tę integrację",
@@ -1297,11 +1321,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'このプロジェクトは個人用の Home Assistant ダッシュボードとして始まり、コミュニティからのフィードバック、テスト、アイデア、支援によって成長しました。',
         supportersSpecialThanks: 'World Cup 2026 インテグレーションの開発を支援してくださった皆様に感謝します。',
         supportersTitle: '🍺 サポーター',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: '開発を支援していただきありがとうございます。',
         anonymousSupporter: '匿名サポーター',
         noSupporters: 'まだサポーターはいません。最初にビール代を支援して、ここに名前を載せましょう。',
         wantNameAdded: 'ここに名前を追加しますか？',
         supportFutureUpdates: '今後のアップデート、バグ修正、ワールドカップ新機能を支援できます。',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 寄付 / ビールをおごる',
         enjoyingIntegration: '🍺 このインテグレーションを楽しんでいますか？',
         supportIntegration: 'このインテグレーションを支援',
@@ -1427,11 +1454,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: '이 프로젝트는 개인 Home Assistant 대시보드로 시작했으며 커뮤니티의 피드백, 테스트, 아이디어와 지원 덕분에 성장했습니다.',
         supportersSpecialThanks: 'World Cup 2026 통합 개발을 지원해 주신 모든 분들께 특별히 감사드립니다.',
         supportersTitle: '🍺 후원자',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: '개발을 지원해 주셔서 감사합니다.',
         anonymousSupporter: '익명 후원자',
         noSupporters: '아직 후원자가 없습니다. 첫 번째로 맥주 한 잔을 후원하고 여기에 이름을 올려보세요.',
         wantNameAdded: '여기에 이름을 추가하고 싶으신가요?',
         supportFutureUpdates: '향후 업데이트, 버그 수정 및 새로운 월드컵 기능을 지원해 주세요.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 기부 / 맥주 사주기',
         enjoyingIntegration: '🍺 이 통합을 즐기고 계신가요?',
         supportIntegration: '이 통합 지원',
@@ -1557,11 +1587,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'Det här projektet började som en personlig Home Assistant-panel och har vuxit tack vare feedback, tester, idéer och stöd från communityn.',
         supportersSpecialThanks: 'Särskilt tack till alla som har stött utvecklingen av World Cup 2026-integrationen.',
         supportersTitle: '🍺 Supportrar',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'Tack för att du stödjer utvecklingen.',
         anonymousSupporter: 'Anonym supporter',
         noSupporters: 'Inga supportrar har lagts till ännu. Var först med att bjuda på en öl och få ditt namn här.',
         wantNameAdded: 'Vill du lägga till ditt namn här?',
         supportFutureUpdates: 'Stöd framtida uppdateringar, buggfixar och nya World Cup-funktioner.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 Donera / Bjud på en öl',
         enjoyingIntegration: '🍺 Gillar du den här integrationen?',
         supportIntegration: 'Stöd den här integrationen',
@@ -1687,11 +1720,14 @@ class WorldCup2026Panel extends HTMLElement {
         supportersIntro: 'Dette prosjektet startet som et personlig Home Assistant-dashbord og har vokst takket være tilbakemeldinger, testing, ideer og støtte fra fellesskapet.',
         supportersSpecialThanks: 'Spesiell takk til alle som har støttet utviklingen av World Cup 2026-integrasjonen.',
         supportersTitle: '🍺 Støttespillere',
+        latestSupporters: '⭐ Latest Supporters',
+        allSupporters: '🌍 All Supporters',
         supporterDefaultMessage: 'Takk for at du støtter utviklingen.',
         anonymousSupporter: 'Anonym støttespiller',
         noSupporters: 'Ingen støttespillere er lagt til ennå. Bli den første til å kjøpe meg en øl og få navnet ditt her.',
         wantNameAdded: 'Vil du ha navnet ditt lagt til her?',
         supportFutureUpdates: 'Støtt fremtidige oppdateringer, feilrettinger og nye World Cup-funksjoner.',
+        supporterBeerMessage: '🍺 Want your name featured on the Supporters page? Buy me a beer via PayPal and your name can be added to the World Cup 2026 Supporters list as a thank you for supporting development.',
         donateBuyBeer: '🍺 Doner / Kjøp meg en øl',
         enjoyingIntegration: '🍺 Liker du denne integrasjonen?',
         supportIntegration: 'Støtt denne integrasjonen',
@@ -2180,6 +2216,54 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-donate-button:hover {
           transform: translateY(-1px);
           box-shadow: 0 0 22px rgba(0, 200, 255, 0.40);
+        }
+
+        .wc-overview-beer-button {
+          position: absolute;
+          top: 12px;
+          left: 50%;
+          transform: translateX(-50%);
+          z-index: 100;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          gap: 6px;
+          padding: 12px 22px;
+          border-radius: 999px;
+          text-decoration: none;
+          font-size: 15px;
+          line-height: 1;
+          font-weight: 900;
+          white-space: nowrap;
+          color: white;
+          background: linear-gradient(135deg, rgba(0, 112, 186, 0.95), rgba(0, 200, 255, 0.45));
+          border: 1px solid rgba(0, 200, 255, 0.55);
+          box-shadow: 0 0 18px rgba(0, 200, 255, 0.35);
+        }
+
+        .wc-overview-beer-button:hover {
+          transform: translateX(-50%) translateY(-1px);
+          box-shadow: 0 0 24px rgba(0, 200, 255, 0.45);
+        }
+
+        .supporters-feature-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+          gap: 14px;
+          margin-bottom: 16px;
+        }
+
+        .supporter-latest-card {
+          background: linear-gradient(135deg, rgba(255,220,120,0.16), rgba(255,255,255,0.08));
+          border-color: rgba(255,220,120,0.30);
+        }
+
+        .supporter-card-name {
+          display: flex !important;
+          align-items: center;
+          gap: 8px;
+          font-size: 22px !important;
+          line-height: 1.15;
         }
 
         .wc-donate-footer {
@@ -3635,6 +3719,18 @@ class WorldCup2026Panel extends HTMLElement {
           gap: 14px;
         }
 
+        @media (max-width: 760px) {
+          .wc-overview-beer-button {
+            top: 8px;
+            padding: 9px 16px;
+            font-size: 13px;
+          }
+
+          .wc-header {
+            padding-top: 44px;
+          }
+        }
+
         @media (max-width: 800px) {
           .wc-app {
             padding: 14px;
@@ -4083,7 +4179,7 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <div class="overview-pro-page">
         <div class="overview-hero wc-card">
-          <div class="overview-hero-main">
+<div class="overview-hero-main">
             <div class="overview-kicker">${this.t("controlCentre")}</div>
             <div class="overview-hero-title">${this.t("title")}</div>
             <div class="overview-hero-subtitle">${this.t("overviewSubtitle")}</div>
@@ -4973,33 +5069,42 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  supporterCard(supporter, isLatest = false) {
+    const name = typeof supporter === "string" ? supporter : supporter.name;
+    const country = typeof supporter === "string" ? "" : supporter.country;
+    const message = typeof supporter === "string"
+      ? this.t("supporterDefaultMessage")
+      : supporter.message;
+    const date = typeof supporter === "string" ? "" : supporter.date;
+
+    return `
+      <div class="wc-stat ${isLatest ? "supporter-latest-card" : ""}">
+        <strong class="supporter-card-name">
+          ${country ? this.flag(country, true) : "🍺"}
+          ${this.esc(name || this.t("anonymousSupporter"))}
+        </strong>
+        ${country ? `<div class="wc-muted">${this.esc(this.teamLabel(country))}</div>` : ""}
+        ${date ? `<div class="wc-muted">${this.esc(date)}</div>` : ""}
+        <div class="wc-muted">${this.esc(message || this.t("supporterDefaultMessage"))}</div>
+      </div>
+    `;
+  }
+
   supportersPage() {
-    const supporters = Array.isArray(this._data.supporters) ? this._data.supporters : [];
+    const supporters = Array.isArray(this._data.supporters)
+      ? [...this._data.supporters].sort((a, b) => {
+          const aDate = new Date(a?.date || "1900-01-01").getTime();
+          const bDate = new Date(b?.date || "1900-01-01").getTime();
+          return bDate - aDate;
+        })
+      : [];
 
-    const supporterCards = supporters.length
-      ? supporters.map((supporter) => {
-          const name = typeof supporter === "string" ? supporter : supporter.name;
-          const country = typeof supporter === "string" ? "" : supporter.country;
-          const message = typeof supporter === "string"
-            ? this.t("supporterDefaultMessage")
-            : supporter.message;
+    const latestDate = supporters[0]?.date || "";
+    const latestSupporters = latestDate
+      ? supporters.filter((supporter) => supporter.date === latestDate)
+      : supporters.slice(0, 2);
 
-          return `
-            <div class="wc-stat">
-              <strong>
-                ${country ? this.flag(country, true) : "🍺"}
-                ${this.esc(name || this.t("anonymousSupporter"))}
-              </strong>
-              ${country ? `<div class="wc-muted">${this.esc(this.teamLabel(country))}</div>` : ""}
-              <div class="wc-muted">${this.esc(message || this.t("supporterDefaultMessage"))}</div>
-            </div>
-          `;
-        }).join("")
-      : `
-        <div class="wc-empty">
-          ${this.t("noSupporters")}
-        </div>
-      `;
+    const allSupporters = supporters;
 
     return `
       <div class="wc-card">
@@ -5012,16 +5117,36 @@ class WorldCup2026Panel extends HTMLElement {
         </p>
       </div>
 
-      <div class="wc-card">
-        <div class="wc-section-title">${this.t("supportersTitle")}</div>
-        <div class="wc-grid">
-          ${supporterCards}
-        </div>
-      </div>
+      ${
+        supporters.length
+          ? `
+            <div class="wc-card">
+              <div class="wc-section-title">${this.t("latestSupporters")}</div>
+              ${latestDate ? `<p class="wc-muted">${this.esc(latestDate)}</p>` : ""}
+              <div class="supporters-feature-grid">
+                ${latestSupporters.map((supporter) => this.supporterCard(supporter, true)).join("")}
+              </div>
+            </div>
+
+            <div class="wc-card">
+              <div class="wc-section-title">${this.t("allSupporters")}</div>
+              <div class="wc-grid">
+                ${allSupporters.map((supporter) => this.supporterCard(supporter)).join("")}
+              </div>
+            </div>
+          `
+          : `
+            <div class="wc-card">
+              <div class="wc-section-title">${this.t("supportersTitle")}</div>
+              <div class="wc-empty">${this.t("noSupporters")}</div>
+            </div>
+          `
+      }
 
       <div class="wc-card" style="text-align:center;">
         <div class="wc-section-title">${this.t("wantNameAdded")}</div>
         <p class="wc-muted">${this.t("supportFutureUpdates")}</p>
+        <p class="wc-muted">${this.t("supporterBeerMessage")}</p>
         <a
           class="wc-pill wc-donate-button"
           href="https://paypal.me/graffidoodle"
@@ -5053,6 +5178,17 @@ class WorldCup2026Panel extends HTMLElement {
     this.innerHTML = `
       ${this.styles()}
       <div class="wc-app" dir="${this._language === "ar" ? "rtl" : "ltr"}">
+        ${this._page === "overview" ? `
+          <a
+            class="wc-overview-beer-button"
+            href="https://paypal.me/graffidoodle"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="${this.t("supportIntegration")}"
+          >
+            🍺 Buy Me A Beer
+          </a>
+        ` : ""}
         <div class="wc-shell">
           <div class="wc-header">
             <div>
@@ -5067,16 +5203,6 @@ class WorldCup2026Panel extends HTMLElement {
                 ${this.t("back")}
               </button>
 
-              <a
-                class="wc-pill wc-donate-button"
-                href="https://paypal.me/graffidoodle"
-                target="_blank"
-                rel="noopener noreferrer"
-                title="${this.t("supportIntegration")}"
-              >
-                ${this.t("donateBuyBeer")}
-              </a>
-
               <div class="wc-pill">
                 ${this.t("updated")} ${new Date().toLocaleTimeString()}
               </div>
@@ -5086,16 +5212,18 @@ class WorldCup2026Panel extends HTMLElement {
           ${this.nav()}
           ${this.pageContent()}
 
-          <div class="wc-donate-footer">
-            <span>${this.t("enjoyingIntegration")}</span>
-            <a
-              href="https://paypal.me/graffidoodle"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              ${this.t("donateBuyBeer")}
-            </a>
-          </div>
+          ${this._page === "supporters" ? `
+            <div class="wc-donate-footer">
+              <span>${this.t("enjoyingIntegration")}</span>
+              <a
+                href="https://paypal.me/graffidoodle"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ${this.t("donateBuyBeer")}
+              </a>
+            </div>
+          ` : ""}
         </div>
       </div>
     `;
