@@ -2580,29 +2580,33 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-header-countdown-pill {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex: 1 1 auto;
-  min-width: 220px;
-  min-height: 42px;
-  padding: 8px 18px;
-  border-radius: 18px;
-  color: #e9fbff;
-  background: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  backdrop-filter: none !important;
-  -webkit-backdrop-filter: none !important;
-  font-size: clamp(18px, 2.2vw, 32px);
-  line-height: 1;
-  font-weight: 1000;
-  letter-spacing: 0.7px;
-  text-align: center;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          flex: 1 1 auto;
+          min-width: 220px;
+          min-height: 42px;
+          padding: 8px 18px;
+          border-radius: 18px;
+          color: #e9fbff;
+          background:
+            radial-gradient(circle at top left, rgba(60, 210, 255, 0.24), transparent 45%),
+            linear-gradient(135deg, rgba(15, 42, 90, 0.82), rgba(8, 17, 44, 0.72));
+          border: 1px solid rgba(118, 225, 255, 0.38);
+          box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.12),
+            0 0 22px rgba(53, 206, 255, 0.22);
+          backdrop-filter: blur(12px);
+          -webkit-backdrop-filter: blur(12px);
+          font-size: clamp(18px, 2.2vw, 32px);
+          line-height: 1;
+          font-weight: 1000;
+          letter-spacing: 0.7px;
+          text-align: center;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
 
         .wc-header-countdown-pill.is-hidden {
           display: none !important;
@@ -5347,54 +5351,7 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
-      
-/* Compact overview progress area */
-.wc-progress-card,
-.progress-card,
-.wc-progress-section,
-.progress-section {
-  padding: 8px 12px !important;
-  min-height: 0 !important;
-  margin-top: 8px !important;
-  margin-bottom: 8px !important;
-}
-
-.wc-progress-card .wc-card-title,
-.progress-card .wc-card-title,
-.wc-progress-section .wc-card-title,
-.progress-section .wc-card-title {
-  margin-bottom: 6px !important;
-}
-
-.wc-progress-track,
-.progress-track,
-.wc-progress-bar-container,
-.progress-bar-container {
-  height: 12px !important;
-  min-height: 12px !important;
-  margin-top: 4px !important;
-  margin-bottom: 0 !important;
-  border-radius: 999px !important;
-}
-
-.wc-progress-fill,
-.progress-fill,
-.wc-progress-bar,
-.progress-bar {
-  height: 12px !important;
-  min-height: 12px !important;
-  border-radius: 999px !important;
-}
-
-.wc-progress-label,
-.progress-label,
-.wc-progress-percent,
-.progress-percent {
-  font-size: 12px !important;
-  line-height: 1.1 !important;
-}
-
-</style>
+      </style>
     `;
   }
 
@@ -5868,6 +5825,13 @@ class WorldCup2026Panel extends HTMLElement {
     const finishedClass = ["FINISHED", "FT", "AET", "PEN"].includes(m.status) ? " is-finished" : "";
     const scheduledClass = ["TIMED", "SCHEDULED"].includes(m.status) ? " is-scheduled" : "";
     const venue = m.venue || m.stadium || m.location || "";
+    const venueData = (this._data?.venues?.stadiums || []).find(v =>
+      [v.name, v.stadium, v.real_name].filter(Boolean).some(n =>
+        String(n).toLowerCase() === String(venue).toLowerCase()
+      )
+    );
+    const venueCapacity = venueData?.capacity ? Number(venueData.capacity).toLocaleString() : "";
+    const venueImage = venueData?.image ? `/world_cup_2026_frontend/${venueData.image}` : "";
     const matchNumber = m.matchday || m.matchNumber || m.number || m.id || "";
 
     return `
@@ -5891,9 +5855,12 @@ class WorldCup2026Panel extends HTMLElement {
           </div>
         </div>
 
-        <div class="fixture-card-footer">
+        ${venueImage ? `<img src="${this.esc(venueImage)}" style="width:100%;max-height:120px;object-fit:cover;border-radius:10px;margin:8px 0;" loading="lazy">` : ""}
+
+        <div class="fixture-card-footer" style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;">
           <span>⏱ ${this.esc(this.fixtureTime(m))}</span>
-          ${venue ? `<span>🏟 ${this.esc(venue)}</span>` : `<span></span>`}
+          ${venue ? `<span>🏟 ${this.esc(venue)}</span>` : ``}
+          ${venueCapacity ? `<span>👥 ${this.esc(venueCapacity)} Capacity</span>` : ``}
         </div>
 
         ${matchNumber ? `<div class="fixture-card-number">#${this.esc(matchNumber)}</div>` : ""}
