@@ -2532,6 +2532,41 @@ class WorldCup2026Panel extends HTMLElement {
   transform: translateY(-1px);
 }
 
+
+
+        .overview-donate-card {
+          margin-top: 14px;
+          padding: 18px;
+          text-align: center;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 10px;
+          border: 1px solid rgba(255, 215, 0, 0.28);
+          background: linear-gradient(135deg, rgba(255, 215, 0, 0.10), rgba(255, 255, 255, 0.04));
+        }
+
+        .overview-donate-card .overview-donate-icon {
+          font-size: 30px;
+          line-height: 1;
+        }
+
+        .overview-donate-card .overview-donate-text {
+          max-width: 720px;
+          margin: 0;
+          color: rgba(255, 255, 255, 0.78);
+          font-size: 14px;
+          line-height: 1.45;
+        }
+
+        .overview-donate-card .wc-overview-beer-button {
+          margin-top: 4px;
+          background: linear-gradient(135deg, rgba(255, 193, 7, 0.95), rgba(255, 152, 0, 0.78));
+          border-color: rgba(255, 235, 59, 0.75);
+          color: #101010;
+          box-shadow: 0 0 16px rgba(255, 193, 7, 0.25), 0 0 28px rgba(255, 152, 0, 0.14);
+        }
+
         .wc-header-title-row {
           display: flex;
           align-items: center;
@@ -5739,6 +5774,25 @@ class WorldCup2026Panel extends HTMLElement {
         </div>
 
         ${this.overviewSupportersPanel()}
+        ${this.overviewDonatePanel()}
+      </div>
+    `;
+  }
+
+  overviewDonatePanel() {
+    return `
+      <div class="overview-donate-card wc-card">
+        <div class="overview-donate-icon">🍺</div>
+        <div class="wc-section-title">${this.t("enjoyingIntegration")}</div>
+        <p class="overview-donate-text">${this.t("supportFutureUpdates")}</p>
+        <a
+          class="wc-overview-beer-button"
+          href="https://paypal.me/graffidoodle"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          ${this.t("donateBuyBeer")}
+        </a>
       </div>
     `;
   }
