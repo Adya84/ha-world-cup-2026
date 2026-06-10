@@ -3981,18 +3981,18 @@ class WorldCup2026Panel extends HTMLElement {
           display: grid;
           grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
           align-items: center;
-          gap: 12px;
-          padding: 14px 0 12px;
+          gap: 8px;
+          padding: 8px 0 7px;
         }
 
         .fixture-card-team {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 7px;
           min-width: 0;
-          font-weight: 950;
-          font-size: 15px;
-          line-height: 1.1;
+          font-weight: 900;
+          font-size: 13px;
+          line-height: 1.05;
         }
 
         .fixture-card-team span {
@@ -4013,23 +4013,23 @@ class WorldCup2026Panel extends HTMLElement {
 
         .fixture-card .group-flag-img,
         .fixture-card .group-flag-missing {
-          width: 46px;
-          height: 31px;
-          border-radius: 6px;
-          font-size: 18px;
-          box-shadow: 0 6px 14px rgba(0,0,0,0.32);
+          width: 36px;
+          height: 25px;
+          border-radius: 5px;
+          font-size: 14px;
+          box-shadow: 0 5px 11px rgba(0,0,0,0.30);
         }
 
         .fixture-card-score {
-          min-width: 76px;
+          min-width: 58px;
           text-align: center;
-          font-size: 24px;
+          font-size: 20px;
           font-weight: 950;
-          padding: 9px 12px;
-          border-radius: 16px;
+          padding: 6px 9px;
+          border-radius: 12px;
           background: rgba(0,0,0,0.28);
           border: 1px solid rgba(255,255,255,0.14);
-          box-shadow: inset 0 0 22px rgba(255,255,255,0.045), 0 8px 18px rgba(0,0,0,0.16);
+          box-shadow: inset 0 0 18px rgba(255,255,255,0.04), 0 6px 14px rgba(0,0,0,0.14);
         }
 
         .fixture-card-footer {
@@ -4039,6 +4039,120 @@ class WorldCup2026Panel extends HTMLElement {
 
         .fixture-card-footer span:last-child:empty {
           display: none;
+        }
+
+        .fixture-card-top-merged {
+          align-items: center;
+          gap: 8px;
+        }
+
+        .fixture-top-details {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          gap: 6px;
+          min-width: 0;
+          flex: 1;
+        }
+
+        .fixture-top-details span {
+          display: inline-flex;
+          align-items: center;
+          min-width: 0;
+          max-width: 92px;
+          padding: 4px 7px;
+          border-radius: 999px;
+          background: rgba(0,0,0,0.16);
+          border: 1px solid rgba(255,255,255,0.08);
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 10px;
+          line-height: 1;
+        }
+
+        .fixture-card-main-compact {
+          padding: 6px 0 6px;
+          gap: 7px;
+        }
+
+        .fixture-card-main-compact .fixture-card-team {
+          gap: 6px;
+          font-size: 12px;
+          line-height: 1;
+        }
+
+        .fixture-card-main-compact .group-flag-img,
+        .fixture-card-main-compact .group-flag-missing {
+          width: 32px;
+          height: 22px;
+          border-radius: 5px;
+        }
+
+        .fixture-card-main-compact .fixture-card-score {
+          min-width: 52px;
+          font-size: 18px;
+          padding: 5px 8px;
+          border-radius: 11px;
+        }
+
+        .fixture-stadium-image {
+          position: relative;
+          z-index: 1;
+          display: block;
+          width: 100%;
+          height: 178px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 13px;
+          margin: 5px 0 6px;
+          background: rgba(0,0,0,.24);
+          border: 1px solid rgba(255,255,255,.10);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+        }
+
+        .fixture-card-venue-inline {
+          position: relative;
+          z-index: 1;
+          display: grid;
+          grid-template-columns: minmax(0, 1.35fr) minmax(0, .9fr) minmax(58px, auto);
+          align-items: center;
+          gap: 6px;
+          min-width: 0;
+          margin: 0;
+          padding: 5px 7px;
+          border-radius: 9px;
+          background: rgba(0,0,0,.17);
+          border: 1px solid rgba(255,255,255,.11);
+          font-size: 10.5px;
+          line-height: 1.08;
+          color: rgba(255,255,255,0.90);
+          overflow: hidden;
+        }
+
+        .fixture-card-venue-inline span {
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          opacity: 0.92;
+        }
+
+        .fixture-card-venue-inline .fixture-venue-name {
+          font-weight: 900;
+          opacity: 1;
+        }
+
+        .fixture-card-venue-inline .fixture-venue-real {
+          display: none;
+        }
+
+        .fixture-card-venue-inline .fixture-venue-capacity {
+          justify-self: end;
+          flex-shrink: 0;
+          max-width: 74px;
+          font-size: 10px;
+          text-align: right;
         }
 
 
@@ -5979,15 +6093,22 @@ class WorldCup2026Panel extends HTMLElement {
     const scheduledClass = ["TIMED", "SCHEDULED"].includes(m.status) ? " is-scheduled" : "";
     const venueInfo = this.fixtureVenueInfo(m);
     const matchNumber = m.matchday || m.matchNumber || m.number || m.id || "";
+    const matchDate = this.formatDate(m.utcDate || m.date);
+    const matchTime = this.fixtureTime(m);
 
     return `
       <div class="fixture-card${liveClass}${finishedClass}${scheduledClass}">
-        <div class="fixture-card-top">
+        <div class="fixture-card-top fixture-card-top-merged">
           <span class="fixture-stage-pill">${this.esc(stage || this.t("fixtures"))}</span>
-          <strong class="fixture-card-status">${this.esc(status)}</strong>
+          <div class="fixture-top-details">
+            ${matchNumber ? `<span>#${this.esc(matchNumber)}</span>` : ""}
+            ${matchDate ? `<span>${this.esc(matchDate)}</span>` : ""}
+            ${matchTime ? `<span>⏱ ${this.esc(matchTime)}</span>` : ""}
+            <strong class="fixture-card-status">${this.esc(status)}</strong>
+          </div>
         </div>
 
-        <div class="fixture-card-main">
+        <div class="fixture-card-main fixture-card-main-compact">
           <div class="fixture-card-team fixture-card-team-home">
             ${this.flag(homeTeam, true)}
             <span>${this.esc(this.localizedTeamName(homeTeam))}</span>
@@ -6001,22 +6122,16 @@ class WorldCup2026Panel extends HTMLElement {
           </div>
         </div>
 
-        ${venueInfo?.image ? `<img src="${this.esc(venueInfo.image)}" style="width:100%;height:88px;object-fit:contain;object-position:center;border-radius:10px;margin:6px 0 4px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.10);" loading="lazy">` : ""}
+        ${venueInfo?.image ? `<img src="${this.esc(venueInfo.image)}" class="fixture-stadium-image" loading="lazy">` : ""}
 
         ${venueInfo ? `
-          <div class="fixture-card-venue" style="margin:4px 0 0;padding:5px 7px;border-radius:8px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.12);font-size:10.5px;line-height:1.15;">
-            <div style="font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">🏟 ${this.esc(venueInfo.name)}</div>
-            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<div style="opacity:.82;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Real: <strong>${this.esc(venueInfo.realName)}</strong></div>` : ""}
-            ${(venueInfo.city || venueInfo.country || venueInfo.capacity) ? `<div style="display:flex;gap:8px;flex-wrap:wrap;opacity:.92;">${venueInfo.city || venueInfo.country ? `<span>${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</span>` : ""}${venueInfo.capacity ? `<span>👥 ${this.esc(venueInfo.capacity)}</span>` : ""}</div>` : ""}
+          <div class="fixture-card-venue fixture-card-venue-inline">
+            <span class="fixture-venue-name">🏟 ${this.esc(venueInfo.name)}</span>
+            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<span class="fixture-venue-real">Real: ${this.esc(venueInfo.realName)}</span>` : ""}
+            ${venueInfo.city || venueInfo.country ? `<span>${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</span>` : ""}
+            ${venueInfo.capacity ? `<span class="fixture-venue-capacity">👥 ${this.esc(venueInfo.capacity)}</span>` : ""}
           </div>
         ` : ""}
-
-        <div class="fixture-card-footer">
-          <span>⏱ ${this.esc(this.fixtureTime(m))}</span>
-          <span>${this.esc(this.formatDate(m.utcDate || m.date))}</span>
-        </div>
-
-        ${matchNumber ? `<div class="fixture-card-number">#${this.esc(matchNumber)}</div>` : ""}
       </div>
     `;
   }
