@@ -52,12 +52,6 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         ]
     )
 
-    # Stop Home Assistant crashing if the panel already exists
-    try:
-        frontend.async_remove_panel(hass, PANEL_PATH)
-    except Exception:
-        pass
-
     frontend.async_register_built_in_panel(
         hass,
         component_name="custom",
@@ -67,7 +61,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         config={
             "_panel_custom": {
                 "name": "world-cup-2026-panel",
-                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v=3.3.5",
+                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v=3.3.6",
                 "embed_iframe": False,
                 "trust_external": False,
             }
@@ -94,7 +88,6 @@ async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
     if unloaded:
         hass.data[DOMAIN].pop(entry.entry_id, None)
 
-        # Remove sidebar panel when integration unloads/reloads
         try:
             frontend.async_remove_panel(hass, PANEL_PATH)
         except Exception:
