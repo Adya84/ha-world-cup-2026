@@ -12367,8 +12367,25 @@ class WorldCup2026Panel extends HTMLElement {
       return "";
     }
 
-    const pad = (value) => String(value).padStart(2, "0");
-    return `⏳ ${parts.days}D ${pad(parts.hours)}H ${pad(parts.minutes)}M ${pad(parts.seconds)}S`;
+    const units = [];
+
+    if (parts.days > 0) {
+      units.push(`${parts.days}D`);
+    }
+
+    if (parts.hours > 0) {
+      units.push(`${parts.hours}H`);
+    }
+
+    if (parts.minutes > 0) {
+      units.push(`${parts.minutes}M`);
+    }
+
+    if (parts.seconds > 0 || units.length === 0) {
+      units.push(`${parts.seconds}S`);
+    }
+
+    return `⏳ ${units.join(" ")}`;
   }
 
   headerCountdownPill() {
