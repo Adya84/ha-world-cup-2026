@@ -97,7 +97,7 @@ class WorldCup2026Panel extends HTMLElement {
         capacity: "Capacity",
         worldCupStadiums: "World Cup Stadiums",
         noVenueData: "No venue data available.",
-        scheduled: "Scheduled",
+        scheduled: "Upcoming",
         liveStatus: "Live",
         paused: "Paused",
         fullTime: "Full Time",
@@ -5716,7 +5716,7 @@ class WorldCup2026Panel extends HTMLElement {
     const awayScore = this.getAwayScore(m);
     const scoreText = showScore || (homeScore !== "-" || awayScore !== "-") ? `${homeScore} - ${awayScore}` : this.t("versus");
     const status = this.statusLabel(m.status);
-    const stage = m.group || this.stageLabel(m.stage) || "";
+    const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
 
     return `
       <div class="overview-mini-match">
@@ -6128,7 +6128,7 @@ class WorldCup2026Panel extends HTMLElement {
     const homeScore = this.getHomeScore(m);
     const awayScore = this.getAwayScore(m);
     const status = this.statusLabel(m.status);
-    const stage = m.group || this.stageLabel(m.stage) || "";
+    const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
     const scoreText = homeScore === "-" && awayScore === "-" ? "v" : `${homeScore} - ${awayScore}`;
     const liveClass = ["IN_PLAY", "LIVE", "PAUSED"].includes(m.status) ? " is-live" : "";
     const finishedClass = ["FINISHED", "FT", "AET", "PEN"].includes(m.status) ? " is-finished" : "";
@@ -6184,7 +6184,7 @@ class WorldCup2026Panel extends HTMLElement {
     const homeScore = this.getHomeScore(m);
     const awayScore = this.getAwayScore(m);
     const status = this.statusLabel(m.status);
-    const stage = m.group || this.stageLabel(m.stage) || "";
+    const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
     const date = this.formatDate(m.utcDate || m.date);
 
     return `
