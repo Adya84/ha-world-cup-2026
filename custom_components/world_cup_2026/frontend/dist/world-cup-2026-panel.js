@@ -8,6 +8,7 @@ class WorldCup2026Panel extends HTMLElement {
     this._refreshInterval = null;
     this._countdownInterval = null;
     this._language = localStorage.getItem("world_cup_2026_language") || "en";
+    this._viewMode = localStorage.getItem("world_cup_2026_view_mode") || "pc";
     this._data = {
       overview: null,
       live: [],
@@ -120,6 +121,9 @@ class WorldCup2026Panel extends HTMLElement {
         goals: "Goals",
         assists: "Assists",
         language: "Dashboard Language",
+        viewMode: "Dashboard View",
+        tabletView: "Tablet view",
+        pcView: "PC view",
         controlCentre: 'World Cup 2026 Control Centre',
         overviewSubtitle: 'Live tournament dashboard with fixtures, results, groups, player stats, venues, records and knockout tracking in one place.',
         tournamentIntelligence: 'Tournament Intelligence',
@@ -175,7 +179,7 @@ class WorldCup2026Panel extends HTMLElement {
         communitySupport: "Community Support",
         supportersAroundWorld: "Supporters Around The World",
         noLiveGames: "No live games",
-        noGamesToday: "No games today",
+        noGamesToday: "Games Today",
         conceded: "conceded",
       },
 
@@ -7171,6 +7175,12 @@ class WorldCup2026Panel extends HTMLElement {
     this.render();
   }
 
+  changeViewMode(viewMode) {
+    this._viewMode = viewMode === "tablet" ? "tablet" : "pc";
+    localStorage.setItem("world_cup_2026_view_mode", this._viewMode);
+    this.render();
+  }
+
   locale() {
     const locales = {
       en: "en-GB",
@@ -7806,6 +7816,28 @@ class WorldCup2026Panel extends HTMLElement {
           margin: 0 auto;
         }
 
+        .wc-app.wc-view-tablet .wc-shell {
+          max-width: 1180px;
+        }
+
+        .wc-app.wc-view-tablet {
+          padding: 14px;
+        }
+
+        .wc-app.wc-view-tablet .wc-title {
+          font-size: 28px;
+        }
+
+        .wc-app.wc-view-tablet .wc-card,
+        .wc-app.wc-view-tablet .wc-section {
+          padding: 14px;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-grid,
+        .wc-app.wc-view-tablet .wc-grid {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        }
+
         .wc-header {
           display: flex;
           justify-content: space-between;
@@ -8230,6 +8262,7 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-language-wrap,
+        .wc-view-wrap,
         .wc-updated-wrap {
           display: inline-flex;
           flex-direction: row;
@@ -8239,6 +8272,7 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-language-label,
+        .wc-view-label,
         .wc-updated-label {
           display: none;
         }
@@ -8257,6 +8291,7 @@ class WorldCup2026Panel extends HTMLElement {
           text-transform: none;
         }
 .wc-language-select,
+        .wc-view-select,
         .wc-updated-pill,
         .wc-header-controls .wc-back-button {
           min-height: 34px;
@@ -8272,7 +8307,8 @@ class WorldCup2026Panel extends HTMLElement {
           white-space: nowrap;
         }
 
-        .wc-language-select {
+        .wc-language-select,
+        .wc-view-select {
           cursor: pointer;
           background: rgba(255,255,255,0.10);
           color: white;
@@ -8280,6 +8316,10 @@ class WorldCup2026Panel extends HTMLElement {
           padding: 7px 12px;
           outline: none;
           min-width: 146px;
+        }
+
+        .wc-view-select {
+          min-width: 118px;
         }
 
         .wc-updated-pill {
@@ -8312,7 +8352,8 @@ class WorldCup2026Panel extends HTMLElement {
           padding: 7px 12px;
         }
 
-        .wc-language-select option {
+        .wc-language-select option,
+        .wc-view-select option {
           color: #111;
           background: #fff;
         }
@@ -8742,17 +8783,17 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .overview-progress-wrap {
-          margin-top: 10px;
-          max-width: 520px;
+          margin-top: 4px;
+          max-width: 380px;
         }
 
         .overview-progress-top {
-          margin-bottom: 5px;
-          font-size: 11px;
+          margin-bottom: 2px;
+          font-size: 9px;
         }
 
         .overview-progress-bar {
-          height: 8px;
+          height: 4px;
         }
 
         .overview-action-row {
@@ -10138,6 +10179,41 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+        /* Tablet view only: keep the live/today pills small, side-by-side in the top-left. */
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          justify-content: flex-start;
+          align-items: flex-start;
+          flex-wrap: wrap;
+          gap: 4px;
+          text-align: left;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-live-pill {
+          order: 0;
+          min-height: 12px;
+          padding: 1px 5px;
+          border-radius: 999px;
+          font-size: 6px;
+          line-height: 1;
+          letter-spacing: 0.1px;
+          max-width: none;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-scheduled-pill {
+          order: 1;
+          max-width: none;
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack {
+          order: 2;
+          flex: 1 1 100%;
+          width: 100%;
+          margin-top: 2px;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          order: 3;
+        }
 
 
         @media (max-width: 800px) {
@@ -11047,6 +11123,20 @@ class WorldCup2026Panel extends HTMLElement {
             <option value="gn" ${this._language === "gn" ? "selected" : ""}>Guaraní</option>
             <option value="qu" ${this._language === "qu" ? "selected" : ""}>Quechua</option>
           </optgroup>
+        </select>
+      </div>
+    `;
+  }
+
+
+
+  viewSelector() {
+    return `
+      <div class="wc-view-wrap">
+        <div class="wc-view-label">${this.esc(this.t("viewMode"))}</div>
+        <select class="wc-view-select" id="wc-view-select" title="${this.esc(this.t("viewMode"))}">
+          <option value="tablet" ${this._viewMode === "tablet" ? "selected" : ""}>${this.esc(this.t("tabletView"))}</option>
+          <option value="pc" ${this._viewMode === "pc" ? "selected" : ""}>${this.esc(this.t("pcView"))}</option>
         </select>
       </div>
     `;
@@ -12573,7 +12663,7 @@ class WorldCup2026Panel extends HTMLElement {
   render() {
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app" dir="${this._language === "ar" ? "rtl" : "ltr"}">
+      <div class="wc-app wc-view-${this._viewMode}" dir="${this._language === "ar" ? "rtl" : "ltr"}">
         <div class="wc-shell">
           <div class="wc-header">
             <div class="wc-header-title-row">
@@ -12593,6 +12683,7 @@ class WorldCup2026Panel extends HTMLElement {
               </div>
 
               ${this.languageSelector()}
+              ${this.viewSelector()}
 
               <button class="wc-pill wc-back-button" id="wc-back-button" type="button">
                 ${this.t("back")}
@@ -12619,6 +12710,14 @@ class WorldCup2026Panel extends HTMLElement {
     if (languageSelect) {
       languageSelect.onchange = (e) => {
         this.changeLanguage(e.target.value);
+      };
+    }
+
+    const viewSelect = this.querySelector("#wc-view-select");
+
+    if (viewSelect) {
+      viewSelect.onchange = (e) => {
+        this.changeViewMode(e.target.value);
       };
     }
 
