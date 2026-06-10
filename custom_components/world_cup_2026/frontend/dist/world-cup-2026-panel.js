@@ -4065,20 +4065,27 @@ class WorldCup2026Panel extends HTMLElement {
           align-items: center;
           min-width: fit-content;
           max-width: none;
-          padding: 4px 6px;
+          padding: 4px 7px;
           border-radius: 999px;
           background: rgba(0,0,0,0.16);
           border: 1px solid rgba(255,255,255,0.08);
           overflow: visible;
           text-overflow: clip;
           white-space: normal;
-          font-size: 9.5px;
+          font-size: 10.5px;
           line-height: 1.15;
         }
 
         .fixture-top-details .fixture-date-pill,
         .fixture-top-details .fixture-time-pill {
           white-space: nowrap;
+        }
+
+        .fixture-top-details .fixture-time-pill {
+          font-size: 12px;
+          font-weight: 900;
+          padding: 5px 8px;
+          background: rgba(0,0,0,0.24);
         }
 
         .fixture-card-main-compact {
@@ -4125,29 +4132,28 @@ class WorldCup2026Panel extends HTMLElement {
           position: relative;
           z-index: 1;
           display: grid;
-          grid-template-columns: minmax(0, 1fr) max-content;
+          grid-template-columns: minmax(0, 1.35fr) minmax(110px, 0.95fr) minmax(78px, auto);
           align-items: center;
-          column-gap: 8px;
-          row-gap: 3px;
+          column-gap: 10px;
+          row-gap: 4px;
           min-width: 0;
           margin: 0;
-          padding: 6px 8px;
+          padding: 7px 10px;
           border-radius: 9px;
           background: rgba(0,0,0,.17);
           border: 1px solid rgba(255,255,255,.11);
-          font-size: 10.5px;
-          line-height: 1.16;
-          color: rgba(255,255,255,0.90);
+          font-size: 12px;
+          line-height: 1.18;
+          color: rgba(255,255,255,0.92);
           overflow: visible;
         }
 
         .fixture-card-venue-inline span {
           min-width: 0;
-          opacity: 0.92;
+          opacity: 0.94;
         }
 
         .fixture-card-venue-inline .fixture-venue-name {
-          grid-column: 1 / -1;
           font-weight: 900;
           opacity: 1;
           white-space: normal;
@@ -4157,6 +4163,8 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .fixture-card-venue-inline .fixture-venue-location {
+          justify-self: center;
+          text-align: center;
           white-space: normal;
           overflow: visible;
           text-overflow: clip;
@@ -4169,10 +4177,30 @@ class WorldCup2026Panel extends HTMLElement {
 
         .fixture-card-venue-inline .fixture-venue-capacity {
           justify-self: end;
-          align-self: start;
-          font-size: 9.5px;
+          font-size: 12px;
+          font-weight: 850;
           text-align: right;
           white-space: nowrap;
+        }
+
+        @media (max-width: 760px) {
+          .fixture-card-venue-inline {
+            grid-template-columns: minmax(0, 1fr) auto;
+            font-size: 11.5px;
+          }
+
+          .fixture-card-venue-inline .fixture-venue-name {
+            grid-column: 1 / -1;
+          }
+
+          .fixture-card-venue-inline .fixture-venue-location {
+            justify-self: start;
+            text-align: left;
+          }
+
+          .fixture-card-venue-inline .fixture-venue-capacity {
+            font-size: 11.5px;
+          }
         }
 
         @media (max-width: 560px) {
@@ -4191,8 +4219,13 @@ class WorldCup2026Panel extends HTMLElement {
 
           .fixture-top-details span,
           .fixture-card-status {
-            font-size: 9px;
-            padding: 3px 5px;
+            font-size: 10px;
+            padding: 3px 6px;
+          }
+
+          .fixture-top-details .fixture-time-pill {
+            font-size: 11px;
+            padding: 4px 7px;
           }
         }
 
@@ -5946,6 +5979,24 @@ class WorldCup2026Panel extends HTMLElement {
     }
   }
 
+  fixtureDateLabel(match) {
+    const value = match.utcDate || match.date;
+
+    if (!value) {
+      return "";
+    }
+
+    try {
+      return new Date(value).toLocaleDateString(this.locale(), {
+        weekday: "short",
+        day: "2-digit",
+        month: "short",
+      });
+    } catch {
+      return String(value).slice(0, 10);
+    }
+  }
+
   fixtureTime(match) {
     const value = match.utcDate || match.date;
 
@@ -6135,7 +6186,7 @@ class WorldCup2026Panel extends HTMLElement {
     const scheduledClass = ["TIMED", "SCHEDULED"].includes(m.status) ? " is-scheduled" : "";
     const venueInfo = this.fixtureVenueInfo(m);
     const matchNumber = m.matchNumber || m.number || m.fifaMatchNumber || "";
-    const matchDate = this.formatDate(m.utcDate || m.date);
+    const matchDate = this.fixtureDateLabel(m);
     const matchTime = this.fixtureTime(m);
 
     return `
