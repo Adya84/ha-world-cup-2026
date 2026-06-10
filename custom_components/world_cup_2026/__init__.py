@@ -52,6 +52,11 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         ]
     )
 
+    try:
+        frontend.async_remove_panel(hass, PANEL_PATH)
+    except Exception:
+        pass
+
     frontend.async_register_built_in_panel(
         hass,
         component_name="custom",
@@ -61,7 +66,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         config={
             "_panel_custom": {
                 "name": "world-cup-2026-panel",
-                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v=3.3.6",
+                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v=3.3.8",
                 "embed_iframe": False,
                 "trust_external": False,
             }
