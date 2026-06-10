@@ -12504,7 +12504,7 @@ class WorldCup2026Panel extends HTMLElement {
     const minutes = Math.floor((totalSeconds % 3600) / 60);
     const seconds = totalSeconds % 60;
 
-    return { days, hours, minutes, seconds };
+    return { months: 0, days, hours, minutes, seconds };
   }
 
   countdownText() {
@@ -12514,8 +12514,18 @@ class WorldCup2026Panel extends HTMLElement {
       return "";
     }
 
-    const pad = (value) => String(value).padStart(2, "0");
-    return `⏳ ${parts.days}D ${pad(parts.hours)}H ${pad(parts.minutes)}M ${pad(parts.seconds)}S`;
+    const visibleParts = [];
+
+    if (parts.months > 0) visibleParts.push(`${parts.months}M`);
+    if (parts.days > 0) visibleParts.push(`${parts.days}D`);
+    if (parts.hours > 0) visibleParts.push(`${parts.hours}H`);
+    if (parts.minutes > 0) visibleParts.push(`${parts.minutes}M`);
+
+    if (parts.seconds > 0 && visibleParts.length < 3) {
+      visibleParts.push(`${parts.seconds}S`);
+    }
+
+    return visibleParts.length ? `⏳ ${visibleParts.join(" ")}` : "⚽ Kickoff imminent";
   }
 
   headerCountdownPill() {
