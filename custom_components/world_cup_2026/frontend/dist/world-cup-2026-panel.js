@@ -5813,6 +5813,163 @@ class WorldCup2026Panel extends HTMLElement {
     }
   }
 
+
+  normaliseFixtureText(value) {
+    return String(value || "")
+      .toLowerCase()
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .replace(/&/g, "and")
+      .replace(/republic/g, "")
+      .replace(/bosnia\s*(and|&)\s*herzegovina/g, "bosnia herzegovina")
+      .replace(/[^a-z0-9]+/g, " ")
+      .trim();
+  }
+
+  fixtureTeamKey(team) {
+    const name = this.localizedTeamName(team);
+    return this.normaliseFixtureText(name)
+      .replace(/^south korea$/, "korea")
+      .replace(/^korea$/, "korea")
+      .replace(/^usa$/, "united states")
+      .replace(/^u s a$/, "united states")
+      .replace(/^turkiye$/, "turkey")
+      .replace(/^cote d ivoire$/, "ivory coast");
+  }
+
+  fixturePairKey(homeTeam, awayTeam) {
+    return `${this.fixtureTeamKey(homeTeam)}|${this.fixtureTeamKey(awayTeam)}`;
+  }
+
+  officialFixtureVenueLookup() {
+    return {
+      "mexico|south africa": "Mexico City Stadium",
+      "korea|czechia": "Guadalajara Stadium",
+      "canada|bosnia herzegovina": "Toronto Stadium",
+      "united states|paraguay": "Los Angeles Stadium",
+      "qatar|switzerland": "San Francisco Bay Area Stadium",
+      "haiti|scotland": "Boston Stadium",
+      "brazil|morocco": "New York New Jersey Stadium",
+      "australia|turkey": "Vancouver Stadium",
+      "germany|curacao": "Houston Stadium",
+      "netherlands|japan": "Dallas Stadium",
+      "tunisia|sweden": "Monterrey Stadium",
+      "ivory coast|ecuador": "Philadelphia Stadium",
+      "spain|cape verde": "Atlanta Stadium",
+      "belgium|egypt": "Seattle Stadium",
+      "iran|new zealand": "Los Angeles Stadium",
+      "austria|jordan": "San Francisco Bay Area Stadium",
+      "france|senegal": "New York New Jersey Stadium",
+      "norway|iraq": "Boston Stadium",
+      "argentina|algeria": "Kansas City Stadium",
+      "portugal|congo dr": "Houston Stadium",
+      "england|croatia": "Dallas Stadium",
+      "ghana|panama": "Toronto Stadium",
+      "uzbekistan|colombia": "Mexico City Stadium",
+      "canada|qatar": "Vancouver Stadium",
+      "south africa|czechia": "Atlanta Stadium",
+      "switzerland|bosnia herzegovina": "Los Angeles Stadium",
+      "mexico|korea": "Guadalajara Stadium",
+      "scotland|morocco": "Boston Stadium",
+      "brazil|haiti": "Philadelphia Stadium",
+      "united states|australia": "Seattle Stadium",
+      "paraguay|turkey": "San Francisco Bay Area Stadium",
+      "germany|ivory coast": "Toronto Stadium",
+      "tunisia|japan": "Monterrey Stadium",
+      "netherlands|sweden": "Houston Stadium",
+      "ecuador|curacao": "Kansas City Stadium",
+      "new zealand|egypt": "Vancouver Stadium",
+      "spain|saudi arabia": "Atlanta Stadium",
+      "belgium|iran": "Los Angeles Stadium",
+      "uruguay|cape verde": "Miami Stadium",
+      "france|iraq": "Philadelphia Stadium",
+      "norway|senegal": "New York New Jersey Stadium",
+      "jordan|algeria": "San Francisco Bay Area Stadium",
+      "argentina|austria": "Dallas Stadium",
+      "portugal|uzbekistan": "Houston Stadium",
+      "england|ghana": "Boston Stadium",
+      "panama|croatia": "Toronto Stadium",
+      "colombia|congo dr": "Guadalajara Stadium",
+      "canada|switzerland": "Vancouver Stadium",
+      "qatar|bosnia herzegovina": "Seattle Stadium",
+      "morocco|haiti": "Atlanta Stadium",
+      "scotland|brazil": "Miami Stadium",
+      "mexico|czechia": "Mexico City Stadium",
+      "korea|south africa": "Monterrey Stadium",
+      "ecuador|germany": "New York New Jersey Stadium",
+      "curacao|ivory coast": "Philadelphia Stadium",
+      "tunisia|netherlands": "Kansas City Stadium",
+      "japan|sweden": "Dallas Stadium",
+      "united states|turkey": "Los Angeles Stadium",
+      "paraguay|australia": "San Francisco Bay Area Stadium",
+      "senegal|iraq": "Toronto Stadium",
+      "norway|france": "Boston Stadium",
+      "cape verde|saudi arabia": "Houston Stadium",
+      "uruguay|spain": "Guadalajara Stadium",
+      "new zealand|belgium": "Vancouver Stadium",
+      "egypt|iran": "Seattle Stadium",
+      "panama|england": "New York New Jersey Stadium",
+      "croatia|ghana": "Philadelphia Stadium",
+      "colombia|portugal": "Miami Stadium",
+      "uzbekistan|congo dr": "Atlanta Stadium",
+      "jordan|argentina": "Dallas Stadium",
+      "algeria|austria": "Kansas City Stadium",
+    };
+  }
+
+  venueFallbackDetails(venueName) {
+    const venues = {
+      "Atlanta Stadium": { city: "Atlanta", country: "USA", realName: "Mercedes-Benz Stadium", capacity: 75000 },
+      "Boston Stadium": { city: "Boston", country: "USA", realName: "Gillette Stadium", capacity: 65878 },
+      "Dallas Stadium": { city: "Dallas", country: "USA", realName: "AT&T Stadium", capacity: 80000 },
+      "Guadalajara Stadium": { city: "Guadalajara", country: "Mexico", realName: "Estadio Akron", capacity: 48071 },
+      "Houston Stadium": { city: "Houston", country: "USA", realName: "NRG Stadium", capacity: 72220 },
+      "Kansas City Stadium": { city: "Kansas City", country: "USA", realName: "Arrowhead Stadium", capacity: 76416 },
+      "Los Angeles Stadium": { city: "Los Angeles", country: "USA", realName: "SoFi Stadium", capacity: 70240 },
+      "Mexico City Stadium": { city: "Mexico City", country: "Mexico", realName: "Estadio Banorte", capacity: 87523 },
+      "Miami Stadium": { city: "Miami", country: "USA", realName: "Hard Rock Stadium", capacity: 64767 },
+      "Monterrey Stadium": { city: "Monterrey", country: "Mexico", realName: "Estadio BBVA", capacity: 53500 },
+      "New York New Jersey Stadium": { city: "New York/New Jersey", country: "USA", realName: "MetLife Stadium", capacity: 82500 },
+      "Philadelphia Stadium": { city: "Philadelphia", country: "USA", realName: "Lincoln Financial Field", capacity: 69596 },
+      "San Francisco Bay Area Stadium": { city: "San Francisco Bay Area", country: "USA", realName: "Levi's Stadium", capacity: 68500 },
+      "Seattle Stadium": { city: "Seattle", country: "USA", realName: "Lumen Field", capacity: 69000 },
+      "Toronto Stadium": { city: "Toronto", country: "Canada", realName: "BMO Field", capacity: 45000 },
+      "Vancouver Stadium": { city: "Vancouver", country: "Canada", realName: "BC Place", capacity: 54500 },
+    };
+    return venues[venueName] || null;
+  }
+
+  fixtureVenueInfo(match) {
+    const homeTeam = this.getHomeTeam(match);
+    const awayTeam = this.getAwayTeam(match);
+    const directVenue = match.venue || match.stadium || match.location || match.venueName || match.venue_name || match.venue_display_name || "";
+    const lookupVenue = this.officialFixtureVenueLookup()[this.fixturePairKey(homeTeam, awayTeam)] || "";
+    const venueName = directVenue || lookupVenue;
+
+    const stadiums = this._data?.venues?.stadiums || [];
+    const normalisedVenue = this.normaliseFixtureText(venueName);
+    const venueData = stadiums.find((v) => {
+      const candidates = [v.name, v.stadium, v.real_name, v.venue, v.city].filter(Boolean);
+      return candidates.some((candidate) => {
+        const normalisedCandidate = this.normaliseFixtureText(candidate);
+        return normalisedCandidate === normalisedVenue || normalisedCandidate.includes(normalisedVenue) || normalisedVenue.includes(normalisedCandidate);
+      });
+    });
+
+    const fallback = this.venueFallbackDetails(venueName) || {};
+    const name = venueData?.name || venueData?.stadium || venueName || fallback.name || "";
+    const realName = venueData?.real_name || venueData?.realName || fallback.realName || "";
+    const city = match.venueCity || match.city || venueData?.city || fallback.city || "";
+    const country = match.venueCountry || venueData?.country || fallback.country || "";
+    const capacityRaw = match.venueCapacity || match.capacity || venueData?.capacity || fallback.capacity || "";
+    const capacity = capacityRaw ? Number(capacityRaw).toLocaleString() : "";
+    const image = venueData?.image ? `/world_cup_2026_frontend/${venueData.image}` : "";
+
+    if (!name && !realName && !city && !capacity) return null;
+
+    return { name, realName, city, country, capacity, image };
+  }
+
   fixtureCard(m) {
     const homeTeam = this.getHomeTeam(m);
     const awayTeam = this.getAwayTeam(m);
@@ -5824,14 +5981,7 @@ class WorldCup2026Panel extends HTMLElement {
     const liveClass = ["IN_PLAY", "LIVE", "PAUSED"].includes(m.status) ? " is-live" : "";
     const finishedClass = ["FINISHED", "FT", "AET", "PEN"].includes(m.status) ? " is-finished" : "";
     const scheduledClass = ["TIMED", "SCHEDULED"].includes(m.status) ? " is-scheduled" : "";
-    const venue = m.venue || m.stadium || m.location || "";
-    const venueData = (this._data?.venues?.stadiums || []).find(v =>
-      [v.name, v.stadium, v.real_name].filter(Boolean).some(n =>
-        String(n).toLowerCase() === String(venue).toLowerCase()
-      )
-    );
-    const venueCapacity = venueData?.capacity ? Number(venueData.capacity).toLocaleString() : "";
-    const venueImage = venueData?.image ? `/world_cup_2026_frontend/${venueData.image}` : "";
+    const venueInfo = this.fixtureVenueInfo(m);
     const matchNumber = m.matchday || m.matchNumber || m.number || m.id || "";
 
     return `
@@ -5855,12 +6005,20 @@ class WorldCup2026Panel extends HTMLElement {
           </div>
         </div>
 
-        ${venueImage ? `<img src="${this.esc(venueImage)}" style="width:100%;max-height:120px;object-fit:cover;border-radius:10px;margin:8px 0;" loading="lazy">` : ""}
+        ${venueInfo?.image ? `<img src="${this.esc(venueInfo.image)}" style="width:100%;max-height:120px;object-fit:cover;border-radius:10px;margin:8px 0;" loading="lazy">` : ""}
 
-        <div class="fixture-card-footer" style="display:flex;flex-direction:column;align-items:flex-start;gap:4px;">
+        ${venueInfo ? `
+          <div class="fixture-card-venue" style="margin:8px 0;padding:8px 10px;border-radius:10px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.16);font-size:12px;line-height:1.35;">
+            <div style="font-weight:800;">🏟 ${this.esc(venueInfo.name)}</div>
+            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<div>Real stadium: <strong>${this.esc(venueInfo.realName)}</strong></div>` : ""}
+            ${venueInfo.city || venueInfo.country ? `<div>${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</div>` : ""}
+            ${venueInfo.capacity ? `<div>👥 ${this.t("capacity")}: <strong>${this.esc(venueInfo.capacity)}</strong></div>` : ""}
+          </div>
+        ` : ""}
+
+        <div class="fixture-card-footer">
           <span>⏱ ${this.esc(this.fixtureTime(m))}</span>
-          ${venue ? `<span>🏟 ${this.esc(venue)}</span>` : ``}
-          ${venueCapacity ? `<span>👥 ${this.esc(venueCapacity)} Capacity</span>` : ``}
+          <span>${this.esc(this.formatDate(m.utcDate || m.date))}</span>
         </div>
 
         ${matchNumber ? `<div class="fixture-card-number">#${this.esc(matchNumber)}</div>` : ""}
