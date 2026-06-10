@@ -1,3 +1,4 @@
+if (!customElements.get("world-cup-2026-panel")) {
 class WorldCup2026Panel extends HTMLElement {
   constructor() {
     super();
@@ -7142,6 +7143,6 @@ class WorldCup2026Panel extends HTMLElement {
   }
 }
 
-if (!customElements.get("world-cup-2026-panel")) {
+
   customElements.define("world-cup-2026-panel", WorldCup2026Panel);
 }
