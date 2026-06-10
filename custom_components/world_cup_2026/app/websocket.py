@@ -28,12 +28,196 @@ def _match_team_name(team):
     return team or "TBC"
 
 
+def _norm_team(value):
+    value = str(value or "").lower()
+    replacements = {
+        "&": " and ",
+        "republic": "",
+        "south korea": "korea",
+        "korea republic": "korea",
+        "usa": "united states",
+        "u.s.a.": "united states",
+        "turkiye": "turkey",
+        "türkiye": "turkey",
+        "côte d’ivoire": "ivory coast",
+        "cote d ivoire": "ivory coast",
+        "bosnia and herzegovina": "bosnia herzegovina",
+        "bosnia & herzegovina": "bosnia herzegovina",
+    }
+    for old, new in replacements.items():
+        value = value.replace(old, new)
+    value = "".join(ch if ch.isalnum() else " " for ch in value)
+    return " ".join(value.split())
+
+
+_FIXTURE_VENUES = {
+    "mexico|south africa": "Mexico City Stadium",
+    "korea|czechia": "Guadalajara Stadium",
+    "canada|bosnia herzegovina": "Toronto Stadium",
+    "united states|paraguay": "Los Angeles Stadium",
+    "qatar|switzerland": "San Francisco Bay Area Stadium",
+    "haiti|scotland": "Boston Stadium",
+    "brazil|morocco": "New York New Jersey Stadium",
+    "australia|turkey": "Vancouver Stadium",
+    "germany|curacao": "Houston Stadium",
+    "netherlands|japan": "Dallas Stadium",
+    "tunisia|sweden": "Monterrey Stadium",
+    "ivory coast|ecuador": "Philadelphia Stadium",
+    "spain|cape verde": "Atlanta Stadium",
+    "belgium|egypt": "Seattle Stadium",
+    "iran|new zealand": "Los Angeles Stadium",
+    "austria|jordan": "San Francisco Bay Area Stadium",
+    "france|senegal": "New York New Jersey Stadium",
+    "norway|iraq": "Boston Stadium",
+    "argentina|algeria": "Kansas City Stadium",
+    "portugal|congo dr": "Houston Stadium",
+    "england|croatia": "Dallas Stadium",
+    "ghana|panama": "Toronto Stadium",
+    "uzbekistan|colombia": "Mexico City Stadium",
+    "canada|qatar": "Vancouver Stadium",
+    "south africa|czechia": "Atlanta Stadium",
+    "switzerland|bosnia herzegovina": "Los Angeles Stadium",
+    "mexico|korea": "Guadalajara Stadium",
+    "scotland|morocco": "Boston Stadium",
+    "brazil|haiti": "Philadelphia Stadium",
+    "united states|australia": "Seattle Stadium",
+    "paraguay|turkey": "San Francisco Bay Area Stadium",
+    "germany|ivory coast": "Toronto Stadium",
+    "tunisia|japan": "Monterrey Stadium",
+    "netherlands|sweden": "Houston Stadium",
+    "ecuador|curacao": "Kansas City Stadium",
+    "new zealand|egypt": "Vancouver Stadium",
+    "spain|saudi arabia": "Atlanta Stadium",
+    "belgium|iran": "Los Angeles Stadium",
+    "uruguay|cape verde": "Miami Stadium",
+    "france|iraq": "Philadelphia Stadium",
+    "norway|senegal": "New York New Jersey Stadium",
+    "jordan|algeria": "San Francisco Bay Area Stadium",
+    "argentina|austria": "Dallas Stadium",
+    "portugal|uzbekistan": "Houston Stadium",
+    "england|ghana": "Boston Stadium",
+    "panama|croatia": "Toronto Stadium",
+    "colombia|congo dr": "Guadalajara Stadium",
+    "canada|switzerland": "Vancouver Stadium",
+    "qatar|bosnia herzegovina": "Seattle Stadium",
+    "morocco|haiti": "Atlanta Stadium",
+    "scotland|brazil": "Miami Stadium",
+    "mexico|czechia": "Mexico City Stadium",
+    "korea|south africa": "Monterrey Stadium",
+    "ecuador|germany": "New York New Jersey Stadium",
+    "curacao|ivory coast": "Philadelphia Stadium",
+    "tunisia|netherlands": "Kansas City Stadium",
+    "japan|sweden": "Dallas Stadium",
+    "united states|turkey": "Los Angeles Stadium",
+    "paraguay|australia": "San Francisco Bay Area Stadium",
+    "senegal|iraq": "Toronto Stadium",
+    "norway|france": "Boston Stadium",
+    "cape verde|saudi arabia": "Houston Stadium",
+    "uruguay|spain": "Guadalajara Stadium",
+    "new zealand|belgium": "Vancouver Stadium",
+    "egypt|iran": "Seattle Stadium",
+    "panama|england": "New York New Jersey Stadium",
+    "croatia|ghana": "Philadelphia Stadium",
+    "colombia|portugal": "Miami Stadium",
+    "uzbekistan|congo dr": "Atlanta Stadium",
+    "jordan|argentina": "Dallas Stadium",
+    "algeria|austria": "Kansas City Stadium",
+}
+
+
+_VENUE_DETAILS = {
+    "Atlanta Stadium": {"real_name": "Mercedes-Benz Stadium", "city": "Atlanta", "country": "USA", "capacity": 75000},
+    "Boston Stadium": {"real_name": "Gillette Stadium", "city": "Boston", "country": "USA", "capacity": 65878},
+    "Dallas Stadium": {"real_name": "AT&T Stadium", "city": "Dallas", "country": "USA", "capacity": 80000},
+    "Guadalajara Stadium": {"real_name": "Estadio Akron", "city": "Guadalajara", "country": "Mexico", "capacity": 48071},
+    "Houston Stadium": {"real_name": "NRG Stadium", "city": "Houston", "country": "USA", "capacity": 72220},
+    "Kansas City Stadium": {"real_name": "Arrowhead Stadium", "city": "Kansas City", "country": "USA", "capacity": 76416},
+    "Los Angeles Stadium": {"real_name": "SoFi Stadium", "city": "Los Angeles", "country": "USA", "capacity": 70240},
+    "Mexico City Stadium": {"real_name": "Estadio Banorte", "city": "Mexico City", "country": "Mexico", "capacity": 87523},
+    "Miami Stadium": {"real_name": "Hard Rock Stadium", "city": "Miami", "country": "USA", "capacity": 64767},
+    "Monterrey Stadium": {"real_name": "Estadio BBVA", "city": "Monterrey", "country": "Mexico", "capacity": 53500},
+    "New York New Jersey Stadium": {"real_name": "MetLife Stadium", "city": "New York/New Jersey", "country": "USA", "capacity": 82500},
+    "Philadelphia Stadium": {"real_name": "Lincoln Financial Field", "city": "Philadelphia", "country": "USA", "capacity": 69596},
+    "San Francisco Bay Area Stadium": {"real_name": "Levi's Stadium", "city": "San Francisco Bay Area", "country": "USA", "capacity": 68500},
+    "Seattle Stadium": {"real_name": "Lumen Field", "city": "Seattle", "country": "USA", "capacity": 69000},
+    "Toronto Stadium": {"real_name": "BMO Field", "city": "Toronto", "country": "Canada", "capacity": 45000},
+    "Vancouver Stadium": {"real_name": "BC Place", "city": "Vancouver", "country": "Canada", "capacity": 54500},
+}
+
+
+def _fallback_venue_for_match(home_team, away_team):
+    key = f"{_norm_team(home_team)}|{_norm_team(away_team)}"
+    venue_name = _FIXTURE_VENUES.get(key)
+    if not venue_name:
+        return None, None, None, None, None
+    details = _VENUE_DETAILS.get(venue_name, {})
+    return (
+        venue_name,
+        details.get("real_name"),
+        details.get("city"),
+        details.get("country"),
+        details.get("capacity"),
+    )
+
+
+def _venue_value(match, *keys):
+    """Return the first available venue value from the match or nested venue dict."""
+    venue = match.get("venue") or match.get("stadium") or match.get("location") or {}
+
+    for key in keys:
+        value = match.get(key)
+        if value not in (None, "", []):
+            return value
+
+    if isinstance(venue, dict):
+        for key in keys:
+            value = venue.get(key)
+            if value not in (None, "", []):
+                return value
+
+    return None
+
+
 def _serialise_match(match):
     home_team = match.get("homeTeam", {})
     away_team = match.get("awayTeam", {})
     score = match.get("score", {})
 
     full_time = score.get("fullTime", {}) if isinstance(score, dict) else {}
+
+    venue = match.get("venue") or match.get("stadium") or match.get("location")
+
+    if isinstance(venue, dict):
+        venue_name = (
+            venue.get("name")
+            or venue.get("stadium")
+            or venue.get("venue")
+            or venue.get("shortName")
+        )
+        venue_city = venue.get("city") or venue.get("location")
+        venue_country = venue.get("country") or venue.get("countryName")
+        venue_capacity = venue.get("capacity")
+        venue_real_name = venue.get("real_name") or venue.get("realName")
+    else:
+        venue_name = venue
+        venue_city = _venue_value(match, "venueCity", "city")
+        venue_country = _venue_value(match, "venueCountry", "country", "countryName")
+        venue_capacity = _venue_value(match, "capacity", "venueCapacity")
+        venue_real_name = _venue_value(match, "venueRealName", "real_name", "realName")
+
+    if not venue_name:
+        (
+            fallback_name,
+            fallback_real_name,
+            fallback_city,
+            fallback_country,
+            fallback_capacity,
+        ) = _fallback_venue_for_match(_match_team_name(home_team), _match_team_name(away_team))
+        venue_name = fallback_name
+        venue_real_name = venue_real_name or fallback_real_name
+        venue_city = venue_city or fallback_city
+        venue_country = venue_country or fallback_country
+        venue_capacity = venue_capacity or fallback_capacity
 
     return {
         "id": match.get("id"),
@@ -45,6 +229,19 @@ def _serialise_match(match):
         "awayTeam": _match_team_name(away_team),
         "homeScore": full_time.get("home"),
         "awayScore": full_time.get("away"),
+
+        # Venue / stadium details for frontend fixture cards.
+        # These are safe fallbacks: if the API does not provide them, frontend
+        # will still show the normal fixture and can keep "Not available".
+        "venue": venue_name,
+        "stadium": venue_name,
+        "venueName": venue_name,
+        "venueRealName": venue_real_name,
+        "real_name": venue_real_name,
+        "venueCity": venue_city,
+        "venueCountry": venue_country,
+        "capacity": venue_capacity,
+        "venueCapacity": venue_capacity,
     }
 
 
