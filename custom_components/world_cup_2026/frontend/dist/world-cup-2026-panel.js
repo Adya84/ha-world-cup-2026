@@ -5347,7 +5347,54 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
-      </style>
+      
+/* Compact overview progress area */
+.wc-progress-card,
+.progress-card,
+.wc-progress-section,
+.progress-section {
+  padding: 8px 12px !important;
+  min-height: 0 !important;
+  margin-top: 8px !important;
+  margin-bottom: 8px !important;
+}
+
+.wc-progress-card .wc-card-title,
+.progress-card .wc-card-title,
+.wc-progress-section .wc-card-title,
+.progress-section .wc-card-title {
+  margin-bottom: 6px !important;
+}
+
+.wc-progress-track,
+.progress-track,
+.wc-progress-bar-container,
+.progress-bar-container {
+  height: 12px !important;
+  min-height: 12px !important;
+  margin-top: 4px !important;
+  margin-bottom: 0 !important;
+  border-radius: 999px !important;
+}
+
+.wc-progress-fill,
+.progress-fill,
+.wc-progress-bar,
+.progress-bar {
+  height: 12px !important;
+  min-height: 12px !important;
+  border-radius: 999px !important;
+}
+
+.wc-progress-label,
+.progress-label,
+.wc-progress-percent,
+.progress-percent {
+  font-size: 12px !important;
+  line-height: 1.1 !important;
+}
+
+</style>
     `;
   }
 
