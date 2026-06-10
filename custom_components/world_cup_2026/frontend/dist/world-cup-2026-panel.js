@@ -6001,14 +6001,13 @@ class WorldCup2026Panel extends HTMLElement {
           </div>
         </div>
 
-        ${venueInfo?.image ? `<img src="${this.esc(venueInfo.image)}" style="width:100%;max-height:120px;object-fit:cover;border-radius:10px;margin:8px 0;" loading="lazy">` : ""}
+        ${venueInfo?.image ? `<img src="${this.esc(venueInfo.image)}" style="width:100%;height:88px;object-fit:contain;object-position:center;border-radius:10px;margin:6px 0 4px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.10);" loading="lazy">` : ""}
 
         ${venueInfo ? `
-          <div class="fixture-card-venue" style="margin:8px 0;padding:8px 10px;border-radius:10px;background:rgba(0,0,0,.22);border:1px solid rgba(255,255,255,.16);font-size:12px;line-height:1.35;">
-            <div style="font-weight:800;">🏟 ${this.esc(venueInfo.name)}</div>
-            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<div>Real stadium: <strong>${this.esc(venueInfo.realName)}</strong></div>` : ""}
-            ${venueInfo.city || venueInfo.country ? `<div>${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</div>` : ""}
-            ${venueInfo.capacity ? `<div>👥 ${this.t("capacity")}: <strong>${this.esc(venueInfo.capacity)}</strong></div>` : ""}
+          <div class="fixture-card-venue" style="margin:4px 0 0;padding:5px 7px;border-radius:8px;background:rgba(0,0,0,.18);border:1px solid rgba(255,255,255,.12);font-size:10.5px;line-height:1.15;">
+            <div style="font-weight:850;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">🏟 ${this.esc(venueInfo.name)}</div>
+            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<div style="opacity:.82;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">Real: <strong>${this.esc(venueInfo.realName)}</strong></div>` : ""}
+            ${(venueInfo.city || venueInfo.country || venueInfo.capacity) ? `<div style="display:flex;gap:8px;flex-wrap:wrap;opacity:.92;">${venueInfo.city || venueInfo.country ? `<span>${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</span>` : ""}${venueInfo.capacity ? `<span>👥 ${this.esc(venueInfo.capacity)}</span>` : ""}</div>` : ""}
           </div>
         ` : ""}
 
