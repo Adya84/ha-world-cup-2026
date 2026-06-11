@@ -12200,7 +12200,7 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select {
-          width: 86px !important;
+          width: 50px !important;
         }
 
         .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button {
@@ -12450,7 +12450,7 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-app.wc-view-tablet .wc-header-title-row {
-          grid-template-columns: 72px 72px minmax(0, 1fr) minmax(260px, 360px) !important;
+          grid-template-columns: 72px 72px minmax(0, 1fr) max-content !important;
           grid-template-rows: auto auto !important;
         }
 
@@ -12462,8 +12462,9 @@ class WorldCup2026Panel extends HTMLElement {
           justify-content: flex-end !important;
           gap: 4px !important;
           min-width: 0 !important;
-          width: 100% !important;
-          overflow: hidden !important;
+          width: max-content !important;
+          max-width: max-content !important;
+          overflow: visible !important;
           margin: 0 !important;
           padding: 0 !important;
         }
@@ -12480,6 +12481,7 @@ class WorldCup2026Panel extends HTMLElement {
           line-height: 1 !important;
           box-sizing: border-box !important;
           white-space: nowrap !important;
+          min-width: 0 !important;
         }
 
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-tablet-top-time {
@@ -12488,11 +12490,11 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select {
-          width: 86px !important;
+          width: 50px !important;
         }
 
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select {
-          width: 84px !important;
+          width: 50px !important;
         }
 
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button {
@@ -12545,7 +12547,7 @@ class WorldCup2026Panel extends HTMLElement {
 
         @media (max-width: 760px) {
           .wc-app.wc-view-tablet .wc-header-title-row {
-            grid-template-columns: 68px 68px minmax(0, 1fr) minmax(205px, 245px) !important;
+            grid-template-columns: 68px 68px minmax(0, 1fr) max-content !important;
           }
 
           .wc-app.wc-view-tablet .wc-tablet-top-controls {
@@ -12563,8 +12565,8 @@ class WorldCup2026Panel extends HTMLElement {
           }
 
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-tablet-top-time { width: 48px !important; }
-          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select { width: 60px !important; }
-          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select { width: 60px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select { width: 34px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select { width: 34px !important; }
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button { width: 34px !important; }
 
           .wc-app.wc-view-tablet .wc-progress-title-main {
@@ -12608,7 +12610,7 @@ class WorldCup2026Panel extends HTMLElement {
           align-self: center !important;
           flex: 0 0 auto !important;
           width: auto !important;
-          min-width: 86px !important;
+          min-width: 50px !important;
           max-width: 132px !important;
           height: 28px !important;
           min-height: 28px !important;
@@ -12637,6 +12639,132 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+
+
+        /* Tablet only: enlarge the top overview navigation buttons and let them use the spare bar space */
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          grid-template-columns: 72px 72px minmax(0, 1fr) max-content !important;
+          align-items: center !important;
+          column-gap: 4px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          display: flex !important;
+          flex: 1 1 auto !important;
+          width: 100% !important;
+          max-width: none !important;
+          gap: 4px !important;
+          justify-content: stretch !important;
+          align-items: center !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+          flex: 1 1 0 !important;
+          height: 34px !important;
+          min-height: 34px !important;
+          padding: 7px 8px !important;
+          font-size: 11px !important;
+          line-height: 1 !important;
+          border-radius: 999px !important;
+          letter-spacing: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls {
+          justify-self: end !important;
+          margin-left: 4px !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-header-title-row {
+            grid-template-columns: 62px 62px minmax(0, 1fr) max-content !important;
+            column-gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-header-nav {
+            gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+            height: 28px !important;
+            min-height: 28px !important;
+            padding: 5px 5px !important;
+            font-size: 8.8px !important;
+          }
+        }
+
+
+        /* Tablet readability fix: use the empty top-right space so the header nav labels stay readable. */
+        .wc-app.wc-view-tablet .wc-header {
+          padding-right: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          display: grid !important;
+          grid-template-columns: auto auto minmax(0, 1fr) max-content !important;
+          column-gap: 5px !important;
+          row-gap: 0 !important;
+          align-items: center !important;
+          width: 100% !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-title-stack,
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-countdown-pill {
+          display: none !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          display: flex !important;
+          flex-wrap: nowrap !important;
+          justify-content: flex-start !important;
+          align-items: center !important;
+          gap: 4px !important;
+          min-width: 0 !important;
+          width: 100% !important;
+          overflow: visible !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+          flex: 0 0 auto !important;
+          width: auto !important;
+          min-width: max-content !important;
+          max-width: none !important;
+          height: 24px !important;
+          min-height: 24px !important;
+          padding: 5px 8px !important;
+          font-size: 9px !important;
+          line-height: 1 !important;
+          letter-spacing: 0 !important;
+          white-space: nowrap !important;
+          overflow: visible !important;
+          text-overflow: clip !important;
+          border-radius: 999px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls {
+          justify-self: end !important;
+          margin-left: 4px !important;
+          flex: 0 0 auto !important;
+        }
+
+        @media (min-width: 1000px) {
+          .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+            font-size: 9.5px !important;
+            padding: 5px 9px !important;
+          }
+        }
+
+        @media (max-width: 900px) {
+          .wc-app.wc-view-tablet .wc-tablet-header-nav {
+            gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+            font-size: 8px !important;
+            padding: 4px 6px !important;
+            height: 22px !important;
+            min-height: 22px !important;
+          }
+        }
 </style>
     `;
   }
@@ -12691,6 +12819,81 @@ class WorldCup2026Panel extends HTMLElement {
         `).join("")}
       </div>
     `;
+  }
+
+  languageCodeFor(value) {
+    const code = String(value || "en").replace("_", "-").toUpperCase();
+    return code;
+  }
+
+  setLanguageSelectCompact(select, compact = true) {
+    if (!select) return;
+
+    Array.from(select.options).forEach((option) => {
+      if (!option.value) return;
+
+      if (!option.dataset.fullLabel) {
+        option.dataset.fullLabel = option.textContent.trim();
+      }
+
+      option.textContent = compact
+        ? this.languageCodeFor(option.value)
+        : option.dataset.fullLabel;
+    });
+  }
+
+  setupLanguageSelect(select) {
+    if (!select) return;
+
+    this.setLanguageSelectCompact(select, true);
+
+    const showFullNames = () => this.setLanguageSelectCompact(select, false);
+    const showCodes = () => this.setLanguageSelectCompact(select, true);
+
+    select.onfocus = showFullNames;
+    select.onmousedown = showFullNames;
+    select.ontouchstart = showFullNames;
+    select.onblur = showCodes;
+    select.onchange = (e) => {
+      this.changeLanguage(e.target.value);
+    };
+  }
+
+  viewCodeFor(value) {
+    return value === "tablet" ? "TAB" : "PC";
+  }
+
+  setViewSelectCompact(select, compact = true) {
+    if (!select) return;
+
+    Array.from(select.options).forEach((option) => {
+      if (!option.value) return;
+
+      if (!option.dataset.fullLabel) {
+        option.dataset.fullLabel = option.textContent.trim();
+      }
+
+      option.textContent = compact
+        ? this.viewCodeFor(option.value)
+        : option.dataset.fullLabel;
+    });
+  }
+
+  setupViewSelect(select) {
+    if (!select) return;
+
+    this.setViewSelectCompact(select, true);
+
+    const showFullNames = () => this.setViewSelectCompact(select, false);
+    const showCodes = () => this.setViewSelectCompact(select, true);
+
+    select.onfocus = showFullNames;
+    select.onmousedown = showFullNames;
+    select.ontouchstart = showFullNames;
+    select.onblur = showCodes;
+    select.onchange = (e) => {
+      this.changeViewMode(e.target.value);
+    };
   }
 
   languageSelector() {
@@ -14372,15 +14575,11 @@ class WorldCup2026Panel extends HTMLElement {
     });
 
     this.querySelectorAll("#wc-language-select, #wc-language-select-tablet").forEach((languageSelect) => {
-      languageSelect.onchange = (e) => {
-        this.changeLanguage(e.target.value);
-      };
+      this.setupLanguageSelect(languageSelect);
     });
 
     this.querySelectorAll("#wc-view-select, #wc-view-select-tablet").forEach((viewSelect) => {
-      viewSelect.onchange = (e) => {
-        this.changeViewMode(e.target.value);
-      };
+      this.setupViewSelect(viewSelect);
     });
 
     this.querySelectorAll("#wc-back-button, #wc-back-button-tablet").forEach((backButton) => {
