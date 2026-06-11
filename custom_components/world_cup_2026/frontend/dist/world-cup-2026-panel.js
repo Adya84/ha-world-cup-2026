@@ -15572,12 +15572,57 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   worldCupKickoffDate() {
-    // Opening match countdown. Change this one line if FIFA changes the kickoff time.
-    return new Date("2026-06-11T19:00:00Z");
+    // Opening match countdown.
+    // Prefer the real fixture timestamp from the loaded schedule.
+    // JavaScript Date stores the instant in time and compares it against
+    // Date.now(), so the countdown automatically follows the viewer's
+    // device/browser local timezone.
+    const fixtureTarget = this.nextCountdownFixtureDate();
+
+    if (fixtureTarget) {
+      return fixtureTarget;
+    }
+
+    // Fallback only if fixtures are not loaded yet.
+    // 20:00 UK/BST on 11 June 2026 = 19:00 UTC.
+    return new Date("2026-06-11T20:00:00+01:00");
+  }
+
+  nextCountdownFixtureDate() {
+    const fixtures = Array.isArray(this._data?.fixtures) ? this._data.fixtures : [];
+
+    if (!fixtures.length) {
+      return null;
+    }
+
+    const now = Date.now();
+    const upcoming = fixtures
+      .map((match) => {
+        const value = match?.utcDate || match?.date || match?.kickoff || match?.startTime;
+        if (!value) return null;
+
+        const date = new Date(value);
+        const time = date.getTime();
+
+        if (!Number.isFinite(time) || time <= now) {
+          return null;
+        }
+
+        return { date, time };
+      })
+      .filter(Boolean)
+      .sort((a, b) => a.time - b.time);
+
+    return upcoming.length ? upcoming[0].date : null;
   }
 
   countdownParts() {
-    const target = this.worldCupKickoffDate().getTime();
+    const targetDate = this.worldCupKickoffDate();
+    const target = targetDate ? targetDate.getTime() : NaN;
+
+    if (!Number.isFinite(target)) {
+      return null;
+    }
     const now = Date.now();
     const remaining = target - now;
 
