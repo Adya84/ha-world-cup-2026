@@ -5,3 +5,467 @@
 ![HACS](https://img.shields.io/badge/HACS-Custom-orange)
 
 A complete FIFA World Cup 2026 integration and dedicated tournament application for Home Assistant.
+
+Track every fixture, result, player, team, group, stadium and tournament statistic from the largest FIFA World Cup ever held.
+
+Featuring 48 teams, 12 groups, 104 matches and host venues across the United States, Canada and Mexico.
+
+---
+
+# 🚀 Latest Release - v4.0.1
+
+The biggest update yet for the World Cup 2026 integration, introducing a dedicated Tablet Mode, improved navigation, enhanced language support and major interface improvements throughout the application.
+
+---
+
+## 📱 New Dedicated Tablet Mode
+
+A completely new tablet-optimised experience has been added.
+
+Features include:
+
+* New PC / Tablet View Selector
+* Dedicated Tablet Layouts
+* Improved Touchscreen Navigation
+* Better Use Of Screen Space
+* Enhanced Readability
+* Optimised Tablet Page Scaling
+* Improved Landscape Support
+* Samsung Tablet Tested
+* Improved Wall-Mounted Dashboard Experience
+
+The selected display mode is remembered automatically.
+
+---
+
+## 🌍 Language System Improvements
+
+The language system has been redesigned to provide a cleaner interface.
+
+Features include:
+
+* Compact Language Display
+* EN / FR / DE / ES / IT / NL Language Codes
+* Full Language Names In Dropdown Menus
+* Reduced Header Clutter
+* Improved Space Utilisation
+* Better Tablet Compatibility
+* Automatic Language Persistence
+
+---
+
+## 🎨 Application Interface Improvements
+
+Major visual improvements have been made throughout the application.
+
+Includes:
+
+* Redesigned Application Header
+* Improved Navigation Spacing
+* Better Button Readability
+* More Efficient Use Of Screen Space
+* Cleaner Control Layout
+* Improved Tablet Presentation
+* Improved Mobile Compatibility
+* Enhanced User Experience
+
+---
+
+## ⏳ Countdown Improvements
+
+The World Cup countdown system has been improved.
+
+Features include:
+
+* Corrected Tournament Countdown Timing
+* Improved Timezone Handling
+* Better Countdown Positioning
+* Automatic Countdown Removal After Tournament Kickoff
+
+---
+
+## 📊 Groups Page Improvements
+
+The Groups Centre has received significant tablet optimisations.
+
+Includes:
+
+* Better Screen Utilisation
+* Improved Card Scaling
+* Reduced Unused Space
+* Better Standings Visibility
+* Improved Tablet Responsiveness
+* Enhanced Readability
+
+---
+
+## ⚙️ Stability & Performance Improvements
+
+* Improved Frontend Responsiveness
+* Additional Home Assistant Compatibility Improvements
+* Layout Refinements
+* UI Fixes
+* General Performance Improvements
+* Code Cleanup And Optimisation
+
+---
+
+## 🔒 Licensing
+
+The project is now licensed under:
+
+GNU General Public License v3.0 (GPL-3.0-or-later)
+
+This allows the community to use, modify and contribute to the project while ensuring all distributed modifications remain open source.
+
+Copyright (C) 2026 Adrian Apel
+
+---
+
+## 📦 Installation
+
+### Option 1: Install via HACS
+
+1. Open Home Assistant.
+
+2. Go to **HACS**.
+
+3. Open the menu in the top-right corner and select **Custom repositories**.
+
+4. Add this repository URL:
+
+   `https://github.com/Adya84/ha-world-cup-2026`
+
+5. Select **Integration** as the category.
+
+6. Click **Add**.
+
+7. Search for **World Cup 2026** in HACS.
+
+8. Download and install the integration.
+
+9. Restart Home Assistant.
+
+### Option 2: Manual Installation
+
+1. Download or clone this repository.
+
+2. Copy:
+
+   `custom_components/world_cup_2026`
+
+   into:
+
+   `config/custom_components/world_cup_2026`
+
+3. Restart Home Assistant.
+
+---
+
+## ⚙️ Configuration
+
+1. Go to **Settings → Devices & Services**
+2. Click **Add Integration**
+3. Search for **World Cup 2026**
+4. Enter your football-data.org API key
+5. Complete setup
+
+---
+
+## 🧪 Demo Mode
+
+Demo Mode can be enabled after setup.
+
+1. Open **Settings → Devices & Services**
+2. Select **World Cup 2026**
+3. Click **Configure**
+4. Enable **Demo Mode**
+5. Save
+
+Demo mode loads local tournament data allowing full dashboard testing before the tournament begins.
+
+---
+
+## 🔑 API Key
+
+This integration uses live data from:
+
+https://www.football-data.org/
+
+A valid API key is required for live tournament data.
+
+---
+
+# 🌟 Features
+
+## 🧭 Dedicated World Cup Application
+
+Navigate instantly between:
+
+* Overview
+* Live Centre
+* Fixtures & Results
+* Groups Centre
+* Knockout Centre
+* Golden Boot Centre
+* Statistics Hub
+* Records Hub
+* Stadiums & Venues
+* Supporters
+
+Designed for Desktop, Tablet and Mobile devices.
+
+---
+
+## 📱 Dedicated Tablet Mode
+
+New in v4.0.x
+
+Features include:
+
+* Tablet Optimised Layouts
+* PC / Tablet View Switching
+* Touch Friendly Navigation
+* Improved Space Usage
+* Better Readability
+* Samsung Tablet Tested
+
+---
+
+## ⚽ Live Match Data
+
+Track the tournament in real time with:
+
+* Live Fixtures
+* Match Results
+* Live Match Status
+* Group Standings
+* Match Statistics
+* Goal Scorers
+* Match Countdown
+* Kick-Off Information
+* Today's Matches
+* Tomorrow's Matches
+* Completed Matches
+* Live Goals Counter
+* Match Venue Information
+
+---
+
+## 🏆 Tournament Tracking
+
+Track every stage of the tournament:
+
+* Group Stage
+* Round Of 32
+* Round Of 16
+* Quarter Finals
+* Semi Finals
+* Third Place Playoff
+* Final
+
+---
+
+## 📊 Statistics Hub
+
+Includes:
+
+* Tournament Progress
+* Matches Played
+* Matches Remaining
+* Total Goals
+* Goals Per Match
+* Draw Rate
+* BTTS Rate
+* Over 2.5 Goals Rate
+* Live Match Count
+* Team Performance Metrics
+* Tournament Completion Percentage
+
+---
+
+## 🔥 Records Hub
+
+Track major tournament records including:
+
+* Biggest Win
+* Highest Scoring Match
+* Latest Result
+* Top Scoring Team
+* Best Defence
+* Goal Difference Rankings
+* Tournament Record Tracking
+
+---
+
+## 👤 Golden Boot Centre
+
+Track:
+
+* Goals
+* Assists
+* Top Scorers
+* Tournament Leaders
+* Automatic football-data.org Updates
+* Local Fallback Support
+
+---
+
+## 🏟 Stadiums & Venues
+
+Includes all 16 official FIFA World Cup 2026 venues.
+
+Features:
+
+* Official FIFA Venue Names
+* Stadium Photographs
+* Host City Information
+* Stadium Capacities
+* Matches Hosted
+* USA Venues
+* Canada Venues
+* Mexico Venues
+* Final Venue Information
+
+---
+
+## ❤️ Supporters Wall
+
+Features:
+
+* Dedicated Supporters Page
+* Latest Supporters Section
+* Country Flags
+* Community Recognition
+* Date-Based Ordering
+* Supporter Wall
+
+---
+
+## 🌍 Multi-Language Support
+
+Supported Languages:
+
+* English 🇬🇧
+* French 🇫🇷
+* German 🇩🇪
+* Spanish 🇪🇸
+* Italian 🇮🇹
+* Dutch 🇳🇱
+* Portuguese 🇵🇹
+* Arabic 🇸🇦
+* Japanese 🇯🇵
+* Korean 🇰🇷
+* Swedish 🇸🇪
+* Norwegian 🇳🇴
+* Polish 🇵🇱
+
+Additional Features:
+
+* Automatic Language Persistence
+* Localised Date Formatting
+* Arabic RTL Support
+* Built-In Language Selector
+* Compact Language Codes
+
+---
+
+## 🎨 Dashboard Included
+
+Ready-to-import dashboard featuring:
+
+* Tournament Overview
+* Fixtures & Results
+* Groups Centre
+* Live Centre
+* Statistics Hub
+* Records Hub
+* Golden Boot Centre
+* Knockout Centre
+* Stadiums & Venues
+* Supporters Page
+* Multi-Language Support
+* Mobile Friendly Layout
+
+---
+
+## 🧪 Demo Mode
+
+Includes:
+
+* Demo Fixtures
+* Demo Results
+* Dashboard Testing
+* Sensor Testing
+* Full Dashboard Preview
+* Offline Development Support
+
+---
+
+## 📦 Included Sensors
+
+Sensors cover:
+
+* Tournament Information
+* Live Match Data
+* Fixtures & Results
+* Group Standings
+* Player Statistics
+* Tournament Analytics
+* Tournament Records
+* Venue Information
+* Knockout Tracking
+* Stadium Data
+* Host Cities
+
+---
+
+# 👨‍💻 Author
+
+Created and maintained by Adrian Apel.
+
+GitHub:
+https://github.com/Adya84/ha-world-cup-2026
+
+---
+
+# 📜 License
+
+Copyright (C) 2026 Adrian Apel
+
+World Cup 2026 Home Assistant Integration is licensed under the GNU General Public License v3.0 or later (GPL-3.0-or-later).
+
+You are free to use, modify and redistribute this software under the terms of the GPL licence.
+
+Any distributed modifications must also be released under the GPL licence and include the corresponding source code.
+
+See the LICENSE file for full licence details.
+
+---
+
+# ❤️ Support Development
+
+## 🍺 Buy Me a Beer
+
+PayPal:
+
+https://paypal.me/graffidoodle
+
+Every contribution helps support:
+
+* New Features
+* Dashboard Improvements
+* Bug Fixes
+* Ongoing Maintenance
+* Translation Support
+* Future Tournament Integrations
+* API Testing
+* Development Time
+
+### 🎖 Supporters Wall
+
+Want your name displayed inside the application?
+
+Simply Buy Me a Beer and your name will be added to the Supporters Wall inside the World Cup 2026 app.
+
+Thank you to everyone supporting the project and helping make World Cup 2026 the ultimate Home Assistant football integration.
