@@ -11962,6 +11962,313 @@ class WorldCup2026Panel extends HTMLElement {
             width: 36px !important;
           }
         }
+
+        /* Tablet view only v2: use full top row, keep status pills small, and put controls into compact progress/stats bar */
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          flex-wrap: nowrap !important;
+          align-items: center !important;
+          gap: 4px !important;
+          width: 100% !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-live-pill,
+        .wc-app.wc-view-tablet .wc-header-scheduled-pill {
+          flex: 0 0 auto !important;
+          min-height: 16px !important;
+          height: 16px !important;
+          padding: 2px 6px !important;
+          font-size: 7.5px !important;
+          line-height: 1 !important;
+          max-width: none !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          display: flex !important;
+          flex: 1 1 auto !important;
+          min-width: 0 !important;
+          width: auto !important;
+          gap: 4px !important;
+          overflow: hidden !important;
+          align-items: center !important;
+          justify-content: stretch !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+          flex: 1 1 0 !important;
+          min-width: 0 !important;
+          height: 18px !important;
+          min-height: 18px !important;
+          padding: 3px 5px !important;
+          font-size: 7.6px !important;
+          line-height: 1 !important;
+          border-radius: 999px !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack,
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          flex: 0 0 auto !important;
+          width: auto !important;
+          margin-top: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack {
+          min-width: 112px !important;
+          max-width: 190px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title {
+          font-size: 13px !important;
+          line-height: 1 !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-subtitle-inline {
+          display: none !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          min-width: 72px !important;
+          max-width: 96px !important;
+          min-height: 18px !important;
+          height: 18px !important;
+          padding: 0 4px !important;
+          font-size: 11px !important;
+          letter-spacing: 0 !important;
+          justify-content: center !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-controls {
+          display: none !important;
+        }
+
+        .wc-tablet-progress-controls {
+          display: none;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap {
+          display: grid !important;
+          grid-template-columns: 13% minmax(0, 43%) minmax(270px, 44%) !important;
+          grid-template-rows: 14px 12px !important;
+          grid-template-areas:
+            "progressTop stats controls"
+            "progressBar stats controls" !important;
+          align-items: center !important;
+          width: 100% !important;
+          max-width: none !important;
+          min-height: 32px !important;
+          max-height: 34px !important;
+          margin-top: 5px !important;
+          padding: 3px 6px !important;
+          column-gap: 5px !important;
+          border-radius: 12px !important;
+          background: rgba(255,255,255,0.055) !important;
+          border: 1px solid rgba(255,255,255,0.10) !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top {
+          grid-area: progressTop !important;
+          height: 12px !important;
+          min-height: 0 !important;
+          margin: 0 !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          gap: 2px !important;
+          font-size: 6px !important;
+          line-height: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top span,
+        .wc-app.wc-view-tablet .overview-progress-top strong {
+          font-size: 6px !important;
+          line-height: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-bar {
+          grid-area: progressBar !important;
+          height: 5px !important;
+          min-height: 5px !important;
+          margin: 0 !important;
+          border-radius: 999px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-bar > div,
+        .wc-app.wc-view-tablet .overview-progress-bar div {
+          height: 5px !important;
+          min-height: 5px !important;
+          border-radius: 999px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+          grid-area: stats !important;
+          display: grid !important;
+          grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+          gap: 2px !important;
+          margin: 0 !important;
+          min-width: 0 !important;
+          height: 26px !important;
+          align-items: stretch !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+          height: 26px !important;
+          min-height: 26px !important;
+          max-height: 26px !important;
+          padding: 1px 2px !important;
+          border-radius: 6px !important;
+          justify-content: center !important;
+          gap: 0 !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+          font-size: 9px !important;
+          line-height: .9 !important;
+          margin: 0 !important;
+          order: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+          font-size: 3.8px !important;
+          line-height: .9 !important;
+          margin: 0 !important;
+          opacity: 0.72 !important;
+          max-width: 100% !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span {
+          order: 2 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+          display: none !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls {
+          grid-area: controls !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: flex-end !important;
+          gap: 4px !important;
+          width: 100% !important;
+          min-width: 0 !important;
+          height: 26px !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-updated-pill,
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-language-select,
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select,
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button {
+          height: 22px !important;
+          min-height: 22px !important;
+          padding: 2px 6px !important;
+          border-radius: 999px !important;
+          font-size: 7px !important;
+          line-height: 1 !important;
+          flex: 0 1 auto !important;
+          min-width: 0 !important;
+          box-sizing: border-box !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-tablet-progress-time {
+          width: 62px !important;
+          text-align: center !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-language-select {
+          width: 88px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select {
+          width: 86px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button {
+          width: 50px !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+            font-size: 6.4px !important;
+            padding: 2px 3px !important;
+          }
+          .wc-app.wc-view-tablet .overview-progress-wrap {
+            grid-template-columns: 11% minmax(0, 40%) minmax(225px, 49%) !important;
+            column-gap: 3px !important;
+            padding: 3px 4px !important;
+          }
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls {
+            gap: 2px !important;
+          }
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-updated-pill,
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-language-select,
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select,
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button {
+            font-size: 6px !important;
+            padding: 1px 3px !important;
+            height: 20px !important;
+            min-height: 20px !important;
+          }
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-tablet-progress-time { width: 48px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-language-select { width: 62px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select { width: 62px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button { width: 35px !important; }
+        }
+
+
+
+        /* Tablet only: make the two top status pills identical size without moving the layout */
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill,
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-scheduled-pill {
+          flex: 0 0 70px !important;
+          width: 70px !important;
+          min-width: 70px !important;
+          max-width: 70px !important;
+          height: 16px !important;
+          min-height: 16px !important;
+          padding: 2px 4px !important;
+          box-sizing: border-box !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          font-size: 7px !important;
+          line-height: 1 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill,
+          .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-scheduled-pill {
+            flex-basis: 64px !important;
+            width: 64px !important;
+            min-width: 64px !important;
+            max-width: 64px !important;
+            height: 15px !important;
+            min-height: 15px !important;
+            font-size: 6.2px !important;
+            padding: 2px 3px !important;
+          }
+        }
 </style>
     `;
   }
