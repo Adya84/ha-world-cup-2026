@@ -8828,44 +8828,555 @@ class WorldCup2026Panel extends HTMLElement {
           gap: 16px;
         }
 
+
+        .wc-web-card {
+          margin-bottom: 16px;
+          overflow: hidden;
+        }
+
+        .wc-web-subtitle {
+          margin: -4px 0 14px;
+          opacity: 0.74;
+          font-size: 13px;
+          text-align: center;
+        }
+
+        .wc-knockout-web {
+          display: grid;
+          grid-template-columns: minmax(190px, 1.2fr) repeat(5, minmax(145px, 1fr));
+          gap: 14px;
+          width: 100%;
+          align-items: stretch;
+        }
+
+        .wc-web-round {
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          gap: 8px;
+        }
+
+        .wc-web-round-title {
+          text-align: center;
+          font-weight: 900;
+          font-size: 12px;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+          opacity: 0.9;
+          margin-bottom: 3px;
+          min-height: 28px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
+        .wc-web-match {
+          position: relative;
+          min-height: 58px;
+          padding: 7px 8px;
+          border-radius: 12px;
+          border: 1px solid rgba(255,255,255,0.14);
+          background: linear-gradient(135deg, rgba(255,255,255,0.10), rgba(255,255,255,0.045));
+          box-shadow: 0 8px 20px rgba(0,0,0,0.20);
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          gap: 4px;
+          overflow: visible;
+        }
+
+        .wc-web-round:not(:last-child) .wc-web-match::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -14px;
+          width: 14px;
+          height: 1px;
+          background: rgba(255,255,255,0.28);
+          pointer-events: none;
+        }
+
+        .wc-web-team {
+          display: flex;
+          align-items: center;
+          gap: 6px;
+          min-width: 0;
+          font-weight: 800;
+          font-size: 11px;
+          line-height: 1.15;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+        .wc-web-team .group-flag-img,
+        .wc-web-team .group-flag-missing {
+          width: 22px;
+          height: 15px;
+          font-size: 11px;
+          border-radius: 4px;
+          flex: 0 0 auto;
+        }
+
+        .wc-web-vs {
+          text-align: center;
+          font-size: 9px;
+          opacity: 0.56;
+          font-weight: 900;
+          line-height: 1;
+        }
+
+        @media (max-width: 1400px) {
+          .wc-knockout-web {
+            grid-template-columns: minmax(160px, 1.15fr) repeat(5, minmax(118px, 1fr));
+            gap: 8px;
+          }
+
+          .wc-web-round:not(:last-child) .wc-web-match::after {
+            right: -8px;
+            width: 8px;
+          }
+
+          .wc-web-match {
+            min-height: 50px;
+            padding: 6px;
+          }
+
+          .wc-web-team {
+            font-size: 9.5px;
+            gap: 4px;
+          }
+
+          .wc-web-team .group-flag-img,
+          .wc-web-team .group-flag-missing {
+            width: 18px;
+            height: 12px;
+          }
+        }
+
+
+        /* Compact top knockout web: fit whole bracket on one screen */
+        .wc-web-card {
+          padding: 12px 14px !important;
+          margin-bottom: 12px !important;
+        }
+
+        .wc-web-card .wc-section-title {
+          font-size: 16px !important;
+          margin-bottom: 3px !important;
+        }
+
+        .wc-web-subtitle {
+          margin: 0 0 7px !important;
+          font-size: 11px !important;
+          line-height: 1 !important;
+        }
+
+        .wc-knockout-web {
+          grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+          gap: 6px !important;
+          align-items: stretch !important;
+        }
+
+        .wc-web-round {
+          gap: 3px !important;
+          justify-content: space-between !important;
+          min-width: 0 !important;
+        }
+
+        .wc-web-round-title {
+          min-height: 18px !important;
+          margin-bottom: 3px !important;
+          font-size: 9.5px !important;
+          line-height: 1 !important;
+          letter-spacing: 0.02em !important;
+        }
+
+        .wc-web-match {
+          min-height: 27px !important;
+          padding: 3px 4px !important;
+          border-radius: 8px !important;
+          gap: 2px !important;
+          display: grid !important;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+          align-items: center !important;
+          box-shadow: none !important;
+        }
+
+        .wc-web-round:not(:last-child) .wc-web-match::after {
+          right: -5px !important;
+          width: 5px !important;
+        }
+
+        .wc-web-team {
+          gap: 3px !important;
+          font-size: 8.5px !important;
+          line-height: 1 !important;
+          font-weight: 800 !important;
+        }
+
+        .wc-web-team span {
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-web-team .group-flag-img,
+        .wc-web-team .group-flag-missing {
+          width: 13px !important;
+          height: 9px !important;
+          min-width: 13px !important;
+          border-radius: 2px !important;
+          font-size: 6px !important;
+        }
+
+        .wc-web-vs {
+          font-size: 7px !important;
+          padding: 0 1px !important;
+          line-height: 1 !important;
+        }
+
+        @media (max-width: 1100px) {
+          .wc-web-card { padding: 8px !important; }
+          .wc-knockout-web { gap: 3px !important; }
+          .wc-web-match { min-height: 23px !important; padding: 2px 3px !important; }
+          .wc-web-team { font-size: 7.5px !important; }
+          .wc-web-team .group-flag-img,
+          .wc-web-team .group-flag-missing { width: 11px !important; height: 8px !important; min-width: 11px !important; }
+          .wc-web-vs { font-size: 6px !important; }
+          .wc-web-round-title { font-size: 8px !important; }
+        }
+
+
+        /* Knockout page polish: make the top web look like a proper bracket */
+        .wc-app.wc-page-knockout {
+          background:
+            linear-gradient(
+              rgba(4, 10, 24, 0.82),
+              rgba(8, 25, 44, 0.86)
+            ),
+            url("/world_cup_2026_frontend/worldcup.png");
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          background-attachment: fixed;
+        }
+
+        .wc-page-knockout .wc-web-card {
+          position: relative;
+          overflow: hidden;
+          padding: 13px 14px 15px !important;
+          margin-bottom: 14px !important;
+          background: linear-gradient(135deg, rgba(3, 18, 42, 0.72), rgba(5, 34, 64, 0.46)) !important;
+          border: 1px solid rgba(255,255,255,0.14) !important;
+          box-shadow: 0 12px 34px rgba(0,0,0,0.28) !important;
+        }
+
+        .wc-page-knockout .wc-web-card::before {
+          content: "";
+          position: absolute;
+          inset: 0;
+          background: radial-gradient(circle at 50% 42%, rgba(255,255,255,0.08), transparent 36%);
+          pointer-events: none;
+        }
+
+        .wc-page-knockout .wc-web-card .wc-section-title {
+          position: relative;
+          z-index: 2;
+          font-size: 18px !important;
+          line-height: 1.1 !important;
+          margin-bottom: 9px !important;
+          text-align: left;
+          text-shadow: 0 2px 10px rgba(0,0,0,0.7);
+        }
+
+        .wc-page-knockout .wc-knockout-web {
+          position: relative;
+          z-index: 2;
+          display: grid !important;
+          grid-template-columns: 1.42fr 1.2fr 1.04fr 0.94fr 0.88fr 0.82fr !important;
+          gap: 10px !important;
+          align-items: stretch !important;
+          min-height: 465px;
+        }
+
+        .wc-page-knockout .wc-web-round {
+          position: relative;
+          min-width: 0 !important;
+          display: flex !important;
+          flex-direction: column !important;
+          justify-content: space-around !important;
+          gap: 4px !important;
+        }
+
+        .wc-page-knockout .wc-web-round-title {
+          min-height: 18px !important;
+          margin-bottom: 5px !important;
+          font-size: 10px !important;
+          line-height: 1 !important;
+          letter-spacing: 0.04em !important;
+          color: rgba(255,255,255,0.94) !important;
+          text-shadow: 0 2px 7px rgba(0,0,0,0.72);
+        }
+
+        .wc-page-knockout .wc-web-match {
+          min-height: 31px !important;
+          padding: 4px 6px !important;
+          border-radius: 9px !important;
+          display: grid !important;
+          grid-template-columns: minmax(0, 1fr) 14px minmax(0, 1fr) !important;
+          align-items: center !important;
+          gap: 2px !important;
+          background: linear-gradient(135deg, rgba(255,255,255,0.105), rgba(255,255,255,0.045)) !important;
+          border: 1px solid rgba(255,255,255,0.18) !important;
+          box-shadow: 0 5px 13px rgba(0,0,0,0.24) !important;
+          overflow: visible !important;
+        }
+
+        .wc-page-knockout .wc-web-round:not(:last-child) .wc-web-match::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -10px !important;
+          width: 10px !important;
+          height: 2px !important;
+          transform: translateY(-50%);
+          background: linear-gradient(90deg, rgba(255,255,255,0.78), rgba(255,255,255,0.22)) !important;
+          border-radius: 999px;
+          pointer-events: none;
+        }
+
+        .wc-page-knockout .wc-web-team {
+          gap: 4px !important;
+          font-size: 9.5px !important;
+          line-height: 1 !important;
+          font-weight: 900 !important;
+          min-width: 0 !important;
+        }
+
+        .wc-page-knockout .wc-web-team span {
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-page-knockout .wc-web-team .group-flag-img,
+        .wc-page-knockout .wc-web-team .group-flag-missing {
+          width: 14px !important;
+          height: 10px !important;
+          min-width: 14px !important;
+          border-radius: 2px !important;
+          font-size: 7px !important;
+        }
+
+        .wc-page-knockout .wc-web-vs {
+          font-size: 7px !important;
+          opacity: 0.68 !important;
+          text-align: center !important;
+        }
+
+        @media (max-width: 1400px) {
+          .wc-page-knockout .wc-knockout-web {
+            min-height: 420px;
+            grid-template-columns: 1.45fr 1.18fr 1fr 0.92fr 0.84fr 0.78fr !important;
+            gap: 7px !important;
+          }
+          .wc-page-knockout .wc-web-match {
+            min-height: 28px !important;
+            padding: 3px 5px !important;
+          }
+          .wc-page-knockout .wc-web-team {
+            font-size: 8.4px !important;
+          }
+          .wc-page-knockout .wc-web-team .group-flag-img,
+          .wc-page-knockout .wc-web-team .group-flag-missing {
+            width: 12px !important;
+            height: 8px !important;
+            min-width: 12px !important;
+          }
+          .wc-page-knockout .wc-web-round:not(:last-child) .wc-web-match::after {
+            right: -7px !important;
+            width: 7px !important;
+          }
+        }
+
         .wc-bracket {
           display: grid;
-          grid-template-columns: repeat(6, minmax(220px, 1fr));
-          gap: 14px;
-          overflow-x: auto;
+          grid-template-columns: minmax(178px, 1.18fr) repeat(5, minmax(145px, 1fr));
+          gap: 10px;
+          overflow-x: visible;
+          align-items: start;
+          width: 100%;
+        }
+
+        .wc-bracket-round {
+          min-width: 0;
         }
 
         .wc-round-title {
           font-weight: 900;
-          margin-bottom: 10px;
+          margin-bottom: 8px;
+          font-size: 13px;
+          line-height: 1.1;
+          text-align: center;
+          text-shadow: 0 2px 7px rgba(0,0,0,0.55);
         }
 
         .wc-bracket-match {
-          background: rgba(255,255,255,0.07);
-          border: 1px solid rgba(255,255,255,0.10);
-          border-radius: 14px;
-          padding: 12px;
-          margin-bottom: 10px;
+          position: relative;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.12);
+          border-radius: 13px;
+          padding: 8px;
+          margin-bottom: 8px;
+          min-width: 0;
+          overflow: hidden;
+        }
+
+        .wc-bracket-match::after {
+          content: "";
+          position: absolute;
+          top: 50%;
+          right: -11px;
+          width: 11px;
+          height: 1px;
+          background: rgba(255,255,255,0.28);
+          pointer-events: none;
+        }
+
+        .wc-bracket-round:last-child .wc-bracket-match::after {
+          display: none;
         }
 
         .wc-bracket-match .big-flag-img,
         .wc-bracket-match .big-flag,
         .wc-bracket-match .missing-flag {
-          width: 58px;
-          height: 38px;
-          font-size: 25px;
+          width: 36px;
+          height: 24px;
+          font-size: 17px;
+          border-radius: 7px;
         }
 
         .wc-bracket-match .team-flag-name {
-          font-size: 12px;
+          font-size: 10px;
+          line-height: 1.05;
+          max-width: 55px;
+          overflow: hidden;
+          text-overflow: ellipsis;
         }
 
         .wc-bracket-match .fixture-teams-big {
-          gap: 8px;
+          gap: 4px;
+          align-items: center;
+          min-width: 0;
         }
 
         .wc-bracket-match .fixture-middle {
-          min-width: 48px;
+          min-width: 34px;
+          font-size: 12px;
+        }
+
+        .wc-bracket-match .fixture-card-venue-inline {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 1px;
+          width: 100%;
+          max-width: 100%;
+          min-width: 0;
+          box-sizing: border-box;
+          text-align: center;
+          padding: 5px 6px;
+          line-height: 1.12;
+          overflow: hidden;
+          background: rgba(0,0,0,0.18);
+          border-radius: 9px;
+        }
+
+        .wc-bracket-match .fixture-card-venue-inline span,
+        .wc-bracket-match .fixture-card-venue-inline .fixture-venue-name,
+        .wc-bracket-match .fixture-card-venue-inline .fixture-venue-location,
+        .wc-bracket-match .fixture-card-venue-inline .fixture-venue-capacity {
+          display: block;
+          width: 100%;
+          max-width: 100%;
+          min-width: 0;
+          white-space: normal;
+          overflow-wrap: normal;
+          word-break: normal;
+          text-align: center;
+          justify-self: center;
+        }
+
+        .wc-bracket-match .fixture-card-venue-inline .fixture-venue-name {
+          font-size: 10.5px;
+          font-weight: 900;
+        }
+
+        .wc-bracket-match .fixture-card-venue-inline .fixture-venue-location {
+          font-size: 9px;
+          opacity: 0.88;
+        }
+
+        .wc-bracket-match .fixture-card-venue-inline .fixture-venue-real,
+        .wc-bracket-match .fixture-card-venue-inline .fixture-venue-capacity {
+          display: none;
+        }
+
+        .wc-bracket-match .fixture-stadium-image {
+          width: 100%;
+          height: 58px;
+          object-fit: cover;
+          object-position: center;
+          border-radius: 10px;
+          margin: 6px 0 5px;
+          background: rgba(0,0,0,.24);
+          border: 1px solid rgba(255,255,255,.12);
+          box-shadow: 0 6px 14px rgba(0,0,0,0.22);
+        }
+
+        @media (max-width: 1400px) {
+          .wc-bracket {
+            grid-template-columns: minmax(160px, 1.1fr) repeat(5, minmax(125px, 1fr));
+            gap: 7px;
+          }
+
+          .wc-bracket-match {
+            padding: 6px;
+            margin-bottom: 6px;
+          }
+
+          .wc-bracket-match .big-flag-img,
+          .wc-bracket-match .big-flag,
+          .wc-bracket-match .missing-flag {
+            width: 30px;
+            height: 20px;
+            font-size: 14px;
+          }
+
+          .wc-bracket-match .team-flag-name {
+            font-size: 9px;
+            max-width: 46px;
+          }
+
+          .wc-bracket-match .fixture-middle {
+            min-width: 28px;
+            font-size: 10px;
+          }
+
+          .wc-bracket-match .fixture-stadium-image {
+            height: 46px;
+          }
+
+          .wc-bracket-match .fixture-card-venue-inline .fixture-venue-name {
+            font-size: 9px;
+          }
+
+          .wc-bracket-match .fixture-card-venue-inline .fixture-venue-location {
+            font-size: 8px;
+          }
         }
 
         .wc-groups-grid {
@@ -14067,6 +14578,10 @@ class WorldCup2026Panel extends HTMLElement {
       THIRD_PLACE_PLAYOFF: "THIRD_PLACE",
       THIRD_PLACE_PLAY_OFF: "THIRD_PLACE",
       FINAL: "FINAL",
+      KNOCKOUT: "LAST_32",
+      KNOCKOUT_STAGE: "LAST_32",
+      PLAYOFFS: "LAST_32",
+      PLAY_OFFS: "LAST_32",
     };
     return aliases[value] || value;
   }
@@ -14101,11 +14616,15 @@ class WorldCup2026Panel extends HTMLElement {
 
   knockoutDerivedMatchNumber(stage, index, match) {
     // Knockout venues must be assigned by FIFA match slot.
-    // Some feeds repeat, omit, or provide placeholder match numbers before teams are known,
-    // so knockout rounds intentionally use the fixture's stage order instead of API matchNumber.
+    // Prefer a valid FIFA match number when the feed provides one, because the
+    // official venue schedule is keyed to match numbers 73-104.
+    // Only derive from stage/index when the feed omits or provides an invalid number.
+    const existing = this.fixtureMatchNumber(match);
+    if (existing && existing >= 73 && existing <= 104) return existing;
+
     const key = this.normaliseKnockoutStage(stage || match?.stage);
     const start = this.knockoutRoundStarts()[key];
-    if (!start) return this.fixtureMatchNumber(match);
+    if (!start) return existing;
 
     let safeIndex = Number.isFinite(Number(index)) && Number(index) >= 0 ? Number(index) : -1;
 
@@ -14140,7 +14659,11 @@ class WorldCup2026Panel extends HTMLElement {
     const reversePairKey = `${awayKey}|${homeKey}`;
     const lookupVenue = officialVenues[pairKey] || officialVenues[reversePairKey] || "";
     const numberVenue = matchNumber ? (officialVenuesByNumber[matchNumber] || "") : "";
-    const venueName = numberVenue || directVenue || lookupVenue;
+    // Official schedule data must win over API/direct venue fallbacks.
+    // Some feeds return incomplete or repeated venue values (often Atlanta) for
+    // future fixtures/knockout placeholders, so use match-number first, then
+    // official team-pair lookup, and only then trust the API/direct venue.
+    const venueName = numberVenue || lookupVenue || directVenue;
 
     const stadiums = this.completeVenueStadiums(this._data?.venues?.stadiums || []);
     const venueAliases = this.venueAliasesFor(venueName);
@@ -14570,20 +15093,47 @@ class WorldCup2026Panel extends HTMLElement {
       ["FINAL", this.t("final")],
     ];
 
+    const roundMatches = rounds.map(([stage, label]) => {
+      const matches = fixtures
+        .filter(m => this.normaliseKnockoutStage(m.stage) === stage)
+        .sort((a, b) => {
+          const aTime = new Date(a.utcDate || a.date || 0).getTime();
+          const bTime = new Date(b.utcDate || b.date || 0).getTime();
+          return aTime - bTime;
+        });
+      return { stage, label, matches };
+    });
+
     return `
+      <div class="wc-card wc-web-card">
+        <div class="wc-section-title">Knockout Stage</div>
+        <div class="wc-knockout-web">
+          ${roundMatches.map(({ stage, label, matches }) => `
+            <div class="wc-web-round">
+              <div class="wc-web-round-title">${label}</div>
+              ${matches.length ? matches.map((m) => `
+                <div class="wc-web-match">
+                  <div class="wc-web-team">
+                    ${this.flag(this.getHomeTeam(m), true)}
+                    <span>${this.esc(this.localizedTeamName(this.getHomeTeam(m)))}</span>
+                  </div>
+                  <div class="wc-web-vs">${this.t("versus")}</div>
+                  <div class="wc-web-team">
+                    ${this.flag(this.getAwayTeam(m), true)}
+                    <span>${this.esc(this.localizedTeamName(this.getAwayTeam(m)))}</span>
+                  </div>
+                </div>
+              `).join("") : `<div class="wc-web-match"><div class="wc-web-team"><span>${this.t("tbc")}</span></div><div class="wc-web-vs">${this.t("fixturesNotAvailable")}</div></div>`}
+            </div>
+          `).join("")}
+        </div>
+      </div>
+
       <div class="wc-card">
-        <div class="wc-section-title">${this.t("knockoutBracket")}</div>
+        <div class="wc-section-title">Knockout Details</div>
         <div class="wc-bracket">
-          ${rounds.map(([stage, label]) => {
-            const matches = fixtures
-              .filter(m => this.normaliseKnockoutStage(m.stage) === stage)
-              .sort((a, b) => {
-                const aTime = new Date(a.utcDate || a.date || 0).getTime();
-                const bTime = new Date(b.utcDate || b.date || 0).getTime();
-                return aTime - bTime;
-              });
-            return `
-              <div>
+          ${roundMatches.map(({ stage, label, matches }) => `
+              <div class="wc-bracket-round">
                 <div class="wc-round-title">${label}</div>
                 ${
                   matches.length
@@ -14596,11 +15146,13 @@ class WorldCup2026Panel extends HTMLElement {
                         <div class="wc-muted" style="text-align:center;margin-top:8px;">
                           ${knockoutNumber ? `<span>#${this.esc(knockoutNumber)}</span> · ` : ""}${this.esc(this.formatDate(m.utcDate || m.date))}
                         </div>
+                        ${venueInfo?.image ? `<img src="${this.esc(venueInfo.image)}" class="fixture-stadium-image" loading="lazy">` : ""}
                         ${venueInfo ? `
-                          <div class="fixture-card-venue fixture-card-venue-inline" style="margin-top:8px;">
+                          <div class="fixture-card-venue fixture-card-venue-inline">
                             <span class="fixture-venue-name">🏟 ${this.esc(venueInfo.name)}</span>
                             ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<span class="fixture-venue-real">Real: ${this.esc(venueInfo.realName)}</span>` : ""}
                             ${venueInfo.city || venueInfo.country ? `<span class="fixture-venue-location">${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</span>` : ""}
+                            ${venueInfo.capacity ? `<span class="fixture-venue-capacity">👥 ${this.esc(venueInfo.capacity)}</span>` : ""}
                           </div>
                         ` : ""}
                       </div>
@@ -14608,8 +15160,7 @@ class WorldCup2026Panel extends HTMLElement {
                     : `<div class="wc-bracket-match">${this.t("tbc")}<br><span class="wc-muted">${this.t("fixturesNotAvailable")}</span></div>`
                 }
               </div>
-            `;
-          }).join("")}
+          `).join("")}
         </div>
       </div>
     `;
@@ -15112,7 +15663,7 @@ class WorldCup2026Panel extends HTMLElement {
   render() {
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app wc-view-${this._viewMode} " dir="${this._language === "ar" ? "rtl" : "ltr"}">
+      <div class="wc-app wc-view-${this._viewMode} wc-page-${this._page}" dir="${this._language === "ar" ? "rtl" : "ltr"}">
         <div class="wc-shell">
           <div class="wc-header">
             <div class="wc-header-title-row">
