@@ -12440,6 +12440,138 @@ class WorldCup2026Panel extends HTMLElement {
             margin-right: 4px !important;
           }
         }
+
+
+        /* Tablet only: swap FIFA title with the update/language/view/back controls.
+           Controls now sit top-right on the same line as the nav/supporters buttons.
+           The FIFA title moves into the old control space inside the overview bar. */
+        .wc-tablet-top-controls {
+          display: none;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          grid-template-columns: 72px 72px minmax(0, 1fr) minmax(260px, 360px) !important;
+          grid-template-rows: auto auto !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls {
+          display: flex !important;
+          grid-column: 4 !important;
+          grid-row: 1 !important;
+          align-items: center !important;
+          justify-content: flex-end !important;
+          gap: 4px !important;
+          min-width: 0 !important;
+          width: 100% !important;
+          overflow: hidden !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-updated-pill,
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select,
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select,
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button {
+          height: 20px !important;
+          min-height: 20px !important;
+          padding: 2px 5px !important;
+          border-radius: 999px !important;
+          font-size: 7px !important;
+          line-height: 1 !important;
+          box-sizing: border-box !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-tablet-top-time {
+          width: 60px !important;
+          text-align: center !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select {
+          width: 86px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select {
+          width: 84px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button {
+          width: 50px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack {
+          display: none !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-title {
+          grid-area: controls !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: flex-end !important;
+          justify-content: center !important;
+          gap: 1px !important;
+          height: 26px !important;
+          min-width: 0 !important;
+          width: 100% !important;
+          overflow: hidden !important;
+          text-align: right !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-progress-title-main {
+          font-size: 13px !important;
+          line-height: 1 !important;
+          font-weight: 900 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          max-width: 100% !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-progress-title-sub {
+          font-size: 6px !important;
+          line-height: 1 !important;
+          opacity: 0.65 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          max-width: 100% !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          grid-column: 1 / -1 !important;
+          grid-row: 2 !important;
+          justify-self: center !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-header-title-row {
+            grid-template-columns: 68px 68px minmax(0, 1fr) minmax(205px, 245px) !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-top-controls {
+            gap: 2px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-updated-pill,
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select,
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select,
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button {
+            height: 18px !important;
+            min-height: 18px !important;
+            padding: 1px 3px !important;
+            font-size: 6px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-tablet-top-time { width: 48px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select { width: 60px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select { width: 60px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button { width: 34px !important; }
+
+          .wc-app.wc-view-tablet .wc-progress-title-main {
+            font-size: 10px !important;
+          }
+        }
+
 </style>
     `;
   }
@@ -12637,27 +12769,9 @@ class WorldCup2026Panel extends HTMLElement {
                 <div class="overview-stat-tile"><span>${this.t("topScorer")}</span><strong>${this.esc(topScorer?.goals ?? 0)}</strong><em>${this.esc(topScorer?.player?.name || topScorer?.name || this.t("notAvailable"))}</em></div>
               </div>
 
-              <div class="wc-tablet-progress-controls">
-                <div class="wc-updated-pill wc-tablet-progress-time">${new Date().toLocaleTimeString()}</div>
-                <select class="wc-language-select wc-language-select-tablet" id="wc-language-select-tablet" title="${this.esc(this.t("language"))}">
-                  <option value="en" ${this._language === "en" ? "selected" : ""}>English</option>
-                  <option value="fr" ${this._language === "fr" ? "selected" : ""}>French</option>
-                  <option value="de" ${this._language === "de" ? "selected" : ""}>German</option>
-                  <option value="es" ${this._language === "es" ? "selected" : ""}>Spanish</option>
-                  <option value="it" ${this._language === "it" ? "selected" : ""}>Italian</option>
-                  <option value="nl" ${this._language === "nl" ? "selected" : ""}>Dutch</option>
-                  <option value="pt" ${this._language === "pt" ? "selected" : ""}>Portuguese</option>
-                  <option value="pl" ${this._language === "pl" ? "selected" : ""}>Polish</option>
-                  <option value="ja" ${this._language === "ja" ? "selected" : ""}>Japanese</option>
-                  <option value="ko" ${this._language === "ko" ? "selected" : ""}>Korean</option>
-                  <option value="zh" ${this._language === "zh" ? "selected" : ""}>Chinese</option>
-                  <option value="ar" ${this._language === "ar" ? "selected" : ""}>Arabic</option>
-                </select>
-                <select class="wc-view-select wc-view-select-tablet" id="wc-view-select-tablet" title="${this.esc(this.t("viewMode"))}">
-                  <option value="tablet" ${this._viewMode === "tablet" ? "selected" : ""}>${this.esc(this.t("tabletView"))}</option>
-                  <option value="pc" ${this._viewMode === "pc" ? "selected" : ""}>${this.esc(this.t("pcView"))}</option>
-                </select>
-                <button class="wc-pill wc-back-button wc-back-button-tablet" id="wc-back-button-tablet" type="button">${this.t("back")}</button>
+              <div class="wc-tablet-progress-controls wc-tablet-progress-title">
+                <div class="wc-progress-title-main">${this.t("title")}</div>
+                <div class="wc-progress-title-sub">${this.t("subtitle")}</div>
               </div>
             </div>
 
@@ -14128,6 +14242,28 @@ class WorldCup2026Panel extends HTMLElement {
               ${this.headerLivePill()}
               ${this.headerScheduledPill()}
               ${this.tabletHeaderNav()}
+              <div class="wc-tablet-top-controls">
+                <div class="wc-updated-pill wc-tablet-top-time">${new Date().toLocaleTimeString()}</div>
+                <select class="wc-language-select wc-language-select-tablet" id="wc-language-select-tablet" title="${this.esc(this.t("language"))}">
+                  <option value="en" ${this._language === "en" ? "selected" : ""}>English</option>
+                  <option value="fr" ${this._language === "fr" ? "selected" : ""}>French</option>
+                  <option value="de" ${this._language === "de" ? "selected" : ""}>German</option>
+                  <option value="es" ${this._language === "es" ? "selected" : ""}>Spanish</option>
+                  <option value="it" ${this._language === "it" ? "selected" : ""}>Italian</option>
+                  <option value="nl" ${this._language === "nl" ? "selected" : ""}>Dutch</option>
+                  <option value="pt" ${this._language === "pt" ? "selected" : ""}>Portuguese</option>
+                  <option value="pl" ${this._language === "pl" ? "selected" : ""}>Polish</option>
+                  <option value="ja" ${this._language === "ja" ? "selected" : ""}>Japanese</option>
+                  <option value="ko" ${this._language === "ko" ? "selected" : ""}>Korean</option>
+                  <option value="zh" ${this._language === "zh" ? "selected" : ""}>Chinese</option>
+                  <option value="ar" ${this._language === "ar" ? "selected" : ""}>Arabic</option>
+                </select>
+                <select class="wc-view-select wc-view-select-tablet" id="wc-view-select-tablet" title="${this.esc(this.t("viewMode"))}">
+                  <option value="tablet" ${this._viewMode === "tablet" ? "selected" : ""}>${this.esc(this.t("tabletView"))}</option>
+                  <option value="pc" ${this._viewMode === "pc" ? "selected" : ""}>${this.esc(this.t("pcView"))}</option>
+                </select>
+                <button class="wc-pill wc-back-button wc-back-button-tablet" id="wc-back-button-tablet" type="button">${this.t("back")}</button>
+              </div>
               <div class="wc-title-stack">
                 <div class="wc-title">${this.t("title")}</div>
                 <div class="wc-header-subtitle-inline">${this.t("subtitle")}</div>
