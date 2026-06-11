@@ -7967,7 +7967,7 @@ class WorldCup2026Panel extends HTMLElement {
           min-height: 24px;
           padding: 4px 8px;
           border-radius: 999px;
-          font-size: 11px;
+          font-size: 12.1px;
           line-height: 1;
           font-weight: 900;
           letter-spacing: 0.25px;
@@ -8704,20 +8704,20 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-groups-grid {
           display: grid;
           grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 12px;
+          gap: 14px;
           align-items: start;
         }
 
         .wc-group-card {
-          padding: 11px 12px 10px;
-          border-radius: 17px;
+          padding: 13px 14px 12px;
+          border-radius: 18px;
           margin-bottom: 0;
         }
 
         .wc-group-card .wc-section-title {
-          font-size: 17px;
+          font-size: 19px;
           line-height: 1;
-          margin: 0 0 8px;
+          margin: 0 0 9px;
         }
 
         .wc-group-card .wc-table-wrap {
@@ -8735,8 +8735,8 @@ class WorldCup2026Panel extends HTMLElement {
 
         .wc-group-card .wc-table th,
         .wc-group-card .wc-table td {
-          padding: 3px 3px;
-          line-height: 1.15;
+          padding: 4px 3px;
+          line-height: 1.18;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -8745,7 +8745,7 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-group-card .wc-table th {
-          font-size: 9px;
+          font-size: 9.8px;
           letter-spacing: -0.2px;
           opacity: 0.78;
           text-align: center;
@@ -8797,7 +8797,7 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-group-card .group-team-cell {
           display: flex;
           align-items: center;
-          gap: 5px;
+          gap: 6px;
           min-width: 0;
           width: 100%;
           overflow: hidden;
@@ -8813,9 +8813,9 @@ class WorldCup2026Panel extends HTMLElement {
 
         .wc-group-card .group-flag-img,
         .wc-group-card .group-flag-missing {
-          width: 21px;
-          height: 15px;
-          font-size: 10px;
+          width: 23px;
+          height: 16px;
+          font-size: 11px;
           flex: 0 0 auto;
         }
 
@@ -12765,6 +12765,48 @@ class WorldCup2026Panel extends HTMLElement {
             min-height: 22px !important;
           }
         }
+
+        /* Tablet view only: make Groups page fit better on screen */
+        .wc-app.wc-view-tablet .wc-groups-grid {
+          gap: 9px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-group-card {
+          padding: 11px 11px 10px !important;
+          border-radius: 14px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-group-card .wc-section-title {
+          font-size: 16.6px !important;
+          line-height: 1 !important;
+          margin: 0 0 7px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-group-card .wc-table {
+          font-size: 10.9px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-group-card .wc-table th,
+        .wc-app.wc-view-tablet .wc-group-card .wc-table td {
+          padding: 3px 2.2px !important;
+          line-height: 1.18 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-group-card .wc-table th {
+          font-size: 9px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-group-card .group-team-cell {
+          gap: 4px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-group-card .group-flag-img,
+        .wc-app.wc-view-tablet .wc-group-card .group-flag-missing {
+          width: 20px !important;
+          height: 14px !important;
+          font-size: 9px !important;
+        }
+
 </style>
     `;
   }
