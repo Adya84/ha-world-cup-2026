@@ -14461,7 +14461,7 @@ class WorldCup2026Panel extends HTMLElement {
 
   worldCupKickoffDate() {
     // Opening match countdown. Change this one line if FIFA changes the kickoff time.
-    return new Date("2026-06-11T20:00:00Z");
+    return new Date("2026-06-11T19:00:00Z");
   }
 
   countdownParts() {
