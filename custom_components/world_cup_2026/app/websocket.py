@@ -384,7 +384,11 @@ async def websocket_get_fixtures(hass, connection, msg) -> None:
         _send_not_loaded(connection, msg)
         return
 
-    matches = (coordinator.data or {}).get("matches", [])
+    matches = [
+        match
+        for match in (coordinator.data or {}).get("matches", [])
+        if match.get("status") not in FINISHED_STATUSES
+    ]
 
     connection.send_result(
         msg["id"],
