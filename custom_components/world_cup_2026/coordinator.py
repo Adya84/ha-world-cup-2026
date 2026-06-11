@@ -17,7 +17,7 @@ from .api import WorldCupAPI
 
 _LOGGER = logging.getLogger(__name__)
 
-SCAN_INTERVAL_NORMAL = timedelta(minutes=15)
+SCAN_INTERVAL_NORMAL = timedelta(minutes=5)
 SCAN_INTERVAL_LIVE = timedelta(minutes=1)
 
 TOTAL_WORLD_CUP_MATCHES = 104
