@@ -8387,6 +8387,86 @@ class WorldCup2026Panel extends HTMLElement {
           border-color: rgba(120,220,255,0.7);
         }
 
+        .wc-tablet-header-nav {
+          display: none;
+        }
+
+        /* Tablet view only: put all navigation buttons on the same top row as the live/today pills. */
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          flex-wrap: wrap;
+          gap: 4px;
+          width: 100%;
+          overflow: hidden;
+          text-align: left;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-live-pill {
+          flex: 0 0 auto;
+          min-height: 14px;
+          padding: 2px 5px;
+          border-radius: 999px;
+          font-size: 7px;
+          line-height: 1;
+          letter-spacing: 0;
+          white-space: nowrap;
+          max-width: none;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          display: flex;
+          flex: 1 1 auto;
+          min-width: 0;
+          gap: 3px;
+          align-items: center;
+          justify-content: flex-start;
+          overflow: hidden;
+          padding: 0;
+          margin: 0;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+          flex: 1 1 0;
+          min-width: 0;
+          max-width: none;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          background: rgba(255,255,255,0.10);
+          color: white;
+          border: 1px solid rgba(255,255,255,0.16);
+          border-radius: 999px;
+          padding: 3px 4px;
+          font-size: 7px;
+          line-height: 1;
+          font-weight: 850;
+          cursor: pointer;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button.active {
+          background: rgba(45,190,255,0.34);
+          border-color: rgba(120,220,255,0.7);
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack,
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          flex: 0 0 100%;
+          width: 100%;
+          margin-top: 4px;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          display: inline-flex;
+          width: auto;
+        }
+
+        .wc-app.wc-view-tablet > .wc-shell > .wc-nav,
+        .wc-app.wc-view-tablet .wc-shell > .wc-nav {
+          display: none;
+        }
+
         .wc-card {
           background: rgba(255,255,255,0.08);
           border: 1px solid rgba(255,255,255,0.14);
@@ -10179,42 +10259,6 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
-        /* Tablet view only: keep the live/today pills small, side-by-side in the top-left. */
-        .wc-app.wc-view-tablet .wc-header-title-row {
-          justify-content: flex-start;
-          align-items: flex-start;
-          flex-wrap: wrap;
-          gap: 4px;
-          text-align: left;
-        }
-
-        .wc-app.wc-view-tablet .wc-header-live-pill {
-          order: 0;
-          min-height: 12px;
-          padding: 1px 5px;
-          border-radius: 999px;
-          font-size: 6px;
-          line-height: 1;
-          letter-spacing: 0.1px;
-          max-width: none;
-        }
-
-        .wc-app.wc-view-tablet .wc-header-scheduled-pill {
-          order: 1;
-          max-width: none;
-        }
-
-        .wc-app.wc-view-tablet .wc-title-stack {
-          order: 2;
-          flex: 1 1 100%;
-          width: 100%;
-          margin-top: 2px;
-        }
-
-        .wc-app.wc-view-tablet .wc-header-countdown-pill {
-          order: 3;
-        }
-
 
         @media (max-width: 800px) {
           .overview-hero.compact-overview-hero,
@@ -11031,7 +11075,894 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
-      </style>
+
+        /* Tablet view only: make overview buttons/stat cards larger and easier to read */
+        .wc-app.wc-view-tablet .wc-nav {
+          gap: 10px;
+        }
+
+        .wc-app.wc-view-tablet .wc-nav button {
+          font-size: 14px;
+          padding: 11px 17px;
+          min-height: 42px;
+          min-width: 118px;
+        }
+
+        .wc-app.wc-view-tablet .overview-action-row {
+          gap: 10px;
+          margin-top: 12px;
+        }
+
+        .wc-app.wc-view-tablet .overview-action-button {
+          font-size: 14px;
+          padding: 11px 18px;
+          min-height: 42px;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress,
+        .wc-app.wc-view-tablet .overview-stat-grid {
+          grid-template-columns: repeat(3, minmax(0, 1fr));
+          gap: 10px;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-tile,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile {
+          min-height: 82px;
+          padding: 11px 13px;
+          border-radius: 15px;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-tile strong,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong {
+          font-size: clamp(28px, 4vw, 38px);
+          line-height: 1;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-stat-tile em,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em {
+          font-size: 13px;
+          line-height: 1.15;
+        }
+
+        @media (max-width: 700px) {
+          .wc-app.wc-view-tablet .wc-nav button {
+            min-width: 0;
+            flex: 1 1 calc(50% - 8px);
+          }
+
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress,
+          .wc-app.wc-view-tablet .overview-stat-grid {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
+
+
+        /* Tablet view only: force status pills + all 11 nav buttons onto ONE top row */
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          display: grid !important;
+          grid-template-columns: max-content max-content minmax(0, 1fr) !important;
+          grid-auto-rows: auto !important;
+          align-items: center !important;
+          justify-content: stretch !important;
+          column-gap: 3px !important;
+          row-gap: 4px !important;
+          width: 100% !important;
+          overflow: hidden !important;
+          text-align: left !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill {
+          min-width: 0 !important;
+          max-width: none !important;
+          min-height: 13px !important;
+          padding: 2px 4px !important;
+          border-radius: 999px !important;
+          font-size: 6px !important;
+          line-height: 1 !important;
+          letter-spacing: 0 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          display: flex !important;
+          grid-column: 3 !important;
+          grid-row: 1 !important;
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100% !important;
+          gap: 2px !important;
+          align-items: center !important;
+          justify-content: stretch !important;
+          overflow: hidden !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+          flex: 1 1 0 !important;
+          min-width: 0 !important;
+          max-width: none !important;
+          min-height: 13px !important;
+          padding: 2px 2px !important;
+          border-radius: 999px !important;
+          font-size: 5.5px !important;
+          line-height: 1 !important;
+          letter-spacing: -0.15px !important;
+          font-weight: 800 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack {
+          grid-column: 1 / -1 !important;
+          grid-row: 2 !important;
+          width: 100% !important;
+          margin-top: 4px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          grid-column: 1 / -1 !important;
+          grid-row: 3 !important;
+          width: fit-content !important;
+          max-width: 100% !important;
+          margin-top: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet > .wc-shell > .wc-nav,
+        .wc-app.wc-view-tablet .wc-shell > .wc-nav {
+          display: none !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill {
+            font-size: 5.5px !important;
+            padding: 2px 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-header-nav {
+            gap: 1px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+            font-size: 5px !important;
+            padding: 2px 1px !important;
+            letter-spacing: -0.25px !important;
+          }
+        }
+
+
+        /* Tablet view only: final header alignment tweak.
+           - Keep No Live Games + Games Today + all nav buttons on the same first row.
+           - Make nav buttons taller/wider for readability.
+           - Lift countdown/timer onto the FIFA title row.
+           - Lift updated/language/view controls so the header lines up better. */
+        .wc-app.wc-view-tablet .wc-header {
+          position: relative !important;
+          display: block !important;
+          margin-bottom: 12px !important;
+          padding-right: 300px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          display: grid !important;
+          grid-template-columns: max-content max-content minmax(0, 1fr) !important;
+          grid-auto-rows: auto !important;
+          align-items: center !important;
+          justify-content: stretch !important;
+          column-gap: 4px !important;
+          row-gap: 5px !important;
+          width: 100% !important;
+          overflow: visible !important;
+          text-align: left !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill {
+          grid-row: 1 !important;
+          min-height: 16px !important;
+          height: 16px !important;
+          padding: 2px 6px !important;
+          border-radius: 999px !important;
+          font-size: 7px !important;
+          line-height: 1 !important;
+          letter-spacing: 0 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          display: flex !important;
+          grid-column: 3 !important;
+          grid-row: 1 !important;
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100% !important;
+          gap: 3px !important;
+          align-items: center !important;
+          justify-content: stretch !important;
+          overflow: hidden !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+          flex: 1 1 0 !important;
+          min-width: 36px !important;
+          max-width: none !important;
+          min-height: 20px !important;
+          height: 20px !important;
+          padding: 4px 5px !important;
+          border-radius: 999px !important;
+          font-size: 7px !important;
+          line-height: 1 !important;
+          letter-spacing: -0.1px !important;
+          font-weight: 850 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack {
+          grid-column: 1 / 2 !important;
+          grid-row: 2 !important;
+          width: auto !important;
+          min-width: 220px !important;
+          margin-top: 0 !important;
+          align-self: center !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title {
+          font-size: 28px !important;
+          line-height: 1.05 !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-subtitle-inline {
+          font-size: 10px !important;
+          line-height: 1.1 !important;
+          text-align: left !important;
+          margin-top: 2px !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          max-width: 260px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          grid-column: 2 / 4 !important;
+          grid-row: 2 !important;
+          justify-self: center !important;
+          align-self: center !important;
+          width: fit-content !important;
+          max-width: 100% !important;
+          min-width: 0 !important;
+          min-height: 30px !important;
+          height: 30px !important;
+          margin: 0 !important;
+          padding: 3px 10px !important;
+          font-size: clamp(18px, 2.4vw, 26px) !important;
+          line-height: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-controls {
+          position: absolute !important;
+          right: 0 !important;
+          top: 25px !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: flex-end !important;
+          gap: 5px !important;
+          margin: 0 !important;
+          z-index: 20 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-language-select,
+        .wc-app.wc-view-tablet .wc-view-select,
+        .wc-app.wc-view-tablet .wc-updated-pill,
+        .wc-app.wc-view-tablet .wc-header-controls .wc-back-button {
+          min-height: 26px !important;
+          height: 26px !important;
+          padding: 3px 8px !important;
+          font-size: 10px !important;
+          border-radius: 999px !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-header {
+            padding-right: 245px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-header-nav {
+            gap: 2px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+            min-width: 30px !important;
+            min-height: 18px !important;
+            height: 18px !important;
+            padding: 3px 3px !important;
+            font-size: 6px !important;
+            letter-spacing: -0.2px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill {
+            font-size: 6px !important;
+            min-height: 15px !important;
+            height: 15px !important;
+            padding: 2px 4px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-title {
+            font-size: 22px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-title-stack {
+            min-width: 170px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-header-subtitle-inline {
+            max-width: 190px !important;
+            font-size: 9px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-header-countdown-pill {
+            font-size: clamp(15px, 2.4vw, 20px) !important;
+            height: 26px !important;
+            min-height: 26px !important;
+            padding: 2px 7px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-header-controls {
+            top: 23px !important;
+            gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-language-select,
+          .wc-app.wc-view-tablet .wc-view-select,
+          .wc-app.wc-view-tablet .wc-updated-pill,
+          .wc-app.wc-view-tablet .wc-header-controls .wc-back-button {
+            min-height: 23px !important;
+            height: 23px !important;
+            padding: 2px 5px !important;
+            font-size: 8px !important;
+          }
+        }
+
+
+        /* Tablet view only: compact progress/stat section into one small row */
+        .wc-app.wc-view-tablet .overview-hero.compact-overview-hero,
+        .wc-app.wc-view-tablet .overview-hero {
+          padding: 7px 9px 8px !important;
+          margin-bottom: 7px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap {
+          gap: 4px !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top {
+          min-height: 0 !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          line-height: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top span {
+          font-size: 9px !important;
+          line-height: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top strong {
+          font-size: 13px !important;
+          line-height: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-bar {
+          height: 6px !important;
+          min-height: 6px !important;
+          margin: 2px 0 3px !important;
+          border-radius: 999px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-bar > div,
+        .wc-app.wc-view-tablet .overview-progress-bar div {
+          height: 6px !important;
+          border-radius: 999px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+          display: grid !important;
+          grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+          gap: 4px !important;
+          width: 100% !important;
+          margin: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+          min-width: 0 !important;
+          min-height: 34px !important;
+          height: 34px !important;
+          padding: 3px 4px !important;
+          border-radius: 8px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: center !important;
+          gap: 1px !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+          font-size: 6.5px !important;
+          line-height: 1 !important;
+          max-width: 100% !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+          font-size: 14px !important;
+          line-height: 1 !important;
+          max-width: 100% !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+            grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+            gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+            height: 31px !important;
+            min-height: 31px !important;
+            padding: 2px 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+            font-size: 12px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+            font-size: 5.8px !important;
+          }
+        }
+
+
+        /* Tablet view only: short progress bar with stat tiles using the free space on the same line */
+        .wc-app.wc-view-tablet .overview-progress-wrap {
+          display: grid !important;
+          grid-template-columns: 20% minmax(0, 1fr) !important;
+          grid-template-rows: auto auto !important;
+          grid-template-areas:
+            "progressTop stats"
+            "progressBar stats" !important;
+          column-gap: 7px !important;
+          row-gap: 2px !important;
+          align-items: center !important;
+          width: 100% !important;
+          max-width: 100% !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top {
+          grid-area: progressTop !important;
+          min-width: 0 !important;
+          width: 100% !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          gap: 4px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top span {
+          font-size: 7px !important;
+          line-height: 1 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top strong {
+          font-size: 10px !important;
+          line-height: 1 !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-bar {
+          grid-area: progressBar !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          height: 5px !important;
+          min-height: 5px !important;
+          margin: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-bar > div,
+        .wc-app.wc-view-tablet .overview-progress-bar div {
+          height: 5px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+          grid-area: stats !important;
+          display: grid !important;
+          grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+          gap: 4px !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          align-self: stretch !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+          min-height: 27px !important;
+          height: 27px !important;
+          padding: 2px 4px !important;
+          border-radius: 7px !important;
+          gap: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+          font-size: 11px !important;
+          line-height: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+          font-size: 5.6px !important;
+          line-height: 1 !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .overview-progress-wrap {
+            grid-template-columns: 20% minmax(0, 1fr) !important;
+            column-gap: 5px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+            grid-template-columns: repeat(4, minmax(0, 1fr)) !important;
+            gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+            height: 24px !important;
+            min-height: 24px !important;
+            padding: 2px 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+            font-size: 10px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+            font-size: 5px !important;
+          }
+        }
+
+
+
+        /* Tablet view only: Progress bar + all 6 overview stats on ONE line */
+        .wc-app.wc-view-tablet .overview-progress-wrap {
+          display: grid !important;
+          grid-template-columns: 18% minmax(0, 82%) !important;
+          grid-template-rows: auto auto !important;
+          grid-template-areas:
+            "progressTop stats"
+            "progressBar stats" !important;
+          column-gap: 6px !important;
+          row-gap: 1px !important;
+          align-items: center !important;
+          padding: 6px 8px !important;
+          margin: 4px 0 6px 0 !important;
+          min-height: 42px !important;
+          max-height: 48px !important;
+          overflow: hidden !important;
+          width: 100% !important;
+          box-sizing: border-box !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top {
+          grid-area: progressTop !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: space-between !important;
+          width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          min-width: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top span {
+          font-size: 6px !important;
+          line-height: 1 !important;
+          letter-spacing: .08em !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-top strong {
+          font-size: 7px !important;
+          line-height: 1 !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-bar {
+          grid-area: progressBar !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          height: 4px !important;
+          min-height: 4px !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          border-radius: 999px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-bar > div,
+        .wc-app.wc-view-tablet .overview-progress-bar div {
+          height: 4px !important;
+          min-height: 4px !important;
+          border-radius: 999px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+          grid-area: stats !important;
+          display: grid !important;
+          grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+          grid-auto-rows: 1fr !important;
+          gap: 4px !important;
+          width: 100% !important;
+          max-width: 100% !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          align-self: stretch !important;
+          min-width: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+          height: 34px !important;
+          min-height: 34px !important;
+          max-height: 34px !important;
+          padding: 3px 3px !important;
+          border-radius: 7px !important;
+          gap: 1px !important;
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: center !important;
+          justify-content: center !important;
+          overflow: hidden !important;
+          box-sizing: border-box !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+          font-size: 15px !important;
+          line-height: .92 !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          white-space: nowrap !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+          font-size: 5.4px !important;
+          line-height: 1 !important;
+          max-width: 100% !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+          white-space: nowrap !important;
+          margin: 0 !important;
+          padding: 0 !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .overview-progress-wrap {
+            grid-template-columns: 16% minmax(0, 84%) !important;
+            column-gap: 4px !important;
+            padding: 5px 6px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+            grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+            gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+            height: 31px !important;
+            min-height: 31px !important;
+            max-height: 31px !important;
+            padding: 2px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+            font-size: 13px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+            font-size: 4.8px !important;
+          }
+        }
+      
+
+        /* Tablet view only: move time/language/view/back into the compact progress bar and make stat numbers smaller */
+        .wc-tablet-progress-controls {
+          display: none;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-controls {
+          display: none !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap {
+          grid-template-columns: 13% minmax(0, 58%) 29% !important;
+          grid-template-rows: auto auto !important;
+          grid-template-areas:
+            "progressTop stats controls"
+            "progressBar stats controls" !important;
+          min-height: 38px !important;
+          max-height: 42px !important;
+          padding: 4px 7px !important;
+          column-gap: 5px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+          grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+          gap: 3px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+          height: 28px !important;
+          min-height: 28px !important;
+          max-height: 28px !important;
+          padding: 2px !important;
+          border-radius: 6px !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+          font-size: 10px !important;
+          line-height: .95 !important;
+        }
+
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile em,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile span,
+        .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile em {
+          font-size: 4.2px !important;
+          line-height: .95 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls {
+          grid-area: controls !important;
+          display: flex !important;
+          align-items: center !important;
+          justify-content: flex-end !important;
+          gap: 3px !important;
+          min-width: 0 !important;
+          width: 100% !important;
+          height: 28px !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-updated-pill,
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-language-select,
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select,
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button {
+          height: 22px !important;
+          min-height: 22px !important;
+          padding: 2px 5px !important;
+          border-radius: 999px !important;
+          font-size: 7px !important;
+          line-height: 1 !important;
+          flex: 0 1 auto !important;
+          min-width: 0 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-tablet-progress-time {
+          width: 52px !important;
+          text-align: center !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-language-select {
+          width: 76px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select {
+          width: 76px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button {
+          width: 46px !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .overview-progress-wrap {
+            grid-template-columns: 12% minmax(0, 55%) 33% !important;
+            padding: 4px 5px !important;
+            column-gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress {
+            gap: 2px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile {
+            height: 25px !important;
+            min-height: 25px !important;
+            max-height: 25px !important;
+          }
+
+          .wc-app.wc-view-tablet .overview-progress-wrap .overview-stat-tile strong,
+          .wc-app.wc-view-tablet .overview-stat-grid.overview-stat-grid-in-progress .overview-stat-tile strong {
+            font-size: 9px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls {
+            gap: 2px !important;
+            height: 25px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-updated-pill,
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-language-select,
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select,
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button {
+            height: 20px !important;
+            min-height: 20px !important;
+            padding: 1px 3px !important;
+            font-size: 6px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-tablet-progress-time {
+            width: 45px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-language-select,
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-view-select {
+            width: 58px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-progress-controls .wc-back-button {
+            width: 36px !important;
+          }
+        }
+</style>
     `;
   }
 
@@ -11054,6 +11985,32 @@ class WorldCup2026Panel extends HTMLElement {
       <div class="wc-nav">
         ${items.map(([key, label]) => `
           <button class="${this._page === key ? "active" : ""}" data-page="${key}">
+            ${this.esc(label)}
+          </button>
+        `).join("")}
+      </div>
+    `;
+  }
+
+  tabletHeaderNav() {
+    const items = [
+      ["overview", this.t("overview")],
+      ["live", this.t("live")],
+      ["fixtures", this.t("fixtures")],
+      ["results", this.t("results")],
+      ["groups", this.t("groups")],
+      ["knockout", this.t("knockout")],
+      ["players", this.t("players")],
+      ["records", this.t("records")],
+      ["stats", this.t("stats")],
+      ["venues", this.t("venues")],
+      ["supporters", this.t("supportersNav")],
+    ];
+
+    return `
+      <div class="wc-tablet-header-nav">
+        ${items.map(([key, label]) => `
+          <button class="${this._page === key ? "active" : ""}" data-page="${key}" title="${this.esc(label)}">
             ${this.esc(label)}
           </button>
         `).join("")}
@@ -11200,6 +12157,29 @@ class WorldCup2026Panel extends HTMLElement {
                 <div class="overview-stat-tile"><span>${this.t("groups")}</span><strong>${loadedGroups || 12}</strong><em>${this.t("groupsAL")}</em></div>
                 <div class="overview-stat-tile"><span>${this.t("stadiums")}</span><strong>${stadiumCount}</strong><em>${this.t("worldCupStadiums")}</em></div>
                 <div class="overview-stat-tile"><span>${this.t("topScorer")}</span><strong>${this.esc(topScorer?.goals ?? 0)}</strong><em>${this.esc(topScorer?.player?.name || topScorer?.name || this.t("notAvailable"))}</em></div>
+              </div>
+
+              <div class="wc-tablet-progress-controls">
+                <div class="wc-updated-pill wc-tablet-progress-time">${new Date().toLocaleTimeString()}</div>
+                <select class="wc-language-select wc-language-select-tablet" id="wc-language-select-tablet" title="${this.esc(this.t("language"))}">
+                  <option value="en" ${this._language === "en" ? "selected" : ""}>English</option>
+                  <option value="fr" ${this._language === "fr" ? "selected" : ""}>French</option>
+                  <option value="de" ${this._language === "de" ? "selected" : ""}>German</option>
+                  <option value="es" ${this._language === "es" ? "selected" : ""}>Spanish</option>
+                  <option value="it" ${this._language === "it" ? "selected" : ""}>Italian</option>
+                  <option value="nl" ${this._language === "nl" ? "selected" : ""}>Dutch</option>
+                  <option value="pt" ${this._language === "pt" ? "selected" : ""}>Portuguese</option>
+                  <option value="pl" ${this._language === "pl" ? "selected" : ""}>Polish</option>
+                  <option value="ja" ${this._language === "ja" ? "selected" : ""}>Japanese</option>
+                  <option value="ko" ${this._language === "ko" ? "selected" : ""}>Korean</option>
+                  <option value="zh" ${this._language === "zh" ? "selected" : ""}>Chinese</option>
+                  <option value="ar" ${this._language === "ar" ? "selected" : ""}>Arabic</option>
+                </select>
+                <select class="wc-view-select wc-view-select-tablet" id="wc-view-select-tablet" title="${this.esc(this.t("viewMode"))}">
+                  <option value="tablet" ${this._viewMode === "tablet" ? "selected" : ""}>${this.esc(this.t("tabletView"))}</option>
+                  <option value="pc" ${this._viewMode === "pc" ? "selected" : ""}>${this.esc(this.t("pcView"))}</option>
+                </select>
+                <button class="wc-pill wc-back-button wc-back-button-tablet" id="wc-back-button-tablet" type="button">${this.t("back")}</button>
               </div>
             </div>
 
@@ -12669,6 +13649,7 @@ class WorldCup2026Panel extends HTMLElement {
             <div class="wc-header-title-row">
               ${this.headerLivePill()}
               ${this.headerScheduledPill()}
+              ${this.tabletHeaderNav()}
               <div class="wc-title-stack">
                 <div class="wc-title">${this.t("title")}</div>
                 <div class="wc-header-subtitle-inline">${this.t("subtitle")}</div>
@@ -12698,38 +13679,32 @@ class WorldCup2026Panel extends HTMLElement {
       </div>
     `;
 
-    this.querySelectorAll(".wc-nav button, .overview-action-button").forEach((button) => {
+    this.querySelectorAll(".wc-nav button, .wc-tablet-header-nav button, .overview-action-button").forEach((button) => {
       button.onclick = () => {
         const page = button.getAttribute("data-page");
         this.changePage(page);
       };
     });
 
-    const languageSelect = this.querySelector("#wc-language-select");
-
-    if (languageSelect) {
+    this.querySelectorAll("#wc-language-select, #wc-language-select-tablet").forEach((languageSelect) => {
       languageSelect.onchange = (e) => {
         this.changeLanguage(e.target.value);
       };
-    }
+    });
 
-    const viewSelect = this.querySelector("#wc-view-select");
-
-    if (viewSelect) {
+    this.querySelectorAll("#wc-view-select, #wc-view-select-tablet").forEach((viewSelect) => {
       viewSelect.onchange = (e) => {
         this.changeViewMode(e.target.value);
       };
-    }
+    });
 
-    const backButton = this.querySelector("#wc-back-button");
-
-    if (backButton) {
+    this.querySelectorAll("#wc-back-button, #wc-back-button-tablet").forEach((backButton) => {
       backButton.onclick = (e) => {
         e.preventDefault();
         e.stopPropagation();
         this.goBackToHomeAssistant();
       };
-    }
+    });
   }
 }
 
