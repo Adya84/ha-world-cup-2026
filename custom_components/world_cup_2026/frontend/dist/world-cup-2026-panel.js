@@ -14047,11 +14047,32 @@ class WorldCup2026Panel extends HTMLElement {
     return aliases[key] || [venueName].filter(Boolean);
   }
 
-  knockoutDerivedMatchNumber(stage, index, match) {
-    const existing = this.fixtureMatchNumber(match);
-    if (existing) return existing;
+  normaliseKnockoutStage(stage) {
+    const value = String(stage || "").toUpperCase().replace(/[^A-Z0-9]+/g, "_");
+    const aliases = {
+      LAST_32: "LAST_32",
+      ROUND_OF_32: "LAST_32",
+      ROUND_32: "LAST_32",
+      R32: "LAST_32",
+      LAST_16: "LAST_16",
+      ROUND_OF_16: "LAST_16",
+      ROUND_16: "LAST_16",
+      R16: "LAST_16",
+      QUARTER_FINALS: "QUARTER_FINALS",
+      QUARTER_FINAL: "QUARTER_FINALS",
+      QUARTERS: "QUARTER_FINALS",
+      SEMI_FINALS: "SEMI_FINALS",
+      SEMI_FINAL: "SEMI_FINALS",
+      THIRD_PLACE: "THIRD_PLACE",
+      THIRD_PLACE_PLAYOFF: "THIRD_PLACE",
+      THIRD_PLACE_PLAY_OFF: "THIRD_PLACE",
+      FINAL: "FINAL",
+    };
+    return aliases[value] || value;
+  }
 
-    const starts = {
+  knockoutRoundStarts() {
+    return {
       LAST_32: 73,
       LAST_16: 89,
       QUARTER_FINALS: 97,
@@ -14059,9 +14080,49 @@ class WorldCup2026Panel extends HTMLElement {
       THIRD_PLACE: 103,
       FINAL: 104,
     };
+  }
 
-    const start = starts[stage];
-    return start ? start + index : null;
+  sortedKnockoutMatches(stage) {
+    const key = this.normaliseKnockoutStage(stage);
+    const fixtures = Array.isArray(this._data?.fixtures) ? this._data.fixtures : [];
+    return fixtures
+      .filter((fixture) => this.normaliseKnockoutStage(fixture?.stage) === key)
+      .sort((a, b) => {
+        const aTime = new Date(a.utcDate || a.date || 0).getTime();
+        const bTime = new Date(b.utcDate || b.date || 0).getTime();
+        if (aTime !== bTime) return aTime - bTime;
+        const aHome = this.fixtureTeamKey(this.getHomeTeam(a));
+        const bHome = this.fixtureTeamKey(this.getHomeTeam(b));
+        const aAway = this.fixtureTeamKey(this.getAwayTeam(a));
+        const bAway = this.fixtureTeamKey(this.getAwayTeam(b));
+        return `${aHome}|${aAway}`.localeCompare(`${bHome}|${bAway}`);
+      });
+  }
+
+  knockoutDerivedMatchNumber(stage, index, match) {
+    // Knockout venues must be assigned by FIFA match slot.
+    // Some feeds repeat, omit, or provide placeholder match numbers before teams are known,
+    // so knockout rounds intentionally use the fixture's stage order instead of API matchNumber.
+    const key = this.normaliseKnockoutStage(stage || match?.stage);
+    const start = this.knockoutRoundStarts()[key];
+    if (!start) return this.fixtureMatchNumber(match);
+
+    let safeIndex = Number.isFinite(Number(index)) && Number(index) >= 0 ? Number(index) : -1;
+
+    if (safeIndex < 0 && match) {
+      const matches = this.sortedKnockoutMatches(key);
+      safeIndex = matches.findIndex((candidate) => candidate === match);
+
+      if (safeIndex < 0) {
+        const targetKey = `${this.fixtureTeamKey(this.getHomeTeam(match))}|${this.fixtureTeamKey(this.getAwayTeam(match))}|${match.utcDate || match.date || ""}`;
+        safeIndex = matches.findIndex((candidate) => {
+          const candidateKey = `${this.fixtureTeamKey(this.getHomeTeam(candidate))}|${this.fixtureTeamKey(this.getAwayTeam(candidate))}|${candidate.utcDate || candidate.date || ""}`;
+          return candidateKey === targetKey;
+        });
+      }
+    }
+
+    return safeIndex >= 0 ? start + safeIndex : this.fixtureMatchNumber(match);
   }
 
   fixtureVenueInfo(match, forcedMatchNumber = null) {
@@ -14070,7 +14131,9 @@ class WorldCup2026Panel extends HTMLElement {
     const directVenue = match.venue || match.stadium || match.location || match.venueName || match.venue_name || match.venue_display_name || "";
     const officialVenues = this.officialFixtureVenueLookup();
     const officialVenuesByNumber = this.officialFixtureVenueByMatchNumber();
-    const matchNumber = forcedMatchNumber || this.fixtureMatchNumber(match);
+    const stageKey = this.normaliseKnockoutStage(match?.stage);
+    const isKnockout = Boolean(this.knockoutRoundStarts()[stageKey]);
+    const matchNumber = forcedMatchNumber || (isKnockout ? this.knockoutDerivedMatchNumber(stageKey, -1, match) : this.fixtureMatchNumber(match));
     const homeKey = this.fixtureTeamKey(homeTeam);
     const awayKey = this.fixtureTeamKey(awayTeam);
     const pairKey = `${homeKey}|${awayKey}`;
@@ -14513,7 +14576,7 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="wc-bracket">
           ${rounds.map(([stage, label]) => {
             const matches = fixtures
-              .filter(m => m.stage === stage)
+              .filter(m => this.normaliseKnockoutStage(m.stage) === stage)
               .sort((a, b) => {
                 const aTime = new Date(a.utcDate || a.date || 0).getTime();
                 const bTime = new Date(b.utcDate || b.date || 0).getTime();
