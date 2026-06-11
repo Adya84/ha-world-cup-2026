@@ -12,7 +12,8 @@ class WorldCup2026Panel extends HTMLElement {
     this._sidebarObservers = [];
     this._language = localStorage.getItem("world_cup_2026_language") || "en";
     this._viewMode = localStorage.getItem("world_cup_2026_view_mode") || "pc";
-    this._hideSidebar = localStorage.getItem("world_cup_2026_hide_sidebar") === "true";
+    this._hideSidebar = false;
+    try { localStorage.removeItem("world_cup_2026_hide_sidebar"); } catch (e) {}
     this._data = {
       overview: null,
       live: [],
@@ -27,15 +28,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   shouldHideHomeAssistantSidebar() {
-    const search = window.location.search || "";
-    const hashSearch = window.location.hash?.includes("?")
-      ? `?${window.location.hash.split("?").slice(1).join("?")}`
-      : "";
-
-    const params = new URLSearchParams(search || hashSearch);
-    const value = (params.get("wp_hide_sidebar") || "").toLowerCase();
-    const urlRequestsHide = ["true", "1", "yes", "on"].includes(value);
-    return urlRequestsHide || this._hideSidebar;
+    return false;
   }
 
   sidebarHideStyles() {
@@ -166,31 +159,8 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   applyHideSidebarFromUrl() {
-    if (!this.shouldHideHomeAssistantSidebar()) return;
-
-    document.documentElement?.classList.add("world-cup-hide-sidebar");
-    document.body?.classList.add("world-cup-hide-sidebar");
-    this.classList.add("wc-hide-ha-sidebar");
-
-    const apply = () => {
-      this.applyHideSidebarToRoot(document);
-      this.observeSidebarRoot(document);
-    };
-
-    apply();
-    requestAnimationFrame(apply);
-    setTimeout(apply, 250);
-    setTimeout(apply, 1000);
-    setTimeout(apply, 2500);
-
-    if (!this._sidebarObserver) {
-      this._sidebarObserver = new MutationObserver(apply);
-      this._sidebarObserver.observe(document.documentElement, {
-        childList: true,
-        subtree: true,
-        attributes: true,
-      });
-    }
+    // Disabled: direct Home Assistant shell/sidebar manipulation caused crashes on some installs.
+    return;
   }
 
   translations() {
@@ -7328,7 +7298,7 @@ class WorldCup2026Panel extends HTMLElement {
     try {
       this._data.overview = await this.callApi("world_cup_2026/get_overview");
       this._data.live = await this.callApi("world_cup_2026/get_live_matches");
-      this._data.fixtures = await this.callApi("world_cup_2026/get_fixtures");
+      this._data.fixtures = this.completeOfficialFixtures(await this.callApi("world_cup_2026/get_fixtures"));
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
       this._data.scorers = await this.safeCall("world_cup_2026/get_scorers", []);
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
@@ -7949,7 +7919,7 @@ class WorldCup2026Panel extends HTMLElement {
   renderLoading() {
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app ${this.shouldHideHomeAssistantSidebar() ? "wc-hide-sidebar-mode" : ""}">
+      <div class="wc-app ">
         <div class="wc-shell">
           <div class="wc-card">${this.t("loading")}</div>
         </div>
@@ -7960,7 +7930,7 @@ class WorldCup2026Panel extends HTMLElement {
   renderError(err) {
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app ${this.shouldHideHomeAssistantSidebar() ? "wc-hide-sidebar-mode" : ""}">
+      <div class="wc-app ">
         <div class="wc-shell">
           <div class="wc-card">
             <h1>${this.t("errorTitle")}</h1>
@@ -13164,36 +13134,16 @@ class WorldCup2026Panel extends HTMLElement {
 
   setupSidebarSelect(select) {
     if (!select) return;
-
-    this.setSidebarSelectCompact(select, true);
-
-    const showFullNames = () => this.setSidebarSelectCompact(select, false);
-    const showCodes = () => this.setSidebarSelectCompact(select, true);
-
-    select.onfocus = showFullNames;
-    select.onmousedown = showFullNames;
-    select.ontouchstart = showFullNames;
-    select.onblur = showCodes;
-    select.onchange = (e) => {
-      const hide = e.target.value === "hide";
-      localStorage.setItem("world_cup_2026_hide_sidebar", hide ? "true" : "false");
-      this._hideSidebar = hide;
-      // Reloading is the safest way to restore the Home Assistant shell after sidebar CSS has been applied.
-      window.location.reload();
-    };
+    select.value = "show";
+    select.addEventListener("change", () => {
+      select.value = "show";
+      this._hideSidebar = false;
+      try { localStorage.removeItem("world_cup_2026_hide_sidebar"); } catch (e) {}
+    });
   }
 
   sidebarSelector() {
-    const value = this._hideSidebar ? "hide" : "show";
-    return `
-      <div class="wc-sidebar-wrap">
-        <div class="wc-sidebar-label">Sidebar</div>
-        <select class="wc-sidebar-select" id="wc-sidebar-select" title="Home Assistant Sidebar">
-          <option value="show" ${value === "show" ? "selected" : ""}>Show Sidebar</option>
-          <option value="hide" ${value === "hide" ? "selected" : ""}>Hide Sidebar</option>
-        </select>
-      </div>
-    `;
+    return "";
   }
 
   languageSelector() {
@@ -13731,6 +13681,45 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
 
+  completeOfficialFixtures(fixtures = []) {
+    const list = Array.isArray(fixtures) ? [...fixtures] : [];
+
+    const hasMatch72 = list.some((match) => {
+      const number = this.fixtureMatchNumber(match);
+      const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
+      const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
+      const pair = `${homeKey}|${awayKey}`;
+      const reversePair = `${awayKey}|${homeKey}`;
+      return number === 72 || pair === "congo dr|uzbekistan" || reversePair === "congo dr|uzbekistan";
+    });
+
+    if (!hasMatch72) {
+      list.push({
+        id: "wc2026-local-match-72",
+        matchNumber: 72,
+        fifaMatchNumber: 72,
+        group: "Group K",
+        stage: "GROUP_STAGE",
+        status: "TIMED",
+        utcDate: "2026-06-27T23:30:00Z",
+        date: "2026-06-27T23:30:00Z",
+        homeTeam: { name: "Congo DR", tla: "COD" },
+        awayTeam: { name: "Uzbekistan", tla: "UZB" },
+        score: { fullTime: { home: null, away: null } },
+        venue: "Atlanta Stadium",
+        stadium: "Atlanta Stadium",
+        venueName: "Atlanta Stadium",
+        city: "Atlanta",
+        venueCity: "Atlanta",
+        venueCountry: "USA",
+        source: "local_official_fixture_fallback",
+      });
+    }
+
+    return list;
+  }
+
+
   normaliseFixtureText(value) {
     return String(value || "")
       .toLowerCase()
@@ -13745,13 +13734,30 @@ class WorldCup2026Panel extends HTMLElement {
 
   fixtureTeamKey(team) {
     const name = this.localizedTeamName(team);
-    return this.normaliseFixtureText(name)
+    const key = this.normaliseFixtureText(name)
       .replace(/^south korea$/, "korea")
+      .replace(/^korea republic$/, "korea")
       .replace(/^korea$/, "korea")
       .replace(/^usa$/, "united states")
       .replace(/^u s a$/, "united states")
       .replace(/^turkiye$/, "turkey")
-      .replace(/^cote d ivoire$/, "ivory coast");
+      .replace(/^cote d ivoire$/, "ivory coast")
+      .replace(/^cabo verde$/, "cape verde")
+      .replace(/^cape verde islands$/, "cape verde");
+
+    const aliases = {
+      "democratic of congo": "congo dr",
+      "democratic republic of congo": "congo dr",
+      "democratic republic congo": "congo dr",
+      "dr congo": "congo dr",
+      "d r congo": "congo dr",
+      "drc": "congo dr",
+      "cod": "congo dr",
+      "congo kinshasa": "congo dr",
+      "uzb": "uzbekistan",
+    };
+
+    return aliases[key] || key;
   }
 
   fixturePairKey(homeTeam, awayTeam) {
@@ -13830,6 +13836,15 @@ class WorldCup2026Panel extends HTMLElement {
       "croatia|ghana": "Philadelphia Stadium",
       "colombia|portugal": "Miami Stadium",
       "uzbekistan|congo dr": "Atlanta Stadium",
+      "congo dr|uzbekistan": "Atlanta Stadium",
+      "democratic of congo|uzbekistan": "Atlanta Stadium",
+      "democratic republic of congo|uzbekistan": "Atlanta Stadium",
+      "dr congo|uzbekistan": "Atlanta Stadium",
+      "cod|uzbekistan": "Atlanta Stadium",
+      "uzbekistan|democratic of congo": "Atlanta Stadium",
+      "uzbekistan|democratic republic of congo": "Atlanta Stadium",
+      "uzbekistan|dr congo": "Atlanta Stadium",
+      "uzbekistan|cod": "Atlanta Stadium",
       "jordan|argentina": "Dallas Stadium",
       "algeria|austria": "Kansas City Stadium",
     };
@@ -15034,7 +15049,7 @@ class WorldCup2026Panel extends HTMLElement {
   render() {
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app wc-view-${this._viewMode} ${this.shouldHideHomeAssistantSidebar() ? "wc-hide-sidebar-mode" : ""}" dir="${this._language === "ar" ? "rtl" : "ltr"}">
+      <div class="wc-app wc-view-${this._viewMode} " dir="${this._language === "ar" ? "rtl" : "ltr"}">
         <div class="wc-shell">
           <div class="wc-header">
             <div class="wc-header-title-row">
@@ -15060,10 +15075,6 @@ class WorldCup2026Panel extends HTMLElement {
                 <select class="wc-view-select wc-view-select-tablet" id="wc-view-select-tablet" title="${this.esc(this.t("viewMode"))}">
                   <option value="tablet" ${this._viewMode === "tablet" ? "selected" : ""}>${this.esc(this.t("tabletView"))}</option>
                   <option value="pc" ${this._viewMode === "pc" ? "selected" : ""}>${this.esc(this.t("pcView"))}</option>
-                </select>
-                <select class="wc-sidebar-select wc-sidebar-select-tablet" id="wc-sidebar-select-tablet" title="Home Assistant Sidebar">
-                  <option value="show" ${!this._hideSidebar ? "selected" : ""}>Show Sidebar</option>
-                  <option value="hide" ${this._hideSidebar ? "selected" : ""}>Hide Sidebar</option>
                 </select>
                 <button class="wc-pill wc-back-button wc-back-button-tablet" id="wc-back-button-tablet" type="button">${this.t("back")}</button>
               </div>
