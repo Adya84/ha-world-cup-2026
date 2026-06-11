@@ -7955,7 +7955,7 @@ class WorldCup2026Panel extends HTMLElement {
           display: flex;
           align-items: center;
           justify-content: flex-start;
-          gap: 12px;
+          gap: 6px;
           width: 100%;
           min-width: 0;
         }
@@ -7965,7 +7965,7 @@ class WorldCup2026Panel extends HTMLElement {
           align-items: center;
           justify-content: center;
           min-height: 24px;
-          padding: 4px 10px;
+          padding: 4px 8px;
           border-radius: 999px;
           font-size: 11px;
           line-height: 1;
@@ -7973,7 +7973,8 @@ class WorldCup2026Panel extends HTMLElement {
           letter-spacing: 0.25px;
           text-transform: uppercase;
           white-space: nowrap;
-          max-width: min(420px, 38vw);
+          width: 140px;
+          max-width: 140px;
           overflow: hidden;
           text-overflow: ellipsis;
           flex: 0 0 auto;
@@ -7996,7 +7997,8 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-header-scheduled-pill {
-          max-width: min(240px, 24vw);
+          width: 140px;
+          max-width: 140px;
         }
 
         .wc-header-countdown-pill {
@@ -12267,6 +12269,175 @@ class WorldCup2026Panel extends HTMLElement {
             min-height: 15px !important;
             font-size: 6.2px !important;
             padding: 2px 3px !important;
+          }
+        }
+
+
+        /* FINAL GAP FIX: keep the two top-left status pills locked together */
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          display: grid !important;
+          grid-template-columns: 72px 72px minmax(0, 1fr) !important;
+          grid-template-rows: auto auto auto !important;
+          column-gap: 2px !important;
+          row-gap: 3px !important;
+          align-items: center !important;
+          justify-content: start !important;
+          width: 100% !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill:not(.wc-header-scheduled-pill) {
+          grid-column: 1 !important;
+          grid-row: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-scheduled-pill {
+          grid-column: 2 !important;
+          grid-row: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill,
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-scheduled-pill {
+          flex: none !important;
+          width: 72px !important;
+          min-width: 72px !important;
+          max-width: 72px !important;
+          height: 15px !important;
+          min-height: 15px !important;
+          padding: 1px 3px !important;
+          margin: 0 !important;
+          box-sizing: border-box !important;
+          display: inline-flex !important;
+          align-items: center !important;
+          justify-content: center !important;
+          font-size: 6.4px !important;
+          line-height: 1 !important;
+          letter-spacing: -0.15px !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: clip !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          grid-column: 3 !important;
+          grid-row: 1 !important;
+          margin-left: 2px !important;
+          gap: 3px !important;
+          min-width: 0 !important;
+          width: 100% !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack {
+          grid-column: 1 / -1 !important;
+          grid-row: 2 !important;
+          margin-top: 3px !important;
+          width: 100% !important;
+          max-width: none !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          grid-column: 1 / -1 !important;
+          grid-row: 3 !important;
+          justify-self: start !important;
+          margin-top: 0 !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-header-title-row {
+            grid-template-columns: 68px 68px minmax(0, 1fr) !important;
+            column-gap: 2px !important;
+          }
+          .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill,
+          .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-scheduled-pill {
+            width: 68px !important;
+            min-width: 68px !important;
+            max-width: 68px !important;
+            font-size: 6px !important;
+          }
+        }
+
+
+        /* FINAL TITLE/TIMER FIX: keep the working status pills untouched, move FIFA title onto the top row, and centre the timer */
+        .wc-app.wc-view-tablet .wc-header-title-row {
+          display: grid !important;
+          grid-template-columns: 72px 72px minmax(0, 1fr) auto !important;
+          grid-template-rows: auto auto !important;
+          column-gap: 2px !important;
+          row-gap: 4px !important;
+          align-items: center !important;
+          width: 100% !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-live-pill:not(.wc-header-scheduled-pill) {
+          grid-column: 1 !important;
+          grid-row: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-scheduled-pill {
+          grid-column: 2 !important;
+          grid-row: 1 !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          grid-column: 3 !important;
+          grid-row: 1 !important;
+          margin-left: 2px !important;
+          margin-right: 6px !important;
+          gap: 3px !important;
+          min-width: 0 !important;
+          width: 100% !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title-stack {
+          grid-column: 4 !important;
+          grid-row: 1 !important;
+          justify-self: end !important;
+          align-self: center !important;
+          width: auto !important;
+          min-width: 120px !important;
+          max-width: 190px !important;
+          margin: 0 !important;
+          padding: 0 !important;
+          text-align: right !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-title {
+          font-size: 12px !important;
+          line-height: 1 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-subtitle-inline {
+          display: none !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-countdown-pill {
+          grid-column: 1 / -1 !important;
+          grid-row: 2 !important;
+          justify-self: center !important;
+          margin: 2px auto 0 auto !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-header-title-row {
+            grid-template-columns: 68px 68px minmax(0, 1fr) auto !important;
+            column-gap: 2px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-title-stack {
+            min-width: 102px !important;
+            max-width: 145px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-title {
+            font-size: 10px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-header-nav {
+            margin-right: 4px !important;
           }
         }
 </style>
