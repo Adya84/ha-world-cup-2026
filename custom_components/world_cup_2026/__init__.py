@@ -1,101 +1,60 @@
-"""World Cup 2026 integration."""
+"""World Cup 2026 API client."""
+
 from __future__ import annotations
 
-import logging
-from pathlib import Path
+import asyncio
+import json
+import os
 
-from homeassistant.components import frontend
-from homeassistant.components.http import StaticPathConfig
-from homeassistant.config_entries import ConfigEntry
-from homeassistant.core import HomeAssistant
+import aiohttp
 
-from .api import WorldCupAPI
-from .app.websocket import async_register_websocket_api
-from .const import CONF_API_KEY, DEFAULT_DEMO_MODE, DOMAIN, OPT_DEMO_MODE
-from .coordinator import WorldCupCoordinator
+FIXTURES_DIR = os.path.join(os.path.dirname(__file__), "fixtures")
 
-_LOGGER = logging.getLogger(__name__)
-
-PLATFORMS = ["sensor"]
-
-PANEL_PATH = "world-cup-2026"
-PANEL_TITLE = "🏆 World Cup 2026 ⚽"
-PANEL_ICON = "mdi:trophy"
-FRONTEND_URL = f"/{DOMAIN}_frontend"
+PUBLIC_FEED_BASE_URL = (
+    "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main"
+)
 
 
-async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Set up the World Cup 2026 integration from a config entry."""
-    demo_mode: bool = entry.options.get(OPT_DEMO_MODE, DEFAULT_DEMO_MODE)
+class WorldCupAPI:
+    def __init__(self, api_key: str, demo_mode: bool = False) -> None:
+        """
+        Args:
+            api_key: kept for compatibility with existing config entries.
+            demo_mode: When True, all methods return data from fixtures/*.json.
+        """
+        self.api_key = api_key
+        self.demo_mode = demo_mode
 
-    api = WorldCupAPI(api_key=entry.data[CONF_API_KEY], demo_mode=demo_mode)
-    coordinator = WorldCupCoordinator(hass, api)
+    def _load_fixture(self, filename: str) -> dict:
+        """Load a JSON fixture file from fixtures/."""
+        path = os.path.join(FIXTURES_DIR, filename)
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
 
-    await coordinator.async_config_entry_first_refresh()
+    async def _get(self, url: str) -> dict:
+        """Shared GET helper for GitHub raw JSON feeds."""
+        async with aiohttp.ClientSession() as session:
+            async with session.get(url) as response:
+                response.raise_for_status()
+                return await response.json(content_type=None)
 
-    hass.data.setdefault(DOMAIN, {})
-    hass.data[DOMAIN][entry.entry_id] = coordinator
+    async def get_matches(self) -> dict:
+        """Return World Cup matches from the public GitHub feed."""
+        if self.demo_mode:
+            return await asyncio.to_thread(self._load_fixture, "matches.json")
 
-    await async_register_websocket_api(hass)
+        return await self._get(f"{PUBLIC_FEED_BASE_URL}/matches.json")
 
-    await hass.config_entries.async_forward_entry_setups(entry, PLATFORMS)
+    async def get_standings(self) -> dict:
+        """Return group standings from the public GitHub feed."""
+        if self.demo_mode:
+            return await asyncio.to_thread(self._load_fixture, "standings.json")
 
-    frontend_dir = Path(__file__).parent / "frontend" / "dist"
+        return await self._get(f"{PUBLIC_FEED_BASE_URL}/standings.json")
 
-    await hass.http.async_register_static_paths(
-        [
-            StaticPathConfig(
-                FRONTEND_URL,
-                str(frontend_dir),
-                False,
-            )
-        ]
-    )
+    async def get_scorers(self) -> dict:
+        """Return scorers from the public GitHub feed."""
+        if self.demo_mode:
+            return await asyncio.to_thread(self._load_fixture, "scorers.json")
 
-    try:
-        frontend.async_remove_panel(hass, PANEL_PATH)
-    except Exception:
-        pass
-
-    frontend.async_register_built_in_panel(
-        hass,
-        component_name="custom",
-        sidebar_title=PANEL_TITLE,
-        sidebar_icon=PANEL_ICON,
-        frontend_url_path=PANEL_PATH,
-        config={
-            "_panel_custom": {
-                "name": "world-cup-2026-panel",
-                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v=3.3.8",
-                "embed_iframe": False,
-                "trust_external": False,
-            }
-        },
-        require_admin=False,
-    )
-
-    _LOGGER.info("World Cup 2026 app registered")
-
-    entry.async_on_unload(entry.add_update_listener(_async_reload_entry))
-
-    return True
-
-
-async def _async_reload_entry(hass: HomeAssistant, entry: ConfigEntry) -> None:
-    """Reload the integration when options are updated."""
-    await hass.config_entries.async_reload(entry.entry_id)
-
-
-async def async_unload_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
-    """Unload a config entry."""
-    unloaded = await hass.config_entries.async_unload_platforms(entry, PLATFORMS)
-
-    if unloaded:
-        hass.data[DOMAIN].pop(entry.entry_id, None)
-
-        try:
-            frontend.async_remove_panel(hass, PANEL_PATH)
-        except Exception:
-            pass
-
-    return unloaded
+        return await self._get(f"{PUBLIC_FEED_BASE_URL}/scorers.json")
