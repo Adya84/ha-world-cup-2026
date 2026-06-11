@@ -4,9 +4,12 @@ from __future__ import annotations
 
 from datetime import timedelta
 import asyncio
+import base64
 import json
 import logging
 from pathlib import Path
+
+import aiohttp
 
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator, UpdateFailed
 
@@ -18,7 +21,7 @@ SCAN_INTERVAL_NORMAL = timedelta(minutes=15)
 SCAN_INTERVAL_LIVE = timedelta(minutes=1)
 
 TOTAL_WORLD_CUP_MATCHES = 104
-LIVE_STATUSES = {"IN_PLAY", "PAUSED", "LIVE", "1H", "2H", "HT"}
+LIVE_STATUSES = {"IN_PLAY", "PAUSED", "LIVE", "1H", "2H", "HT", "HALF_TIME"}
 FINISHED_STATUSES = {"FINISHED", "FT", "AET", "PEN"}
 
 
@@ -321,32 +324,137 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         self.api = api
 
 
-    async def _export_public_json(self, matches, standings, scorers):
-        """Export public JSON files."""
+    def _read_github_settings(self):
+        """Read GitHub sync settings from /config/secrets.yaml.
 
-        export_dir = Path("/config/worldcup_export")
+        Expected entries:
+        github_token: "github_pat_..."
+        github_repo: "Adya84/ha-world-cup-2026"
+        github_branch: "main"   # optional
+        """
+        secrets_file = Path("/config/secrets.yaml")
+        settings = {
+            "github_token": None,
+            "github_repo": "Adya84/ha-world-cup-2026",
+            "github_branch": "main",
+        }
+
+        if not secrets_file.exists():
+            return settings
+
+        try:
+            content = secrets_file.read_text(encoding="utf-8")
+        except Exception as err:  # pylint: disable=broad-exception-caught
+            _LOGGER.warning("Could not read secrets.yaml for GitHub sync: %s", err)
+            return settings
+
+        for line in content.splitlines():
+            line = line.strip()
+            if not line or line.startswith("#") or ":" not in line:
+                continue
+
+            key, value = line.split(":", 1)
+            key = key.strip()
+            value = value.strip().strip('"').strip("'")
+
+            if key in settings:
+                settings[key] = value
+
+        return settings
+
+    async def _export_public_json(self, matches, standings, scorers):
+        """Export public JSON files to /config/www/worldcup."""
+        export_dir = Path("/config/www/worldcup")
         export_dir.mkdir(parents=True, exist_ok=True)
 
-        await asyncio.to_thread(
-            lambda: (export_dir / "matches.json").write_text(
-                json.dumps({"matches": matches}, indent=2),
-                encoding="utf-8",
-            )
-        )
+        files = {
+            "matches.json": {"matches": matches},
+            "standings.json": {"standings": standings},
+            "scorers.json": {"scorers": scorers},
+        }
 
-        await asyncio.to_thread(
-            lambda: (export_dir / "standings.json").write_text(
-                json.dumps({"standings": standings}, indent=2),
-                encoding="utf-8",
+        for filename, payload in files.items():
+            await asyncio.to_thread(
+                lambda name=filename, data=payload: (export_dir / name).write_text(
+                    json.dumps(data, indent=2),
+                    encoding="utf-8",
+                )
             )
-        )
 
-        await asyncio.to_thread(
-            lambda: (export_dir / "scorers.json").write_text(
-                json.dumps({"scorers": scorers}, indent=2),
-                encoding="utf-8",
-            )
-        )
+        return files
+
+    async def _github_get_sha(self, session, repo, branch, filename, headers):
+        """Return the existing GitHub file SHA if the file already exists."""
+        url = f"https://api.github.com/repos/{repo}/contents/{filename}?ref={branch}"
+
+        async with session.get(url, headers=headers) as response:
+            if response.status == 404:
+                return None
+
+            if response.status >= 400:
+                text = await response.text()
+                raise UpdateFailed(
+                    f"GitHub SHA lookup failed for {filename}: {response.status} {text}"
+                )
+
+            data = await response.json()
+            return data.get("sha")
+
+    async def _github_upload_file(self, session, repo, branch, filename, payload, headers):
+        """Upload one JSON file to GitHub."""
+        raw_content = json.dumps(payload, indent=2)
+        encoded_content = base64.b64encode(raw_content.encode("utf-8")).decode("utf-8")
+        url = f"https://api.github.com/repos/{repo}/contents/{filename}"
+
+        sha = await self._github_get_sha(session, repo, branch, filename, headers)
+
+        body = {
+            "message": f"Update {filename}",
+            "content": encoded_content,
+            "branch": branch,
+        }
+
+        if sha:
+            body["sha"] = sha
+
+        async with session.put(url, headers=headers, json=body) as response:
+            if response.status not in (200, 201):
+                text = await response.text()
+                raise UpdateFailed(
+                    f"GitHub upload failed for {filename}: {response.status} {text}"
+                )
+
+    async def _sync_public_json_to_github(self, files):
+        """Sync exported JSON files to the configured GitHub repository."""
+        settings = self._read_github_settings()
+        token = settings.get("github_token")
+        repo = settings.get("github_repo") or "Adya84/ha-world-cup-2026"
+        branch = settings.get("github_branch") or "main"
+
+        if not token:
+            _LOGGER.debug("GitHub sync skipped: github_token not set in secrets.yaml")
+            return
+
+        headers = {
+            "Authorization": f"Bearer {token}",
+            "Accept": "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+        }
+
+        timeout = aiohttp.ClientTimeout(total=30)
+
+        async with aiohttp.ClientSession(timeout=timeout) as session:
+            for filename, payload in files.items():
+                await self._github_upload_file(
+                    session,
+                    repo,
+                    branch,
+                    filename,
+                    payload,
+                    headers,
+                )
+
+        _LOGGER.info("World Cup public JSON synced to GitHub repo %s", repo)
 
     async def _async_update_data(self) -> dict:
         """Fetch all World Cup data and build app-ready derived data."""
@@ -373,13 +481,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             _LOGGER.debug("Switching poll interval to %s (live=%s)", new_interval, has_live)
             self.update_interval = new_interval
 
-        await self._export_public_json(
-            matches,
-            standings,
-            scorers,
-        )
-
-        return {
+        data = {
             "matches": matches,
             "standings": standings,
             "scorers": scorers,
@@ -387,3 +489,11 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             "records": _build_records(matches),
             "venues": await _build_venues(self.hass),
         }
+
+        try:
+            files = await self._export_public_json(matches, standings, scorers)
+            await self._sync_public_json_to_github(files)
+        except Exception as err:  # pylint: disable=broad-exception-caught
+            _LOGGER.warning("World Cup public JSON export/sync failed: %s", err)
+
+        return data
