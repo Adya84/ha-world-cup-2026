@@ -1,39 +1,14 @@
 # ⚽ Home Assistant World Cup 2026
 
-[![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-v4.0.1-green)
+![License](https://img.shields.io/badge/license-Personal%20Use%20Only-red.svg)
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.1%2B-blue)
 ![HACS](https://img.shields.io/badge/HACS-Custom-orange)
-![Tablet Mode](https://img.shields.io/badge/Tablet%20Mode-Yes-success)
-![Languages](https://img.shields.io/badge/Languages-13-blue)
-![Stadiums](https://img.shields.io/badge/Stadiums-16-success)
-![Matches](https://img.shields.io/badge/Matches-104-orange)
 
 A complete FIFA World Cup 2026 integration and dedicated tournament application for Home Assistant.
 
 Track every fixture, result, player, team, group, stadium and tournament statistic from the largest FIFA World Cup ever held.
 
-Featuring 48 teams, 12 groups and 104 matches across 16 official host venues in the United States, Canada and Mexico.
-
----
-
-## 📸 Screenshots
-
-Screenshots will be added as the tournament application continues to evolve.
-
-Current sections include:
-
-* Overview
-* Live Centre
-* Fixtures & Results
-* Groups Centre
-* Knockout Centre
-* Golden Boot Centre
-* Statistics Hub
-* Records Hub
-* Stadiums & Venues
-* Supporters Wall
-* Tablet Mode
+Featuring 48 teams, 12 groups, 104 matches and host venues across the United States, Canada and Mexico.
 
 ---
 
@@ -135,43 +110,31 @@ Includes:
 
 ---
 
-## 🔒 Licensing
-
-The project is licensed under:
-
-GNU General Public License v3.0 or later (GPL-3.0-or-later)
-
-Copyright (C) 2026 Adrian Apel
-
----
-
 ## 📦 Installation
 
 ### Option 1: Install via HACS
 
 1. Open Home Assistant.
 2. Go to **HACS**.
-3. Open the menu in the top-right corner and select **Custom repositories**.
-4. Add this repository URL:
+3. Open **Custom Repositories**.
+4. Add:
 
-   `https://github.com/Adya84/ha-world-cup-2026`
+   https://github.com/Adya84/ha-world-cup-2026
 
-5. Select **Integration** as the category.
-6. Click **Add**.
-7. Search for **World Cup 2026** in HACS.
-8. Download and install the integration.
-9. Restart Home Assistant.
+5. Select **Integration**.
+6. Install **World Cup 2026**.
+7. Restart Home Assistant.
 
 ### Option 2: Manual Installation
 
-1. Download or clone this repository.
+1. Download this repository.
 2. Copy:
 
-   `custom_components/world_cup_2026`
+   custom_components/world_cup_2026
 
    into:
 
-   `config/custom_components/world_cup_2026`
+   config/custom_components/world_cup_2026
 
 3. Restart Home Assistant.
 
@@ -184,20 +147,6 @@ Copyright (C) 2026 Adrian Apel
 3. Search for **World Cup 2026**
 4. Enter your football-data.org API key
 5. Complete setup
-
----
-
-## 🧪 Demo Mode
-
-Demo Mode can be enabled after setup.
-
-1. Open **Settings → Devices & Services**
-2. Select **World Cup 2026**
-3. Click **Configure**
-4. Enable **Demo Mode**
-5. Save
-
-Demo mode loads local tournament data allowing full dashboard testing before the tournament begins.
 
 ---
 
@@ -247,8 +196,6 @@ Features include:
 
 ## ⚽ Live Match Data
 
-Track the tournament in real time with:
-
 * Live Fixtures
 * Match Results
 * Live Match Status
@@ -256,18 +203,14 @@ Track the tournament in real time with:
 * Match Statistics
 * Goal Scorers
 * Match Countdown
-* Kick-Off Information
 * Today's Matches
 * Tomorrow's Matches
-* Completed Matches
 * Live Goals Counter
 * Match Venue Information
 
 ---
 
 ## 🏆 Tournament Tracking
-
-Track every stage of the tournament:
 
 * Group Stage
 * Round Of 32
@@ -281,8 +224,6 @@ Track every stage of the tournament:
 
 ## 📊 Statistics Hub
 
-Includes:
-
 * Tournament Progress
 * Matches Played
 * Matches Remaining
@@ -291,7 +232,6 @@ Includes:
 * Draw Rate
 * BTTS Rate
 * Over 2.5 Goals Rate
-* Live Match Count
 * Team Performance Metrics
 * Tournament Completion Percentage
 
@@ -299,21 +239,16 @@ Includes:
 
 ## 🔥 Records Hub
 
-Track major tournament records including:
-
 * Biggest Win
 * Highest Scoring Match
 * Latest Result
 * Top Scoring Team
 * Best Defence
 * Goal Difference Rankings
-* Tournament Record Tracking
 
 ---
 
 ## 👤 Golden Boot Centre
-
-Track:
 
 * Goals
 * Assists
@@ -328,8 +263,6 @@ Track:
 
 Includes all 16 official FIFA World Cup 2026 venues.
 
-Features:
-
 * Official FIFA Venue Names
 * Stadium Photographs
 * Host City Information
@@ -343,8 +276,6 @@ Features:
 ---
 
 ## ❤️ Supporters Wall
-
-Features:
 
 * Dedicated Supporters Page
 * Latest Supporters Section
@@ -373,14 +304,6 @@ Supported Languages:
 * Norwegian 🇳🇴
 * Polish 🇵🇱
 
-Additional Features:
-
-* Automatic Language Persistence
-* Localised Date Formatting
-* Arabic RTL Support
-* Built-In Language Selector
-* Compact Language Codes
-
 ---
 
 ## 🎨 Dashboard Included
@@ -402,54 +325,11 @@ Ready-to-import dashboard featuring:
 
 ---
 
-## 🧪 Demo Mode
-
-Includes:
-
-* Demo Fixtures
-* Demo Results
-* Dashboard Testing
-* Sensor Testing
-* Full Dashboard Preview
-* Offline Development Support
-
----
-
-## 📦 Included Sensors
-
-Sensors cover:
-
-* Tournament Information
-* Live Match Data
-* Fixtures & Results
-* Group Standings
-* Player Statistics
-* Tournament Analytics
-* Tournament Records
-* Venue Information
-* Knockout Tracking
-* Stadium Data
-* Host Cities
-
----
-
-# 🙏 Credits
-
-Tournament data provided by:
-
-https://www.football-data.org/
-
-World Cup venue and tournament information sourced from publicly available FIFA tournament information.
-
-This project is an independent Home Assistant integration and is not affiliated with, endorsed by, or sponsored by FIFA.
-
----
-
 # 👨‍💻 Author
 
 Created and maintained by Adrian Apel.
 
-GitHub:
+Repository:
 
 https://github.com/Adya84/ha-world-cup-2026
 
@@ -459,25 +339,31 @@ https://github.com/Adya84/ha-world-cup-2026
 
 Copyright (C) 2026 Adrian Apel
 
-World Cup 2026 Home Assistant Integration is licensed under the GNU General Public License v3.0 or later (GPL-3.0-or-later).
+World Cup 2026 Home Assistant Integration is released under a Personal Use Only License.
 
-You are free to use, modify and redistribute this software under the terms of the GPL licence.
+You may:
 
-Any distributed modifications must also be released under the GPL licence and include the corresponding source code.
+* Download and use the software free of charge
+* Install the software on personal Home Assistant systems
+* Fork the repository for personal use and testing
+* Submit bug reports and pull requests
 
-See the LICENSE file for full licence details.
+You may NOT:
 
----
+* Sell this software
+* Resell this software
+* Redistribute modified versions
+* Rebrand the software
+* Claim ownership of the software
+* Include the software within commercial products or services
+* Use the software commercially without written permission
+* Publish modified versions without written permission from the author
 
-# 🤝 Contributing
+All rights not expressly granted are reserved.
 
-Bug reports, feature requests and pull requests are welcome.
+For commercial licensing enquiries please contact the author.
 
-GitHub Repository:
-
-https://github.com/Adya84/ha-world-cup-2026
-
-If you discover a bug or would like to suggest a feature, please open an issue on GitHub.
+THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
 
 ---
 
