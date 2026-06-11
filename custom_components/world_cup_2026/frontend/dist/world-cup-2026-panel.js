@@ -12572,6 +12572,71 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+
+        /* Tablet only: move countdown between the Top scorer stat and FIFA title in the compact overview bar */
+        .wc-tablet-progress-countdown {
+          display: none;
+        }
+
+        .wc-app.wc-view-tablet .wc-header-title-row > .wc-header-countdown-pill:not(.wc-tablet-progress-countdown) {
+          display: none !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-title {
+          flex-direction: row !important;
+          align-items: center !important;
+          justify-content: flex-end !important;
+          gap: 6px !important;
+          text-align: right !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-progress-title-text {
+          display: flex !important;
+          flex-direction: column !important;
+          align-items: flex-end !important;
+          justify-content: center !important;
+          min-width: 0 !important;
+          overflow: hidden !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-progress-title .wc-tablet-progress-countdown {
+          display: inline-flex !important;
+          position: static !important;
+          grid-column: auto !important;
+          grid-row: auto !important;
+          justify-self: auto !important;
+          align-self: center !important;
+          flex: 0 0 auto !important;
+          width: auto !important;
+          min-width: 86px !important;
+          max-width: 132px !important;
+          height: 28px !important;
+          min-height: 28px !important;
+          margin: 0 clamp(18px, 3.4vw, 42px) 0 0 !important;
+          padding: 3px 10px !important;
+          font-size: 13px !important;
+          line-height: 1 !important;
+          white-space: nowrap !important;
+          overflow: hidden !important;
+          text-overflow: ellipsis !important;
+        }
+
+        @media (max-width: 760px) {
+          .wc-app.wc-view-tablet .wc-tablet-progress-title {
+            gap: 3px !important;
+          }
+
+          .wc-app.wc-view-tablet .wc-tablet-progress-title .wc-tablet-progress-countdown {
+            min-width: 66px !important;
+            max-width: 96px !important;
+            height: 23px !important;
+            min-height: 23px !important;
+            margin: 0 14px 0 0 !important;
+            padding: 2px 7px !important;
+            font-size: 10px !important;
+          }
+        }
+
 </style>
     `;
   }
@@ -12770,8 +12835,11 @@ class WorldCup2026Panel extends HTMLElement {
               </div>
 
               <div class="wc-tablet-progress-controls wc-tablet-progress-title">
-                <div class="wc-progress-title-main">${this.t("title")}</div>
-                <div class="wc-progress-title-sub">${this.t("subtitle")}</div>
+                ${this.headerCountdownPill("wc-tablet-progress-countdown", "wc-tablet-progress-countdown")}
+                <div class="wc-progress-title-text">
+                  <div class="wc-progress-title-main">${this.t("title")}</div>
+                  <div class="wc-progress-title-sub">${this.t("subtitle")}</div>
+                </div>
               </div>
             </div>
 
@@ -14190,31 +14258,34 @@ class WorldCup2026Panel extends HTMLElement {
     return visibleParts.length ? `⏳ ${visibleParts.join(" ")}` : "⚽ Kickoff imminent";
   }
 
-  headerCountdownPill() {
+  headerCountdownPill(id = "wc-header-countdown", extraClass = "") {
     const text = this.countdownText();
 
     if (!text) {
       return "";
     }
 
-    return `<div class="wc-header-countdown-pill" id="wc-header-countdown">${this.esc(text)}</div>`;
+    const className = `wc-header-countdown-pill${extraClass ? ` ${extraClass}` : ""}`;
+    return `<div class="${className}" id="${this.esc(id)}">${this.esc(text)}</div>`;
   }
 
   updateCountdownDisplay() {
-    const countdown = this.querySelector("#wc-header-countdown");
+    const countdowns = this.querySelectorAll(".wc-header-countdown-pill");
 
-    if (!countdown) {
+    if (!countdowns.length) {
       return;
     }
 
     const text = this.countdownText();
 
-    if (!text) {
-      countdown.remove();
-      return;
-    }
+    countdowns.forEach((countdown) => {
+      if (!text) {
+        countdown.remove();
+        return;
+      }
 
-    countdown.textContent = text;
+      countdown.textContent = text;
+    });
   }
 
   pageContent() {
