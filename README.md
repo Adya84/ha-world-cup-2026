@@ -1,14 +1,39 @@
 # ⚽ Home Assistant World Cup 2026
 
-![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)
+[![License](https://img.shields.io/badge/license-GPL--3.0-blue.svg)](LICENSE)
+![Version](https://img.shields.io/badge/version-v4.0.1-green)
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.1%2B-blue)
 ![HACS](https://img.shields.io/badge/HACS-Custom-orange)
+![Tablet Mode](https://img.shields.io/badge/Tablet%20Mode-Yes-success)
+![Languages](https://img.shields.io/badge/Languages-13-blue)
+![Stadiums](https://img.shields.io/badge/Stadiums-16-success)
+![Matches](https://img.shields.io/badge/Matches-104-orange)
 
 A complete FIFA World Cup 2026 integration and dedicated tournament application for Home Assistant.
 
 Track every fixture, result, player, team, group, stadium and tournament statistic from the largest FIFA World Cup ever held.
 
-Featuring 48 teams, 12 groups, 104 matches and host venues across the United States, Canada and Mexico.
+Featuring 48 teams, 12 groups and 104 matches across 16 official host venues in the United States, Canada and Mexico.
+
+---
+
+## 📸 Screenshots
+
+Screenshots will be added as the tournament application continues to evolve.
+
+Current sections include:
+
+* Overview
+* Live Centre
+* Fixtures & Results
+* Groups Centre
+* Knockout Centre
+* Golden Boot Centre
+* Statistics Hub
+* Records Hub
+* Stadiums & Venues
+* Supporters Wall
+* Tablet Mode
 
 ---
 
@@ -112,11 +137,9 @@ Includes:
 
 ## 🔒 Licensing
 
-The project is now licensed under:
+The project is licensed under:
 
-GNU General Public License v3.0 (GPL-3.0-or-later)
-
-This allows the community to use, modify and contribute to the project while ensuring all distributed modifications remain open source.
+GNU General Public License v3.0 or later (GPL-3.0-or-later)
 
 Copyright (C) 2026 Adrian Apel
 
@@ -127,29 +150,21 @@ Copyright (C) 2026 Adrian Apel
 ### Option 1: Install via HACS
 
 1. Open Home Assistant.
-
 2. Go to **HACS**.
-
 3. Open the menu in the top-right corner and select **Custom repositories**.
-
 4. Add this repository URL:
 
    `https://github.com/Adya84/ha-world-cup-2026`
 
 5. Select **Integration** as the category.
-
 6. Click **Add**.
-
 7. Search for **World Cup 2026** in HACS.
-
 8. Download and install the integration.
-
 9. Restart Home Assistant.
 
 ### Option 2: Manual Installation
 
 1. Download or clone this repository.
-
 2. Copy:
 
    `custom_components/world_cup_2026`
@@ -218,8 +233,6 @@ Designed for Desktop, Tablet and Mobile devices.
 ---
 
 ## 📱 Dedicated Tablet Mode
-
-New in v4.0.x
 
 Features include:
 
@@ -420,11 +433,24 @@ Sensors cover:
 
 ---
 
+# 🙏 Credits
+
+Tournament data provided by:
+
+https://www.football-data.org/
+
+World Cup venue and tournament information sourced from publicly available FIFA tournament information.
+
+This project is an independent Home Assistant integration and is not affiliated with, endorsed by, or sponsored by FIFA.
+
+---
+
 # 👨‍💻 Author
 
 Created and maintained by Adrian Apel.
 
 GitHub:
+
 https://github.com/Adya84/ha-world-cup-2026
 
 ---
@@ -440,6 +466,18 @@ You are free to use, modify and redistribute this software under the terms of th
 Any distributed modifications must also be released under the GPL licence and include the corresponding source code.
 
 See the LICENSE file for full licence details.
+
+---
+
+# 🤝 Contributing
+
+Bug reports, feature requests and pull requests are welcome.
+
+GitHub Repository:
+
+https://github.com/Adya84/ha-world-cup-2026
+
+If you discover a bug or would like to suggest a feature, please open an issue on GitHub.
 
 ---
 
