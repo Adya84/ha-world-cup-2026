@@ -7,8 +7,12 @@ class WorldCup2026Panel extends HTMLElement {
     this._loaded = false;
     this._refreshInterval = null;
     this._countdownInterval = null;
+    this._sidebarObserver = null;
+    this._sidebarStyleRoots = new Set();
+    this._sidebarObservers = [];
     this._language = localStorage.getItem("world_cup_2026_language") || "en";
     this._viewMode = localStorage.getItem("world_cup_2026_view_mode") || "pc";
+    this._hideSidebar = localStorage.getItem("world_cup_2026_hide_sidebar") === "true";
     this._data = {
       overview: null,
       live: [],
@@ -20,6 +24,173 @@ class WorldCup2026Panel extends HTMLElement {
       venues: {},
       supporters: [],
     };
+  }
+
+  shouldHideHomeAssistantSidebar() {
+    const search = window.location.search || "";
+    const hashSearch = window.location.hash?.includes("?")
+      ? `?${window.location.hash.split("?").slice(1).join("?")}`
+      : "";
+
+    const params = new URLSearchParams(search || hashSearch);
+    const value = (params.get("wp_hide_sidebar") || "").toLowerCase();
+    const urlRequestsHide = ["true", "1", "yes", "on"].includes(value);
+    return urlRequestsHide || this._hideSidebar;
+  }
+
+  sidebarHideStyles() {
+    return `
+      :host {
+        --app-drawer-width: 0px !important;
+        --mdc-drawer-width: 0px !important;
+      }
+
+      ha-sidebar,
+      app-drawer,
+      ha-drawer,
+      .mdc-drawer,
+      aside,
+      paper-drawer-panel [slot="drawer"],
+      [slot="drawer"] {
+        display: none !important;
+        visibility: hidden !important;
+        width: 0 !important;
+        min-width: 0 !important;
+        max-width: 0 !important;
+        transform: translateX(-100vw) !important;
+        pointer-events: none !important;
+      }
+
+      app-drawer-layout,
+      home-assistant,
+      home-assistant-main,
+      partial-panel-resolver,
+      ha-panel-world-cup-2026,
+      ha-panel-world_cup_2026,
+      #view,
+      .view,
+      .content,
+      main {
+        --app-drawer-width: 0px !important;
+        --mdc-drawer-width: 0px !important;
+        left: 0 !important;
+        margin-left: 0 !important;
+        padding-left: 0 !important;
+        width: 100% !important;
+        max-width: none !important;
+      }
+    `;
+  }
+
+  injectSidebarHideStyle(root) {
+    if (!root || this._sidebarStyleRoots.has(root)) return;
+    try {
+      const style = document.createElement("style");
+      style.setAttribute("data-world-cup-hide-sidebar", "true");
+      style.textContent = this.sidebarHideStyles();
+      root.appendChild(style);
+      this._sidebarStyleRoots.add(root);
+    } catch (err) {
+      // Ignore roots that cannot be modified.
+    }
+  }
+
+  forceHideSidebarElement(el) {
+    if (!el || !el.style) return;
+    el.style.setProperty("display", "none", "important");
+    el.style.setProperty("visibility", "hidden", "important");
+    el.style.setProperty("width", "0", "important");
+    el.style.setProperty("min-width", "0", "important");
+    el.style.setProperty("max-width", "0", "important");
+    el.style.setProperty("transform", "translateX(-100vw)", "important");
+    el.style.setProperty("pointer-events", "none", "important");
+  }
+
+  forceFullWidthElement(el) {
+    if (!el || !el.style) return;
+    el.style.setProperty("--app-drawer-width", "0px", "important");
+    el.style.setProperty("--mdc-drawer-width", "0px", "important");
+    el.style.setProperty("margin-left", "0", "important");
+    el.style.setProperty("left", "0", "important");
+    el.style.setProperty("padding-left", "0", "important");
+    el.style.setProperty("width", "100%", "important");
+    el.style.setProperty("max-width", "none", "important");
+  }
+
+  applyHideSidebarToRoot(root) {
+    if (!root) return;
+
+    this.injectSidebarHideStyle(root);
+
+    try {
+      root.querySelectorAll("ha-sidebar, app-drawer, ha-drawer, .mdc-drawer, aside, paper-drawer-panel [slot='drawer'], [slot='drawer']")
+        .forEach((el) => this.forceHideSidebarElement(el));
+
+      root.querySelectorAll("app-drawer-layout, home-assistant, home-assistant-main, partial-panel-resolver, ha-panel-world-cup-2026, ha-panel-world_cup_2026, #view, .view, .content, main")
+        .forEach((el) => this.forceFullWidthElement(el));
+
+      root.querySelectorAll("app-drawer-layout").forEach((el) => {
+        el.setAttribute("force-narrow", "");
+        el.setAttribute("narrow", "");
+        el.removeAttribute("opened");
+        el.opened = false;
+      });
+
+      root.querySelectorAll("home-assistant, home-assistant-main").forEach((el) => {
+        this.forceFullWidthElement(el);
+        el.setAttribute("world-cup-hide-sidebar", "true");
+      });
+
+      root.querySelectorAll("*").forEach((el) => {
+        if (el.shadowRoot) {
+          this.applyHideSidebarToRoot(el.shadowRoot);
+          this.observeSidebarRoot(el.shadowRoot);
+        }
+      });
+    } catch (err) {
+      // Best-effort only. Home Assistant shadow DOM can vary between versions.
+    }
+  }
+
+  observeSidebarRoot(root) {
+    if (!root || this._sidebarStyleRoots.has(`observer-${root}`)) return;
+    try {
+      const observer = new MutationObserver(() => this.applyHideSidebarToRoot(root));
+      observer.observe(root, { childList: true, subtree: true, attributes: true });
+      if (!this._sidebarObservers) this._sidebarObservers = [];
+      this._sidebarObservers.push(observer);
+      this._sidebarStyleRoots.add(`observer-${root}`);
+    } catch (err) {
+      // Ignore roots that cannot be observed.
+    }
+  }
+
+  applyHideSidebarFromUrl() {
+    if (!this.shouldHideHomeAssistantSidebar()) return;
+
+    document.documentElement?.classList.add("world-cup-hide-sidebar");
+    document.body?.classList.add("world-cup-hide-sidebar");
+    this.classList.add("wc-hide-ha-sidebar");
+
+    const apply = () => {
+      this.applyHideSidebarToRoot(document);
+      this.observeSidebarRoot(document);
+    };
+
+    apply();
+    requestAnimationFrame(apply);
+    setTimeout(apply, 250);
+    setTimeout(apply, 1000);
+    setTimeout(apply, 2500);
+
+    if (!this._sidebarObserver) {
+      this._sidebarObserver = new MutationObserver(apply);
+      this._sidebarObserver.observe(document.documentElement, {
+        childList: true,
+        subtree: true,
+        attributes: true,
+      });
+    }
   }
 
   translations() {
@@ -7065,6 +7236,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   connectedCallback() {
+    this.applyHideSidebarFromUrl();
     this.renderLoading();
 
     this._refreshInterval = setInterval(() => {
@@ -7077,6 +7249,16 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   disconnectedCallback() {
+    if (this._sidebarObserver) {
+      this._sidebarObserver.disconnect();
+      this._sidebarObserver = null;
+    }
+
+    if (this._sidebarObservers) {
+      this._sidebarObservers.forEach((observer) => observer.disconnect());
+      this._sidebarObservers = [];
+    }
+
     if (this._refreshInterval) {
       clearInterval(this._refreshInterval);
       this._refreshInterval = null;
@@ -7767,7 +7949,7 @@ class WorldCup2026Panel extends HTMLElement {
   renderLoading() {
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app">
+      <div class="wc-app ${this.shouldHideHomeAssistantSidebar() ? "wc-hide-sidebar-mode" : ""}">
         <div class="wc-shell">
           <div class="wc-card">${this.t("loading")}</div>
         </div>
@@ -7778,7 +7960,7 @@ class WorldCup2026Panel extends HTMLElement {
   renderError(err) {
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app">
+      <div class="wc-app ${this.shouldHideHomeAssistantSidebar() ? "wc-hide-sidebar-mode" : ""}">
         <div class="wc-shell">
           <div class="wc-card">
             <h1>${this.t("errorTitle")}</h1>
@@ -7809,6 +7991,12 @@ class WorldCup2026Panel extends HTMLElement {
           font-family: Arial, sans-serif;
           padding: 22px;
           box-sizing: border-box;
+        }
+
+        .wc-app.wc-hide-sidebar-mode {
+          width: 100vw;
+          max-width: none;
+          margin-left: 0;
         }
 
         .wc-shell {
@@ -8265,6 +8453,7 @@ class WorldCup2026Panel extends HTMLElement {
 
         .wc-language-wrap,
         .wc-view-wrap,
+        .wc-sidebar-wrap,
         .wc-updated-wrap {
           display: inline-flex;
           flex-direction: row;
@@ -8275,6 +8464,7 @@ class WorldCup2026Panel extends HTMLElement {
 
         .wc-language-label,
         .wc-view-label,
+        .wc-sidebar-label,
         .wc-updated-label {
           display: none;
         }
@@ -8294,6 +8484,7 @@ class WorldCup2026Panel extends HTMLElement {
         }
 .wc-language-select,
         .wc-view-select,
+        .wc-sidebar-select,
         .wc-updated-pill,
         .wc-header-controls .wc-back-button {
           min-height: 34px;
@@ -8310,7 +8501,8 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-language-select,
-        .wc-view-select {
+        .wc-view-select,
+        .wc-sidebar-select {
           cursor: pointer;
           background: rgba(255,255,255,0.10);
           color: white;
@@ -8321,6 +8513,10 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-view-select {
+          min-width: 118px;
+        }
+
+        .wc-sidebar-select {
           min-width: 118px;
         }
 
@@ -8355,7 +8551,8 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-language-select option,
-        .wc-view-select option {
+        .wc-view-select option,
+        .wc-sidebar-select option {
           color: #111;
           background: #fff;
         }
@@ -12472,6 +12669,7 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-updated-pill,
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select,
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select,
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-sidebar-select,
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button {
           height: 20px !important;
           min-height: 20px !important;
@@ -12494,6 +12692,10 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select {
+          width: 50px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-sidebar-select {
           width: 50px !important;
         }
 
@@ -12557,6 +12759,7 @@ class WorldCup2026Panel extends HTMLElement {
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-updated-pill,
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select,
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select,
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-sidebar-select,
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button {
             height: 18px !important;
             min-height: 18px !important;
@@ -12567,6 +12770,7 @@ class WorldCup2026Panel extends HTMLElement {
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-tablet-top-time { width: 48px !important; }
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-language-select { width: 34px !important; }
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-view-select { width: 34px !important; }
+          .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-sidebar-select { width: 34px !important; }
           .wc-app.wc-view-tablet .wc-tablet-top-controls .wc-back-button { width: 34px !important; }
 
           .wc-app.wc-view-tablet .wc-progress-title-main {
@@ -12936,6 +13140,60 @@ class WorldCup2026Panel extends HTMLElement {
     select.onchange = (e) => {
       this.changeViewMode(e.target.value);
     };
+  }
+
+  sidebarCodeFor(value) {
+    return value === "hide" ? "HIDE" : "SHOW";
+  }
+
+  setSidebarSelectCompact(select, compact = true) {
+    if (!select) return;
+
+    Array.from(select.options).forEach((option) => {
+      if (!option.value) return;
+
+      if (!option.dataset.fullLabel) {
+        option.dataset.fullLabel = option.textContent.trim();
+      }
+
+      option.textContent = compact
+        ? this.sidebarCodeFor(option.value)
+        : option.dataset.fullLabel;
+    });
+  }
+
+  setupSidebarSelect(select) {
+    if (!select) return;
+
+    this.setSidebarSelectCompact(select, true);
+
+    const showFullNames = () => this.setSidebarSelectCompact(select, false);
+    const showCodes = () => this.setSidebarSelectCompact(select, true);
+
+    select.onfocus = showFullNames;
+    select.onmousedown = showFullNames;
+    select.ontouchstart = showFullNames;
+    select.onblur = showCodes;
+    select.onchange = (e) => {
+      const hide = e.target.value === "hide";
+      localStorage.setItem("world_cup_2026_hide_sidebar", hide ? "true" : "false");
+      this._hideSidebar = hide;
+      // Reloading is the safest way to restore the Home Assistant shell after sidebar CSS has been applied.
+      window.location.reload();
+    };
+  }
+
+  sidebarSelector() {
+    const value = this._hideSidebar ? "hide" : "show";
+    return `
+      <div class="wc-sidebar-wrap">
+        <div class="wc-sidebar-label">Sidebar</div>
+        <select class="wc-sidebar-select" id="wc-sidebar-select" title="Home Assistant Sidebar">
+          <option value="show" ${value === "show" ? "selected" : ""}>Show Sidebar</option>
+          <option value="hide" ${value === "hide" ? "selected" : ""}>Hide Sidebar</option>
+        </select>
+      </div>
+    `;
   }
 
   languageSelector() {
@@ -13514,6 +13772,7 @@ class WorldCup2026Panel extends HTMLElement {
       "netherlands|japan": "Dallas Stadium",
       "tunisia|sweden": "Monterrey Stadium",
       "ivory coast|ecuador": "Philadelphia Stadium",
+      "saudi arabia|uruguay": "Miami Stadium",
       "spain|cape verde": "Atlanta Stadium",
       "belgium|egypt": "Seattle Stadium",
       "iran|new zealand": "Los Angeles Stadium",
@@ -13576,6 +13835,122 @@ class WorldCup2026Panel extends HTMLElement {
     };
   }
 
+
+  fixtureMatchNumber(match) {
+    const value = match?.matchNumber ?? match?.match_number ?? match?.fifaMatchNumber ?? match?.fifa_match_number ?? match?.number ?? match?.matchNo ?? match?.match_no ?? "";
+    const parsed = Number(String(value).replace(/[^0-9]/g, ""));
+    return Number.isFinite(parsed) && parsed > 0 ? parsed : null;
+  }
+
+  officialFixtureVenueByMatchNumber() {
+    return {
+      1: "Mexico City Stadium",
+      2: "Guadalajara Stadium",
+      3: "Toronto Stadium",
+      4: "Los Angeles Stadium",
+      5: "Boston Stadium",
+      6: "Vancouver Stadium",
+      7: "New York New Jersey Stadium",
+      8: "San Francisco Bay Area Stadium",
+      9: "Philadelphia Stadium",
+      10: "Houston Stadium",
+      11: "Dallas Stadium",
+      12: "Monterrey Stadium",
+      13: "Miami Stadium",
+      14: "Atlanta Stadium",
+      15: "Los Angeles Stadium",
+      16: "Seattle Stadium",
+      17: "New York New Jersey Stadium",
+      18: "Boston Stadium",
+      19: "Kansas City Stadium",
+      20: "San Francisco Bay Area Stadium",
+      21: "Toronto Stadium",
+      22: "Dallas Stadium",
+      23: "Houston Stadium",
+      24: "Mexico City Stadium",
+      25: "Atlanta Stadium",
+      26: "Los Angeles Stadium",
+      27: "Vancouver Stadium",
+      28: "Guadalajara Stadium",
+      29: "Philadelphia Stadium",
+      30: "Boston Stadium",
+      31: "San Francisco Bay Area Stadium",
+      32: "Seattle Stadium",
+      33: "Toronto Stadium",
+      34: "Kansas City Stadium",
+      35: "Houston Stadium",
+      36: "Monterrey Stadium",
+      37: "Miami Stadium",
+      38: "Atlanta Stadium",
+      39: "Los Angeles Stadium",
+      40: "Vancouver Stadium",
+      41: "New York New Jersey Stadium",
+      42: "Philadelphia Stadium",
+      43: "Dallas Stadium",
+      44: "San Francisco Bay Area Stadium",
+      45: "Boston Stadium",
+      46: "Toronto Stadium",
+      47: "Houston Stadium",
+      48: "Guadalajara Stadium",
+      49: "Miami Stadium",
+      50: "Atlanta Stadium",
+      51: "Vancouver Stadium",
+      52: "Seattle Stadium",
+      53: "Mexico City Stadium",
+      54: "Monterrey Stadium",
+      55: "Philadelphia Stadium",
+      56: "New York New Jersey Stadium",
+      57: "Dallas Stadium",
+      58: "Kansas City Stadium",
+      59: "Los Angeles Stadium",
+      60: "San Francisco Bay Area Stadium",
+      61: "Boston Stadium",
+      62: "Toronto Stadium",
+      63: "Seattle Stadium",
+      64: "Vancouver Stadium",
+      65: "Houston Stadium",
+      66: "Guadalajara Stadium",
+      67: "New York New Jersey Stadium",
+      68: "Philadelphia Stadium",
+      69: "Kansas City Stadium",
+      70: "Dallas Stadium",
+      71: "Miami Stadium",
+      72: "Atlanta Stadium",
+      73: "Los Angeles Stadium",
+      74: "Boston Stadium",
+      75: "Monterrey Stadium",
+      76: "Houston Stadium",
+      77: "New York New Jersey Stadium",
+      78: "Dallas Stadium",
+      79: "Mexico City Stadium",
+      80: "Atlanta Stadium",
+      81: "San Francisco Bay Area Stadium",
+      82: "Seattle Stadium",
+      83: "Toronto Stadium",
+      84: "Los Angeles Stadium",
+      85: "Vancouver Stadium",
+      86: "Miami Stadium",
+      87: "Kansas City Stadium",
+      88: "Dallas Stadium",
+      89: "Philadelphia Stadium",
+      90: "Houston Stadium",
+      91: "New York New Jersey Stadium",
+      92: "Mexico City Stadium",
+      93: "Dallas Stadium",
+      94: "Seattle Stadium",
+      95: "Atlanta Stadium",
+      96: "Vancouver Stadium",
+      97: "Boston Stadium",
+      98: "Los Angeles Stadium",
+      99: "Miami Stadium",
+      100: "Kansas City Stadium",
+      101: "Dallas Stadium",
+      102: "Atlanta Stadium",
+      103: "Miami Stadium",
+      104: "New York New Jersey Stadium",
+    };
+  }
+
   venueFallbackDetails(venueName) {
     const venues = {
       "Atlanta Stadium": { city: "Atlanta", country: "USA", realName: "Mercedes-Benz Stadium", capacity: 75000 },
@@ -13598,20 +13973,111 @@ class WorldCup2026Panel extends HTMLElement {
     return venues[venueName] || null;
   }
 
-  fixtureVenueInfo(match) {
+
+  completeVenueStadiums(stadiums = []) {
+    const list = Array.isArray(stadiums) ? [...stadiums] : [];
+    const hasMonterrey = list.some((venue) => {
+      const values = [venue?.name, venue?.stadium, venue?.real_name, venue?.realName, venue?.venue, venue?.city]
+        .filter(Boolean)
+        .map((value) => this.normaliseFixtureText(value));
+      return values.some((value) =>
+        value.includes("monterrey") ||
+        value.includes("bbva") ||
+        value.includes("guadalupe") ||
+        value.includes("estadio monterrey")
+      );
+    });
+
+    if (!hasMonterrey) {
+      list.push({
+        id: "monterrey",
+        name: "Monterrey Stadium",
+        stadium: "Monterrey Stadium",
+        real_name: "Estadio BBVA",
+        realName: "Estadio BBVA",
+        city: "Monterrey",
+        country: "Mexico",
+        flag: "🇲🇽",
+        capacity: 53500,
+        matches: 4,
+        matches_hosted: 4,
+        aliases: ["Estadio Monterrey", "Estadio BBVA", "BBVA Stadium", "Guadalupe", "Monterrey Stadium"],
+      });
+    }
+
+    return list;
+  }
+
+
+  venueAliasesFor(venueName) {
+    const key = this.normaliseFixtureText(venueName || "");
+    const aliases = {
+      "atlanta stadium": ["Mercedes-Benz Stadium", "Atlanta", "Atlanta Stadium"],
+      "boston stadium": ["Gillette Stadium", "Foxborough", "Boston", "Boston Stadium"],
+      "dallas stadium": ["AT&T Stadium", "Arlington", "Dallas", "Dallas Stadium"],
+      "guadalajara stadium": ["Estadio Akron", "Guadalajara", "Guadalajara Stadium"],
+      "houston stadium": ["NRG Stadium", "Houston", "Houston Stadium"],
+      "kansas city stadium": ["Arrowhead Stadium", "GEHA Field at Arrowhead Stadium", "Kansas City", "Kansas City Stadium"],
+      "los angeles stadium": ["SoFi Stadium", "Los Angeles", "Los Angeles Stadium"],
+      "mexico city stadium": ["Estadio Banorte", "Estadio Azteca", "Mexico City", "Mexico City Stadium"],
+      "miami stadium": ["Hard Rock Stadium", "Miami", "Miami Stadium"],
+      "monterrey stadium": ["Estadio Monterrey", "Estadio BBVA", "BBVA Stadium", "Monterrey", "Guadalupe", "Monterrey Stadium"],
+      "new york new jersey stadium": ["MetLife Stadium", "New York", "New Jersey", "East Rutherford", "New York New Jersey Stadium"],
+      "philadelphia stadium": ["Lincoln Financial Field", "Philadelphia", "Philadelphia Stadium"],
+      "san francisco bay area stadium": ["Levi's Stadium", "Levis Stadium", "Santa Clara", "San Francisco", "San Francisco Bay Area Stadium"],
+      "seattle stadium": ["Lumen Field", "Seattle", "Seattle Stadium"],
+      "toronto stadium": ["BMO Field", "Toronto", "Toronto Stadium"],
+      "vancouver stadium": ["BC Place", "Vancouver", "Vancouver Stadium"],
+    };
+    return aliases[key] || [venueName].filter(Boolean);
+  }
+
+  knockoutDerivedMatchNumber(stage, index, match) {
+    const existing = this.fixtureMatchNumber(match);
+    if (existing) return existing;
+
+    const starts = {
+      LAST_32: 73,
+      LAST_16: 89,
+      QUARTER_FINALS: 97,
+      SEMI_FINALS: 101,
+      THIRD_PLACE: 103,
+      FINAL: 104,
+    };
+
+    const start = starts[stage];
+    return start ? start + index : null;
+  }
+
+  fixtureVenueInfo(match, forcedMatchNumber = null) {
     const homeTeam = this.getHomeTeam(match);
     const awayTeam = this.getAwayTeam(match);
     const directVenue = match.venue || match.stadium || match.location || match.venueName || match.venue_name || match.venue_display_name || "";
-    const lookupVenue = this.officialFixtureVenueLookup()[this.fixturePairKey(homeTeam, awayTeam)] || "";
-    const venueName = directVenue || lookupVenue;
+    const officialVenues = this.officialFixtureVenueLookup();
+    const officialVenuesByNumber = this.officialFixtureVenueByMatchNumber();
+    const matchNumber = forcedMatchNumber || this.fixtureMatchNumber(match);
+    const homeKey = this.fixtureTeamKey(homeTeam);
+    const awayKey = this.fixtureTeamKey(awayTeam);
+    const pairKey = `${homeKey}|${awayKey}`;
+    const reversePairKey = `${awayKey}|${homeKey}`;
+    const lookupVenue = officialVenues[pairKey] || officialVenues[reversePairKey] || "";
+    const numberVenue = matchNumber ? (officialVenuesByNumber[matchNumber] || "") : "";
+    const venueName = numberVenue || directVenue || lookupVenue;
 
-    const stadiums = this._data?.venues?.stadiums || [];
-    const normalisedVenue = this.normaliseFixtureText(venueName);
+    const stadiums = this.completeVenueStadiums(this._data?.venues?.stadiums || []);
+    const venueAliases = this.venueAliasesFor(venueName);
+    const normalisedVenueCandidates = [venueName, ...venueAliases]
+      .filter(Boolean)
+      .map((item) => this.normaliseFixtureText(item))
+      .filter(Boolean);
+
     const venueData = stadiums.find((v) => {
-      const candidates = [v.name, v.stadium, v.real_name, v.venue, v.city].filter(Boolean);
+      const candidates = [v.name, v.stadium, v.real_name, v.realName, v.venue, v.city].filter(Boolean);
       return candidates.some((candidate) => {
         const normalisedCandidate = this.normaliseFixtureText(candidate);
-        return normalisedCandidate === normalisedVenue || normalisedCandidate.includes(normalisedVenue) || normalisedVenue.includes(normalisedCandidate);
+        return normalisedVenueCandidates.some((normalisedVenue) => {
+          return normalisedCandidate === normalisedVenue || normalisedCandidate.includes(normalisedVenue) || normalisedVenue.includes(normalisedCandidate);
+        });
       });
     });
 
@@ -13642,7 +14108,7 @@ class WorldCup2026Panel extends HTMLElement {
     const finishedClass = ["FINISHED", "FT", "AET", "PEN"].includes(m.status) ? " is-finished" : "";
     const scheduledClass = ["TIMED", "SCHEDULED"].includes(m.status) ? " is-scheduled" : "";
     const venueInfo = this.fixtureVenueInfo(m);
-    const matchNumber = m.matchNumber || m.number || m.fifaMatchNumber || "";
+    const matchNumber = this.fixtureMatchNumber(m) || "";
     const matchDate = this.fixtureDateLabel(m);
     const matchTime = this.fixtureTime(m);
 
@@ -13694,6 +14160,7 @@ class WorldCup2026Panel extends HTMLElement {
     const status = this.statusLabel(m.status);
     const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
     const date = this.formatDate(m.utcDate || m.date);
+    const venueInfo = this.fixtureVenueInfo(m);
 
     return `
       <div class="wc-row">
@@ -14030,20 +14497,36 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="wc-section-title">${this.t("knockoutBracket")}</div>
         <div class="wc-bracket">
           ${rounds.map(([stage, label]) => {
-            const matches = fixtures.filter(m => m.stage === stage);
+            const matches = fixtures
+              .filter(m => m.stage === stage)
+              .sort((a, b) => {
+                const aTime = new Date(a.utcDate || a.date || 0).getTime();
+                const bTime = new Date(b.utcDate || b.date || 0).getTime();
+                return aTime - bTime;
+              });
             return `
               <div>
                 <div class="wc-round-title">${label}</div>
                 ${
                   matches.length
-                    ? matches.map(m => `
+                    ? matches.map((m, index) => {
+                      const knockoutNumber = this.knockoutDerivedMatchNumber(stage, index, m);
+                      const venueInfo = this.fixtureVenueInfo(m, knockoutNumber);
+                      return `
                       <div class="wc-bracket-match">
                         ${this.matchRowInner(m)}
                         <div class="wc-muted" style="text-align:center;margin-top:8px;">
-                          ${this.esc(this.formatDate(m.utcDate || m.date))}
+                          ${knockoutNumber ? `<span>#${this.esc(knockoutNumber)}</span> · ` : ""}${this.esc(this.formatDate(m.utcDate || m.date))}
                         </div>
+                        ${venueInfo ? `
+                          <div class="fixture-card-venue fixture-card-venue-inline" style="margin-top:8px;">
+                            <span class="fixture-venue-name">🏟 ${this.esc(venueInfo.name)}</span>
+                            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<span class="fixture-venue-real">Real: ${this.esc(venueInfo.realName)}</span>` : ""}
+                            ${venueInfo.city || venueInfo.country ? `<span class="fixture-venue-location">${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</span>` : ""}
+                          </div>
+                        ` : ""}
                       </div>
-                    `).join("")
+                    `}).join("")
                     : `<div class="wc-bracket-match">${this.t("tbc")}<br><span class="wc-muted">${this.t("fixturesNotAvailable")}</span></div>`
                 }
               </div>
@@ -14137,7 +14620,7 @@ class WorldCup2026Panel extends HTMLElement {
 
   venuesPage() {
     const v = this._data.venues || {};
-    const stadiums = v.stadiums || [];
+    const stadiums = this.completeVenueStadiums(v.stadiums || []);
     const finalVenue = v.final_venue;
 
     const venueTitle = (venue) => venue.name || venue.stadium || venue.real_name || this.t("unknown");
@@ -14149,9 +14632,9 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <div class="wc-grid">
         <div class="wc-stat"><strong>${stadiums.length}</strong>${this.t("stadiums")}</div>
-        <div class="wc-stat"><strong>${v.country_counts?.USA ?? 0}</strong>${this.t("usaVenues")}</div>
-        <div class="wc-stat"><strong>${v.country_counts?.Canada ?? 0}</strong>${this.t("canadaVenues")}</div>
-        <div class="wc-stat"><strong>${v.country_counts?.Mexico ?? 0}</strong>${this.t("mexicoVenues")}</div>
+        <div class="wc-stat"><strong>${stadiums.filter((venue) => venue.country === "USA").length || v.country_counts?.USA || 0}</strong>${this.t("usaVenues")}</div>
+        <div class="wc-stat"><strong>${stadiums.filter((venue) => venue.country === "Canada").length || v.country_counts?.Canada || 0}</strong>${this.t("canadaVenues")}</div>
+        <div class="wc-stat"><strong>${stadiums.filter((venue) => venue.country === "Mexico").length || v.country_counts?.Mexico || 0}</strong>${this.t("mexicoVenues")}</div>
       </div>
 
       ${
@@ -14551,7 +15034,7 @@ class WorldCup2026Panel extends HTMLElement {
   render() {
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app wc-view-${this._viewMode}" dir="${this._language === "ar" ? "rtl" : "ltr"}">
+      <div class="wc-app wc-view-${this._viewMode} ${this.shouldHideHomeAssistantSidebar() ? "wc-hide-sidebar-mode" : ""}" dir="${this._language === "ar" ? "rtl" : "ltr"}">
         <div class="wc-shell">
           <div class="wc-header">
             <div class="wc-header-title-row">
@@ -14578,6 +15061,10 @@ class WorldCup2026Panel extends HTMLElement {
                   <option value="tablet" ${this._viewMode === "tablet" ? "selected" : ""}>${this.esc(this.t("tabletView"))}</option>
                   <option value="pc" ${this._viewMode === "pc" ? "selected" : ""}>${this.esc(this.t("pcView"))}</option>
                 </select>
+                <select class="wc-sidebar-select wc-sidebar-select-tablet" id="wc-sidebar-select-tablet" title="Home Assistant Sidebar">
+                  <option value="show" ${!this._hideSidebar ? "selected" : ""}>Show Sidebar</option>
+                  <option value="hide" ${this._hideSidebar ? "selected" : ""}>Hide Sidebar</option>
+                </select>
                 <button class="wc-pill wc-back-button wc-back-button-tablet" id="wc-back-button-tablet" type="button">${this.t("back")}</button>
               </div>
               <div class="wc-title-stack">
@@ -14595,6 +15082,7 @@ class WorldCup2026Panel extends HTMLElement {
 
               ${this.languageSelector()}
               ${this.viewSelector()}
+              ${this.sidebarSelector()}
 
               <button class="wc-pill wc-back-button" id="wc-back-button" type="button">
                 ${this.t("back")}
@@ -14609,6 +15097,8 @@ class WorldCup2026Panel extends HTMLElement {
       </div>
     `;
 
+    this.applyHideSidebarFromUrl();
+
     this.querySelectorAll(".wc-nav button, .wc-tablet-header-nav button, .overview-action-button").forEach((button) => {
       button.onclick = () => {
         const page = button.getAttribute("data-page");
@@ -14622,6 +15112,10 @@ class WorldCup2026Panel extends HTMLElement {
 
     this.querySelectorAll("#wc-view-select, #wc-view-select-tablet").forEach((viewSelect) => {
       this.setupViewSelect(viewSelect);
+    });
+
+    this.querySelectorAll("#wc-sidebar-select, #wc-sidebar-select-tablet").forEach((sidebarSelect) => {
+      this.setupSidebarSelect(sidebarSelect);
     });
 
     this.querySelectorAll("#wc-back-button, #wc-back-button-tablet").forEach((backButton) => {
