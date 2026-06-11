@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 from datetime import timedelta
+import asyncio
 import json
 import logging
 from pathlib import Path
@@ -319,6 +320,34 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         )
         self.api = api
 
+
+    async def _export_public_json(self, matches, standings, scorers):
+        """Export public JSON files."""
+
+        export_dir = Path("/config/worldcup_export")
+        export_dir.mkdir(parents=True, exist_ok=True)
+
+        await asyncio.to_thread(
+            lambda: (export_dir / "matches.json").write_text(
+                json.dumps({"matches": matches}, indent=2),
+                encoding="utf-8",
+            )
+        )
+
+        await asyncio.to_thread(
+            lambda: (export_dir / "standings.json").write_text(
+                json.dumps({"standings": standings}, indent=2),
+                encoding="utf-8",
+            )
+        )
+
+        await asyncio.to_thread(
+            lambda: (export_dir / "scorers.json").write_text(
+                json.dumps({"scorers": scorers}, indent=2),
+                encoding="utf-8",
+            )
+        )
+
     async def _async_update_data(self) -> dict:
         """Fetch all World Cup data and build app-ready derived data."""
         try:
@@ -343,6 +372,12 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         if self.update_interval != new_interval:
             _LOGGER.debug("Switching poll interval to %s (live=%s)", new_interval, has_live)
             self.update_interval = new_interval
+
+        await self._export_public_json(
+            matches,
+            standings,
+            scorers,
+        )
 
         return {
             "matches": matches,
