@@ -155,11 +155,11 @@
       },
       "id": 537333,
       "utcDate": "2026-06-12T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-12T21:52:08Z",
+      "lastUpdated": "2026-06-12T21:53:11Z",
       "homeTeam": {
         "id": 828,
         "name": "Canada",
@@ -182,8 +182,8 @@
           "away": 1
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 1
         }
       },
       "odds": {
@@ -196,9 +196,7 @@
           "type": "REFEREE",
           "nationality": "Argentina"
         }
-      ],
-      "fallbackClock": 3129,
-      "fallbackClockText": "52:09"
+      ]
     },
     {
       "area": {
