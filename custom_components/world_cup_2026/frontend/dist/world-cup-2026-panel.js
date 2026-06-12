@@ -7553,15 +7553,56 @@ class WorldCup2026Panel extends HTMLElement {
       }
     }
 
-    const textValue = manualClock?.timer || manualClock?.text || match?.fallbackClockText || match?.manualClockText;
-    if (typeof textValue === "string" && /^\d+:\d{2}$/.test(textValue.trim())) {
-      const [minutes, seconds] = textValue.trim().split(":").map((part) => Number(part));
-      if (Number.isFinite(minutes) && Number.isFinite(seconds)) {
-        return Math.max(0, Math.floor((minutes * 60) + seconds));
+    const textValues = [
+      manualClock?.timer,
+      manualClock?.text,
+      match?.fallbackClockText,
+      match?.manualClockText,
+      match?.displayMinute,
+      match?.minute,
+      match?.elapsed,
+    ];
+
+    for (const value of textValues) {
+      if (value === null || value === undefined || value === "") continue;
+      const text = String(value).trim();
+
+      if (/^\d+:\d{2}$/.test(text)) {
+        const [minutes, seconds] = text.split(":").map((part) => Number(part));
+        if (Number.isFinite(minutes) && Number.isFinite(seconds)) {
+          return Math.max(0, Math.floor((minutes * 60) + seconds));
+        }
+      }
+
+      const minuteMatch = text.match(/^(\d+)\s*(?:'|m|min)?$/i);
+      if (minuteMatch) {
+        const minutes = Number(minuteMatch[1]);
+        if (Number.isFinite(minutes) && minutes >= 0) {
+          return Math.floor(minutes * 60);
+        }
       }
     }
 
     return null;
+  }
+
+  kickoffFallbackClockSeconds(match, now = Date.now()) {
+    const value = match?.utcDate || match?.date || match?.kickoff || match?.startTime;
+    if (!value) return null;
+
+    const kickoff = new Date(value).getTime();
+    if (!Number.isFinite(kickoff)) return null;
+
+    const seconds = Math.floor((now - kickoff) / 1000);
+    if (!Number.isFinite(seconds) || seconds < 0) return null;
+
+    const status = String(match?.status || "").toUpperCase();
+    if (this.isHalfTimeClockStatus(status)) return 45 * 60;
+    if (this.isFinishedClockStatus(status)) return null;
+
+    if (this.isExtraTimeMatch(match) && seconds < 90 * 60) return 90 * 60;
+
+    return Math.max(0, seconds);
   }
 
   exportedClockActive(match) {
@@ -7680,8 +7721,11 @@ class WorldCup2026Panel extends HTMLElement {
           // Restart from the frozen point: 45:00 after HT, 105:00 after ET HT.
           offsetSeconds = Number(previous.freezeAt || 0);
         } else if (!previous.startedAt) {
-          // Fresh live start. Extra-time statuses start from 90:00, normal live starts from 00:00.
-          offsetSeconds = this.isExtraTimeMatch(match) ? 90 * 60 : 0;
+          // New installs have no local timer. Use exported/fallback match data first so they do not restart from 00:00.
+          const fallbackSeconds = this.kickoffFallbackClockSeconds(match, now);
+          offsetSeconds = Number.isFinite(Number(fallbackSeconds))
+            ? Number(fallbackSeconds)
+            : (this.isExtraTimeMatch(match) ? 90 * 60 : 0);
         } else {
           offsetSeconds = previousSeconds;
         }
