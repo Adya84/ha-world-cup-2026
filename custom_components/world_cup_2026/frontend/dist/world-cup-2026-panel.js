@@ -10138,6 +10138,206 @@ class WorldCup2026Panel extends HTMLElement {
           white-space: nowrap;
         }
 
+        .results-page-card {
+          background: linear-gradient(135deg, rgba(5,28,62,0.88), rgba(8,43,86,0.72));
+          border: 1px solid rgba(120,220,255,0.22);
+          box-shadow: 0 18px 46px rgba(0,0,0,0.24), inset 0 1px 0 rgba(255,255,255,0.07);
+        }
+
+        .results-header {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 14px;
+          margin-bottom: 16px;
+        }
+
+        .results-subtitle {
+          color: rgba(255,255,255,0.78);
+          font-size: 14px;
+          font-weight: 750;
+          margin-top: 3px;
+        }
+
+        .results-count-pill {
+          white-space: nowrap;
+          padding: 9px 13px;
+          border-radius: 999px;
+          background: rgba(45,190,255,0.16);
+          border: 1px solid rgba(120,220,255,0.30);
+          font-size: 12px;
+          font-weight: 950;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+        }
+
+        .results-basic-list {
+          display: grid;
+          gap: 10px;
+        }
+
+        .result-basic-row {
+          display: grid;
+          grid-template-columns: minmax(135px, 0.75fr) minmax(155px, 1fr) auto minmax(155px, 1fr) auto;
+          align-items: center;
+          gap: 14px;
+          padding: 15px 16px;
+          border-radius: 16px;
+          background: linear-gradient(135deg, rgba(255,255,255,0.095), rgba(45,190,255,0.07));
+          border: 1px solid rgba(255,255,255,0.13);
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.055), 0 12px 26px rgba(0,0,0,0.18);
+        }
+
+        .result-basic-meta {
+          display: grid;
+          gap: 4px;
+          min-width: 0;
+        }
+
+        .result-basic-meta strong {
+          font-size: 12px;
+          font-weight: 950;
+          letter-spacing: 0.3px;
+        }
+
+        .result-basic-meta span {
+          color: rgba(255,255,255,0.78);
+          font-size: 12px;
+          font-weight: 850;
+        }
+
+        .result-basic-meta em {
+          color: rgba(255,255,255,0.68);
+          font-style: normal;
+          font-size: 11.5px;
+          font-weight: 750;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .result-basic-team {
+          display: flex;
+          align-items: center;
+          gap: 11px;
+          min-width: 0;
+          font-size: 18px;
+          font-weight: 950;
+        }
+
+        .result-basic-team span {
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .result-basic-home {
+          justify-content: flex-end;
+          text-align: right;
+        }
+
+        .result-basic-away {
+          justify-content: flex-start;
+          text-align: left;
+        }
+
+        .result-basic-row .group-flag-img,
+        .result-basic-row .group-flag-missing {
+          width: 56px;
+          height: 38px;
+          border-radius: 7px;
+          font-size: 20px;
+          flex: 0 0 auto;
+          box-shadow: 0 7px 16px rgba(0,0,0,0.32);
+        }
+
+        .result-basic-score-wrap {
+          display: grid;
+          place-items: center;
+          min-width: 96px;
+        }
+
+        .result-basic-score {
+          font-size: 34px;
+          line-height: 1;
+          font-weight: 950;
+          letter-spacing: 0.8px;
+          white-space: nowrap;
+        }
+
+        .result-basic-score-wrap small {
+          margin-top: 5px;
+          color: rgba(255,255,255,0.72);
+          font-size: 12px;
+          font-weight: 900;
+          text-transform: uppercase;
+        }
+
+        .result-basic-status {
+          justify-self: end;
+          white-space: nowrap;
+          padding: 8px 11px;
+          border-radius: 10px;
+          background: rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.12);
+          font-size: 11px;
+          font-weight: 950;
+        }
+
+        .results-footnote {
+          text-align: center;
+          margin-top: 13px;
+          color: rgba(255,255,255,0.62);
+          font-size: 12px;
+          font-weight: 750;
+        }
+
+        @media (max-width: 1000px) {
+          .result-basic-row {
+            grid-template-columns: 1fr auto 1fr;
+            gap: 9px 11px;
+          }
+
+          .result-basic-meta {
+            grid-column: 1 / -1;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px 10px;
+          }
+
+          .result-basic-status {
+            grid-column: 1 / -1;
+            justify-self: center;
+          }
+        }
+
+        @media (max-width: 620px) {
+          .results-header {
+            align-items: flex-start;
+            flex-direction: column;
+          }
+
+          .result-basic-row {
+            grid-template-columns: 1fr;
+            text-align: center;
+          }
+
+          .result-basic-home,
+          .result-basic-away {
+            justify-content: center;
+            text-align: center;
+          }
+
+          .result-basic-home {
+            flex-direction: row-reverse;
+          }
+
+          .result-basic-score {
+            font-size: 30px;
+          }
+        }
+
         .fixtures-days {
           display: grid;
           gap: 16px;
@@ -14144,7 +14344,7 @@ class WorldCup2026Panel extends HTMLElement {
   resultsPage() {
     const fixtures = this._data.fixtures || [];
     const resultsFeed = this._data.results || [];
-    // Results now come from the dedicated backend websocket feed.
+    // Results come from the dedicated backend websocket feed.
     // Fallback keeps older installs working if the results endpoint is unavailable.
     const resultsSource = resultsFeed.length ? resultsFeed : fixtures;
 
@@ -14158,57 +14358,89 @@ class WorldCup2026Panel extends HTMLElement {
 
     if (!results.length) {
       return `
-        <div class="wc-card fixtures-page-card">
-          <div class="fixtures-hero">
+        <div class="wc-card results-page-card">
+          <div class="results-header">
             <div>
-              <div class="wc-section-title">${this.t("results")}</div>
-              <div class="fixtures-subtitle">${this.t("noResultsLoaded")}</div>
+              <div class="wc-section-title">🏆 ${this.t("results")}</div>
+              <div class="results-subtitle">${this.t("noResultsLoaded")}</div>
             </div>
           </div>
         </div>
       `;
     }
 
-    const grouped = results.reduce((days, match) => {
-      const key = this.fixtureDateKey(match);
-      if (!days[key]) {
-        days[key] = [];
-      }
-      days[key].push(match);
-      return days;
-    }, {});
-
     return `
-      <div class="fixtures-page-card wc-card">
-        <div class="fixtures-hero">
-          <div class="fixtures-title-wrap">
-            <div class="fixtures-title-row">
-              <div class="wc-section-title">${this.t("results")}</div>
-            </div>
-            <div class="fixtures-subtitle">${this.t("finishedMatchesSubtitle")}</div>
+      <div class="wc-card results-page-card">
+        <div class="results-header">
+          <div>
+            <div class="wc-section-title">🏆 Match Results</div>
+            <div class="results-subtitle">Completed World Cup 2026 matches</div>
           </div>
-          <div class="fixtures-summary-grid">
-            <div class="fixtures-summary-box"><strong>${results.length}</strong><span>${this.t("played")}</span></div>
-          </div>
+          <div class="results-count-pill">${results.length} ${this.t("played")}</div>
         </div>
 
-        <div class="fixtures-days">
-          ${Object.entries(grouped).map(([key, matches]) => `
-            <div class="fixtures-day-block">
-              <div class="fixtures-day-heading">
-                <span>${this.esc(this.fixtureDayTitle(matches[0]))}</span>
-                <small>${matches.length} ${this.t("results")}</small>
-              </div>
-              <div class="fixtures-card-grid">
-                ${matches.map(m => this.fixtureCard(m)).join("")}
-              </div>
-            </div>
-          `).join("")}
+        <div class="results-basic-list">
+          ${results.map(m => this.resultBasicRow(m)).join("")}
         </div>
+
+        <div class="results-footnote">ⓘ All times shown in your local time • FT = Full Time</div>
       </div>
     `;
   }
 
+  resultBasicRow(m) {
+    const homeTeam = this.getHomeTeam(m);
+    const awayTeam = this.getAwayTeam(m);
+    const homeScore = this.getHomeScore(m);
+    const awayScore = this.getAwayScore(m);
+    const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
+    const venueInfo = this.fixtureVenueInfo(m);
+    const venueName = venueInfo?.name || m.venue || m.stadium || m.venueName || "";
+    const status = this.statusLabel(m.status) || "FT";
+    const date = this.resultDateLabel(m);
+
+    return `
+      <div class="result-basic-row">
+        <div class="result-basic-meta">
+          <strong>${this.esc(date)}</strong>
+          ${stage ? `<span>${this.esc(stage)}</span>` : ""}
+          ${venueName ? `<em>🏟 ${this.esc(venueName)}</em>` : ""}
+        </div>
+
+        <div class="result-basic-team result-basic-home">
+          <span>${this.esc(this.localizedTeamName(homeTeam))}</span>
+          ${this.flag(homeTeam, true)}
+        </div>
+
+        <div class="result-basic-score-wrap">
+          <div class="result-basic-score">${this.esc(homeScore)} - ${this.esc(awayScore)}</div>
+          <small>${this.esc(status)}</small>
+        </div>
+
+        <div class="result-basic-team result-basic-away">
+          ${this.flag(awayTeam, true)}
+          <span>${this.esc(this.localizedTeamName(awayTeam))}</span>
+        </div>
+
+        <div class="result-basic-status">COMPLETED</div>
+      </div>
+    `;
+  }
+
+  resultDateLabel(match) {
+    const value = match.utcDate || match.date;
+    if (!value) return this.t("unknown");
+
+    try {
+      return new Date(value).toLocaleDateString(this.locale(), {
+        day: "2-digit",
+        month: "short",
+        year: "numeric",
+      }).toUpperCase();
+    } catch {
+      return String(value).slice(0, 10).toUpperCase();
+    }
+  }
 
   isFinishedMatch(match) {
     const status = String(match?.status || match?.matchStatus || "").toUpperCase().trim();
