@@ -2,7 +2,7 @@
 
 from __future__ import annotations
 
-from datetime import timedelta
+from datetime import timedelta, datetime, timezone
 import asyncio
 import base64
 import json
@@ -97,6 +97,36 @@ def _team_name(team):
     if isinstance(team, dict):
         return team.get("shortName") or team.get("name") or team.get("tla") or "TBC"
     return team or "TBC"
+
+
+def _normalise_team_name(value):
+    """Normalise team names so football-data and API-Football can be matched."""
+    value = str(value or "").lower()
+    replacements = {
+        "&": " and ",
+        "republic": "",
+        "south korea": "korea",
+        "korea republic": "korea",
+        "usa": "united states",
+        "u.s.a.": "united states",
+        "turkiye": "turkey",
+        "türkiye": "turkey",
+        "côte d’ivoire": "ivory coast",
+        "cote d ivoire": "ivory coast",
+        "cote d'ivoire": "ivory coast",
+        "bosnia and herzegovina": "bosnia herzegovina",
+        "bosnia-herzegovina": "bosnia herzegovina",
+        "bosnia & herzegovina": "bosnia herzegovina",
+        "cape verde islands": "cape verde",
+    }
+    for old, new in replacements.items():
+        value = value.replace(old, new)
+    value = "".join(ch if ch.isalnum() else " " for ch in value)
+    return " ".join(value.split())
+
+
+def _match_key_from_names(home, away):
+    return f"{_normalise_team_name(home)}|{_normalise_team_name(away)}"
 
 
 def _full_time_score(match):
@@ -322,6 +352,10 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             update_interval=SCAN_INTERVAL_NORMAL,
         )
         self.api = api
+        self._live_minutes_cache = {}
+        self._live_minutes_last_fetch = None
+        self._live_api_football_cache = {}
+        self._live_api_football_last_fetch = None
 
 
     def _read_github_settings(self):
@@ -337,6 +371,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             "github_token": None,
             "github_repo": "Adya84/ha-world-cup-2026",
             "github_branch": "main",
+            "api_football_key": None,
         }
 
         if not secrets_file.exists():
@@ -456,6 +491,225 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
         _LOGGER.info("World Cup public JSON synced to GitHub repo %s", repo)
 
+    def _api_football_enabled(self):
+        settings = self._read_github_settings()
+        return settings.get("api_football_key")
+
+    def _normalise_api_football_goal_event(self, event):
+        """Convert an API-Football event into a small goal-event object."""
+        if not isinstance(event, dict):
+            return None
+
+        event_type = str(event.get("type") or "").lower()
+        if event_type != "goal":
+            return None
+
+        time_data = event.get("time") or {}
+        team_data = event.get("team") or {}
+        player_data = event.get("player") or {}
+        assist_data = event.get("assist") or {}
+
+        player_name = player_data.get("name") if isinstance(player_data, dict) else None
+        team_name = team_data.get("name") if isinstance(team_data, dict) else None
+        assist_name = assist_data.get("name") if isinstance(assist_data, dict) else None
+
+        if not player_name or not team_name:
+            return None
+
+        minute = time_data.get("elapsed") if isinstance(time_data, dict) else None
+        extra = time_data.get("extra") if isinstance(time_data, dict) else None
+
+        try:
+            minute = int(minute) if minute is not None else None
+        except (TypeError, ValueError):
+            minute = None
+
+        try:
+            extra = int(extra) if extra is not None else None
+        except (TypeError, ValueError):
+            extra = None
+
+        return {
+            "type": "Goal",
+            "team": team_name,
+            "player": player_name,
+            "minute": minute,
+            "extra": extra,
+            "detail": event.get("detail"),
+            "assist": assist_name,
+        }
+
+    async def _fetch_api_football_events_for_fixture(self, session, fixture_id, headers):
+        """Fetch goal events for one API-Football fixture."""
+        if not fixture_id:
+            return []
+
+        url = f"https://v3.football.api-sports.io/fixtures/events?fixture={fixture_id}"
+        try:
+            async with session.get(url, headers=headers) as response:
+                if response.status >= 400:
+                    text = await response.text()
+                    _LOGGER.warning(
+                        "API-Football fixture events lookup failed for %s: %s %s",
+                        fixture_id,
+                        response.status,
+                        text,
+                    )
+                    return []
+                payload = await response.json()
+        except Exception as err:  # pylint: disable=broad-exception-caught
+            _LOGGER.warning("API-Football fixture events lookup failed for %s: %s", fixture_id, err)
+            return []
+
+        return [
+            event
+            for event in (
+                self._normalise_api_football_goal_event(item)
+                for item in (payload.get("response", []) or [])
+            )
+            if event
+        ]
+
+    async def _fetch_live_data_from_api_football(self):
+        """Fetch live elapsed minutes and goal events from API-Football only.
+
+        Uses /fixtures?live=all and extracts fixture.status.elapsed.
+        Goal events are read from the live payload when available, otherwise
+        /fixtures/events is queried for each live fixture. Results are cached
+        for five minutes to protect the free API limit.
+        """
+        api_key = self._api_football_enabled()
+        if not api_key:
+            return {}
+
+        now = datetime.now(timezone.utc)
+        if (
+            self._live_api_football_last_fetch
+            and now - self._live_api_football_last_fetch < timedelta(minutes=5)
+        ):
+            return self._live_api_football_cache
+
+        url = "https://v3.football.api-sports.io/fixtures?live=all"
+        headers = {"x-apisports-key": api_key}
+        timeout = aiohttp.ClientTimeout(total=30)
+        live_data = {}
+
+        try:
+            async with aiohttp.ClientSession(timeout=timeout) as session:
+                async with session.get(url, headers=headers) as response:
+                    if response.status >= 400:
+                        text = await response.text()
+                        _LOGGER.warning(
+                            "API-Football live lookup failed: %s %s",
+                            response.status,
+                            text,
+                        )
+                        return self._live_api_football_cache
+
+                    payload = await response.json()
+
+                live_items = payload.get("response", []) or []
+                for item in live_items:
+                    fixture = item.get("fixture") or {}
+                    fixture_id = fixture.get("id")
+                    status = fixture.get("status") or {}
+                    elapsed = status.get("elapsed")
+
+                    teams = item.get("teams") or {}
+                    home = (teams.get("home") or {}).get("name")
+                    away = (teams.get("away") or {}).get("name")
+
+                    if not home or not away:
+                        continue
+
+                    try:
+                        elapsed = int(elapsed) if elapsed is not None else None
+                    except (TypeError, ValueError):
+                        elapsed = None
+
+                    goal_events = [
+                        event
+                        for event in (
+                            self._normalise_api_football_goal_event(event)
+                            for event in (item.get("events", []) or [])
+                        )
+                        if event
+                    ]
+
+                    if not goal_events and fixture_id:
+                        goal_events = await self._fetch_api_football_events_for_fixture(
+                            session,
+                            fixture_id,
+                            headers,
+                        )
+
+                    item_data = {
+                        "minute": elapsed,
+                        "goalEvents": goal_events,
+                    }
+
+                    live_data[_match_key_from_names(home, away)] = item_data
+                    live_data[_match_key_from_names(away, home)] = item_data
+
+        except Exception as err:  # pylint: disable=broad-exception-caught
+            _LOGGER.warning("API-Football live lookup failed: %s", err)
+            return self._live_api_football_cache
+
+        self._live_api_football_cache = live_data
+        self._live_api_football_last_fetch = now
+        self._live_minutes_cache = {
+            key: value.get("minute")
+            for key, value in live_data.items()
+            if value.get("minute") is not None
+        }
+        self._live_minutes_last_fetch = now
+        _LOGGER.debug("API-Football live data loaded for %s matches", len(live_data))
+        return live_data
+
+    async def _fetch_live_minutes_from_api_football(self):
+        """Backward-compatible helper returning only live minutes."""
+        live_data = await self._fetch_live_data_from_api_football()
+        return {
+            key: value.get("minute")
+            for key, value in live_data.items()
+            if value.get("minute") is not None
+        }
+
+    async def _add_live_api_football_data_to_matches(self, matches):
+        """Add minute and goalEvents fields to live football-data matches."""
+        if not any(match.get("status") in LIVE_STATUSES for match in matches):
+            return matches
+
+        live_data = await self._fetch_live_data_from_api_football()
+        if not live_data:
+            return matches
+
+        for match in matches:
+            if match.get("status") not in LIVE_STATUSES:
+                continue
+
+            home = _team_name(match.get("homeTeam", {}))
+            away = _team_name(match.get("awayTeam", {}))
+            data = live_data.get(_match_key_from_names(home, away))
+
+            if not data:
+                continue
+
+            minute = data.get("minute")
+            if minute is not None:
+                match["minute"] = minute
+
+            goal_events = data.get("goalEvents") or []
+            if goal_events:
+                match["goalEvents"] = goal_events
+                match["events"] = goal_events
+
+        return matches
+
+    async def _add_live_minutes_to_matches(self, matches):
+        """Backward-compatible wrapper for older internal calls."""
+        return await self._add_live_api_football_data_to_matches(matches)
+
     async def _async_update_data(self) -> dict:
         """Fetch all World Cup data and build app-ready derived data."""
         try:
@@ -471,6 +725,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             scorers_data = {"scorers": []}
 
         matches = matches_data.get("matches", [])
+        matches = await self._add_live_api_football_data_to_matches(matches)
         standings = standings_data.get("standings", [])
         scorers = scorers_data.get("scorers", [])
 
