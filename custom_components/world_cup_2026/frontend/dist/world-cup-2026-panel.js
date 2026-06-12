@@ -7417,12 +7417,17 @@ class WorldCup2026Panel extends HTMLElement {
       SCHEDULED: this.t("scheduled"),
       IN_PLAY: this.t("liveStatus"),
       LIVE: this.t("liveStatus"),
-      PAUSED: this.t("paused"),
+      "1H": "1st Half",
+      "2H": "2nd Half",
+      HT: "Half Time",
+      HALF_TIME: "Half Time",
+      PAUSED: "Half Time",
       FINISHED: this.t("fullTime"),
       FT: this.t("fullTime"),
       AET: this.t("aet"),
       PEN: this.t("penalties"),
       POSTPONED: this.t("postponed"),
+      SUSPENDED: "Suspended",
     };
     return labels[status] || status || "";
   }
