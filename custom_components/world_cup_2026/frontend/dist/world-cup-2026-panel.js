@@ -7529,6 +7529,92 @@ class WorldCup2026Panel extends HTMLElement {
     return String(match?.duration || match?.score?.duration || "").toUpperCase();
   }
 
+  exportedClockState(match) {
+    if (!match || typeof match !== "object") return null;
+
+    const manual = match.manualClock && typeof match.manualClock === "object" ? match.manualClock : null;
+    const candidates = [
+      manual?.seconds,
+      manual?.clockSeconds,
+      manual?.clock_seconds,
+      match.clockSeconds,
+      match.clock_seconds,
+      match.fallbackClock,
+      match.fallback_clock,
+    ];
+
+    let seconds = null;
+    for (const candidate of candidates) {
+      const value = Number(candidate);
+      if (Number.isFinite(value)) {
+        seconds = Math.max(0, Math.floor(value));
+        break;
+      }
+    }
+
+    const timer = manual?.timer || match.fallbackClockText || match.clockText || match.timer || null;
+    if (seconds === null && timer && /^\d+:\d{2}$/.test(String(timer))) {
+      const [mins, secs] = String(timer).split(":").map((part) => Number(part));
+      if (Number.isFinite(mins) && Number.isFinite(secs)) {
+        seconds = Math.max(0, Math.floor((mins * 60) + secs));
+      }
+    }
+
+    if (seconds === null) return null;
+
+    const status = String(manual?.status || match.status || "").toUpperCase();
+    const activeValue = manual?.active ?? match.clock_active ?? match.clockActive ?? null;
+    const active = activeValue === null || activeValue === undefined
+      ? this.isLiveClockStatus(status)
+      : !!activeValue;
+
+    return {
+      seconds,
+      timer: timer || this.formatClockSeconds(seconds),
+      displayMinute: manual?.displayMinute || match.displayMinute || this.displayMinuteFromSeconds(seconds),
+      active,
+      status,
+      source: manual?.source || match.clockSource || "exported_manual_clock",
+    };
+  }
+
+  syncExportedClockState(match, state, previous, now) {
+    const exported = this.exportedClockState(match);
+    if (!exported) return { state, exported: null, changed: false };
+
+    const previousBase = Number(previous?.githubBaseSeconds ?? previous?.offsetSeconds);
+    const previousSyncedAt = Number(previous?.githubSyncedAt || 0);
+    const needsResync = !Number.isFinite(previousBase)
+      || !previousSyncedAt
+      || Math.abs(Number(exported.seconds) - previousBase) > 10
+      || previous?.githubActive !== exported.active
+      || previous?.githubSource !== exported.source;
+
+    if (!needsResync) {
+      return { state: { ...state, fromGithubClock: true }, exported, changed: false };
+    }
+
+    const nextState = {
+      ...state,
+      status: exported.status || state.status,
+      startedAt: exported.active ? now : null,
+      offsetSeconds: exported.seconds,
+      githubBaseSeconds: exported.seconds,
+      githubSyncedAt: now,
+      githubActive: exported.active,
+      githubSource: exported.source,
+      fromGithubClock: true,
+    };
+
+    if (exported.active) {
+      delete nextState.freezeAt;
+    } else {
+      nextState.freezeAt = exported.seconds;
+    }
+
+    return { state: nextState, exported, changed: true };
+  }
+
   isExtraTimeMatch(match) {
     const status = String(match?.status || "").toUpperCase();
     const duration = this.matchDuration(match);
@@ -7538,6 +7624,25 @@ class WorldCup2026Panel extends HTMLElement {
   currentClockSeconds(match, state = null, now = Date.now()) {
     const id = this.matchStorageId(match);
     const clockState = state || this._matchClockState?.[id];
+
+    const exported = this.exportedClockState(match);
+    if (exported) {
+      const syncedState = clockState || {};
+      const base = Number(syncedState.githubBaseSeconds ?? exported.seconds);
+      const syncedAt = Number(syncedState.githubSyncedAt || now);
+      const active = syncedState.githubActive ?? exported.active;
+
+      if (!active) {
+        return Math.max(0, Math.floor(Number(exported.seconds)));
+      }
+
+      if (!Number.isFinite(base) || !syncedAt) {
+        return Math.max(0, Math.floor(Number(exported.seconds)));
+      }
+
+      return Math.max(0, Math.floor(base + ((now - syncedAt) / 1000)));
+    }
+
     if (!clockState) return null;
 
     if (Number.isFinite(Number(clockState.freezeAt))) {
@@ -7589,62 +7694,64 @@ class WorldCup2026Panel extends HTMLElement {
       const hasScores = Number.isFinite(homeScore) && Number.isFinite(awayScore);
       let state = { ...previous };
 
-      if (this.isLiveClockStatus(status)) {
-        const existingSeconds = this.currentClockSeconds(match, state, now);
-        // Manual testing clock: keep this independent from API-Football minutes so both timers can be compared side-by-side.
-        const wasPaused = Number.isFinite(Number(previous.freezeAt));
-        const previousOffset = Number(previous.offsetSeconds || 0);
-        const previousSeconds = Number.isFinite(Number(existingSeconds)) ? Number(existingSeconds) : previousOffset;
+      const exportedSync = this.syncExportedClockState(match, state, previous, now);
+      state = exportedSync.state;
+      if (exportedSync.changed) changed = true;
 
-        const githubSeconds = this.githubClockSeconds(match);
-        let offsetSeconds;
-        if (wasPaused) {
-          // Restart from the frozen point: 45:00 after HT, 105:00 after ET HT.
-          offsetSeconds = Number(previous.freezeAt || 0);
-        } else if (githubSeconds !== null && (!previous.startedAt || previousSeconds + 30 < githubSeconds)) {
-          // Public installs follow the GitHub clock from the source HA instance instead of starting from 00:00.
-          offsetSeconds = githubSeconds;
-        } else if (!previous.startedAt) {
-          // Fresh live start. Extra-time statuses start from 90:00, normal live starts from 00:00.
-          offsetSeconds = this.isExtraTimeMatch(match) ? 90 * 60 : 0;
-        } else {
-          offsetSeconds = previousSeconds;
+      if (!exportedSync.exported) {
+        if (this.isLiveClockStatus(status)) {
+          const existingSeconds = this.currentClockSeconds(match, state, now);
+          // Manual testing clock: keep this independent from API-Football minutes so both timers can be compared side-by-side.
+          const wasPaused = Number.isFinite(Number(previous.freezeAt));
+          const previousOffset = Number(previous.offsetSeconds || 0);
+          const previousSeconds = Number.isFinite(Number(existingSeconds)) ? Number(existingSeconds) : previousOffset;
+
+          let offsetSeconds;
+          if (wasPaused) {
+            // Restart from the frozen point: 45:00 after HT, 105:00 after ET HT.
+            offsetSeconds = Number(previous.freezeAt || 0);
+          } else if (!previous.startedAt) {
+            // Fresh live start. Extra-time statuses start from 90:00, normal live starts from 00:00.
+            offsetSeconds = this.isExtraTimeMatch(match) ? 90 * 60 : 0;
+          } else {
+            offsetSeconds = previousSeconds;
+          }
+
+          if (this.isExtraTimeMatch(match) && offsetSeconds < 90 * 60) {
+            offsetSeconds = 90 * 60;
+          }
+
+          state = {
+            ...state,
+            status,
+            startedAt: now,
+            offsetSeconds: Math.max(0, Math.floor(offsetSeconds)),
+          };
+          delete state.freezeAt;
+          changed = true;
+        } else if (this.isHalfTimeClockStatus(status)) {
+          const previousSeconds = this.currentClockSeconds(match, state, now);
+          const inExtraTime = this.isExtraTimeMatch(match) || Number(previousSeconds || 0) >= 90 * 60;
+          state = {
+            ...state,
+            status,
+            startedAt: null,
+            offsetSeconds: inExtraTime ? 105 * 60 : 45 * 60,
+            freezeAt: inExtraTime ? 105 * 60 : 45 * 60,
+          };
+          changed = true;
+        } else if (this.isFinishedClockStatus(status)) {
+          const finishAt = status === "AET" ? 120 * 60 : (status === "PEN" ? null : 90 * 60);
+          state = {
+            ...state,
+            status,
+            startedAt: null,
+            offsetSeconds: finishAt ?? Number(state.offsetSeconds || 0),
+            finished: true,
+          };
+          delete state.freezeAt;
+          changed = true;
         }
-
-        if (this.isExtraTimeMatch(match) && offsetSeconds < 90 * 60) {
-          offsetSeconds = 90 * 60;
-        }
-
-        state = {
-          ...state,
-          status,
-          startedAt: now,
-          offsetSeconds: Math.max(0, Math.floor(offsetSeconds)),
-        };
-        delete state.freezeAt;
-        changed = true;
-      } else if (this.isHalfTimeClockStatus(status)) {
-        const previousSeconds = this.currentClockSeconds(match, state, now);
-        const inExtraTime = this.isExtraTimeMatch(match) || Number(previousSeconds || 0) >= 90 * 60;
-        state = {
-          ...state,
-          status,
-          startedAt: null,
-          offsetSeconds: inExtraTime ? 105 * 60 : 45 * 60,
-          freezeAt: inExtraTime ? 105 * 60 : 45 * 60,
-        };
-        changed = true;
-      } else if (this.isFinishedClockStatus(status)) {
-        const finishAt = status === "AET" ? 120 * 60 : (status === "PEN" ? null : 90 * 60);
-        state = {
-          ...state,
-          status,
-          startedAt: null,
-          offsetSeconds: finishAt ?? Number(state.offsetSeconds || 0),
-          finished: true,
-        };
-        delete state.freezeAt;
-        changed = true;
       }
 
       if (hasScores) {
@@ -7697,34 +7804,6 @@ class WorldCup2026Panel extends HTMLElement {
     if (goalsChanged) this.saveJsonStorage(this._goalEventStorageKey, goals);
   }
 
-  githubClockSeconds(match) {
-    const manual = match?.manualClock || match?.manual_clock || null;
-    const candidates = [
-      manual?.seconds,
-      manual?.clockSeconds,
-      manual?.clock_seconds,
-      match?.clockSeconds,
-      match?.clock_seconds,
-      match?.fallbackClock,
-    ];
-
-    for (const value of candidates) {
-      const number = Number(value);
-      if (Number.isFinite(number) && number >= 0) return Math.floor(number);
-    }
-
-    return null;
-  }
-
-  githubClockText(match) {
-    const manual = match?.manualClock || match?.manual_clock || null;
-    const text = manual?.timer || manual?.clock || match?.fallbackClockText || match?.manualClockText || "";
-    if (text !== undefined && text !== null && String(text).trim()) return String(text).trim();
-
-    const seconds = this.githubClockSeconds(match);
-    return seconds === null ? "" : this.formatClockSeconds(seconds);
-  }
-
   apiClockText(match) {
     const minute = match && match.minute !== undefined && match.minute !== null && match.minute !== "" ? Number(match.minute) : null;
     return Number.isFinite(minute) ? `${minute}'` : "--";
@@ -7734,20 +7813,10 @@ class WorldCup2026Panel extends HTMLElement {
     const status = String(match?.status || "");
     if (this.isFinishedClockStatus(status)) return "";
 
-    const localSeconds = this.currentClockSeconds(match);
-    const githubSeconds = this.githubClockSeconds(match);
+    const seconds = this.currentClockSeconds(match);
+    if (seconds === null || seconds === undefined) return "--";
 
-    // Public installs should follow the GitHub clock generated by the source HA instance.
-    // If local storage starts from 0 after an update, prefer the GitHub clock instead of showing 00:00.
-    if (githubSeconds !== null && (localSeconds === null || localSeconds === undefined || localSeconds + 30 < githubSeconds)) {
-      return this.githubClockText(match) || this.formatClockSeconds(githubSeconds);
-    }
-
-    if (localSeconds === null || localSeconds === undefined) {
-      return this.githubClockText(match) || "--";
-    }
-
-    return this.formatClockSeconds(localSeconds);
+    return this.formatClockSeconds(seconds);
   }
 
   liveClockText(match) {
