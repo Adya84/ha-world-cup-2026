@@ -12,7 +12,52 @@ from ..const import DOMAIN
 from ..golden_boot import GoldenBootManager
 
 LIVE_STATUSES = {"IN_PLAY", "PAUSED", "LIVE", "1H", "2H", "HT"}
-FINISHED_STATUSES = {"FINISHED", "FT", "AET", "PEN"}
+FINISHED_STATUSES = {"FINISHED", "FT", "AET", "PEN", "AWARDED"}
+SCHEDULED_STATUSES = {"SCHEDULED", "TIMED", "POSTPONED", "SUSPENDED"}
+
+
+def _status_value(match):
+    return str(match.get("status") or match.get("matchStatus") or "").upper().strip()
+
+
+def _score_value(match, side):
+    score = match.get("score") or {}
+    if isinstance(score, dict):
+        full_time = score.get("fullTime") or score.get("full_time") or {}
+        if isinstance(full_time, dict):
+            value = full_time.get(side)
+            if value is not None:
+                return value
+        # Some local/GitHub feeds store scores directly in score.
+        value = score.get(side)
+        if value is not None:
+            return value
+
+    direct_keys = {
+        "home": ("homeScore", "home_score", "scoreHome", "homeGoals"),
+        "away": ("awayScore", "away_score", "scoreAway", "awayGoals"),
+    }
+    for key in direct_keys.get(side, ()): 
+        value = match.get(key)
+        if value is not None:
+            return value
+
+    return None
+
+
+def _is_finished_match(match):
+    status = _status_value(match)
+    if status in FINISHED_STATUSES:
+        return True
+    if status in LIVE_STATUSES or status in SCHEDULED_STATUSES:
+        return False
+
+    # Fallback for GitHub/local result rows that include scores but not a final status.
+    return _score_value(match, "home") is not None and _score_value(match, "away") is not None
+
+
+def _is_fixture_match(match):
+    return not _is_finished_match(match)
 
 
 def _get_coordinator(hass):
@@ -225,10 +270,13 @@ def _serialise_match(match):
         "status": match.get("status"),
         "stage": match.get("stage"),
         "group": match.get("group"),
+        "minute": match.get("minute"),
+        "goalEvents": match.get("goalEvents") or match.get("events") or [],
+        "events": match.get("events") or match.get("goalEvents") or [],
         "homeTeam": _match_team_name(home_team),
         "awayTeam": _match_team_name(away_team),
-        "homeScore": full_time.get("home"),
-        "awayScore": full_time.get("away"),
+        "homeScore": full_time.get("home") if isinstance(full_time, dict) and full_time.get("home") is not None else _score_value(match, "home"),
+        "awayScore": full_time.get("away") if isinstance(full_time, dict) and full_time.get("away") is not None else _score_value(match, "away"),
 
         # Venue / stadium details for frontend fixture cards.
         # These are safe fallbacks: if the API does not provide them, frontend
@@ -334,8 +382,8 @@ async def websocket_get_overview(hass, connection, msg) -> None:
     scorers = await _get_normalised_scorers(hass, coordinator)
     statistics = data.get("statistics", {})
 
-    live_matches = [m for m in matches if m.get("status") in LIVE_STATUSES]
-    finished_matches = [m for m in matches if m.get("status") in FINISHED_STATUSES]
+    live_matches = [m for m in matches if _status_value(m) in LIVE_STATUSES]
+    finished_matches = [m for m in matches if _is_finished_match(m)]
 
     connection.send_result(
         msg["id"],
@@ -367,7 +415,7 @@ async def websocket_get_live_matches(hass, connection, msg) -> None:
         return
 
     matches = (coordinator.data or {}).get("matches", [])
-    live_matches = [m for m in matches if m.get("status") in LIVE_STATUSES]
+    live_matches = [m for m in matches if _status_value(m) in LIVE_STATUSES]
 
     connection.send_result(
         msg["id"],
@@ -387,7 +435,7 @@ async def websocket_get_fixtures(hass, connection, msg) -> None:
     matches = [
         match
         for match in (coordinator.data or {}).get("matches", [])
-        if match.get("status") not in FINISHED_STATUSES
+        if _is_fixture_match(match)
     ]
 
     connection.send_result(
@@ -408,7 +456,7 @@ async def websocket_get_results(hass, connection, msg) -> None:
     matches = [
         match
         for match in (coordinator.data or {}).get("matches", [])
-        if match.get("status") in FINISHED_STATUSES
+        if _is_finished_match(match)
     ]
 
     connection.send_result(
