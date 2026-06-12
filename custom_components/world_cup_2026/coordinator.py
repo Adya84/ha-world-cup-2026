@@ -646,6 +646,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 continue
 
             state = self._goal_event_store.setdefault(key, {"goalEvents": []})
+            state_before = json.dumps(state, sort_keys=True, default=str)
             self._update_match_clock_state(match, state, now)
 
             existing_events = state.get("goalEvents") or []
@@ -719,29 +720,13 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 match["fallbackClock"] = clock_seconds
                 match["fallbackClockText"] = clock_text
                 match["manualClockText"] = clock_text
+                match["displayMinute"] = display_minute
+                match["clockSeconds"] = clock_seconds
 
-            # Persist score/status snapshots and any permanent events so the
-            # coordinator can compare future updates and keep goal data after
-            # the match moves from Live to Results.
-            previous_snapshot = {
-                "homeScore": state.get("homeScore"),
-                "awayScore": state.get("awayScore"),
-                "status": state.get("status"),
-                "clock_seconds": state.get("clock_seconds"),
-                "goalEvents": state.get("goalEvents") or [],
-            }
-
-            if merged_events != (state.get("goalEvents") or []):
-                changed = True
-
-            current_snapshot = {
-                "homeScore": state.get("homeScore"),
-                "awayScore": state.get("awayScore"),
-                "status": state.get("status"),
-                "clock_seconds": state.get("clock_seconds"),
-                "goalEvents": state.get("goalEvents") or [],
-            }
-            if previous_snapshot != current_snapshot:
+            # Persist score/status/clock snapshots and permanent events so
+            # the backend can keep goal data after a match moves from Live to
+            # Results, and so GitHub receives the same live timer/event data.
+            if state_before != json.dumps(state, sort_keys=True, default=str):
                 changed = True
 
         if changed:
