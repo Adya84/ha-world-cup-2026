@@ -3,7 +3,9 @@ class WorldCup2026Panel extends HTMLElement {
   constructor() {
     super();
     this._hass = null;
-    this._page = "overview";
+    const savedPage = localStorage.getItem("world_cup_2026_last_page") || "overview";
+    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
+    this._page = validPages.has(savedPage) ? savedPage : "overview";
     this._loaded = false;
     this._refreshInterval = null;
     this._countdownInterval = null;
@@ -7320,7 +7322,10 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   changePage(page) {
+    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
+    if (!validPages.has(page)) page = "overview";
     this._page = page;
+    try { localStorage.setItem("world_cup_2026_last_page", page); } catch (e) {}
     this.render();
   }
 
