@@ -7411,7 +7411,12 @@ class WorldCup2026Panel extends HTMLElement {
     }
   }
 
-  statusLabel(status) {
+  statusLabel(status, match = null) {
+    const minute = match && match.minute !== undefined && match.minute !== null && match.minute !== "" ? Number(match.minute) : null;
+    if (minute !== null && Number.isFinite(minute) && ["IN_PLAY", "LIVE", "1H", "2H"].includes(String(status))) {
+      return `${minute}'`;
+    }
+
     const labels = {
       TIMED: this.t("scheduled"),
       SCHEDULED: this.t("scheduled"),
@@ -8154,10 +8159,35 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .wc-header-live-pill.live {
+          justify-content: flex-start;
           color: #d8ffe8;
           background: rgba(0, 190, 85, 0.20);
           border: 1px solid rgba(0, 255, 120, 0.62);
           box-shadow: 0 0 14px rgba(0, 255, 120, 0.28);
+        }
+
+        .wc-header-live-pill.live .wc-live-ticker {
+          display: inline-block;
+          white-space: nowrap;
+          padding-left: 100%;
+          animation: wc-live-pill-scroll 14s linear infinite;
+          will-change: transform;
+        }
+
+        .wc-header-live-pill.live:hover .wc-live-ticker {
+          animation-play-state: paused;
+        }
+
+        @keyframes wc-live-pill-scroll {
+          0% { transform: translateX(0); }
+          100% { transform: translateX(-100%); }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .wc-header-live-pill.live .wc-live-ticker {
+            padding-left: 0;
+            animation: none;
+          }
         }
 
         .wc-header-live-pill.offline {
@@ -10293,6 +10323,76 @@ class WorldCup2026Panel extends HTMLElement {
           border: 1px solid rgba(255,255,255,0.12);
           font-size: 11px;
           font-weight: 950;
+        }
+
+
+        .match-scorers-box {
+          grid-column: 1 / -1;
+          width: 100%;
+          margin-top: 8px;
+          padding: 10px 12px;
+          border-radius: 13px;
+          background: rgba(0,0,0,0.18);
+          border: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .match-scorers-title {
+          margin-bottom: 8px;
+          color: rgba(255,255,255,0.68);
+          font-size: 11px;
+          font-weight: 950;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .match-scorers-grid {
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 10px;
+        }
+
+        .match-scorers-team {
+          min-width: 0;
+        }
+
+        .match-scorers-team strong {
+          display: block;
+          margin-bottom: 4px;
+          color: rgba(255,255,255,0.92);
+          font-size: 12px;
+          font-weight: 950;
+        }
+
+        .match-scorers-names {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 5px;
+        }
+
+        .match-scorer-pill {
+          display: inline-flex;
+          align-items: center;
+          max-width: 100%;
+          padding: 4px 8px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.10);
+          border: 1px solid rgba(255,255,255,0.10);
+          color: rgba(255,255,255,0.88);
+          font-size: 11px;
+          font-weight: 850;
+          line-height: 1.1;
+        }
+
+        .match-scorer-empty {
+          color: rgba(255,255,255,0.44);
+          font-size: 11px;
+          font-weight: 800;
+        }
+
+        @media (max-width: 620px) {
+          .match-scorers-grid {
+            grid-template-columns: 1fr;
+          }
         }
 
         .results-footnote {
@@ -14287,17 +14387,27 @@ class WorldCup2026Panel extends HTMLElement {
   overviewDonatePanel() {
     return `
       <div class="overview-donate-card wc-card">
-        <div class="overview-donate-icon">🍺</div>
+        <div class="overview-donate-icon">☕</div>
         <div class="wc-section-title">${this.t("enjoyingIntegration")}</div>
         <p class="overview-donate-text">${this.t("supportFutureUpdates")}</p>
-        <a
-          class="wc-overview-beer-button"
-          href="https://paypal.me/graffidoodle"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          ${this.t("donateBuyBeer")}
-        </a>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
+          <a
+            class="wc-overview-beer-button"
+            href="https://ko-fi.com/supportkofi"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            ☕ Support via Ko-fi
+          </a>
+          <a
+            class="wc-overview-beer-button"
+            href="https://paypal.me/graffidoodle"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            💳 Support via PayPal
+          </a>
+        </div>
       </div>
     `;
   }
@@ -14308,7 +14418,7 @@ class WorldCup2026Panel extends HTMLElement {
     const homeScore = this.getHomeScore(m);
     const awayScore = this.getAwayScore(m);
     const scoreText = showScore || (homeScore !== "-" || awayScore !== "-") ? `${homeScore} - ${awayScore}` : this.t("versus");
-    const status = this.statusLabel(m.status);
+    const status = this.statusLabel(m.status, m);
     const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
 
     return `
@@ -14323,6 +14433,102 @@ class WorldCup2026Panel extends HTMLElement {
           <div>${this.flag(awayTeam, true)}<strong>${this.esc(this.localizedTeamName(awayTeam))}</strong></div>
         </div>
         <div class="overview-mini-date">${this.esc(this.formatDate(m.utcDate || m.date))}</div>
+      </div>
+    `;
+  }
+
+
+  scorerName(scorer) {
+    const player = scorer?.player;
+    if (player && typeof player === "object") {
+      return player.name || player.firstName || player.lastName || scorer?.name || "";
+    }
+    return scorer?.name || player || scorer?.playerName || "";
+  }
+
+  scorerTeamName(scorer) {
+    const team = scorer?.team;
+    if (team && typeof team === "object") {
+      return team.shortName || team.name || team.tla || "";
+    }
+    return team || scorer?.teamName || scorer?.country || "";
+  }
+
+  matchScorersForTeam(team) {
+    const teamKey = this.fixtureTeamKey(team);
+    const seen = new Set();
+
+    return (this._data.scorers || [])
+      .filter((scorer) => Number(scorer?.goals || 0) > 0)
+      .filter((scorer) => this.fixtureTeamKey(this.scorerTeamName(scorer)) === teamKey)
+      .map((scorer) => ({ name: this.scorerName(scorer), minute: null, extra: null }))
+      .filter((scorer) => scorer.name)
+      .filter((scorer) => {
+        const key = String(scorer.name).toLowerCase().trim();
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+  }
+
+  matchGoalEventsForTeam(match, team) {
+    const teamKey = this.fixtureTeamKey(team);
+    const events = [
+      ...((match && Array.isArray(match.goalEvents)) ? match.goalEvents : []),
+      ...((match && Array.isArray(match.events)) ? match.events : []),
+    ];
+    const seen = new Set();
+
+    return events
+      .filter((event) => String(event?.type || "").toLowerCase() === "goal")
+      .filter((event) => this.fixtureTeamKey(event?.team || event?.teamName || event?.country) === teamKey)
+      .map((event) => ({
+        name: event?.player || event?.playerName || event?.name || "",
+        minute: event?.minute ?? event?.elapsed ?? null,
+        extra: event?.extra ?? null,
+      }))
+      .filter((event) => event.name)
+      .filter((event) => {
+        const key = `${String(event.name).toLowerCase().trim()}|${event.minute ?? ""}|${event.extra ?? ""}`;
+        if (seen.has(key)) return false;
+        seen.add(key);
+        return true;
+      });
+  }
+
+  matchScorersSection(homeTeam, awayTeam, match = null) {
+    const homeEvents = this.matchGoalEventsForTeam(match, homeTeam);
+    const awayEvents = this.matchGoalEventsForTeam(match, awayTeam);
+    const hasGoalEvents = homeEvents.length || awayEvents.length;
+
+    const homeScorers = hasGoalEvents ? homeEvents : this.matchScorersForTeam(homeTeam);
+    const awayScorers = hasGoalEvents ? awayEvents : this.matchScorersForTeam(awayTeam);
+
+    if (!homeScorers.length && !awayScorers.length) return "";
+
+    const namesHtml = (items) => items.length
+      ? items.map((item) => {
+          const name = typeof item === "string" ? item : item.name;
+          const minute = typeof item === "object" && item.minute !== null && item.minute !== undefined && item.minute !== "" ? Number(item.minute) : null;
+          const extra = typeof item === "object" && item.extra !== null && item.extra !== undefined && item.extra !== "" ? Number(item.extra) : null;
+          const minuteText = Number.isFinite(minute) ? ` ${minute}${Number.isFinite(extra) && extra > 0 ? `+${extra}` : ""}'` : "";
+          return `<span class="match-scorer-pill">${this.esc(name)}${this.esc(minuteText)}</span>`;
+        }).join("")
+      : `<span class="match-scorer-empty">-</span>`;
+
+    return `
+      <div class="match-scorers-box">
+        <div class="match-scorers-title">Scorers${hasGoalEvents ? " & Goal Times" : ""}</div>
+        <div class="match-scorers-grid">
+          <div class="match-scorers-team">
+            <strong>${this.esc(this.localizedTeamName(homeTeam))}</strong>
+            <div class="match-scorers-names">${namesHtml(homeScorers)}</div>
+          </div>
+          <div class="match-scorers-team">
+            <strong>${this.esc(this.localizedTeamName(awayTeam))}</strong>
+            <div class="match-scorers-names">${namesHtml(awayScorers)}</div>
+          </div>
+        </div>
       </div>
     `;
   }
@@ -14406,7 +14612,7 @@ class WorldCup2026Panel extends HTMLElement {
     const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
     const venueInfo = this.fixtureVenueInfo(m);
     const venueName = venueInfo?.name || m.venue || m.stadium || m.venueName || "";
-    const status = this.statusLabel(m.status) || "FT";
+    const status = this.statusLabel(m.status, m) || "FT";
     const date = this.resultDateLabel(m);
 
     return `
@@ -14433,6 +14639,8 @@ class WorldCup2026Panel extends HTMLElement {
         </div>
 
         <div class="result-basic-status">COMPLETED</div>
+
+        ${this.matchScorersSection(homeTeam, awayTeam, m)}
       </div>
     `;
   }
@@ -15156,7 +15364,7 @@ class WorldCup2026Panel extends HTMLElement {
     const awayTeam = this.getAwayTeam(m);
     const homeScore = this.getHomeScore(m);
     const awayScore = this.getAwayScore(m);
-    const status = this.statusLabel(m.status);
+    const status = this.statusLabel(m.status, m);
     const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
     const scoreText = homeScore === "-" && awayScore === "-" ? "v" : `${homeScore} - ${awayScore}`;
     const liveClass = ["IN_PLAY", "LIVE", "PAUSED"].includes(m.status) ? " is-live" : "";
@@ -15212,7 +15420,7 @@ class WorldCup2026Panel extends HTMLElement {
     const awayTeam = this.getAwayTeam(m);
     const homeScore = this.getHomeScore(m);
     const awayScore = this.getAwayScore(m);
-    const status = this.statusLabel(m.status);
+    const status = this.statusLabel(m.status, m);
     const stage = String(m.group || this.stageLabel(m.stage) || "").replaceAll("_", " ");
     const date = this.formatDate(m.utcDate || m.date);
     const venueInfo = this.fixtureVenueInfo(m);
@@ -15235,6 +15443,8 @@ class WorldCup2026Panel extends HTMLElement {
           <div class="wc-muted">${this.esc(date)}</div>
           <div class="wc-muted">${this.esc(status)}</div>
         </div>
+
+        ${this.matchScorersSection(homeTeam, awayTeam, m)}
       </div>
     `;
   }
@@ -15960,16 +16170,27 @@ class WorldCup2026Panel extends HTMLElement {
       <div class="wc-card" style="text-align:center;">
         <div class="wc-section-title">${this.t("wantNameAdded")}</div>
         <p class="wc-muted">${this.t("supportFutureUpdates")}</p>
-        <p class="wc-muted">${this.t("supporterBeerMessage")}</p>
-        <a
-          class="wc-pill wc-donate-button"
-          href="https://paypal.me/graffidoodle"
-          target="_blank"
-          rel="noopener noreferrer"
-          style="display:inline-flex;margin-top:8px;text-decoration:none;"
-        >
-          ${this.t("donateBuyBeer")}
-        </a>
+        <p class="wc-muted">Support the World Cup 2026 Integration using Ko-fi or PayPal. Every donation helps with future updates, testing and new features.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a
+            class="wc-pill wc-donate-button"
+            href="https://ko-fi.com/supportkofi"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="display:inline-flex;text-decoration:none;"
+          >
+            ☕ Support via Ko-fi
+          </a>
+          <a
+            class="wc-pill wc-donate-button"
+            href="https://paypal.me/graffidoodle"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="display:inline-flex;text-decoration:none;"
+          >
+            💳 Support via PayPal
+          </a>
+        </div>
       </div>
     `;
   }
@@ -15983,17 +16204,22 @@ class WorldCup2026Panel extends HTMLElement {
       return `<div class="wc-header-live-pill offline">🔴 ${this.t("noLiveGames")}</div>`;
     }
 
-    if (liveCount === 1) {
-      const match = live[0];
-      const homeTeam = this.localizedTeamName(this.getHomeTeam(match));
-      const awayTeam = this.localizedTeamName(this.getAwayTeam(match));
-      const homeScore = this.getHomeScore(match);
-      const awayScore = this.getAwayScore(match);
-      const score = homeScore !== "-" || awayScore !== "-" ? ` ${homeScore}-${awayScore}` : "";
-      return `<div class="wc-header-live-pill live">🟢 Live: ${this.esc(homeTeam)}${this.esc(score)} ${this.esc(awayTeam)}</div>`;
-    }
+    const liveMatchesText = live
+      .map((match) => {
+        const homeTeam = this.localizedTeamName(this.getHomeTeam(match));
+        const awayTeam = this.localizedTeamName(this.getAwayTeam(match));
+        const homeScore = this.getHomeScore(match);
+        const awayScore = this.getAwayScore(match);
+        const score = homeScore !== "-" || awayScore !== "-" ? ` ${homeScore}-${awayScore}` : "";
+        return `${homeTeam}${score} ${awayTeam}`;
+      })
+      .join(" • ");
 
-    return `<div class="wc-header-live-pill live">🟢 ${liveCount} live games</div>`;
+    const label = liveCount === 1
+      ? `🟢 Live: ${liveMatchesText}`
+      : `🟢 ${liveCount} live games: ${liveMatchesText}`;
+
+    return `<div class="wc-header-live-pill live" title="${this.esc(label)}"><span class="wc-live-ticker">${this.esc(label)}</span></div>`;
   }
 
   headerScheduledPill() {
