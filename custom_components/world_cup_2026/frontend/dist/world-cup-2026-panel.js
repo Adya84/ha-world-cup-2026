@@ -18,6 +18,7 @@ class WorldCup2026Panel extends HTMLElement {
       overview: null,
       live: [],
       fixtures: [],
+      results: [],
       groups: [],
       scorers: [],
       statistics: {},
@@ -202,7 +203,7 @@ class WorldCup2026Panel extends HTMLElement {
         notAvailable: "Not available",
         noUpcomingMatch: "No upcoming match loaded.",
         noLiveMatches: "No matches live right now.",
-        fixturesResults: "Fixtures & Results",
+        fixturesResults: "Fixtures",
         noFixtures: "No fixtures loaded yet.",
         groupLabel: "Group",
         groupsAL: "Groups A-L",
@@ -7299,6 +7300,7 @@ class WorldCup2026Panel extends HTMLElement {
       this._data.overview = await this.callApi("world_cup_2026/get_overview");
       this._data.live = await this.callApi("world_cup_2026/get_live_matches");
       this._data.fixtures = this.completeOfficialFixtures(await this.callApi("world_cup_2026/get_fixtures"));
+      this._data.results = this.completeOfficialFixtures(await this.safeCall("world_cup_2026/get_results", []));
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
       this._data.scorers = await this.safeCall("world_cup_2026/get_scorers", []);
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
@@ -14140,10 +14142,13 @@ class WorldCup2026Panel extends HTMLElement {
 
   resultsPage() {
     const fixtures = this._data.fixtures || [];
-    const finishedStatuses = ["FINISHED", "FT", "AET", "PEN"];
+    const resultsFeed = this._data.results || [];
+    // Results now come from the dedicated backend websocket feed.
+    // Fallback keeps older installs working if the results endpoint is unavailable.
+    const resultsSource = resultsFeed.length ? resultsFeed : fixtures;
 
-    const results = fixtures
-      .filter(m => finishedStatuses.includes(m.status))
+    const results = resultsSource
+      .filter(m => this.isFinishedMatch(m))
       .sort((a, b) => {
         const aTime = new Date(a.utcDate || a.date || 0).getTime();
         const bTime = new Date(b.utcDate || b.date || 0).getTime();
@@ -14203,8 +14208,41 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+
+  isFinishedMatch(match) {
+    const status = String(match?.status || match?.matchStatus || "").toUpperCase().trim();
+    const finishedStatuses = ["FINISHED", "FT", "AET", "PEN", "AWARDED"];
+    const liveOrUpcomingStatuses = ["IN_PLAY", "LIVE", "PAUSED", "1H", "2H", "HT", "TIMED", "SCHEDULED", "POSTPONED", "SUSPENDED"];
+
+    if (finishedStatuses.includes(status)) return true;
+    if (liveOrUpcomingStatuses.includes(status)) return false;
+
+    const homeScore = this.scoreValue(match, "home");
+    const awayScore = this.scoreValue(match, "away");
+    return homeScore !== null && homeScore !== undefined && awayScore !== null && awayScore !== undefined;
+  }
+
+  scoreValue(match, side) {
+    const score = match?.score || {};
+    const fullTime = score?.fullTime || score?.full_time || {};
+
+    if (fullTime && fullTime[side] !== undefined && fullTime[side] !== null) return fullTime[side];
+    if (score && score[side] !== undefined && score[side] !== null) return score[side];
+
+    const keys = side === "home"
+      ? ["homeScore", "home_score", "scoreHome", "homeGoals"]
+      : ["awayScore", "away_score", "scoreAway", "awayGoals"];
+
+    for (const key of keys) {
+      if (match && match[key] !== undefined && match[key] !== null) return match[key];
+    }
+
+    return null;
+  }
+
   fixturesPage() {
-    const fixtures = this._data.fixtures || [];
+    // Keep Fixtures clean: upcoming/live only. Finished matches stay on Results.
+    const fixtures = (this._data.fixtures || []).filter((match) => !this.isFinishedMatch(match));
 
     if (!fixtures.length) {
       return `
