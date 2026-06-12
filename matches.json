@@ -155,11 +155,11 @@
       },
       "id": 537333,
       "utcDate": "2026-06-12T19:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-12T19:40:53Z",
+      "lastUpdated": "2026-06-12T21:02:11Z",
       "homeTeam": {
         "id": 828,
         "name": "Canada",
@@ -175,11 +175,11 @@
         "crest": "https://crests.football-data.org/bosnia.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -196,7 +196,9 @@
           "type": "REFEREE",
           "nationality": "Argentina"
         }
-      ]
+      ],
+      "fallbackClock": 134,
+      "fallbackClockText": "2:14"
     },
     {
       "area": {
