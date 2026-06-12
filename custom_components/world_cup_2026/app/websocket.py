@@ -396,6 +396,27 @@ async def websocket_get_fixtures(hass, connection, msg) -> None:
     )
 
 
+@websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_results"})
+@websocket_api.async_response
+async def websocket_get_results(hass, connection, msg) -> None:
+    coordinator = _get_coordinator(hass)
+
+    if coordinator is None:
+        _send_not_loaded(connection, msg)
+        return
+
+    matches = [
+        match
+        for match in (coordinator.data or {}).get("matches", [])
+        if match.get("status") in FINISHED_STATUSES
+    ]
+
+    connection.send_result(
+        msg["id"],
+        [_serialise_match(match) for match in matches],
+    )
+
+
 @websocket_api.websocket_command({vol.Required("type"): "world_cup_2026/get_groups"})
 @websocket_api.async_response
 async def websocket_get_groups(hass, connection, msg) -> None:
@@ -484,6 +505,7 @@ async def async_register_websocket_api(hass) -> None:
     websocket_api.async_register_command(hass, websocket_get_overview)
     websocket_api.async_register_command(hass, websocket_get_live_matches)
     websocket_api.async_register_command(hass, websocket_get_fixtures)
+    websocket_api.async_register_command(hass, websocket_get_results)
     websocket_api.async_register_command(hass, websocket_get_groups)
     websocket_api.async_register_command(hass, websocket_get_scorers)
     websocket_api.async_register_command(hass, websocket_get_statistics)
