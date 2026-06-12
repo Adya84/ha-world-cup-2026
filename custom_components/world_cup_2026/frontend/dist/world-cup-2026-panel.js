@@ -28,6 +28,10 @@ class WorldCup2026Panel extends HTMLElement {
       venues: {},
       supporters: [],
     };
+    this._matchClockStorageKey = "world_cup_2026_match_clock_state_v1";
+    this._goalEventStorageKey = "world_cup_2026_goal_event_times_v1";
+    this._matchClockState = this.loadJsonStorage(this._matchClockStorageKey, {});
+    this._localGoalEvents = this.loadJsonStorage(this._goalEventStorageKey, {});
   }
 
   shouldHideHomeAssistantSidebar() {
@@ -245,6 +249,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "No venue data available.",
         scheduled: "Upcoming",
         liveStatus: "Live",
+        manualTimerNotice: 'Live scores update automatically. Goal times use the manual match clock and may differ from official times by a few minutes.',
         paused: "Paused",
         fullTime: "Full Time",
         aet: "After Extra Time",
@@ -403,6 +408,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Aucune donnée de stade.",
         scheduled: "Programmé",
         liveStatus: "En Direct",
+        manualTimerNotice: 'Les scores en direct se mettent à jour automatiquement. Les heures de but utilisent le chronomètre manuel du match et peuvent différer des heures officielles de quelques minutes.',
         paused: "Pause",
         fullTime: "Terminé",
         aet: "Après Prolongation",
@@ -559,6 +565,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Keine Stadiondaten.",
         scheduled: "Geplant",
         liveStatus: "Live",
+        manualTimerNotice: 'Live-Ergebnisse werden automatisch aktualisiert. Torzeiten verwenden die manuelle Spieluhr und können um einige Minuten von den offiziellen Zeiten abweichen.',
         paused: "Pause",
         fullTime: "Abpfiff",
         aet: "Nach Verlängerung",
@@ -715,6 +722,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "No hay datos de sedes.",
         scheduled: "Programado",
         liveStatus: "En Vivo",
+        manualTimerNotice: 'Los marcadores en vivo se actualizan automáticamente. Los minutos de gol usan el reloj manual del partido y pueden diferir unos minutos de los oficiales.',
         paused: "Pausado",
         fullTime: "Final",
         aet: "Prórroga",
@@ -870,6 +878,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Nessun dato stadio.",
         scheduled: "Programmata",
         liveStatus: "Live",
+        manualTimerNotice: 'I punteggi live si aggiornano automaticamente. I minuti dei gol usano il cronometro manuale della partita e possono differire dagli orari ufficiali di alcuni minuti.',
         paused: "Pausa",
         fullTime: "Fine Partita",
         aet: "Dopo Supplementari",
@@ -1026,6 +1035,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Geen stadiongegevens.",
         scheduled: "Gepland",
         liveStatus: "Live",
+        manualTimerNotice: 'Livescores worden automatisch bijgewerkt. Doelpunttijden gebruiken de handmatige wedstrijdklok en kunnen enkele minuten afwijken van de officiële tijden.',
         paused: "Gepauzeerd",
         fullTime: "Afgelopen",
         aet: "Na Verlenging",
@@ -1184,6 +1194,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "कोई वेन्यू डेटा उपलब्ध नहीं।",
         scheduled: "आगामी",
         liveStatus: "लाइव",
+        manualTimerNotice: 'लाइव स्कोर अपने आप अपडेट होते हैं। गोल समय मैनुअल मैच घड़ी से लिए जाते हैं और आधिकारिक समय से कुछ मिनट अलग हो सकते हैं।',
         paused: "रुका हुआ",
         fullTime: "फुल टाइम",
         aet: "अतिरिक्त समय के बाद",
@@ -1340,6 +1351,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "কোনো ভেন্যু ডেটা উপলব্ধ নেই।",
         scheduled: "আসন্ন",
         liveStatus: "লাইভ",
+        manualTimerNotice: 'লাইভ স্কোর স্বয়ংক্রিয়ভাবে আপডেট হয়। গোলের সময় ম্যানুয়াল ম্যাচ ঘড়ি ব্যবহার করে এবং অফিসিয়াল সময়ের থেকে কয়েক মিনিট ভিন্ন হতে পারে।',
         paused: "বিরতি",
         fullTime: "পূর্ণ সময়",
         aet: "অতিরিক্ত সময়ের পর",
@@ -1496,6 +1508,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "மைதான தரவு இல்லை.",
         scheduled: "வரவிருக்கும்",
         liveStatus: "நேரலை",
+        manualTimerNotice: 'நேரலை ஸ்கோர் தானாக புதுப்பிக்கப்படும். கோல் நேரங்கள் கைமுறை போட்டிக் கடிகாரத்தை பயன்படுத்தும்; அதிகாரப்பூர்வ நேரத்திலிருந்து சில நிமிடங்கள் மாறலாம்.',
         paused: "இடைநிறுத்தம்",
         fullTime: "முழு நேரம்",
         aet: "கூடுதல் நேரத்திற்கு பின்",
@@ -1652,6 +1665,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "कोई वेन्यू डेटा उपलब्ध नहीं।",
         scheduled: "రాబోయేవి",
         liveStatus: "లైవ్",
+        manualTimerNotice: 'లైవ్ స్కోర్లు ఆటోమేటిక్\u200cగా నవీకరించబడతాయి. గోల్ సమయాలు మాన్యువల్ మ్యాచ్ గడియారాన్ని ఉపయోగిస్తాయి మరియు అధికారిక సమయాలకంటే కొన్ని నిమిషాలు మారవచ్చు.',
         paused: "रुका हुआ",
         fullTime: "పూర్తి సమయం",
         aet: "अतिरिक्त समय के बाद",
@@ -1808,6 +1822,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "कोई वेन्यू डेटा उपलब्ध नहीं।",
         scheduled: "ਆਉਣ ਵਾਲੇ",
         liveStatus: "ਲਾਈਵ",
+        manualTimerNotice: 'ਲਾਈਵ ਸਕੋਰ ਆਪਣੇ ਆਪ ਅੱਪਡੇਟ ਹੁੰਦੇ ਹਨ। ਗੋਲ ਸਮੇਂ ਮੈਨੂਅਲ ਮੈਚ ਘੜੀ ਤੋਂ ਲਏ ਜਾਂਦੇ ਹਨ ਅਤੇ ਅਧਿਕਾਰਕ ਸਮੇਂ ਤੋਂ ਕੁਝ ਮਿੰਟ ਵੱਖ ਹੋ ਸਕਦੇ ਹਨ।',
         paused: "ਰੁਕਿਆ",
         fullTime: "ਫੁੱਲ ਟਾਈਮ",
         aet: "ਵਾਧੂ ਸਮੇਂ ਤੋਂ ਬਾਅਦ",
@@ -1962,6 +1977,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "لا توجد بيانات ملاعب.",
         scheduled: "مجدولة",
         liveStatus: "مباشر",
+        manualTimerNotice: 'يتم تحديث النتائج المباشرة تلقائيًا. تعتمد أوقات الأهداف على ساعة المباراة اليدوية وقد تختلف عن الأوقات الرسمية ببضع دقائق.',
         paused: "استراحة",
         fullTime: "نهاية المباراة",
         aet: "بعد وقت إضافي",
@@ -2118,6 +2134,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Nenhum dado de estádio.",
         scheduled: "Agendado",
         liveStatus: "Ao Vivo",
+        manualTimerNotice: 'Os resultados ao vivo atualizam automaticamente. Os tempos dos golos usam o relógio manual do jogo e podem diferir dos tempos oficiais por alguns minutos.',
         paused: "Pausado",
         fullTime: "Final",
         aet: "Após Prolongamento",
@@ -2274,6 +2291,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Brak danych o stadionach.",
         scheduled: "Zaplanowany",
         liveStatus: "Na żywo",
+        manualTimerNotice: 'Wyniki na żywo aktualizują się automatycznie. Czasy bramek używają ręcznego zegara meczu i mogą różnić się od oficjalnych o kilka minut.',
         paused: "Przerwa",
         fullTime: "Koniec meczu",
         aet: "Po dogrywce",
@@ -2430,6 +2448,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "会場データはありません。",
         scheduled: "予定",
         liveStatus: "ライブ",
+        manualTimerNotice: 'ライブスコアは自動更新されます。ゴール時間は手動の試合時計を使用するため、公式時間と数分ずれる場合があります。',
         paused: "中断",
         fullTime: "試合終了",
         aet: "延長終了",
@@ -2589,6 +2608,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: '暂无场馆数据。',
         scheduled: '即将开始',
         liveStatus: "直播",
+        manualTimerNotice: '实时比分会自动更新。进球时间使用手动比赛计时器，可能与官方时间相差几分钟。',
         paused: '暂停',
         fullTime: '全场结束',
         aet: '加时后',
@@ -2901,6 +2921,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "ไม่มีข้อมูลสนาม",
         scheduled: 'กำลังจะมาถึง',
         liveStatus: "สด",
+        manualTimerNotice: 'คะแนนสดอัปเดตอัตโนมัติ เวลาประตูใช้ตัวจับเวลาการแข่งขันแบบแมนนวล และอาจต่างจากเวลาอย่างเป็นทางการไม่กี่นาที',
         paused: 'พัก',
         fullTime: 'จบเกม',
         aet: "หลังต่อเวลาพิเศษ",
@@ -3057,6 +3078,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Không có dữ liệu sân vận động.",
         scheduled: 'Sắp diễn ra',
         liveStatus: "Trực tiếp",
+        manualTimerNotice: 'Tỉ số trực tiếp tự động cập nhật. Thời điểm ghi bàn dùng đồng hồ trận đấu thủ công và có thể lệch vài phút so với thời gian chính thức.',
         paused: 'Tạm dừng',
         fullTime: 'Hết giờ',
         aet: 'Sau hiệp phụ',
@@ -3213,6 +3235,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Tidak ada data stadion.",
         scheduled: 'Akan Datang',
         liveStatus: "Live",
+        manualTimerNotice: 'Skor langsung diperbarui otomatis. Waktu gol memakai jam pertandingan manual dan dapat berbeda beberapa menit dari waktu resmi.',
         paused: 'Jeda',
         fullTime: 'Purna Waktu',
         aet: 'Setelah Perpanjangan Waktu',
@@ -3368,6 +3391,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "경기장 데이터가 없습니다.",
         scheduled: "예정",
         liveStatus: "라이브",
+        manualTimerNotice: '라이브 점수는 자동으로 업데이트됩니다. 득점 시간은 수동 경기 시계를 사용하므로 공식 시간과 몇 분 차이 날 수 있습니다.',
         paused: "일시 중지",
         fullTime: "경기 종료",
         aet: "연장 종료",
@@ -3524,6 +3548,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Ingen arenadata.",
         scheduled: "Planerad",
         liveStatus: "Live",
+        manualTimerNotice: 'Livescore uppdateras automatiskt. Måltider använder den manuella matchklockan och kan skilja sig några minuter från officiella tider.',
         paused: "Pausad",
         fullTime: "Full Tid",
         aet: "Efter Förlängning",
@@ -3680,6 +3705,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Ingen arenadata.",
         scheduled: "Planlagt",
         liveStatus: "Live",
+        manualTimerNotice: 'Livescore oppdateres automatisk. Måltider bruker den manuelle kampklokken og kan avvike noen minutter fra offisielle tider.',
         paused: "Pause",
         fullTime: "Full Tid",
         aet: "Etter Ekstraomganger",
@@ -3837,6 +3863,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Nincs stadionadat.",
         scheduled: "Ütemezve",
         liveStatus: "Élő",
+        manualTimerNotice: 'Az élő eredmények automatikusan frissülnek. A gólidők a kézi meccsórát használják, és néhány perccel eltérhetnek a hivatalos időktől.',
         paused: "Szünet",
         fullTime: "Vége",
         aet: "Hosszabbítás után",
@@ -3994,6 +4021,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Stadyum verisi yok.",
         scheduled: "Planlandı",
         liveStatus: "Canlı",
+        manualTimerNotice: 'Canlı skorlar otomatik güncellenir. Gol dakikaları manuel maç saatini kullanır ve resmi zamanlardan birkaç dakika farklı olabilir.',
         paused: "Duraklatıldı",
         fullTime: "Maç Bitti",
         aet: "Uzatmalar Sonrası",
@@ -4150,6 +4178,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Nejsou dostupná data stadionů.",
         scheduled: "Naplánováno",
         liveStatus: "Živě",
+        manualTimerNotice: 'Živé skóre se aktualizuje automaticky. Časy gólů používají ruční zápasové hodiny a mohou se o několik minut lišit od oficiálních časů.',
         paused: "Přestávka",
         fullTime: "Konec zápasu",
         aet: "Po prodloužení",
@@ -4306,6 +4335,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Ingen stadiondata.",
         scheduled: "Planlagt",
         liveStatus: "Direkte",
+        manualTimerNotice: 'Live scores opdateres automatisk. Måltider bruger det manuelle kampur og kan afvige nogle minutter fra de officielle tider.',
         paused: "Pause",
         fullTime: "Fuld tid",
         aet: "Efter forlænget spilletid",
@@ -4462,6 +4492,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Stadiontietoja ei ole.",
         scheduled: "Aikataulutettu",
         liveStatus: "Live",
+        manualTimerNotice: 'Live-tulokset päivittyvät automaattisesti. Maalien ajat käyttävät manuaalista ottelukelloa ja voivat poiketa virallisista ajoista muutamalla minuutilla.',
         paused: "Tauko",
         fullTime: "Täysi aika",
         aet: "Jatkoajan jälkeen",
@@ -4618,6 +4649,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Δεν υπάρχουν δεδομένα σταδίων.",
         scheduled: "Προγραμματισμένο",
         liveStatus: "Ζωντανά",
+        manualTimerNotice: 'Τα ζωντανά σκορ ενημερώνονται αυτόματα. Οι χρόνοι των γκολ χρησιμοποιούν το χειροκίνητο ρολόι αγώνα και μπορεί να διαφέρουν λίγα λεπτά από τους επίσημους χρόνους.',
         paused: "Παύση",
         fullTime: "Λήξη",
         aet: "Μετά την παράταση",
@@ -4774,6 +4806,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Nu există date despre stadioane.",
         scheduled: "Programat",
         liveStatus: "Live",
+        manualTimerNotice: 'Scorurile live se actualizează automat. Minutele golurilor folosesc ceasul manual al meciului și pot diferi cu câteva minute de cele oficiale.',
         paused: "Pauză",
         fullTime: "Final",
         aet: "După prelungiri",
@@ -4930,6 +4963,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Nie sú dostupné údaje o štadiónoch.",
         scheduled: "Naplánované",
         liveStatus: "Naživo",
+        manualTimerNotice: 'Živé skóre sa aktualizuje automaticky. Časy gólov používajú manuálne zápasové hodiny a môžu sa o niekoľko minút líšiť od oficiálnych časov.',
         paused: "Prestávka",
         fullTime: "Koniec zápasu",
         aet: "Po predĺžení",
@@ -5086,6 +5120,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Podatkov o stadionih ni.",
         scheduled: "Načrtovano",
         liveStatus: "V živo",
+        manualTimerNotice: 'Rezultati v živo se posodabljajo samodejno. Časi zadetkov uporabljajo ročno uro tekme in se lahko za nekaj minut razlikujejo od uradnih časov.',
         paused: "Premor",
         fullTime: "Konec tekme",
         aet: "Po podaljšku",
@@ -5242,6 +5277,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Nema podataka o stadionima.",
         scheduled: "Zakazano",
         liveStatus: "Uživo",
+        manualTimerNotice: 'Rezultati uživo ažuriraju se automatski. Vrijeme golova koristi ručni sat utakmice i može se razlikovati nekoliko minuta od službenog vremena.',
         paused: "Pauza",
         fullTime: "Kraj utakmice",
         aet: "Nakon produžetaka",
@@ -5398,6 +5434,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Нема података о стадионима.",
         scheduled: "Заказано",
         liveStatus: "Уживо",
+        manualTimerNotice: 'Rezultati uživo se automatski ažuriraju. Vremena golova koriste ručni sat utakmice i mogu se razlikovati nekoliko minuta od zvaničnih vremena.',
         paused: "Пауза",
         fullTime: "Крај утакмице",
         aet: "После продужетака",
@@ -5554,6 +5591,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Няма данни за стадиони.",
         scheduled: "Насрочен",
         liveStatus: "На живо",
+        manualTimerNotice: 'Резултатите на живо се актуализират автоматично. Времената на головете използват ръчния мачов часовник и може да се различават с няколко минути от официалните.',
         paused: "Пауза",
         fullTime: "Край",
         aet: "След продължения",
@@ -5710,6 +5748,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Немає даних про стадіони.",
         scheduled: "Заплановано",
         liveStatus: "Наживо",
+        manualTimerNotice: 'Рахунок наживо оновлюється автоматично. Час голів використовує ручний таймер матчу й може відрізнятися від офіційного на кілька хвилин.',
         paused: "Пауза",
         fullTime: "Кінець матчу",
         aet: "Після додаткового часу",
@@ -5865,6 +5904,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Engin leikvangagögn tiltæk.",
         scheduled: "Á dagskrá",
         liveStatus: "Í beinni",
+        manualTimerNotice: 'Staðan í beinni uppfærist sjálfkrafa. Marktímar nota handvirka leikklukku og geta verið nokkrum mínútum frá opinberum tímum.',
         paused: "Hlé",
         fullTime: "Leik lokið",
         aet: "Eftir framlengingu",
@@ -6022,6 +6062,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Hakuna data ya viwanja.",
         scheduled: "Imepangwa",
         liveStatus: "Moja kwa moja",
+        manualTimerNotice: 'Matokeo ya moja kwa moja husasishwa kiotomatiki. Muda wa mabao hutumia saa ya mechi ya mwongozo na unaweza kutofautiana na muda rasmi kwa dakika chache.',
         paused: "Imesitishwa",
         fullTime: "Muda Kamili",
         aet: "Baada ya Muda wa Ziada",
@@ -6178,6 +6219,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "የስታዲየም ውሂብ የለም።",
         scheduled: "ተይዟል",
         liveStatus: "ቀጥታ",
+        manualTimerNotice: 'የቀጥታ ውጤቶች በራስ-ሰር ይዘምናሉ። የጎል ጊዜዎች የእጅ ሰዓት ይጠቀማሉ እና ከኦፊሴላዊ ጊዜዎች በጥቂት ደቂቃዎች ሊለዩ ይችላሉ።',
         paused: "ቆሟል",
         fullTime: "ሙሉ ሰዓት",
         aet: "ከተጨማሪ ሰዓት በኋላ",
@@ -6334,6 +6376,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Geen stadiondata beskikbaar nie.",
         scheduled: "Geskeduleer",
         liveStatus: "Regstreeks",
+        manualTimerNotice: 'Regstreekse tellings werk outomaties by. Doeltye gebruik die handmatige wedstrydklok en kan met ’n paar minute van amptelike tye verskil.',
         paused: "Onderbreek",
         fullTime: "Voltyd",
         aet: "Na Ekstra Tyd",
@@ -6490,6 +6533,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Ayikho idatha yenkundla.",
         scheduled: "Kuhleliwe",
         liveStatus: "Bukhoma",
+        manualTimerNotice: 'Amasikolo abukhoma avuselelwa ngokuzenzakalela. Izikhathi zamagoli zisebenzisa iwashi lomdlalo elenziwa ngesandla futhi zingahluka ngemizuzu embalwa ezikhathini ezisemthethweni.',
         paused: "Kumiswe isikhashana",
         fullTime: "Isikhathi Siphelile",
         aet: "Ngemuva Kwesikhathi Esengeziwe",
@@ -6646,6 +6690,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Babu bayanan filin wasa.",
         scheduled: "An tsara",
         liveStatus: "Kai tsaye",
+        manualTimerNotice: 'Sakamakon kai tsaye suna sabuntawa ta atomatik. Lokutan kwallaye suna amfani da agogon wasa na hannu kuma na iya bambanta da lokacin hukuma da ’yan mintuna.',
         paused: "An dakata",
         fullTime: "Lokaci ya cika",
         aet: "Bayan karin lokaci",
@@ -6802,6 +6847,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Pukllana wasi willakuy mana kanchu.",
         scheduled: "Pachasqa",
         liveStatus: "Kawsaypi",
+        manualTimerNotice: 'Kawsaypi marcakuna kikinmanta musuqyachikun. Gol pachakuna makiwan ruwasqa pukllay relojwan llamk’achikun, chaymi oficial pachakunamanta huk iskay minutokunapi hukniray kanman.',
         paused: "Sayachisqa",
         fullTime: "Tukuy pacha",
         aet: "Yapa pachamanta qhipa",
@@ -6958,6 +7004,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Ndaipóri estadio mba’ekuaarã.",
         scheduled: "Oñemboguapy",
         liveStatus: "En vivo",
+        manualTimerNotice: 'Umi resultado en vivo oñembopyahu ijehegui. Gol aravo oipuru reloj manual partido rehegua ha ikatu ojoavy mbovymi minuto tiempo oficial-gui.',
         paused: "Ojejoko",
         fullTime: "Opa partido",
         aet: "Tiempo extra rire",
@@ -7114,6 +7161,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "Janiw estadio yatiyawi utjkiti.",
         scheduled: "Wakicht’ata",
         liveStatus: "En vivo",
+        manualTimerNotice: 'En vivo resultados ukax automático ukham machaqaptayi. Gol pachanakax manual partido reloj apnaqapxi, oficial pachanakampix mä qawqha minutonak mayjt’aspawa.',
         paused: "Sayt’ata",
         fullTime: "Tukuy pacha",
         aet: "Tiempo extra qhipata",
@@ -7219,6 +7267,7 @@ class WorldCup2026Panel extends HTMLElement {
 
     this._countdownInterval = setInterval(() => {
       this.updateCountdownDisplay();
+      this.updateLiveClockDisplays();
     }, 1000);
   }
 
@@ -7251,6 +7300,25 @@ class WorldCup2026Panel extends HTMLElement {
       .replaceAll(">", "&gt;")
       .replaceAll('"', "&quot;")
       .replaceAll("'", "&#039;");
+  }
+
+  loadJsonStorage(key, fallback) {
+    try {
+      const raw = localStorage.getItem(key);
+      if (!raw) return fallback;
+      const parsed = JSON.parse(raw);
+      return parsed && typeof parsed === "object" ? parsed : fallback;
+    } catch {
+      return fallback;
+    }
+  }
+
+  saveJsonStorage(key, value) {
+    try {
+      localStorage.setItem(key, JSON.stringify(value));
+    } catch {
+      // Ignore storage limits/private browsing failures.
+    }
   }
 
   async callApi(type) {
@@ -7310,6 +7378,7 @@ class WorldCup2026Panel extends HTMLElement {
       this._data.records = await this.safeCall("world_cup_2026/get_records", {});
       this._data.venues = await this.safeCall("world_cup_2026/get_venues", {});
       this._data.supporters = await this.loadSupporters();
+      this.processMatchClockState();
       this.render();
     } catch (err) {
       this.renderError(err);
@@ -7435,6 +7504,268 @@ class WorldCup2026Panel extends HTMLElement {
       SUSPENDED: "Suspended",
     };
     return labels[status] || status || "";
+  }
+
+
+  matchStorageId(match) {
+    const home = this.getHomeTeam(match);
+    const away = this.getAwayTeam(match);
+    return String(match?.id || match?.matchId || `${match?.utcDate || match?.date || "unknown"}|${home}|${away}`);
+  }
+
+  isLiveClockStatus(status) {
+    return ["IN_PLAY", "LIVE", "1H", "2H", "ET", "EXTRA_TIME", "1ET", "2ET"].includes(String(status || ""));
+  }
+
+  isHalfTimeClockStatus(status) {
+    return ["PAUSED", "HT", "HALF_TIME", "BREAK", "ET_HT", "EXTRA_TIME_HALF_TIME"].includes(String(status || ""));
+  }
+
+  isFinishedClockStatus(status) {
+    return ["FINISHED", "FT", "AET", "PEN"].includes(String(status || ""));
+  }
+
+  matchDuration(match) {
+    return String(match?.duration || match?.score?.duration || "").toUpperCase();
+  }
+
+  isExtraTimeMatch(match) {
+    const status = String(match?.status || "").toUpperCase();
+    const duration = this.matchDuration(match);
+    return ["ET", "EXTRA_TIME", "1ET", "2ET", "AET"].includes(status) || duration === "EXTRA_TIME" || duration === "PENALTY_SHOOTOUT";
+  }
+
+  currentClockSeconds(match, state = null, now = Date.now()) {
+    const id = this.matchStorageId(match);
+    const clockState = state || this._matchClockState?.[id];
+    if (!clockState) return null;
+
+    if (Number.isFinite(Number(clockState.freezeAt))) {
+      return Math.max(0, Math.floor(Number(clockState.freezeAt)));
+    }
+
+    const offset = Number(clockState.offsetSeconds || 0);
+    const startedAt = Number(clockState.startedAt || 0);
+    if (!startedAt) return Math.max(0, Math.floor(offset));
+
+    return Math.max(0, Math.floor(offset + ((now - startedAt) / 1000)));
+  }
+
+  formatClockSeconds(totalSeconds) {
+    const safeSeconds = Math.max(0, Math.floor(Number(totalSeconds || 0)));
+    const minutes = Math.floor(safeSeconds / 60);
+    const seconds = safeSeconds % 60;
+    return `${minutes}:${String(seconds).padStart(2, "0")}`;
+  }
+
+  displayMinuteFromSeconds(totalSeconds) {
+    const minute = Math.max(0, Math.floor(Number(totalSeconds || 0) / 60));
+    return `${minute}'`;
+  }
+
+  allKnownMatches() {
+    const matches = [];
+    [this._data.live, this._data.fixtures, this._data.results].forEach((list) => {
+      (Array.isArray(list) ? list : []).forEach((match) => matches.push(match));
+    });
+    return matches;
+  }
+
+  processMatchClockState() {
+    const now = Date.now();
+    const states = this.loadJsonStorage(this._matchClockStorageKey, {});
+    const goals = this.loadJsonStorage(this._goalEventStorageKey, {});
+    let changed = false;
+    let goalsChanged = false;
+
+    this.allKnownMatches().forEach((match) => {
+      const id = this.matchStorageId(match);
+      const status = String(match?.status || "");
+      const previous = states[id] || {};
+      const homeTeam = this.getHomeTeam(match);
+      const awayTeam = this.getAwayTeam(match);
+      const homeScore = Number(this.getHomeScore(match));
+      const awayScore = Number(this.getAwayScore(match));
+      const hasScores = Number.isFinite(homeScore) && Number.isFinite(awayScore);
+      let state = { ...previous };
+
+      if (this.isLiveClockStatus(status)) {
+        const existingSeconds = this.currentClockSeconds(match, state, now);
+        // Manual testing clock: keep this independent from API-Football minutes so both timers can be compared side-by-side.
+        const wasPaused = Number.isFinite(Number(previous.freezeAt));
+        const previousOffset = Number(previous.offsetSeconds || 0);
+        const previousSeconds = Number.isFinite(Number(existingSeconds)) ? Number(existingSeconds) : previousOffset;
+
+        let offsetSeconds;
+        if (wasPaused) {
+          // Restart from the frozen point: 45:00 after HT, 105:00 after ET HT.
+          offsetSeconds = Number(previous.freezeAt || 0);
+        } else if (!previous.startedAt) {
+          // Fresh live start. Extra-time statuses start from 90:00, normal live starts from 00:00.
+          offsetSeconds = this.isExtraTimeMatch(match) ? 90 * 60 : 0;
+        } else {
+          offsetSeconds = previousSeconds;
+        }
+
+        if (this.isExtraTimeMatch(match) && offsetSeconds < 90 * 60) {
+          offsetSeconds = 90 * 60;
+        }
+
+        state = {
+          ...state,
+          status,
+          startedAt: now,
+          offsetSeconds: Math.max(0, Math.floor(offsetSeconds)),
+        };
+        delete state.freezeAt;
+        changed = true;
+      } else if (this.isHalfTimeClockStatus(status)) {
+        const previousSeconds = this.currentClockSeconds(match, state, now);
+        const inExtraTime = this.isExtraTimeMatch(match) || Number(previousSeconds || 0) >= 90 * 60;
+        state = {
+          ...state,
+          status,
+          startedAt: null,
+          offsetSeconds: inExtraTime ? 105 * 60 : 45 * 60,
+          freezeAt: inExtraTime ? 105 * 60 : 45 * 60,
+        };
+        changed = true;
+      } else if (this.isFinishedClockStatus(status)) {
+        const finishAt = status === "AET" ? 120 * 60 : (status === "PEN" ? null : 90 * 60);
+        state = {
+          ...state,
+          status,
+          startedAt: null,
+          offsetSeconds: finishAt ?? Number(state.offsetSeconds || 0),
+          finished: true,
+        };
+        delete state.freezeAt;
+        changed = true;
+      }
+
+      if (hasScores) {
+        const lastHome = Number(previous.lastHomeScore);
+        const lastAway = Number(previous.lastAwayScore);
+        const hadPreviousScore = Number.isFinite(lastHome) && Number.isFinite(lastAway);
+
+        if (hadPreviousScore && (homeScore > lastHome || awayScore > lastAway)) {
+          const seconds = this.currentClockSeconds(match, state, now) ?? Number(state.offsetSeconds || 0);
+          const timer = this.formatClockSeconds(seconds);
+          const displayMinute = this.displayMinuteFromSeconds(seconds);
+          const eventBucket = Array.isArray(goals[id]) ? goals[id] : [];
+
+          const pushGoal = (team, count) => {
+            for (let i = 0; i < count; i += 1) {
+              eventBucket.push({
+                type: "Goal",
+                source: "local-clock",
+                team,
+                teamName: team,
+                player: "Goal",
+                playerName: "Goal",
+                timer,
+                displayMinute,
+                minute: Math.max(0, Math.floor(Number(seconds || 0) / 60)),
+                second: Math.max(0, Math.floor(Number(seconds || 0))),
+                createdAt: new Date(now).toISOString(),
+              });
+            }
+          };
+
+          if (homeScore > lastHome) pushGoal(homeTeam, homeScore - lastHome);
+          if (awayScore > lastAway) pushGoal(awayTeam, awayScore - lastAway);
+
+          goals[id] = eventBucket;
+          goalsChanged = true;
+        }
+
+        state.lastHomeScore = homeScore;
+        state.lastAwayScore = awayScore;
+        changed = true;
+      }
+
+      states[id] = state;
+    });
+
+    this._matchClockState = states;
+    this._localGoalEvents = goals;
+    if (changed) this.saveJsonStorage(this._matchClockStorageKey, states);
+    if (goalsChanged) this.saveJsonStorage(this._goalEventStorageKey, goals);
+  }
+
+  apiClockText(match) {
+    const minute = match && match.minute !== undefined && match.minute !== null && match.minute !== "" ? Number(match.minute) : null;
+    return Number.isFinite(minute) ? `${minute}'` : "--";
+  }
+
+  manualClockText(match) {
+    const status = String(match?.status || "");
+    if (this.isFinishedClockStatus(status)) return "";
+
+    const seconds = this.currentClockSeconds(match);
+    if (seconds === null || seconds === undefined) return "--";
+
+    return this.formatClockSeconds(seconds);
+  }
+
+  liveClockText(match) {
+    return this.manualClockText(match);
+  }
+
+  footballClockHtml(match) {
+    const status = String(match?.status || "");
+    if (!(this.isLiveClockStatus(status) || this.isHalfTimeClockStatus(status))) return "";
+
+    const id = this.matchStorageId(match);
+    const clockText = this.manualClockText(match);
+    if (!clockText || clockText === "--") return "";
+
+    const label = this.isHalfTimeClockStatus(status)
+      ? this.t("paused")
+      : (this.isExtraTimeMatch(match) ? this.t("aet") : this.t("liveStatus"));
+
+    return `
+      <div class="wc-football-match-clock-wrap" title="${this.esc(this.t("manualTimerNotice"))}">
+        <span class="wc-football-match-clock-label">${this.esc(label)}</span>
+        <span class="wc-football-match-clock" data-match-id="${this.esc(id)}">${this.esc(clockText)}</span>
+      </div>
+    `;
+  }
+
+  statusHtml(match) {
+    const status = String(match?.status || "");
+    const id = this.matchStorageId(match);
+    const liveOrPaused = this.isLiveClockStatus(status) || this.isHalfTimeClockStatus(status);
+
+    let label = this.statusLabel(status, match);
+    if (liveOrPaused && /\d+'$/.test(String(label))) {
+      label = this.isExtraTimeMatch(match) ? "Extra Time" : this.t("liveStatus");
+    }
+
+    if (liveOrPaused) {
+      return this.esc(label);
+    }
+
+    return this.esc(label);
+  }
+
+  updateLiveClockDisplays() {
+    const manualClocks = this.querySelectorAll(".wc-football-match-clock[data-match-id]");
+    if (!manualClocks.length) return;
+
+    const matchesById = new Map(this.allKnownMatches().map((match) => [this.matchStorageId(match), match]));
+    manualClocks.forEach((clock) => {
+      const id = clock.getAttribute("data-match-id");
+      const match = matchesById.get(id);
+      if (!match) return;
+      clock.textContent = this.manualClockText(match);
+    });
+  }
+
+  storedGoalEventsForMatch(match) {
+    const id = this.matchStorageId(match);
+    const stored = this._localGoalEvents?.[id];
+    return Array.isArray(stored) ? stored : [];
   }
 
   stageLabel(stage) {
@@ -7563,6 +7894,8 @@ class WorldCup2026Panel extends HTMLElement {
       "South Korea": "Korea Republic",
       Türkiye: "Turkey",
       "Bosnia & Herz": "Bosnia and Herzegovina",
+      "Bosnia & Herzegovina": "Bosnia and Herzegovina",
+      "Bosnia-H.": "Bosnia and Herzegovina",
       "Bosnia-Herzegovina": "Bosnia and Herzegovina",
       "Ivory Coast": "Côte d'Ivoire",
       Curacao: "Curaçao",
@@ -13769,6 +14102,46 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
 
+
+
+        .wc-football-match-clock-wrap {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 2px;
+          margin-top: 3px;
+        }
+
+        .wc-football-match-clock-label {
+          font-size: 9px;
+          line-height: 1;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          color: rgba(255, 255, 255, 0.82);
+          text-shadow: 0 2px 8px rgba(0,0,0,0.75);
+        }
+
+        .wc-football-match-clock {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 66px;
+          padding: 4px 9px;
+          border-radius: 8px;
+          font-size: 18px;
+          line-height: 1;
+          font-weight: 1000;
+          letter-spacing: 0.04em;
+          color: #ffffff;
+          background: rgba(0, 0, 0, 0.52);
+          border: 1px solid rgba(255, 255, 255, 0.72);
+          box-shadow: 0 0 14px rgba(255,255,255,0.16), inset 0 0 0 1px rgba(255,255,255,0.12);
+          font-variant-numeric: tabular-nums;
+          text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+        }
+
         /* Tablet readability fix: use the empty top-right space so the header nav labels stay readable. */
         .wc-app.wc-view-tablet .wc-header {
           padding-right: 0 !important;
@@ -14225,7 +14598,35 @@ class WorldCup2026Panel extends HTMLElement {
   overviewPage() {
     const o = this._data.overview || {};
     const fixtures = this._data.fixtures || [];
-    const scorers = this._data.scorers || [];
+    const rawScorers = Array.isArray(this._data.scorers) ? this._data.scorers : [];
+    const scorers = rawScorers
+      .map((s) => {
+        const playerName =
+          typeof s.player === "string"
+            ? s.player
+            : s.player?.name || s.name || this.t("unknown");
+
+        const teamName =
+          typeof s.team === "string"
+            ? s.team
+            : s.team?.shortName || s.team?.name || s.team?.tla || s.nationality || this.t("tbc");
+
+        return {
+          raw: s,
+          name: playerName,
+          team: this.localizedTeamName(teamName),
+          goals: this.numberValue(this.resolvedPlayerStat(s, "goals", "scored", "goal_count", "total_goals", "totalGoals")),
+          assists: this.numberValue(this.resolvedPlayerStat(s, "assists", "assist", "assist_count", "total_assists", "totalAssists")),
+          source: s.source || "football-data.org",
+        };
+      })
+      .filter((player) => player.name && player.name !== this.t("unknown"))
+      .sort((a, b) =>
+        b.goals - a.goals ||
+        b.assists - a.assists ||
+        a.name.localeCompare(b.name)
+      );
+    const scorerGoals = (s) => this.numberValue(s?.goals);
     const stats = this._data.statistics || {};
     const records = this._data.records || {};
     const venues = this._data.venues || {};
@@ -14279,7 +14680,7 @@ class WorldCup2026Panel extends HTMLElement {
                 <div class="overview-stat-tile"><span>${this.t("totalGoals")}</span><strong>${totalGoals}</strong><em>${goalsPerMatch} ${this.t("goalsPerMatch")}</em></div>
                 <div class="overview-stat-tile"><span>${this.t("groups")}</span><strong>${loadedGroups || 12}</strong><em>${this.t("groupsAL")}</em></div>
                 <div class="overview-stat-tile"><span>${this.t("stadiums")}</span><strong>${stadiumCount}</strong><em>${this.t("worldCupStadiums")}</em></div>
-                <div class="overview-stat-tile"><span>${this.t("topScorer")}</span><strong>${this.esc(topScorer?.goals ?? 0)}</strong><em>${this.esc(topScorer?.player?.name || topScorer?.name || this.t("notAvailable"))}</em></div>
+                <div class="overview-stat-tile"><span>${this.t("topScorer")}</span><strong>${this.esc(topScorer?.goals ?? 0)}</strong><em>${this.esc(topScorer?.name || this.t("notAvailable"))}</em></div>
               </div>
 
               <div class="wc-tablet-progress-controls wc-tablet-progress-title">
@@ -14368,9 +14769,9 @@ class WorldCup2026Panel extends HTMLElement {
                 ${scorers.slice(0, 5).map((s, i) => `
                   <div class="overview-player-row">
                     <span>${i + 1}</span>
-                    <strong>${this.esc(typeof s.player === "string" ? s.player : s.player?.name || s.name || this.t("unknown"))}</strong>
-                    <em>${this.esc(this.localizedTeamName(s.team?.name || s.team || ""))}</em>
-                    <b>${s.goals ?? 0}</b>
+                    <strong>${this.esc(s.name)}</strong>
+                    <em>${this.esc(s.team)}</em>
+                    <b>${scorerGoals(s)}</b>
                   </div>
                 `).join("")}
               </div>
@@ -14473,23 +14874,42 @@ class WorldCup2026Panel extends HTMLElement {
 
   matchGoalEventsForTeam(match, team) {
     const teamKey = this.fixtureTeamKey(team);
-    const events = [
+    const apiEvents = [
       ...((match && Array.isArray(match.goalEvents)) ? match.goalEvents : []),
       ...((match && Array.isArray(match.events)) ? match.events : []),
-    ];
+    ].filter((event) => String(event?.type || "").toLowerCase() === "goal")
+     .filter((event) => this.fixtureTeamKey(event?.team || event?.teamName || event?.country) === teamKey);
+
+    const localEvents = this.storedGoalEventsForMatch(match)
+      .filter((event) => String(event?.type || "").toLowerCase() === "goal")
+      .filter((event) => this.fixtureTeamKey(event?.team || event?.teamName || event?.country) === teamKey);
+
+    const sourceEvents = apiEvents.length ? apiEvents : localEvents;
+    const fallbackScorers = this.matchScorersForTeam(team);
     const seen = new Set();
 
-    return events
-      .filter((event) => String(event?.type || "").toLowerCase() === "goal")
-      .filter((event) => this.fixtureTeamKey(event?.team || event?.teamName || event?.country) === teamKey)
-      .map((event) => ({
-        name: event?.player || event?.playerName || event?.name || "",
-        minute: event?.minute ?? event?.elapsed ?? null,
-        extra: event?.extra ?? null,
-      }))
+    return sourceEvents
+      .map((event, index) => {
+        const localFallback = localEvents[index] || {};
+        const minute = event?.minute ?? event?.elapsed ?? localFallback?.minute ?? null;
+        const timer = event?.timer || localFallback?.timer || null;
+        const displayMinute = event?.displayMinute || localFallback?.displayMinute || (minute !== null && minute !== undefined && minute !== "" ? `${Number(minute)}'` : "");
+        const rawName = event?.player || event?.playerName || event?.name || localFallback?.player || localFallback?.playerName || "";
+        const fallbackName = fallbackScorers[index]?.name || fallbackScorers[0]?.name || "Goal";
+        const cleanName = String(rawName || "").trim();
+        const name = (!cleanName || cleanName.toLowerCase() === "goal") ? fallbackName : cleanName;
+        return {
+          name,
+          minute,
+          extra: event?.extra ?? localFallback?.extra ?? null,
+          timer,
+          displayMinute,
+          source: event?.source || localFallback?.source || "api",
+        };
+      })
       .filter((event) => event.name)
       .filter((event) => {
-        const key = `${String(event.name).toLowerCase().trim()}|${event.minute ?? ""}|${event.extra ?? ""}`;
+        const key = `${String(event.name).toLowerCase().trim()}|${event.displayMinute || event.minute || ""}|${event.timer || ""}`;
         if (seen.has(key)) return false;
         seen.add(key);
         return true;
@@ -14509,10 +14929,12 @@ class WorldCup2026Panel extends HTMLElement {
     const namesHtml = (items) => items.length
       ? items.map((item) => {
           const name = typeof item === "string" ? item : item.name;
+          const displayMinute = typeof item === "object" && item.displayMinute ? String(item.displayMinute) : "";
           const minute = typeof item === "object" && item.minute !== null && item.minute !== undefined && item.minute !== "" ? Number(item.minute) : null;
           const extra = typeof item === "object" && item.extra !== null && item.extra !== undefined && item.extra !== "" ? Number(item.extra) : null;
-          const minuteText = Number.isFinite(minute) ? ` ${minute}${Number.isFinite(extra) && extra > 0 ? `+${extra}` : ""}'` : "";
-          return `<span class="match-scorer-pill">${this.esc(name)}${this.esc(minuteText)}</span>`;
+          const minuteText = displayMinute ? ` ${displayMinute}` : (Number.isFinite(minute) ? ` ${minute}${Number.isFinite(extra) && extra > 0 ? `+${extra}` : ""}'` : "");
+          const title = typeof item === "object" && item.timer ? ` title="${this.esc(item.timer)}"` : "";
+          return `<span class="match-scorer-pill"${title}>⚽ ${this.esc(name)}${this.esc(minuteText)}</span>`;
         }).join("")
       : `<span class="match-scorer-empty">-</span>`;
 
@@ -14540,7 +14962,7 @@ class WorldCup2026Panel extends HTMLElement {
       return `
         <div class="wc-card">
           <div class="wc-section-title">${this.t("live")}</div>
-          <div class="wc-live-sync-notice">ℹ️ Live scores and statistics are synced automatically and may be delayed by up to 60 seconds.</div>
+          <div class="wc-live-sync-notice">ℹ️ ${this.t("manualTimerNotice")}</div>
           <div class="wc-empty">${this.t("noLiveMatches")}</div>
         </div>
       `;
@@ -14549,7 +14971,7 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <div class="wc-card">
         <div class="wc-section-title">${this.t("live")} <span class="wc-badge wc-live">${this.t("liveStatus")}</span></div>
-        <div class="wc-live-sync-notice">ℹ️ Live scores and statistics are synced automatically and may be delayed by up to 60 seconds.</div>
+        <div class="wc-live-sync-notice">ℹ️ ${this.t("manualTimerNotice")}</div>
         <div class="wc-list">
           ${live.map(m => this.matchRow(m)).join("")}
         </div>
@@ -15383,7 +15805,7 @@ class WorldCup2026Panel extends HTMLElement {
             ${matchNumber ? `<span>#${this.esc(matchNumber)}</span>` : ""}
             ${matchDate ? `<span class="fixture-date-pill">${this.esc(matchDate)}</span>` : ""}
             ${matchTime ? `<span class="fixture-time-pill">⏱ ${this.esc(matchTime)}</span>` : ""}
-            <strong class="fixture-card-status">${this.esc(status)}</strong>
+            <strong class="fixture-card-status">${this.statusHtml(m)}</strong>
           </div>
         </div>
 
@@ -15433,6 +15855,7 @@ class WorldCup2026Panel extends HTMLElement {
           <div class="fixture-middle">
             <div class="wc-score">${homeScore} - ${awayScore}</div>
             <div class="fixture-vs">${this.t("versus")}</div>
+            ${this.footballClockHtml(m)}
           </div>
 
           ${this.teamFlagBlock(awayTeam)}
@@ -15441,7 +15864,7 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="fixture-meta">
           <div class="wc-muted">${this.esc(stage)}</div>
           <div class="wc-muted">${this.esc(date)}</div>
-          <div class="wc-muted">${this.esc(status)}</div>
+          <div class="wc-muted">${this.statusHtml(m)}</div>
         </div>
 
         ${this.matchScorersSection(homeTeam, awayTeam, m)}
