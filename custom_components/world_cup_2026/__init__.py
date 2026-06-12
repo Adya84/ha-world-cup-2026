@@ -66,7 +66,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         config={
             "_panel_custom": {
                 "name": "world-cup-2026-panel",
-                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v=4.0.6",
+                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v=4.1.2",
                 "embed_iframe": False,
                 "trust_external": False,
             }
