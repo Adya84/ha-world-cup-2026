@@ -135,6 +135,15 @@ def _full_time_score(match):
     return full_time.get("home"), full_time.get("away")
 
 
+def parse_datetime_utc(value):
+    if not value:
+        return None
+    try:
+        return datetime.fromisoformat(str(value).replace("Z", "+00:00")).astimezone(timezone.utc)
+    except (TypeError, ValueError):
+        return None
+
+
 def _is_finished(match):
     home, away = _full_time_score(match)
     return match.get("status") in FINISHED_STATUSES or (home is not None and away is not None)
@@ -356,10 +365,393 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         self._live_minutes_last_fetch = None
         self._live_api_football_cache = {}
         self._live_api_football_last_fetch = None
+        self._goal_event_store = {}
+        self._goal_event_store_loaded = False
 
 
-    def _read_github_settings(self):
-        """Read GitHub sync settings from /config/secrets.yaml.
+    def _goal_event_store_path(self):
+        return Path("/config/world_cup_2026_goal_events.json")
+
+    def _load_goal_event_store_sync(self):
+        """Load persisted match clocks and goal events off the event loop."""
+        path = self._goal_event_store_path()
+        if not path.exists():
+            return {}
+        data = json.loads(path.read_text(encoding="utf-8"))
+        return data if isinstance(data, dict) else {}
+
+    async def _async_load_goal_event_store(self):
+        """Load persisted match clocks and goal events without blocking Home Assistant."""
+        if self._goal_event_store_loaded:
+            return
+        try:
+            self._goal_event_store = await self.hass.async_add_executor_job(
+                self._load_goal_event_store_sync
+            )
+        except Exception as err:  # pylint: disable=broad-exception-caught
+            _LOGGER.warning("Could not load World Cup goal event store: %s", err)
+            self._goal_event_store = {}
+        self._goal_event_store_loaded = True
+
+    def _save_goal_event_store_sync(self):
+        """Persist match clocks and goal events off the event loop."""
+        path = self._goal_event_store_path()
+        path.write_text(json.dumps(self._goal_event_store, indent=2), encoding="utf-8")
+
+    async def _async_save_goal_event_store(self):
+        """Persist match clocks and goal events without blocking Home Assistant."""
+        try:
+            await self.hass.async_add_executor_job(self._save_goal_event_store_sync)
+        except Exception as err:  # pylint: disable=broad-exception-caught
+            _LOGGER.warning("Could not save World Cup goal event store: %s", err)
+
+    def _match_store_key(self, match):
+        match_id = match.get("id")
+        if match_id is not None:
+            return str(match_id)
+        return _match_key_from_names(
+            _team_name(match.get("homeTeam", {})),
+            _team_name(match.get("awayTeam", {})),
+        )
+
+    def _score_duration(self, match):
+        score = match.get("score") or {}
+        return score.get("duration")
+
+    def _normalise_goal_minute(self, seconds):
+        try:
+            seconds = int(seconds)
+        except (TypeError, ValueError):
+            seconds = 0
+        minute = max(seconds // 60, 0)
+        return f"{minute}'"
+
+    def _format_timer_value(self, seconds):
+        try:
+            seconds = int(seconds)
+        except (TypeError, ValueError):
+            seconds = 0
+        seconds = max(seconds, 0)
+        return f"{seconds // 60}:{seconds % 60:02d}"
+
+    def _update_match_clock_state(self, match, state, now):
+        """Maintain a practical fallback match clock using status transitions."""
+        status = match.get("status")
+        previous_status = state.get("status")
+        duration = self._score_duration(match)
+
+        base_seconds = int(state.get("base_seconds") or 0)
+        phase_start = state.get("phase_start")
+
+        if status in FINISHED_STATUSES:
+            state["clock_active"] = False
+            state["status"] = status
+            if duration == "EXTRA_TIME" or status == "AET":
+                state["clock_seconds"] = max(int(state.get("clock_seconds") or 0), 120 * 60)
+            elif status == "PEN":
+                state["clock_seconds"] = max(int(state.get("clock_seconds") or 0), 120 * 60)
+            else:
+                state["clock_seconds"] = max(int(state.get("clock_seconds") or 0), 90 * 60)
+            return state
+
+        if status in {"PAUSED", "HT", "HALF_TIME"}:
+            if duration == "EXTRA_TIME" or base_seconds >= 90 * 60:
+                state["base_seconds"] = 105 * 60
+                state["clock_seconds"] = 105 * 60
+            else:
+                state["base_seconds"] = 45 * 60
+                state["clock_seconds"] = 45 * 60
+            state["clock_active"] = False
+            state["phase_start"] = None
+            state["status"] = status
+            return state
+
+        if status in LIVE_STATUSES:
+            # First live transition starts from kick-off time when possible.
+            if previous_status not in LIVE_STATUSES or not phase_start:
+                if previous_status in {"PAUSED", "HT", "HALF_TIME"}:
+                    # Restart after half-time or extra-time break.
+                    base_seconds = int(state.get("base_seconds") or 45 * 60)
+                elif duration == "EXTRA_TIME" or int(state.get("clock_seconds") or 0) >= 90 * 60:
+                    base_seconds = 90 * 60
+                else:
+                    base_seconds = 0
+                    kickoff = parse_datetime_utc(match.get("utcDate"))
+                    if kickoff and now > kickoff:
+                        elapsed = int((now - kickoff).total_seconds())
+                        # Clamp normal-time first half fallback so delays do not run away.
+                        base_seconds = 0
+                        state["clock_seconds"] = min(max(elapsed, 0), 45 * 60)
+                        state["phase_start"] = now.isoformat()
+                        state["base_seconds"] = max(int(state.get("clock_seconds") or 0), 0)
+                        state["clock_active"] = True
+                        state["status"] = status
+                        return state
+                state["phase_start"] = now.isoformat()
+                state["base_seconds"] = base_seconds
+
+            phase_start_dt = parse_datetime_utc(state.get("phase_start"))
+            if phase_start_dt:
+                elapsed = max(int((now - phase_start_dt).total_seconds()), 0)
+                state["clock_seconds"] = int(state.get("base_seconds") or 0) + elapsed
+            else:
+                state["clock_seconds"] = int(state.get("base_seconds") or 0)
+            state["clock_active"] = True
+            state["status"] = status
+            return state
+
+        state["clock_active"] = False
+        state["status"] = status
+        return state
+
+    def _normalise_goal_event(self, event, match=None, clock_seconds=None):
+        """Return a permanent, display-ready goal event.
+
+        Every stored goal event keeps the real scorer name, team, exact timer
+        value and football-style display minute. This is what gets exported to
+        GitHub and then reused by Live, Results and finished-match cards.
+        """
+        if not isinstance(event, dict):
+            return None
+
+        event = dict(event)
+        player = event.get("player") or event.get("playerName") or event.get("name")
+        team = event.get("team") or event.get("teamName") or event.get("country")
+
+        # Do not create permanent match events without a real scorer name.
+        # This prevents old/bad fallback entries like "Goal 90'" replacing
+        # proper API-Football scorer names.
+        if not player or str(player).strip().lower() == "goal":
+            return None
+
+        try:
+            minute = int(event.get("minute")) if event.get("minute") not in (None, "") else None
+        except (TypeError, ValueError):
+            minute = None
+
+        try:
+            extra = int(event.get("extra")) if event.get("extra") not in (None, "") else None
+        except (TypeError, ValueError):
+            extra = None
+
+        timer_seconds = event.get("timerSeconds")
+        try:
+            timer_seconds = int(timer_seconds) if timer_seconds not in (None, "") else None
+        except (TypeError, ValueError):
+            timer_seconds = None
+
+        # Prefer exact event minute from API-Football. If an event arrives
+        # without a minute, attach the current fallback clock at the time we
+        # see it so the scorer is permanently timestamped.
+        if timer_seconds is None:
+            if minute is not None:
+                timer_seconds = (minute + (extra or 0)) * 60
+            elif clock_seconds is not None:
+                try:
+                    timer_seconds = int(clock_seconds)
+                except (TypeError, ValueError):
+                    timer_seconds = None
+
+        if timer_seconds is None:
+            timer_seconds = 0
+
+        if minute is None:
+            minute = max(int(timer_seconds) // 60, 0)
+
+        if event.get("displayMinute"):
+            display_minute = str(event.get("displayMinute"))
+        elif extra and extra > 0:
+            display_minute = f"{minute}+{extra}'"
+        else:
+            display_minute = f"{minute}'"
+
+        event.update({
+            "type": "Goal",
+            "team": team,
+            "player": player,
+            "minute": minute,
+            "extra": extra,
+            "timer": event.get("timer") or self._format_timer_value(timer_seconds),
+            "timerSeconds": int(timer_seconds),
+            "displayMinute": display_minute,
+            "source": event.get("source") or "api_football",
+        })
+
+        if match is not None:
+            event["matchId"] = match.get("id")
+            event["matchUtcDate"] = match.get("utcDate")
+            event["homeTeam"] = _team_name(match.get("homeTeam", {}))
+            event["awayTeam"] = _team_name(match.get("awayTeam", {}))
+
+        return event
+
+    def _event_signature(self, event):
+        return "|".join([
+            str(event.get("matchId") or ""),
+            str(event.get("team") or "").lower().strip(),
+            str(event.get("player") or "").lower().strip(),
+            str(event.get("displayMinute") or event.get("minute") or event.get("timer") or ""),
+            str(event.get("detail") or "").lower().strip(),
+        ])
+
+    def _merge_goal_events(self, existing, incoming, match=None, clock_seconds=None):
+        merged = []
+        seen = set()
+
+        for raw_event in list(existing or []) + list(incoming or []):
+            event = self._normalise_goal_event(raw_event, match=match, clock_seconds=clock_seconds)
+            if not event:
+                continue
+
+            sig = self._event_signature(event)
+            if sig in seen:
+                continue
+
+            merged.append(event)
+            seen.add(sig)
+
+        merged.sort(key=lambda event: int(event.get("timerSeconds") or 0))
+
+        for index, event in enumerate(merged, start=1):
+            event["goalNumber"] = index
+
+        return merged
+
+    def _is_generic_fallback_event(self, event):
+        """True for old locally guessed events that have no real scorer name."""
+        return (
+            isinstance(event, dict)
+            and (
+                event.get("source") == "fallback_timer"
+                or str(event.get("player") or "").lower() == "goal"
+            )
+        )
+
+    async def _merge_persistent_goal_events_to_matches(self, matches):
+        """Detect score changes, timestamp goals, and keep real events on finished matches.
+
+        Important behaviour:
+        - API-Football goal events with real player names always win.
+        - Generic fallback "Goal 90'" events are removed once real events are available.
+        - Fallback goal events are only created while the match is live and the
+          fallback clock is active. This prevents completed games being backfilled
+          as generic 90' goals on first load.
+        """
+        now = datetime.now(timezone.utc)
+        changed = False
+
+        for match in matches:
+            key = self._match_store_key(match)
+            if not key:
+                continue
+
+            state = self._goal_event_store.setdefault(key, {"goalEvents": []})
+            self._update_match_clock_state(match, state, now)
+
+            existing_events = state.get("goalEvents") or []
+            api_events = match.get("goalEvents") or match.get("events") or []
+            api_events = [event for event in api_events if isinstance(event, dict)]
+
+            # If real API events exist, remove the old guessed "Goal 90'" entries.
+            # This fixes old/bad stored events and keeps proper scorer names.
+            if api_events:
+                existing_events = [
+                    event for event in existing_events
+                    if not self._is_generic_fallback_event(event)
+                ]
+
+            merged_events = self._merge_goal_events(existing_events, api_events, match=match, clock_seconds=state.get("clock_seconds"))
+
+            home_score, away_score = _full_time_score(match)
+            home_score = home_score if home_score is not None else 0
+            away_score = away_score if away_score is not None else 0
+            old_home = int(state.get("homeScore") or 0)
+            old_away = int(state.get("awayScore") or 0)
+            clock_seconds = int(state.get("clock_seconds") or 0)
+            status = match.get("status")
+
+            # Only create fallback events during a live game. Do not backfill
+            # finished games as generic 90' goals. If API-Football supplies
+            # real events, those are merged above instead.
+            can_create_fallback = (
+                status in LIVE_STATUSES
+                and bool(state.get("clock_active"))
+                and not api_events
+            )
+
+            # Do not create generic "Goal 90'" fallback events. Goal events
+            # are only stored when a real scorer name is available from the
+            # live event feed, then they are kept permanently for Results.
+
+            if merged_events != (state.get("goalEvents") or []):
+                state["goalEvents"] = merged_events
+                changed = True
+
+            state["homeScore"] = home_score
+            state["awayScore"] = away_score
+            state["utcDate"] = match.get("utcDate")
+            state["homeTeam"] = _team_name(match.get("homeTeam", {}))
+            state["awayTeam"] = _team_name(match.get("awayTeam", {}))
+
+            if merged_events:
+                # Permanent event data exported to matches.json and reused by
+                # Live, Results and finished-match cards.
+                match["goalEvents"] = merged_events
+                match["events"] = merged_events
+
+            # Export the backend/manual match clock into matches.json so the
+            # GitHub feed carries the same clock data users see in the panel.
+            # This does not replace scores/statuses from football-data.org.
+            clock_seconds = int(state.get("clock_seconds") or 0)
+            clock_text = self._format_timer_value(clock_seconds)
+            display_minute = self._normalise_goal_minute(clock_seconds)
+            manual_clock = {
+                "seconds": clock_seconds,
+                "timer": clock_text,
+                "displayMinute": display_minute,
+                "active": bool(state.get("clock_active")),
+                "status": match.get("status"),
+                "source": "local_status_timer",
+            }
+
+            if match.get("status") in LIVE_STATUSES:
+                match["manualClock"] = manual_clock
+                match["fallbackClock"] = clock_seconds
+                match["fallbackClockText"] = clock_text
+                match["manualClockText"] = clock_text
+
+            # Persist score/status snapshots and any permanent events so the
+            # coordinator can compare future updates and keep goal data after
+            # the match moves from Live to Results.
+            previous_snapshot = {
+                "homeScore": state.get("homeScore"),
+                "awayScore": state.get("awayScore"),
+                "status": state.get("status"),
+                "clock_seconds": state.get("clock_seconds"),
+                "goalEvents": state.get("goalEvents") or [],
+            }
+
+            if merged_events != (state.get("goalEvents") or []):
+                changed = True
+
+            current_snapshot = {
+                "homeScore": state.get("homeScore"),
+                "awayScore": state.get("awayScore"),
+                "status": state.get("status"),
+                "clock_seconds": state.get("clock_seconds"),
+                "goalEvents": state.get("goalEvents") or [],
+            }
+            if previous_snapshot != current_snapshot:
+                changed = True
+
+        if changed:
+            await self._async_save_goal_event_store()
+
+        return matches
+
+
+    def _read_github_settings_sync(self):
+        """Read GitHub sync settings from /config/secrets.yaml off the event loop.
 
         Expected entries:
         github_token: "github_pat_..."
@@ -459,9 +851,13 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                     f"GitHub upload failed for {filename}: {response.status} {text}"
                 )
 
+    async def _async_read_github_settings(self):
+        """Read GitHub/API keys without blocking Home Assistant."""
+        return await self.hass.async_add_executor_job(self._read_github_settings_sync)
+
     async def _sync_public_json_to_github(self, files):
         """Sync exported JSON files to the configured GitHub repository."""
-        settings = self._read_github_settings()
+        settings = await self._async_read_github_settings()
         token = settings.get("github_token")
         repo = settings.get("github_repo") or "Adya84/ha-world-cup-2026"
         branch = settings.get("github_branch") or "main"
@@ -491,8 +887,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
         _LOGGER.info("World Cup public JSON synced to GitHub repo %s", repo)
 
-    def _api_football_enabled(self):
-        settings = self._read_github_settings()
+    async def _api_football_enabled(self):
+        settings = await self._async_read_github_settings()
         return settings.get("api_football_key")
 
     def _normalise_api_football_goal_event(self, event):
@@ -578,7 +974,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         /fixtures/events is queried for each live fixture. Results are cached
         for five minutes to protect the free API limit.
         """
-        api_key = self._api_football_enabled()
+        api_key = await self._api_football_enabled()
         if not api_key:
             return {}
 
@@ -712,6 +1108,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
     async def _async_update_data(self) -> dict:
         """Fetch all World Cup data and build app-ready derived data."""
+        await self._async_load_goal_event_store()
+
         try:
             matches_data = await self.api.get_matches()
             standings_data = await self.api.get_standings()
@@ -726,6 +1124,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
         matches = matches_data.get("matches", [])
         matches = await self._add_live_api_football_data_to_matches(matches)
+        matches = await self._merge_persistent_goal_events_to_matches(matches)
         standings = standings_data.get("standings", [])
         scorers = scorers_data.get("scorers", [])
 
