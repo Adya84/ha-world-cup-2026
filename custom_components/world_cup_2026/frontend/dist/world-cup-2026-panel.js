@@ -13570,6 +13570,99 @@ class WorldCup2026Panel extends HTMLElement {
           font-size: 9px !important;
         }
 
+
+        /* Safe knockout layout: 16 -> 8 -> 4 -> 2 -> Final -> Winner */
+        .wc-knockout-web {
+          grid-template-columns:
+            minmax(230px, 1.25fr)
+            minmax(190px, 1fr)
+            minmax(175px, 0.95fr)
+            minmax(165px, 0.88fr)
+            minmax(155px, 0.82fr)
+            minmax(145px, 0.76fr) !important;
+          gap: 10px !important;
+          align-items: start !important;
+          overflow-x: auto !important;
+          padding-bottom: 10px;
+        }
+
+        .wc-knockout-web .wc-web-round {
+          justify-content: flex-start !important;
+          gap: 8px !important;
+        }
+
+        .wc-knockout-web .wc-web-round:nth-child(2) {
+          padding-top: 34px;
+        }
+
+        .wc-knockout-web .wc-web-round:nth-child(3) {
+          padding-top: 92px;
+        }
+
+        .wc-knockout-web .wc-web-round:nth-child(4) {
+          padding-top: 180px;
+        }
+
+        .wc-knockout-web .wc-web-round:nth-child(5),
+        .wc-knockout-web .wc-web-round:nth-child(6) {
+          padding-top: 300px;
+        }
+
+        .wc-web-winner-card {
+          border-color: rgba(255,215,90,0.55) !important;
+          background:
+            radial-gradient(circle at top left, rgba(255,215,90,0.22), transparent 45%),
+            linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.045)) !important;
+        }
+
+        .wc-web-winner-team {
+          justify-content: center;
+          font-size: 13px !important;
+        }
+
+        .wc-winner-trophy {
+          font-size: 20px;
+          line-height: 1;
+        }
+
+        .wc-bracket {
+          grid-template-columns:
+            minmax(178px, 1.18fr)
+            repeat(4, minmax(145px, 1fr)) !important;
+          gap: 10px !important;
+          overflow-x: auto !important;
+        }
+
+        @media (max-width: 1400px) {
+          .wc-knockout-web {
+            grid-template-columns:
+              minmax(220px, 1.2fr)
+              minmax(178px, 0.98fr)
+              minmax(165px, 0.9fr)
+              minmax(155px, 0.84fr)
+              minmax(145px, 0.78fr)
+              minmax(135px, 0.72fr) !important;
+            gap: 8px !important;
+          }
+
+          .wc-knockout-web .wc-web-round:nth-child(2) {
+            padding-top: 30px;
+          }
+
+          .wc-knockout-web .wc-web-round:nth-child(3) {
+            padding-top: 82px;
+          }
+
+          .wc-knockout-web .wc-web-round:nth-child(4) {
+            padding-top: 158px;
+          }
+
+          .wc-knockout-web .wc-web-round:nth-child(5),
+          .wc-knockout-web .wc-web-round:nth-child(6) {
+            padding-top: 260px;
+          }
+        }
+
 </style>
     `;
   }
@@ -15169,7 +15262,6 @@ class WorldCup2026Panel extends HTMLElement {
       ["LAST_16", this.t("round16")],
       ["QUARTER_FINALS", this.t("quarterFinals")],
       ["SEMI_FINALS", this.t("semiFinals")],
-      ["THIRD_PLACE", this.t("thirdPlace")],
       ["FINAL", this.t("final")],
     ];
 
@@ -15206,6 +15298,15 @@ class WorldCup2026Panel extends HTMLElement {
               `).join("") : `<div class="wc-web-match"><div class="wc-web-team"><span>${this.t("tbc")}</span></div><div class="wc-web-vs">${this.t("fixturesNotAvailable")}</div></div>`}
             </div>
           `).join("")}
+          <div class="wc-web-round wc-web-round-winner">
+            <div class="wc-web-round-title">Winner</div>
+            <div class="wc-web-match wc-web-winner-card">
+              <div class="wc-web-team wc-web-winner-team">
+                <span class="wc-winner-trophy">🏆</span>
+                <span>${this.t("tbc")}</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
 
