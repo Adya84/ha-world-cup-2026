@@ -8372,6 +8372,83 @@ class WorldCup2026Panel extends HTMLElement {
           line-height: 1.25;
         }
 
+
+        .wc-header-countdown-pill.wc-next-game-timer {
+          display: inline-flex;
+          align-items: center;
+          gap: 9px;
+          min-width: 0;
+          padding: 7px 12px;
+          border-radius: 999px;
+          background:
+            radial-gradient(circle at top left, rgba(72,255,155,0.22), transparent 42%),
+            linear-gradient(135deg, rgba(8,42,24,0.92), rgba(7,14,24,0.92));
+          border: 1px solid rgba(112,255,178,0.38);
+          color: #ffffff;
+          box-shadow: 0 0 18px rgba(0,255,125,0.14), inset 0 0 0 1px rgba(255,255,255,0.04);
+        }
+
+        .wc-next-game-ball {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          background: rgba(255,255,255,0.12);
+          font-size: 15px;
+          line-height: 1;
+          box-shadow: inset 0 0 0 1px rgba(255,255,255,0.08);
+        }
+
+        .wc-next-game-copy {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          line-height: 1.05;
+        }
+
+        .wc-next-game-label {
+          font-size: 9px;
+          font-weight: 900;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          color: rgba(182,255,213,0.88);
+        }
+
+        .wc-next-game-time {
+          font-size: 15px;
+          font-weight: 1000;
+          letter-spacing: 0.03em;
+          font-variant-numeric: tabular-nums;
+          color: #ffffff;
+          text-shadow: 0 0 12px rgba(60,255,130,0.34);
+        }
+
+        .wc-live-sync-notice {
+          margin: 8px 0 14px;
+          padding: 9px 12px;
+          border-radius: 12px;
+          background: rgba(45,190,255,0.10);
+          border: 1px solid rgba(120,220,255,0.22);
+          color: rgba(235,250,255,0.86);
+          font-size: 12px;
+          font-weight: 700;
+          line-height: 1.35;
+          text-align: center;
+        }
+
+        @keyframes wcLivePulse {
+          0%, 100% {
+            box-shadow: 0 0 0 rgba(255,60,60,0);
+            transform: scale(1);
+          }
+          50% {
+            box-shadow: 0 0 16px rgba(255,60,60,0.55);
+            transform: scale(1.04);
+          }
+        }
+
         @media (max-width: 850px) {
           .overview-supporters-layout {
             grid-template-columns: 1fr;
@@ -8530,6 +8607,7 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-live {
           background: rgba(255,40,40,0.25);
           border-color: rgba(255,80,80,0.55);
+          animation: wcLivePulse 1.4s ease-in-out infinite;
         }
 
         .wc-nav {
@@ -13950,6 +14028,7 @@ class WorldCup2026Panel extends HTMLElement {
       return `
         <div class="wc-card">
           <div class="wc-section-title">${this.t("live")}</div>
+          <div class="wc-live-sync-notice">ℹ️ Live scores and statistics are synced automatically and may be delayed by up to 60 seconds.</div>
           <div class="wc-empty">${this.t("noLiveMatches")}</div>
         </div>
       `;
@@ -13958,6 +14037,7 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <div class="wc-card">
         <div class="wc-section-title">${this.t("live")} <span class="wc-badge wc-live">${this.t("liveStatus")}</span></div>
+        <div class="wc-live-sync-notice">ℹ️ Live scores and statistics are synced automatically and may be delayed by up to 60 seconds.</div>
         <div class="wc-list">
           ${live.map(m => this.matchRow(m)).join("")}
         </div>
@@ -15651,13 +15731,10 @@ class WorldCup2026Panel extends HTMLElement {
     if (parts.months > 0) visibleParts.push(`${parts.months}M`);
     if (parts.days > 0) visibleParts.push(`${parts.days}D`);
     if (parts.hours > 0) visibleParts.push(`${parts.hours}H`);
-    if (parts.minutes > 0) visibleParts.push(`${parts.minutes}M`);
+    if (parts.minutes > 0 || visibleParts.length) visibleParts.push(`${parts.minutes}M`);
+    visibleParts.push(`${parts.seconds}S`);
 
-    if (parts.seconds > 0 && visibleParts.length < 3) {
-      visibleParts.push(`${parts.seconds}S`);
-    }
-
-    return visibleParts.length ? `⏳ ${visibleParts.join(" ")}` : "⚽ Kickoff imminent";
+    return visibleParts.length ? visibleParts.join(" ") : "Kickoff imminent";
   }
 
   headerCountdownPill(id = "wc-header-countdown", extraClass = "") {
@@ -15667,8 +15744,16 @@ class WorldCup2026Panel extends HTMLElement {
       return "";
     }
 
-    const className = `wc-header-countdown-pill${extraClass ? ` ${extraClass}` : ""}`;
-    return `<div class="${className}" id="${this.esc(id)}">${this.esc(text)}</div>`;
+    const className = `wc-header-countdown-pill wc-next-game-timer${extraClass ? ` ${extraClass}` : ""}`;
+    return `
+      <div class="${className}" id="${this.esc(id)}">
+        <span class="wc-next-game-ball">⚽</span>
+        <span class="wc-next-game-copy">
+          <span class="wc-next-game-label">Next game timer</span>
+          <span class="wc-next-game-time">${this.esc(text)}</span>
+        </span>
+      </div>
+    `;
   }
 
   updateCountdownDisplay() {
@@ -15686,7 +15771,12 @@ class WorldCup2026Panel extends HTMLElement {
         return;
       }
 
-      countdown.textContent = text;
+      const timeEl = countdown.querySelector(".wc-next-game-time");
+      if (timeEl) {
+        timeEl.textContent = text;
+      } else {
+        countdown.textContent = text;
+      }
     });
   }
 
