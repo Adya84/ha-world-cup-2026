@@ -203,7 +203,7 @@ class WorldCup2026Panel extends HTMLElement {
         notAvailable: "Not available",
         noUpcomingMatch: "No upcoming match loaded.",
         noLiveMatches: "No matches live right now.",
-        fixturesResults: "Fixtures",
+        fixturesResults: "Fixtures & Results",
         noFixtures: "No fixtures loaded yet.",
         groupLabel: "Group",
         groupsAL: "Groups A-L",
@@ -7210,9 +7210,10 @@ class WorldCup2026Panel extends HTMLElement {
     this.applyHideSidebarFromUrl();
     this.renderLoading();
 
+    // Refresh all dashboard data once per minute.
     this._refreshInterval = setInterval(() => {
       this.loadAll();
-    }, 60000);
+    }, 60 * 1000);
 
     this._countdownInterval = setInterval(() => {
       this.updateCountdownDisplay();
