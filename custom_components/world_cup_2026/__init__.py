@@ -1,6 +1,7 @@
 """World Cup 2026 integration."""
 from __future__ import annotations
 
+import json
 import logging
 from pathlib import Path
 
@@ -22,6 +23,17 @@ PANEL_PATH = "world-cup-2026"
 PANEL_TITLE = "🏆 World Cup 2026 ⚽"
 PANEL_ICON = "mdi:trophy"
 FRONTEND_URL = f"/{DOMAIN}_frontend"
+
+
+def _frontend_version() -> str:
+    """Return the integration version for frontend cache busting."""
+    try:
+        manifest_path = Path(__file__).parent / "manifest.json"
+        with manifest_path.open("r", encoding="utf-8") as file:
+            manifest = json.load(file)
+        return str(manifest.get("version", "dev"))
+    except Exception:
+        return "dev"
 
 
 async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
@@ -66,7 +78,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
         config={
             "_panel_custom": {
                 "name": "world-cup-2026-panel",
-                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v=4.1.5",
+                "js_url": f"{FRONTEND_URL}/world-cup-2026-panel.js?v={_frontend_version()}",
                 "embed_iframe": False,
                 "trust_external": False,
             }
