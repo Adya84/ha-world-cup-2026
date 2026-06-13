@@ -7709,41 +7709,80 @@ class WorldCup2026Panel extends HTMLElement {
       ? this.isLiveClockStatus(status)
       : !!activeValue;
 
+    const syncedAtRaw = manual?.syncedAt
+      || manual?.updatedAt
+      || manual?.lastUpdated
+      || match.clockSyncedAt
+      || match.clock_synced_at
+      || match.liveDataSyncedAt
+      || match.live_data_synced_at
+      || match.lastUpdated
+      || match.updatedAt
+      || match.updated_at
+      || null;
+
+    const syncedAtMs = this.parseSyncTimestamp(syncedAtRaw);
+
     return {
       seconds,
       timer: timer || this.formatClockSeconds(seconds),
       displayMinute: manual?.displayMinute || match.displayMinute || this.displayMinuteFromSeconds(seconds),
       active,
       status,
+      syncedAtRaw,
+      syncedAtMs,
       source: manual?.source || match.clockSource || "exported_manual_clock",
     };
+  }
+
+  parseSyncTimestamp(value) {
+    if (value === null || value === undefined || value === "") return null;
+
+    if (typeof value === "number") {
+      // Accept both seconds and milliseconds epoch values.
+      const ms = value < 100000000000 ? value * 1000 : value;
+      return Number.isFinite(ms) ? ms : null;
+    }
+
+    const numeric = Number(value);
+    if (Number.isFinite(numeric)) {
+      const ms = numeric < 100000000000 ? numeric * 1000 : numeric;
+      return Number.isFinite(ms) ? ms : null;
+    }
+
+    const parsed = Date.parse(String(value));
+    return Number.isFinite(parsed) ? parsed : null;
   }
 
   syncExportedClockState(match, state, previous, now) {
     const exported = this.exportedClockState(match);
     if (!exported) return { state, exported: null, changed: false };
 
-    const previousBase = Number(previous?.githubBaseSeconds ?? previous?.offsetSeconds);
-    const previousSyncedAt = Number(previous?.githubSyncedAt || 0);
+    // All public/shared panels must use the same source pull time.
+    // If your live panel publishes 34:12 at 20:15:00, every viewer starts from 34:12 @ 20:15:00
+    // and then counts locally until the next published pull arrives.
+    const sourceSyncedAt = Number(exported.syncedAtMs || now);
+    const previousBase = Number(previous?.githubBaseSeconds);
+    const previousSourceSyncedAt = Number(previous?.githubSourceSyncedAt || previous?.githubSyncedAt || 0);
     const needsResync = !Number.isFinite(previousBase)
-      || !previousSyncedAt
-      || Math.abs(Number(exported.seconds) - previousBase) > 10
+      || Math.floor(previousBase) !== Math.floor(Number(exported.seconds))
+      || previousSourceSyncedAt !== sourceSyncedAt
       || previous?.githubActive !== exported.active
-      || previous?.githubSource !== exported.source;
-
-    if (!needsResync) {
-      return { state: { ...state, fromGithubClock: true }, exported, changed: false };
-    }
+      || previous?.githubSource !== exported.source
+      || previous?.githubStatus !== exported.status;
 
     const nextState = {
       ...state,
       status: exported.status || state.status,
-      startedAt: exported.active ? now : null,
+      startedAt: exported.active ? sourceSyncedAt : null,
       offsetSeconds: exported.seconds,
       githubBaseSeconds: exported.seconds,
-      githubSyncedAt: now,
+      githubSyncedAt: sourceSyncedAt,
+      githubSourceSyncedAt: sourceSyncedAt,
+      githubLastBrowserPullAt: now,
       githubActive: exported.active,
       githubSource: exported.source,
+      githubStatus: exported.status,
       fromGithubClock: true,
     };
 
@@ -7753,7 +7792,7 @@ class WorldCup2026Panel extends HTMLElement {
       nextState.freezeAt = exported.seconds;
     }
 
-    return { state: nextState, exported, changed: true };
+    return { state: nextState, exported, changed: needsResync };
   }
 
   isExtraTimeMatch(match) {
