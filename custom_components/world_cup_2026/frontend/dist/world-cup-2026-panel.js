@@ -249,7 +249,7 @@ class WorldCup2026Panel extends HTMLElement {
         noVenueData: "No venue data available.",
         scheduled: "Upcoming",
         liveStatus: "Live",
-        manualTimerNotice: 'Live scores update automatically. Goal times use the manual match clock and may differ from official times by a few minutes.',
+        manualTimerNotice: 'Live scores, match clock and goal times update from the live API. The clock counts locally between refreshes and re-syncs on each pull.',
         paused: "Paused",
         fullTime: "Full Time",
         aet: "After Extra Time",
@@ -7447,6 +7447,11 @@ class WorldCup2026Panel extends HTMLElement {
         ...match,
         status: publicMatch.status || match.status,
         score: publicMatch.score || match.score,
+        homeScore: publicMatch.homeScore ?? match.homeScore,
+        awayScore: publicMatch.awayScore ?? match.awayScore,
+        home_score: publicMatch.home_score ?? match.home_score,
+        away_score: publicMatch.away_score ?? match.away_score,
+        scoreSource: publicMatch.scoreSource || match.scoreSource,
         minute: publicMatch.minute ?? match.minute,
         lastUpdated: publicMatch.lastUpdated || match.lastUpdated,
         manualClock: publicMatch.manualClock || match.manualClock,
@@ -7496,7 +7501,10 @@ class WorldCup2026Panel extends HTMLElement {
       const mergedLive = this.mergeGithubMatchData(localLive, publicGithubMatches);
       const githubLive = this.liveMatchesFromGithub(publicGithubMatches);
 
-      this._data.live = githubLive.length ? githubLive : mergedLive;
+      const cleanLiveMatches = (githubLive.length ? githubLive : mergedLive)
+        .filter((match) => this.isLiveMatch(match));
+
+      this._data.live = cleanLiveMatches;
       this._data.fixtures = mergedFixtures;
       this._data.results = mergedResults;
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
@@ -7640,16 +7648,22 @@ class WorldCup2026Panel extends HTMLElement {
     return String(match?.id || match?.matchId || `${match?.utcDate || match?.date || "unknown"}|${home}|${away}`);
   }
 
+  isLiveMatch(match) {
+    const status = String(match?.status || match?.matchStatus || "").toUpperCase().trim();
+    const liveStatuses = ["IN_PLAY", "LIVE", "PAUSED", "HT", "HALF_TIME", "1H", "2H"];
+    return liveStatuses.includes(status);
+  }
+
   isLiveClockStatus(status) {
-    return ["IN_PLAY", "LIVE", "1H", "2H", "ET", "EXTRA_TIME", "1ET", "2ET"].includes(String(status || ""));
+    return ["IN_PLAY", "LIVE", "1H", "2H", "ET", "EXTRA_TIME", "1ET", "2ET"].includes(String(status || "").toUpperCase().trim());
   }
 
   isHalfTimeClockStatus(status) {
-    return ["PAUSED", "HT", "HALF_TIME", "BREAK", "ET_HT", "EXTRA_TIME_HALF_TIME"].includes(String(status || ""));
+    return ["PAUSED", "HT", "HALF_TIME", "BREAK", "ET_HT", "EXTRA_TIME_HALF_TIME"].includes(String(status || "").toUpperCase().trim());
   }
 
   isFinishedClockStatus(status) {
-    return ["FINISHED", "FT", "AET", "PEN"].includes(String(status || ""));
+    return ["FINISHED", "FT", "AET", "PEN"].includes(String(status || "").toUpperCase().trim());
   }
 
   matchDuration(match) {
@@ -8041,6 +8055,11 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   storedGoalEventsForMatch(match) {
+    const directApiEvents = (match && Array.isArray(match.goalEvents) && match.goalEvents.length)
+      ? match.goalEvents
+      : ((match && Array.isArray(match.events)) ? match.events : []);
+    if (directApiEvents.length) return [];
+
     const id = this.matchStorageId(match);
     const stored = this._localGoalEvents?.[id];
 
@@ -14929,7 +14948,7 @@ class WorldCup2026Panel extends HTMLElement {
     });
 
     const finishedStatuses = ["FINISHED", "FT", "AET", "PEN"];
-    const liveStatuses = ["IN_PLAY", "LIVE", "PAUSED"];
+    const liveStatuses = ["IN_PLAY", "LIVE", "PAUSED", "HT", "HALF_TIME", "1H", "2H"];
     const upcomingStatuses = ["TIMED", "SCHEDULED"];
 
     const playedCount = o.matches_played ?? sortedFixtures.filter(m => finishedStatuses.includes(m.status)).length;
@@ -15222,15 +15241,16 @@ class WorldCup2026Panel extends HTMLElement {
       .filter((event) => String(event?.type || "").toLowerCase() === "goal")
       .filter((event) => this.fixtureTeamKey(event?.team || event?.teamName || event?.country) === teamKey);
 
-    // Corrected/public goal-events JSON is the source of truth when present.
-    // Do not combine it with live API/local-clock events, or goals duplicate every refresh.
-    const sourceEvents = localEvents.length ? localEvents : apiEvents;
+    // Live/API match events are the source of truth when present.
+    // Old browser/localStorage goal times can be wrong, so never let them override API goal minutes.
+    const sourceEvents = apiEvents.length ? apiEvents : localEvents;
     const fallbackScorers = this.matchScorersForTeam(team);
     const seen = new Set();
 
     return sourceEvents
       .map((event, index) => {
-        const localFallback = localEvents[index] || {};
+        const usingApiEvents = apiEvents.length > 0;
+        const localFallback = usingApiEvents ? {} : (localEvents[index] || {});
         const minute = event?.minute ?? event?.elapsed ?? localFallback?.minute ?? null;
         const timer = event?.timer || localFallback?.timer || null;
         const displayMinute = event?.displayMinute || localFallback?.displayMinute || (minute !== null && minute !== undefined && minute !== "" ? `${Number(minute)}'` : "");
@@ -15303,7 +15323,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   livePage() {
-    const live = this._data.live || [];
+    const live = (this._data.live || []).filter((match) => this.isLiveMatch(match));
 
     if (!live.length) {
       return `
@@ -16967,7 +16987,7 @@ class WorldCup2026Panel extends HTMLElement {
 
 
   headerLivePill() {
-    const live = this._data.live || [];
+    const live = (this._data.live || []).filter((match) => this.isLiveMatch(match));
     const liveCount = live.length;
 
     if (!liveCount) {
