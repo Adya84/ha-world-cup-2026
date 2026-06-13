@@ -7370,7 +7370,7 @@ class WorldCup2026Panel extends HTMLElement {
 
   async loadPublicGithubMatches() {
     const urls = [
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/matches.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/matches.json?v=2?t=" + Date.now(),
       "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/matches.json?t=" + Date.now(),
       "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/www/worldcup/matches.json?t=" + Date.now(),
     ];
@@ -7416,9 +7416,10 @@ class WorldCup2026Panel extends HTMLElement {
       if (!publicMatch) return match;
       mergedKeys.add(this.publicMatchKey(publicMatch));
 
-      const publicGoalEvents = Array.isArray(publicMatch.goalEvents) ? publicMatch.goalEvents : [];
-      const publicEvents = Array.isArray(publicMatch.events) ? publicMatch.events : [];
-      const publicHasEvents = publicGoalEvents.length || publicEvents.length;
+      const rawPublicGoalEvents = Array.isArray(publicMatch.goalEvents) ? publicMatch.goalEvents : [];
+      const rawPublicEvents = Array.isArray(publicMatch.events) ? publicMatch.events : [];
+      const publicGoalEvents = this.dedupeGoalEvents(rawPublicGoalEvents.length ? rawPublicGoalEvents : rawPublicEvents);
+      const publicHasEvents = publicGoalEvents.length > 0;
 
       return {
         ...match,
@@ -7433,7 +7434,7 @@ class WorldCup2026Panel extends HTMLElement {
         displayMinute: publicMatch.displayMinute || match.displayMinute,
         clockSeconds: publicMatch.clockSeconds ?? match.clockSeconds,
         goalEvents: publicHasEvents ? publicGoalEvents : match.goalEvents,
-        events: publicHasEvents ? (publicEvents.length ? publicEvents : publicGoalEvents) : match.events,
+        events: publicHasEvents ? publicGoalEvents : match.events,
         publicGithubSynced: true,
       };
     });
@@ -15083,13 +15084,55 @@ class WorldCup2026Panel extends HTMLElement {
       });
   }
 
+  goalEventDedupeKey(event) {
+    if (!event) return "";
+    const matchId = String(event.matchId || "").trim();
+    const team = this.fixtureTeamKey(event.team || event.teamName || event.country || "");
+    const time = String(event.timerSeconds ?? event.timer ?? event.displayMinute ?? event.minute ?? "").trim();
+    const detail = String(event.detail || event.type || "Goal").toLowerCase().trim();
+    return `${matchId}|${team}|${time}|${detail}`;
+  }
+
+  betterGoalEvent(current, next) {
+    if (!current) return next;
+    if (!next) return current;
+    const currentPlayer = String(current.player || current.playerName || current.name || "").trim();
+    const nextPlayer = String(next.player || next.playerName || next.name || "").trim();
+    const currentScore =
+      currentPlayer.length +
+      (current.assist ? 30 : 0) +
+      (String(current.displayMinute || "").includes("+") ? 10 : 0);
+    const nextScore =
+      nextPlayer.length +
+      (next.assist ? 30 : 0) +
+      (String(next.displayMinute || "").includes("+") ? 10 : 0);
+    return nextScore > currentScore ? next : current;
+  }
+
+  dedupeGoalEvents(events) {
+    const source = Array.isArray(events) ? events : [];
+    const byKey = new Map();
+
+    source
+      .filter((event) => String(event?.type || "").toLowerCase() === "goal")
+      .forEach((event) => {
+        const key = this.goalEventDedupeKey(event);
+        if (!key) return;
+        byKey.set(key, this.betterGoalEvent(byKey.get(key), event));
+      });
+
+    return Array.from(byKey.values())
+      .sort((a, b) => Number(a?.timerSeconds ?? a?.minute ?? 0) - Number(b?.timerSeconds ?? b?.minute ?? 0))
+      .map((event, index) => ({ ...event, goalNumber: index + 1 }));
+  }
+
   matchGoalEventsForTeam(match, team) {
     const teamKey = this.fixtureTeamKey(team);
-    const apiEvents = [
-      ...((match && Array.isArray(match.goalEvents)) ? match.goalEvents : []),
-      ...((match && Array.isArray(match.events)) ? match.events : []),
-    ].filter((event) => String(event?.type || "").toLowerCase() === "goal")
-     .filter((event) => this.fixtureTeamKey(event?.team || event?.teamName || event?.country) === teamKey);
+    const preferredEvents = (match && Array.isArray(match.goalEvents) && match.goalEvents.length)
+      ? match.goalEvents
+      : ((match && Array.isArray(match.events)) ? match.events : []);
+    const apiEvents = this.dedupeGoalEvents(preferredEvents)
+      .filter((event) => this.fixtureTeamKey(event?.team || event?.teamName || event?.country) === teamKey);
 
     const localEvents = this.storedGoalEventsForMatch(match)
       .filter((event) => String(event?.type || "").toLowerCase() === "goal")
@@ -15120,7 +15163,7 @@ class WorldCup2026Panel extends HTMLElement {
       })
       .filter((event) => event.name)
       .filter((event) => {
-        const key = `${String(event.name).toLowerCase().trim()}|${event.displayMinute || event.minute || ""}|${event.timer || ""}`;
+        const key = `${teamKey}|${event.timer || event.displayMinute || event.minute || ""}|${String(event.source || "goal").toLowerCase().trim()}`;
         if (seen.has(key)) return false;
         seen.add(key);
         return true;
