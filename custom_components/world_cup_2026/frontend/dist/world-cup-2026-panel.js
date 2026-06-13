@@ -4,7 +4,7 @@ class WorldCup2026Panel extends HTMLElement {
     super();
     this._hass = null;
     const savedPage = localStorage.getItem("world_cup_2026_last_page") || "overview";
-    const validPages = new Set(["overview", "teamhub", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
+    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
     this._page = validPages.has(savedPage) ? savedPage : "overview";
     this._loaded = false;
     this._refreshInterval = null;
@@ -32,8 +32,6 @@ class WorldCup2026Panel extends HTMLElement {
     this._goalEventStorageKey = "world_cup_2026_goal_event_times_v1";
     this._matchClockState = this.loadJsonStorage(this._matchClockStorageKey, {});
     this._localGoalEvents = this.loadJsonStorage(this._goalEventStorageKey, {});
-    this._teamHubStorageKey = "world_cup_2026_team_hub_country_v1";
-    this._teamHubCountry = localStorage.getItem(this._teamHubStorageKey) || "";
   }
 
   shouldHideHomeAssistantSidebar() {
@@ -331,18 +329,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Supporters Around The World",
         noLiveGames: "No live games",
         noGamesToday: "Games Today",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "conceded",
       },
 
@@ -500,18 +486,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Soutiens du monde entier",
         noLiveGames: "Aucun match en direct",
         noGamesToday: "Aucun match aujourd’hui",
-        noGoldenBootData: "Aucune donnée de buteurs du Soulier d'Or disponible pour le moment.",
-        previewData: "Données d’aperçu",
-        top10: "Top 10",
-        fullRace: "Classement complet",
-        goalsAssists: "Buts + passes",
-        playerImpact: "Impact joueur",
-        total: "total",
-        goalShort: "B",
-        assistShort: "P",
-        winner: "Vainqueur",
-        knockoutDetails: "Détails de la phase finale",
-        real: "Réel",
         conceded: "encaissés",
       },
 
@@ -669,18 +643,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Unterstützer aus aller Welt",
         noLiveGames: "Keine Live-Spiele",
         noGamesToday: "Heute keine Spiele",
-        noGoldenBootData: "Noch keine Torschützendaten für den Goldenen Schuh verfügbar.",
-        previewData: "Vorschaudaten",
-        top10: "Top 10",
-        fullRace: "Gesamtrangliste",
-        goalsAssists: "Tore + Vorlagen",
-        playerImpact: "Spielereinfluss",
-        total: "gesamt",
-        goalShort: "T",
-        assistShort: "V",
-        winner: "Sieger",
-        knockoutDetails: "K.o.-Details",
-        real: "Real",
         conceded: "kassiert",
       },
 
@@ -837,18 +799,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Seguidores de todo el mundo",
         noLiveGames: "No hay partidos en vivo",
         noGamesToday: "No hay partidos hoy",
-        noGoldenBootData: "Aún no hay datos de goleadores de la Bota de Oro.",
-        previewData: "Datos de vista previa",
-        top10: "Top 10",
-        fullRace: "Clasificación completa",
-        goalsAssists: "Goles + asistencias",
-        playerImpact: "Impacto del jugador",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Ganador",
-        knockoutDetails: "Detalles de eliminatorias",
-        real: "Real",
         conceded: "encajados",
       },
 
@@ -1006,18 +956,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Sostenitori da tutto il mondo",
         noLiveGames: "Nessuna partita live",
         noGamesToday: "Nessuna partita oggi",
-        noGoldenBootData: "Nessun dato marcatori della Scarpa d'Oro ancora disponibile.",
-        previewData: "Dati anteprima",
-        top10: "Top 10",
-        fullRace: "Classifica completa",
-        goalsAssists: "Gol + assist",
-        playerImpact: "Impatto giocatore",
-        total: "totale",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Vincitore",
-        knockoutDetails: "Dettagli eliminazione",
-        real: "Reale",
         conceded: "subiti",
       },
 
@@ -1175,18 +1113,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Supporters over de hele wereld",
         noLiveGames: "Geen livewedstrijden",
         noGamesToday: "Geen wedstrijden vandaag",
-        noGoldenBootData: "Nog geen topscorergegevens voor de Gouden Schoen beschikbaar.",
-        previewData: "Voorbeeldgegevens",
-        top10: "Top 10",
-        fullRace: "Volledige race",
-        goalsAssists: "Doelpunten + assists",
-        playerImpact: "Spelerimpact",
-        total: "totaal",
-        goalShort: "D",
-        assistShort: "A",
-        winner: "Winnaar",
-        knockoutDetails: "Knock-outdetails",
-        real: "Echt",
         conceded: "tegen",
       },
 
@@ -1345,18 +1271,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "दुनिया भर के समर्थक",
         noLiveGames: "कोई लाइव गेम नहीं",
         noGamesToday: "आज कोई गेम नहीं",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "खाए गए",
       },
 
@@ -1514,18 +1428,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "বিশ্বজুড়ে সমর্থক",
         noLiveGames: "কোনো লাইভ গেম নেই",
         noGamesToday: "আজ কোনো গেম নেই",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "হজম করা",
       },
 
@@ -1683,18 +1585,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "உலகம் முழுவதும் ஆதரவாளர்கள்",
         noLiveGames: "நேரலை விளையாட்டுகள் இல்லை",
         noGamesToday: "இன்று விளையாட்டுகள் இல்லை",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "விட்டுக் கொடுத்த",
       },
 
@@ -1852,18 +1742,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "ప్రపంచవ్యాప్తంగా మద్దతుదారులు",
         noLiveGames: "లైవ్ గేమ్స్ లేవు",
         noGamesToday: "ఈ రోజు గేమ్స్ లేవు",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "అనుమతించిన",
       },
 
@@ -2021,18 +1899,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "ਦੁਨੀਆ ਭਰ ਦੇ ਸਮਰਥਕ",
         noLiveGames: "ਕੋਈ ਲਾਈਵ ਗੇਮ ਨਹੀਂ",
         noGamesToday: "ਅੱਜ ਕੋਈ ਗੇਮ ਨਹੀਂ",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "ਖਾਧੇ ਗਏ",
       },
       ar: {
@@ -2189,18 +2055,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "الداعمون حول العالم",
         noLiveGames: "لا توجد مباريات مباشرة",
         noGamesToday: "لا توجد مباريات اليوم",
-        noGoldenBootData: "لا تتوفر بيانات هدافي الحذاء الذهبي بعد.",
-        previewData: "بيانات معاينة",
-        top10: "أفضل 10",
-        fullRace: "الترتيب الكامل",
-        goalsAssists: "أهداف + تمريرات",
-        playerImpact: "تأثير اللاعب",
-        total: "الإجمالي",
-        goalShort: "هـ",
-        assistShort: "ت",
-        winner: "الفائز",
-        knockoutDetails: "تفاصيل الأدوار الإقصائية",
-        real: "الحقيقي",
         conceded: "استقبل",
       },
 
@@ -2358,18 +2212,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Apoiantes de todo o mundo",
         noLiveGames: "Sem jogos ao vivo",
         noGamesToday: "Sem jogos hoje",
-        noGoldenBootData: "Ainda não há dados de artilheiros da Chuteira de Ouro.",
-        previewData: "Dados de prévia",
-        top10: "Top 10",
-        fullRace: "Classificação completa",
-        goalsAssists: "Golos + assistências",
-        playerImpact: "Impacto do jogador",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Vencedor",
-        knockoutDetails: "Detalhes da fase final",
-        real: "Real",
         conceded: "sofridos",
       },
 
@@ -2527,18 +2369,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Wspierający z całego świata",
         noLiveGames: "Brak meczów na żywo",
         noGamesToday: "Brak meczów dzisiaj",
-        noGoldenBootData: "Brak jeszcze danych strzelców Złotego Buta.",
-        previewData: "Dane podglądowe",
-        top10: "Top 10",
-        fullRace: "Pełny ranking",
-        goalsAssists: "Gole + asysty",
-        playerImpact: "Wpływ zawodnika",
-        total: "łącznie",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Zwycięzca",
-        knockoutDetails: "Szczegóły fazy pucharowej",
-        real: "Rzeczywisty",
         conceded: "stracone",
       },
 
@@ -2696,18 +2526,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "世界中のサポーター",
         noLiveGames: "ライブ試合はありません",
         noGamesToday: "今日は試合がありません",
-        noGoldenBootData: "ゴールデンブートの得点者データはまだありません。",
-        previewData: "プレビューデータ",
-        top10: "トップ10",
-        fullRace: "全ランキング",
-        goalsAssists: "得点＋アシスト",
-        playerImpact: "選手の貢献",
-        total: "合計",
-        goalShort: "得",
-        assistShort: "ア",
-        winner: "優勝",
-        knockoutDetails: "ノックアウト詳細",
-        real: "実際",
         conceded: "失点",
       },
 
@@ -2867,18 +2685,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "全球支持者",
         noLiveGames: "没有直播比赛",
         noGamesToday: "今天没有比赛",
-        noGoldenBootData: "暂无金靴射手数据。",
-        previewData: "预览数据",
-        top10: "前10名",
-        fullRace: "完整排名",
-        goalsAssists: "进球 + 助攻",
-        playerImpact: "球员贡献",
-        total: "总计",
-        goalShort: "球",
-        assistShort: "助",
-        winner: "冠军",
-        knockoutDetails: "淘汰赛详情",
-        real: "真实",
         conceded: '失球',
       },
 
@@ -3192,18 +2998,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "ผู้สนับสนุนทั่วโลก",
         noLiveGames: "ไม่มีการแข่งขันสด",
         noGamesToday: "วันนี้ไม่มีการแข่งขัน",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: 'เสียประตู',
       },
 
@@ -3361,18 +3155,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Người ủng hộ trên toàn thế giới",
         noLiveGames: "Không có trận trực tiếp",
         noGamesToday: "Hôm nay không có trận đấu",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: 'thủng lưới',
       },
 
@@ -3530,18 +3312,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Pendukung di Seluruh Dunia",
         noLiveGames: "Tidak ada laga live",
         noGamesToday: "Tidak ada pertandingan hari ini",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: 'kebobolan',
       },
 
@@ -3699,18 +3469,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "전 세계 후원자",
         noLiveGames: "라이브 경기 없음",
         noGamesToday: "오늘 경기 없음",
-        noGoldenBootData: "골든 부트 득점자 데이터가 아직 없습니다.",
-        previewData: "미리보기 데이터",
-        top10: "상위 10",
-        fullRace: "전체 순위",
-        goalsAssists: "골 + 도움",
-        playerImpact: "선수 기여도",
-        total: "합계",
-        goalShort: "골",
-        assistShort: "도",
-        winner: "우승팀",
-        knockoutDetails: "토너먼트 세부 정보",
-        real: "실제",
         conceded: "실점",
       },
 
@@ -3868,18 +3626,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Supportrar över hela världen",
         noLiveGames: "Inga livematcher",
         noGamesToday: "Inga matcher idag",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "insläppta",
       },
 
@@ -4037,18 +3783,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Støttespillere over hele verden",
         noLiveGames: "Ingen livekamper",
         noGamesToday: "Ingen kamper i dag",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "sluppet inn",
       },
 
@@ -4206,18 +3940,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Támogatók a világ minden tájáról",
         noLiveGames: "Nincsenek élő meccsek",
         noGamesToday: "Ma nincs mérkőzés",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "kapott gól",
       },
 
@@ -4376,18 +4098,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Dünyanın Dört Bir Yanından Destekçiler",
         noLiveGames: "Canlı maç yok",
         noGamesToday: "Bugün maç yok",
-        noGoldenBootData: "Altın Ayakkabı golcü verisi henüz yok.",
-        previewData: "Önizleme verisi",
-        top10: "İlk 10",
-        fullRace: "Tam sıralama",
-        goalsAssists: "Gol + asist",
-        playerImpact: "Oyuncu etkisi",
-        total: "toplam",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Kazanan",
-        knockoutDetails: "Eleme detayları",
-        real: "Gerçek",
         conceded: "yenilen gol",
       },
 
@@ -4545,18 +4255,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Podporovatelé z celého světa",
         noLiveGames: "Žádné živé zápasy",
         noGamesToday: "Dnes nejsou žádné zápasy",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "inkasováno",
       },
 
@@ -4714,18 +4412,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Støtter over hele verden",
         noLiveGames: "Ingen livekampe",
         noGamesToday: "Ingen kampe i dag",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "indkasseret",
       },
 
@@ -4883,18 +4569,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Tukijat ympäri maailmaa",
         noLiveGames: "Ei live-otteluita",
         noGamesToday: "Ei otteluita tänään",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "päästetty",
       },
 
@@ -5052,18 +4726,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Υποστηρικτές σε όλο τον κόσμο",
         noLiveGames: "Δεν υπάρχουν ζωντανοί αγώνες",
         noGamesToday: "Δεν υπάρχουν αγώνες σήμερα",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "παθητικό",
       },
 
@@ -5221,18 +4883,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Susținători din întreaga lume",
         noLiveGames: "Nu sunt meciuri live",
         noGamesToday: "Nu sunt meciuri astăzi",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "primite",
       },
 
@@ -5390,18 +5040,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Podporovatelia z celého sveta",
         noLiveGames: "Žiadne živé zápasy",
         noGamesToday: "Dnes nie sú žiadne zápasy",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "inkasované",
       },
 
@@ -5559,18 +5197,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Podporniki po vsem svetu",
         noLiveGames: "Ni tekem v živo",
         noGamesToday: "Danes ni tekem",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "prejeti",
       },
 
@@ -5728,18 +5354,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Podržavatelji širom svijeta",
         noLiveGames: "Nema utakmica uživo",
         noGamesToday: "Danas nema utakmica",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "primljeno",
       },
 
@@ -5897,18 +5511,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Подржаваоци широм света",
         noLiveGames: "Нема утакмица уживо",
         noGamesToday: "Данас нема утакмица",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "примљено",
       },
 
@@ -6066,18 +5668,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Поддръжници от цял свят",
         noLiveGames: "Няма мачове на живо",
         noGamesToday: "Днес няма мачове",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "допуснати",
       },
 
@@ -6235,18 +5825,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Прихильники з усього світу",
         noLiveGames: "Немає матчів наживо",
         noGamesToday: "Сьогодні немає матчів",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "пропущено",
       },
 
@@ -6404,18 +5982,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Stuðningsaðilar um allan heim",
         noLiveGames: "Engir leikir í beinni",
         noGamesToday: "Engir leikir í dag",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "fengin á sig",
       },
 
@@ -6573,18 +6139,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Wasaidizi Duniani Kote",
         noLiveGames: "Hakuna mechi za moja kwa moja",
         noGamesToday: "Hakuna mechi leo",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "yaliyofungwa dhidi",
       },
 
@@ -6742,18 +6296,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "በዓለም ዙሪያ ደጋፊዎች",
         noLiveGames: "ቀጥታ ጨዋታዎች የሉም",
         noGamesToday: "ዛሬ ጨዋታዎች የሉም",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "የተቀበለ",
       },
 
@@ -6911,18 +6453,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Ondersteuners Regoor die Wêreld",
         noLiveGames: "Geen regstreekse wedstryde",
         noGamesToday: "Geen wedstryde vandag",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "afgestaan",
       },
 
@@ -7080,18 +6610,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Abasekeli Emhlabeni Wonke",
         noLiveGames: "Ayikho imidlalo ebukhoma",
         noGamesToday: "Ayikho imidlalo namuhla",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "avunyelwe",
       },
 
@@ -7249,18 +6767,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Masu Tallafi a Duniya",
         noLiveGames: "Babu wasanni kai tsaye",
         noGamesToday: "Babu wasa yau",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "an ci su",
       },
 
@@ -7418,18 +6924,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Pachantinpi yanapaqkuna",
         noLiveGames: "Mana kawsaypi pukllaykuna",
         noGamesToday: "Kunan punchaw mana pukllay kanchu",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "yaykusqa",
       },
 
@@ -7587,18 +7081,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Oipytyvõva yvóra tuichakue",
         noLiveGames: "Ndaipóri partido en vivo",
         noGamesToday: "Ndaipóri partido ko árape",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "oike hese",
       },
 
@@ -7756,18 +7238,6 @@ class WorldCup2026Panel extends HTMLElement {
         supportersAroundWorld: "Uraq pachpachan yanapt’irinaka",
         noLiveGames: "Janiw anatawinaka en vivo utjkiti",
         noGamesToday: "Jichha urux janiw anatawi utjkiti",
-        noGoldenBootData: "No Golden Boot scorer data available yet.",
-        previewData: "Preview data",
-        top10: "Top 10",
-        fullRace: "Full Race",
-        goalsAssists: "Goals + Assists",
-        playerImpact: "Player Impact",
-        total: "total",
-        goalShort: "G",
-        assistShort: "A",
-        winner: "Winner",
-        knockoutDetails: "Knockout Details",
-        real: "Real",
         conceded: "katusqa",
       },
     };
@@ -7896,12 +7366,112 @@ class WorldCup2026Panel extends HTMLElement {
     }
   }
 
+
+
+  async loadPublicGithubMatches() {
+    const urls = [
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/matches.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/matches.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/www/worldcup/matches.json?t=" + Date.now(),
+    ];
+
+    for (const url of urls) {
+      try {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) continue;
+        const data = await response.json();
+        const matches = Array.isArray(data) ? data : (Array.isArray(data?.matches) ? data.matches : []);
+        if (matches.length) return matches;
+      } catch (err) {
+        // Try the next public GitHub path.
+      }
+    }
+
+    return [];
+  }
+
+  publicMatchKey(match) {
+    if (!match) return "";
+    if (match.id !== null && match.id !== undefined) return `id:${match.id}`;
+    const utc = match.utcDate || match.date || "";
+    const home = this.fixtureTeamKey(this.getHomeTeam(match));
+    const away = this.fixtureTeamKey(this.getAwayTeam(match));
+    return `${utc}|${home}|${away}`;
+  }
+
+  mergeGithubMatchData(localMatches, publicMatches) {
+    const local = Array.isArray(localMatches) ? localMatches : [];
+    const pub = Array.isArray(publicMatches) ? publicMatches : [];
+    if (!pub.length) return local;
+
+    const publicByKey = new Map();
+    pub.forEach((match) => {
+      const key = this.publicMatchKey(match);
+      if (key) publicByKey.set(key, match);
+    });
+
+    const mergedKeys = new Set();
+    const merged = local.map((match) => {
+      const publicMatch = publicByKey.get(this.publicMatchKey(match));
+      if (!publicMatch) return match;
+      mergedKeys.add(this.publicMatchKey(publicMatch));
+
+      const publicGoalEvents = Array.isArray(publicMatch.goalEvents) ? publicMatch.goalEvents : [];
+      const publicEvents = Array.isArray(publicMatch.events) ? publicMatch.events : [];
+      const publicHasEvents = publicGoalEvents.length || publicEvents.length;
+
+      return {
+        ...match,
+        status: publicMatch.status || match.status,
+        score: publicMatch.score || match.score,
+        minute: publicMatch.minute ?? match.minute,
+        lastUpdated: publicMatch.lastUpdated || match.lastUpdated,
+        manualClock: publicMatch.manualClock || match.manualClock,
+        fallbackClock: publicMatch.fallbackClock ?? match.fallbackClock,
+        fallbackClockText: publicMatch.fallbackClockText || match.fallbackClockText,
+        manualClockText: publicMatch.manualClockText || match.manualClockText,
+        displayMinute: publicMatch.displayMinute || match.displayMinute,
+        clockSeconds: publicMatch.clockSeconds ?? match.clockSeconds,
+        goalEvents: publicHasEvents ? publicGoalEvents : match.goalEvents,
+        events: publicHasEvents ? (publicEvents.length ? publicEvents : publicGoalEvents) : match.events,
+        publicGithubSynced: true,
+      };
+    });
+
+    pub.forEach((match) => {
+      const key = this.publicMatchKey(match);
+      if (key && !mergedKeys.has(key)) merged.push({ ...match, publicGithubSynced: true });
+    });
+
+    return merged;
+  }
+
+  liveMatchesFromGithub(publicMatches) {
+    const liveStatuses = new Set(["IN_PLAY", "LIVE", "PAUSED", "HT", "HALF_TIME", "1H", "2H"]);
+    return (Array.isArray(publicMatches) ? publicMatches : [])
+      .filter((match) => liveStatuses.has(String(match?.status || "").toUpperCase()))
+      .map((match) => ({ ...match, publicGithubSynced: true }));
+  }
+
+
   async loadAll() {
     try {
+      const publicGithubMatches = await this.loadPublicGithubMatches();
+
       this._data.overview = await this.callApi("world_cup_2026/get_overview");
-      this._data.live = await this.callApi("world_cup_2026/get_live_matches");
-      this._data.fixtures = this.completeOfficialFixtures(await this.callApi("world_cup_2026/get_fixtures"));
-      this._data.results = this.completeOfficialFixtures(await this.safeCall("world_cup_2026/get_results", []));
+
+      const localLive = await this.callApi("world_cup_2026/get_live_matches");
+      const localFixtures = this.completeOfficialFixtures(await this.callApi("world_cup_2026/get_fixtures"));
+      const localResults = this.completeOfficialFixtures(await this.safeCall("world_cup_2026/get_results", []));
+
+      const mergedFixtures = this.completeOfficialFixtures(this.mergeGithubMatchData(localFixtures, publicGithubMatches));
+      const mergedResults = this.completeOfficialFixtures(this.mergeGithubMatchData(localResults, publicGithubMatches));
+      const mergedLive = this.mergeGithubMatchData(localLive, publicGithubMatches);
+      const githubLive = this.liveMatchesFromGithub(publicGithubMatches);
+
+      this._data.live = githubLive.length ? githubLive : mergedLive;
+      this._data.fixtures = mergedFixtures;
+      this._data.results = mergedResults;
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
       this._data.scorers = await this.safeCall("world_cup_2026/get_scorers", []);
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
@@ -7921,7 +7491,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   changePage(page) {
-    const validPages = new Set(["overview", "teamhub", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
+    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
     if (!validPages.has(page)) page = "overview";
     this._page = page;
     try { localStorage.setItem("world_cup_2026_last_page", page); } catch (e) {}
@@ -8059,107 +7629,118 @@ class WorldCup2026Panel extends HTMLElement {
     return String(match?.duration || match?.score?.duration || "").toUpperCase();
   }
 
+  exportedClockState(match) {
+    if (!match || typeof match !== "object") return null;
+
+    const manual = match.manualClock && typeof match.manualClock === "object" ? match.manualClock : null;
+    const candidates = [
+      manual?.seconds,
+      manual?.clockSeconds,
+      manual?.clock_seconds,
+      match.clockSeconds,
+      match.clock_seconds,
+      match.fallbackClock,
+      match.fallback_clock,
+    ];
+
+    let seconds = null;
+    for (const candidate of candidates) {
+      const value = Number(candidate);
+      if (Number.isFinite(value)) {
+        seconds = Math.max(0, Math.floor(value));
+        break;
+      }
+    }
+
+    const timer = manual?.timer || match.fallbackClockText || match.clockText || match.timer || null;
+    if (seconds === null && timer && /^\d+:\d{2}$/.test(String(timer))) {
+      const [mins, secs] = String(timer).split(":").map((part) => Number(part));
+      if (Number.isFinite(mins) && Number.isFinite(secs)) {
+        seconds = Math.max(0, Math.floor((mins * 60) + secs));
+      }
+    }
+
+    if (seconds === null) return null;
+
+    const status = String(manual?.status || match.status || "").toUpperCase();
+    const activeValue = manual?.active ?? match.clock_active ?? match.clockActive ?? null;
+    const active = activeValue === null || activeValue === undefined
+      ? this.isLiveClockStatus(status)
+      : !!activeValue;
+
+    return {
+      seconds,
+      timer: timer || this.formatClockSeconds(seconds),
+      displayMinute: manual?.displayMinute || match.displayMinute || this.displayMinuteFromSeconds(seconds),
+      active,
+      status,
+      source: manual?.source || match.clockSource || "exported_manual_clock",
+    };
+  }
+
+  syncExportedClockState(match, state, previous, now) {
+    const exported = this.exportedClockState(match);
+    if (!exported) return { state, exported: null, changed: false };
+
+    const previousBase = Number(previous?.githubBaseSeconds ?? previous?.offsetSeconds);
+    const previousSyncedAt = Number(previous?.githubSyncedAt || 0);
+    const needsResync = !Number.isFinite(previousBase)
+      || !previousSyncedAt
+      || Math.abs(Number(exported.seconds) - previousBase) > 10
+      || previous?.githubActive !== exported.active
+      || previous?.githubSource !== exported.source;
+
+    if (!needsResync) {
+      return { state: { ...state, fromGithubClock: true }, exported, changed: false };
+    }
+
+    const nextState = {
+      ...state,
+      status: exported.status || state.status,
+      startedAt: exported.active ? now : null,
+      offsetSeconds: exported.seconds,
+      githubBaseSeconds: exported.seconds,
+      githubSyncedAt: now,
+      githubActive: exported.active,
+      githubSource: exported.source,
+      fromGithubClock: true,
+    };
+
+    if (exported.active) {
+      delete nextState.freezeAt;
+    } else {
+      nextState.freezeAt = exported.seconds;
+    }
+
+    return { state: nextState, exported, changed: true };
+  }
+
   isExtraTimeMatch(match) {
     const status = String(match?.status || "").toUpperCase();
     const duration = this.matchDuration(match);
     return ["ET", "EXTRA_TIME", "1ET", "2ET", "AET"].includes(status) || duration === "EXTRA_TIME" || duration === "PENALTY_SHOOTOUT";
   }
 
-  exportedClockSeconds(match) {
-    const manualClock = match?.manualClock && typeof match.manualClock === "object" ? match.manualClock : null;
-    const values = [
-      manualClock?.seconds,
-      manualClock?.clock_seconds,
-      manualClock?.clockSeconds,
-      match?.clockSeconds,
-      match?.clock_seconds,
-      match?.fallbackClock,
-    ];
-
-    for (const value of values) {
-      const seconds = Number(value);
-      if (Number.isFinite(seconds) && seconds >= 0) {
-        return Math.floor(seconds);
-      }
-    }
-
-    const textValues = [
-      manualClock?.timer,
-      manualClock?.text,
-      match?.fallbackClockText,
-      match?.manualClockText,
-      match?.displayMinute,
-      match?.minute,
-      match?.elapsed,
-    ];
-
-    for (const value of textValues) {
-      if (value === null || value === undefined || value === "") continue;
-      const text = String(value).trim();
-
-      if (/^\d+:\d{2}$/.test(text)) {
-        const [minutes, seconds] = text.split(":").map((part) => Number(part));
-        if (Number.isFinite(minutes) && Number.isFinite(seconds)) {
-          return Math.max(0, Math.floor((minutes * 60) + seconds));
-        }
-      }
-
-      const minuteMatch = text.match(/^(\d+)\s*(?:'|m|min)?$/i);
-      if (minuteMatch) {
-        const minutes = Number(minuteMatch[1]);
-        if (Number.isFinite(minutes) && minutes >= 0) {
-          return Math.floor(minutes * 60);
-        }
-      }
-    }
-
-    return null;
-  }
-
-  kickoffFallbackClockSeconds(match, now = Date.now()) {
-    const value = match?.utcDate || match?.date || match?.kickoff || match?.startTime;
-    if (!value) return null;
-
-    const kickoff = new Date(value).getTime();
-    if (!Number.isFinite(kickoff)) return null;
-
-    const seconds = Math.floor((now - kickoff) / 1000);
-    if (!Number.isFinite(seconds) || seconds < 0) return null;
-
-    const status = String(match?.status || "").toUpperCase();
-    if (this.isHalfTimeClockStatus(status)) return 45 * 60;
-    if (this.isFinishedClockStatus(status)) return null;
-
-    if (this.isExtraTimeMatch(match) && seconds < 90 * 60) return 90 * 60;
-
-    return Math.max(0, seconds);
-  }
-
-  exportedClockActive(match) {
-    const manualClock = match?.manualClock && typeof match.manualClock === "object" ? match.manualClock : null;
-    if (manualClock && manualClock.active !== undefined) return Boolean(manualClock.active);
-    if (match?.clock_active !== undefined) return Boolean(match.clock_active);
-    return this.isLiveClockStatus(String(match?.status || ""));
-  }
-
   currentClockSeconds(match, state = null, now = Date.now()) {
-    const exportedSeconds = this.exportedClockSeconds(match);
-    const exportedActive = this.exportedClockActive(match);
     const id = this.matchStorageId(match);
     const clockState = state || this._matchClockState?.[id];
 
-    if (Number.isFinite(Number(exportedSeconds))) {
-      if (!exportedActive || this.isHalfTimeClockStatus(String(match?.status || "")) || this.isFinishedClockStatus(String(match?.status || ""))) {
-        return Math.max(0, Math.floor(Number(exportedSeconds)));
+    const exported = this.exportedClockState(match);
+    if (exported) {
+      const syncedState = clockState || {};
+      const base = Number(syncedState.githubBaseSeconds ?? exported.seconds);
+      const syncedAt = Number(syncedState.githubSyncedAt || now);
+      const active = syncedState.githubActive ?? exported.active;
+
+      if (!active) {
+        return Math.max(0, Math.floor(Number(exported.seconds)));
       }
 
-      const localStartedAt = Number(clockState?.startedAt || 0);
-      const localOffset = Number(clockState?.offsetSeconds || 0);
-      const localSeconds = localStartedAt ? Math.max(0, Math.floor(localOffset + ((now - localStartedAt) / 1000))) : localOffset;
-
-      if (!clockState || !Number.isFinite(localSeconds) || Math.abs(localSeconds - Number(exportedSeconds)) > 10) {
-        return Math.max(0, Math.floor(Number(exportedSeconds)));
+      if (!Number.isFinite(base) || !syncedAt) {
+        return Math.max(0, Math.floor(Number(exported.seconds)));
       }
+
+      return Math.max(0, Math.floor(base + ((now - syncedAt) / 1000)));
     }
 
     if (!clockState) return null;
@@ -8212,92 +7793,65 @@ class WorldCup2026Panel extends HTMLElement {
       const awayScore = Number(this.getAwayScore(match));
       const hasScores = Number.isFinite(homeScore) && Number.isFinite(awayScore);
       let state = { ...previous };
-      const exportedSeconds = this.exportedClockSeconds(match);
-      const hasExportedClock = Number.isFinite(Number(exportedSeconds));
-      const exportedActive = this.exportedClockActive(match);
 
-      if (hasExportedClock) {
-        const localSeconds = this.currentClockSeconds(match, state, now);
-        const shouldResync = !Number.isFinite(Number(localSeconds)) || Math.abs(Number(localSeconds) - Number(exportedSeconds)) > 10;
+      const exportedSync = this.syncExportedClockState(match, state, previous, now);
+      state = exportedSync.state;
+      if (exportedSync.changed) changed = true;
 
-        if (shouldResync || previous.source !== "github-manual-clock") {
+      if (!exportedSync.exported) {
+        if (this.isLiveClockStatus(status)) {
+          const existingSeconds = this.currentClockSeconds(match, state, now);
+          // Manual testing clock: keep this independent from API-Football minutes so both timers can be compared side-by-side.
+          const wasPaused = Number.isFinite(Number(previous.freezeAt));
+          const previousOffset = Number(previous.offsetSeconds || 0);
+          const previousSeconds = Number.isFinite(Number(existingSeconds)) ? Number(existingSeconds) : previousOffset;
+
+          let offsetSeconds;
+          if (wasPaused) {
+            // Restart from the frozen point: 45:00 after HT, 105:00 after ET HT.
+            offsetSeconds = Number(previous.freezeAt || 0);
+          } else if (!previous.startedAt) {
+            // Fresh live start. Extra-time statuses start from 90:00, normal live starts from 00:00.
+            offsetSeconds = this.isExtraTimeMatch(match) ? 90 * 60 : 0;
+          } else {
+            offsetSeconds = previousSeconds;
+          }
+
+          if (this.isExtraTimeMatch(match) && offsetSeconds < 90 * 60) {
+            offsetSeconds = 90 * 60;
+          }
+
           state = {
             ...state,
             status,
-            source: "github-manual-clock",
-            offsetSeconds: Math.max(0, Math.floor(Number(exportedSeconds))),
-            startedAt: exportedActive && this.isLiveClockStatus(status) ? now : null,
+            startedAt: now,
+            offsetSeconds: Math.max(0, Math.floor(offsetSeconds)),
           };
-
-          if (!exportedActive || this.isHalfTimeClockStatus(status) || this.isFinishedClockStatus(status)) {
-            state.freezeAt = Math.max(0, Math.floor(Number(exportedSeconds)));
-          } else {
-            delete state.freezeAt;
-          }
-
+          delete state.freezeAt;
+          changed = true;
+        } else if (this.isHalfTimeClockStatus(status)) {
+          const previousSeconds = this.currentClockSeconds(match, state, now);
+          const inExtraTime = this.isExtraTimeMatch(match) || Number(previousSeconds || 0) >= 90 * 60;
+          state = {
+            ...state,
+            status,
+            startedAt: null,
+            offsetSeconds: inExtraTime ? 105 * 60 : 45 * 60,
+            freezeAt: inExtraTime ? 105 * 60 : 45 * 60,
+          };
+          changed = true;
+        } else if (this.isFinishedClockStatus(status)) {
+          const finishAt = status === "AET" ? 120 * 60 : (status === "PEN" ? null : 90 * 60);
+          state = {
+            ...state,
+            status,
+            startedAt: null,
+            offsetSeconds: finishAt ?? Number(state.offsetSeconds || 0),
+            finished: true,
+          };
+          delete state.freezeAt;
           changed = true;
         }
-      }
-
-      if (!hasExportedClock && this.isLiveClockStatus(status)) {
-        const existingSeconds = this.currentClockSeconds(match, state, now);
-        // Manual testing clock: keep this independent from API-Football minutes so both timers can be compared side-by-side.
-        const wasPaused = Number.isFinite(Number(previous.freezeAt));
-        const previousOffset = Number(previous.offsetSeconds || 0);
-        const previousSeconds = Number.isFinite(Number(existingSeconds)) ? Number(existingSeconds) : previousOffset;
-
-        let offsetSeconds;
-        if (wasPaused) {
-          // Restart from the frozen point: 45:00 after HT, 105:00 after ET HT.
-          offsetSeconds = Number(previous.freezeAt || 0);
-        } else if (!previous.startedAt) {
-          // New installs have no local timer. Use exported/fallback match data first so they do not restart from 00:00.
-          const fallbackSeconds = this.kickoffFallbackClockSeconds(match, now);
-          offsetSeconds = Number.isFinite(Number(fallbackSeconds))
-            ? Number(fallbackSeconds)
-            : (this.isExtraTimeMatch(match) ? 90 * 60 : 0);
-        } else {
-          offsetSeconds = previousSeconds;
-        }
-
-        if (this.isExtraTimeMatch(match) && offsetSeconds < 90 * 60) {
-          offsetSeconds = 90 * 60;
-        }
-
-        state = {
-          ...state,
-          status,
-          startedAt: now,
-          offsetSeconds: Math.max(0, Math.floor(offsetSeconds)),
-        };
-        delete state.freezeAt;
-        changed = true;
-      }
-
-      if (!hasExportedClock && this.isHalfTimeClockStatus(status)) {
-        const previousSeconds = this.currentClockSeconds(match, state, now);
-        const inExtraTime = this.isExtraTimeMatch(match) || Number(previousSeconds || 0) >= 90 * 60;
-        state = {
-          ...state,
-          status,
-          startedAt: null,
-          offsetSeconds: inExtraTime ? 105 * 60 : 45 * 60,
-          freezeAt: inExtraTime ? 105 * 60 : 45 * 60,
-        };
-        changed = true;
-      }
-
-      if (!hasExportedClock && this.isFinishedClockStatus(status)) {
-        const finishAt = status === "AET" ? 120 * 60 : (status === "PEN" ? null : 90 * 60);
-        state = {
-          ...state,
-          status,
-          startedAt: null,
-          offsetSeconds: finishAt ?? Number(state.offsetSeconds || 0),
-          finished: true,
-        };
-        delete state.freezeAt;
-        changed = true;
       }
 
       if (hasScores) {
@@ -9745,676 +9299,6 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-app.wc-view-tablet > .wc-shell > .wc-nav,
         .wc-app.wc-view-tablet .wc-shell > .wc-nav {
           display: none;
-        }
-
-        .stats-hub-hero {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 18px;
-          background: linear-gradient(135deg, rgba(0, 190, 255, 0.16), rgba(255, 215, 0, 0.08), rgba(255,255,255,0.06));
-          border-color: rgba(120, 220, 255, 0.24);
-        }
-
-        .stats-hub-hero .wc-section-title {
-          margin-bottom: 6px;
-        }
-
-        .stats-hub-hero-live {
-          min-width: 120px;
-          padding: 16px;
-          border-radius: 20px;
-          text-align: center;
-          background: rgba(0,0,0,0.22);
-          border: 1px solid rgba(255,255,255,0.16);
-        }
-
-        .stats-hub-hero-live strong {
-          display: block;
-          font-size: 36px;
-          line-height: 1;
-        }
-
-        .stats-hub-hero-live span {
-          display: block;
-          margin-top: 6px;
-          font-size: 12px;
-          font-weight: 900;
-          opacity: 0.75;
-          text-transform: uppercase;
-          letter-spacing: 0.4px;
-        }
-
-        .stats-hub-kpi-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-          gap: 12px;
-          margin-bottom: 16px;
-        }
-
-        .stats-hub-kpi {
-          position: relative;
-          overflow: hidden;
-          min-height: 116px;
-          padding: 16px;
-          border-radius: 20px;
-          background: rgba(255,255,255,0.09);
-          border: 1px solid rgba(255,255,255,0.13);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.08), 0 18px 40px rgba(0,0,0,0.16);
-        }
-
-        .stats-hub-kpi::after {
-          content: "";
-          position: absolute;
-          inset: auto -30px -50px auto;
-          width: 110px;
-          height: 110px;
-          border-radius: 999px;
-          background: rgba(120, 220, 255, 0.13);
-          pointer-events: none;
-        }
-
-        .stats-hub-kpi-icon {
-          font-size: 21px;
-          opacity: 0.9;
-          margin-bottom: 7px;
-        }
-
-        .stats-hub-kpi strong {
-          display: block;
-          font-size: clamp(26px, 3vw, 40px);
-          line-height: 1;
-          font-weight: 1000;
-        }
-
-        .stats-hub-kpi span {
-          display: block;
-          margin-top: 6px;
-          font-size: 13px;
-          font-weight: 900;
-          opacity: 0.9;
-        }
-
-        .stats-hub-kpi small {
-          display: block;
-          margin-top: 6px;
-          color: rgba(255,255,255,0.62);
-          font-size: 11px;
-          line-height: 1.25;
-        }
-
-        .stats-hub-layout {
-          display: grid;
-          grid-template-columns: repeat(2, minmax(0, 1fr));
-          gap: 16px;
-        }
-
-        .stats-hub-wide {
-          grid-column: 1 / -1;
-        }
-
-        .stats-hub-panel-head {
-          display: flex;
-          align-items: flex-start;
-          justify-content: space-between;
-          gap: 12px;
-          margin-bottom: 12px;
-        }
-
-        .stats-hub-panel-head .wc-section-title {
-          margin-bottom: 0;
-        }
-
-        .stats-hub-panel-head > span {
-          padding: 6px 10px;
-          border-radius: 999px;
-          font-size: 12px;
-          font-weight: 900;
-          background: rgba(255,255,255,0.10);
-          border: 1px solid rgba(255,255,255,0.14);
-          white-space: nowrap;
-        }
-
-        .stats-hub-table {
-          display: grid;
-          gap: 8px;
-        }
-
-        .stats-hub-table-row,
-        .stats-hub-rank-row {
-          display: grid;
-          grid-template-columns: 34px minmax(0, 1fr) auto auto auto auto;
-          gap: 10px;
-          align-items: center;
-          padding: 10px 12px;
-          border-radius: 15px;
-          background: rgba(255,255,255,0.065);
-          border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .stats-hub-rank-row {
-          grid-template-columns: 34px minmax(0, 1fr) auto;
-          margin-bottom: 8px;
-        }
-
-        .stats-hub-rank-row small {
-          grid-column: 2 / -1;
-          color: rgba(255,255,255,0.58);
-          font-size: 11px;
-          margin-top: -4px;
-        }
-
-        .stats-hub-rank-no {
-          display: inline-flex;
-          width: 25px;
-          height: 25px;
-          align-items: center;
-          justify-content: center;
-          border-radius: 999px;
-          background: rgba(255,255,255,0.12);
-          font-weight: 1000;
-          font-size: 12px;
-        }
-
-        .stats-hub-rank-team {
-          min-width: 0;
-          display: flex;
-          align-items: center;
-          gap: 8px;
-        }
-
-        .stats-hub-rank-team strong,
-        .stats-hub-table-row strong {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-
-        .stats-hub-rank-value {
-          font-weight: 1000;
-          color: #fff;
-          white-space: nowrap;
-        }
-
-        .stats-hub-table-row > span:first-child {
-          display: inline-flex;
-          width: 25px;
-          height: 25px;
-          align-items: center;
-          justify-content: center;
-          border-radius: 999px;
-          background: rgba(255,255,255,0.12);
-          font-weight: 1000;
-          font-size: 12px;
-        }
-
-        .stats-hub-table-row small {
-          color: rgba(255,255,255,0.64);
-          white-space: nowrap;
-        }
-
-        .stats-hub-records {
-          display: grid;
-          gap: 10px;
-        }
-
-        .stats-hub-record-card {
-          padding: 12px;
-          border-radius: 16px;
-          background: rgba(255,255,255,0.07);
-          border: 1px solid rgba(255,255,255,0.09);
-        }
-
-        .stats-hub-record-card span,
-        .stats-hub-record-card small {
-          display: block;
-          color: rgba(255,255,255,0.62);
-          font-size: 12px;
-        }
-
-        .stats-hub-record-card strong {
-          display: block;
-          margin: 5px 0;
-          font-size: 15px;
-        }
-
-
-
-        .stats-hub-command {
-          position: relative;
-          overflow: hidden;
-        }
-
-        .stats-hub-command::before {
-          content: "";
-          position: absolute;
-          inset: -80px -120px auto auto;
-          width: 260px;
-          height: 260px;
-          border-radius: 999px;
-          background: radial-gradient(circle, rgba(0,214,255,0.28), rgba(0,214,255,0));
-          pointer-events: none;
-        }
-
-        .stats-hub-mini-strip {
-          display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          gap: 8px;
-          margin-top: 14px;
-        }
-
-        .stats-hub-mini-metric {
-          padding: 10px;
-          border-radius: 14px;
-          background: rgba(255,255,255,0.075);
-          border: 1px solid rgba(255,255,255,0.10);
-        }
-
-        .stats-hub-mini-metric strong,
-        .stats-hub-mini-metric span {
-          display: block;
-        }
-
-        .stats-hub-mini-metric strong {
-          font-size: 18px;
-          font-weight: 1000;
-        }
-
-        .stats-hub-mini-metric span {
-          margin-top: 3px;
-          color: rgba(255,255,255,0.62);
-          font-size: 10px;
-          font-weight: 850;
-          text-transform: uppercase;
-          letter-spacing: 0.35px;
-        }
-
-        .stats-hub-hero-score {
-          min-width: 210px;
-          padding: 18px;
-          border-radius: 22px;
-          background: rgba(0,0,0,0.24);
-          border: 1px solid rgba(255,255,255,0.14);
-          text-align: center;
-        }
-
-        .stats-hub-hero-score span,
-        .stats-hub-hero-score strong {
-          display: block;
-        }
-
-        .stats-hub-hero-score span {
-          color: rgba(255,255,255,0.66);
-          font-size: 11px;
-          font-weight: 900;
-          text-transform: uppercase;
-          letter-spacing: 0.5px;
-        }
-
-        .stats-hub-hero-score strong {
-          margin-top: 8px;
-          font-size: 44px;
-          line-height: 1;
-          font-weight: 1000;
-        }
-
-        .stats-hub-progress {
-          height: 8px;
-          overflow: hidden;
-          border-radius: 999px;
-          background: rgba(255,255,255,0.12);
-          margin-top: 12px;
-        }
-
-        .stats-hub-progress i {
-          display: block;
-          height: 100%;
-          border-radius: 999px;
-          background: linear-gradient(90deg, rgba(0,214,255,0.95), rgba(255,214,0,0.95));
-        }
-
-        .stats-hub-dashboard-grid {
-          display: grid;
-          grid-template-columns: repeat(3, minmax(0, 1fr));
-          gap: 16px;
-        }
-
-        .stats-hub-dashboard-grid .stats-hub-wide {
-          grid-column: 1 / -1;
-        }
-
-        .stats-hub-kpi-grid-modern {
-          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-        }
-
-        .stats-hub-glow-card {
-          background: linear-gradient(145deg, rgba(255,255,255,0.105), rgba(255,255,255,0.052));
-        }
-
-        .stats-hub-player-row,
-        .stats-hub-live-row,
-        .stats-hub-event-row {
-          display: grid;
-          align-items: center;
-          gap: 10px;
-          padding: 10px 12px;
-          border-radius: 15px;
-          background: rgba(255,255,255,0.065);
-          border: 1px solid rgba(255,255,255,0.08);
-          margin-bottom: 8px;
-        }
-
-        .stats-hub-player-row {
-          grid-template-columns: 34px minmax(0, 1fr) auto;
-        }
-
-        .stats-hub-player-name strong,
-        .stats-hub-player-name small,
-        .stats-hub-player-numbers strong,
-        .stats-hub-player-numbers small {
-          display: block;
-        }
-
-        .stats-hub-player-name strong {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          font-size: 13px;
-        }
-
-        .stats-hub-player-name small,
-        .stats-hub-player-numbers small {
-          color: rgba(255,255,255,0.58);
-          font-size: 10px;
-        }
-
-        .stats-hub-player-numbers {
-          text-align: right;
-        }
-
-        .stats-hub-player-numbers b {
-          display: block;
-          font-size: 20px;
-          line-height: 1;
-        }
-
-        .stats-hub-live-row {
-          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) auto;
-        }
-
-        .stats-hub-live-row span {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          font-size: 12px;
-          font-weight: 850;
-        }
-
-        .stats-hub-live-row strong {
-          font-size: 17px;
-          font-weight: 1000;
-        }
-
-        .stats-hub-live-row small {
-          color: #fff;
-          font-weight: 1000;
-        }
-
-        .stats-hub-event-row {
-          grid-template-columns: 26px minmax(0, 1fr) auto;
-        }
-
-        .stats-hub-event-row small {
-          grid-column: 2 / 3;
-          color: rgba(255,255,255,0.58);
-          font-size: 11px;
-          margin-top: -5px;
-        }
-
-        .stats-hub-event-row b {
-          grid-row: 1 / span 2;
-          grid-column: 3;
-          font-size: 15px;
-        }
-
-
-        .stats-hub-compact-page .stats-hub-compact-hero {
-          padding: 14px 16px;
-          margin-bottom: 12px;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-hero p {
-          margin: 4px 0 0;
-          font-size: 12px;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-progress {
-          min-width: 170px;
-          padding: 12px 14px;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-progress strong {
-          font-size: 30px;
-        }
-
-        .stats-hub-compact-kpi-grid {
-          gap: 10px;
-          margin-bottom: 12px;
-          grid-template-columns: repeat(auto-fit, minmax(135px, 1fr));
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-kpi {
-          min-height: 78px;
-          padding: 11px 12px;
-          border-radius: 16px;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-kpi .stats-hub-kpi-icon {
-          font-size: 16px;
-          margin-bottom: 4px;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-kpi strong {
-          font-size: 24px;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-kpi span {
-          margin-top: 4px;
-          font-size: 11px;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-kpi small {
-          margin-top: 3px;
-          font-size: 10px;
-        }
-
-        .stats-hub-compact-grid {
-          gap: 12px;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-
-        .stats-hub-compact-grid .stats-hub-wide {
-          grid-column: span 2;
-        }
-
-        .stats-hub-compact-card {
-          padding: 13px !important;
-          border-radius: 18px !important;
-        }
-
-        .stats-hub-compact-card .stats-hub-panel-head {
-          margin-bottom: 8px;
-        }
-
-        .stats-hub-compact-card .wc-section-title {
-          font-size: 15px;
-        }
-
-        .stats-hub-compact-row {
-          padding: 7px 9px;
-          border-radius: 12px;
-          margin-bottom: 6px;
-          gap: 7px;
-        }
-
-        .stats-hub-compact-row .stats-hub-rank-no,
-        .stats-hub-compact-row > span:first-child {
-          width: 22px;
-          height: 22px;
-          font-size: 11px;
-        }
-
-        .stats-hub-compact-row small {
-          font-size: 10px;
-        }
-
-        .stats-hub-compact-card .stats-hub-record-card {
-          padding: 9px 10px;
-          border-radius: 13px;
-        }
-
-        .stats-hub-compact-card .stats-hub-record-card strong {
-          font-size: 13px;
-          margin: 3px 0;
-        }
-
-        .stats-hub-results-strip .stats-hub-result-row {
-          grid-template-columns: 26px minmax(0, 1fr) auto minmax(0, 1fr) 26px;
-        }
-
-        @media (max-width: 1250px) {
-          .stats-hub-compact-grid {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-          }
-          .stats-hub-compact-grid .stats-hub-wide {
-            grid-column: 1 / -1;
-          }
-        }
-
-        @media (max-width: 1100px) {
-          .stats-hub-dashboard-grid {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-        }
-
-        @media (max-width: 760px) {
-          .stats-hub-dashboard-grid,
-          .stats-hub-mini-strip {
-            grid-template-columns: 1fr;
-          }
-          .stats-hub-hero-score {
-            min-width: 0;
-          }
-        }
-
-
-        /* Stats Hub section line polish - visual dividers only */
-        .stats-hub-compact-page .stats-hub-compact-card {
-          position: relative;
-          overflow: hidden;
-          border: 1px solid rgba(126, 218, 255, 0.34) !important;
-          background:
-            linear-gradient(180deg, rgba(255,255,255,0.095), rgba(255,255,255,0.045)) !important;
-          box-shadow:
-            inset 0 1px 0 rgba(255,255,255,0.12),
-            0 12px 30px rgba(0,0,0,0.20) !important;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-card::before {
-          content: "";
-          position: absolute;
-          left: 14px;
-          right: 14px;
-          top: 0;
-          height: 2px;
-          background: linear-gradient(90deg, transparent, rgba(255,215,80,0.75), rgba(80,210,255,0.65), transparent);
-          opacity: 0.9;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-card::after {
-          content: "";
-          position: absolute;
-          left: 0;
-          top: 18px;
-          bottom: 18px;
-          width: 3px;
-          border-radius: 0 999px 999px 0;
-          background: linear-gradient(180deg, rgba(255,215,80,0.85), rgba(80,210,255,0.55));
-          opacity: 0.75;
-        }
-
-        .stats-hub-compact-page .stats-hub-panel-head {
-          padding-bottom: 9px;
-          border-bottom: 1px solid rgba(255,255,255,0.12);
-          margin-bottom: 10px !important;
-        }
-
-        .stats-hub-compact-page .stats-hub-panel-head .overview-small-label {
-          opacity: 0.88;
-          letter-spacing: 0.08em;
-        }
-
-        .stats-hub-compact-page .stats-hub-panel-head .wc-section-title {
-          margin-bottom: 0;
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-row,
-        .stats-hub-compact-page .stats-hub-rank-row,
-        .stats-hub-compact-page .stats-hub-table-row,
-        .stats-hub-compact-page .stats-hub-player-row,
-        .stats-hub-compact-page .stats-hub-live-row,
-        .stats-hub-compact-page .stats-hub-event-row {
-          border: 1px solid rgba(255,255,255,0.105);
-          border-left: 3px solid rgba(80,210,255,0.32);
-          background: rgba(255,255,255,0.055);
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.055);
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-row:nth-child(2n),
-        .stats-hub-compact-page .stats-hub-rank-row:nth-child(2n),
-        .stats-hub-compact-page .stats-hub-table-row:nth-child(2n) {
-          background: rgba(255,255,255,0.035);
-        }
-
-        .stats-hub-compact-page .stats-hub-record-card {
-          border: 1px solid rgba(255,255,255,0.12) !important;
-          border-left: 3px solid rgba(255,215,80,0.52) !important;
-          background: rgba(255,255,255,0.055) !important;
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.06);
-        }
-
-        .stats-hub-compact-page .stats-hub-compact-kpi {
-          border: 1px solid rgba(126,218,255,0.26) !important;
-          border-bottom-color: rgba(255,215,80,0.26) !important;
-          background:
-            radial-gradient(circle at top right, rgba(255,215,80,0.13), transparent 38%),
-            rgba(255,255,255,0.07) !important;
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 10px 22px rgba(0,0,0,0.14);
-        }
-
-        .stats-hub-compact-page .stats-hub-results-strip .stats-hub-result-row {
-          border: 1px solid rgba(255,255,255,0.11);
-          border-left: 3px solid rgba(255,215,80,0.45);
-          background: rgba(255,255,255,0.052);
-        }
-
-        @media (max-width: 900px) {
-          .stats-hub-hero {
-            flex-direction: column;
-            align-items: stretch;
-          }
-
-          .stats-hub-layout {
-            grid-template-columns: 1fr;
-          }
-
-          .stats-hub-table-row {
-            grid-template-columns: 30px minmax(0, 1fr) auto;
-          }
-
-          .stats-hub-table-row small:nth-last-child(-n+3) {
-            grid-column: 2 / -1;
-          }
         }
 
         .wc-card {
@@ -12628,10 +11512,10 @@ class WorldCup2026Panel extends HTMLElement {
           justify-content: space-between;
           align-items: center;
           gap: 18px;
-          background: transparent;
-          border-color: transparent;
-          box-shadow: none;
-          padding: 0 0 10px;
+          background:
+            linear-gradient(135deg, rgba(255,205,80,0.22), rgba(255,255,255,0.08)),
+            rgba(255,255,255,0.08);
+          border-color: rgba(255,220,120,0.34);
         }
 
         .golden-kicker {
@@ -13207,75 +12091,6 @@ class WorldCup2026Panel extends HTMLElement {
           justify-content: flex-start;
         }
 
-
-
-        /* Golden Boot: remove boxed/white panels and keep a cleaner transparent leaderboard look */
-        .wc-page-players .golden-main-card,
-        .wc-page-players .golden-summary-card,
-        .wc-page-players .golden-table-card {
-          background: transparent !important;
-          border-color: transparent !important;
-          box-shadow: none !important;
-          padding: 10px 0 !important;
-        }
-
-        .wc-page-players .golden-leader,
-        .wc-page-players .golden-podium-item,
-        .wc-page-players .golden-mini-stat,
-        .wc-page-players .golden-leader-strip span,
-        .wc-page-players .golden-rank,
-        .wc-page-players .mini-pill {
-          background: transparent !important;
-          box-shadow: none !important;
-        }
-
-        .wc-page-players .golden-leader,
-        .wc-page-players .golden-podium-item,
-        .wc-page-players .golden-mini-stat,
-        .wc-page-players .golden-leader-strip span,
-        .wc-page-players .golden-rank,
-        .wc-page-players .mini-pill {
-          border-color: rgba(255, 220, 120, 0.18) !important;
-        }
-
-        .wc-page-players .mini-pill {
-          padding: 0 !important;
-          border: 0 !important;
-          color: #ffd66b;
-        }
-
-        .wc-page-players .golden-leader {
-          border-width: 1px 0 !important;
-          border-radius: 0 !important;
-          background: linear-gradient(90deg, rgba(255,220,120,0.08), transparent) !important;
-        }
-
-        .wc-page-players .golden-podium-item,
-        .wc-page-players .golden-mini-stat {
-          border-width: 0 0 1px !important;
-          border-radius: 0 !important;
-        }
-
-        .wc-page-players .golden-leader-strip span {
-          border-width: 0 0 1px !important;
-          border-radius: 0 !important;
-        }
-
-        .wc-page-players .golden-table-wrap {
-          border-top: 1px solid rgba(255,220,120,0.22);
-        }
-
-        .wc-page-players .golden-table th,
-        .wc-page-players .golden-table td {
-          background: transparent !important;
-          border-bottom-color: rgba(255,255,255,0.09) !important;
-        }
-
-        .wc-page-players .golden-top-row td {
-          background: linear-gradient(90deg, rgba(255,220,120,0.06), transparent) !important;
-        }
-
-
         @media (max-width: 1100px) {
           .golden-layout-polished,
           .golden-showcase {
@@ -13340,10 +12155,10 @@ class WorldCup2026Panel extends HTMLElement {
         }
 
         .golden-card-stat-row span {
-          padding: 0 8px 0 0;
-          border-radius: 0;
-          background: transparent;
-          border: 0;
+          padding: 5px 8px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.10);
         }
 
         .golden-card-pill {
@@ -15745,693 +14560,6 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
-
-
-        /* Broadcast-style knockout bracket page */
-        .wc-ko-page {
-          display: grid;
-          gap: 14px;
-        }
-
-        .wc-ko-hero {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 16px;
-          padding: 16px 18px !important;
-        }
-
-        .wc-ko-hero .wc-section-title {
-          margin: 2px 0 4px;
-          font-size: clamp(22px, 3vw, 36px);
-          letter-spacing: .03em;
-        }
-
-        .wc-ko-hero-pill {
-          border: 1px solid rgba(250, 204, 21, .45);
-          background: rgba(250, 204, 21, .11);
-          color: #fde68a;
-          border-radius: 999px;
-          padding: 9px 13px;
-          font-weight: 900;
-          white-space: nowrap;
-          box-shadow: 0 0 18px rgba(250, 204, 21, .12);
-        }
-
-        .wc-ko-world-card {
-          position: relative;
-          overflow: auto;
-          padding: 14px !important;
-          background:
-            radial-gradient(circle at 50% 48%, rgba(250,204,21,.16), transparent 20%),
-            radial-gradient(circle at 0% 50%, rgba(34,211,238,.12), transparent 28%),
-            radial-gradient(circle at 100% 50%, rgba(236,72,153,.12), transparent 28%),
-            rgba(2, 6, 23, .74) !important;
-        }
-
-        .wc-ko-world-title {
-          text-align: center;
-          color: #fff;
-          font-size: clamp(18px, 2.7vw, 34px);
-          font-weight: 1000;
-          letter-spacing: .08em;
-          text-transform: uppercase;
-          text-shadow: 0 4px 20px rgba(0,0,0,.8), 0 0 22px rgba(250,204,21,.25);
-          margin: 0 0 12px;
-        }
-
-        .wc-ko-world-layout {
-          min-width: 1180px;
-          display: grid;
-          grid-template-columns: 86px 1fr 210px 1fr 86px;
-          gap: 12px;
-          align-items: stretch;
-        }
-
-        .wc-ko-groups {
-          display: grid;
-          grid-template-rows: repeat(6, 1fr);
-          gap: 8px;
-        }
-
-        .wc-ko-group-card {
-          min-height: 72px;
-          border-radius: 12px;
-          border: 2px solid rgba(255,255,255,.22);
-          background: rgba(15,23,42,.68);
-          display: flex;
-          flex-direction: column;
-          justify-content: center;
-          align-items: center;
-          gap: 5px;
-          padding: 7px 5px;
-          box-shadow: inset 0 1px 0 rgba(255,255,255,.12), 0 10px 24px rgba(0,0,0,.22);
-        }
-
-        .wc-ko-group-card.group-a { border-color: rgba(16,185,129,.9); box-shadow: 0 0 12px rgba(16,185,129,.18); }
-        .wc-ko-group-card.group-b { border-color: rgba(244,63,94,.9); box-shadow: 0 0 12px rgba(244,63,94,.18); }
-        .wc-ko-group-card.group-c { border-color: rgba(249,115,22,.9); box-shadow: 0 0 12px rgba(249,115,22,.18); }
-        .wc-ko-group-card.group-d { border-color: rgba(59,130,246,.9); box-shadow: 0 0 12px rgba(59,130,246,.18); }
-        .wc-ko-group-card.group-e { border-color: rgba(124,58,237,.9); box-shadow: 0 0 12px rgba(124,58,237,.18); }
-        .wc-ko-group-card.group-f { border-color: rgba(163,230,53,.9); box-shadow: 0 0 12px rgba(163,230,53,.18); }
-        .wc-ko-group-card.group-g { border-color: rgba(236,72,153,.9); box-shadow: 0 0 12px rgba(236,72,153,.18); }
-        .wc-ko-group-card.group-h { border-color: rgba(14,165,233,.9); box-shadow: 0 0 12px rgba(14,165,233,.18); }
-        .wc-ko-group-card.group-i { border-color: rgba(168,85,247,.9); box-shadow: 0 0 12px rgba(168,85,247,.18); }
-        .wc-ko-group-card.group-j { border-color: rgba(6,182,212,.9); box-shadow: 0 0 12px rgba(6,182,212,.18); }
-        .wc-ko-group-card.group-k { border-color: rgba(234,88,12,.9); box-shadow: 0 0 12px rgba(234,88,12,.18); }
-        .wc-ko-group-card.group-l { border-color: rgba(56,189,248,.9); box-shadow: 0 0 12px rgba(56,189,248,.18); }
-
-        .wc-ko-group-card strong {
-          font-size: 10px;
-          letter-spacing: .06em;
-          text-transform: uppercase;
-          color: #fff;
-          text-shadow: 0 2px 8px rgba(0,0,0,.7);
-        }
-
-        .wc-ko-group-flags {
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          gap: 3px;
-          align-items: center;
-          justify-items: center;
-        }
-
-        .wc-ko-group-flags .group-flag-img,
-        .wc-ko-group-flags .group-flag-missing,
-        .wc-ko-empty-flag {
-          width: 24px !important;
-          height: 16px !important;
-          min-width: 24px !important;
-          border-radius: 3px;
-          object-fit: cover;
-          background: rgba(255,255,255,.16);
-          border: 1px solid rgba(255,255,255,.18);
-        }
-
-        .wc-ko-bracket-side {
-          display: grid;
-          grid-template-columns: 1.28fr 1fr .86fr .74fr;
-          gap: 10px;
-          align-items: stretch;
-        }
-
-        .wc-ko-bracket-right {
-          grid-template-columns: .74fr .86fr 1fr 1.28fr;
-        }
-
-        .wc-ko-column {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-around;
-          gap: 8px;
-          position: relative;
-        }
-
-        .wc-ko-stage-title {
-          color: #fde68a;
-          text-align: center;
-          font-size: 10px;
-          font-weight: 1000;
-          letter-spacing: .08em;
-          text-transform: uppercase;
-          margin-bottom: 3px;
-          text-shadow: 0 0 12px rgba(250,204,21,.25);
-        }
-
-        .wc-ko-match {
-          position: relative;
-          border-radius: 11px;
-          border: 1px solid rgba(148,163,184,.26);
-          background: linear-gradient(135deg, rgba(15,23,42,.82), rgba(2,6,23,.68));
-          min-height: 72px;
-          padding: 6px 7px;
-          box-shadow: 0 9px 22px rgba(0,0,0,.26), inset 0 1px 0 rgba(255,255,255,.06);
-        }
-
-        .wc-ko-match::after {
-          content: "";
-          position: absolute;
-          top: 50%;
-          right: -11px;
-          width: 11px;
-          height: 1px;
-          background: rgba(148,163,184,.45);
-        }
-
-        .wc-ko-bracket-right .wc-ko-match::after {
-          right: auto;
-          left: -11px;
-        }
-
-        .wc-ko-column:last-child .wc-ko-match::after,
-        .wc-ko-centre .wc-ko-match::after {
-          display: none;
-        }
-
-        .wc-ko-bracket-right .wc-ko-column:last-child .wc-ko-match::after {
-          display: block;
-        }
-
-        .wc-ko-match.compact {
-          min-height: 62px;
-        }
-
-        .wc-ko-match.is-live {
-          border-color: rgba(34,197,94,.7);
-          box-shadow: 0 0 0 1px rgba(34,197,94,.18), 0 0 22px rgba(34,197,94,.18);
-        }
-
-        .wc-ko-match.is-decided {
-          border-color: rgba(250,204,21,.45);
-        }
-
-        .wc-ko-match-meta {
-          display: flex;
-          justify-content: space-between;
-          gap: 8px;
-          color: rgba(226,232,240,.62);
-          font-size: 8px;
-          margin-bottom: 4px;
-          white-space: nowrap;
-        }
-
-        .wc-ko-lines {
-          display: grid;
-          gap: 3px;
-        }
-
-        .wc-ko-team {
-          display: flex;
-          align-items: center;
-          gap: 5px;
-          min-width: 0;
-          color: #e5e7eb;
-          font-size: 10px;
-          font-weight: 800;
-        }
-
-        .wc-ko-team span:last-child {
-          overflow: hidden;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-        }
-
-        .wc-ko-team.is-winner {
-          color: #fde68a;
-        }
-
-        .wc-ko-team.is-placeholder {
-          color: rgba(226,232,240,.48);
-        }
-
-        .wc-ko-team .group-flag-img,
-        .wc-ko-team .group-flag-missing {
-          width: 18px !important;
-          height: 12px !important;
-          min-width: 18px !important;
-          border-radius: 2px;
-        }
-
-        .wc-ko-seed-dot {
-          width: 18px;
-          min-width: 18px;
-          height: 12px;
-          border-radius: 2px;
-          display: grid;
-          place-items: center;
-          background: rgba(255,255,255,.08);
-          color: rgba(255,255,255,.35);
-        }
-
-        .wc-ko-scoreline {
-          text-align: center;
-          color: #fff;
-          font-size: 10px;
-          font-weight: 1000;
-          line-height: 1;
-          opacity: .92;
-        }
-
-        .wc-ko-centre {
-          display: grid;
-          grid-template-rows: auto 1fr auto auto;
-          gap: 10px;
-          align-items: center;
-          justify-items: center;
-          min-height: 620px;
-        }
-
-        .wc-ko-champion-card,
-        .wc-ko-final-card,
-        .wc-ko-bronze-card {
-          width: 100%;
-          border: 1px solid rgba(250,204,21,.38);
-          background: rgba(15,23,42,.66);
-          border-radius: 16px;
-          padding: 12px;
-          text-align: center;
-          box-shadow: 0 0 24px rgba(250,204,21,.1), inset 0 1px 0 rgba(255,255,255,.07);
-        }
-
-        .wc-ko-champion-card span {
-          display: block;
-          font-size: 24px;
-          margin-bottom: 3px;
-        }
-
-        .wc-ko-champion-card strong {
-          display: block;
-          color: #fff;
-          font-weight: 1000;
-          letter-spacing: .04em;
-          text-transform: uppercase;
-        }
-
-        .wc-ko-champion-card small,
-        .wc-ko-bronze-card span {
-          color: rgba(226,232,240,.68);
-          font-size: 11px;
-        }
-
-        .wc-ko-trophy {
-          width: 170px;
-          min-height: 260px;
-          display: grid;
-          place-items: center;
-          position: relative;
-          margin: 2px auto 0;
-          filter: drop-shadow(0 0 28px rgba(250,204,21,.34));
-        }
-
-        .wc-ko-trophy::before {
-          content: "";
-          position: absolute;
-          inset: 10px -26px 22px;
-          border-radius: 999px;
-          background: radial-gradient(circle, rgba(250,204,21,.24), transparent 64%);
-          z-index: 0;
-        }
-
-        .wc-ko-trophy-svg {
-          width: 158px;
-          height: 238px;
-          position: relative;
-          z-index: 1;
-        }
-
-        .wc-ko-trophy-label {
-          position: relative;
-          z-index: 2;
-          margin-top: -18px;
-          color: #fff7cc;
-          font-size: 9px;
-          font-weight: 1000;
-          letter-spacing: .12em;
-          text-transform: uppercase;
-          text-shadow: 0 2px 10px rgba(0,0,0,.9), 0 0 14px rgba(250,204,21,.35);
-        }
-
-        .wc-ko-bronze-card strong {
-          display: block;
-          color: #fde68a;
-          text-transform: uppercase;
-          letter-spacing: .06em;
-          font-size: 12px;
-          margin-bottom: 4px;
-        }
-
-        @media (max-width: 900px) {
-          .wc-ko-hero {
-            align-items: flex-start;
-            flex-direction: column;
-          }
-          .wc-ko-world-card {
-            padding: 10px !important;
-          }
-          .wc-ko-world-layout {
-            min-width: 1040px;
-            grid-template-columns: 76px 1fr 180px 1fr 76px;
-            gap: 8px;
-          }
-          .wc-ko-bracket-side {
-            gap: 7px;
-          }
-          .wc-ko-match {
-            min-height: 66px;
-            padding: 5px;
-          }
-          .wc-ko-team {
-            font-size: 9px;
-          }
-          .wc-ko-trophy {
-            width: 132px;
-            min-height: 205px;
-          }
-          .wc-ko-trophy-svg {
-            width: 124px;
-            height: 188px;
-          }
-          .wc-ko-trophy-label {
-            font-size: 8px;
-          }
-          .wc-ko-centre {
-            min-height: 560px;
-          }
-        }
-
-
-        /* Team Hub */
-        .wc-team-hub-page {
-          display: grid;
-          gap: 14px;
-        }
-        .wc-team-hub-hero {
-          border: 1px solid rgba(255,255,255,0.18);
-          border-radius: 24px;
-          padding: 18px;
-          background: linear-gradient(135deg, rgba(10,18,38,0.94), rgba(12,84,92,0.62));
-          box-shadow: 0 18px 38px rgba(0,0,0,0.28);
-          display: grid;
-          grid-template-columns: minmax(220px, 1.2fr) minmax(260px, 1.8fr);
-          gap: 16px;
-          align-items: stretch;
-        }
-        .wc-team-hub-picker {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-        }
-        .wc-team-hub-picker label {
-          font-size: 11px;
-          text-transform: uppercase;
-          letter-spacing: 0.14em;
-          color: rgba(255,255,255,0.72);
-          font-weight: 900;
-        }
-        .wc-team-hub-select-wrap {
-          position: relative;
-          display: flex;
-          align-items: center;
-          gap: 10px;
-          border-radius: 18px;
-          border: 1px solid rgba(250,204,21,0.36);
-          background: linear-gradient(135deg, rgba(250,204,21,0.16), rgba(255,255,255,0.08));
-          box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 12px 28px rgba(0,0,0,0.18);
-          padding: 4px 12px;
-        }
-        .wc-team-hub-select-icon {
-          font-size: 19px;
-          line-height: 1;
-          filter: drop-shadow(0 2px 8px rgba(250,204,21,0.35));
-        }
-        .wc-team-hub-select-wrap select {
-          width: 100%;
-          min-height: 44px;
-          border: 0;
-          background: transparent;
-          color: #fff;
-          padding: 10px 34px 10px 0;
-          font-weight: 1000;
-          font-size: 15px;
-          outline: none;
-          cursor: pointer;
-          appearance: none;
-          -webkit-appearance: none;
-        }
-        .wc-team-hub-select-wrap::after {
-          content: "▾";
-          position: absolute;
-          right: 14px;
-          top: 50%;
-          transform: translateY(-50%);
-          color: #facc15;
-          font-weight: 1000;
-          pointer-events: none;
-        }
-        .wc-team-hub-select-wrap select option { color: #111; background: #fff; }
-        .wc-team-hub-select-hint {
-          color: rgba(255,255,255,0.68);
-          font-size: 12px;
-          line-height: 1.35;
-          font-weight: 700;
-        }
-        .wc-team-hub-country-card {
-          border-radius: 22px;
-          padding: 16px;
-          border: 1px solid rgba(255,255,255,0.16);
-          background: rgba(255,255,255,0.08);
-          min-height: 160px;
-          display: flex;
-          align-items: center;
-          gap: 14px;
-        }
-        .wc-team-hub-country-card .big-flag-img,
-        .wc-team-hub-country-card .big-flag {
-          width: 76px;
-          height: 52px;
-          object-fit: cover;
-          border-radius: 10px;
-          box-shadow: 0 8px 20px rgba(0,0,0,0.30);
-        }
-        .wc-team-hub-country-title {
-          display: flex;
-          flex-direction: column;
-          gap: 5px;
-        }
-        .wc-team-hub-country-title strong {
-          font-size: clamp(22px, 3.2vw, 38px);
-          line-height: 1;
-        }
-        .wc-team-hub-country-title span {
-          color: rgba(255,255,255,0.72);
-          font-weight: 800;
-          text-transform: uppercase;
-          letter-spacing: 0.12em;
-          font-size: 11px;
-        }
-        .wc-team-hub-kpis {
-          display: grid;
-          grid-template-columns: repeat(4, minmax(0, 1fr));
-          gap: 10px;
-        }
-        .wc-team-hub-kpi {
-          border-radius: 18px;
-          padding: 13px 12px;
-          background: rgba(255,255,255,0.09);
-          border: 1px solid rgba(255,255,255,0.14);
-          min-height: 74px;
-        }
-        .wc-team-hub-kpi span {
-          display: block;
-          color: rgba(255,255,255,0.68);
-          font-size: 10px;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-          font-weight: 900;
-          margin-bottom: 6px;
-        }
-        .wc-team-hub-kpi strong {
-          display: block;
-          font-size: 24px;
-          color: #fff;
-          line-height: 1;
-        }
-        .wc-team-hub-layout {
-          display: grid;
-          grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr);
-          gap: 14px;
-        }
-        .wc-team-hub-panel {
-          border-radius: 22px;
-          border: 1px solid rgba(255,255,255,0.16);
-          background: rgba(6, 12, 28, 0.62);
-          padding: 15px;
-          box-shadow: 0 14px 34px rgba(0,0,0,0.24);
-        }
-        .wc-team-hub-title {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          gap: 10px;
-          margin-bottom: 12px;
-        }
-        .wc-team-hub-title strong {
-          font-size: 14px;
-          text-transform: uppercase;
-          letter-spacing: 0.1em;
-        }
-        .wc-team-hub-title span {
-          color: rgba(255,255,255,0.62);
-          font-size: 11px;
-          font-weight: 800;
-        }
-        .wc-team-hub-match-list,
-        .wc-team-hub-player-list,
-        .wc-team-hub-venue-list {
-          display: grid;
-          gap: 8px;
-        }
-        .wc-team-hub-match {
-          display: grid;
-          grid-template-columns: 1fr auto;
-          gap: 10px;
-          align-items: center;
-          padding: 10px 12px;
-          border-radius: 15px;
-          background: rgba(255,255,255,0.07);
-          border: 1px solid rgba(255,255,255,0.10);
-        }
-        .wc-team-hub-match-teams {
-          display: flex;
-          align-items: center;
-          gap: 7px;
-          flex-wrap: wrap;
-          font-weight: 900;
-        }
-        .wc-team-hub-match-meta {
-          color: rgba(255,255,255,0.62);
-          font-size: 11px;
-          margin-top: 3px;
-          font-weight: 700;
-        }
-        .wc-team-hub-score {
-          font-size: 18px;
-          font-weight: 1000;
-          color: #fff;
-          min-width: 48px;
-          text-align: right;
-        }
-        .wc-team-hub-badge {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          min-width: 28px;
-          padding: 3px 8px;
-          border-radius: 999px;
-          font-size: 10px;
-          font-weight: 1000;
-          border: 1px solid rgba(255,255,255,0.16);
-          background: rgba(255,255,255,0.10);
-        }
-        .wc-team-hub-badge.win { background: rgba(46,213,115,0.22); color: #91ffbf; }
-        .wc-team-hub-badge.draw { background: rgba(255,193,7,0.20); color: #ffe18c; }
-        .wc-team-hub-badge.loss { background: rgba(255,71,87,0.20); color: #ff9aa6; }
-        .wc-team-hub-player,
-        .wc-team-hub-venue {
-          display: grid;
-          grid-template-columns: auto 1fr auto;
-          align-items: center;
-          gap: 10px;
-          padding: 10px 12px;
-          border-radius: 15px;
-          background: rgba(255,255,255,0.07);
-          border: 1px solid rgba(255,255,255,0.10);
-        }
-        .wc-team-hub-rank {
-          width: 28px;
-          height: 28px;
-          border-radius: 999px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          background: linear-gradient(135deg, rgba(255,215,0,0.32), rgba(255,255,255,0.08));
-          font-weight: 1000;
-          color: #ffe58a;
-        }
-        .wc-team-hub-player small,
-        .wc-team-hub-venue small {
-          display: block;
-          color: rgba(255,255,255,0.58);
-          font-weight: 700;
-          margin-top: 2px;
-        }
-        .wc-team-hub-player strong,
-        .wc-team-hub-venue strong {
-          font-weight: 1000;
-        }
-        .wc-team-hub-value {
-          font-weight: 1000;
-          color: #fff;
-          text-align: right;
-        }
-        .wc-team-hub-form {
-          display: flex;
-          gap: 6px;
-          flex-wrap: wrap;
-          margin-top: 10px;
-        }
-        .wc-team-hub-form span {
-          width: 28px;
-          height: 28px;
-          border-radius: 999px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          font-size: 11px;
-          font-weight: 1000;
-        }
-        .wc-team-hub-form .win { background: rgba(46,213,115,0.24); color: #91ffbf; }
-        .wc-team-hub-form .draw { background: rgba(255,193,7,0.24); color: #ffe18c; }
-        .wc-team-hub-form .loss { background: rgba(255,71,87,0.24); color: #ff9aa6; }
-        .wc-team-hub-empty {
-          padding: 18px;
-          border-radius: 18px;
-          background: rgba(255,255,255,0.07);
-          color: rgba(255,255,255,0.7);
-          font-weight: 800;
-          text-align: center;
-        }
-        @media (max-width: 900px) {
-          .wc-team-hub-hero,
-          .wc-team-hub-layout {
-            grid-template-columns: 1fr;
-          }
-          .wc-team-hub-kpis {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-        }
-
 </style>
     `;
   }
@@ -16439,7 +14567,6 @@ class WorldCup2026Panel extends HTMLElement {
   nav() {
     const items = [
       ["overview", this.t("overview")],
-      ["teamhub", this.teamHubText("yourTeam")],
       ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
       ["results", this.t("results")],
@@ -16466,7 +14593,6 @@ class WorldCup2026Panel extends HTMLElement {
   tabletHeaderNav() {
     const items = [
       ["overview", this.t("overview")],
-      ["teamhub", this.teamHubText("yourTeam")],
       ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
       ["results", this.t("results")],
@@ -16683,7 +14809,6 @@ class WorldCup2026Panel extends HTMLElement {
   overviewPage() {
     const o = this._data.overview || {};
     const fixtures = this._data.fixtures || [];
-    const resultsFeed = Array.isArray(this._data.results) ? this._data.results : [];
     const rawScorers = Array.isArray(this._data.scorers) ? this._data.scorers : [];
     const scorers = rawScorers
       .map((s) => {
@@ -16734,41 +14859,7 @@ class WorldCup2026Panel extends HTMLElement {
     const remainingCount = o.matches_remaining ?? Math.max(totalMatches - playedCount, 0);
     const liveMatches = sortedFixtures.filter(m => liveStatuses.includes(m.status));
     const upcomingMatches = sortedFixtures.filter(m => upcomingStatuses.includes(m.status)).slice(0, 4);
-    const resultArrays = [
-      resultsFeed,
-      Array.isArray(o.results) ? o.results : [],
-      Array.isArray(o.recent_results) ? o.recent_results : [],
-      Array.isArray(o.recentResults) ? o.recentResults : [],
-      Array.isArray(stats.results) ? stats.results : [],
-      Array.isArray(stats.recent_results) ? stats.recent_results : [],
-      Array.isArray(stats.recentResults) ? stats.recentResults : [],
-      sortedFixtures,
-    ];
-
-    const resultMap = new Map();
-    resultArrays.flat().filter(Boolean).forEach((match, index) => {
-      const key = match?.id || match?.matchId || match?.fixtureId || `${this.getHomeTeam ? this.getHomeTeam(match) : match?.homeTeam || match?.home}-${this.getAwayTeam ? this.getAwayTeam(match) : match?.awayTeam || match?.away}-${match?.utcDate || match?.date || index}`;
-      const existing = resultMap.get(key);
-
-      // Prefer the version that actually contains score / goal-event data.
-      const matchHasScore = this.scoreValue(match, "home") !== null && this.scoreValue(match, "away") !== null;
-      const existingHasScore = existing && this.scoreValue(existing, "home") !== null && this.scoreValue(existing, "away") !== null;
-      const matchGoalEvents = Array.isArray(match?.goalEvents) ? match.goalEvents.length : 0;
-      const existingGoalEvents = Array.isArray(existing?.goalEvents) ? existing.goalEvents.length : 0;
-
-      if (!existing || (matchHasScore && !existingHasScore) || matchGoalEvents > existingGoalEvents) {
-        resultMap.set(key, match);
-      }
-    });
-
-    const recentResults = Array.from(resultMap.values())
-      .filter((m) => this.isFinishedMatch ? this.isFinishedMatch(m) : finishedStatuses.includes(String(m.status || "").toUpperCase()))
-      .sort((a, b) => {
-        const aTime = new Date(a.utcDate || a.date || a.kickoff || a.startTime || 0).getTime();
-        const bTime = new Date(b.utcDate || b.date || b.kickoff || b.startTime || 0).getTime();
-        return bTime - aTime;
-      })
-      .slice(0, 4);
+    const recentResults = sortedFixtures.filter(m => finishedStatuses.includes(m.status)).slice(-4).reverse();
     const nextMatch = upcomingMatches[0] || sortedFixtures.find(m => !finishedStatuses.includes(m.status)) || sortedFixtures[0];
     const topScorer = scorers[0];
     const progress = Number(o.progress ?? stats.progress ?? (totalMatches ? Math.round((playedCount / totalMatches) * 100) : 0));
@@ -17948,7 +16039,7 @@ class WorldCup2026Panel extends HTMLElement {
         ${venueInfo ? `
           <div class="fixture-card-venue fixture-card-venue-inline">
             <span class="fixture-venue-name">🏟 ${this.esc(venueInfo.name)}</span>
-            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<span class="fixture-venue-real">${this.t("real")}: ${this.esc(venueInfo.realName)}</span>` : ""}
+            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<span class="fixture-venue-real">Real: ${this.esc(venueInfo.realName)}</span>` : ""}
             ${venueInfo.city || venueInfo.country ? `<span class="fixture-venue-location">${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</span>` : ""}
             ${venueInfo.capacity ? `<span class="fixture-venue-capacity">👥 ${this.esc(venueInfo.capacity)}</span>` : ""}
           </div>
@@ -18184,132 +16275,67 @@ class WorldCup2026Panel extends HTMLElement {
     const totalGoals = scorers.reduce((total, p) => total + p.goals, 0);
     const totalAssists = scorers.reduce((total, p) => total + p.assists, 0);
     const leader = scorers[0];
-    const podium = scorers.slice(0, 3);
-    const chasingPack = scorers.slice(3, 10);
-    const contributions = [...scorers]
-      .map((player) => ({ ...player, contributions: player.goals + player.assists }))
-      .filter((player) => player.contributions > 0)
-      .sort((a, b) => b.contributions - a.contributions || b.goals - a.goals || a.name.localeCompare(b.name))
-      .slice(0, 6);
-
-    const medal = (index) => index === 0 ? "🥇" : index === 1 ? "🥈" : index === 2 ? "🥉" : "";
 
     if (!hasScorers) {
       return `
-        <section class="wc-section golden-boot-hero">
-          <div>
-            <div class="golden-kicker">${this.t("players")}</div>
-            <h2 class="golden-title">${this.t("goldenBootCentre")}</h2>
-            <div class="mini-pill">${this.t("source")}: football-data.org</div>
-          </div>
-          <div class="golden-boot-icon">👟</div>
+        <section class="wc-section hero-section players-hero">
+          <div class="section-kicker">${this.t("players")}</div>
+          <h2>${this.t("goldenBootCentre")}</h2>
+          <p>${this.t("goldenBootAutoText")}</p>
         </section>
 
         <section class="wc-section">
           <div class="wc-empty">
-            ${this.t("noGoldenBootData")}
+            No Golden Boot scorer data available yet.
           </div>
         </section>
       `;
     }
 
     return `
-      <section class="wc-section golden-boot-hero">
-        <div>
-          <div class="golden-kicker">${this.t("goldenBoot")}</div>
-          <h2 class="golden-title">${this.t("goldenBootCentre")}</h2>
-          <div class="golden-card-stat-row">
-            <span>${scorers.length} ${this.t("playersTracked")}</span>
-            <span>${totalGoals} ${this.t("goals")}</span>
-            <span>${totalAssists} ${this.t("assists")}</span>
-            <span>${this.t("source")}: ${this.esc(source)}</span>
-            ${isFallback ? `<span>${this.t("previewData")}</span>` : ""}
-          </div>
+      <section class="wc-section hero-section players-hero">
+        <div class="section-kicker">${this.t("players")}</div>
+        <h2>${this.t("goldenBootCentre")}</h2>
+        <p>
+          ${isFallback
+            ? "Preview fallback data shown until football-data.org publishes live World Cup scorer data."
+            : "Live Golden Boot data from football-data.org."}
+        </p>
+        <div class="source-pill">
+          ${this.t("source")}: ${this.esc(source)}
         </div>
-        <div class="golden-boot-icon">👟</div>
       </section>
 
-      <div class="stats-layout golden-layout golden-layout-polished">
-        <section class="wc-section golden-main-card">
-          <div class="golden-card-head">
-            <div>
-              <div class="section-kicker">${this.t("leaderSpotlight")}</div>
-              <h2>${this.t("playerWatch")}</h2>
-            </div>
-            <div class="mini-pill">${this.t("top10")}</div>
-          </div>
-
-          <div class="golden-showcase golden-showcase-polished">
-            ${leader ? `
-              <div class="golden-leader golden-leader-compact golden-leader-main">
-                <div class="golden-leader-medal">🥇</div>
-                <div>
-                  <div class="golden-leader-name">${this.esc(leader.name)}</div>
-                  <div class="golden-leader-team">
-                    ${this.flag(leader.team, true)}
-                    <span>${this.esc(leader.team)}</span>
-                  </div>
-                  <div class="golden-leader-strip">
-                    <span><strong>${leader.goals}</strong>${this.t("goals")}</span>
-                    <span><strong>${leader.assists}</strong>${this.t("assists")}</span>
-                  </div>
-                </div>
-                <div class="golden-leader-goals">
-                  <strong>${leader.goals}</strong>
-                  <span>${this.t("goals")}</span>
-                </div>
-              </div>
-            ` : ""}
-
-            <div class="golden-podium-grid golden-podium-grid-polished">
-              ${podium.map((player, index) => `
-                <div class="golden-podium-item ${index === 0 ? "winner" : ""}">
-                  <div class="golden-medal">${medal(index)}</div>
-                  <div class="golden-player-name">${this.esc(player.name)}</div>
-                  <div class="golden-player-team">
-                    ${this.flag(player.team, true)}
-                    <span>${this.esc(player.team)}</span>
-                  </div>
-                  <div class="golden-player-stats">
-                    <strong>${player.goals}</strong><span>${this.t("goals")}</span>
-                    <span>${player.assists} ${this.t("assists")}</span>
-                  </div>
-                </div>
-              `).join("")}
-              ${podium.length < 3 ? Array.from({ length: 3 - podium.length }).map(() => `
-                <div class="golden-podium-item golden-empty-podium">
-                  <div class="golden-medal">🏅</div>
-                  <div class="golden-player-name">${this.t("tbc")}</div>
-                  <div class="golden-player-stats"><span>${this.t("notAvailable")}</span></div>
-                </div>
-              `).join("") : ""}
-            </div>
-          </div>
-        </section>
-
-        <aside class="wc-section golden-summary-card">
-          <div>
-            <div class="section-kicker">${this.t("stats")}</div>
-            <h2>${this.t("tournamentIntelligence")}</h2>
-          </div>
-          <div class="golden-mini-stat"><strong>${scorers.length}</strong><span>${this.t("playersTracked")}</span></div>
-          <div class="golden-mini-stat"><strong>${totalGoals}</strong><span>${this.t("totalGoals")}</span></div>
-          <div class="golden-mini-stat"><strong>${totalAssists}</strong><span>${this.t("totalAssists")}</span></div>
-          <div class="golden-mini-stat"><strong>${leader ? this.esc(leader.name) : this.t("tbc")}</strong><span>${this.t("topScorer")}</span></div>
-        </aside>
-      </div>
-
-      <div class="stats-layout golden-layout golden-layout-polished">
-        <section class="wc-section golden-table-card">
-          <div class="golden-card-head">
+      <div class="stats-layout">
+        <section class="wc-section">
+          <div class="section-header-row">
             <div>
               <div class="section-kicker">${this.t("goldenBoot")}</div>
-              <h2>${this.t("fullRace")}</h2>
+              <h2>${this.t("playerWatch")}</h2>
             </div>
             <div class="mini-pill">${scorers.length} ${this.t("playersTracked")}</div>
           </div>
-          <div class="table-wrap golden-table-wrap">
-            <table class="wc-table golden-table">
+
+          ${leader ? `
+            <div class="leader-strip">
+              <div>
+                <div class="section-kicker">${this.t("leaderSpotlight")}</div>
+                <h3>${this.esc(leader.name)}</h3>
+                <p>${this.flag(leader.team, true)} ${this.esc(leader.team)}</p>
+              </div>
+              <div class="leader-score">
+                <strong>${leader.goals}</strong>
+                <span>${this.t("goals")}</span>
+              </div>
+              <div class="leader-score">
+                <strong>${leader.assists}</strong>
+                <span>${this.t("assists")}</span>
+              </div>
+            </div>
+          ` : ""}
+
+          <div class="table-wrap">
+            <table class="wc-table">
               <thead>
                 <tr>
                   <th>${this.t("pos")}</th>
@@ -18321,22 +16347,17 @@ class WorldCup2026Panel extends HTMLElement {
               </thead>
               <tbody>
                 ${scorers.map((player, index) => `
-                  <tr class="${index < 3 ? "golden-top-row" : ""}">
-                    <td data-label="${this.t("pos")}"><span class="golden-rank">${index + 1}</span></td>
-                    <td data-label="${this.t("player")}">
-                      <div class="golden-table-player">
-                        <span class="golden-table-medal">${medal(index)}</span>
-                        <strong>${this.esc(player.name)}</strong>
-                      </div>
-                    </td>
-                    <td data-label="${this.t("team")}">
+                  <tr>
+                    <td>${index + 1}</td>
+                    <td><strong>${this.esc(player.name)}</strong></td>
+                    <td>
                       <div class="group-team-cell">
                         ${this.flag(player.team, true)}
                         <span>${this.esc(player.team)}</span>
                       </div>
                     </td>
-                    <td data-label="${this.t("goals")}"><strong class="golden-goal-count">${player.goals}</strong></td>
-                    <td data-label="${this.t("assists")}">${player.assists}</td>
+                    <td><strong>${player.goals}</strong></td>
+                    <td>${player.assists}</td>
                   </tr>
                 `).join("")}
               </tbody>
@@ -18344,270 +16365,109 @@ class WorldCup2026Panel extends HTMLElement {
           </div>
         </section>
 
-        <aside class="wc-section golden-summary-card">
-          <div>
-            <div class="section-kicker">${this.t("goalsAssists")}</div>
-            <h2>${this.t("playerImpact")}</h2>
+        <aside class="wc-section side-panel">
+          <div class="section-kicker">${this.t("stats")}</div>
+          <h2>${this.t("tournamentIntelligence")}</h2>
+          <div class="stat-list">
+            <div><strong>${scorers.length}</strong><span>${this.t("playersTracked")}</span></div>
+            <div><strong>${totalGoals}</strong><span>${this.t("totalGoals")}</span></div>
+            <div><strong>${totalAssists}</strong><span>${this.t("totalAssists")}</span></div>
+            <div><strong>${this.esc(source)}</strong><span>${this.t("source")}</span></div>
           </div>
-          ${contributions.length ? contributions.map((player, index) => `
-            <div class="golden-mini-stat">
-              <strong>${index + 1}. ${this.esc(player.name)}</strong>
-              <span>${player.contributions} ${this.t("total")} · ${player.goals}${this.t("goalShort")} ${player.assists}${this.t("assistShort")}</span>
-            </div>
-          `).join("") : `<div class="wc-empty">${this.t("notAvailable")}</div>`}
         </aside>
       </div>
     `;
   }
 
-  knockoutStageDefinitions() {
-    return [
-      ["LAST_32", this.t("round32"), 16],
-      ["LAST_16", this.t("round16"), 8],
-      ["QUARTER_FINALS", this.t("quarterFinals"), 4],
-      ["SEMI_FINALS", this.t("semiFinals"), 2],
-      ["FINAL", this.t("final"), 1],
-    ];
-  }
-
-  allKnockoutMatches() {
-    const sources = [
-      ...(Array.isArray(this._data.fixtures) ? this._data.fixtures : []),
-      ...(Array.isArray(this._data.results) ? this._data.results : []),
-      ...(Array.isArray(this._data.live) ? this._data.live : []),
-    ];
-
-    const byKey = new Map();
-    sources.forEach((match, index) => {
-      const stage = this.normaliseKnockoutStage(match?.stage);
-      if (!stage || !this.knockoutRoundStarts()[stage]) return;
-      const key = match?.id ?? match?.matchId ?? `${stage}-${match?.utcDate || match?.date || index}-${this.getHomeTeam(match)}-${this.getAwayTeam(match)}`;
-      if (!byKey.has(key)) byKey.set(key, match);
-    });
-
-    return Array.from(byKey.values()).sort((a, b) => {
-      const aTime = new Date(a.utcDate || a.date || 0).getTime();
-      const bTime = new Date(b.utcDate || b.date || 0).getTime();
-      return aTime - bTime;
-    });
-  }
-
-  knockoutMatchesByStage(stage, expected = 0) {
-    const matches = this.allKnockoutMatches()
-      .filter((match) => this.normaliseKnockoutStage(match.stage) === stage)
-      .sort((a, b) => {
-        const aTime = new Date(a.utcDate || a.date || 0).getTime();
-        const bTime = new Date(b.utcDate || b.date || 0).getTime();
-        return aTime - bTime;
-      });
-
-    const rows = matches.map((match, index) => ({ match, index }));
-    while (rows.length < expected) rows.push({ match: null, index: rows.length });
-    return rows.slice(0, expected || rows.length);
-  }
-
-  knockoutWinner(match) {
-    if (!match) return "";
-    const home = this.getHomeTeam(match);
-    const away = this.getAwayTeam(match);
-    const homeScore = this.getHomeScore(match);
-    const awayScore = this.getAwayScore(match);
-    const homeNum = Number(homeScore);
-    const awayNum = Number(awayScore);
-
-    if (Number.isFinite(homeNum) && Number.isFinite(awayNum) && homeNum !== awayNum) {
-      return homeNum > awayNum ? home : away;
-    }
-
-    const winner = match.winner || match.winningTeam || match.winnerTeam;
-    if (typeof winner === "string") return winner;
-    if (winner && typeof winner === "object") return winner.shortName || winner.name || winner.tla || "";
-    return "";
-  }
-
-  knockoutTeamLine(team, winner = "") {
-    const isPlaceholder = !team || team === this.t("tbc") || String(team).toUpperCase() === "TBC";
-    const teamName = isPlaceholder ? this.t("tbc") : this.localizedTeamName(team);
-    const winnerClass = winner && team && this.fixtureTeamKey(team) === this.fixtureTeamKey(winner) ? " is-winner" : "";
-    return `
-      <div class="wc-ko-team${winnerClass}${isPlaceholder ? " is-placeholder" : ""}">
-        ${isPlaceholder ? `<span class="wc-ko-seed-dot">•</span>` : this.flag(team, true)}
-        <span>${this.esc(teamName)}</span>
-      </div>
-    `;
-  }
-
-  knockoutMatchTile(match, stage, index, compact = false) {
-    const home = match ? this.getHomeTeam(match) : this.t("tbc");
-    const away = match ? this.getAwayTeam(match) : this.t("tbc");
-    const homeScore = match ? this.getHomeScore(match) : "-";
-    const awayScore = match ? this.getAwayScore(match) : "-";
-    const winner = this.knockoutWinner(match);
-    const hasScore = homeScore !== "-" && awayScore !== "-";
-    const matchNumber = match ? this.knockoutDerivedMatchNumber(stage, index, match) : null;
-    const status = String(match?.status || "").toUpperCase();
-    const liveClass = ["IN_PLAY", "LIVE", "PAUSED", "1H", "2H", "HT", "HALF_TIME"].includes(status) ? " is-live" : "";
-
-    return `
-      <div class="wc-ko-match${compact ? " compact" : ""}${winner ? " is-decided" : ""}${liveClass}">
-        <div class="wc-ko-match-meta">
-          <span>${matchNumber ? `#${this.esc(matchNumber)}` : this.t("tbc")}</span>
-          ${match?.utcDate || match?.date ? `<small>${this.esc(this.formatDate(match.utcDate || match.date))}</small>` : `<small>${this.t("fixturesNotAvailable")}</small>`}
-        </div>
-        <div class="wc-ko-lines">
-          ${this.knockoutTeamLine(home, winner)}
-          <div class="wc-ko-scoreline">${hasScore ? `${this.esc(homeScore)} - ${this.esc(awayScore)}` : this.t("versus")}</div>
-          ${this.knockoutTeamLine(away, winner)}
-        </div>
-      </div>
-    `;
-  }
-
-  knockoutGroupLetter(group, index = 0) {
-    const raw = String(group?.group || group?.name || group?.stage || "").toUpperCase();
-    const match = raw.match(/GROUP[_\s-]*([A-L])/i) || raw.match(/\b([A-L])\b/i);
-    return match ? match[1].toUpperCase() : String.fromCharCode(65 + index);
-  }
-
-  knockoutGroupCards(side = "left") {
-    const groups = Array.isArray(this._data.groups) ? this._data.groups : [];
-    const sortedGroups = groups
-      .map((group, index) => ({ group, index, letter: this.knockoutGroupLetter(group, index) }))
-      .sort((a, b) => a.letter.localeCompare(b.letter));
-    const wanted = side === "left" ? ["A", "B", "C", "D", "E", "F"] : ["G", "H", "I", "J", "K", "L"];
-
-    return wanted.map((letter) => {
-      const item = sortedGroups.find((entry) => entry.letter === letter);
-      const table = item?.group?.table || item?.group?.standings || item?.group?.teams || [];
-      const teams = table.slice(0, 4).map((row) => {
-        const team = row.team?.name || row.team?.shortName || row.name || row.team || row.shortName || "";
-        return team;
-      }).filter(Boolean);
-
-      return `
-        <div class="wc-ko-group-card group-${letter.toLowerCase()}">
-          <div class="wc-ko-group-flags">
-            ${teams.length ? teams.map((team) => this.flag(team, true)).join("") : Array.from({ length: 4 }).map(() => `<span class="wc-ko-empty-flag"></span>`).join("")}
-          </div>
-          <strong>${this.t("groupLabel")} ${letter}</strong>
-        </div>
-      `;
-    }).join("");
-  }
-
-  knockoutFinalWinnerCard(finalMatch) {
-    const winner = this.knockoutWinner(finalMatch);
-    return `
-      <div class="wc-ko-champion-card">
-        <span>🏆</span>
-        <strong>${winner ? this.esc(this.localizedTeamName(winner)) : this.t("worldChampions") || "World Champions"}</strong>
-        ${winner ? `<small>${this.flag(winner, true)} ${this.t("winner")}</small>` : `<small>${this.t("tbc")}</small>`}
-      </div>
-    `;
-  }
 
   knockoutPage() {
-    const stages = this.knockoutStageDefinitions();
-    const stageData = Object.fromEntries(
-      stages.map(([stage, label, expected]) => [stage, { label, rows: this.knockoutMatchesByStage(stage, expected) }])
-    );
+    const fixtures = this._data.fixtures || [];
+    const rounds = [
+      ["LAST_32", this.t("round32")],
+      ["LAST_16", this.t("round16")],
+      ["QUARTER_FINALS", this.t("quarterFinals")],
+      ["SEMI_FINALS", this.t("semiFinals")],
+      ["FINAL", this.t("final")],
+    ];
 
-    const finalMatch = stageData.FINAL?.rows?.[0]?.match || null;
-    const leftStages = ["LAST_32", "LAST_16", "QUARTER_FINALS", "SEMI_FINALS"];
-    const rightStages = ["SEMI_FINALS", "QUARTER_FINALS", "LAST_16", "LAST_32"];
-    const halfRows = (rows, half) => {
-      const mid = Math.ceil(rows.length / 2);
-      return half === "left" ? rows.slice(0, mid) : rows.slice(mid);
-    };
+    const roundMatches = rounds.map(([stage, label]) => {
+      const matches = fixtures
+        .filter(m => this.normaliseKnockoutStage(m.stage) === stage)
+        .sort((a, b) => {
+          const aTime = new Date(a.utcDate || a.date || 0).getTime();
+          const bTime = new Date(b.utcDate || b.date || 0).getTime();
+          return aTime - bTime;
+        });
+      return { stage, label, matches };
+    });
 
     return `
-      <div class="wc-ko-page">
-        <section class="wc-ko-hero wc-card">
-          <div>
-            <div class="overview-small-label">🏆 ${this.t("knockout")}</div>
-            <div class="wc-section-title">${this.t("knockoutBracket")}</div>
-            <p class="wc-muted">${this.t("fixturesSubtitle")}</p>
-          </div>
-          <div class="wc-ko-hero-pill">${this.t("groupStage")} → ${this.t("final")}</div>
-        </section>
-
-        <section class="wc-ko-world-card wc-card">
-          <div class="wc-ko-world-title">${this.t("worldChampions") || "WORLD CHAMPIONS"}</div>
-
-          <div class="wc-ko-world-layout">
-            <aside class="wc-ko-groups wc-ko-groups-left">
-              ${this.knockoutGroupCards("left")}
-            </aside>
-
-            <div class="wc-ko-bracket-side wc-ko-bracket-left">
-              ${leftStages.map((stage) => `
-                <div class="wc-ko-column stage-${stage.toLowerCase()}">
-                  <div class="wc-ko-stage-title">${stageData[stage].label}</div>
-                  ${halfRows(stageData[stage].rows, "left").map(({ match, index }) => this.knockoutMatchTile(match, stage, index, stage !== "LAST_32")).join("")}
+      <div class="wc-card wc-web-card">
+        <div class="wc-section-title">Knockout Stage</div>
+        <div class="wc-knockout-web">
+          ${roundMatches.map(({ stage, label, matches }) => `
+            <div class="wc-web-round">
+              <div class="wc-web-round-title">${label}</div>
+              ${matches.length ? matches.map((m) => `
+                <div class="wc-web-match">
+                  <div class="wc-web-team">
+                    ${this.flag(this.getHomeTeam(m), true)}
+                    <span>${this.esc(this.localizedTeamName(this.getHomeTeam(m)))}</span>
+                  </div>
+                  <div class="wc-web-vs">${this.t("versus")}</div>
+                  <div class="wc-web-team">
+                    ${this.flag(this.getAwayTeam(m), true)}
+                    <span>${this.esc(this.localizedTeamName(this.getAwayTeam(m)))}</span>
+                  </div>
                 </div>
-              `).join("")}
+              `).join("") : `<div class="wc-web-match"><div class="wc-web-team"><span>${this.t("tbc")}</span></div><div class="wc-web-vs">${this.t("fixturesNotAvailable")}</div></div>`}
             </div>
-
-            <div class="wc-ko-centre">
-              ${this.knockoutFinalWinnerCard(finalMatch)}
-              <div class="wc-ko-trophy" aria-label="World Cup trophy">
-                <svg class="wc-ko-trophy-svg" viewBox="0 0 220 320" role="img" aria-hidden="true">
-                  <defs>
-                    <linearGradient id="wcKoGold" x1="0" x2="1" y1="0" y2="1">
-                      <stop offset="0%" stop-color="#fff7ad"/>
-                      <stop offset="32%" stop-color="#facc15"/>
-                      <stop offset="62%" stop-color="#b7791f"/>
-                      <stop offset="100%" stop-color="#fff3a3"/>
-                    </linearGradient>
-                    <linearGradient id="wcKoDarkGold" x1="0" x2="1">
-                      <stop offset="0%" stop-color="#7c4a03"/>
-                      <stop offset="50%" stop-color="#f59e0b"/>
-                      <stop offset="100%" stop-color="#6b3d00"/>
-                    </linearGradient>
-                    <radialGradient id="wcKoGlow" cx="50%" cy="28%" r="55%">
-                      <stop offset="0%" stop-color="#fff8bd" stop-opacity=".95"/>
-                      <stop offset="55%" stop-color="#facc15" stop-opacity=".28"/>
-                      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
-                    </radialGradient>
-                  </defs>
-                  <ellipse cx="110" cy="122" rx="83" ry="100" fill="url(#wcKoGlow)" opacity=".65"/>
-                  <path d="M110 22c-36 0-61 25-61 59 0 22 12 43 29 56 7 6 12 12 13 23 2 19-10 41-24 61h86c-14-20-26-42-24-61 1-11 6-17 13-23 17-13 29-34 29-56 0-34-25-59-61-59z" fill="url(#wcKoGold)" stroke="#fff0a6" stroke-width="3"/>
-                  <path d="M62 76c-20 7-32 24-31 44 1 25 20 41 48 48-1-11-1-21 0-29-17-7-27-18-28-32-1-10 4-19 14-25z" fill="url(#wcKoGold)" stroke="#fef3c7" stroke-width="2" opacity=".9"/>
-                  <path d="M158 76c20 7 32 24 31 44-1 25-20 41-48 48 1-11 1-21 0-29 17-7 27-18 28-32 1-10-4-19-14-25z" fill="url(#wcKoGold)" stroke="#fef3c7" stroke-width="2" opacity=".9"/>
-                  <path d="M79 72c10-25 50-25 62 0-8 12-19 19-32 19-12 0-22-7-30-19z" fill="#5f8f3a" opacity=".9"/>
-                  <path d="M82 103c19 11 37 11 56 0-6 25-10 49-9 70-14 10-26 10-38 0 1-21-3-45-9-70z" fill="#1f7a45" opacity=".88"/>
-                  <path d="M76 227h68l8 26H68z" fill="url(#wcKoDarkGold)" stroke="#fde68a" stroke-width="2"/>
-                  <path d="M58 255h104l10 28H48z" fill="url(#wcKoGold)" stroke="#fde68a" stroke-width="2"/>
-                  <path d="M39 285h142l9 22H30z" fill="url(#wcKoDarkGold)" stroke="#fde68a" stroke-width="2"/>
-                  <path d="M75 293h70" stroke="#fff7ad" stroke-width="4" opacity=".65"/>
-                  <path d="M96 38c-16 13-21 32-14 52M124 38c16 13 21 32 14 52" fill="none" stroke="#fff7ad" stroke-width="4" opacity=".45" stroke-linecap="round"/>
-                </svg>
-                <div class="wc-ko-trophy-label">FIFA World Cup</div>
-              </div>
-              <div class="wc-ko-final-card">
-                <div class="wc-ko-stage-title">${this.t("final")}</div>
-                ${this.knockoutMatchTile(finalMatch, "FINAL", 0, true)}
-              </div>
-              <div class="wc-ko-bronze-card">
-                <strong>${this.t("thirdPlace")}</strong>
+          `).join("")}
+          <div class="wc-web-round wc-web-round-winner">
+            <div class="wc-web-round-title">Winner</div>
+            <div class="wc-web-match wc-web-winner-card">
+              <div class="wc-web-team wc-web-winner-team">
+                <span class="wc-winner-trophy">🏆</span>
                 <span>${this.t("tbc")}</span>
               </div>
             </div>
-
-            <div class="wc-ko-bracket-side wc-ko-bracket-right">
-              ${rightStages.map((stage) => `
-                <div class="wc-ko-column stage-${stage.toLowerCase()}">
-                  <div class="wc-ko-stage-title">${stageData[stage].label}</div>
-                  ${halfRows(stageData[stage].rows, "right").map(({ match, index }) => this.knockoutMatchTile(match, stage, index, stage !== "LAST_32")).join("")}
-                </div>
-              `).join("")}
-            </div>
-
-            <aside class="wc-ko-groups wc-ko-groups-right">
-              ${this.knockoutGroupCards("right")}
-            </aside>
           </div>
-        </section>
+        </div>
+      </div>
+
+      <div class="wc-card">
+        <div class="wc-section-title">Knockout Details</div>
+        <div class="wc-bracket">
+          ${roundMatches.map(({ stage, label, matches }) => `
+              <div class="wc-bracket-round">
+                <div class="wc-round-title">${label}</div>
+                ${
+                  matches.length
+                    ? matches.map((m, index) => {
+                      const knockoutNumber = this.knockoutDerivedMatchNumber(stage, index, m);
+                      const venueInfo = this.fixtureVenueInfo(m, knockoutNumber);
+                      return `
+                      <div class="wc-bracket-match">
+                        ${this.matchRowInner(m)}
+                        <div class="wc-muted" style="text-align:center;margin-top:8px;">
+                          ${knockoutNumber ? `<span>#${this.esc(knockoutNumber)}</span> · ` : ""}${this.esc(this.formatDate(m.utcDate || m.date))}
+                        </div>
+                        ${venueInfo?.image ? `<img src="${this.esc(venueInfo.image)}" class="fixture-stadium-image" loading="lazy">` : ""}
+                        ${venueInfo ? `
+                          <div class="fixture-card-venue fixture-card-venue-inline">
+                            <span class="fixture-venue-name">🏟 ${this.esc(venueInfo.name)}</span>
+                            ${venueInfo.realName && venueInfo.realName !== venueInfo.name ? `<span class="fixture-venue-real">Real: ${this.esc(venueInfo.realName)}</span>` : ""}
+                            ${venueInfo.city || venueInfo.country ? `<span class="fixture-venue-location">${this.esc([venueInfo.city, venueInfo.country ? this.localizedCountryName(venueInfo.country) : ""].filter(Boolean).join(", "))}</span>` : ""}
+                            ${venueInfo.capacity ? `<span class="fixture-venue-capacity">👥 ${this.esc(venueInfo.capacity)}</span>` : ""}
+                          </div>
+                        ` : ""}
+                      </div>
+                    `}).join("")
+                    : `<div class="wc-bracket-match">${this.t("tbc")}<br><span class="wc-muted">${this.t("fixturesNotAvailable")}</span></div>`
+                }
+              </div>
+          `).join("")}
+        </div>
       </div>
     `;
   }
@@ -18676,725 +16536,19 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
-
-  teamHubText(key) {
-    if (key === "yourTeam") {
-      const labels = {
-        en: "Your Team",
-        fr: "Votre équipe",
-        de: "Dein Team",
-        es: "Tu equipo",
-        it: "La tua squadra",
-        nl: "Jouw team",
-        pt: "A sua seleção",
-        pl: "Twoja drużyna",
-        ar: "منتخبك",
-        ja: "あなたのチーム",
-        ko: "내 팀",
-        sv: "Ditt lag",
-        no: "Ditt lag",
-        zh: "你的球队",
-        hi: "आपकी टीम",
-        bn: "আপনার দল",
-        ta: "உங்கள் அணி",
-        tr: "Takımınız",
-        uk: "Ваша команда",
-        da: "Dit hold",
-        fi: "Oma joukkue",
-        cs: "Váš tým",
-        el: "Η ομάδα σας",
-        ro: "Echipa ta",
-        hu: "A csapatod",
-        th: "ทีมของคุณ",
-        vi: "Đội của bạn",
-        id: "Tim Anda"
-      };
-      return labels[this._language] || labels.en;
-    }
-    const dict = {
-      en: { teamHub: "Team Hub", selectCountry: "Select country", countryProfile: "Country profile", groupPosition: "Group position", tournamentRecord: "Tournament record", fixturesResults: "Fixtures & results", teamStats: "Team stats", playerContributions: "Player contributions", venuesJourney: "Venues & journey", formGuide: "Form guide", matches: "Matches", wins: "Wins", draws: "Draws", losses: "Losses", goalsFor: "Goals for", goalsAgainst: "Goals against", goalDifference: "Goal difference", cleanSheets: "Clean sheets", upcoming: "Upcoming", played: "Played", noTeamData: "No country data available yet.", noMatches: "No matches loaded for this country yet.", noPlayers: "No player data loaded for this country yet.", noVenues: "No venues loaded for this country yet.", chooseCountryHint: "Choose a World Cup country to see its fixtures, results, player stats, group data and venue journey.", allCountries: "All World Cup countries" },
-      fr: { teamHub: "Centre équipe", selectCountry: "Choisir un pays", countryProfile: "Profil du pays", groupPosition: "Position du groupe", tournamentRecord: "Bilan du tournoi", fixturesResults: "Matchs et résultats", teamStats: "Statistiques équipe", playerContributions: "Contributions joueurs", venuesJourney: "Stades et parcours", formGuide: "Forme", matches: "Matchs", wins: "Victoires", draws: "Nuls", losses: "Défaites", goalsFor: "Buts pour", goalsAgainst: "Buts contre", goalDifference: "Différence", cleanSheets: "Clean sheets", upcoming: "À venir", played: "Joué", noTeamData: "Aucune donnée pays disponible.", noMatches: "Aucun match chargé pour ce pays.", noPlayers: "Aucune donnée joueur pour ce pays.", noVenues: "Aucun stade chargé pour ce pays.", chooseCountryHint: "Choisissez un pays pour voir matchs, résultats, joueurs, groupe et stades.", allCountries: "Tous les pays" },
-      de: { teamHub: "Team-Zentrale", selectCountry: "Land wählen", countryProfile: "Länderprofil", groupPosition: "Gruppenplatz", tournamentRecord: "Turnierbilanz", fixturesResults: "Spiele & Ergebnisse", teamStats: "Teamstatistiken", playerContributions: "Spielerbeiträge", venuesJourney: "Stadien & Weg", formGuide: "Form", matches: "Spiele", wins: "Siege", draws: "Remis", losses: "Niederlagen", goalsFor: "Tore", goalsAgainst: "Gegentore", goalDifference: "Tordifferenz", cleanSheets: "Zu Null", upcoming: "Kommend", played: "Gespielt", noTeamData: "Noch keine Länderdaten verfügbar.", noMatches: "Keine Spiele für dieses Land geladen.", noPlayers: "Keine Spielerdaten für dieses Land geladen.", noVenues: "Keine Stadien für dieses Land geladen.", chooseCountryHint: "Wähle ein WM-Land für Spiele, Ergebnisse, Spieler, Gruppe und Stadien.", allCountries: "Alle WM-Länder" },
-      es: { teamHub: "Centro de equipo", selectCountry: "Elegir país", countryProfile: "Perfil del país", groupPosition: "Posición de grupo", tournamentRecord: "Registro del torneo", fixturesResults: "Partidos y resultados", teamStats: "Estadísticas del equipo", playerContributions: "Aportes de jugadores", venuesJourney: "Sedes y recorrido", formGuide: "Forma", matches: "Partidos", wins: "Victorias", draws: "Empates", losses: "Derrotas", goalsFor: "Goles a favor", goalsAgainst: "Goles en contra", goalDifference: "Diferencia", cleanSheets: "Porterías a cero", upcoming: "Próximo", played: "Jugado", noTeamData: "Aún no hay datos del país.", noMatches: "No hay partidos cargados para este país.", noPlayers: "No hay datos de jugadores para este país.", noVenues: "No hay sedes cargadas para este país.", chooseCountryHint: "Elige un país para ver partidos, resultados, jugadores, grupo y sedes.", allCountries: "Todos los países" },
-      it: { teamHub: "Centro squadra", selectCountry: "Scegli paese", countryProfile: "Profilo paese", groupPosition: "Posizione gruppo", tournamentRecord: "Bilancio torneo", fixturesResults: "Partite e risultati", teamStats: "Statistiche squadra", playerContributions: "Contributi giocatori", venuesJourney: "Stadi e percorso", formGuide: "Forma", matches: "Partite", wins: "Vittorie", draws: "Pareggi", losses: "Sconfitte", goalsFor: "Gol fatti", goalsAgainst: "Gol subiti", goalDifference: "Differenza reti", cleanSheets: "Clean sheet", upcoming: "Prossime", played: "Giocate", noTeamData: "Nessun dato paese disponibile.", noMatches: "Nessuna partita caricata per questo paese.", noPlayers: "Nessun dato giocatore per questo paese.", noVenues: "Nessuno stadio caricato per questo paese.", chooseCountryHint: "Scegli un paese per vedere partite, risultati, giocatori, gruppo e stadi.", allCountries: "Tutti i paesi" },
-      nl: { teamHub: "Team Hub", selectCountry: "Kies land", countryProfile: "Landprofiel", groupPosition: "Groepspositie", tournamentRecord: "Toernooirecord", fixturesResults: "Wedstrijden & uitslagen", teamStats: "Teamstatistieken", playerContributions: "Spelerbijdragen", venuesJourney: "Stadions & route", formGuide: "Vorm", matches: "Wedstrijden", wins: "Winst", draws: "Gelijk", losses: "Verlies", goalsFor: "Doelpunten voor", goalsAgainst: "Tegen", goalDifference: "Doelsaldo", cleanSheets: "Clean sheets", upcoming: "Komend", played: "Gespeeld", noTeamData: "Nog geen landgegevens.", noMatches: "Geen wedstrijden voor dit land geladen.", noPlayers: "Geen spelergegevens voor dit land.", noVenues: "Geen stadions voor dit land.", chooseCountryHint: "Kies een WK-land voor wedstrijden, resultaten, spelers, groep en stadions.", allCountries: "Alle WK-landen" },
-      pt: { teamHub: "Centro da seleção", selectCountry: "Selecionar país", countryProfile: "Perfil do país", groupPosition: "Posição no grupo", tournamentRecord: "Campanha", fixturesResults: "Jogos e resultados", teamStats: "Estatísticas da equipe", playerContributions: "Contribuições dos jogadores", venuesJourney: "Estádios e percurso", formGuide: "Forma", matches: "Jogos", wins: "Vitórias", draws: "Empates", losses: "Derrotas", goalsFor: "Gols pró", goalsAgainst: "Gols contra", goalDifference: "Saldo", cleanSheets: "Jogos sem sofrer", upcoming: "Próximo", played: "Jogados", noTeamData: "Ainda não há dados do país.", noMatches: "Nenhum jogo carregado para este país.", noPlayers: "Nenhum dado de jogador para este país.", noVenues: "Nenhum estádio carregado para este país.", chooseCountryHint: "Escolha um país para ver jogos, resultados, jogadores, grupo e estádios.", allCountries: "Todos os países" },
-      pl: { teamHub: "Centrum drużyny", selectCountry: "Wybierz kraj", countryProfile: "Profil kraju", groupPosition: "Pozycja w grupie", tournamentRecord: "Bilans turnieju", fixturesResults: "Mecze i wyniki", teamStats: "Statystyki drużyny", playerContributions: "Wkład zawodników", venuesJourney: "Stadiony i droga", formGuide: "Forma", matches: "Mecze", wins: "Wygrane", draws: "Remisy", losses: "Porażki", goalsFor: "Bramki", goalsAgainst: "Stracone", goalDifference: "Różnica", cleanSheets: "Czyste konta", upcoming: "Następne", played: "Rozegrane", noTeamData: "Brak danych kraju.", noMatches: "Brak meczów dla tego kraju.", noPlayers: "Brak danych zawodników.", noVenues: "Brak stadionów dla tego kraju.", chooseCountryHint: "Wybierz kraj, aby zobaczyć mecze, wyniki, zawodników, grupę i stadiony.", allCountries: "Wszystkie kraje" },
-      ar: { teamHub: "مركز المنتخب", selectCountry: "اختر الدولة", countryProfile: "ملف الدولة", groupPosition: "مركز المجموعة", tournamentRecord: "سجل البطولة", fixturesResults: "المباريات والنتائج", teamStats: "إحصائيات الفريق", playerContributions: "مساهمات اللاعبين", venuesJourney: "الملاعب والمسار", formGuide: "المستوى", matches: "مباريات", wins: "فوز", draws: "تعادل", losses: "خسارة", goalsFor: "له", goalsAgainst: "عليه", goalDifference: "الفارق", cleanSheets: "شباك نظيفة", upcoming: "القادم", played: "لعب", noTeamData: "لا توجد بيانات بعد.", noMatches: "لا توجد مباريات لهذه الدولة.", noPlayers: "لا توجد بيانات لاعبين.", noVenues: "لا توجد ملاعب لهذه الدولة.", chooseCountryHint: "اختر دولة لعرض المباريات والنتائج واللاعبين والمجموعة والملاعب.", allCountries: "كل الدول" },
-      ja: { teamHub: "チームハブ", selectCountry: "国を選択", countryProfile: "国プロフィール", groupPosition: "グループ順位", tournamentRecord: "大会成績", fixturesResults: "試合と結果", teamStats: "チーム統計", playerContributions: "選手貢献", venuesJourney: "会場と歩み", formGuide: "フォーム", matches: "試合", wins: "勝利", draws: "引分", losses: "敗戦", goalsFor: "得点", goalsAgainst: "失点", goalDifference: "得失点差", cleanSheets: "無失点", upcoming: "次戦", played: "試合済", noTeamData: "国データはまだありません。", noMatches: "この国の試合はまだありません。", noPlayers: "選手データはまだありません。", noVenues: "会場データはまだありません。", chooseCountryHint: "国を選ぶと試合、結果、選手、グループ、会場を表示します。", allCountries: "全出場国" },
-      ko: { teamHub: "팀 허브", selectCountry: "국가 선택", countryProfile: "국가 프로필", groupPosition: "조 순위", tournamentRecord: "대회 기록", fixturesResults: "경기 및 결과", teamStats: "팀 통계", playerContributions: "선수 기여", venuesJourney: "경기장 및 여정", formGuide: "최근 흐름", matches: "경기", wins: "승", draws: "무", losses: "패", goalsFor: "득점", goalsAgainst: "실점", goalDifference: "득실차", cleanSheets: "무실점", upcoming: "예정", played: "경기", noTeamData: "아직 국가 데이터가 없습니다.", noMatches: "이 국가의 경기가 없습니다.", noPlayers: "선수 데이터가 없습니다.", noVenues: "경기장 데이터가 없습니다.", chooseCountryHint: "국가를 선택하면 경기, 결과, 선수, 조, 경기장을 볼 수 있습니다.", allCountries: "전체 월드컵 국가" },
-      sv: { teamHub: "Laghub", selectCountry: "Välj land", countryProfile: "Landsprofil", groupPosition: "Grupposition", tournamentRecord: "Turneringsfacit", fixturesResults: "Matcher & resultat", teamStats: "Lagstatistik", playerContributions: "Spelarbidrag", venuesJourney: "Arenor & resa", formGuide: "Form", matches: "Matcher", wins: "Vinster", draws: "Oavgjorda", losses: "Förluster", goalsFor: "Mål framåt", goalsAgainst: "Insläppta", goalDifference: "Målskillnad", cleanSheets: "Nollor", upcoming: "Kommande", played: "Spelade", noTeamData: "Ingen landsdata ännu.", noMatches: "Inga matcher för detta land.", noPlayers: "Ingen spelarstatistik.", noVenues: "Inga arenor.", chooseCountryHint: "Välj ett land för matcher, resultat, spelare, grupp och arenor.", allCountries: "Alla VM-länder" },
-      no: { teamHub: "Laghub", selectCountry: "Velg land", countryProfile: "Landsprofil", groupPosition: "Gruppeplass", tournamentRecord: "Turneringsstatus", fixturesResults: "Kamper og resultater", teamStats: "Lagstatistikk", playerContributions: "Spillerbidrag", venuesJourney: "Stadioner og reise", formGuide: "Form", matches: "Kamper", wins: "Seire", draws: "Uavgjort", losses: "Tap", goalsFor: "Mål for", goalsAgainst: "Mål mot", goalDifference: "Målforskjell", cleanSheets: "Nuller", upcoming: "Kommende", played: "Spilt", noTeamData: "Ingen landsdata ennå.", noMatches: "Ingen kamper for dette landet.", noPlayers: "Ingen spillerdata.", noVenues: "Ingen stadiondata.", chooseCountryHint: "Velg et land for kamper, resultater, spillere, gruppe og stadioner.", allCountries: "Alle VM-land" },
-      default: { teamHub: "Team Hub", selectCountry: "Select country", countryProfile: "Country profile", groupPosition: "Group position", tournamentRecord: "Tournament record", fixturesResults: "Fixtures & results", teamStats: "Team stats", playerContributions: "Player contributions", venuesJourney: "Venues & journey", formGuide: "Form guide", matches: "Matches", wins: "Wins", draws: "Draws", losses: "Losses", goalsFor: "Goals for", goalsAgainst: "Goals against", goalDifference: "Goal difference", cleanSheets: "Clean sheets", upcoming: "Upcoming", played: "Played", noTeamData: "No country data available yet.", noMatches: "No matches loaded for this country yet.", noPlayers: "No player data loaded for this country yet.", noVenues: "No venues loaded for this country yet.", chooseCountryHint: "Choose a World Cup country to see its fixtures, results, player stats, group data and venue journey.", allCountries: "All World Cup countries" }
-    };
-    return (dict[this._language] && dict[this._language][key]) || dict.default[key] || key;
-  }
-
-  worldCupTeamFallbackList() {
-    return [
-      "Mexico", "South Africa", "Korea Republic", "Czechia",
-      "Canada", "Bosnia & Herzegovina", "Qatar", "Switzerland",
-      "Brazil", "Morocco", "Haiti", "Scotland",
-      "USA", "Paraguay", "Australia", "Turkey",
-      "Germany", "Curaçao", "Ivory Coast", "Ecuador",
-      "Netherlands", "Japan", "Sweden", "Tunisia",
-      "Belgium", "Egypt", "Iran", "New Zealand",
-      "Spain", "Cape Verde", "Saudi Arabia", "Uruguay",
-      "France", "Senegal", "Iraq", "Norway",
-      "Argentina", "Algeria", "Austria", "Jordan",
-      "Portugal", "Congo DR", "Uzbekistan", "Colombia",
-      "England", "Croatia", "Ghana", "Panama"
-    ];
-  }
-
-  teamHubTeams() {
-    const map = new Map();
-    const add = (team) => {
-      const label = this.teamLabel(team);
-      if (!label || label === "TBC" || label === this.t("tbc")) return;
-      const key = this.fixtureTeamKey(label);
-      if (!key || key === "tbc") return;
-      if (!map.has(key)) map.set(key, label);
-    };
-
-    this.worldCupTeamFallbackList().forEach(add);
-    [...(this._data.fixtures || []), ...(this._data.results || []), ...(this._data.live || [])].forEach((match) => {
-      add(this.getHomeTeam(match));
-      add(this.getAwayTeam(match));
-    });
-    (this._data.groups || []).forEach((group) => {
-      const table = group.table || group.standings || group.teams || [];
-      table.forEach((row) => add(row.team?.name || row.team?.shortName || row.name || row.team));
-    });
-
-    return [...map.values()].sort((a, b) => this.localizedTeamName(a).localeCompare(this.localizedTeamName(b), this.locale()));
-  }
-
-  selectedTeamHubCountry() {
-    const teams = this.teamHubTeams();
-    if (!teams.length) return "";
-    const selectedKey = this.fixtureTeamKey(this._teamHubCountry);
-    const found = teams.find((team) => this.fixtureTeamKey(team) === selectedKey);
-    if (found) return found;
-    this._teamHubCountry = teams[0];
-    try { localStorage.setItem(this._teamHubStorageKey, this._teamHubCountry); } catch (e) {}
-    return teams[0];
-  }
-
-  teamHubGroupInfo(team) {
-    const key = this.fixtureTeamKey(team);
-    for (let index = 0; index < (this._data.groups || []).length; index += 1) {
-      const group = this._data.groups[index] || {};
-      const groupName = this.groupNameLabel(group.group || group.name || group.stage || `Group ${String.fromCharCode(65 + index)}`, index);
-      const table = group.table || group.standings || group.teams || [];
-      for (let i = 0; i < table.length; i += 1) {
-        const row = table[i] || {};
-        const teamName = row.team?.name || row.team?.shortName || row.name || row.team;
-        if (this.fixtureTeamKey(teamName) === key) {
-          return { groupName, position: row.position ?? i + 1, points: row.points ?? row.pts ?? 0, row };
-        }
-      }
-    }
-    return { groupName: "-", position: "-", points: 0, row: null };
-  }
-
-  teamHubMatches(team) {
-    const key = this.fixtureTeamKey(team);
-    const seen = new Set();
-    return [...(this._data.results || []), ...(this._data.live || []), ...(this._data.fixtures || [])]
-      .filter((match) => {
-        const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
-        const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
-        return homeKey === key || awayKey === key;
-      })
-      .filter((match, index) => {
-        const id = match?.id || match?.matchId || `${this.getHomeTeam(match)}-${this.getAwayTeam(match)}-${match?.utcDate || match?.date || index}`;
-        if (seen.has(id)) return false;
-        seen.add(id);
-        return true;
-      })
-      .sort((a, b) => new Date(a.utcDate || a.date || 0) - new Date(b.utcDate || b.date || 0));
-  }
-
-  teamHubStats(team, matches) {
-    const key = this.fixtureTeamKey(team);
-    const stats = { played: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0, goalDifference: 0, cleanSheets: 0, upcoming: 0, form: [] };
-    matches.forEach((match) => {
-      const finished = this.isFinishedMatch(match);
-      if (!finished) {
-        stats.upcoming += 1;
-        return;
-      }
-      const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
-      const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
-      const homeScore = Number(this.getHomeScore(match));
-      const awayScore = Number(this.getAwayScore(match));
-      if (!Number.isFinite(homeScore) || !Number.isFinite(awayScore)) return;
-      const isHome = homeKey === key;
-      const gf = isHome ? homeScore : awayScore;
-      const ga = isHome ? awayScore : homeScore;
-      stats.played += 1;
-      stats.goalsFor += gf;
-      stats.goalsAgainst += ga;
-      if (ga === 0) stats.cleanSheets += 1;
-      let result = "draw";
-      if (gf > ga) { stats.wins += 1; result = "win"; }
-      else if (gf < ga) { stats.losses += 1; result = "loss"; }
-      else { stats.draws += 1; }
-      stats.form.push(result);
-    });
-    stats.goalDifference = stats.goalsFor - stats.goalsAgainst;
-    stats.form = stats.form.slice(-5);
-    return stats;
-  }
-
-  teamHubPlayers(team) {
-    const key = this.fixtureTeamKey(team);
-    return (this._data.scorers || [])
-      .filter((scorer) => this.fixtureTeamKey(this.scorerTeamName(scorer)) === key)
-      .map((scorer) => {
-        const goals = this.numberValue(this.resolvedPlayerStat(scorer, "goals"), scorer.goals);
-        const assists = this.numberValue(this.resolvedPlayerStat(scorer, "assists"), scorer.assists);
-        return { name: this.scorerName(scorer), team: this.scorerTeamName(scorer), goals, assists, total: goals + assists };
-      })
-      .filter((player) => player.name && (player.goals || player.assists))
-      .sort((a, b) => b.total - a.total || b.goals - a.goals || a.name.localeCompare(b.name))
-      .slice(0, 8);
-  }
-
-  teamHubVenues(matches) {
-    const venueMap = new Map();
-    matches.forEach((match) => {
-      const venue = this.venueInfoForMatch(match);
-      const name = venue?.realName || venue?.name || match.venue || match.stadium || match.venueName;
-      if (!name || name === "TBC") return;
-      const key = String(name).toLowerCase();
-      const item = venueMap.get(key) || { name, city: venue?.city || match.city || match.venueCity || "", country: venue?.country || match.venueCountry || "", matches: 0 };
-      item.matches += 1;
-      venueMap.set(key, item);
-    });
-    return [...venueMap.values()].sort((a, b) => b.matches - a.matches || a.name.localeCompare(b.name)).slice(0, 6);
-  }
-
-  teamHubMatchOutcome(team, match) {
-    if (!this.isFinishedMatch(match)) return this.teamHubText("upcoming");
-    const key = this.fixtureTeamKey(team);
-    const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
-    const homeScore = Number(this.getHomeScore(match));
-    const awayScore = Number(this.getAwayScore(match));
-    if (!Number.isFinite(homeScore) || !Number.isFinite(awayScore)) return "-";
-    const isHome = homeKey === key;
-    const gf = isHome ? homeScore : awayScore;
-    const ga = isHome ? awayScore : homeScore;
-    if (gf > ga) return "W";
-    if (gf < ga) return "L";
-    return "D";
-  }
-
-  teamHubPage() {
-    const teams = this.teamHubTeams();
-    const selected = this.selectedTeamHubCountry();
-    if (!selected) {
-      return `<div class="wc-card"><div class="wc-empty">${this.teamHubText("noTeamData")}</div></div>`;
-    }
-
-    const matches = this.teamHubMatches(selected);
-    const stats = this.teamHubStats(selected, matches);
-    const groupInfo = this.teamHubGroupInfo(selected);
-    const players = this.teamHubPlayers(selected);
-    const venues = this.teamHubVenues(matches);
-    const groupText = groupInfo.position !== "-" ? `${groupInfo.groupName} · #${groupInfo.position} · ${groupInfo.points} ${this.t("pointsShort")}` : groupInfo.groupName;
-
-    const matchRows = matches.length ? matches.map((match) => {
-      const home = this.getHomeTeam(match);
-      const away = this.getAwayTeam(match);
-      const finished = this.isFinishedMatch(match);
-      const score = finished ? `${this.getHomeScore(match)}-${this.getAwayScore(match)}` : this.formatDate(match.utcDate || match.date || match.kickoff || match.startTime);
-      const outcome = this.teamHubMatchOutcome(selected, match);
-      const outcomeClass = outcome === "W" ? "win" : outcome === "D" ? "draw" : outcome === "L" ? "loss" : "";
-      const venue = this.venueInfoForMatch(match);
-      const venueText = [venue?.city, venue?.country ? this.localizedCountryName(venue.country) : ""].filter(Boolean).join(", ");
-      return `
-        <div class="wc-team-hub-match">
-          <div>
-            <div class="wc-team-hub-match-teams">
-              ${this.flag(home, true)}<span>${this.esc(this.localizedTeamName(home))}</span>
-              <span>${this.t("versus")}</span>
-              ${this.flag(away, true)}<span>${this.esc(this.localizedTeamName(away))}</span>
-              <span class="wc-team-hub-badge ${outcomeClass}">${this.esc(outcome)}</span>
-            </div>
-            <div class="wc-team-hub-match-meta">${this.esc([this.formatDate(match.utcDate || match.date), venueText].filter(Boolean).join(" · "))}</div>
-          </div>
-          <div class="wc-team-hub-score">${this.esc(score)}</div>
-        </div>
-      `;
-    }).join("") : `<div class="wc-team-hub-empty">${this.teamHubText("noMatches")}</div>`;
-
-    const playerRows = players.length ? players.map((player, index) => `
-      <div class="wc-team-hub-player">
-        <span class="wc-team-hub-rank">${index + 1}</span>
-        <div><strong>${this.esc(player.name)}</strong><small>${this.esc(this.localizedTeamName(player.team))}</small></div>
-        <div class="wc-team-hub-value">${player.goals} ⚽ · ${player.assists} A</div>
-      </div>
-    `).join("") : `<div class="wc-team-hub-empty">${this.teamHubText("noPlayers")}</div>`;
-
-    const venueRows = venues.length ? venues.map((venue, index) => `
-      <div class="wc-team-hub-venue">
-        <span class="wc-team-hub-rank">${index + 1}</span>
-        <div><strong>${this.esc(venue.name)}</strong><small>${this.esc([venue.city, venue.country ? this.localizedCountryName(venue.country) : ""].filter(Boolean).join(", "))}</small></div>
-        <div class="wc-team-hub-value">${venue.matches}</div>
-      </div>
-    `).join("") : `<div class="wc-team-hub-empty">${this.teamHubText("noVenues")}</div>`;
-
-    const formHtml = stats.form.length ? `<div class="wc-team-hub-form">${stats.form.map((result) => `<span class="${result}">${result === "win" ? "W" : result === "draw" ? "D" : "L"}</span>`).join("")}</div>` : "";
-
-    return `
-      <div class="wc-team-hub-page">
-        <div class="wc-team-hub-hero">
-          <div class="wc-team-hub-picker">
-            <label for="wc-team-hub-country">${this.teamHubText("selectCountry")}</label>
-            <div class="wc-team-hub-select-wrap">
-              <span class="wc-team-hub-select-icon">🌍</span>
-              <select id="wc-team-hub-country" aria-label="${this.esc(this.teamHubText("selectCountry"))}">
-                ${teams.map((team) => `<option value="${this.esc(team)}" ${this.fixtureTeamKey(team) === this.fixtureTeamKey(selected) ? "selected" : ""}>${this.esc(this.localizedTeamName(team))}</option>`).join("")}
-              </select>
-            </div>
-            <div class="wc-team-hub-select-hint">${this.teamHubText("chooseCountryHint")}</div>
-            <div class="wc-team-hub-country-grid">
-              ${teams.map((team) => `
-                <button type="button" class="wc-team-hub-country-button ${this.fixtureTeamKey(team) === this.fixtureTeamKey(selected) ? "active" : ""}" data-team-hub-country="${this.esc(team)}">
-                  ${this.flag(team, true)}<span>${this.esc(this.localizedTeamName(team))}</span>
-                </button>
-              `).join("")}
-            </div>
-            <div class="wc-team-hub-country-card">
-              ${this.flag(selected)}
-              <div class="wc-team-hub-country-title">
-                <span>${this.teamHubText("countryProfile")}</span>
-                <strong>${this.esc(this.localizedTeamName(selected))}</strong>
-                <em>${this.esc(groupText)}</em>
-              </div>
-            </div>
-          </div>
-          <div class="wc-team-hub-kpis">
-            <div class="wc-team-hub-kpi"><span>${this.teamHubText("matches")}</span><strong>${stats.played}</strong></div>
-            <div class="wc-team-hub-kpi"><span>${this.teamHubText("wins")}</span><strong>${stats.wins}</strong></div>
-            <div class="wc-team-hub-kpi"><span>${this.teamHubText("goalsFor")}</span><strong>${stats.goalsFor}</strong></div>
-            <div class="wc-team-hub-kpi"><span>${this.teamHubText("cleanSheets")}</span><strong>${stats.cleanSheets}</strong></div>
-            <div class="wc-team-hub-kpi"><span>${this.teamHubText("draws")}</span><strong>${stats.draws}</strong></div>
-            <div class="wc-team-hub-kpi"><span>${this.teamHubText("losses")}</span><strong>${stats.losses}</strong></div>
-            <div class="wc-team-hub-kpi"><span>${this.teamHubText("goalsAgainst")}</span><strong>${stats.goalsAgainst}</strong></div>
-            <div class="wc-team-hub-kpi"><span>${this.teamHubText("goalDifference")}</span><strong>${stats.goalDifference > 0 ? "+" : ""}${stats.goalDifference}</strong></div>
-          </div>
-        </div>
-
-        <div class="wc-team-hub-layout">
-          <div class="wc-team-hub-panel">
-            <div class="wc-team-hub-title"><strong>${this.teamHubText("fixturesResults")}</strong><span>${matches.length} ${this.teamHubText("matches")}</span></div>
-            <div class="wc-team-hub-match-list">${matchRows}</div>
-          </div>
-          <div class="wc-team-hub-panel">
-            <div class="wc-team-hub-title"><strong>${this.teamHubText("teamStats")}</strong><span>${this.teamHubText("formGuide")}</span></div>
-            <div class="wc-team-hub-kpis">
-              <div class="wc-team-hub-kpi"><span>${this.teamHubText("played")}</span><strong>${stats.played}</strong></div>
-              <div class="wc-team-hub-kpi"><span>${this.teamHubText("upcoming")}</span><strong>${stats.upcoming}</strong></div>
-              <div class="wc-team-hub-kpi"><span>${this.teamHubText("groupPosition")}</span><strong>${groupInfo.position}</strong></div>
-              <div class="wc-team-hub-kpi"><span>${this.t("pointsShort")}</span><strong>${groupInfo.points}</strong></div>
-            </div>
-            ${formHtml}
-          </div>
-        </div>
-
-        <div class="wc-team-hub-layout">
-          <div class="wc-team-hub-panel">
-            <div class="wc-team-hub-title"><strong>${this.teamHubText("playerContributions")}</strong><span>${this.t("goals")} + ${this.t("assists")}</span></div>
-            <div class="wc-team-hub-player-list">${playerRows}</div>
-          </div>
-          <div class="wc-team-hub-panel">
-            <div class="wc-team-hub-title"><strong>${this.teamHubText("venuesJourney")}</strong><span>${this.t("venues")}</span></div>
-            <div class="wc-team-hub-venue-list">${venueRows}</div>
-          </div>
-        </div>
-      </div>
-    `;
-  }
-
   statsPage() {
     const s = this._data.statistics || {};
-    const fixtures = Array.isArray(this._data.fixtures) ? this._data.fixtures : [];
-    const results = Array.isArray(this._data.results) ? this._data.results : [];
-    const live = Array.isArray(this._data.live) ? this._data.live : [];
-    const groups = Array.isArray(this._data.groups) ? this._data.groups : [];
-    const scorersRaw = Array.isArray(this._data.scorers) ? this._data.scorers : [];
-    const venueData = this._data.venues || {};
-
-    const num = (...values) => {
-      for (const value of values) {
-        if (value === null || value === undefined || value === "" || value === "-") continue;
-        const parsed = Number(value);
-        if (Number.isFinite(parsed)) return parsed;
-      }
-      return 0;
-    };
-
-    const fmt = (value, digits = 0) => Number(value || 0).toLocaleString(undefined, {
-      minimumFractionDigits: digits,
-      maximumFractionDigits: digits,
-    });
-    const pct = (part, total) => total > 0 ? Math.round((part / total) * 100) : 0;
-
-    const finishedStatuses = new Set(["FINISHED", "FT", "AET", "PEN", "AWARDED"]);
-    const liveStatuses = new Set(["IN_PLAY", "LIVE", "PAUSED", "1H", "2H", "HT", "HALF_TIME"]);
-    const scheduledStatuses = new Set(["TIMED", "SCHEDULED", "POSTPONED", "SUSPENDED"]);
-
-    const allMatches = [...fixtures, ...results, ...live];
-    const byKey = new Map();
-    allMatches.forEach((match, index) => {
-      const key = match?.id ?? match?.matchId ?? `${this.getHomeTeam(match)}-${this.getAwayTeam(match)}-${match?.utcDate || match?.date || index}`;
-      if (!byKey.has(key)) byKey.set(key, match);
-    });
-    const matches = Array.from(byKey.values());
-
-    const matchStatus = (match) => String(match?.status || match?.matchStatus || "").toUpperCase();
-    const isFinished = (match) => {
-      const status = matchStatus(match);
-      const home = this.getHomeScore(match);
-      const away = this.getAwayScore(match);
-      return finishedStatuses.has(status) || (home !== "-" && away !== "-" && !scheduledStatuses.has(status) && !liveStatuses.has(status));
-    };
-
-    const finished = matches.filter(isFinished);
-    const liveMatches = live.length ? live : matches.filter((match) => liveStatuses.has(matchStatus(match)));
-    const scheduledCount = matches.filter((match) => scheduledStatuses.has(matchStatus(match))).length;
-
-    const teamStats = {};
-    const ensureTeam = (team) => {
-      const name = team || this.t("unknown");
-      if (!teamStats[name]) {
-        teamStats[name] = {
-          team: name,
-          played: 0,
-          wins: 0,
-          draws: 0,
-          losses: 0,
-          goalsFor: 0,
-          goalsAgainst: 0,
-          goalDifference: 0,
-          cleanSheets: 0,
-          points: 0,
-        };
-      }
-      return teamStats[name];
-    };
-
-    let totalGoals = 0;
-    let draws = 0;
-    let btts = 0;
-    let over25 = 0;
-    let cleanSheets = 0;
-    let highestScoring = null;
-    let biggestWin = null;
-    const recentFinished = [...finished].sort((a, b) => new Date(b.utcDate || b.date || 0) - new Date(a.utcDate || a.date || 0)).slice(0, 5);
-
-    finished.forEach((match) => {
-      const homeTeam = this.getHomeTeam(match);
-      const awayTeam = this.getAwayTeam(match);
-      const home = num(this.getHomeScore(match));
-      const away = num(this.getAwayScore(match));
-      const goals = home + away;
-      const margin = Math.abs(home - away);
-      const homeStats = ensureTeam(homeTeam);
-      const awayStats = ensureTeam(awayTeam);
-
-      totalGoals += goals;
-      if (home === away) draws += 1;
-      if (home > 0 && away > 0) btts += 1;
-      if (goals >= 3) over25 += 1;
-      if (away === 0) cleanSheets += 1;
-      if (home === 0) cleanSheets += 1;
-
-      if (!highestScoring || goals > highestScoring.goals) highestScoring = { match, goals };
-      if (!biggestWin || margin > biggestWin.margin) biggestWin = { match, margin };
-
-      homeStats.played += 1;
-      awayStats.played += 1;
-      homeStats.goalsFor += home;
-      homeStats.goalsAgainst += away;
-      awayStats.goalsFor += away;
-      awayStats.goalsAgainst += home;
-      if (away === 0) homeStats.cleanSheets += 1;
-      if (home === 0) awayStats.cleanSheets += 1;
-
-      if (home > away) {
-        homeStats.wins += 1;
-        awayStats.losses += 1;
-        homeStats.points += 3;
-      } else if (away > home) {
-        awayStats.wins += 1;
-        homeStats.losses += 1;
-        awayStats.points += 3;
-      } else {
-        homeStats.draws += 1;
-        awayStats.draws += 1;
-        homeStats.points += 1;
-        awayStats.points += 1;
-      }
-    });
-
-    Object.values(teamStats).forEach((team) => {
-      team.goalDifference = team.goalsFor - team.goalsAgainst;
-      team.goalsPerGame = team.played ? team.goalsFor / team.played : 0;
-      team.concededPerGame = team.played ? team.goalsAgainst / team.played : 0;
-    });
-
-    const teamRows = Object.values(teamStats);
-    const formTable = [...teamRows].sort((a, b) => b.points - a.points || b.goalDifference - a.goalDifference || b.goalsFor - a.goalsFor || a.team.localeCompare(b.team)).slice(0, 8);
-    const topAttack = [...teamRows].sort((a, b) => b.goalsFor - a.goalsFor || b.goalDifference - a.goalDifference || a.team.localeCompare(b.team)).slice(0, 6);
-    const bestDefence = [...teamRows].filter((team) => team.played > 0).sort((a, b) => a.goalsAgainst - b.goalsAgainst || b.cleanSheets - a.cleanSheets || a.team.localeCompare(b.team)).slice(0, 6);
-    const cleanSheetTeams = [...teamRows].sort((a, b) => b.cleanSheets - a.cleanSheets || a.goalsAgainst - b.goalsAgainst || a.team.localeCompare(b.team)).slice(0, 6);
-    const goalDifferenceTeams = [...teamRows].sort((a, b) => b.goalDifference - a.goalDifference || b.goalsFor - a.goalsFor || a.team.localeCompare(b.team)).slice(0, 6);
-
-    const scorers = scorersRaw
-      .map((scorer) => ({
-        name: this.scorerName ? this.scorerName(scorer) : (scorer?.player?.name || scorer?.name || scorer?.playerName || ""),
-        team: this.scorerTeamName ? this.scorerTeamName(scorer) : (scorer?.team?.shortName || scorer?.team?.name || scorer?.teamName || scorer?.country || ""),
-        goals: num(scorer?.goals, scorer?.numberOfGoals),
-        assists: num(scorer?.assists, scorer?.numberOfAssists),
-      }))
-      .filter((player) => player.name);
-    const goldenBoot = [...scorers].filter((player) => player.goals > 0).sort((a, b) => b.goals - a.goals || b.assists - a.assists || a.name.localeCompare(b.name)).slice(0, 6);
-    const assists = [...scorers].filter((player) => player.assists > 0).sort((a, b) => b.assists - a.assists || b.goals - a.goals || a.name.localeCompare(b.name)).slice(0, 6);
-    const involvements = [...scorers]
-      .map((player) => ({ ...player, total: player.goals + player.assists }))
-      .filter((player) => player.total > 0)
-      .sort((a, b) => b.total - a.total || b.goals - a.goals || b.assists - a.assists || a.name.localeCompare(b.name))
-      .slice(0, 6);
-
-    const groupInsights = groups.map((group, index) => {
-      const table = group?.table || group?.standings || group?.teams || [];
-      const groupName = this.groupNameLabel(group?.group || group?.name || group?.stage || `Group ${String.fromCharCode(65 + index)}`, index);
-      const teams = table.map((team) => ({
-        name: team.team?.name || team.team?.shortName || team.name || team.team || "",
-        played: num(team.playedGames, team.played, team.p),
-        gf: num(team.goalsFor, team.gf),
-        ga: num(team.goalsAgainst, team.ga),
-        gd: num(team.goalDifference, team.gd),
-        pts: num(team.points, team.pts),
-      })).filter((team) => team.name);
-      const goals = teams.reduce((sum, team) => sum + team.gf, 0);
-      const spread = teams.length ? Math.max(...teams.map((team) => team.pts)) - Math.min(...teams.map((team) => team.pts)) : 0;
-      const leader = [...teams].sort((a, b) => b.pts - a.pts || b.gd - a.gd || b.gf - a.gf).at(0);
-      return { groupName, teams, goals, spread, leader };
-    }).filter((group) => group.teams.length);
-    const highestScoringGroup = [...groupInsights].sort((a, b) => b.goals - a.goals).at(0);
-    const tightestGroup = [...groupInsights].filter((group) => group.teams.some((team) => team.played > 0)).sort((a, b) => a.spread - b.spread || b.goals - a.goals).at(0);
-
-    const stadiums = this.completeVenueStadiums
-      ? this.completeVenueStadiums(venueData.stadiums || [])
-      : (Array.isArray(venueData.stadiums) ? venueData.stadiums : []);
-    const venueTitle = (venue) => venue?.name || venue?.stadium || venue?.real_name || this.t("unknown");
-    const venueRealName = (venue) => venue?.real_name || venue?.stadium || venue?.name || this.t("unknown");
-    const venueMatches = (venue) => num(venue?.matches, venue?.matches_hosted, venue?.match_count);
-    const venueCapacityNumber = (venue) => num(venue?.capacity);
-    const finalVenue = venueData.final_venue || stadiums.find((venue) => String(venueRealName(venue)).toLowerCase().includes("metlife")) || null;
-    const biggestStadium = stadiums.length ? [...stadiums].sort((a, b) => venueCapacityNumber(b) - venueCapacityNumber(a)).at(0) : null;
-    const busiestVenues = [...stadiums].sort((a, b) => venueMatches(b) - venueMatches(a) || venueCapacityNumber(b) - venueCapacityNumber(a)).slice(0, 6);
-    const capacityVenues = [...stadiums].sort((a, b) => venueCapacityNumber(b) - venueCapacityNumber(a)).slice(0, 6);
-    const totalCapacity = stadiums.reduce((sum, venue) => sum + venueCapacityNumber(venue), 0);
-    const totalVenueMatches = stadiums.reduce((sum, venue) => sum + venueMatches(venue), 0);
-    const venueCountryRows = Object.entries(stadiums.reduce((acc, venue) => {
-      const country = venue?.country || this.t("unknown");
-      acc[country] = (acc[country] || 0) + 1;
-      return acc;
-    }, {})).map(([country, count]) => ({ country, count })).sort((a, b) => b.count - a.count || a.country.localeCompare(b.country));
-
-    const matchesPlayed = num(s.matches_played, s.matchesPlayed, finished.length);
-    const overallGoals = num(s.total_goals, s.totalGoals, totalGoals);
-    const goalsPerMatch = matchesPlayed ? overallGoals / matchesPlayed : num(s.goals_per_match, s.goalsPerMatch);
-    const progress = num(s.progress, matches.length ? pct(matchesPlayed, matches.length) : 0);
-    const drawRate = num(s.draw_rate, s.drawRate, pct(draws, matchesPlayed));
-    const bttsRate = num(s.btts_rate, s.bttsRate, pct(btts, matchesPlayed));
-    const over25Rate = num(s.over_25_rate, s.over25Rate, pct(over25, matchesPlayed));
-    const mostGoalsTeam = topAttack[0] || null;
-    const bestDefenceTeam = bestDefence[0] || null;
-
-    const compactStat = (label, value, note = "", icon = "") => `
-      <div class="stats-hub-kpi stats-hub-glow-card stats-hub-compact-kpi">
-        <div class="stats-hub-kpi-icon">${this.esc(icon)}</div>
-        <strong>${this.esc(value)}</strong>
-        <span>${this.esc(label)}</span>
-        ${note ? `<small>${this.esc(note)}</small>` : ""}
-      </div>
-    `;
-
-    const recordMatch = (item, fallback) => {
-      if (!item?.match) return fallback;
-      const home = this.getHomeTeam(item.match);
-      const away = this.getAwayTeam(item.match);
-      return `${this.localizedTeamName(home)} ${this.getHomeScore(item.match)}-${this.getAwayScore(item.match)} ${this.localizedTeamName(away)}`;
-    };
-
-    const rankRows = (rows, valueFn, noteFn = null) => rows.length ? rows.map((row, index) => `
-      <div class="stats-hub-rank-row stats-hub-rank-row-modern stats-hub-compact-row">
-        <span class="stats-hub-rank-no">${index + 1}</span>
-        <span class="stats-hub-rank-team">${this.flag(row.team || row.name, true)} <strong>${this.esc(this.localizedTeamName(row.team || row.name))}</strong></span>
-        <span class="stats-hub-rank-value">${this.esc(valueFn(row))}</span>
-        ${noteFn ? `<small>${this.esc(noteFn(row))}</small>` : ""}
-      </div>
-    `).join("") : `<div class="wc-empty">${this.t("noTeamGoalData")}</div>`;
-
-    const venueRows = (rows, valueFn, noteFn = null) => rows.length ? rows.map((venue, index) => `
-      <div class="stats-hub-rank-row stats-hub-compact-row">
-        <span class="stats-hub-rank-no">${index + 1}</span>
-        <span class="stats-hub-rank-team"><strong>${this.esc(venueTitle(venue))}</strong></span>
-        <span class="stats-hub-rank-value">${this.esc(valueFn(venue))}</span>
-        ${noteFn ? `<small>${this.esc(noteFn(venue))}</small>` : ""}
-      </div>
-    `).join("") : `<div class="wc-empty">${this.t("noVenueData")}</div>`;
-
-    const playerRows = (rows, mode = "goals") => rows.length ? rows.map((player, index) => `
-      <div class="stats-hub-player-row stats-hub-compact-row">
-        <span class="stats-hub-rank-no">${index + 1}</span>
-        <span class="stats-hub-player-name"><strong>${this.esc(player.name)}</strong><small>${this.flag(player.team, true)} ${this.esc(this.localizedTeamName(player.team))}</small></span>
-        <span class="stats-hub-player-numbers">
-          <b>${mode === "assists" ? player.assists : mode === "involvements" ? player.total : player.goals}</b>
-          <small>${mode === "assists" ? this.t("assists") : mode === "involvements" ? "G+A" : this.t("goals")}</small>
-        </span>
-      </div>
-    `).join("") : `<div class="wc-empty">${this.t("noPlayerStats")}</div>`;
-
-    const matchMiniRows = recentFinished.length ? recentFinished.map((match) => {
-      const home = this.getHomeTeam(match);
-      const away = this.getAwayTeam(match);
-      return `
-        <div class="stats-hub-table-row stats-hub-compact-row stats-hub-result-row">
-          <span>${this.flag(home, true)}</span>
-          <strong>${this.esc(this.localizedTeamName(home))}</strong>
-          <b>${this.getHomeScore(match)}-${this.getAwayScore(match)}</b>
-          <strong>${this.esc(this.localizedTeamName(away))}</strong>
-          <span>${this.flag(away, true)}</span>
-        </div>
-      `;
-    }).join("") : `<div class="wc-empty">${this.t("noResultsLoaded")}</div>`;
 
     return `
-      <div class="stats-hub-compact-page">
-        <div class="stats-hub-hero stats-hub-command wc-card stats-hub-compact-hero">
-          <div>
-            <div class="overview-small-label">📊 ${this.t("stats")}</div>
-            <div class="wc-section-title">World Cup Intelligence Centre</div>
-            <p class="wc-muted">Compact analytics using confirmed scores, standings, scorers, assists, team form and stadium data only.</p>
-          </div>
-          <div class="stats-hub-hero-score stats-hub-compact-progress">
-            <span>${this.t("progress")}</span>
-            <strong>${fmt(progress)}%</strong>
-            <div class="stats-hub-progress"><i style="width:${Math.max(0, Math.min(100, progress))}%"></i></div>
-          </div>
-        </div>
-
-        <div class="stats-hub-kpi-grid stats-hub-kpi-grid-modern stats-hub-compact-kpi-grid">
-          ${compactStat(this.t("matchesPlayed"), fmt(matchesPlayed), `${fmt(matches.length || 104)} ${this.t("totalMatches")}`, "🏟")}
-          ${compactStat(this.t("totalGoals"), fmt(overallGoals), `${fmt(goalsPerMatch, 2)} ${this.t("goalsPerMatch")}`, "⚽")}
-          ${compactStat("BTTS", `${bttsRate}%`, `${fmt(btts)} matches`, "🎯")}
-          ${compactStat("Over 2.5", `${over25Rate}%`, `${fmt(over25)} matches`, "🔥")}
-          ${compactStat("Clean Sheets", fmt(cleanSheets), "From finished scores", "🧤")}
-          ${compactStat(this.t("draws"), `${drawRate}%`, `${fmt(draws)} matches`, "🤝")}
-          ${compactStat(this.t("stadiums"), fmt(stadiums.length), `${fmt(totalVenueMatches)} hosted matches`, "🏟")}
-          ${compactStat("Capacity", fmt(totalCapacity), `${venueCountryRows.length} host countries`, "👥")}
-        </div>
-
-        <div class="stats-hub-dashboard-grid stats-hub-compact-grid">
-          <div class="wc-card stats-hub-panel stats-hub-wide stats-hub-compact-card">
-            <div class="stats-hub-panel-head">
-              <div><div class="overview-small-label">⚔️ Team Rankings</div><div class="wc-section-title">Tournament Form Table</div></div>
-              <span>${fmt(formTable.length)} teams</span>
-            </div>
-            <div class="stats-hub-table stats-hub-form-table stats-hub-compact-table">
-              ${formTable.length ? formTable.map((team, index) => `
-                <div class="stats-hub-table-row stats-hub-form-row stats-hub-compact-row">
-                  <span>${index + 1}</span>
-                  <strong>${this.flag(team.team, true)} ${this.esc(this.localizedTeamName(team.team))}</strong>
-                  <b>${team.points} pts</b>
-                  <small>${team.wins}-${team.draws}-${team.losses}</small>
-                  <small>${team.goalsFor}:${team.goalsAgainst}</small>
-                  <small>${team.goalDifference >= 0 ? "+" : ""}${team.goalDifference}</small>
-                </div>
-              `).join("") : `<div class="wc-empty">${this.t("noTeamGoalData")}</div>`}
-            </div>
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">👟 Player Leaders</div><div class="wc-section-title">Golden Boot</div></div></div>
-            ${playerRows(goldenBoot, "goals")}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">🎁 Creator Table</div><div class="wc-section-title">Top Assists</div></div></div>
-            ${playerRows(assists, "assists")}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">💥 Player Impact</div><div class="wc-section-title">Goals + Assists</div></div></div>
-            ${playerRows(involvements, "involvements")}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">⚽ Attack</div><div class="wc-section-title">Top Scoring Teams</div></div></div>
-            ${rankRows(topAttack, (team) => `${team.goalsFor} ${this.t("goals")}`, (team) => `${fmt(team.goalsPerGame, 2)} per game • ${team.goalDifference >= 0 ? "+" : ""}${team.goalDifference} GD`)}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">🛡️ Defence</div><div class="wc-section-title">Best Defence</div></div></div>
-            ${rankRows(bestDefence, (team) => `${team.goalsAgainst} ${this.t("conceded")}`, (team) => `${team.cleanSheets} clean sheets • ${fmt(team.concededPerGame, 2)} per game`)}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">🧤 Goalkeepers</div><div class="wc-section-title">Clean Sheet Teams</div></div></div>
-            ${rankRows(cleanSheetTeams, (team) => `${team.cleanSheets}`, (team) => `${team.goalsAgainst} ${this.t("conceded")}`)}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">📈 Goal Difference</div><div class="wc-section-title">Best GD</div></div></div>
-            ${rankRows(goalDifferenceTeams, (team) => `${team.goalDifference >= 0 ? "+" : ""}${team.goalDifference}`, (team) => `${team.goalsFor} for • ${team.goalsAgainst} against`)}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-records stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">🏆 Records</div><div class="wc-section-title">Tournament Records</div></div></div>
-            <div class="stats-hub-record-card"><span>${this.t("highestScoringMatch")}</span><strong>${this.esc(recordMatch(highestScoring, this.t("noResult")))}</strong><small>${highestScoring ? `${highestScoring.goals} ${this.t("goals")}` : ""}</small></div>
-            <div class="stats-hub-record-card"><span>${this.t("biggestWin")}</span><strong>${this.esc(recordMatch(biggestWin, this.t("noResult")))}</strong><small>${biggestWin ? `${biggestWin.margin} goal margin` : ""}</small></div>
-            <div class="stats-hub-record-card"><span>Most Goals By Team</span><strong>${this.esc(mostGoalsTeam ? this.localizedTeamName(mostGoalsTeam.team) : this.t("notAvailable"))}</strong><small>${mostGoalsTeam ? `${mostGoalsTeam.goalsFor} ${this.t("goals")}` : ""}</small></div>
-            <div class="stats-hub-record-card"><span>Best Defence</span><strong>${this.esc(bestDefenceTeam ? this.localizedTeamName(bestDefenceTeam.team) : this.t("notAvailable"))}</strong><small>${bestDefenceTeam ? `${bestDefenceTeam.goalsAgainst} ${this.t("conceded")}` : ""}</small></div>
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-records stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">🏟️ Venues</div><div class="wc-section-title">Stadium Snapshot</div></div></div>
-            <div class="stats-hub-record-card"><span>${this.t("finalVenue")}</span><strong>${this.esc(finalVenue ? venueTitle(finalVenue) : this.t("notAvailable"))}</strong><small>${finalVenue ? `${venueRealName(finalVenue)} • ${fmt(venueCapacityNumber(finalVenue))} capacity` : "From stadium data"}</small></div>
-            <div class="stats-hub-record-card"><span>Biggest Stadium</span><strong>${this.esc(biggestStadium ? venueTitle(biggestStadium) : this.t("notAvailable"))}</strong><small>${biggestStadium ? `${fmt(venueCapacityNumber(biggestStadium))} capacity` : "From stadium data"}</small></div>
-            <div class="stats-hub-record-card"><span>Host Split</span><strong>${this.esc(venueCountryRows.map((item) => `${item.country} ${item.count}`).join(" • ") || this.t("notAvailable"))}</strong><small>${fmt(stadiums.length)} stadiums total</small></div>
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">🏟️ Venue Workload</div><div class="wc-section-title">Most Matches Hosted</div></div></div>
-            ${venueRows(busiestVenues, (venue) => `${venueMatches(venue)}`, (venue) => `${venue?.city || ""}${venue?.country ? `, ${venue.country}` : ""}`)}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">👥 Stadium Size</div><div class="wc-section-title">Capacity Ranking</div></div></div>
-            ${venueRows(capacityVenues, (venue) => fmt(venueCapacityNumber(venue)), (venue) => `${venue?.city || ""}${venue?.country ? `, ${venue.country}` : ""}`)}
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-records stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">🧩 Group Insights</div><div class="wc-section-title">Group Analytics</div></div></div>
-            <div class="stats-hub-record-card"><span>Highest Scoring Group</span><strong>${this.esc(highestScoringGroup?.groupName || this.t("notAvailable"))}</strong><small>${highestScoringGroup ? `${highestScoringGroup.goals} ${this.t("goals")}` : ""}</small></div>
-            <div class="stats-hub-record-card"><span>Tightest Group</span><strong>${this.esc(tightestGroup?.groupName || this.t("notAvailable"))}</strong><small>${tightestGroup ? `${tightestGroup.spread} point spread` : ""}</small></div>
-            <div class="stats-hub-record-card"><span>Group Leaders</span><strong>${this.esc(groupInsights.slice(0, 4).map((group) => `${group.groupName}: ${group.leader?.name || this.t("tbc")}`).join(" • ") || this.t("notAvailable"))}</strong><small>From standings data</small></div>
-          </div>
-
-          <div class="wc-card stats-hub-panel stats-hub-wide stats-hub-compact-card">
-            <div class="stats-hub-panel-head"><div><div class="overview-small-label">📰 Recent Results</div><div class="wc-section-title">Latest Finished Matches</div></div></div>
-            <div class="stats-hub-table stats-hub-compact-table stats-hub-results-strip">${matchMiniRows}</div>
-          </div>
-        </div>
+      <div class="wc-grid">
+        <div class="wc-stat"><strong>${s.matches_played ?? 0}</strong>${this.t("matchesPlayed")}</div>
+        <div class="wc-stat"><strong>${s.total_goals ?? 0}</strong>${this.t("totalGoals")}</div>
+        <div class="wc-stat"><strong>${s.goals_per_match ?? 0}</strong>${this.t("goalsPerMatch")}</div>
+        <div class="wc-stat"><strong>${s.progress ?? 0}%</strong>${this.t("progress")}</div>
+        <div class="wc-stat"><strong>${s.draws ?? 0}</strong>${this.t("draws")}</div>
+        <div class="wc-stat"><strong>${s.draw_rate ?? 0}%</strong>${this.t("drawRate")}</div>
+        <div class="wc-stat"><strong>${s.btts_rate ?? 0}%</strong>${this.t("bttsRate")}</div>
+        <div class="wc-stat"><strong>${s.over_25_rate ?? 0}%</strong>${this.t("over25Rate")}</div>
       </div>
     `;
   }
@@ -19876,14 +17030,6 @@ class WorldCup2026Panel extends HTMLElement {
     if (this._page === "groups") return this.groupsPage();
     if (this._page === "knockout") return this.knockoutPage();
     if (this._page === "players") return this.playersPage();
-    if (this._page === "teamhub") {
-      try {
-        return this.teamHubPage();
-      } catch (err) {
-        console.error("World Cup Team Hub render error", err);
-        return `<div class="wc-card"><div class="wc-empty">${this.teamHubText("noTeamData")}</div></div>`;
-      }
-    }
     if (this._page === "records") return this.recordsPage();
     if (this._page === "stats") return this.statsPage();
     if (this._page === "venues") return this.venuesPage();
@@ -19959,25 +17105,6 @@ class WorldCup2026Panel extends HTMLElement {
       button.onclick = () => {
         const page = button.getAttribute("data-page");
         this.changePage(page);
-      };
-    });
-
-    this.querySelectorAll("#wc-team-hub-country").forEach((select) => {
-      select.addEventListener("click", (event) => event.stopPropagation());
-      select.addEventListener("change", (event) => {
-        event.stopPropagation();
-        this._teamHubCountry = select.value || "";
-        try { localStorage.setItem(this._teamHubStorageKey, this._teamHubCountry); } catch (e) {}
-        this.render();
-      });
-    });
-
-    this.querySelectorAll(".wc-team-hub-country-button").forEach((button) => {
-      button.onclick = (event) => {
-        event.stopPropagation();
-        this._teamHubCountry = button.getAttribute("data-team-hub-country") || "";
-        try { localStorage.setItem(this._teamHubStorageKey, this._teamHubCountry); } catch (e) {}
-        this.render();
       };
     });
 
