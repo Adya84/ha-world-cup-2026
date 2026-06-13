@@ -4,7 +4,7 @@ class WorldCup2026Panel extends HTMLElement {
     super();
     this._hass = null;
     const savedPage = localStorage.getItem("world_cup_2026_last_page") || "overview";
-    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
+    const validPages = new Set(["overview", "teamhub", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
     this._page = validPages.has(savedPage) ? savedPage : "overview";
     this._loaded = false;
     this._refreshInterval = null;
@@ -32,6 +32,8 @@ class WorldCup2026Panel extends HTMLElement {
     this._goalEventStorageKey = "world_cup_2026_goal_event_times_v1";
     this._matchClockState = this.loadJsonStorage(this._matchClockStorageKey, {});
     this._localGoalEvents = this.loadJsonStorage(this._goalEventStorageKey, {});
+    this._teamHubStorageKey = "world_cup_2026_team_hub_country_v1";
+    this._teamHubCountry = localStorage.getItem(this._teamHubStorageKey) || "";
   }
 
   shouldHideHomeAssistantSidebar() {
@@ -7919,7 +7921,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   changePage(page) {
-    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
+    const validPages = new Set(["overview", "teamhub", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
     if (!validPages.has(page)) page = "overview";
     this._page = page;
     try { localStorage.setItem("world_cup_2026_last_page", page); } catch (e) {}
@@ -16137,6 +16139,299 @@ class WorldCup2026Panel extends HTMLElement {
             min-height: 560px;
           }
         }
+
+
+        /* Team Hub */
+        .wc-team-hub-page {
+          display: grid;
+          gap: 14px;
+        }
+        .wc-team-hub-hero {
+          border: 1px solid rgba(255,255,255,0.18);
+          border-radius: 24px;
+          padding: 18px;
+          background: linear-gradient(135deg, rgba(10,18,38,0.94), rgba(12,84,92,0.62));
+          box-shadow: 0 18px 38px rgba(0,0,0,0.28);
+          display: grid;
+          grid-template-columns: minmax(220px, 1.2fr) minmax(260px, 1.8fr);
+          gap: 16px;
+          align-items: stretch;
+        }
+        .wc-team-hub-picker {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+        }
+        .wc-team-hub-picker label {
+          font-size: 11px;
+          text-transform: uppercase;
+          letter-spacing: 0.14em;
+          color: rgba(255,255,255,0.72);
+          font-weight: 900;
+        }
+        .wc-team-hub-select-wrap {
+          position: relative;
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          border-radius: 18px;
+          border: 1px solid rgba(250,204,21,0.36);
+          background: linear-gradient(135deg, rgba(250,204,21,0.16), rgba(255,255,255,0.08));
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.10), 0 12px 28px rgba(0,0,0,0.18);
+          padding: 4px 12px;
+        }
+        .wc-team-hub-select-icon {
+          font-size: 19px;
+          line-height: 1;
+          filter: drop-shadow(0 2px 8px rgba(250,204,21,0.35));
+        }
+        .wc-team-hub-select-wrap select {
+          width: 100%;
+          min-height: 44px;
+          border: 0;
+          background: transparent;
+          color: #fff;
+          padding: 10px 34px 10px 0;
+          font-weight: 1000;
+          font-size: 15px;
+          outline: none;
+          cursor: pointer;
+          appearance: none;
+          -webkit-appearance: none;
+        }
+        .wc-team-hub-select-wrap::after {
+          content: "▾";
+          position: absolute;
+          right: 14px;
+          top: 50%;
+          transform: translateY(-50%);
+          color: #facc15;
+          font-weight: 1000;
+          pointer-events: none;
+        }
+        .wc-team-hub-select-wrap select option { color: #111; background: #fff; }
+        .wc-team-hub-select-hint {
+          color: rgba(255,255,255,0.68);
+          font-size: 12px;
+          line-height: 1.35;
+          font-weight: 700;
+        }
+        .wc-team-hub-country-card {
+          border-radius: 22px;
+          padding: 16px;
+          border: 1px solid rgba(255,255,255,0.16);
+          background: rgba(255,255,255,0.08);
+          min-height: 160px;
+          display: flex;
+          align-items: center;
+          gap: 14px;
+        }
+        .wc-team-hub-country-card .big-flag-img,
+        .wc-team-hub-country-card .big-flag {
+          width: 76px;
+          height: 52px;
+          object-fit: cover;
+          border-radius: 10px;
+          box-shadow: 0 8px 20px rgba(0,0,0,0.30);
+        }
+        .wc-team-hub-country-title {
+          display: flex;
+          flex-direction: column;
+          gap: 5px;
+        }
+        .wc-team-hub-country-title strong {
+          font-size: clamp(22px, 3.2vw, 38px);
+          line-height: 1;
+        }
+        .wc-team-hub-country-title span {
+          color: rgba(255,255,255,0.72);
+          font-weight: 800;
+          text-transform: uppercase;
+          letter-spacing: 0.12em;
+          font-size: 11px;
+        }
+        .wc-team-hub-kpis {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(0, 1fr));
+          gap: 10px;
+        }
+        .wc-team-hub-kpi {
+          border-radius: 18px;
+          padding: 13px 12px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.14);
+          min-height: 74px;
+        }
+        .wc-team-hub-kpi span {
+          display: block;
+          color: rgba(255,255,255,0.68);
+          font-size: 10px;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+          font-weight: 900;
+          margin-bottom: 6px;
+        }
+        .wc-team-hub-kpi strong {
+          display: block;
+          font-size: 24px;
+          color: #fff;
+          line-height: 1;
+        }
+        .wc-team-hub-layout {
+          display: grid;
+          grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.9fr);
+          gap: 14px;
+        }
+        .wc-team-hub-panel {
+          border-radius: 22px;
+          border: 1px solid rgba(255,255,255,0.16);
+          background: rgba(6, 12, 28, 0.62);
+          padding: 15px;
+          box-shadow: 0 14px 34px rgba(0,0,0,0.24);
+        }
+        .wc-team-hub-title {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 10px;
+          margin-bottom: 12px;
+        }
+        .wc-team-hub-title strong {
+          font-size: 14px;
+          text-transform: uppercase;
+          letter-spacing: 0.1em;
+        }
+        .wc-team-hub-title span {
+          color: rgba(255,255,255,0.62);
+          font-size: 11px;
+          font-weight: 800;
+        }
+        .wc-team-hub-match-list,
+        .wc-team-hub-player-list,
+        .wc-team-hub-venue-list {
+          display: grid;
+          gap: 8px;
+        }
+        .wc-team-hub-match {
+          display: grid;
+          grid-template-columns: 1fr auto;
+          gap: 10px;
+          align-items: center;
+          padding: 10px 12px;
+          border-radius: 15px;
+          background: rgba(255,255,255,0.07);
+          border: 1px solid rgba(255,255,255,0.10);
+        }
+        .wc-team-hub-match-teams {
+          display: flex;
+          align-items: center;
+          gap: 7px;
+          flex-wrap: wrap;
+          font-weight: 900;
+        }
+        .wc-team-hub-match-meta {
+          color: rgba(255,255,255,0.62);
+          font-size: 11px;
+          margin-top: 3px;
+          font-weight: 700;
+        }
+        .wc-team-hub-score {
+          font-size: 18px;
+          font-weight: 1000;
+          color: #fff;
+          min-width: 48px;
+          text-align: right;
+        }
+        .wc-team-hub-badge {
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          min-width: 28px;
+          padding: 3px 8px;
+          border-radius: 999px;
+          font-size: 10px;
+          font-weight: 1000;
+          border: 1px solid rgba(255,255,255,0.16);
+          background: rgba(255,255,255,0.10);
+        }
+        .wc-team-hub-badge.win { background: rgba(46,213,115,0.22); color: #91ffbf; }
+        .wc-team-hub-badge.draw { background: rgba(255,193,7,0.20); color: #ffe18c; }
+        .wc-team-hub-badge.loss { background: rgba(255,71,87,0.20); color: #ff9aa6; }
+        .wc-team-hub-player,
+        .wc-team-hub-venue {
+          display: grid;
+          grid-template-columns: auto 1fr auto;
+          align-items: center;
+          gap: 10px;
+          padding: 10px 12px;
+          border-radius: 15px;
+          background: rgba(255,255,255,0.07);
+          border: 1px solid rgba(255,255,255,0.10);
+        }
+        .wc-team-hub-rank {
+          width: 28px;
+          height: 28px;
+          border-radius: 999px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          background: linear-gradient(135deg, rgba(255,215,0,0.32), rgba(255,255,255,0.08));
+          font-weight: 1000;
+          color: #ffe58a;
+        }
+        .wc-team-hub-player small,
+        .wc-team-hub-venue small {
+          display: block;
+          color: rgba(255,255,255,0.58);
+          font-weight: 700;
+          margin-top: 2px;
+        }
+        .wc-team-hub-player strong,
+        .wc-team-hub-venue strong {
+          font-weight: 1000;
+        }
+        .wc-team-hub-value {
+          font-weight: 1000;
+          color: #fff;
+          text-align: right;
+        }
+        .wc-team-hub-form {
+          display: flex;
+          gap: 6px;
+          flex-wrap: wrap;
+          margin-top: 10px;
+        }
+        .wc-team-hub-form span {
+          width: 28px;
+          height: 28px;
+          border-radius: 999px;
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 11px;
+          font-weight: 1000;
+        }
+        .wc-team-hub-form .win { background: rgba(46,213,115,0.24); color: #91ffbf; }
+        .wc-team-hub-form .draw { background: rgba(255,193,7,0.24); color: #ffe18c; }
+        .wc-team-hub-form .loss { background: rgba(255,71,87,0.24); color: #ff9aa6; }
+        .wc-team-hub-empty {
+          padding: 18px;
+          border-radius: 18px;
+          background: rgba(255,255,255,0.07);
+          color: rgba(255,255,255,0.7);
+          font-weight: 800;
+          text-align: center;
+        }
+        @media (max-width: 900px) {
+          .wc-team-hub-hero,
+          .wc-team-hub-layout {
+            grid-template-columns: 1fr;
+          }
+          .wc-team-hub-kpis {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+          }
+        }
+
 </style>
     `;
   }
@@ -16144,6 +16439,7 @@ class WorldCup2026Panel extends HTMLElement {
   nav() {
     const items = [
       ["overview", this.t("overview")],
+      ["teamhub", this.teamHubText("yourTeam")],
       ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
       ["results", this.t("results")],
@@ -16170,6 +16466,7 @@ class WorldCup2026Panel extends HTMLElement {
   tabletHeaderNav() {
     const items = [
       ["overview", this.t("overview")],
+      ["teamhub", this.teamHubText("yourTeam")],
       ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
       ["results", this.t("results")],
@@ -18379,6 +18676,349 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+
+  teamHubText(key) {
+    if (key === "yourTeam") {
+      const labels = {
+        en: "Your Team",
+        fr: "Votre équipe",
+        de: "Dein Team",
+        es: "Tu equipo",
+        it: "La tua squadra",
+        nl: "Jouw team",
+        pt: "A sua seleção",
+        pl: "Twoja drużyna",
+        ar: "منتخبك",
+        ja: "あなたのチーム",
+        ko: "내 팀",
+        sv: "Ditt lag",
+        no: "Ditt lag",
+        zh: "你的球队",
+        hi: "आपकी टीम",
+        bn: "আপনার দল",
+        ta: "உங்கள் அணி",
+        tr: "Takımınız",
+        uk: "Ваша команда",
+        da: "Dit hold",
+        fi: "Oma joukkue",
+        cs: "Váš tým",
+        el: "Η ομάδα σας",
+        ro: "Echipa ta",
+        hu: "A csapatod",
+        th: "ทีมของคุณ",
+        vi: "Đội của bạn",
+        id: "Tim Anda"
+      };
+      return labels[this._language] || labels.en;
+    }
+    const dict = {
+      en: { teamHub: "Team Hub", selectCountry: "Select country", countryProfile: "Country profile", groupPosition: "Group position", tournamentRecord: "Tournament record", fixturesResults: "Fixtures & results", teamStats: "Team stats", playerContributions: "Player contributions", venuesJourney: "Venues & journey", formGuide: "Form guide", matches: "Matches", wins: "Wins", draws: "Draws", losses: "Losses", goalsFor: "Goals for", goalsAgainst: "Goals against", goalDifference: "Goal difference", cleanSheets: "Clean sheets", upcoming: "Upcoming", played: "Played", noTeamData: "No country data available yet.", noMatches: "No matches loaded for this country yet.", noPlayers: "No player data loaded for this country yet.", noVenues: "No venues loaded for this country yet.", chooseCountryHint: "Choose a World Cup country to see its fixtures, results, player stats, group data and venue journey.", allCountries: "All World Cup countries" },
+      fr: { teamHub: "Centre équipe", selectCountry: "Choisir un pays", countryProfile: "Profil du pays", groupPosition: "Position du groupe", tournamentRecord: "Bilan du tournoi", fixturesResults: "Matchs et résultats", teamStats: "Statistiques équipe", playerContributions: "Contributions joueurs", venuesJourney: "Stades et parcours", formGuide: "Forme", matches: "Matchs", wins: "Victoires", draws: "Nuls", losses: "Défaites", goalsFor: "Buts pour", goalsAgainst: "Buts contre", goalDifference: "Différence", cleanSheets: "Clean sheets", upcoming: "À venir", played: "Joué", noTeamData: "Aucune donnée pays disponible.", noMatches: "Aucun match chargé pour ce pays.", noPlayers: "Aucune donnée joueur pour ce pays.", noVenues: "Aucun stade chargé pour ce pays.", chooseCountryHint: "Choisissez un pays pour voir matchs, résultats, joueurs, groupe et stades.", allCountries: "Tous les pays" },
+      de: { teamHub: "Team-Zentrale", selectCountry: "Land wählen", countryProfile: "Länderprofil", groupPosition: "Gruppenplatz", tournamentRecord: "Turnierbilanz", fixturesResults: "Spiele & Ergebnisse", teamStats: "Teamstatistiken", playerContributions: "Spielerbeiträge", venuesJourney: "Stadien & Weg", formGuide: "Form", matches: "Spiele", wins: "Siege", draws: "Remis", losses: "Niederlagen", goalsFor: "Tore", goalsAgainst: "Gegentore", goalDifference: "Tordifferenz", cleanSheets: "Zu Null", upcoming: "Kommend", played: "Gespielt", noTeamData: "Noch keine Länderdaten verfügbar.", noMatches: "Keine Spiele für dieses Land geladen.", noPlayers: "Keine Spielerdaten für dieses Land geladen.", noVenues: "Keine Stadien für dieses Land geladen.", chooseCountryHint: "Wähle ein WM-Land für Spiele, Ergebnisse, Spieler, Gruppe und Stadien.", allCountries: "Alle WM-Länder" },
+      es: { teamHub: "Centro de equipo", selectCountry: "Elegir país", countryProfile: "Perfil del país", groupPosition: "Posición de grupo", tournamentRecord: "Registro del torneo", fixturesResults: "Partidos y resultados", teamStats: "Estadísticas del equipo", playerContributions: "Aportes de jugadores", venuesJourney: "Sedes y recorrido", formGuide: "Forma", matches: "Partidos", wins: "Victorias", draws: "Empates", losses: "Derrotas", goalsFor: "Goles a favor", goalsAgainst: "Goles en contra", goalDifference: "Diferencia", cleanSheets: "Porterías a cero", upcoming: "Próximo", played: "Jugado", noTeamData: "Aún no hay datos del país.", noMatches: "No hay partidos cargados para este país.", noPlayers: "No hay datos de jugadores para este país.", noVenues: "No hay sedes cargadas para este país.", chooseCountryHint: "Elige un país para ver partidos, resultados, jugadores, grupo y sedes.", allCountries: "Todos los países" },
+      it: { teamHub: "Centro squadra", selectCountry: "Scegli paese", countryProfile: "Profilo paese", groupPosition: "Posizione gruppo", tournamentRecord: "Bilancio torneo", fixturesResults: "Partite e risultati", teamStats: "Statistiche squadra", playerContributions: "Contributi giocatori", venuesJourney: "Stadi e percorso", formGuide: "Forma", matches: "Partite", wins: "Vittorie", draws: "Pareggi", losses: "Sconfitte", goalsFor: "Gol fatti", goalsAgainst: "Gol subiti", goalDifference: "Differenza reti", cleanSheets: "Clean sheet", upcoming: "Prossime", played: "Giocate", noTeamData: "Nessun dato paese disponibile.", noMatches: "Nessuna partita caricata per questo paese.", noPlayers: "Nessun dato giocatore per questo paese.", noVenues: "Nessuno stadio caricato per questo paese.", chooseCountryHint: "Scegli un paese per vedere partite, risultati, giocatori, gruppo e stadi.", allCountries: "Tutti i paesi" },
+      nl: { teamHub: "Team Hub", selectCountry: "Kies land", countryProfile: "Landprofiel", groupPosition: "Groepspositie", tournamentRecord: "Toernooirecord", fixturesResults: "Wedstrijden & uitslagen", teamStats: "Teamstatistieken", playerContributions: "Spelerbijdragen", venuesJourney: "Stadions & route", formGuide: "Vorm", matches: "Wedstrijden", wins: "Winst", draws: "Gelijk", losses: "Verlies", goalsFor: "Doelpunten voor", goalsAgainst: "Tegen", goalDifference: "Doelsaldo", cleanSheets: "Clean sheets", upcoming: "Komend", played: "Gespeeld", noTeamData: "Nog geen landgegevens.", noMatches: "Geen wedstrijden voor dit land geladen.", noPlayers: "Geen spelergegevens voor dit land.", noVenues: "Geen stadions voor dit land.", chooseCountryHint: "Kies een WK-land voor wedstrijden, resultaten, spelers, groep en stadions.", allCountries: "Alle WK-landen" },
+      pt: { teamHub: "Centro da seleção", selectCountry: "Selecionar país", countryProfile: "Perfil do país", groupPosition: "Posição no grupo", tournamentRecord: "Campanha", fixturesResults: "Jogos e resultados", teamStats: "Estatísticas da equipe", playerContributions: "Contribuições dos jogadores", venuesJourney: "Estádios e percurso", formGuide: "Forma", matches: "Jogos", wins: "Vitórias", draws: "Empates", losses: "Derrotas", goalsFor: "Gols pró", goalsAgainst: "Gols contra", goalDifference: "Saldo", cleanSheets: "Jogos sem sofrer", upcoming: "Próximo", played: "Jogados", noTeamData: "Ainda não há dados do país.", noMatches: "Nenhum jogo carregado para este país.", noPlayers: "Nenhum dado de jogador para este país.", noVenues: "Nenhum estádio carregado para este país.", chooseCountryHint: "Escolha um país para ver jogos, resultados, jogadores, grupo e estádios.", allCountries: "Todos os países" },
+      pl: { teamHub: "Centrum drużyny", selectCountry: "Wybierz kraj", countryProfile: "Profil kraju", groupPosition: "Pozycja w grupie", tournamentRecord: "Bilans turnieju", fixturesResults: "Mecze i wyniki", teamStats: "Statystyki drużyny", playerContributions: "Wkład zawodników", venuesJourney: "Stadiony i droga", formGuide: "Forma", matches: "Mecze", wins: "Wygrane", draws: "Remisy", losses: "Porażki", goalsFor: "Bramki", goalsAgainst: "Stracone", goalDifference: "Różnica", cleanSheets: "Czyste konta", upcoming: "Następne", played: "Rozegrane", noTeamData: "Brak danych kraju.", noMatches: "Brak meczów dla tego kraju.", noPlayers: "Brak danych zawodników.", noVenues: "Brak stadionów dla tego kraju.", chooseCountryHint: "Wybierz kraj, aby zobaczyć mecze, wyniki, zawodników, grupę i stadiony.", allCountries: "Wszystkie kraje" },
+      ar: { teamHub: "مركز المنتخب", selectCountry: "اختر الدولة", countryProfile: "ملف الدولة", groupPosition: "مركز المجموعة", tournamentRecord: "سجل البطولة", fixturesResults: "المباريات والنتائج", teamStats: "إحصائيات الفريق", playerContributions: "مساهمات اللاعبين", venuesJourney: "الملاعب والمسار", formGuide: "المستوى", matches: "مباريات", wins: "فوز", draws: "تعادل", losses: "خسارة", goalsFor: "له", goalsAgainst: "عليه", goalDifference: "الفارق", cleanSheets: "شباك نظيفة", upcoming: "القادم", played: "لعب", noTeamData: "لا توجد بيانات بعد.", noMatches: "لا توجد مباريات لهذه الدولة.", noPlayers: "لا توجد بيانات لاعبين.", noVenues: "لا توجد ملاعب لهذه الدولة.", chooseCountryHint: "اختر دولة لعرض المباريات والنتائج واللاعبين والمجموعة والملاعب.", allCountries: "كل الدول" },
+      ja: { teamHub: "チームハブ", selectCountry: "国を選択", countryProfile: "国プロフィール", groupPosition: "グループ順位", tournamentRecord: "大会成績", fixturesResults: "試合と結果", teamStats: "チーム統計", playerContributions: "選手貢献", venuesJourney: "会場と歩み", formGuide: "フォーム", matches: "試合", wins: "勝利", draws: "引分", losses: "敗戦", goalsFor: "得点", goalsAgainst: "失点", goalDifference: "得失点差", cleanSheets: "無失点", upcoming: "次戦", played: "試合済", noTeamData: "国データはまだありません。", noMatches: "この国の試合はまだありません。", noPlayers: "選手データはまだありません。", noVenues: "会場データはまだありません。", chooseCountryHint: "国を選ぶと試合、結果、選手、グループ、会場を表示します。", allCountries: "全出場国" },
+      ko: { teamHub: "팀 허브", selectCountry: "국가 선택", countryProfile: "국가 프로필", groupPosition: "조 순위", tournamentRecord: "대회 기록", fixturesResults: "경기 및 결과", teamStats: "팀 통계", playerContributions: "선수 기여", venuesJourney: "경기장 및 여정", formGuide: "최근 흐름", matches: "경기", wins: "승", draws: "무", losses: "패", goalsFor: "득점", goalsAgainst: "실점", goalDifference: "득실차", cleanSheets: "무실점", upcoming: "예정", played: "경기", noTeamData: "아직 국가 데이터가 없습니다.", noMatches: "이 국가의 경기가 없습니다.", noPlayers: "선수 데이터가 없습니다.", noVenues: "경기장 데이터가 없습니다.", chooseCountryHint: "국가를 선택하면 경기, 결과, 선수, 조, 경기장을 볼 수 있습니다.", allCountries: "전체 월드컵 국가" },
+      sv: { teamHub: "Laghub", selectCountry: "Välj land", countryProfile: "Landsprofil", groupPosition: "Grupposition", tournamentRecord: "Turneringsfacit", fixturesResults: "Matcher & resultat", teamStats: "Lagstatistik", playerContributions: "Spelarbidrag", venuesJourney: "Arenor & resa", formGuide: "Form", matches: "Matcher", wins: "Vinster", draws: "Oavgjorda", losses: "Förluster", goalsFor: "Mål framåt", goalsAgainst: "Insläppta", goalDifference: "Målskillnad", cleanSheets: "Nollor", upcoming: "Kommande", played: "Spelade", noTeamData: "Ingen landsdata ännu.", noMatches: "Inga matcher för detta land.", noPlayers: "Ingen spelarstatistik.", noVenues: "Inga arenor.", chooseCountryHint: "Välj ett land för matcher, resultat, spelare, grupp och arenor.", allCountries: "Alla VM-länder" },
+      no: { teamHub: "Laghub", selectCountry: "Velg land", countryProfile: "Landsprofil", groupPosition: "Gruppeplass", tournamentRecord: "Turneringsstatus", fixturesResults: "Kamper og resultater", teamStats: "Lagstatistikk", playerContributions: "Spillerbidrag", venuesJourney: "Stadioner og reise", formGuide: "Form", matches: "Kamper", wins: "Seire", draws: "Uavgjort", losses: "Tap", goalsFor: "Mål for", goalsAgainst: "Mål mot", goalDifference: "Målforskjell", cleanSheets: "Nuller", upcoming: "Kommende", played: "Spilt", noTeamData: "Ingen landsdata ennå.", noMatches: "Ingen kamper for dette landet.", noPlayers: "Ingen spillerdata.", noVenues: "Ingen stadiondata.", chooseCountryHint: "Velg et land for kamper, resultater, spillere, gruppe og stadioner.", allCountries: "Alle VM-land" },
+      default: { teamHub: "Team Hub", selectCountry: "Select country", countryProfile: "Country profile", groupPosition: "Group position", tournamentRecord: "Tournament record", fixturesResults: "Fixtures & results", teamStats: "Team stats", playerContributions: "Player contributions", venuesJourney: "Venues & journey", formGuide: "Form guide", matches: "Matches", wins: "Wins", draws: "Draws", losses: "Losses", goalsFor: "Goals for", goalsAgainst: "Goals against", goalDifference: "Goal difference", cleanSheets: "Clean sheets", upcoming: "Upcoming", played: "Played", noTeamData: "No country data available yet.", noMatches: "No matches loaded for this country yet.", noPlayers: "No player data loaded for this country yet.", noVenues: "No venues loaded for this country yet.", chooseCountryHint: "Choose a World Cup country to see its fixtures, results, player stats, group data and venue journey.", allCountries: "All World Cup countries" }
+    };
+    return (dict[this._language] && dict[this._language][key]) || dict.default[key] || key;
+  }
+
+  worldCupTeamFallbackList() {
+    return [
+      "Mexico", "South Africa", "Korea Republic", "Czechia",
+      "Canada", "Bosnia & Herzegovina", "Qatar", "Switzerland",
+      "Brazil", "Morocco", "Haiti", "Scotland",
+      "USA", "Paraguay", "Australia", "Turkey",
+      "Germany", "Curaçao", "Ivory Coast", "Ecuador",
+      "Netherlands", "Japan", "Sweden", "Tunisia",
+      "Belgium", "Egypt", "Iran", "New Zealand",
+      "Spain", "Cape Verde", "Saudi Arabia", "Uruguay",
+      "France", "Senegal", "Iraq", "Norway",
+      "Argentina", "Algeria", "Austria", "Jordan",
+      "Portugal", "Congo DR", "Uzbekistan", "Colombia",
+      "England", "Croatia", "Ghana", "Panama"
+    ];
+  }
+
+  teamHubTeams() {
+    const map = new Map();
+    const add = (team) => {
+      const label = this.teamLabel(team);
+      if (!label || label === "TBC" || label === this.t("tbc")) return;
+      const key = this.fixtureTeamKey(label);
+      if (!key || key === "tbc") return;
+      if (!map.has(key)) map.set(key, label);
+    };
+
+    this.worldCupTeamFallbackList().forEach(add);
+    [...(this._data.fixtures || []), ...(this._data.results || []), ...(this._data.live || [])].forEach((match) => {
+      add(this.getHomeTeam(match));
+      add(this.getAwayTeam(match));
+    });
+    (this._data.groups || []).forEach((group) => {
+      const table = group.table || group.standings || group.teams || [];
+      table.forEach((row) => add(row.team?.name || row.team?.shortName || row.name || row.team));
+    });
+
+    return [...map.values()].sort((a, b) => this.localizedTeamName(a).localeCompare(this.localizedTeamName(b), this.locale()));
+  }
+
+  selectedTeamHubCountry() {
+    const teams = this.teamHubTeams();
+    if (!teams.length) return "";
+    const selectedKey = this.fixtureTeamKey(this._teamHubCountry);
+    const found = teams.find((team) => this.fixtureTeamKey(team) === selectedKey);
+    if (found) return found;
+    this._teamHubCountry = teams[0];
+    try { localStorage.setItem(this._teamHubStorageKey, this._teamHubCountry); } catch (e) {}
+    return teams[0];
+  }
+
+  teamHubGroupInfo(team) {
+    const key = this.fixtureTeamKey(team);
+    for (let index = 0; index < (this._data.groups || []).length; index += 1) {
+      const group = this._data.groups[index] || {};
+      const groupName = this.groupNameLabel(group.group || group.name || group.stage || `Group ${String.fromCharCode(65 + index)}`, index);
+      const table = group.table || group.standings || group.teams || [];
+      for (let i = 0; i < table.length; i += 1) {
+        const row = table[i] || {};
+        const teamName = row.team?.name || row.team?.shortName || row.name || row.team;
+        if (this.fixtureTeamKey(teamName) === key) {
+          return { groupName, position: row.position ?? i + 1, points: row.points ?? row.pts ?? 0, row };
+        }
+      }
+    }
+    return { groupName: "-", position: "-", points: 0, row: null };
+  }
+
+  teamHubMatches(team) {
+    const key = this.fixtureTeamKey(team);
+    const seen = new Set();
+    return [...(this._data.results || []), ...(this._data.live || []), ...(this._data.fixtures || [])]
+      .filter((match) => {
+        const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
+        const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
+        return homeKey === key || awayKey === key;
+      })
+      .filter((match, index) => {
+        const id = match?.id || match?.matchId || `${this.getHomeTeam(match)}-${this.getAwayTeam(match)}-${match?.utcDate || match?.date || index}`;
+        if (seen.has(id)) return false;
+        seen.add(id);
+        return true;
+      })
+      .sort((a, b) => new Date(a.utcDate || a.date || 0) - new Date(b.utcDate || b.date || 0));
+  }
+
+  teamHubStats(team, matches) {
+    const key = this.fixtureTeamKey(team);
+    const stats = { played: 0, wins: 0, draws: 0, losses: 0, goalsFor: 0, goalsAgainst: 0, goalDifference: 0, cleanSheets: 0, upcoming: 0, form: [] };
+    matches.forEach((match) => {
+      const finished = this.isFinishedMatch(match);
+      if (!finished) {
+        stats.upcoming += 1;
+        return;
+      }
+      const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
+      const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
+      const homeScore = Number(this.getHomeScore(match));
+      const awayScore = Number(this.getAwayScore(match));
+      if (!Number.isFinite(homeScore) || !Number.isFinite(awayScore)) return;
+      const isHome = homeKey === key;
+      const gf = isHome ? homeScore : awayScore;
+      const ga = isHome ? awayScore : homeScore;
+      stats.played += 1;
+      stats.goalsFor += gf;
+      stats.goalsAgainst += ga;
+      if (ga === 0) stats.cleanSheets += 1;
+      let result = "draw";
+      if (gf > ga) { stats.wins += 1; result = "win"; }
+      else if (gf < ga) { stats.losses += 1; result = "loss"; }
+      else { stats.draws += 1; }
+      stats.form.push(result);
+    });
+    stats.goalDifference = stats.goalsFor - stats.goalsAgainst;
+    stats.form = stats.form.slice(-5);
+    return stats;
+  }
+
+  teamHubPlayers(team) {
+    const key = this.fixtureTeamKey(team);
+    return (this._data.scorers || [])
+      .filter((scorer) => this.fixtureTeamKey(this.scorerTeamName(scorer)) === key)
+      .map((scorer) => {
+        const goals = this.numberValue(this.resolvedPlayerStat(scorer, "goals"), scorer.goals);
+        const assists = this.numberValue(this.resolvedPlayerStat(scorer, "assists"), scorer.assists);
+        return { name: this.scorerName(scorer), team: this.scorerTeamName(scorer), goals, assists, total: goals + assists };
+      })
+      .filter((player) => player.name && (player.goals || player.assists))
+      .sort((a, b) => b.total - a.total || b.goals - a.goals || a.name.localeCompare(b.name))
+      .slice(0, 8);
+  }
+
+  teamHubVenues(matches) {
+    const venueMap = new Map();
+    matches.forEach((match) => {
+      const venue = this.venueInfoForMatch(match);
+      const name = venue?.realName || venue?.name || match.venue || match.stadium || match.venueName;
+      if (!name || name === "TBC") return;
+      const key = String(name).toLowerCase();
+      const item = venueMap.get(key) || { name, city: venue?.city || match.city || match.venueCity || "", country: venue?.country || match.venueCountry || "", matches: 0 };
+      item.matches += 1;
+      venueMap.set(key, item);
+    });
+    return [...venueMap.values()].sort((a, b) => b.matches - a.matches || a.name.localeCompare(b.name)).slice(0, 6);
+  }
+
+  teamHubMatchOutcome(team, match) {
+    if (!this.isFinishedMatch(match)) return this.teamHubText("upcoming");
+    const key = this.fixtureTeamKey(team);
+    const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
+    const homeScore = Number(this.getHomeScore(match));
+    const awayScore = Number(this.getAwayScore(match));
+    if (!Number.isFinite(homeScore) || !Number.isFinite(awayScore)) return "-";
+    const isHome = homeKey === key;
+    const gf = isHome ? homeScore : awayScore;
+    const ga = isHome ? awayScore : homeScore;
+    if (gf > ga) return "W";
+    if (gf < ga) return "L";
+    return "D";
+  }
+
+  teamHubPage() {
+    const teams = this.teamHubTeams();
+    const selected = this.selectedTeamHubCountry();
+    if (!selected) {
+      return `<div class="wc-card"><div class="wc-empty">${this.teamHubText("noTeamData")}</div></div>`;
+    }
+
+    const matches = this.teamHubMatches(selected);
+    const stats = this.teamHubStats(selected, matches);
+    const groupInfo = this.teamHubGroupInfo(selected);
+    const players = this.teamHubPlayers(selected);
+    const venues = this.teamHubVenues(matches);
+    const groupText = groupInfo.position !== "-" ? `${groupInfo.groupName} · #${groupInfo.position} · ${groupInfo.points} ${this.t("pointsShort")}` : groupInfo.groupName;
+
+    const matchRows = matches.length ? matches.map((match) => {
+      const home = this.getHomeTeam(match);
+      const away = this.getAwayTeam(match);
+      const finished = this.isFinishedMatch(match);
+      const score = finished ? `${this.getHomeScore(match)}-${this.getAwayScore(match)}` : this.formatDate(match.utcDate || match.date || match.kickoff || match.startTime);
+      const outcome = this.teamHubMatchOutcome(selected, match);
+      const outcomeClass = outcome === "W" ? "win" : outcome === "D" ? "draw" : outcome === "L" ? "loss" : "";
+      const venue = this.venueInfoForMatch(match);
+      const venueText = [venue?.city, venue?.country ? this.localizedCountryName(venue.country) : ""].filter(Boolean).join(", ");
+      return `
+        <div class="wc-team-hub-match">
+          <div>
+            <div class="wc-team-hub-match-teams">
+              ${this.flag(home, true)}<span>${this.esc(this.localizedTeamName(home))}</span>
+              <span>${this.t("versus")}</span>
+              ${this.flag(away, true)}<span>${this.esc(this.localizedTeamName(away))}</span>
+              <span class="wc-team-hub-badge ${outcomeClass}">${this.esc(outcome)}</span>
+            </div>
+            <div class="wc-team-hub-match-meta">${this.esc([this.formatDate(match.utcDate || match.date), venueText].filter(Boolean).join(" · "))}</div>
+          </div>
+          <div class="wc-team-hub-score">${this.esc(score)}</div>
+        </div>
+      `;
+    }).join("") : `<div class="wc-team-hub-empty">${this.teamHubText("noMatches")}</div>`;
+
+    const playerRows = players.length ? players.map((player, index) => `
+      <div class="wc-team-hub-player">
+        <span class="wc-team-hub-rank">${index + 1}</span>
+        <div><strong>${this.esc(player.name)}</strong><small>${this.esc(this.localizedTeamName(player.team))}</small></div>
+        <div class="wc-team-hub-value">${player.goals} ⚽ · ${player.assists} A</div>
+      </div>
+    `).join("") : `<div class="wc-team-hub-empty">${this.teamHubText("noPlayers")}</div>`;
+
+    const venueRows = venues.length ? venues.map((venue, index) => `
+      <div class="wc-team-hub-venue">
+        <span class="wc-team-hub-rank">${index + 1}</span>
+        <div><strong>${this.esc(venue.name)}</strong><small>${this.esc([venue.city, venue.country ? this.localizedCountryName(venue.country) : ""].filter(Boolean).join(", "))}</small></div>
+        <div class="wc-team-hub-value">${venue.matches}</div>
+      </div>
+    `).join("") : `<div class="wc-team-hub-empty">${this.teamHubText("noVenues")}</div>`;
+
+    const formHtml = stats.form.length ? `<div class="wc-team-hub-form">${stats.form.map((result) => `<span class="${result}">${result === "win" ? "W" : result === "draw" ? "D" : "L"}</span>`).join("")}</div>` : "";
+
+    return `
+      <div class="wc-team-hub-page">
+        <div class="wc-team-hub-hero">
+          <div class="wc-team-hub-picker">
+            <label for="wc-team-hub-country">${this.teamHubText("selectCountry")}</label>
+            <div class="wc-team-hub-select-wrap">
+              <span class="wc-team-hub-select-icon">🌍</span>
+              <select id="wc-team-hub-country" aria-label="${this.esc(this.teamHubText("selectCountry"))}">
+                ${teams.map((team) => `<option value="${this.esc(team)}" ${this.fixtureTeamKey(team) === this.fixtureTeamKey(selected) ? "selected" : ""}>${this.esc(this.localizedTeamName(team))}</option>`).join("")}
+              </select>
+            </div>
+            <div class="wc-team-hub-select-hint">${this.teamHubText("chooseCountryHint")}</div>
+            <div class="wc-team-hub-country-grid">
+              ${teams.map((team) => `
+                <button type="button" class="wc-team-hub-country-button ${this.fixtureTeamKey(team) === this.fixtureTeamKey(selected) ? "active" : ""}" data-team-hub-country="${this.esc(team)}">
+                  ${this.flag(team, true)}<span>${this.esc(this.localizedTeamName(team))}</span>
+                </button>
+              `).join("")}
+            </div>
+            <div class="wc-team-hub-country-card">
+              ${this.flag(selected)}
+              <div class="wc-team-hub-country-title">
+                <span>${this.teamHubText("countryProfile")}</span>
+                <strong>${this.esc(this.localizedTeamName(selected))}</strong>
+                <em>${this.esc(groupText)}</em>
+              </div>
+            </div>
+          </div>
+          <div class="wc-team-hub-kpis">
+            <div class="wc-team-hub-kpi"><span>${this.teamHubText("matches")}</span><strong>${stats.played}</strong></div>
+            <div class="wc-team-hub-kpi"><span>${this.teamHubText("wins")}</span><strong>${stats.wins}</strong></div>
+            <div class="wc-team-hub-kpi"><span>${this.teamHubText("goalsFor")}</span><strong>${stats.goalsFor}</strong></div>
+            <div class="wc-team-hub-kpi"><span>${this.teamHubText("cleanSheets")}</span><strong>${stats.cleanSheets}</strong></div>
+            <div class="wc-team-hub-kpi"><span>${this.teamHubText("draws")}</span><strong>${stats.draws}</strong></div>
+            <div class="wc-team-hub-kpi"><span>${this.teamHubText("losses")}</span><strong>${stats.losses}</strong></div>
+            <div class="wc-team-hub-kpi"><span>${this.teamHubText("goalsAgainst")}</span><strong>${stats.goalsAgainst}</strong></div>
+            <div class="wc-team-hub-kpi"><span>${this.teamHubText("goalDifference")}</span><strong>${stats.goalDifference > 0 ? "+" : ""}${stats.goalDifference}</strong></div>
+          </div>
+        </div>
+
+        <div class="wc-team-hub-layout">
+          <div class="wc-team-hub-panel">
+            <div class="wc-team-hub-title"><strong>${this.teamHubText("fixturesResults")}</strong><span>${matches.length} ${this.teamHubText("matches")}</span></div>
+            <div class="wc-team-hub-match-list">${matchRows}</div>
+          </div>
+          <div class="wc-team-hub-panel">
+            <div class="wc-team-hub-title"><strong>${this.teamHubText("teamStats")}</strong><span>${this.teamHubText("formGuide")}</span></div>
+            <div class="wc-team-hub-kpis">
+              <div class="wc-team-hub-kpi"><span>${this.teamHubText("played")}</span><strong>${stats.played}</strong></div>
+              <div class="wc-team-hub-kpi"><span>${this.teamHubText("upcoming")}</span><strong>${stats.upcoming}</strong></div>
+              <div class="wc-team-hub-kpi"><span>${this.teamHubText("groupPosition")}</span><strong>${groupInfo.position}</strong></div>
+              <div class="wc-team-hub-kpi"><span>${this.t("pointsShort")}</span><strong>${groupInfo.points}</strong></div>
+            </div>
+            ${formHtml}
+          </div>
+        </div>
+
+        <div class="wc-team-hub-layout">
+          <div class="wc-team-hub-panel">
+            <div class="wc-team-hub-title"><strong>${this.teamHubText("playerContributions")}</strong><span>${this.t("goals")} + ${this.t("assists")}</span></div>
+            <div class="wc-team-hub-player-list">${playerRows}</div>
+          </div>
+          <div class="wc-team-hub-panel">
+            <div class="wc-team-hub-title"><strong>${this.teamHubText("venuesJourney")}</strong><span>${this.t("venues")}</span></div>
+            <div class="wc-team-hub-venue-list">${venueRows}</div>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   statsPage() {
     const s = this._data.statistics || {};
     const fixtures = Array.isArray(this._data.fixtures) ? this._data.fixtures : [];
@@ -19236,6 +19876,14 @@ class WorldCup2026Panel extends HTMLElement {
     if (this._page === "groups") return this.groupsPage();
     if (this._page === "knockout") return this.knockoutPage();
     if (this._page === "players") return this.playersPage();
+    if (this._page === "teamhub") {
+      try {
+        return this.teamHubPage();
+      } catch (err) {
+        console.error("World Cup Team Hub render error", err);
+        return `<div class="wc-card"><div class="wc-empty">${this.teamHubText("noTeamData")}</div></div>`;
+      }
+    }
     if (this._page === "records") return this.recordsPage();
     if (this._page === "stats") return this.statsPage();
     if (this._page === "venues") return this.venuesPage();
@@ -19311,6 +19959,25 @@ class WorldCup2026Panel extends HTMLElement {
       button.onclick = () => {
         const page = button.getAttribute("data-page");
         this.changePage(page);
+      };
+    });
+
+    this.querySelectorAll("#wc-team-hub-country").forEach((select) => {
+      select.addEventListener("click", (event) => event.stopPropagation());
+      select.addEventListener("change", (event) => {
+        event.stopPropagation();
+        this._teamHubCountry = select.value || "";
+        try { localStorage.setItem(this._teamHubStorageKey, this._teamHubCountry); } catch (e) {}
+        this.render();
+      });
+    });
+
+    this.querySelectorAll(".wc-team-hub-country-button").forEach((button) => {
+      button.onclick = (event) => {
+        event.stopPropagation();
+        this._teamHubCountry = button.getAttribute("data-team-hub-country") || "";
+        try { localStorage.setItem(this._teamHubStorageKey, this._teamHubCountry); } catch (e) {}
+        this.render();
       };
     });
 
