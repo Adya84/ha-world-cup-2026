@@ -420,24 +420,6 @@
         },
         {
           "type": "Goal",
-          "team": "USA",
-          "player": "Folarin Balogun",
-          "minute": 50,
-          "extra": null,
-          "detail": "Normal Goal",
-          "assist": "Malik Tillman",
-          "timer": "50:00",
-          "timerSeconds": 3000,
-          "displayMinute": "50'",
-          "source": "api_football",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 3
-        },
-        {
-          "type": "Goal",
           "team": "Paraguay",
           "player": "Maur\u00edcio Magalh\u00e3es Prado",
           "minute": 73,
@@ -452,7 +434,7 @@
           "matchUtcDate": "2026-06-13T01:00:00Z",
           "homeTeam": "USA",
           "awayTeam": "Paraguay",
-          "goalNumber": 4
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -470,7 +452,7 @@
           "matchUtcDate": "2026-06-13T01:00:00Z",
           "homeTeam": "USA",
           "awayTeam": "Paraguay",
-          "goalNumber": 5
+          "goalNumber": 4
         }
       ],
       "events": [
@@ -512,24 +494,6 @@
         },
         {
           "type": "Goal",
-          "team": "USA",
-          "player": "Folarin Balogun",
-          "minute": 50,
-          "extra": null,
-          "detail": "Normal Goal",
-          "assist": "Malik Tillman",
-          "timer": "50:00",
-          "timerSeconds": 3000,
-          "displayMinute": "50'",
-          "source": "api_football",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 3
-        },
-        {
-          "type": "Goal",
           "team": "Paraguay",
           "player": "Maur\u00edcio Magalh\u00e3es Prado",
           "minute": 73,
@@ -544,7 +508,7 @@
           "matchUtcDate": "2026-06-13T01:00:00Z",
           "homeTeam": "USA",
           "awayTeam": "Paraguay",
-          "goalNumber": 4
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -562,7 +526,7 @@
           "matchUtcDate": "2026-06-13T01:00:00Z",
           "homeTeam": "USA",
           "awayTeam": "Paraguay",
-          "goalNumber": 5
+          "goalNumber": 4
         }
       ]
     },
@@ -593,7 +557,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_B",
-      "lastUpdated": "2026-06-13T22:27:23Z",
+      "lastUpdated": "2026-06-13T22:28:38Z",
       "homeTeam": {
         "id": 8030,
         "name": "Qatar",
@@ -632,18 +596,21 @@
         }
       ],
       "manualClock": {
-        "seconds": 3480,
-        "timer": "58:00",
-        "displayMinute": "58'",
+        "seconds": 3555,
+        "timer": "59:15",
+        "displayMinute": "59'",
         "active": true,
         "status": "IN_PLAY",
-        "source": "local_status_timer"
+        "source": "local_status_timer",
+        "apiMinute": null,
+        "syncedAt": null
       },
-      "fallbackClock": 3480,
-      "fallbackClockText": "58:00",
-      "manualClockText": "58:00",
-      "displayMinute": "58'",
-      "clockSeconds": 3480
+      "fallbackClock": 3555,
+      "fallbackClockText": "59:15",
+      "manualClockText": "59:15",
+      "displayMinute": "59'",
+      "clockSeconds": 3555,
+      "clockSource": "local_status_timer"
     },
     {
       "area": {
