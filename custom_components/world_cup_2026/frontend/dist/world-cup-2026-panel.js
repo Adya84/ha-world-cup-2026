@@ -7470,7 +7470,7 @@ class WorldCup2026Panel extends HTMLElement {
       const mergedLive = this.mergeGithubMatchData(localLive, publicGithubMatches);
       const githubLive = this.liveMatchesFromGithub(publicGithubMatches);
 
-      this._data.live = githubLive.length ? githubLive : mergedLive;
+      this._data.live = githubLive.length ? githubLive : localLive;
       this._data.fixtures = mergedFixtures;
       this._data.results = mergedResults;
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
