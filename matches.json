@@ -343,7 +343,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-13T04:37:47Z",
+      "lastUpdated": "2026-06-13T04:38:53Z",
       "homeTeam": {
         "id": 771,
         "name": "United States",
@@ -381,7 +381,7 @@
           "nationality": "Netherlands"
         }
       ],
-      "minute": 70,
+      "minute": 75,
       "goalEvents": [
         {
           "type": "Goal",
@@ -436,6 +436,24 @@
           "homeTeam": "USA",
           "awayTeam": "Paraguay",
           "goalNumber": 3
+        },
+        {
+          "type": "Goal",
+          "team": "Paraguay",
+          "player": "Mauricio",
+          "minute": 73,
+          "extra": null,
+          "detail": "Normal Goal",
+          "assist": "J. Enciso",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "displayMinute": "73'",
+          "source": "api_football",
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
+          "homeTeam": "USA",
+          "awayTeam": "Paraguay",
+          "goalNumber": 4
         }
       ],
       "events": [
@@ -492,21 +510,39 @@
           "homeTeam": "USA",
           "awayTeam": "Paraguay",
           "goalNumber": 3
+        },
+        {
+          "type": "Goal",
+          "team": "Paraguay",
+          "player": "Mauricio",
+          "minute": 73,
+          "extra": null,
+          "detail": "Normal Goal",
+          "assist": "J. Enciso",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "displayMinute": "73'",
+          "source": "api_football",
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
+          "homeTeam": "USA",
+          "awayTeam": "Paraguay",
+          "goalNumber": 4
         }
       ],
       "manualClock": {
-        "seconds": 4333,
-        "timer": "72:13",
-        "displayMinute": "72'",
+        "seconds": 4399,
+        "timer": "73:19",
+        "displayMinute": "73'",
         "active": true,
         "status": "IN_PLAY",
         "source": "local_status_timer"
       },
-      "fallbackClock": 4333,
-      "fallbackClockText": "72:13",
-      "manualClockText": "72:13",
-      "displayMinute": "72'",
-      "clockSeconds": 4333
+      "fallbackClock": 4399,
+      "fallbackClockText": "73:19",
+      "manualClockText": "73:19",
+      "displayMinute": "73'",
+      "clockSeconds": 4399
     },
     {
       "area": {
