@@ -3033,10 +3033,8 @@
       },
       "referees": [
         {
-          "id": 190017,
-          "name": "Mustapha Ghorbal",
-          "type": "REFEREE",
-          "nationality": null
+          "name": "Mustapha Ghorbal, Algeria",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -3053,7 +3051,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football",
+          "source": "api_football_post_match",
           "matchId": 537340,
           "matchUtcDate": "2026-06-14T01:00:00Z",
           "homeTeam": "Haiti",
@@ -3061,6 +3059,7 @@
           "goalNumber": 1
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -3075,12 +3074,187 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football",
-          "matchId": 537340,
-          "matchUtcDate": "2026-06-14T01:00:00Z",
-          "homeTeam": "Haiti",
-          "awayTeam": "Scotland",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Haiti",
+          "player": "J. Bellegarde",
+          "minute": 39,
+          "extra": null,
+          "displayMinute": "39'",
+          "timer": "39:00",
+          "timerSeconds": 2340,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "L. Deedson",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Casimir",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "B. Gannon-Doak",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "R. Christie",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "N. Patterson",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "C. Adams",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "L. Dykes",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "W. Isidor",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Joseph",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "J. McGinn",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "F. Curtis",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "L. Shankland",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "K. McLean",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "R. Providence",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Y. Fortune",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "F. Curtis",
+          "minute": 90,
+          "extra": 1,
+          "displayMinute": "90+1'",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "K. McLean",
+          "minute": 90,
+          "extra": 5,
+          "displayMinute": "90+5'",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -3097,7 +3271,7 @@
           "detail": "Yellow Card",
           "comments": "Tripping",
           "assist": null,
-          "source": "api_football"
+          "source": "api_football_post_match"
         },
         {
           "type": "Yellow Card",
@@ -3112,7 +3286,7 @@
           "detail": "Yellow Card",
           "comments": "Holding",
           "assist": null,
-          "source": "api_football"
+          "source": "api_football_post_match"
         },
         {
           "type": "Yellow Card",
@@ -3127,7 +3301,7 @@
           "detail": "Yellow Card",
           "comments": "Roughing",
           "assist": null,
-          "source": "api_football"
+          "source": "api_football_post_match"
         },
         {
           "type": "Yellow Card",
@@ -3142,7 +3316,7 @@
           "detail": "Yellow Card",
           "comments": "Roughing",
           "assist": null,
-          "source": "api_football"
+          "source": "api_football_post_match"
         }
       ],
       "substitutionEvents": [
@@ -3159,13 +3333,13 @@
           "detail": "Substitution 1",
           "comments": null,
           "assist": "J. Casimir",
-          "source": "api_football"
+          "source": "api_football_post_match"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Scotland",
-          "player": "C. Adams",
+          "player": "B. Gannon-Doak",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -3173,8 +3347,8 @@
           "timerSeconds": 4500,
           "detail": "Substitution 1",
           "comments": null,
-          "assist": "L. Dykes",
-          "source": "api_football"
+          "assist": "R. Christie",
+          "source": "api_football_post_match"
         },
         {
           "type": "Substitution",
@@ -3189,13 +3363,13 @@
           "detail": "Substitution 2",
           "comments": null,
           "assist": "N. Patterson",
-          "source": "api_football"
+          "source": "api_football_post_match"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Scotland",
-          "player": "B. Gannon-Doak",
+          "player": "C. Adams",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -3203,8 +3377,8 @@
           "timerSeconds": 4500,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "R. Christie",
-          "source": "api_football"
+          "assist": "L. Dykes",
+          "source": "api_football_post_match"
         },
         {
           "type": "Substitution",
@@ -3219,7 +3393,7 @@
           "detail": "Substitution 2",
           "comments": null,
           "assist": "L. Joseph",
-          "source": "api_football"
+          "source": "api_football_post_match"
         },
         {
           "type": "Substitution",
@@ -3234,7 +3408,7 @@
           "detail": "Substitution 4",
           "comments": null,
           "assist": "F. Curtis",
-          "source": "api_football"
+          "source": "api_football_post_match"
         },
         {
           "type": "Substitution",
@@ -3249,7 +3423,7 @@
           "detail": "Substitution 5",
           "comments": null,
           "assist": "K. McLean",
-          "source": "api_football"
+          "source": "api_football_post_match"
         },
         {
           "type": "Substitution",
@@ -3264,7 +3438,7 @@
           "detail": "Substitution 3",
           "comments": null,
           "assist": "Y. Fortune",
-          "source": "api_football"
+          "source": "api_football_post_match"
         }
       ],
       "apiFootballFixtureId": 1489372
