@@ -4674,7 +4674,28 @@
     ]
   },
   "537352": {
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "type": "Goal",
+        "rawType": "Card",
+        "team": "Ivory Coast",
+        "player": "S. Fofana",
+        "minute": 28,
+        "extra": null,
+        "displayMinute": "28'",
+        "timer": "28:00",
+        "timerSeconds": 1680,
+        "detail": "Yellow Card",
+        "comments": "Roughing",
+        "assist": null,
+        "source": "api_football",
+        "matchId": 537352,
+        "matchUtcDate": "2026-06-14T23:00:00Z",
+        "homeTeam": "Ivory Coast",
+        "awayTeam": "Ecuador",
+        "goalNumber": 1
+      }
+    ],
     "clock_active": true,
     "status": "IN_PLAY",
     "homeScore": 0,
@@ -4688,11 +4709,45 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 1680,
-    "clock_seconds": 1680,
-    "phase_start": "2026-06-14T23:31:01.007636+00:00",
+    "base_seconds": 1740,
+    "clock_seconds": 1740,
+    "phase_start": "2026-06-14T23:32:15.627842+00:00",
     "source": "football_data_minute",
-    "apiFootballFixtureId": 1489375
+    "apiFootballFixtureId": 1489375,
+    "events": [
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Ivory Coast",
+        "player": "S. Fofana",
+        "minute": 28,
+        "extra": null,
+        "displayMinute": "28'",
+        "timer": "28:00",
+        "timerSeconds": 1680,
+        "detail": "Yellow Card",
+        "comments": "Roughing",
+        "assist": null,
+        "source": "api_football"
+      }
+    ],
+    "cardEvents": [
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Ivory Coast",
+        "player": "S. Fofana",
+        "minute": 28,
+        "extra": null,
+        "displayMinute": "28'",
+        "timer": "28:00",
+        "timerSeconds": 1680,
+        "detail": "Yellow Card",
+        "comments": "Roughing",
+        "assist": null,
+        "source": "api_football"
+      }
+    ]
   },
   "537358": {
     "goalEvents": [],
