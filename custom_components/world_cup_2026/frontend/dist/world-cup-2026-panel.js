@@ -21,6 +21,7 @@ class WorldCup2026Panel extends HTMLElement {
       live: [],
       fixtures: [],
       results: [],
+      apiResultsTest: [],
       groups: [],
       scorers: [],
       statistics: {},
@@ -7413,6 +7414,33 @@ class WorldCup2026Panel extends HTMLElement {
     return [];
   }
 
+
+  async loadPublicGithubResults() {
+    const urls = [
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/world_cup_2026_results.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_results.json?t=" + Date.now(),
+      "/local/worldcup/world_cup_2026_results.json?t=" + Date.now(),
+      "/local/world_cup_2026_results.json?t=" + Date.now(),
+      "/world_cup_2026_frontend/data/world_cup_2026_results.json?t=" + Date.now(),
+    ];
+
+    for (const url of urls) {
+      try {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) continue;
+        const data = await response.json();
+        const results = Array.isArray(data)
+          ? data
+          : (Array.isArray(data?.results) ? data.results : (Array.isArray(data?.matches) ? data.matches : []));
+        if (results.length) return results;
+      } catch (err) {
+        // Try the next public results path.
+      }
+    }
+
+    return [];
+  }
+
   publicMatchKey(match) {
     if (!match) return "";
     if (match.id !== null && match.id !== undefined) return `id:${match.id}`;
@@ -7489,6 +7517,130 @@ class WorldCup2026Panel extends HTMLElement {
 
 
 
+
+  mergeUniqueMatches(primary = [], extras = []) {
+    const merged = [];
+    const seen = new Set();
+
+    const add = (match) => {
+      if (!match) return;
+      const key = this.publicMatchKey(match) || this.matchStorageId(match) || JSON.stringify([
+        match.id,
+        match.matchId,
+        match.matchNumber,
+        match.utcDate,
+        this.fixtureTeamKey(this.getHomeTeam(match)),
+        this.fixtureTeamKey(this.getAwayTeam(match)),
+      ]);
+      if (seen.has(key)) return;
+      seen.add(key);
+      merged.push(match);
+    };
+
+    (Array.isArray(primary) ? primary : []).forEach(add);
+    (Array.isArray(extras) ? extras : []).forEach(add);
+    return merged;
+  }
+
+  goalEventStoreToMatches(goalEventStore) {
+    const store = goalEventStore && typeof goalEventStore === "object" && !Array.isArray(goalEventStore)
+      ? goalEventStore
+      : {};
+
+    return Object.entries(store)
+      .map(([key, extra]) => {
+        if (!extra || typeof extra !== "object" || Array.isArray(extra)) return null;
+        const homeTeam = extra.homeTeam || extra.home_team || extra.home || extra.homeName;
+        const awayTeam = extra.awayTeam || extra.away_team || extra.away || extra.awayName;
+        if (!homeTeam || !awayTeam) return null;
+
+        const homeScore = extra.homeScore ?? extra.home_score ?? extra.score?.fullTime?.home ?? null;
+        const awayScore = extra.awayScore ?? extra.away_score ?? extra.score?.fullTime?.away ?? null;
+        const hasScore = homeScore !== null && homeScore !== undefined && awayScore !== null && awayScore !== undefined;
+        const status = extra.status || (hasScore ? "FINISHED" : "TIMED");
+        const utcDate = extra.utcDate || extra.date || extra.kickoff || extra.startTime || null;
+        const events = Array.isArray(extra.events) ? extra.events : [];
+        const goalEvents = Array.isArray(extra.goalEvents) ? extra.goalEvents : events.filter((event) => {
+          const typeText = String(event?.type || event?.rawType || event?.eventType || "").toLowerCase();
+          const detailText = String(event?.detail || event?.comments || "").toLowerCase();
+          return typeText.includes("goal") || detailText.includes("goal");
+        });
+
+        return {
+          id: extra.id || extra.matchId || extra.matchNumber || key,
+          matchId: extra.matchId || extra.id || key,
+          matchNumber: extra.matchNumber || extra.fifaMatchNumber || (String(key).match(/\d+/)?.[0] ? Number(String(key).match(/\d+/)[0]) : undefined),
+          fifaMatchNumber: extra.fifaMatchNumber || extra.matchNumber,
+          status,
+          utcDate,
+          date: utcDate,
+          homeTeam: typeof homeTeam === "object" ? homeTeam : { name: String(homeTeam) },
+          awayTeam: typeof awayTeam === "object" ? awayTeam : { name: String(awayTeam) },
+          homeScore,
+          awayScore,
+          home_score: homeScore,
+          away_score: awayScore,
+          score: extra.score || { fullTime: { home: homeScore, away: awayScore } },
+          goalEvents,
+          events: events.length ? events : goalEvents,
+          cardEvents: Array.isArray(extra.cardEvents) ? extra.cardEvents : [],
+          substitutionEvents: Array.isArray(extra.substitutionEvents) ? extra.substitutionEvents : [],
+          referees: Array.isArray(extra.referees) ? extra.referees : [],
+          referee: extra.referee || "",
+          venue: extra.venue || extra.stadium || extra.venueName || "",
+          stadium: extra.stadium || extra.venue || extra.venueName || "",
+          group: extra.group || "",
+          stage: extra.stage || "",
+          publicGoalEventsStoreOnly: true,
+        };
+      })
+      .filter(Boolean);
+  }
+
+  mergeResultsAndFinishedFixtures(resultsFeed = [], fixtures = []) {
+    const finishedFromFixtures = (Array.isArray(fixtures) ? fixtures : []).filter((match) => this.isFinishedMatch(match));
+    return this.mergeUniqueMatches(Array.isArray(resultsFeed) ? resultsFeed : [], finishedFromFixtures)
+      .filter((match) => this.isFinishedMatch(match));
+  }
+
+
+  apiOnlyFinishedResults(resultsFeed = []) {
+    return (Array.isArray(resultsFeed) ? resultsFeed : [])
+      .filter((match) => this.isFinishedMatch(match))
+      .map((match) => this.stripManualStoredDetails(match))
+      .filter(Boolean);
+  }
+
+  stripManualStoredDetails(match) {
+    if (!match || typeof match !== "object") return match;
+
+    const isManualEvent = (event) => {
+      const source = String(event?.source || event?.eventSource || event?.origin || "").toLowerCase();
+      return source === "manual" || source.includes("manual");
+    };
+
+    const cleanArray = (value) => Array.isArray(value) ? value.filter((event) => !isManualEvent(event)) : value;
+
+    const cleaned = {
+      ...match,
+      goalEvents: cleanArray(match.goalEvents),
+      events: cleanArray(match.events),
+      cardEvents: cleanArray(match.cardEvents),
+      substitutionEvents: cleanArray(match.substitutionEvents),
+      apiFootballEvents: cleanArray(match.apiFootballEvents),
+      publicGoalEventsSynced: false,
+    };
+
+    // If the whole match only came from a manual/local store, do not show it on
+    // the API test page. That page must prove what the backend API really returns.
+    const source = String(match.source || match.origin || match.feedSource || "").toLowerCase();
+    if (source === "manual" || source.includes("goal_event_store") || source.includes("public_goal")) {
+      return null;
+    }
+
+    return cleaned;
+  }
+
   mergePublicGoalEventStore(matches, goalEventStore) {
     const list = Array.isArray(matches) ? matches : [];
     const store = goalEventStore && typeof goalEventStore === "object" && !Array.isArray(goalEventStore)
@@ -7555,16 +7707,31 @@ class WorldCup2026Panel extends HTMLElement {
 
       const apiLive = await this.callApi("world_cup_2026/get_live_matches");
       const apiFixtures = this.completeOfficialFixtures(await this.callApi("world_cup_2026/get_fixtures"));
-      const apiResults = this.completeOfficialFixtures(await this.safeCall("world_cup_2026/get_results", []));
+      const apiResults = await this.safeCall("world_cup_2026/get_results", []);
+
+      // Pure backend/API-only test feed. Do not merge GitHub or goal_events here.
+      // Use BOTH backend results and backend fixtures, because some finished games
+      // can stay in fixtures before they appear in get_results. This keeps Canada
+      // and similar finished games visible without using made-up/manual file data.
+      this._data.apiResultsTest = this.apiOnlyFinishedResults(
+        this.mergeResultsAndFinishedFixtures(apiResults, apiFixtures)
+      );
 
       const publicGoalEvents = await this.loadPublicGoalEvents();
+      const publicResults = await this.loadPublicGithubResults();
+
+      const storeMatches = this.goalEventStoreToMatches(publicGoalEvents);
+      const fixturesWithStore = this.mergePublicGoalEventStore(apiFixtures, publicGoalEvents);
+      const apiResultsWithStore = this.mergePublicGoalEventStore(Array.isArray(apiResults) ? apiResults : [], publicGoalEvents);
+      const publicResultsWithStore = this.mergePublicGoalEventStore(publicResults, publicGoalEvents);
+      const combinedResults = this.mergeUniqueMatches(apiResultsWithStore, publicResultsWithStore);
 
       this._data.live = this.mergePublicGoalEventStore(
         (Array.isArray(apiLive) ? apiLive : []).filter((match) => this.isLiveMatch(match)),
         publicGoalEvents
       );
-      this._data.fixtures = this.mergePublicGoalEventStore(apiFixtures, publicGoalEvents);
-      this._data.results = this.mergePublicGoalEventStore(apiResults, publicGoalEvents);
+      this._data.fixtures = this.mergeUniqueMatches(fixturesWithStore, storeMatches);
+      this._data.results = this.mergeResultsAndFinishedFixtures(combinedResults, this._data.fixtures);
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
       this._data.scorers = await this.safeCall("world_cup_2026/get_scorers", []);
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
@@ -15652,6 +15819,21 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  matchResultsFullDetailsSection(match) {
+    // Results page should show every stored event from the API/GitHub feed:
+    // goals, own goals, assists, cards, substitutions, VAR and officials.
+    const eventsHtml = this.matchEventsTimelineSection(match, { includeSubs: true });
+    const officialsHtml = this.matchOfficialsSection(match);
+    if (!eventsHtml && !officialsHtml) return "";
+
+    return `
+      <div class="match-extra-live-data match-results-full-details">
+        ${eventsHtml}
+        ${officialsHtml}
+      </div>
+    `;
+  }
+
 
   matchScorersSection(homeTeam, awayTeam, match = null) {
     const normalisedGoals = this.normalisedMatchEvents(match).filter((event) => event.category === "goal");
@@ -15780,6 +15962,48 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  apiResultsTestPage() {
+    const results = (this._data.apiResultsTest || [])
+      .filter(m => this.isFinishedMatch(m))
+      .sort((a, b) => {
+        const aTime = new Date(a.utcDate || a.date || 0).getTime();
+        const bTime = new Date(b.utcDate || b.date || 0).getTime();
+        return bTime - aTime;
+      });
+
+    if (!results.length) {
+      return `
+        <div class="wc-card results-page-card">
+          <div class="results-header">
+            <div>
+              <div class="wc-section-title">🧪 API Results Test</div>
+              <div class="results-subtitle">No finished matches came back from the Home Assistant API feed yet.</div>
+            </div>
+          </div>
+          <div class="wc-empty">This page ignores GitHub and goal_events.json, so it shows only what the backend/API currently provides.</div>
+        </div>
+      `;
+    }
+
+    return `
+      <div class="wc-card results-page-card">
+        <div class="results-header">
+          <div>
+            <div class="wc-section-title">🧪 API Results Test</div>
+            <div class="results-subtitle">Direct backend/API finished matches only — no GitHub, no goal_events fallback</div>
+          </div>
+          <div class="results-count-pill">${results.length} API FT</div>
+        </div>
+
+        <div class="wc-live-sync-notice">ℹ️ If Scotland appears here, the API/backend has it and the GitHub export is the problem. If Scotland is missing here too, the backend is no longer receiving it from the API.</div>
+
+        <div class="results-basic-list">
+          ${results.map(m => this.resultBasicRow(m)).join("")}
+        </div>
+      </div>
+    `;
+  }
+
   resultBasicRow(m) {
     const homeTeam = this.getHomeTeam(m);
     const awayTeam = this.getAwayTeam(m);
@@ -15817,7 +16041,7 @@ class WorldCup2026Panel extends HTMLElement {
         <div class="result-basic-status">COMPLETED</div>
 
         ${this.matchScorersSection(homeTeam, awayTeam, m)}
-        ${this.matchExtraLiveDataSection(m)}
+        ${this.matchResultsFullDetailsSection(m)}
       </div>
     `;
   }
@@ -17572,6 +17796,7 @@ class WorldCup2026Panel extends HTMLElement {
     if (this._page === "live") return this.livePage();
     if (this._page === "fixtures") return this.fixturesPage();
     if (this._page === "results") return this.resultsPage();
+    if (this._page === "apiresults") { this._page = "results"; return this.resultsPage(); }
     if (this._page === "groups") return this.groupsPage();
     if (this._page === "knockout") return this.knockoutPage();
     if (this._page === "players") return this.playersPage();
