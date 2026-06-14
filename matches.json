@@ -2366,7 +2366,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-14T07:34:29Z",
+      "lastUpdated": "2026-06-14T07:35:02Z",
       "homeTeam": {
         "id": 779,
         "name": "Australia",
@@ -2385,7 +2385,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 1,
+          "home": 2,
           "away": 0
         },
         "halfTime": {
@@ -2404,7 +2404,7 @@
           "nationality": "Venezuela"
         }
       ],
-      "minute": 74,
+      "minute": 75,
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
       "goalEvents": [
@@ -2489,6 +2489,36 @@
           "comments": null,
           "assist": "Y. Akgun",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Italiano",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Geria",
+          "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Australia",
+          "player": null,
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -2537,22 +2567,37 @@
           "comments": null,
           "assist": "Y. Akgun",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Italiano",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Geria",
+          "source": "api_football"
         }
       ],
       "apiFootballFixtureId": 1539001,
       "manualClock": {
-        "seconds": 4440,
-        "timer": "74:00",
-        "displayMinute": "74'",
+        "seconds": 4500,
+        "timer": "75:00",
+        "displayMinute": "75'",
         "active": true,
         "status": "IN_PLAY",
         "source": "local_status_timer"
       },
-      "fallbackClock": 4440,
-      "fallbackClockText": "74:00",
-      "manualClockText": "74:00",
-      "displayMinute": "74'",
-      "clockSeconds": 4440
+      "fallbackClock": 4500,
+      "fallbackClockText": "75:00",
+      "manualClockText": "75:00",
+      "displayMinute": "75'",
+      "clockSeconds": 4500
     },
     {
       "area": {
