@@ -1157,13 +1157,13 @@
         {
           "type": "Goal",
           "team": "Bosnia-H.",
-          "player": "Bosnia Scorer",
-          "minute": 1,
-          "displayMinute": "1'",
+          "player": "Lukic",
+          "minute": 21,
+          "displayMinute": "21'",
           "source": "manual",
           "goalNumber": 1,
           "extra": null,
-          "timer": "1:00",
+          "timer": "21:00",
           "timerSeconds": 60,
           "matchId": 537333,
           "matchUtcDate": "2026-06-12T19:00:00Z",
@@ -1191,13 +1191,13 @@
         {
           "type": "Goal",
           "team": "Bosnia-H.",
-          "player": "Bosnia Scorer",
-          "minute": 1,
-          "displayMinute": "1'",
+          "player": "Lukic",
+          "minute": 21,
+          "displayMinute": "21'",
           "source": "manual",
           "goalNumber": 1,
           "extra": null,
-          "timer": "1:00",
+          "timer": "21:00",
           "timerSeconds": 60,
           "matchId": 537333,
           "matchUtcDate": "2026-06-12T19:00:00Z",
@@ -4960,11 +4960,11 @@
       },
       "id": 537352,
       "utcDate": "2026-06-14T23:00:00Z",
-      "status": "SCHEDULED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_E",
-      "lastUpdated": "2026-06-14T23:57:25Z",
+      "lastUpdated": "2026-06-15T01:05:28Z",
       "homeTeam": {
         "id": 1935,
         "name": "Ivory Coast",
@@ -4980,15 +4980,15 @@
         "crest": "https://crests.football-data.org/791.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -4996,12 +4996,27 @@
       },
       "referees": [
         {
-          "id": 43918,
-          "name": "Fran\u00e7ois Letexier",
-          "type": "REFEREE",
-          "nationality": "France"
+          "name": "Fran\u00e7ois Letexier, France",
+          "type": "REFEREE"
         }
-      ]
+      ],
+      "minute": 2,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "apiFootballFixtureId": 1489375,
+      "manualClock": {
+        "seconds": 120,
+        "timer": "2:00",
+        "displayMinute": "2'",
+        "active": true,
+        "status": "IN_PLAY",
+        "source": "local_status_timer"
+      },
+      "fallbackClock": 120,
+      "fallbackClockText": "2:00",
+      "manualClockText": "2:00",
+      "displayMinute": "2'",
+      "clockSeconds": 120
     },
     {
       "area": {
