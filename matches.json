@@ -2214,11 +2214,11 @@
       },
       "id": 537340,
       "utcDate": "2026-06-14T01:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_C",
-      "lastUpdated": "2026-06-14T02:01:11Z",
+      "lastUpdated": "2026-06-14T03:01:08Z",
       "homeTeam": {
         "id": 836,
         "name": "Haiti",
@@ -2234,11 +2234,11 @@
         "crest": "https://crests.football-data.org/814.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -2255,7 +2255,20 @@
           "type": "REFEREE",
           "nationality": null
         }
-      ]
+      ],
+      "manualClock": {
+        "seconds": 71,
+        "timer": "1:11",
+        "displayMinute": "1'",
+        "active": true,
+        "status": "IN_PLAY",
+        "source": "local_status_timer"
+      },
+      "fallbackClock": 71,
+      "fallbackClockText": "1:11",
+      "manualClockText": "1:11",
+      "displayMinute": "1'",
+      "clockSeconds": 71
     },
     {
       "area": {
