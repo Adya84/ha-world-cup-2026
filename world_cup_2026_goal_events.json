@@ -957,7 +957,7 @@
       }
     ],
     "clock_seconds": 5400,
-    "phase_start": "2026-06-14T02:55:12.896281+00:00",
+    "phase_start": "2026-06-14T02:55:38.190708+00:00",
     "base_seconds": 5400,
     "source": "football_data_minute",
     "apiFootballFixtureId": 1489372,
@@ -989,6 +989,21 @@
         "timerSeconds": 2760,
         "detail": "Yellow Card",
         "comments": "Holding",
+        "assist": null,
+        "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Scotland",
+        "player": "F. Curtis",
+        "minute": 90,
+        "extra": 1,
+        "displayMinute": "90+1'",
+        "timer": "91:00",
+        "timerSeconds": 5460,
+        "detail": "Yellow Card",
+        "comments": "Roughing",
         "assist": null,
         "source": "api_football"
       }
