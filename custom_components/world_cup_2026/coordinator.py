@@ -945,10 +945,20 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 if not match.get("events"):
                     match["events"] = merged_events
 
+            if match.get("events"):
+                state["events"] = match.get("events")
+            elif state.get("events"):
+                match["events"] = state.get("events")
+
             if match.get("cardEvents"):
                 state["cardEvents"] = match.get("cardEvents")
             elif state.get("cardEvents"):
                 match["cardEvents"] = state.get("cardEvents")
+
+            if match.get("substitutionEvents"):
+                state["substitutionEvents"] = match.get("substitutionEvents")
+            elif state.get("substitutionEvents"):
+                match["substitutionEvents"] = state.get("substitutionEvents")
 
             if match.get("referees"):
                 state["referees"] = match.get("referees")
@@ -1039,17 +1049,10 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         export_dir = Path("/config/www/worldcup")
         export_dir.mkdir(parents=True, exist_ok=True)
 
-        # This is the persistent live/results event store used by the frontend
-        # for goal scorers, goal times, cards, referees and match clocks.
-        # Export it alongside matches/standings/scorers so GitHub receives the
-        # same event data the local panel uses.
-        goal_events_payload = self._goal_event_store if isinstance(self._goal_event_store, dict) else {}
-
         files = {
             "matches.json": {"matches": matches},
             "standings.json": {"standings": standings},
             "scorers.json": {"scorers": scorers},
-            "world_cup_2026_goal_events.json": goal_events_payload,
         }
 
         for filename, payload in files.items():
@@ -1267,6 +1270,18 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             return None
         return normalised
 
+    def _normalise_api_football_substitution_event(self, event):
+        """Return only substitution events."""
+        normalised = self._normalise_api_football_event(event)
+        if not normalised:
+            return None
+        raw_type = str(normalised.get("rawType", "")).lower()
+        event_type = str(normalised.get("type", "")).lower()
+        detail = str(normalised.get("detail", "")).lower()
+        if raw_type not in {"subst", "substitution"} and "substitution" not in event_type and "substitution" not in detail:
+            return None
+        return normalised
+
     async def _fetch_api_football_events_for_fixture(self, session, fixture_id, headers):
         """Fetch timeline events for one API-Football fixture."""
         if not fixture_id:
@@ -1293,15 +1308,18 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         all_events = [event for event in (self._normalise_api_football_event(item) for item in raw_events) if event]
         goal_events = [event for event in all_events if event.get("rawType", "").lower() == "goal" or event.get("type") in {"Goal", "Own Goal", "Penalty"}]
         card_events = [event for event in all_events if event.get("rawType", "").lower() == "card" or event.get("type") in {"Yellow Card", "Red Card", "Card"}]
+        substitution_events = [event for event in all_events if event.get("rawType", "").lower() in {"subst", "substitution"} or str(event.get("type", "")).lower() == "substitution" or "substitution" in str(event.get("detail", "")).lower()]
 
         all_events.sort(key=lambda event: int(event.get("timerSeconds") or 0))
         goal_events.sort(key=lambda event: int(event.get("timerSeconds") or 0))
         card_events.sort(key=lambda event: int(event.get("timerSeconds") or 0))
+        substitution_events.sort(key=lambda event: int(event.get("timerSeconds") or 0))
 
         return {
             "events": all_events,
             "goalEvents": goal_events,
             "cardEvents": card_events,
+            "substitutionEvents": substitution_events,
         }
 
     async def _fetch_live_data_from_api_football(self):
@@ -1371,6 +1389,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                     ]
                     goal_events = [event for event in inline_events if event.get("rawType", "").lower() == "goal" or event.get("type") in {"Goal", "Own Goal", "Penalty"}]
                     card_events = [event for event in inline_events if event.get("rawType", "").lower() == "card" or event.get("type") in {"Yellow Card", "Red Card", "Card"}]
+                    substitution_events = [event for event in inline_events if event.get("rawType", "").lower() in {"subst", "substitution"} or str(event.get("type", "")).lower() == "substitution" or "substitution" in str(event.get("detail", "")).lower()]
 
                     expected_goals = _expected_goal_count_from_api_football_item(item)
                     if fixture_id and (
@@ -1392,6 +1411,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             inline_events = fixture_event_data.get("events", [])
                             goal_events = fixture_goal_events
                             card_events = fixture_event_data.get("cardEvents", [])
+                            substitution_events = fixture_event_data.get("substitutionEvents", [])
 
                     fixture_referee = fixture.get("referee")
                     referees = [{"name": fixture_referee, "type": "REFEREE"}] if fixture_referee else []
@@ -1418,6 +1438,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                         "events": inline_events,
                         "goalEvents": goal_events,
                         "cardEvents": card_events,
+                        "substitutionEvents": substitution_events,
                         "referees": referees,
                         "apiFootballFixtureId": fixture_id,
                     }
@@ -1568,6 +1589,14 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             )
                             if event
                         ]
+                        substitution_events = [
+                            event
+                            for event in (
+                                self._normalise_api_football_substitution_event(event)
+                                for event in (item.get("events", []) or [])
+                            )
+                            if event
+                        ]
                         all_events = [
                             event
                             for event in (
@@ -1587,6 +1616,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                                 all_events = fixture_event_data.get("events", [])
                                 goal_events = fixture_event_data.get("goalEvents", [])
                                 card_events = fixture_event_data.get("cardEvents", [])
+                                substitution_events = fixture_event_data.get("substitutionEvents", [])
 
                         # Keep the fixture even if the provider returns no events yet,
                         # so matches.json can still receive apiFootballFixtureId/referee
@@ -1597,6 +1627,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             event["source"] = "api_football_post_match"
                         for event in card_events:
                             event["source"] = "api_football_post_match"
+                        for event in substitution_events:
+                            event["source"] = "api_football_post_match"
 
                         fixture_referee = fixture.get("referee")
                         referees = [{"name": fixture_referee, "type": "REFEREE"}] if fixture_referee else []
@@ -1604,6 +1636,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             "events": all_events,
                             "goalEvents": goal_events,
                             "cardEvents": card_events,
+                            "substitutionEvents": substitution_events,
                             "referees": referees,
                             "apiFootballFixtureId": fixture_id,
                             "apiFootballHome": home,
@@ -1668,6 +1701,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             goal_events = data.get("goalEvents") or []
             all_events = data.get("events") or []
             card_events = data.get("cardEvents") or []
+            substitution_events = data.get("substitutionEvents") or []
 
             # Apply anything we managed to recover. Do not require goals before
             # writing cards/referee/fixture id, otherwise a partial provider
@@ -1681,6 +1715,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 match["events"] = goal_events
             if card_events:
                 match["cardEvents"] = card_events
+            if substitution_events:
+                match["substitutionEvents"] = substitution_events
             if data.get("referees"):
                 match["referees"] = data.get("referees")
             if data.get("apiFootballFixtureId"):
@@ -1759,6 +1795,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
             if data.get("cardEvents"):
                 match["cardEvents"] = data.get("cardEvents")
+            if data.get("substitutionEvents"):
+                match["substitutionEvents"] = data.get("substitutionEvents")
             if data.get("referees"):
                 match["referees"] = data.get("referees")
             if data.get("apiFootballFixtureId"):
