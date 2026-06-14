@@ -27,7 +27,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-14T23:48:19Z",
+      "lastUpdated": "2026-06-14T23:48:30Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -43,7 +43,7 @@
         "crest": "https://crests.football-data.org/766.svg"
       },
       "score": {
-        "winner": "HOME_TEAM",
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
           "home": 2,
@@ -63,7 +63,7 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 89,
+      "minute": 90,
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
       "goalEvents": [
@@ -139,7 +139,7 @@
           "timerSeconds": 5340,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "K. Ogawa",
           "source": "api_football",
           "matchId": 537357,
           "matchUtcDate": "2026-06-14T20:00:00Z",
@@ -228,7 +228,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "T. Reijnders",
+          "player": "D. Malen",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -236,7 +236,7 @@
           "timerSeconds": 4200,
           "detail": "Substitution 1",
           "comments": null,
-          "assist": "Q. Timber",
+          "assist": "M. Depay",
           "source": "api_football"
         },
         {
@@ -258,7 +258,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "D. Malen",
+          "player": "T. Reijnders",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -266,14 +266,14 @@
           "timerSeconds": 4200,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "M. Depay",
+          "assist": "Q. Timber",
           "source": "api_football"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Japan",
-          "player": "T. Watanabe",
+          "player": "R. Doan",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -281,7 +281,7 @@
           "timerSeconds": 4500,
           "detail": "Substitution 2",
           "comments": null,
-          "assist": "T. Tomiyasu",
+          "assist": "Y. Sugawara",
           "source": "api_football"
         },
         {
@@ -303,7 +303,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Japan",
-          "player": "R. Doan",
+          "player": "T. Watanabe",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -311,7 +311,7 @@
           "timerSeconds": 4500,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "Y. Sugawara",
+          "assist": "T. Tomiyasu",
           "source": "api_football"
         },
         {
@@ -386,7 +386,7 @@
           "timerSeconds": 5340,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "K. Ogawa",
           "source": "api_football"
         }
       ],
@@ -443,7 +443,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "T. Reijnders",
+          "player": "D. Malen",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -451,7 +451,7 @@
           "timerSeconds": 4200,
           "detail": "Substitution 1",
           "comments": null,
-          "assist": "Q. Timber",
+          "assist": "M. Depay",
           "source": "api_football"
         },
         {
@@ -473,7 +473,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "D. Malen",
+          "player": "T. Reijnders",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -481,14 +481,14 @@
           "timerSeconds": 4200,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "M. Depay",
+          "assist": "Q. Timber",
           "source": "api_football"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Japan",
-          "player": "T. Watanabe",
+          "player": "R. Doan",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -496,7 +496,7 @@
           "timerSeconds": 4500,
           "detail": "Substitution 2",
           "comments": null,
-          "assist": "T. Tomiyasu",
+          "assist": "Y. Sugawara",
           "source": "api_football"
         },
         {
@@ -518,7 +518,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Japan",
-          "player": "R. Doan",
+          "player": "T. Watanabe",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -526,7 +526,7 @@
           "timerSeconds": 4500,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "Y. Sugawara",
+          "assist": "T. Tomiyasu",
           "source": "api_football"
         },
         {
@@ -577,18 +577,18 @@
       ],
       "apiFootballFixtureId": 1489376,
       "manualClock": {
-        "seconds": 5340,
-        "timer": "89:00",
-        "displayMinute": "89'",
+        "seconds": 5400,
+        "timer": "90:00",
+        "displayMinute": "90'",
         "active": true,
         "status": "IN_PLAY",
         "source": "local_status_timer"
       },
-      "fallbackClock": 5340,
-      "fallbackClockText": "89:00",
-      "manualClockText": "89:00",
-      "displayMinute": "89'",
-      "clockSeconds": 5340
+      "fallbackClock": 5400,
+      "fallbackClockText": "90:00",
+      "manualClockText": "90:00",
+      "displayMinute": "90'",
+      "clockSeconds": 5400
     }
   ],
   "live": [
@@ -619,7 +619,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-14T23:48:19Z",
+      "lastUpdated": "2026-06-14T23:48:30Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -635,7 +635,7 @@
         "crest": "https://crests.football-data.org/766.svg"
       },
       "score": {
-        "winner": "HOME_TEAM",
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
           "home": 2,
@@ -655,7 +655,7 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 89,
+      "minute": 90,
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
       "goalEvents": [
@@ -731,7 +731,7 @@
           "timerSeconds": 5340,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "K. Ogawa",
           "source": "api_football",
           "matchId": 537357,
           "matchUtcDate": "2026-06-14T20:00:00Z",
@@ -820,7 +820,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "T. Reijnders",
+          "player": "D. Malen",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -828,7 +828,7 @@
           "timerSeconds": 4200,
           "detail": "Substitution 1",
           "comments": null,
-          "assist": "Q. Timber",
+          "assist": "M. Depay",
           "source": "api_football"
         },
         {
@@ -850,7 +850,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "D. Malen",
+          "player": "T. Reijnders",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -858,14 +858,14 @@
           "timerSeconds": 4200,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "M. Depay",
+          "assist": "Q. Timber",
           "source": "api_football"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Japan",
-          "player": "T. Watanabe",
+          "player": "R. Doan",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -873,7 +873,7 @@
           "timerSeconds": 4500,
           "detail": "Substitution 2",
           "comments": null,
-          "assist": "T. Tomiyasu",
+          "assist": "Y. Sugawara",
           "source": "api_football"
         },
         {
@@ -895,7 +895,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Japan",
-          "player": "R. Doan",
+          "player": "T. Watanabe",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -903,7 +903,7 @@
           "timerSeconds": 4500,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "Y. Sugawara",
+          "assist": "T. Tomiyasu",
           "source": "api_football"
         },
         {
@@ -978,7 +978,7 @@
           "timerSeconds": 5340,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "K. Ogawa",
           "source": "api_football"
         }
       ],
@@ -1035,7 +1035,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "T. Reijnders",
+          "player": "D. Malen",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -1043,7 +1043,7 @@
           "timerSeconds": 4200,
           "detail": "Substitution 1",
           "comments": null,
-          "assist": "Q. Timber",
+          "assist": "M. Depay",
           "source": "api_football"
         },
         {
@@ -1065,7 +1065,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "D. Malen",
+          "player": "T. Reijnders",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -1073,14 +1073,14 @@
           "timerSeconds": 4200,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "M. Depay",
+          "assist": "Q. Timber",
           "source": "api_football"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Japan",
-          "player": "T. Watanabe",
+          "player": "R. Doan",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -1088,7 +1088,7 @@
           "timerSeconds": 4500,
           "detail": "Substitution 2",
           "comments": null,
-          "assist": "T. Tomiyasu",
+          "assist": "Y. Sugawara",
           "source": "api_football"
         },
         {
@@ -1110,7 +1110,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Japan",
-          "player": "R. Doan",
+          "player": "T. Watanabe",
           "minute": 75,
           "extra": null,
           "displayMinute": "75'",
@@ -1118,7 +1118,7 @@
           "timerSeconds": 4500,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "Y. Sugawara",
+          "assist": "T. Tomiyasu",
           "source": "api_football"
         },
         {
@@ -1169,18 +1169,18 @@
       ],
       "apiFootballFixtureId": 1489376,
       "manualClock": {
-        "seconds": 5340,
-        "timer": "89:00",
-        "displayMinute": "89'",
+        "seconds": 5400,
+        "timer": "90:00",
+        "displayMinute": "90'",
         "active": true,
         "status": "IN_PLAY",
         "source": "local_status_timer"
       },
-      "fallbackClock": 5340,
-      "fallbackClockText": "89:00",
-      "manualClockText": "89:00",
-      "displayMinute": "89'",
-      "clockSeconds": 5340
+      "fallbackClock": 5400,
+      "fallbackClockText": "90:00",
+      "manualClockText": "90:00",
+      "displayMinute": "90'",
+      "clockSeconds": 5400
     }
   ]
 }
