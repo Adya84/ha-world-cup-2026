@@ -2516,7 +2516,68 @@
     "base_seconds": 2700
   },
   "537357": {
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Netherlands",
+        "player": "V. van Dijk",
+        "minute": 51,
+        "extra": null,
+        "displayMinute": "51'",
+        "timer": "51:00",
+        "timerSeconds": 3060,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": "R. Gravenberch",
+        "source": "api_football",
+        "matchId": 537357,
+        "matchUtcDate": "2026-06-14T20:00:00Z",
+        "homeTeam": "Netherlands",
+        "awayTeam": "Japan",
+        "goalNumber": 1
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Japan",
+        "player": "K. Nakamura",
+        "minute": 57,
+        "extra": null,
+        "displayMinute": "57'",
+        "timer": "57:00",
+        "timerSeconds": 3420,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": "T. Kubo",
+        "source": "api_football",
+        "matchId": 537357,
+        "matchUtcDate": "2026-06-14T20:00:00Z",
+        "homeTeam": "Netherlands",
+        "awayTeam": "Japan",
+        "goalNumber": 2
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Netherlands",
+        "player": "C. Summerville",
+        "minute": 64,
+        "extra": null,
+        "displayMinute": "64'",
+        "timer": "64:00",
+        "timerSeconds": 3840,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": "R. Gravenberch",
+        "source": "api_football",
+        "matchId": 537357,
+        "matchUtcDate": "2026-06-14T20:00:00Z",
+        "homeTeam": "Netherlands",
+        "awayTeam": "Japan",
+        "goalNumber": 3
+      }
+    ],
     "clock_active": true,
     "status": "IN_PLAY",
     "homeScore": 2,
@@ -2526,15 +2587,32 @@
     "awayTeam": "Japan",
     "referees": [
       {
-        "id": 76608,
-        "name": "Ismail Elfath",
-        "type": "REFEREE",
-        "nationality": "United States"
+        "name": "Ismail Elfath, USA",
+        "type": "REFEREE"
       }
     ],
-    "clock_seconds": 4597,
-    "phase_start": "2026-06-14T21:05:29.496545+00:00",
-    "base_seconds": 2700
+    "clock_seconds": 4680,
+    "phase_start": "2026-06-14T21:37:32.303958+00:00",
+    "base_seconds": 4680,
+    "source": "football_data_minute",
+    "cardEvents": [
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Netherlands",
+        "player": "C. Summerville",
+        "minute": 61,
+        "extra": null,
+        "displayMinute": "61'",
+        "timer": "61:00",
+        "timerSeconds": 3660,
+        "detail": "Yellow Card",
+        "comments": "Tripping",
+        "assist": null,
+        "source": "api_football"
+      }
+    ],
+    "apiFootballFixtureId": 1489376
   },
   "537352": {
     "goalEvents": [],
