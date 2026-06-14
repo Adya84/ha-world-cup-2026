@@ -1759,11 +1759,11 @@
       },
       "id": 537357,
       "utcDate": "2026-06-14T20:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-14T21:19:05Z",
+      "lastUpdated": "2026-06-14T22:01:02Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -1779,11 +1779,11 @@
         "crest": "https://crests.football-data.org/766.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
           "home": null,
@@ -1800,7 +1800,20 @@
           "type": "REFEREE",
           "nationality": "United States"
         }
-      ]
+      ],
+      "manualClock": {
+        "seconds": 66,
+        "timer": "1:06",
+        "displayMinute": "1'",
+        "active": true,
+        "status": "IN_PLAY",
+        "source": "local_status_timer"
+      },
+      "fallbackClock": 66,
+      "fallbackClockText": "1:06",
+      "manualClockText": "1:06",
+      "displayMinute": "1'",
+      "clockSeconds": 66
     },
     {
       "area": {
