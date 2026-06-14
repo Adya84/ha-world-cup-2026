@@ -1999,7 +1999,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489373,
       "goalEvents": [
         {
           "type": "Goal",
@@ -2042,9 +2041,25 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
-          "type": "Goal",
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Qatar",
+          "player": "M. Abunada",
+          "minute": 16,
+          "extra": null,
+          "displayMinute": "16'",
+          "timer": "16:00",
+          "timerSeconds": 960,
+          "detail": "Yellow Card",
+          "comments": "Delay of game",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Penalty",
           "rawType": "Goal",
           "team": "Switzerland",
           "player": "B. Embolo",
@@ -2056,15 +2071,190 @@
           "detail": "Penalty",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537334,
-          "matchUtcDate": "2026-06-13T19:00:00Z",
-          "homeTeam": "Qatar",
-          "awayTeam": "Switzerland",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
-          "type": "Goal",
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Qatar",
+          "player": "J. Gaber",
+          "minute": 23,
+          "extra": null,
+          "displayMinute": "23'",
+          "timer": "23:00",
+          "timerSeconds": 1380,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Switzerland",
+          "player": "D. Zakaria",
+          "minute": 42,
+          "extra": null,
+          "displayMinute": "42'",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Qatar",
+          "player": "A. Al Oui",
+          "minute": 60,
+          "extra": null,
+          "displayMinute": "60'",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "A. Fathi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Qatar",
+          "player": "J. Gaber",
+          "minute": 60,
+          "extra": null,
+          "displayMinute": "60'",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "K. Boudiaf",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Qatar",
+          "player": "Y. Abdurisag",
+          "minute": 60,
+          "extra": null,
+          "displayMinute": "60'",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "A. Alaaeldin",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Switzerland",
+          "player": "D. Ndoye",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Manzambi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Switzerland",
+          "player": "M. Aebischer",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "F. Rieder",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Qatar",
+          "player": "A. O. Madibo",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "M. Al Mannai",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Switzerland",
+          "player": "R. Vargas",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Z. Amdouni",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Qatar",
+          "player": "Edmilson Junior",
+          "minute": 88,
+          "extra": null,
+          "displayMinute": "88'",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "H. Al Haydos",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Switzerland",
+          "player": "R. Rodriguez",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "M. Muheim",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Switzerland",
+          "player": "R. Freuler",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "A. Jashari",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Own Goal",
           "rawType": "Goal",
           "team": "Qatar",
           "player": "M. Muheim",
@@ -2076,12 +2266,7 @@
           "detail": "Own Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537334,
-          "matchUtcDate": "2026-06-13T19:00:00Z",
-          "homeTeam": "Qatar",
-          "awayTeam": "Switzerland",
-          "goalNumber": 2
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -2282,7 +2467,8 @@
           "assist": "A. Jashari",
           "source": "api_football_post_match"
         }
-      ]
+      ],
+      "apiFootballFixtureId": 1489373
     },
     {
       "area": {
@@ -2851,7 +3037,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489372,
       "goalEvents": [
         {
           "type": "Goal",
@@ -2874,6 +3059,7 @@
           "goalNumber": 1
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -2888,12 +3074,187 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537340,
-          "matchUtcDate": "2026-06-14T01:00:00Z",
-          "homeTeam": "Haiti",
-          "awayTeam": "Scotland",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Haiti",
+          "player": "J. Bellegarde",
+          "minute": 39,
+          "extra": null,
+          "displayMinute": "39'",
+          "timer": "39:00",
+          "timerSeconds": 2340,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "L. Deedson",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Casimir",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "B. Gannon-Doak",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "R. Christie",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "N. Patterson",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "C. Adams",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "L. Dykes",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "W. Isidor",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Joseph",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "J. McGinn",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "F. Curtis",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "L. Shankland",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "K. McLean",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "R. Providence",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Y. Fortune",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "F. Curtis",
+          "minute": 90,
+          "extra": 1,
+          "displayMinute": "90+1'",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "K. McLean",
+          "minute": 90,
+          "extra": 5,
+          "displayMinute": "90+5'",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -3079,7 +3440,8 @@
           "assist": "Y. Fortune",
           "source": "api_football_post_match"
         }
-      ]
+      ],
+      "apiFootballFixtureId": 1489372
     },
     {
       "area": {
@@ -3104,11 +3466,11 @@
       },
       "id": 537346,
       "utcDate": "2026-06-14T04:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-14T05:10:27Z",
+      "lastUpdated": "2026-06-14T06:01:26Z",
       "homeTeam": {
         "id": 779,
         "name": "Australia",
@@ -3124,15 +3486,15 @@
         "crest": "https://crests.football-data.org/803.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -3145,7 +3507,24 @@
           "type": "REFEREE",
           "nationality": "Venezuela"
         }
-      ]
+      ],
+      "minute": 1,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "apiFootballFixtureId": 1539001,
+      "manualClock": {
+        "seconds": 60,
+        "timer": "1:00",
+        "displayMinute": "1'",
+        "active": true,
+        "status": "IN_PLAY",
+        "source": "local_status_timer"
+      },
+      "fallbackClock": 60,
+      "fallbackClockText": "1:00",
+      "manualClockText": "1:00",
+      "displayMinute": "1'",
+      "clockSeconds": 60
     },
     {
       "area": {
