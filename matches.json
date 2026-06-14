@@ -59,11 +59,12 @@
       },
       "referees": [
         {
-          "name": "Wilton Pereira Sampaio, Brazil",
-          "type": "REFEREE"
+          "id": 11412,
+          "name": "Wilton Sampaio",
+          "type": "REFEREE",
+          "nationality": "Brazil"
         }
       ],
-      "apiFootballFixtureId": 1489369,
       "goalEvents": [
         {
           "type": "Goal",
@@ -376,7 +377,8 @@
           "assist": "A. Vega",
           "source": "api_football_post_match"
         }
-      ]
+      ],
+      "apiFootballFixtureId": 1489369
     },
     {
       "area": {
@@ -437,10 +439,8 @@
       },
       "referees": [
         {
-          "id": 276653,
-          "name": "Amin Omar",
-          "type": "REFEREE",
-          "nationality": "Egypt"
+          "name": "Amin Mohamed Omar, Egypt",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -505,6 +505,7 @@
           "goalNumber": 3
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -519,12 +520,67 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "V. Coufal",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Lee Jae-Sung",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Hwang Hee-Chan",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "P. Sulc",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "A. Hlozek",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "P. Schick",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Chory",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "L. Provod",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "M. Sadilek",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -539,12 +595,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Lee Kang-In",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Son Heung-Min",
+          "minute": 69,
+          "extra": null,
+          "displayMinute": "69'",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Oh Hyeon-Gyu",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Lee Tae-Seok",
+          "minute": 69,
+          "extra": null,
+          "displayMinute": "69'",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Eom Ji-Sung",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -559,12 +640,67 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Hwang In-Beom",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Hwang In-Beom",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Kim Jin-Gyu",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Paik Seung-Ho",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Park Jin-Seob",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "A. Sojka",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "M. Chytil",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "South Korea",
+          "player": "Gi-Hyuk Lee",
+          "minute": 90,
+          "extra": 6,
+          "displayMinute": "90+6'",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
