@@ -3321,7 +3321,7 @@
     "goalEvents": [],
     "clock_active": true,
     "status": "IN_PLAY",
-    "homeScore": 0,
+    "homeScore": 1,
     "awayScore": 0,
     "utcDate": "2026-06-14T04:00:00Z",
     "homeTeam": "Australia",
@@ -3334,11 +3334,28 @@
         "nationality": "Venezuela"
       }
     ],
-    "base_seconds": 1560,
-    "clock_seconds": 1560,
-    "phase_start": "2026-06-14T04:27:03.807321+00:00",
+    "base_seconds": 1620,
+    "clock_seconds": 1620,
+    "phase_start": "2026-06-14T04:27:38.296876+00:00",
     "source": "football_data_minute",
-    "apiFootballFixtureId": 1539001
+    "apiFootballFixtureId": 1539001,
+    "events": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Australia",
+        "player": null,
+        "minute": 27,
+        "extra": null,
+        "displayMinute": "27'",
+        "timer": "27:00",
+        "timerSeconds": 1620,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football"
+      }
+    ]
   },
   "537351": {
     "goalEvents": [],
