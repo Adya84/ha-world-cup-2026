@@ -7370,9 +7370,10 @@ class WorldCup2026Panel extends HTMLElement {
 
   async loadPublicGoalEvents() {
     const urls = [
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_goal_events.json?t=" + Date.now(),
+      "/local/worldcup/world_cup_2026_goal_events.json?t=" + Date.now(),
       "/local/world_cup_2026_goal_events.json?t=" + Date.now(),
       "/world_cup_2026_frontend/data/world_cup_2026_goal_events.json?t=" + Date.now(),
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_goal_events.json?t=" + Date.now(),
     ];
 
     for (const url of urls) {
@@ -7487,6 +7488,54 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
 
+
+  mergePublicGoalEventStore(matches, goalEventStore) {
+    const list = Array.isArray(matches) ? matches : [];
+    const store = goalEventStore && typeof goalEventStore === "object" && !Array.isArray(goalEventStore)
+      ? goalEventStore
+      : {};
+
+    return list.map((match) => {
+      if (!match) return match;
+
+      const matchId = match.id ?? match.matchId ?? match.matchNumber;
+      const extra = matchId !== null && matchId !== undefined ? store[String(matchId)] : null;
+
+      if (!extra || typeof extra !== "object" || Array.isArray(extra)) {
+        return match;
+      }
+
+      const rawGoalEvents = Array.isArray(extra.goalEvents) ? extra.goalEvents : [];
+      const rawEvents = Array.isArray(extra.events) ? extra.events : [];
+      const goalEvents = this.dedupeGoalEvents(rawGoalEvents.length ? rawGoalEvents : rawEvents);
+      const cardEvents = Array.isArray(extra.cardEvents) ? extra.cardEvents : [];
+      const referees = Array.isArray(extra.referees) ? extra.referees : [];
+
+      return {
+        ...match,
+        status: extra.status || match.status,
+        homeScore: extra.homeScore ?? match.homeScore,
+        awayScore: extra.awayScore ?? match.awayScore,
+        home_score: extra.homeScore ?? extra.home_score ?? match.home_score,
+        away_score: extra.awayScore ?? extra.away_score ?? match.away_score,
+        minute: extra.minute ?? match.minute,
+        manualClock: extra.manualClock || match.manualClock,
+        fallbackClock: extra.fallbackClock ?? extra.clock_seconds ?? match.fallbackClock,
+        fallbackClockText: extra.fallbackClockText || match.fallbackClockText,
+        manualClockText: extra.manualClockText || match.manualClockText,
+        displayMinute: extra.displayMinute || match.displayMinute,
+        clockSeconds: extra.clockSeconds ?? extra.clock_seconds ?? match.clockSeconds,
+        goalEvents: goalEvents.length ? goalEvents : (Array.isArray(match.goalEvents) ? match.goalEvents : []),
+        events: rawEvents.length ? rawEvents : (goalEvents.length ? goalEvents : (Array.isArray(match.events) ? match.events : [])),
+        cardEvents: cardEvents.length ? cardEvents : (Array.isArray(match.cardEvents) ? match.cardEvents : []),
+        referees: referees.length ? referees : (Array.isArray(match.referees) ? match.referees : []),
+        referee: extra.referee || match.referee,
+        apiFootballFixtureId: extra.apiFootballFixtureId || match.apiFootballFixtureId,
+        publicGoalEventsSynced: true,
+      };
+    });
+  }
+
   async loadAll() {
     try {
       // MASTER MODE: this panel must read tournament data from the Home Assistant
@@ -7500,10 +7549,14 @@ class WorldCup2026Panel extends HTMLElement {
       const apiFixtures = this.completeOfficialFixtures(await this.callApi("world_cup_2026/get_fixtures"));
       const apiResults = this.completeOfficialFixtures(await this.safeCall("world_cup_2026/get_results", []));
 
-      this._data.live = (Array.isArray(apiLive) ? apiLive : [])
-        .filter((match) => this.isLiveMatch(match));
-      this._data.fixtures = apiFixtures;
-      this._data.results = apiResults;
+      const publicGoalEvents = await this.loadPublicGoalEvents();
+
+      this._data.live = this.mergePublicGoalEventStore(
+        (Array.isArray(apiLive) ? apiLive : []).filter((match) => this.isLiveMatch(match)),
+        publicGoalEvents
+      );
+      this._data.fixtures = this.mergePublicGoalEventStore(apiFixtures, publicGoalEvents);
+      this._data.results = this.mergePublicGoalEventStore(apiResults, publicGoalEvents);
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
       this._data.scorers = await this.safeCall("world_cup_2026/get_scorers", []);
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
