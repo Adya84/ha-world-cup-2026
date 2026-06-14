@@ -3058,7 +3058,7 @@
       }
     ],
     "clock_seconds": 5400,
-    "phase_start": "2026-06-14T21:49:39.783806+00:00",
+    "phase_start": "2026-06-14T21:50:22.410237+00:00",
     "base_seconds": 5400,
     "source": "football_data_minute",
     "cardEvents": [
@@ -3089,6 +3089,21 @@
         "timerSeconds": 4980,
         "detail": "Yellow Card",
         "comments": "Roughing",
+        "assist": null,
+        "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Netherlands",
+        "player": "M. van de Ven",
+        "minute": 90,
+        "extra": 1,
+        "displayMinute": "90+1'",
+        "timer": "91:00",
+        "timerSeconds": 5460,
+        "detail": "Yellow Card",
+        "comments": null,
         "assist": null,
         "source": "api_football"
       }
@@ -3333,6 +3348,21 @@
         "detail": "Normal Goal",
         "comments": null,
         "assist": "K. Ogawa",
+        "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Netherlands",
+        "player": "M. van de Ven",
+        "minute": 90,
+        "extra": 1,
+        "displayMinute": "90+1'",
+        "timer": "91:00",
+        "timerSeconds": 5460,
+        "detail": "Yellow Card",
+        "comments": null,
+        "assist": null,
         "source": "api_football"
       }
     ],
