@@ -7511,6 +7511,22 @@ class WorldCup2026Panel extends HTMLElement {
       const cardEvents = Array.isArray(extra.cardEvents) ? extra.cardEvents : [];
       const referees = Array.isArray(extra.referees) ? extra.referees : [];
 
+      const publicClockSecondsRaw = extra.clock_seconds ?? extra.clockSeconds ?? extra.fallbackClock;
+      const publicClockSeconds = Number(publicClockSecondsRaw);
+      const hasPublicClock = Number.isFinite(publicClockSeconds);
+      const publicClockActive = extra.clock_active ?? extra.clockActive;
+      const publicStatus = String(extra.status || match.status || "").toUpperCase();
+      const publicManualClock = hasPublicClock ? {
+        seconds: Math.max(0, Math.floor(publicClockSeconds)),
+        timer: extra.timer || extra.clockText || this.formatClockSeconds(publicClockSeconds),
+        displayMinute: extra.displayMinute || this.displayMinuteFromSeconds(publicClockSeconds),
+        active: publicClockActive === undefined || publicClockActive === null
+          ? this.isLiveClockStatus(publicStatus)
+          : !!publicClockActive,
+        status: publicStatus,
+        source: "public_goal_events_master_clock",
+      } : (extra.manualClock || null);
+
       return {
         ...match,
         status: extra.status || match.status,
@@ -7519,12 +7535,14 @@ class WorldCup2026Panel extends HTMLElement {
         home_score: extra.homeScore ?? extra.home_score ?? match.home_score,
         away_score: extra.awayScore ?? extra.away_score ?? match.away_score,
         minute: extra.minute ?? match.minute,
-        manualClock: extra.manualClock || match.manualClock,
-        fallbackClock: extra.fallbackClock ?? extra.clock_seconds ?? match.fallbackClock,
-        fallbackClockText: extra.fallbackClockText || match.fallbackClockText,
-        manualClockText: extra.manualClockText || match.manualClockText,
-        displayMinute: extra.displayMinute || match.displayMinute,
-        clockSeconds: extra.clockSeconds ?? extra.clock_seconds ?? match.clockSeconds,
+        manualClock: publicManualClock || match.manualClock,
+        fallbackClock: hasPublicClock ? Math.max(0, Math.floor(publicClockSeconds)) : (extra.fallbackClock ?? match.fallbackClock),
+        fallbackClockText: hasPublicClock ? this.formatClockSeconds(publicClockSeconds) : (extra.fallbackClockText || match.fallbackClockText),
+        manualClockText: hasPublicClock ? this.formatClockSeconds(publicClockSeconds) : (extra.manualClockText || match.manualClockText),
+        displayMinute: hasPublicClock ? this.displayMinuteFromSeconds(publicClockSeconds) : (extra.displayMinute || match.displayMinute),
+        clockSeconds: hasPublicClock ? Math.max(0, Math.floor(publicClockSeconds)) : (extra.clockSeconds ?? match.clockSeconds),
+        clock_seconds: hasPublicClock ? Math.max(0, Math.floor(publicClockSeconds)) : (extra.clock_seconds ?? match.clock_seconds),
+        clock_active: publicClockActive ?? match.clock_active,
         goalEvents: goalEvents.length ? goalEvents : (Array.isArray(match.goalEvents) ? match.goalEvents : []),
         events: rawEvents.length ? rawEvents : (goalEvents.length ? goalEvents : (Array.isArray(match.events) ? match.events : [])),
         cardEvents: cardEvents.length ? cardEvents : (Array.isArray(match.cardEvents) ? match.cardEvents : []),
@@ -7773,24 +7791,16 @@ class WorldCup2026Panel extends HTMLElement {
     const exported = this.exportedClockState(match);
     if (!exported) return { state, exported: null, changed: false };
 
-    const previousBase = Number(previous?.githubBaseSeconds ?? previous?.offsetSeconds);
-    const previousSyncedAt = Number(previous?.githubSyncedAt || 0);
-    const needsResync = !Number.isFinite(previousBase)
-      || !previousSyncedAt
-      || Math.abs(Number(exported.seconds) - previousBase) > 10
-      || previous?.githubActive !== exported.active
-      || previous?.githubSource !== exported.source;
-
-    if (!needsResync) {
-      return { state: { ...state, fromGithubClock: true }, exported, changed: false };
-    }
-
+    // The exported/public goal-events JSON is the master clock.
+    // Every refresh resets the local browser clock to the latest exported value,
+    // then the browser counts locally until the next pull. This keeps other
+    // devices synced with the main Home Assistant/API clock instead of drifting.
     const nextState = {
       ...state,
       status: exported.status || state.status,
       startedAt: exported.active ? now : null,
-      offsetSeconds: exported.seconds,
-      githubBaseSeconds: exported.seconds,
+      offsetSeconds: Math.max(0, Math.floor(Number(exported.seconds) || 0)),
+      githubBaseSeconds: Math.max(0, Math.floor(Number(exported.seconds) || 0)),
       githubSyncedAt: now,
       githubActive: exported.active,
       githubSource: exported.source,
@@ -7800,10 +7810,11 @@ class WorldCup2026Panel extends HTMLElement {
     if (exported.active) {
       delete nextState.freezeAt;
     } else {
-      nextState.freezeAt = exported.seconds;
+      nextState.freezeAt = Math.max(0, Math.floor(Number(exported.seconds) || 0));
     }
 
-    return { state: nextState, exported, changed: true };
+    const changed = JSON.stringify(nextState) !== JSON.stringify(state);
+    return { state: nextState, exported, changed };
   }
 
   isExtraTimeMatch(match) {
