@@ -2244,7 +2244,7 @@
     ],
     "clock_active": true,
     "status": "IN_PLAY",
-    "homeScore": 1,
+    "homeScore": 2,
     "awayScore": 0,
     "utcDate": "2026-06-14T04:00:00Z",
     "homeTeam": "Australia",
@@ -2257,9 +2257,9 @@
         "nationality": "Venezuela"
       }
     ],
-    "base_seconds": 4440,
-    "clock_seconds": 4440,
-    "phase_start": "2026-06-14T05:34:29.914116+00:00",
+    "base_seconds": 4500,
+    "clock_seconds": 4500,
+    "phase_start": "2026-06-14T05:35:05.170892+00:00",
     "source": "football_data_minute",
     "apiFootballFixtureId": 1539001,
     "events": [
@@ -2322,6 +2322,36 @@
         "comments": null,
         "assist": "Y. Akgun",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Australia",
+        "player": "J. Italiano",
+        "minute": 75,
+        "extra": null,
+        "displayMinute": "75'",
+        "timer": "75:00",
+        "timerSeconds": 4500,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "J. Geria",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Australia",
+        "player": null,
+        "minute": 75,
+        "extra": null,
+        "displayMinute": "75'",
+        "timer": "75:00",
+        "timerSeconds": 4500,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football"
       }
     ],
     "substitutionEvents": [
@@ -2368,6 +2398,21 @@
         "detail": "Substitution 2",
         "comments": null,
         "assist": "Y. Akgun",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Australia",
+        "player": "J. Italiano",
+        "minute": 75,
+        "extra": null,
+        "displayMinute": "75'",
+        "timer": "75:00",
+        "timerSeconds": 4500,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "J. Geria",
         "source": "api_football"
       }
     ]
