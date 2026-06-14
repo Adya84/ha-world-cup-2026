@@ -1759,11 +1759,11 @@
       },
       "id": 537357,
       "utcDate": "2026-06-14T20:00:00Z",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-14T22:49:50Z",
+      "lastUpdated": "2026-06-14T22:50:23Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -1786,8 +1786,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -1802,18 +1802,18 @@
         }
       ],
       "manualClock": {
-        "seconds": 2992,
-        "timer": "49:52",
-        "displayMinute": "49'",
-        "active": true,
-        "status": "IN_PLAY",
+        "seconds": 2700,
+        "timer": "45:00",
+        "displayMinute": "45'",
+        "active": false,
+        "status": "PAUSED",
         "source": "local_status_timer"
       },
-      "fallbackClock": 2992,
-      "fallbackClockText": "49:52",
-      "manualClockText": "49:52",
-      "displayMinute": "49'",
-      "clockSeconds": 2992
+      "fallbackClock": 2700,
+      "fallbackClockText": "45:00",
+      "manualClockText": "45:00",
+      "displayMinute": "45'",
+      "clockSeconds": 2700
     },
     {
       "area": {
