@@ -4880,6 +4880,101 @@
         "apiFootballFixtureId": 1539001,
         "goalEventsSource": null
       }
+    },
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537351,
+      "utcDate": "2026-06-14T17:00:00Z",
+      "status": "IN_PLAY",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_E",
+      "lastUpdated": "2026-06-14T19:05:35Z",
+      "homeTeam": {
+        "id": 759,
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg"
+      },
+      "awayTeam": {
+        "id": 9460,
+        "name": "Cura\u00e7ao",
+        "shortName": "Cura\u00e7ao",
+        "tla": "CUW",
+        "crest": "https://crests.football-data.org/curacao.svg"
+      },
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 289426,
+          "name": "Jalal Jayed",
+          "type": "REFEREE",
+          "nationality": "Morocco"
+        }
+      ],
+      "manualClock": {
+        "seconds": 337,
+        "timer": "5:37",
+        "displayMinute": "5'",
+        "active": true,
+        "status": "IN_PLAY",
+        "source": "local_status_timer"
+      },
+      "fallbackClock": 337,
+      "fallbackClockText": "5:37",
+      "manualClockText": "5:37",
+      "displayMinute": "5'",
+      "clockSeconds": 337,
+      "matchDetails": {
+        "events": [],
+        "goalEvents": [],
+        "cardEvents": [],
+        "substitutionEvents": [],
+        "referees": [
+          {
+            "id": 289426,
+            "name": "Jalal Jayed",
+            "type": "REFEREE",
+            "nationality": "Morocco"
+          }
+        ],
+        "apiFootballFixtureId": null,
+        "goalEventsSource": null
+      }
     }
   ],
   "matches": [
@@ -9761,6 +9856,101 @@
           }
         ],
         "apiFootballFixtureId": 1539001,
+        "goalEventsSource": null
+      }
+    },
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537351,
+      "utcDate": "2026-06-14T17:00:00Z",
+      "status": "IN_PLAY",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_E",
+      "lastUpdated": "2026-06-14T19:05:35Z",
+      "homeTeam": {
+        "id": 759,
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER",
+        "crest": "https://crests.football-data.org/759.svg"
+      },
+      "awayTeam": {
+        "id": 9460,
+        "name": "Cura\u00e7ao",
+        "shortName": "Cura\u00e7ao",
+        "tla": "CUW",
+        "crest": "https://crests.football-data.org/curacao.svg"
+      },
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 289426,
+          "name": "Jalal Jayed",
+          "type": "REFEREE",
+          "nationality": "Morocco"
+        }
+      ],
+      "manualClock": {
+        "seconds": 337,
+        "timer": "5:37",
+        "displayMinute": "5'",
+        "active": true,
+        "status": "IN_PLAY",
+        "source": "local_status_timer"
+      },
+      "fallbackClock": 337,
+      "fallbackClockText": "5:37",
+      "manualClockText": "5:37",
+      "displayMinute": "5'",
+      "clockSeconds": 337,
+      "matchDetails": {
+        "events": [],
+        "goalEvents": [],
+        "cardEvents": [],
+        "substitutionEvents": [],
+        "referees": [
+          {
+            "id": 289426,
+            "name": "Jalal Jayed",
+            "type": "REFEREE",
+            "nationality": "Morocco"
+          }
+        ],
+        "apiFootballFixtureId": null,
         "goalEventsSource": null
       }
     }
