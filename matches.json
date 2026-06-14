@@ -4149,7 +4149,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-14T23:40:04Z",
+      "lastUpdated": "2026-06-14T23:40:37Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -4185,7 +4185,7 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 81,
+      "minute": 82,
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
       "goalEvents": [
@@ -4415,6 +4415,21 @@
           "comments": null,
           "assist": "Y. Sugawara",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "R. Gravenberch",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "N. Ake",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -4540,22 +4555,37 @@
           "comments": null,
           "assist": "Y. Sugawara",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "R. Gravenberch",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "N. Ake",
+          "source": "api_football"
         }
       ],
       "apiFootballFixtureId": 1489376,
       "manualClock": {
-        "seconds": 4860,
-        "timer": "81:00",
-        "displayMinute": "81'",
+        "seconds": 4920,
+        "timer": "82:00",
+        "displayMinute": "82'",
         "active": true,
         "status": "IN_PLAY",
         "source": "local_status_timer"
       },
-      "fallbackClock": 4860,
-      "fallbackClockText": "81:00",
-      "manualClockText": "81:00",
-      "displayMinute": "81'",
-      "clockSeconds": 4860
+      "fallbackClock": 4920,
+      "fallbackClockText": "82:00",
+      "manualClockText": "82:00",
+      "displayMinute": "82'",
+      "clockSeconds": 4920
     },
     {
       "area": {
