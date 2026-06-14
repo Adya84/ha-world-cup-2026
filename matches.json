@@ -1285,6 +1285,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489370,
       "goalEvents": [
         {
           "type": "Goal",
@@ -1387,10 +1388,9 @@
           "goalNumber": 5
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
-          "type": "Own Goal",
+          "type": "Goal",
           "rawType": "Goal",
           "team": "USA",
           "player": "D. Bobadilla",
@@ -1402,37 +1402,12 @@
           "detail": "Own Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Paraguay",
-          "player": "J. Caceres",
-          "minute": 10,
-          "extra": null,
-          "displayMinute": "10'",
-          "timer": "10:00",
-          "timerSeconds": 600,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "VAR",
-          "rawType": "Var",
-          "team": "USA",
-          "player": "F. Balogun",
-          "minute": 28,
-          "extra": null,
-          "displayMinute": "28'",
-          "timer": "28:00",
-          "timerSeconds": 1680,
-          "detail": "Goal Disallowed - offside",
-          "comments": null,
-          "assist": null,
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
+          "homeTeam": "USA",
+          "awayTeam": "Paraguay",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -1447,37 +1422,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Pulisic",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Paraguay",
-          "player": "D. Bobadilla",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "Mauricio",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "USA",
-          "player": "C. Pulisic",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "S. Berhalter",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
+          "homeTeam": "USA",
+          "awayTeam": "Paraguay",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -1492,82 +1442,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "M. Tillman",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Paraguay",
-          "player": "M. Almiron",
-          "minute": 53,
-          "extra": null,
-          "displayMinute": "53'",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "detail": "Yellow Card",
-          "comments": "Diving",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "USA",
-          "player": "T. Adams",
-          "minute": 59,
-          "extra": null,
-          "displayMinute": "59'",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "detail": "Yellow Card",
-          "comments": "Roughing",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Paraguay",
-          "player": "A. Sanabria",
-          "minute": 62,
-          "extra": null,
-          "displayMinute": "62'",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "A. Arce",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "USA",
-          "player": "S. Dest",
-          "minute": 72,
-          "extra": null,
-          "displayMinute": "72'",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "T. Weah",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "USA",
-          "player": "F. Balogun",
-          "minute": 72,
-          "extra": null,
-          "displayMinute": "72'",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "R. Pepi",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
+          "homeTeam": "USA",
+          "awayTeam": "Paraguay",
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -1582,112 +1462,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Enciso",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Paraguay",
-          "player": "D. Gomez",
-          "minute": 79,
-          "extra": null,
-          "displayMinute": "79'",
-          "timer": "79:00",
-          "timerSeconds": 4740,
-          "detail": "Yellow Card",
-          "comments": "Holding",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Paraguay",
-          "player": "M. Almiron",
-          "minute": 79,
-          "extra": null,
-          "displayMinute": "79'",
-          "timer": "79:00",
-          "timerSeconds": 4740,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "R. Sosa",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Paraguay",
-          "player": "J. Caceres",
-          "minute": 79,
-          "extra": null,
-          "displayMinute": "79'",
-          "timer": "79:00",
-          "timerSeconds": 4740,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "G. Velazquez",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Paraguay",
-          "player": "D. Gomez",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "Kaku",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "USA",
-          "player": "M. Tillman",
-          "minute": 82,
-          "extra": null,
-          "displayMinute": "82'",
-          "timer": "82:00",
-          "timerSeconds": 4920,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "G. Reyna",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Paraguay",
-          "player": "A. Arce",
-          "minute": 88,
-          "extra": null,
-          "displayMinute": "88'",
-          "timer": "88:00",
-          "timerSeconds": 5280,
-          "detail": "Yellow Card",
-          "comments": "Roughing",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Paraguay",
-          "player": "J. Alonso",
-          "minute": 90,
-          "extra": 3,
-          "displayMinute": "90+3'",
-          "timer": "93:00",
-          "timerSeconds": 5580,
-          "detail": "Yellow Card",
-          "comments": "Holding",
-          "assist": null,
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
+          "homeTeam": "USA",
+          "awayTeam": "Paraguay",
+          "goalNumber": 4
         },
         {
           "type": "Goal",
@@ -1702,7 +1482,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "A. Freeman",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
+          "homeTeam": "USA",
+          "awayTeam": "Paraguay",
+          "goalNumber": 5
         }
       ],
       "cardEvents": [
@@ -1933,8 +1718,7 @@
           "assist": "G. Reyna",
           "source": "api_football_post_match"
         }
-      ],
-      "apiFootballFixtureId": 1489370
+      ]
     },
     {
       "area": {
