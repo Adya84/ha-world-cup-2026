@@ -2485,9 +2485,9 @@
         "nationality": "Venezuela"
       }
     ],
-    "base_seconds": 2700,
-    "clock_seconds": 2700,
-    "phase_start": "2026-06-14T05:06:11.937947+00:00",
+    "base_seconds": 2820,
+    "clock_seconds": 2820,
+    "phase_start": "2026-06-14T05:06:46.887517+00:00",
     "source": "football_data_minute",
     "apiFootballFixtureId": 1539001,
     "events": [
@@ -2504,6 +2504,38 @@
         "detail": "Normal Goal",
         "comments": null,
         "assist": "P. Okon-Engstler",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "T\u00fcrkiye",
+        "player": "B. Yilmaz",
+        "minute": 46,
+        "extra": null,
+        "displayMinute": "46'",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "K. Yildiz",
+        "source": "api_football"
+      }
+    ],
+    "substitutionEvents": [
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "T\u00fcrkiye",
+        "player": "B. Yilmaz",
+        "minute": 46,
+        "extra": null,
+        "displayMinute": "46'",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "K. Yildiz",
         "source": "api_football"
       }
     ]
