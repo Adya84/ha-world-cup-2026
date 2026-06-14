@@ -6561,7 +6561,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1539001,
       "goalEvents": [
         {
           "type": "Goal",
@@ -6604,6 +6603,7 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -6618,12 +6618,82 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "P. Okon-Engstler",
-          "source": "api_football_post_match",
-          "matchId": 537346,
-          "matchUtcDate": "2026-06-14T04:00:00Z",
-          "homeTeam": "Australia",
-          "awayTeam": "Turkey",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "B. Yilmaz",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "K. Yildiz",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "N. Irankunda",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Velupillay",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "O. Kokcu",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Y. Akgun",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "M. Toure",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Yengi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Italiano",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "J. Geria",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6638,12 +6708,97 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537346,
-          "matchUtcDate": "2026-06-14T04:00:00Z",
-          "homeTeam": "Australia",
-          "awayTeam": "Turkey",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "I. Yuksek",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "S. Ozcan",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "Z. Celik",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "M. Muldur",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Bos",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Behich",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "P. Okon-Engstler",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "J. Irvine",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "K. Akturkoglu",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "D. Gul",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "T\u00fcrkiye",
+          "player": "Y. Akgun",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -6815,6 +6970,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1539001,
       "matchDetails": {
         "events": [
           {
@@ -6830,12 +6986,82 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "P. Okon-Engstler",
-            "source": "api_football_post_match",
-            "matchId": 537346,
-            "matchUtcDate": "2026-06-14T04:00:00Z",
-            "homeTeam": "Australia",
-            "awayTeam": "Turkey",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "B. Yilmaz",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "K. Yildiz",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "N. Irankunda",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Velupillay",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "O. Kokcu",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Y. Akgun",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "M. Toure",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Yengi",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "J. Italiano",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "J. Geria",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -6850,12 +7076,97 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537346,
-            "matchUtcDate": "2026-06-14T04:00:00Z",
-            "homeTeam": "Australia",
-            "awayTeam": "Turkey",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "I. Yuksek",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "S. Ozcan",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "Z. Celik",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "M. Muldur",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "J. Bos",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Behich",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "P. Okon-Engstler",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "J. Irvine",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "K. Akturkoglu",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "D. Gul",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "T\u00fcrkiye",
+            "player": "Y. Akgun",
+            "minute": 86,
+            "extra": null,
+            "displayMinute": "86'",
+            "timer": "86:00",
+            "timerSeconds": 5160,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -7076,7 +7387,7 @@
           }
         ],
         "apiFootballFixtureId": 1539001,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -7142,7 +7453,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489374,
       "goalEvents": [
         {
           "type": "Goal",
@@ -7305,6 +7615,7 @@
           "goalNumber": 8
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -7319,12 +7630,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "F. Wirtz",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7339,12 +7645,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 2
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7359,12 +7660,22 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "N. Brown",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "S. Hansen",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Antonisse",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7379,15 +7690,10 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 4
+          "source": "api_football_post_match"
         },
         {
-          "type": "Goal",
+          "type": "Penalty",
           "rawType": "Goal",
           "team": "Germany",
           "player": "K. Havertz",
@@ -7399,12 +7705,37 @@
           "detail": "Penalty",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 5
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Musiala",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "D. Undav",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "J. Locadia",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Margaritha",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7419,12 +7750,52 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 6
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Tah",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Rudiger",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "F. Nmecha",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "L. Goretzka",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "N. Brown",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "D. Raum",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7439,12 +7810,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 7
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "T. Chong",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "G. Kastaneer",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Kimmich",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "W. Anton",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7459,12 +7855,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 8
+          "source": "api_football_post_match"
         }
       ],
       "substitutionEvents": [
@@ -7589,6 +7980,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489374,
       "matchDetails": {
         "events": [
           {
@@ -7604,12 +7996,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "F. Wirtz",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7624,12 +8011,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 2
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7644,12 +8026,22 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "N. Brown",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 3
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "S. Hansen",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Antonisse",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7664,15 +8056,10 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 4
+            "source": "api_football_post_match"
           },
           {
-            "type": "Goal",
+            "type": "Penalty",
             "rawType": "Goal",
             "team": "Germany",
             "player": "K. Havertz",
@@ -7684,12 +8071,37 @@
             "detail": "Penalty",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 5
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Musiala",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "D. Undav",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "J. Locadia",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Margaritha",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7704,12 +8116,52 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 6
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Tah",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Rudiger",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "F. Nmecha",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "L. Goretzka",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "N. Brown",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "D. Raum",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7724,12 +8176,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 7
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "T. Chong",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "G. Kastaneer",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Kimmich",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "W. Anton",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7744,12 +8221,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 8
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -8044,7 +8516,7 @@
           }
         ],
         "apiFootballFixtureId": 1489374,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -15411,7 +15883,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1539001,
       "goalEvents": [
         {
           "type": "Goal",
@@ -15454,6 +15925,7 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -15468,12 +15940,82 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "P. Okon-Engstler",
-          "source": "api_football_post_match",
-          "matchId": 537346,
-          "matchUtcDate": "2026-06-14T04:00:00Z",
-          "homeTeam": "Australia",
-          "awayTeam": "Turkey",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "B. Yilmaz",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "K. Yildiz",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "N. Irankunda",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Velupillay",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "O. Kokcu",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Y. Akgun",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "M. Toure",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Yengi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Italiano",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "J. Geria",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -15488,12 +16030,97 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537346,
-          "matchUtcDate": "2026-06-14T04:00:00Z",
-          "homeTeam": "Australia",
-          "awayTeam": "Turkey",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "I. Yuksek",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "S. Ozcan",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "Z. Celik",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "M. Muldur",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Bos",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Behich",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "P. Okon-Engstler",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "J. Irvine",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "K. Akturkoglu",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "D. Gul",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "T\u00fcrkiye",
+          "player": "Y. Akgun",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -15665,6 +16292,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1539001,
       "matchDetails": {
         "events": [
           {
@@ -15680,12 +16308,82 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "P. Okon-Engstler",
-            "source": "api_football_post_match",
-            "matchId": 537346,
-            "matchUtcDate": "2026-06-14T04:00:00Z",
-            "homeTeam": "Australia",
-            "awayTeam": "Turkey",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "B. Yilmaz",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "K. Yildiz",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "N. Irankunda",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Velupillay",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "O. Kokcu",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Y. Akgun",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "M. Toure",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Yengi",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "J. Italiano",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "J. Geria",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -15700,12 +16398,97 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537346,
-            "matchUtcDate": "2026-06-14T04:00:00Z",
-            "homeTeam": "Australia",
-            "awayTeam": "Turkey",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "I. Yuksek",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "S. Ozcan",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "Z. Celik",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "M. Muldur",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "J. Bos",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Behich",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "P. Okon-Engstler",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "J. Irvine",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "K. Akturkoglu",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "D. Gul",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "T\u00fcrkiye",
+            "player": "Y. Akgun",
+            "minute": 86,
+            "extra": null,
+            "displayMinute": "86'",
+            "timer": "86:00",
+            "timerSeconds": 5160,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -15926,7 +16709,7 @@
           }
         ],
         "apiFootballFixtureId": 1539001,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -15992,7 +16775,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489374,
       "goalEvents": [
         {
           "type": "Goal",
@@ -16155,6 +16937,7 @@
           "goalNumber": 8
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -16169,12 +16952,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "F. Wirtz",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -16189,12 +16967,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 2
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -16209,12 +16982,22 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "N. Brown",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "S. Hansen",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Antonisse",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -16229,15 +17012,10 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 4
+          "source": "api_football_post_match"
         },
         {
-          "type": "Goal",
+          "type": "Penalty",
           "rawType": "Goal",
           "team": "Germany",
           "player": "K. Havertz",
@@ -16249,12 +17027,37 @@
           "detail": "Penalty",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 5
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Musiala",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "D. Undav",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "J. Locadia",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Margaritha",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -16269,12 +17072,52 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 6
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Tah",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Rudiger",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "F. Nmecha",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "L. Goretzka",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "N. Brown",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "D. Raum",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -16289,12 +17132,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 7
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "T. Chong",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "G. Kastaneer",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Kimmich",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "W. Anton",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -16309,12 +17177,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 8
+          "source": "api_football_post_match"
         }
       ],
       "substitutionEvents": [
@@ -16439,6 +17302,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489374,
       "matchDetails": {
         "events": [
           {
@@ -16454,12 +17318,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "F. Wirtz",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -16474,12 +17333,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 2
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -16494,12 +17348,22 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "N. Brown",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 3
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "S. Hansen",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Antonisse",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -16514,15 +17378,10 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 4
+            "source": "api_football_post_match"
           },
           {
-            "type": "Goal",
+            "type": "Penalty",
             "rawType": "Goal",
             "team": "Germany",
             "player": "K. Havertz",
@@ -16534,12 +17393,37 @@
             "detail": "Penalty",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 5
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Musiala",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "D. Undav",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "J. Locadia",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Margaritha",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -16554,12 +17438,52 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 6
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Tah",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Rudiger",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "F. Nmecha",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "L. Goretzka",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "N. Brown",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "D. Raum",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -16574,12 +17498,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 7
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "T. Chong",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "G. Kastaneer",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Kimmich",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "W. Anton",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -16594,12 +17543,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 8
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -16894,7 +17838,7 @@
           }
         ],
         "apiFootballFixtureId": 1489374,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
