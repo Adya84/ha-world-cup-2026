@@ -4149,7 +4149,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-14T23:42:34Z",
+      "lastUpdated": "2026-06-14T23:43:10Z",
       "homeTeam": {
         "id": 8601,
         "name": "Netherlands",
@@ -4185,7 +4185,7 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 83,
+      "minute": 84,
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
       "goalEvents": [
@@ -4330,7 +4330,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "T. Reijnders",
+          "player": "D. Malen",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -4338,7 +4338,7 @@
           "timerSeconds": 4200,
           "detail": "Substitution 1",
           "comments": null,
-          "assist": "Q. Timber",
+          "assist": "M. Depay",
           "source": "api_football"
         },
         {
@@ -4360,7 +4360,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "D. Malen",
+          "player": "T. Reijnders",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -4368,7 +4368,7 @@
           "timerSeconds": 4200,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "M. Depay",
+          "assist": "Q. Timber",
           "source": "api_football"
         },
         {
@@ -4442,8 +4442,23 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "detail": "Yellow Card",
-          "comments": null,
+          "comments": "Roughing",
           "assist": null,
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "A. Ueda",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "K. Shiogai",
           "source": "api_football"
         }
       ],
@@ -4475,7 +4490,7 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "detail": "Yellow Card",
-          "comments": null,
+          "comments": "Roughing",
           "assist": null,
           "source": "api_football"
         }
@@ -4500,7 +4515,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "T. Reijnders",
+          "player": "D. Malen",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -4508,7 +4523,7 @@
           "timerSeconds": 4200,
           "detail": "Substitution 1",
           "comments": null,
-          "assist": "Q. Timber",
+          "assist": "M. Depay",
           "source": "api_football"
         },
         {
@@ -4530,7 +4545,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Netherlands",
-          "player": "D. Malen",
+          "player": "T. Reijnders",
           "minute": 70,
           "extra": null,
           "displayMinute": "70'",
@@ -4538,7 +4553,7 @@
           "timerSeconds": 4200,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "M. Depay",
+          "assist": "Q. Timber",
           "source": "api_football"
         },
         {
@@ -4600,22 +4615,37 @@
           "comments": null,
           "assist": "N. Ake",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "A. Ueda",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "K. Shiogai",
+          "source": "api_football"
         }
       ],
       "apiFootballFixtureId": 1489376,
       "manualClock": {
-        "seconds": 4980,
-        "timer": "83:00",
-        "displayMinute": "83'",
+        "seconds": 5040,
+        "timer": "84:00",
+        "displayMinute": "84'",
         "active": true,
         "status": "IN_PLAY",
         "source": "local_status_timer"
       },
-      "fallbackClock": 4980,
-      "fallbackClockText": "83:00",
-      "manualClockText": "83:00",
-      "displayMinute": "83'",
-      "clockSeconds": 4980
+      "fallbackClock": 5040,
+      "fallbackClockText": "84:00",
+      "manualClockText": "84:00",
+      "displayMinute": "84'",
+      "clockSeconds": 5040
     },
     {
       "area": {
