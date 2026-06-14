@@ -187,6 +187,64 @@ def _api_fixture_matches_match(api_home, api_away, match):
     )
 
 
+
+
+def _api_football_item_datetime(item):
+    """Return API-Football fixture kickoff as UTC datetime when present."""
+    fixture = item.get("fixture") or {} if isinstance(item, dict) else {}
+    value = fixture.get("date")
+    return parse_datetime_utc(value)
+
+
+def _api_football_item_score(item):
+    """Return API-Football home/away score for an item."""
+    goals = item.get("goals") or {} if isinstance(item, dict) else {}
+    home = _safe_int(goals.get("home"))
+    away = _safe_int(goals.get("away"))
+    if home is None or away is None:
+        score = item.get("score") or {} if isinstance(item, dict) else {}
+        fulltime = score.get("fulltime") or {}
+        if home is None:
+            home = _safe_int(fulltime.get("home"))
+        if away is None:
+            away = _safe_int(fulltime.get("away"))
+    return home, away
+
+
+def _api_football_item_matches_candidate(item, candidate):
+    """Return True when an API-Football item is the same game as a candidate match."""
+    teams = item.get("teams") or {} if isinstance(item, dict) else {}
+    api_home = (teams.get("home") or {}).get("name")
+    api_away = (teams.get("away") or {}).get("name")
+
+    if not _api_fixture_matches_match(api_home, api_away, candidate):
+        return False
+
+    candidate_dt = parse_datetime_utc(candidate.get("utcDate"))
+    item_dt = _api_football_item_datetime(item)
+    if candidate_dt and item_dt:
+        # Providers sometimes disagree on date around midnight/timezone. Allow
+        # a generous window, but still reject unrelated fixtures.
+        if abs((candidate_dt - item_dt).total_seconds()) > 36 * 60 * 60:
+            return False
+
+    api_home_score, api_away_score = _api_football_item_score(item)
+    match_home_score, match_away_score = _full_time_score(candidate)
+    match_home_score = _safe_int(match_home_score)
+    match_away_score = _safe_int(match_away_score)
+
+    if api_home_score is not None and api_away_score is not None and match_home_score is not None and match_away_score is not None:
+        candidate_home = _team_name(candidate.get("homeTeam", {}))
+        candidate_away = _team_name(candidate.get("awayTeam", {}))
+        same_order = _team_names_match(api_home, candidate_home) and _team_names_match(api_away, candidate_away)
+        reverse_order = _team_names_match(api_home, candidate_away) and _team_names_match(api_away, candidate_home)
+        if same_order and (api_home_score, api_away_score) != (match_home_score, match_away_score):
+            return False
+        if reverse_order and (api_home_score, api_away_score) != (match_away_score, match_home_score):
+            return False
+
+    return True
+
 def _full_time_score(match):
     score = match.get("score") or {}
     full_time = score.get("fullTime") or {}
@@ -604,13 +662,22 @@ class WorldCupCoordinator(DataUpdateCoordinator):
     def _goal_event_store_path(self):
         return Path("/config/world_cup_2026_goal_events.json")
 
+    def _goal_event_store_read_paths(self):
+        """Home Assistant usually maps /config to /homeassistant, but support both."""
+        primary = self._goal_event_store_path()
+        return [
+            primary,
+            Path("/homeassistant/world_cup_2026_goal_events.json"),
+        ]
+
     def _load_goal_event_store_sync(self):
         """Load persisted match clocks and goal events off the event loop."""
-        path = self._goal_event_store_path()
-        if not path.exists():
-            return {}
-        data = json.loads(path.read_text(encoding="utf-8"))
-        return data if isinstance(data, dict) else {}
+        for path in self._goal_event_store_read_paths():
+            if not path.exists():
+                continue
+            data = json.loads(path.read_text(encoding="utf-8"))
+            return data if isinstance(data, dict) else {}
+        return {}
 
     async def _async_load_goal_event_store(self):
         """Load persisted match clocks and goal events without blocking Home Assistant."""
@@ -1044,24 +1111,91 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
         return settings
 
+    def _build_public_results_feed(self, matches):
+        """Build the public Results feed from the full API fixture list.
+
+        Live data is still exported separately for Live Now. Finished matches are
+        taken from the API fixture/results data so a game can leave Live Now
+        without disappearing from the public Results page/GitHub feed.
+        """
+        seen = set()
+        results = []
+
+        for match in matches or []:
+            if not _is_finished(match):
+                continue
+
+            match_id = (
+                match.get("id")
+                or match.get("matchId")
+                or match.get("apiFootballFixtureId")
+                or f"{_team_name(match.get('homeTeam', {}))}-{_team_name(match.get('awayTeam', {}))}-{match.get('utcDate') or match.get('date') or ''}"
+            )
+
+            if match_id in seen:
+                continue
+
+            seen.add(match_id)
+            public_match = dict(match)
+            public_match["matchDetails"] = {
+                "events": public_match.get("events") or [],
+                "goalEvents": public_match.get("goalEvents") or [],
+                "cardEvents": public_match.get("cardEvents") or [],
+                "substitutionEvents": public_match.get("substitutionEvents") or [],
+                "referees": public_match.get("referees") or [],
+                "apiFootballFixtureId": public_match.get("apiFootballFixtureId"),
+                "goalEventsSource": public_match.get("goalEventsSource"),
+            }
+            results.append(public_match)
+
+        results.sort(key=lambda match: match.get("utcDate") or match.get("date") or "")
+        return results
+
     async def _export_public_json(self, matches, standings, scorers):
-        """Export public JSON files to /config/www/worldcup."""
+        """Export public JSON files to /config/www/worldcup and GitHub.
+
+        Important split:
+        - matches/live feeds keep current live fixtures for the Live page.
+        - results feeds use the finished-match API fixture data for Results.
+        """
         export_dir = Path("/config/www/worldcup")
         export_dir.mkdir(parents=True, exist_ok=True)
 
+        live_matches = [match for match in matches if match.get("status") in LIVE_STATUSES]
+        results = self._build_public_results_feed(matches)
+
         files = {
+            # Root files for the existing public panel URLs.
             "matches.json": {"matches": matches},
+            "world_cup_2026_live.json": {"matches": live_matches, "live": live_matches},
+            "world_cup_2026_results.json": {"results": results, "matches": results},
             "standings.json": {"standings": standings},
             "scorers.json": {"scorers": scorers},
+            "world_cup_2026_goal_events.json": self._goal_event_store,
+
+            # Duplicate into the new GitHub /worldcup folder as well.
+            "worldcup/matches.json": {"matches": matches},
+            "worldcup/world_cup_2026_live.json": {"matches": live_matches, "live": live_matches},
+            "worldcup/world_cup_2026_results.json": {"results": results, "matches": results},
+            "worldcup/standings.json": {"standings": standings},
+            "worldcup/scorers.json": {"scorers": scorers},
+            "worldcup/world_cup_2026_goal_events.json": self._goal_event_store,
         }
 
         for filename, payload in files.items():
+            path = export_dir / filename
+            await asyncio.to_thread(path.parent.mkdir, parents=True, exist_ok=True)
             await asyncio.to_thread(
-                lambda name=filename, data=payload: (export_dir / name).write_text(
-                    json.dumps(data, indent=2),
-                    encoding="utf-8",
-                )
+                path.write_text,
+                json.dumps(payload, indent=2),
+                encoding="utf-8",
             )
+
+        _LOGGER.info(
+            "World Cup public JSON built: %s live matches, %s finished results",
+            len(live_matches),
+            len(results),
+        )
 
         return files
 
@@ -1506,30 +1640,46 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         return []
 
     def _needs_post_match_events(self, match, now):
-        """Return True when a finished match has missing or incomplete goal times."""
+        """Return True when a finished match is missing rich timeline data.
+
+        Results exported to GitHub should be more than just the score. Keep
+        checking recent finished matches until goals/own goals/assists/cards,
+        substitutions, VAR/referee and the full event timeline have been pulled
+        from API-Football.
+        """
         if match.get("status") not in FINISHED_STATUSES:
             return False
 
-        expected_goals = _expected_goal_count_from_match(match)
-        if expected_goals is None or expected_goals <= 0:
+        kickoff = parse_datetime_utc(match.get("utcDate"))
+        if kickoff and not (timedelta(0) <= (now - kickoff) <= timedelta(days=14)):
             return False
 
-        existing_events = match.get("goalEvents") or match.get("events") or []
-        existing_goal_count = _count_goal_events(existing_events)
+        events = match.get("events") or []
+        goal_events = match.get("goalEvents") or []
+        card_events = match.get("cardEvents") or []
+        substitution_events = match.get("substitutionEvents") or []
+
+        expected_goals = _expected_goal_count_from_match(match)
+        existing_goal_count = _count_goal_events(goal_events or events)
 
         # Important: do not only check "has events". A match can have a partial
         # API-Football event list, e.g. USA 4-1 showing only 3 USA goal events.
         # Re-fetch until the stored goal-event count matches the final score.
-        if existing_goal_count >= expected_goals:
-            return False
-
-        kickoff = parse_datetime_utc(match.get("utcDate"))
-        if not kickoff:
+        if expected_goals is not None and expected_goals > 0 and existing_goal_count < expected_goals:
             return True
 
-        # Only backfill recent finished matches automatically. This avoids
-        # burning API-Football calls against old matches every normal poll.
-        return timedelta(0) <= (now - kickoff) <= timedelta(days=14)
+        # The full Results feed should carry the match timeline, not just goals.
+        # Substitutions are the best signal that the full event endpoint has
+        # been pulled; cards/referees/fixture id are kept when the provider has
+        # them, but some matches genuinely may have no cards.
+        if not events:
+            return True
+        if not substitution_events:
+            return True
+        if not match.get("apiFootballFixtureId"):
+            return True
+
+        return False
 
     async def _fetch_post_match_events_from_api_football(self, matches):
         """Fetch goal events for recently finished matches missing goal times.
@@ -1555,7 +1705,17 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
         headers = {"x-apisports-key": api_key}
         timeout = aiohttp.ClientTimeout(total=30)
-        dates = sorted({parse_datetime_utc(match.get("utcDate")).date().isoformat() for match in candidates if parse_datetime_utc(match.get("utcDate"))})
+        # Search the match day plus one day either side. This fixes games that
+        # providers place on different dates because one API is using local
+        # stadium time and the other is using UTC.
+        date_values = set()
+        for match in candidates:
+            match_dt = parse_datetime_utc(match.get("utcDate"))
+            if not match_dt:
+                continue
+            for offset_days in (-1, 0, 1):
+                date_values.add((match_dt + timedelta(days=offset_days)).date().isoformat())
+        dates = sorted(date_values)
         post_match_data = {}
 
         try:
@@ -1606,7 +1766,12 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             if event
                         ]
 
-                        if fixture_id and (not goal_events or not all_events):
+                        if fixture_id:
+                            # Always call the dedicated events endpoint for
+                            # recent finished matches. The date fixture payload
+                            # can contain only scores or partial events; this is
+                            # where subs, cards, VAR, assists and own-goal
+                            # details are normally complete.
                             fixture_event_data = await self._fetch_api_football_events_for_fixture(
                                 session,
                                 fixture_id,
@@ -1614,7 +1779,9 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             )
                             if fixture_event_data.get("events"):
                                 all_events = fixture_event_data.get("events", [])
-                                goal_events = fixture_event_data.get("goalEvents", [])
+                                fixture_goal_events = fixture_event_data.get("goalEvents", [])
+                                if _count_goal_events(fixture_goal_events) >= _count_goal_events(goal_events):
+                                    goal_events = fixture_goal_events
                                 card_events = fixture_event_data.get("cardEvents", [])
                                 substitution_events = fixture_event_data.get("substitutionEvents", [])
 
@@ -1654,16 +1821,13 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                         # differences such as Canada v Bosnia-Herzegovina,
                         # Bosnia-H., Bosnia and Herzegovina, etc.
                         for candidate in candidates:
-                            candidate_dt = parse_datetime_utc(candidate.get("utcDate"))
-                            if not candidate_dt or candidate_dt.date().isoformat() != match_date:
-                                continue
-                            if _api_fixture_matches_match(home, away, candidate):
+                            if _api_football_item_matches_candidate(item, candidate):
                                 candidate_home = _team_name(candidate.get("homeTeam", {}))
                                 candidate_away = _team_name(candidate.get("awayTeam", {}))
                                 post_match_data[_match_key_from_names(candidate_home, candidate_away)] = item_data
                                 post_match_data[_match_key_from_names(candidate_away, candidate_home)] = item_data
                                 _LOGGER.debug(
-                                    "API-Football post-match matched %s v %s to %s v %s fixture=%s goals=%s cards=%s",
+                                    "API-Football post-match matched %s v %s to %s v %s fixture=%s goals=%s cards=%s subs=%s",
                                     candidate_home,
                                     candidate_away,
                                     home,
@@ -1671,6 +1835,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                                     fixture_id,
                                     len(goal_events),
                                     len(card_events),
+                                    len(substitution_events),
                                 )
         except Exception as err:  # pylint: disable=broad-exception-caught
             _LOGGER.warning("API-Football post-match events lookup failed: %s", err)
@@ -1696,6 +1861,16 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             away = _team_name(match.get("awayTeam", {}))
             data = post_match_data.get(_match_key_from_names(home, away))
             if not data:
+                for possible in post_match_data.values():
+                    if _api_fixture_matches_match(
+                        possible.get("apiFootballHome"),
+                        possible.get("apiFootballAway"),
+                        match,
+                    ):
+                        data = possible
+                        break
+            if not data:
+                _LOGGER.debug("No API-Football post-match data matched %s v %s", home, away)
                 continue
 
             goal_events = data.get("goalEvents") or []
