@@ -63,7 +63,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489369,
       "goalEvents": [
         {
           "type": "Goal",
@@ -106,6 +105,7 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -120,12 +120,112 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "E. Lira",
-          "source": "api_football_post_match",
-          "matchId": 537327,
-          "matchUtcDate": "2026-06-11T19:00:00Z",
-          "homeTeam": "Mexico",
-          "awayTeam": "South Africa",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "South Africa",
+          "player": "Teboho Mokoena",
+          "minute": 17,
+          "extra": null,
+          "displayMinute": "17'",
+          "timer": "17:00",
+          "timerSeconds": 1020,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Mexico",
+          "player": "Brian Guti\u00e9rrez",
+          "minute": 23,
+          "extra": null,
+          "displayMinute": "23'",
+          "timer": "23:00",
+          "timerSeconds": 1380,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Red Card",
+          "rawType": "Card",
+          "team": "South Africa",
+          "player": "Siphephelo Sithole",
+          "minute": 49,
+          "extra": null,
+          "displayMinute": "49'",
+          "timer": "49:00",
+          "timerSeconds": 2940,
+          "detail": "Red Card",
+          "comments": "Professional foul last man",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Africa",
+          "player": "L. Foster",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "T. Mbatha",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Africa",
+          "player": "J. Adams",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Zwane",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "B. Gutierrez",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "L. Chavez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "A. Fidalgo",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "G. Mora",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -140,12 +240,142 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Alvarado",
-          "source": "api_football_post_match",
-          "matchId": 537327,
-          "matchUtcDate": "2026-06-11T19:00:00Z",
-          "homeTeam": "Mexico",
-          "awayTeam": "South Africa",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "South Africa",
+          "player": "Nkosinathi Sibisi",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "E. Lira",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "E. Alvarez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "R. Jimenez",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Gonzalez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Africa",
+          "player": "I. Rayners",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "E. Makgopa",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Africa",
+          "player": "A. Modiba",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "O. Appollis",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "J. Quinones",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "A. Vega",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "VAR",
+          "rawType": "Var",
+          "team": "South Africa",
+          "player": "Themba Zwane",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Card upgrade",
+          "comments": null,
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Red Card",
+          "rawType": "Card",
+          "team": "South Africa",
+          "player": "Themba Zwane",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Red Card",
+          "comments": "Violent conduct",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Red Card",
+          "rawType": "Card",
+          "team": "Mexico",
+          "player": "C\u00e9sar Montes",
+          "minute": 90,
+          "extra": 2,
+          "displayMinute": "90+2'",
+          "timer": "92:00",
+          "timerSeconds": 5520,
+          "detail": "Red Card",
+          "comments": "Professional foul last man",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -377,6 +607,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489369,
       "matchDetails": {
         "events": [
           {
@@ -392,12 +623,112 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "E. Lira",
-            "source": "api_football_post_match",
-            "matchId": 537327,
-            "matchUtcDate": "2026-06-11T19:00:00Z",
-            "homeTeam": "Mexico",
-            "awayTeam": "South Africa",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "South Africa",
+            "player": "Teboho Mokoena",
+            "minute": 17,
+            "extra": null,
+            "displayMinute": "17'",
+            "timer": "17:00",
+            "timerSeconds": 1020,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Mexico",
+            "player": "Brian Guti\u00e9rrez",
+            "minute": 23,
+            "extra": null,
+            "displayMinute": "23'",
+            "timer": "23:00",
+            "timerSeconds": 1380,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Red Card",
+            "rawType": "Card",
+            "team": "South Africa",
+            "player": "Siphephelo Sithole",
+            "minute": 49,
+            "extra": null,
+            "displayMinute": "49'",
+            "timer": "49:00",
+            "timerSeconds": 2940,
+            "detail": "Red Card",
+            "comments": "Professional foul last man",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Africa",
+            "player": "L. Foster",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "T. Mbatha",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Africa",
+            "player": "J. Adams",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Zwane",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "B. Gutierrez",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "L. Chavez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "A. Fidalgo",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "G. Mora",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -412,12 +743,142 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Alvarado",
-            "source": "api_football_post_match",
-            "matchId": 537327,
-            "matchUtcDate": "2026-06-11T19:00:00Z",
-            "homeTeam": "Mexico",
-            "awayTeam": "South Africa",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "South Africa",
+            "player": "Nkosinathi Sibisi",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "E. Lira",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "E. Alvarez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "R. Jimenez",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Gonzalez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Africa",
+            "player": "I. Rayners",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "E. Makgopa",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Africa",
+            "player": "A. Modiba",
+            "minute": 77,
+            "extra": null,
+            "displayMinute": "77'",
+            "timer": "77:00",
+            "timerSeconds": 4620,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "O. Appollis",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "J. Quinones",
+            "minute": 79,
+            "extra": null,
+            "displayMinute": "79'",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "A. Vega",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "VAR",
+            "rawType": "Var",
+            "team": "South Africa",
+            "player": "Themba Zwane",
+            "minute": 82,
+            "extra": null,
+            "displayMinute": "82'",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "detail": "Card upgrade",
+            "comments": null,
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Red Card",
+            "rawType": "Card",
+            "team": "South Africa",
+            "player": "Themba Zwane",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Red Card",
+            "comments": "Violent conduct",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Red Card",
+            "rawType": "Card",
+            "team": "Mexico",
+            "player": "C\u00e9sar Montes",
+            "minute": 90,
+            "extra": 2,
+            "displayMinute": "90+2'",
+            "timer": "92:00",
+            "timerSeconds": 5520,
+            "detail": "Red Card",
+            "comments": "Professional foul last man",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -698,7 +1159,7 @@
           }
         ],
         "apiFootballFixtureId": 1489369,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -760,10 +1221,8 @@
       },
       "referees": [
         {
-          "id": 276653,
-          "name": "Amin Omar",
-          "type": "REFEREE",
-          "nationality": "Egypt"
+          "name": "Amin Mohamed Omar, Egypt",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -828,6 +1287,7 @@
           "goalNumber": 3
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -842,12 +1302,67 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "V. Coufal",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Lee Jae-Sung",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Hwang Hee-Chan",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "P. Sulc",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "A. Hlozek",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "P. Schick",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Chory",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "L. Provod",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "M. Sadilek",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -862,12 +1377,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Lee Kang-In",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Son Heung-Min",
+          "minute": 69,
+          "extra": null,
+          "displayMinute": "69'",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Oh Hyeon-Gyu",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Lee Tae-Seok",
+          "minute": 69,
+          "extra": null,
+          "displayMinute": "69'",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Eom Ji-Sung",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -882,12 +1422,67 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Hwang In-Beom",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Hwang In-Beom",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Kim Jin-Gyu",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Paik Seung-Ho",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Park Jin-Seob",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "A. Sojka",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "M. Chytil",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "South Korea",
+          "player": "Gi-Hyuk Lee",
+          "minute": 90,
+          "extra": 6,
+          "displayMinute": "90+6'",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -1060,12 +1655,67 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "V. Coufal",
-            "source": "api_football_post_match",
-            "matchId": 537328,
-            "matchUtcDate": "2026-06-12T02:00:00Z",
-            "homeTeam": "Korea Republic",
-            "awayTeam": "Czechia",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Lee Jae-Sung",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Hwang Hee-Chan",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Czechia",
+            "player": "P. Sulc",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "A. Hlozek",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Czechia",
+            "player": "P. Schick",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Chory",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Czechia",
+            "player": "L. Provod",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "M. Sadilek",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -1080,12 +1730,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Lee Kang-In",
-            "source": "api_football_post_match",
-            "matchId": 537328,
-            "matchUtcDate": "2026-06-12T02:00:00Z",
-            "homeTeam": "Korea Republic",
-            "awayTeam": "Czechia",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Son Heung-Min",
+            "minute": 69,
+            "extra": null,
+            "displayMinute": "69'",
+            "timer": "69:00",
+            "timerSeconds": 4140,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Oh Hyeon-Gyu",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Lee Tae-Seok",
+            "minute": 69,
+            "extra": null,
+            "displayMinute": "69'",
+            "timer": "69:00",
+            "timerSeconds": 4140,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Eom Ji-Sung",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -1100,12 +1775,67 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Hwang In-Beom",
-            "source": "api_football_post_match",
-            "matchId": 537328,
-            "matchUtcDate": "2026-06-12T02:00:00Z",
-            "homeTeam": "Korea Republic",
-            "awayTeam": "Czechia",
-            "goalNumber": 3
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Hwang In-Beom",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "Kim Jin-Gyu",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Paik Seung-Ho",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Park Jin-Seob",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Czechia",
+            "player": "A. Sojka",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "M. Chytil",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "South Korea",
+            "player": "Gi-Hyuk Lee",
+            "minute": 90,
+            "extra": 6,
+            "displayMinute": "90+6'",
+            "timer": "96:00",
+            "timerSeconds": 5760,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -1326,14 +2056,12 @@
         ],
         "referees": [
           {
-            "id": 276653,
-            "name": "Amin Omar",
-            "type": "REFEREE",
-            "nationality": "Egypt"
+            "name": "Amin Mohamed Omar, Egypt",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1538999,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -1611,10 +2339,8 @@
       },
       "referees": [
         {
-          "id": 43899,
-          "name": "Danny Makkelie",
-          "type": "REFEREE",
-          "nationality": "Netherlands"
+          "name": "Danny Makkelie, Netherlands",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -1719,9 +2445,10 @@
           "goalNumber": 5
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
-          "type": "Goal",
+          "type": "Own Goal",
           "rawType": "Goal",
           "team": "USA",
           "player": "D. Bobadilla",
@@ -1733,12 +2460,37 @@
           "detail": "Own Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "J. Caceres",
+          "minute": 10,
+          "extra": null,
+          "displayMinute": "10'",
+          "timer": "10:00",
+          "timerSeconds": 600,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "VAR",
+          "rawType": "Var",
+          "team": "USA",
+          "player": "F. Balogun",
+          "minute": 28,
+          "extra": null,
+          "displayMinute": "28'",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "detail": "Goal Disallowed - offside",
+          "comments": null,
+          "assist": null,
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -1753,12 +2505,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Pulisic",
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "D. Bobadilla",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Mauricio",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "USA",
+          "player": "C. Pulisic",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "S. Berhalter",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -1773,12 +2550,82 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "M. Tillman",
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "M. Almiron",
+          "minute": 53,
+          "extra": null,
+          "displayMinute": "53'",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "detail": "Yellow Card",
+          "comments": "Diving",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "USA",
+          "player": "T. Adams",
+          "minute": 59,
+          "extra": null,
+          "displayMinute": "59'",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "A. Sanabria",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Arce",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "USA",
+          "player": "S. Dest",
+          "minute": 72,
+          "extra": null,
+          "displayMinute": "72'",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Weah",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "USA",
+          "player": "F. Balogun",
+          "minute": 72,
+          "extra": null,
+          "displayMinute": "72'",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "R. Pepi",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -1793,12 +2640,112 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Enciso",
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 4
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "D. Gomez",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "M. Almiron",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "R. Sosa",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "J. Caceres",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "G. Velazquez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "D. Gomez",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Kaku",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "USA",
+          "player": "M. Tillman",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "G. Reyna",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "A. Arce",
+          "minute": 88,
+          "extra": null,
+          "displayMinute": "88'",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "J. Alonso",
+          "minute": 90,
+          "extra": 3,
+          "displayMinute": "90+3'",
+          "timer": "93:00",
+          "timerSeconds": 5580,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -1813,12 +2760,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "A. Freeman",
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 5
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -2054,7 +2996,7 @@
       "matchDetails": {
         "events": [
           {
-            "type": "Goal",
+            "type": "Own Goal",
             "rawType": "Goal",
             "team": "USA",
             "player": "D. Bobadilla",
@@ -2066,12 +3008,37 @@
             "detail": "Own Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "J. Caceres",
+            "minute": 10,
+            "extra": null,
+            "displayMinute": "10'",
+            "timer": "10:00",
+            "timerSeconds": 600,
+            "detail": "Yellow Card",
+            "comments": "Tripping",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "VAR",
+            "rawType": "Var",
+            "team": "USA",
+            "player": "F. Balogun",
+            "minute": 28,
+            "extra": null,
+            "displayMinute": "28'",
+            "timer": "28:00",
+            "timerSeconds": 1680,
+            "detail": "Goal Disallowed - offside",
+            "comments": null,
+            "assist": null,
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -2086,12 +3053,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Pulisic",
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "D. Bobadilla",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Mauricio",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "USA",
+            "player": "C. Pulisic",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "S. Berhalter",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -2106,12 +3098,82 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "M. Tillman",
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 3
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "M. Almiron",
+            "minute": 53,
+            "extra": null,
+            "displayMinute": "53'",
+            "timer": "53:00",
+            "timerSeconds": 3180,
+            "detail": "Yellow Card",
+            "comments": "Diving",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "USA",
+            "player": "T. Adams",
+            "minute": 59,
+            "extra": null,
+            "displayMinute": "59'",
+            "timer": "59:00",
+            "timerSeconds": 3540,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "A. Sanabria",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Arce",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "USA",
+            "player": "S. Dest",
+            "minute": 72,
+            "extra": null,
+            "displayMinute": "72'",
+            "timer": "72:00",
+            "timerSeconds": 4320,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Weah",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "USA",
+            "player": "F. Balogun",
+            "minute": 72,
+            "extra": null,
+            "displayMinute": "72'",
+            "timer": "72:00",
+            "timerSeconds": 4320,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "R. Pepi",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -2126,12 +3188,112 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Enciso",
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 4
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "D. Gomez",
+            "minute": 79,
+            "extra": null,
+            "displayMinute": "79'",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "detail": "Yellow Card",
+            "comments": "Holding",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "M. Almiron",
+            "minute": 79,
+            "extra": null,
+            "displayMinute": "79'",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "R. Sosa",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "J. Caceres",
+            "minute": 79,
+            "extra": null,
+            "displayMinute": "79'",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "G. Velazquez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "D. Gomez",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Kaku",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "USA",
+            "player": "M. Tillman",
+            "minute": 82,
+            "extra": null,
+            "displayMinute": "82'",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "G. Reyna",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "A. Arce",
+            "minute": 88,
+            "extra": null,
+            "displayMinute": "88'",
+            "timer": "88:00",
+            "timerSeconds": 5280,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "J. Alonso",
+            "minute": 90,
+            "extra": 3,
+            "displayMinute": "90+3'",
+            "timer": "93:00",
+            "timerSeconds": 5580,
+            "detail": "Yellow Card",
+            "comments": "Holding",
+            "assist": null,
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -2146,12 +3308,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "A. Freeman",
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 5
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -2487,14 +3644,12 @@
         ],
         "referees": [
           {
-            "id": 43899,
-            "name": "Danny Makkelie",
-            "type": "REFEREE",
-            "nationality": "Netherlands"
+            "name": "Danny Makkelie, Netherlands",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489370,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -2556,12 +3711,11 @@
       },
       "referees": [
         {
-          "id": 190002,
-          "name": "Said Martinez",
-          "type": "REFEREE",
-          "nationality": "Honduras"
+          "name": "Said Martinez, Honduras",
+          "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489373,
       "goalEvents": [
         {
           "type": "Goal",
@@ -2845,7 +3999,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489373,
       "matchDetails": {
         "events": [
           {
@@ -3132,10 +4285,8 @@
         ],
         "referees": [
           {
-            "id": 190002,
-            "name": "Said Martinez",
-            "type": "REFEREE",
-            "nationality": "Honduras"
+            "name": "Said Martinez, Honduras",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489373,
@@ -3201,12 +4352,11 @@
       },
       "referees": [
         {
-          "id": 9351,
-          "name": "Slavko Vin\u010di\u010d",
-          "type": "REFEREE",
-          "nationality": "Slovenia"
+          "name": "Slavko Vin\u010di\u0107, Slovenia",
+          "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489371,
       "goalEvents": [
         {
           "type": "Goal",
@@ -3475,7 +4625,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489371,
       "matchDetails": {
         "events": [
           {
@@ -3747,10 +4896,8 @@
         ],
         "referees": [
           {
-            "id": 9351,
-            "name": "Slavko Vin\u010di\u010d",
-            "type": "REFEREE",
-            "nationality": "Slovenia"
+            "name": "Slavko Vin\u010di\u0107, Slovenia",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489371,
@@ -3816,10 +4963,8 @@
       },
       "referees": [
         {
-          "id": 190017,
-          "name": "Mustapha Ghorbal",
-          "type": "REFEREE",
-          "nationality": null
+          "name": "Mustapha Ghorbal, Algeria",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -3844,6 +4989,7 @@
           "goalNumber": 1
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -3858,12 +5004,187 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537340,
-          "matchUtcDate": "2026-06-14T01:00:00Z",
-          "homeTeam": "Haiti",
-          "awayTeam": "Scotland",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Haiti",
+          "player": "J. Bellegarde",
+          "minute": 39,
+          "extra": null,
+          "displayMinute": "39'",
+          "timer": "39:00",
+          "timerSeconds": 2340,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "L. Deedson",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Casimir",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "B. Gannon-Doak",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "R. Christie",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "N. Patterson",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "C. Adams",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "L. Dykes",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "W. Isidor",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Joseph",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "J. McGinn",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "F. Curtis",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "L. Shankland",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "K. McLean",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "R. Providence",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Y. Fortune",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "F. Curtis",
+          "minute": 90,
+          "extra": 1,
+          "displayMinute": "90+1'",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "K. McLean",
+          "minute": 90,
+          "extra": 5,
+          "displayMinute": "90+5'",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -4066,12 +5387,187 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537340,
-            "matchUtcDate": "2026-06-14T01:00:00Z",
-            "homeTeam": "Haiti",
-            "awayTeam": "Scotland",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Haiti",
+            "player": "J. Bellegarde",
+            "minute": 39,
+            "extra": null,
+            "displayMinute": "39'",
+            "timer": "39:00",
+            "timerSeconds": 2340,
+            "detail": "Yellow Card",
+            "comments": "Tripping",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "A. Hickey",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Yellow Card",
+            "comments": "Holding",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "L. Deedson",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Casimir",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "B. Gannon-Doak",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "R. Christie",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "A. Hickey",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "N. Patterson",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "C. Adams",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "L. Dykes",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "W. Isidor",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "L. Joseph",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "J. McGinn",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "F. Curtis",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "L. Shankland",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "K. McLean",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "R. Providence",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Y. Fortune",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "F. Curtis",
+            "minute": 90,
+            "extra": 1,
+            "displayMinute": "90+1'",
+            "timer": "91:00",
+            "timerSeconds": 5460,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "K. McLean",
+            "minute": 90,
+            "extra": 5,
+            "displayMinute": "90+5'",
+            "timer": "95:00",
+            "timerSeconds": 5700,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -4282,14 +5778,12 @@
         ],
         "referees": [
           {
-            "id": 190017,
-            "name": "Mustapha Ghorbal",
-            "type": "REFEREE",
-            "nationality": null
+            "name": "Mustapha Ghorbal, Algeria",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489372,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -4319,7 +5813,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-14T06:45:17Z",
+      "lastUpdated": "2026-06-14T06:45:53Z",
       "homeTeam": {
         "id": 779,
         "name": "Australia",
@@ -4533,7 +6027,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489369,
       "goalEvents": [
         {
           "type": "Goal",
@@ -4576,6 +6069,7 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -4590,12 +6084,112 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "E. Lira",
-          "source": "api_football_post_match",
-          "matchId": 537327,
-          "matchUtcDate": "2026-06-11T19:00:00Z",
-          "homeTeam": "Mexico",
-          "awayTeam": "South Africa",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "South Africa",
+          "player": "Teboho Mokoena",
+          "minute": 17,
+          "extra": null,
+          "displayMinute": "17'",
+          "timer": "17:00",
+          "timerSeconds": 1020,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Mexico",
+          "player": "Brian Guti\u00e9rrez",
+          "minute": 23,
+          "extra": null,
+          "displayMinute": "23'",
+          "timer": "23:00",
+          "timerSeconds": 1380,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Red Card",
+          "rawType": "Card",
+          "team": "South Africa",
+          "player": "Siphephelo Sithole",
+          "minute": 49,
+          "extra": null,
+          "displayMinute": "49'",
+          "timer": "49:00",
+          "timerSeconds": 2940,
+          "detail": "Red Card",
+          "comments": "Professional foul last man",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Africa",
+          "player": "L. Foster",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "T. Mbatha",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Africa",
+          "player": "J. Adams",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Zwane",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "B. Gutierrez",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "L. Chavez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "A. Fidalgo",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "G. Mora",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -4610,12 +6204,142 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Alvarado",
-          "source": "api_football_post_match",
-          "matchId": 537327,
-          "matchUtcDate": "2026-06-11T19:00:00Z",
-          "homeTeam": "Mexico",
-          "awayTeam": "South Africa",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "South Africa",
+          "player": "Nkosinathi Sibisi",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "E. Lira",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "E. Alvarez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "R. Jimenez",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Gonzalez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Africa",
+          "player": "I. Rayners",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "E. Makgopa",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Africa",
+          "player": "A. Modiba",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "O. Appollis",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Mexico",
+          "player": "J. Quinones",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "A. Vega",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "VAR",
+          "rawType": "Var",
+          "team": "South Africa",
+          "player": "Themba Zwane",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Card upgrade",
+          "comments": null,
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Red Card",
+          "rawType": "Card",
+          "team": "South Africa",
+          "player": "Themba Zwane",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Red Card",
+          "comments": "Violent conduct",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Red Card",
+          "rawType": "Card",
+          "team": "Mexico",
+          "player": "C\u00e9sar Montes",
+          "minute": 90,
+          "extra": 2,
+          "displayMinute": "90+2'",
+          "timer": "92:00",
+          "timerSeconds": 5520,
+          "detail": "Red Card",
+          "comments": "Professional foul last man",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -4847,6 +6571,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489369,
       "matchDetails": {
         "events": [
           {
@@ -4862,12 +6587,112 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "E. Lira",
-            "source": "api_football_post_match",
-            "matchId": 537327,
-            "matchUtcDate": "2026-06-11T19:00:00Z",
-            "homeTeam": "Mexico",
-            "awayTeam": "South Africa",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "South Africa",
+            "player": "Teboho Mokoena",
+            "minute": 17,
+            "extra": null,
+            "displayMinute": "17'",
+            "timer": "17:00",
+            "timerSeconds": 1020,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Mexico",
+            "player": "Brian Guti\u00e9rrez",
+            "minute": 23,
+            "extra": null,
+            "displayMinute": "23'",
+            "timer": "23:00",
+            "timerSeconds": 1380,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Red Card",
+            "rawType": "Card",
+            "team": "South Africa",
+            "player": "Siphephelo Sithole",
+            "minute": 49,
+            "extra": null,
+            "displayMinute": "49'",
+            "timer": "49:00",
+            "timerSeconds": 2940,
+            "detail": "Red Card",
+            "comments": "Professional foul last man",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Africa",
+            "player": "L. Foster",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "T. Mbatha",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Africa",
+            "player": "J. Adams",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Zwane",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "B. Gutierrez",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "L. Chavez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "A. Fidalgo",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "G. Mora",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -4882,12 +6707,142 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Alvarado",
-            "source": "api_football_post_match",
-            "matchId": 537327,
-            "matchUtcDate": "2026-06-11T19:00:00Z",
-            "homeTeam": "Mexico",
-            "awayTeam": "South Africa",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "South Africa",
+            "player": "Nkosinathi Sibisi",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "E. Lira",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "E. Alvarez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "R. Jimenez",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Gonzalez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Africa",
+            "player": "I. Rayners",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "E. Makgopa",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Africa",
+            "player": "A. Modiba",
+            "minute": 77,
+            "extra": null,
+            "displayMinute": "77'",
+            "timer": "77:00",
+            "timerSeconds": 4620,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "O. Appollis",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Mexico",
+            "player": "J. Quinones",
+            "minute": 79,
+            "extra": null,
+            "displayMinute": "79'",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "A. Vega",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "VAR",
+            "rawType": "Var",
+            "team": "South Africa",
+            "player": "Themba Zwane",
+            "minute": 82,
+            "extra": null,
+            "displayMinute": "82'",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "detail": "Card upgrade",
+            "comments": null,
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Red Card",
+            "rawType": "Card",
+            "team": "South Africa",
+            "player": "Themba Zwane",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Red Card",
+            "comments": "Violent conduct",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Red Card",
+            "rawType": "Card",
+            "team": "Mexico",
+            "player": "C\u00e9sar Montes",
+            "minute": 90,
+            "extra": 2,
+            "displayMinute": "90+2'",
+            "timer": "92:00",
+            "timerSeconds": 5520,
+            "detail": "Red Card",
+            "comments": "Professional foul last man",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -5168,7 +7123,7 @@
           }
         ],
         "apiFootballFixtureId": 1489369,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -5230,10 +7185,8 @@
       },
       "referees": [
         {
-          "id": 276653,
-          "name": "Amin Omar",
-          "type": "REFEREE",
-          "nationality": "Egypt"
+          "name": "Amin Mohamed Omar, Egypt",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -5298,6 +7251,7 @@
           "goalNumber": 3
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -5312,12 +7266,67 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "V. Coufal",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Lee Jae-Sung",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Hwang Hee-Chan",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "P. Sulc",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "A. Hlozek",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "P. Schick",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Chory",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "L. Provod",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "M. Sadilek",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -5332,12 +7341,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Lee Kang-In",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Son Heung-Min",
+          "minute": 69,
+          "extra": null,
+          "displayMinute": "69'",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Oh Hyeon-Gyu",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Lee Tae-Seok",
+          "minute": 69,
+          "extra": null,
+          "displayMinute": "69'",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Eom Ji-Sung",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -5352,12 +7386,67 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Hwang In-Beom",
-          "source": "api_football_post_match",
-          "matchId": 537328,
-          "matchUtcDate": "2026-06-12T02:00:00Z",
-          "homeTeam": "Korea Republic",
-          "awayTeam": "Czechia",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Hwang In-Beom",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Kim Jin-Gyu",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "South Korea",
+          "player": "Paik Seung-Ho",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Park Jin-Seob",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Czechia",
+          "player": "A. Sojka",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "M. Chytil",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "South Korea",
+          "player": "Gi-Hyuk Lee",
+          "minute": 90,
+          "extra": 6,
+          "displayMinute": "90+6'",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -5530,12 +7619,67 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "V. Coufal",
-            "source": "api_football_post_match",
-            "matchId": 537328,
-            "matchUtcDate": "2026-06-12T02:00:00Z",
-            "homeTeam": "Korea Republic",
-            "awayTeam": "Czechia",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Lee Jae-Sung",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Hwang Hee-Chan",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Czechia",
+            "player": "P. Sulc",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "A. Hlozek",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Czechia",
+            "player": "P. Schick",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Chory",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Czechia",
+            "player": "L. Provod",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "M. Sadilek",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -5550,12 +7694,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Lee Kang-In",
-            "source": "api_football_post_match",
-            "matchId": 537328,
-            "matchUtcDate": "2026-06-12T02:00:00Z",
-            "homeTeam": "Korea Republic",
-            "awayTeam": "Czechia",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Son Heung-Min",
+            "minute": 69,
+            "extra": null,
+            "displayMinute": "69'",
+            "timer": "69:00",
+            "timerSeconds": 4140,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Oh Hyeon-Gyu",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Lee Tae-Seok",
+            "minute": 69,
+            "extra": null,
+            "displayMinute": "69'",
+            "timer": "69:00",
+            "timerSeconds": 4140,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Eom Ji-Sung",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -5570,12 +7739,67 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Hwang In-Beom",
-            "source": "api_football_post_match",
-            "matchId": 537328,
-            "matchUtcDate": "2026-06-12T02:00:00Z",
-            "homeTeam": "Korea Republic",
-            "awayTeam": "Czechia",
-            "goalNumber": 3
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Hwang In-Beom",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "Kim Jin-Gyu",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "South Korea",
+            "player": "Paik Seung-Ho",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Park Jin-Seob",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Czechia",
+            "player": "A. Sojka",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "M. Chytil",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "South Korea",
+            "player": "Gi-Hyuk Lee",
+            "minute": 90,
+            "extra": 6,
+            "displayMinute": "90+6'",
+            "timer": "96:00",
+            "timerSeconds": 5760,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -5796,14 +8020,12 @@
         ],
         "referees": [
           {
-            "id": 276653,
-            "name": "Amin Omar",
-            "type": "REFEREE",
-            "nationality": "Egypt"
+            "name": "Amin Mohamed Omar, Egypt",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1538999,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -6081,10 +8303,8 @@
       },
       "referees": [
         {
-          "id": 43899,
-          "name": "Danny Makkelie",
-          "type": "REFEREE",
-          "nationality": "Netherlands"
+          "name": "Danny Makkelie, Netherlands",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -6189,9 +8409,10 @@
           "goalNumber": 5
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
-          "type": "Goal",
+          "type": "Own Goal",
           "rawType": "Goal",
           "team": "USA",
           "player": "D. Bobadilla",
@@ -6203,12 +8424,37 @@
           "detail": "Own Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "J. Caceres",
+          "minute": 10,
+          "extra": null,
+          "displayMinute": "10'",
+          "timer": "10:00",
+          "timerSeconds": 600,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "VAR",
+          "rawType": "Var",
+          "team": "USA",
+          "player": "F. Balogun",
+          "minute": 28,
+          "extra": null,
+          "displayMinute": "28'",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "detail": "Goal Disallowed - offside",
+          "comments": null,
+          "assist": null,
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6223,12 +8469,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Pulisic",
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "D. Bobadilla",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Mauricio",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "USA",
+          "player": "C. Pulisic",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "S. Berhalter",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6243,12 +8514,82 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "M. Tillman",
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "M. Almiron",
+          "minute": 53,
+          "extra": null,
+          "displayMinute": "53'",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "detail": "Yellow Card",
+          "comments": "Diving",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "USA",
+          "player": "T. Adams",
+          "minute": 59,
+          "extra": null,
+          "displayMinute": "59'",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "A. Sanabria",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Arce",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "USA",
+          "player": "S. Dest",
+          "minute": 72,
+          "extra": null,
+          "displayMinute": "72'",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Weah",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "USA",
+          "player": "F. Balogun",
+          "minute": 72,
+          "extra": null,
+          "displayMinute": "72'",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "R. Pepi",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6263,12 +8604,112 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Enciso",
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 4
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "D. Gomez",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "M. Almiron",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "R. Sosa",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "J. Caceres",
+          "minute": 79,
+          "extra": null,
+          "displayMinute": "79'",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "G. Velazquez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Paraguay",
+          "player": "D. Gomez",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Kaku",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "USA",
+          "player": "M. Tillman",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "G. Reyna",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "A. Arce",
+          "minute": 88,
+          "extra": null,
+          "displayMinute": "88'",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Paraguay",
+          "player": "J. Alonso",
+          "minute": 90,
+          "extra": 3,
+          "displayMinute": "90+3'",
+          "timer": "93:00",
+          "timerSeconds": 5580,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6283,12 +8724,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "A. Freeman",
-          "source": "api_football_post_match",
-          "matchId": 537345,
-          "matchUtcDate": "2026-06-13T01:00:00Z",
-          "homeTeam": "USA",
-          "awayTeam": "Paraguay",
-          "goalNumber": 5
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -6524,7 +8960,7 @@
       "matchDetails": {
         "events": [
           {
-            "type": "Goal",
+            "type": "Own Goal",
             "rawType": "Goal",
             "team": "USA",
             "player": "D. Bobadilla",
@@ -6536,12 +8972,37 @@
             "detail": "Own Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "J. Caceres",
+            "minute": 10,
+            "extra": null,
+            "displayMinute": "10'",
+            "timer": "10:00",
+            "timerSeconds": 600,
+            "detail": "Yellow Card",
+            "comments": "Tripping",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "VAR",
+            "rawType": "Var",
+            "team": "USA",
+            "player": "F. Balogun",
+            "minute": 28,
+            "extra": null,
+            "displayMinute": "28'",
+            "timer": "28:00",
+            "timerSeconds": 1680,
+            "detail": "Goal Disallowed - offside",
+            "comments": null,
+            "assist": null,
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -6556,12 +9017,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Pulisic",
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "D. Bobadilla",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Mauricio",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "USA",
+            "player": "C. Pulisic",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "S. Berhalter",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -6576,12 +9062,82 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "M. Tillman",
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 3
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "M. Almiron",
+            "minute": 53,
+            "extra": null,
+            "displayMinute": "53'",
+            "timer": "53:00",
+            "timerSeconds": 3180,
+            "detail": "Yellow Card",
+            "comments": "Diving",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "USA",
+            "player": "T. Adams",
+            "minute": 59,
+            "extra": null,
+            "displayMinute": "59'",
+            "timer": "59:00",
+            "timerSeconds": 3540,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "A. Sanabria",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Arce",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "USA",
+            "player": "S. Dest",
+            "minute": 72,
+            "extra": null,
+            "displayMinute": "72'",
+            "timer": "72:00",
+            "timerSeconds": 4320,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Weah",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "USA",
+            "player": "F. Balogun",
+            "minute": 72,
+            "extra": null,
+            "displayMinute": "72'",
+            "timer": "72:00",
+            "timerSeconds": 4320,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "R. Pepi",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -6596,12 +9152,112 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Enciso",
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 4
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "D. Gomez",
+            "minute": 79,
+            "extra": null,
+            "displayMinute": "79'",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "detail": "Yellow Card",
+            "comments": "Holding",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "M. Almiron",
+            "minute": 79,
+            "extra": null,
+            "displayMinute": "79'",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "R. Sosa",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "J. Caceres",
+            "minute": 79,
+            "extra": null,
+            "displayMinute": "79'",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "G. Velazquez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Paraguay",
+            "player": "D. Gomez",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Kaku",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "USA",
+            "player": "M. Tillman",
+            "minute": 82,
+            "extra": null,
+            "displayMinute": "82'",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "G. Reyna",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "A. Arce",
+            "minute": 88,
+            "extra": null,
+            "displayMinute": "88'",
+            "timer": "88:00",
+            "timerSeconds": 5280,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Paraguay",
+            "player": "J. Alonso",
+            "minute": 90,
+            "extra": 3,
+            "displayMinute": "90+3'",
+            "timer": "93:00",
+            "timerSeconds": 5580,
+            "detail": "Yellow Card",
+            "comments": "Holding",
+            "assist": null,
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -6616,12 +9272,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "A. Freeman",
-            "source": "api_football_post_match",
-            "matchId": 537345,
-            "matchUtcDate": "2026-06-13T01:00:00Z",
-            "homeTeam": "USA",
-            "awayTeam": "Paraguay",
-            "goalNumber": 5
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -6957,14 +9608,12 @@
         ],
         "referees": [
           {
-            "id": 43899,
-            "name": "Danny Makkelie",
-            "type": "REFEREE",
-            "nationality": "Netherlands"
+            "name": "Danny Makkelie, Netherlands",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489370,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -7026,12 +9675,11 @@
       },
       "referees": [
         {
-          "id": 190002,
-          "name": "Said Martinez",
-          "type": "REFEREE",
-          "nationality": "Honduras"
+          "name": "Said Martinez, Honduras",
+          "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489373,
       "goalEvents": [
         {
           "type": "Goal",
@@ -7315,7 +9963,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489373,
       "matchDetails": {
         "events": [
           {
@@ -7602,10 +10249,8 @@
         ],
         "referees": [
           {
-            "id": 190002,
-            "name": "Said Martinez",
-            "type": "REFEREE",
-            "nationality": "Honduras"
+            "name": "Said Martinez, Honduras",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489373,
@@ -7671,12 +10316,11 @@
       },
       "referees": [
         {
-          "id": 9351,
-          "name": "Slavko Vin\u010di\u010d",
-          "type": "REFEREE",
-          "nationality": "Slovenia"
+          "name": "Slavko Vin\u010di\u0107, Slovenia",
+          "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489371,
       "goalEvents": [
         {
           "type": "Goal",
@@ -7945,7 +10589,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489371,
       "matchDetails": {
         "events": [
           {
@@ -8217,10 +10860,8 @@
         ],
         "referees": [
           {
-            "id": 9351,
-            "name": "Slavko Vin\u010di\u010d",
-            "type": "REFEREE",
-            "nationality": "Slovenia"
+            "name": "Slavko Vin\u010di\u0107, Slovenia",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489371,
@@ -8286,10 +10927,8 @@
       },
       "referees": [
         {
-          "id": 190017,
-          "name": "Mustapha Ghorbal",
-          "type": "REFEREE",
-          "nationality": null
+          "name": "Mustapha Ghorbal, Algeria",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -8314,6 +10953,7 @@
           "goalNumber": 1
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -8328,12 +10968,187 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537340,
-          "matchUtcDate": "2026-06-14T01:00:00Z",
-          "homeTeam": "Haiti",
-          "awayTeam": "Scotland",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Haiti",
+          "player": "J. Bellegarde",
+          "minute": 39,
+          "extra": null,
+          "displayMinute": "39'",
+          "timer": "39:00",
+          "timerSeconds": 2340,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "L. Deedson",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Casimir",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "B. Gannon-Doak",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "R. Christie",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "N. Patterson",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "C. Adams",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "L. Dykes",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "W. Isidor",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Joseph",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "J. McGinn",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "F. Curtis",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "L. Shankland",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "K. McLean",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "R. Providence",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Y. Fortune",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "F. Curtis",
+          "minute": 90,
+          "extra": 1,
+          "displayMinute": "90+1'",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "K. McLean",
+          "minute": 90,
+          "extra": 5,
+          "displayMinute": "90+5'",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "detail": "Yellow Card",
+          "comments": "Roughing",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -8536,12 +11351,187 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537340,
-            "matchUtcDate": "2026-06-14T01:00:00Z",
-            "homeTeam": "Haiti",
-            "awayTeam": "Scotland",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Haiti",
+            "player": "J. Bellegarde",
+            "minute": 39,
+            "extra": null,
+            "displayMinute": "39'",
+            "timer": "39:00",
+            "timerSeconds": 2340,
+            "detail": "Yellow Card",
+            "comments": "Tripping",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "A. Hickey",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Yellow Card",
+            "comments": "Holding",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "L. Deedson",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Casimir",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "B. Gannon-Doak",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "R. Christie",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "A. Hickey",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "N. Patterson",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "C. Adams",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "L. Dykes",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "W. Isidor",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "L. Joseph",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "J. McGinn",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "F. Curtis",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "L. Shankland",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "K. McLean",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "R. Providence",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Y. Fortune",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "F. Curtis",
+            "minute": 90,
+            "extra": 1,
+            "displayMinute": "90+1'",
+            "timer": "91:00",
+            "timerSeconds": 5460,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "K. McLean",
+            "minute": 90,
+            "extra": 5,
+            "displayMinute": "90+5'",
+            "timer": "95:00",
+            "timerSeconds": 5700,
+            "detail": "Yellow Card",
+            "comments": "Roughing",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -8752,14 +11742,12 @@
         ],
         "referees": [
           {
-            "id": 190017,
-            "name": "Mustapha Ghorbal",
-            "type": "REFEREE",
-            "nationality": null
+            "name": "Mustapha Ghorbal, Algeria",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489372,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -8789,7 +11777,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_D",
-      "lastUpdated": "2026-06-14T06:45:17Z",
+      "lastUpdated": "2026-06-14T06:45:53Z",
       "homeTeam": {
         "id": 779,
         "name": "Australia",
