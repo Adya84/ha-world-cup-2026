@@ -4419,7 +4419,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-15T19:21:28Z",
+      "lastUpdated": "2026-06-15T19:22:04Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -4461,7 +4461,7 @@
       "displayMinute": "61'",
       "manualClockText": "61'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-15T17:21:29.144227+00:00",
+      "lastApiSync": "2026-06-15T17:22:06.201264+00:00",
       "manualClock": {
         "seconds": 3660,
         "timer": "61'",
@@ -4469,7 +4469,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-15T17:21:29.144227+00:00"
+        "lastApiSync": "2026-06-15T17:22:06.201264+00:00"
       },
       "homeScore": 0,
       "awayScore": 0,
@@ -4491,6 +4491,21 @@
           "comments": "Roughing",
           "assist": null,
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cape Verde Islands",
+          "player": "J. Cabral",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "W. Semedo",
+          "source": "api_football"
         }
       ],
       "cardEvents": [
@@ -4507,6 +4522,23 @@
           "detail": "Yellow Card",
           "comments": "Roughing",
           "assist": null,
+          "source": "api_football"
+        }
+      ],
+      "substitutionEvents": [
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cape Verde Islands",
+          "player": "J. Cabral",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "W. Semedo",
           "source": "api_football"
         }
       ],
