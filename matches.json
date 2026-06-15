@@ -4822,7 +4822,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-15T22:37:34Z",
+      "lastUpdated": "2026-06-15T22:38:10Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -4859,20 +4859,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 75,
-      "clockSeconds": 4500,
-      "displayMinute": "75'",
-      "manualClockText": "75'",
+      "minute": 76,
+      "clockSeconds": 4560,
+      "displayMinute": "76'",
+      "manualClockText": "76'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-15T20:37:35.048586+00:00",
+      "lastApiSync": "2026-06-15T20:38:12.403575+00:00",
       "manualClock": {
-        "seconds": 4500,
-        "timer": "75'",
-        "displayMinute": "75'",
+        "seconds": 4560,
+        "timer": "76'",
+        "displayMinute": "76'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-15T20:37:35.048586+00:00"
+        "lastApiSync": "2026-06-15T20:38:12.403575+00:00"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -5056,6 +5056,21 @@
           "comments": null,
           "assist": "R. Rabia",
           "source": "api_football"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Belgium",
+          "player": "M. De Cuyper",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Yellow Card",
+          "comments": "Holding",
+          "assist": null,
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -5102,6 +5117,21 @@
           "timerSeconds": 2040,
           "detail": "Yellow Card",
           "comments": "Tripping",
+          "assist": null,
+          "source": "api_football"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Belgium",
+          "player": "M. De Cuyper",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Yellow Card",
+          "comments": "Holding",
           "assist": null,
           "source": "api_football"
         }
@@ -5169,8 +5199,8 @@
         }
       ],
       "apiFootballFixtureId": 1489377,
-      "fallbackClock": 4500,
-      "fallbackClockText": "75'"
+      "fallbackClock": 4560,
+      "fallbackClockText": "76'"
     },
     {
       "area": {
