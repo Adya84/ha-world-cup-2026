@@ -4767,13 +4767,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T23:29:07.048523+00:00",
+    "phase_start": "2026-06-15T23:29:35.692041+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 3780,
-    "clock_seconds": 3780,
-    "displayMinute": "63'",
-    "manualClockText": "63'",
-    "lastApiSync": "2026-06-15T23:29:07.048523+00:00",
+    "base_seconds": 3840,
+    "clock_seconds": 3840,
+    "displayMinute": "64'",
+    "manualClockText": "64'",
+    "lastApiSync": "2026-06-15T23:29:35.692041+00:00",
     "apiFootballFixtureId": 1489379,
     "events": [
       {
@@ -4835,6 +4835,21 @@
         "comments": null,
         "assist": "A. Canobbio",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Saudi Arabia",
+        "player": "M. Al Juwayr",
+        "minute": 63,
+        "extra": null,
+        "displayMinute": "63'",
+        "timer": "63:00",
+        "timerSeconds": 3780,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "N. Al Dawsari",
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -4883,6 +4898,21 @@
         "detail": "Substitution 2",
         "comments": null,
         "assist": "A. Canobbio",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Saudi Arabia",
+        "player": "M. Al Juwayr",
+        "minute": 63,
+        "extra": null,
+        "displayMinute": "63'",
+        "timer": "63:00",
+        "timerSeconds": 3780,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "N. Al Dawsari",
         "source": "api_football"
       }
     ]
