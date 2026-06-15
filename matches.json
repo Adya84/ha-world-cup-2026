@@ -5268,11 +5268,11 @@
       },
       "id": 537358,
       "utcDate": "2026-06-15T02:00:00Z",
-      "status": "TIMED",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-15T03:17:25Z",
+      "lastUpdated": "2026-06-15T04:03:46Z",
       "homeTeam": {
         "id": 792,
         "name": "Sweden",
@@ -5288,15 +5288,15 @@
         "crest": "https://crests.football-data.org/tunisia.svg"
       },
       "score": {
-        "winner": null,
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -5304,12 +5304,27 @@
       },
       "referees": [
         {
-          "id": 57435,
-          "name": "Yael Falc\u00f3n",
-          "type": "REFEREE",
-          "nationality": "Argentina"
+          "name": "Yael Falcon Perez, Argentina",
+          "type": "REFEREE"
         }
-      ]
+      ],
+      "minute": 3,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "apiFootballFixtureId": 1539002,
+      "manualClock": {
+        "seconds": 180,
+        "timer": "3:00",
+        "displayMinute": "3'",
+        "active": true,
+        "status": "IN_PLAY",
+        "source": "local_status_timer"
+      },
+      "fallbackClock": 180,
+      "fallbackClockText": "3:00",
+      "manualClockText": "3:00",
+      "displayMinute": "3'",
+      "clockSeconds": 180
     },
     {
       "area": {
