@@ -23,7 +23,7 @@
       },
       "id": 537363,
       "utcDate": "2026-06-15T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "1H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
@@ -50,8 +50,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -59,26 +59,34 @@
       },
       "referees": [
         {
-          "id": 18754,
-          "name": "Ramon Abatti Abel",
-          "type": "REFEREE",
-          "nationality": "Brazil"
+          "name": "Ramon Abatti Abel, Brazil",
+          "type": "REFEREE"
         }
       ],
+      "liveSource": "api_football",
+      "minute": 1,
+      "clockSeconds": 60,
+      "displayMinute": "1'",
+      "manualClockText": "1'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-15T19:01:38.709845+00:00",
       "manualClock": {
-        "seconds": 0,
-        "timer": "0:00",
-        "displayMinute": "0'",
+        "seconds": 60,
+        "timer": "1'",
+        "displayMinute": "1'",
         "active": false,
-        "status": "IN_PLAY",
-        "source": "awaiting_api_football_minute",
-        "lastApiSync": null
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-15T19:01:38.709845+00:00"
       },
-      "clockSource": "awaiting_api_football_minute",
-      "lastApiSync": null,
-      "awaitingLiveApiData": true,
-      "manualClockText": "Awaiting live API data",
-      "displayMinute": "Awaiting live API data"
+      "homeScore": 0,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "apiFootballFixtureId": 1489377,
+      "fallbackClock": 60,
+      "fallbackClockText": "1'"
     }
   ],
   "live": [
@@ -105,7 +113,7 @@
       },
       "id": 537363,
       "utcDate": "2026-06-15T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "1H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
@@ -132,8 +140,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -141,26 +149,34 @@
       },
       "referees": [
         {
-          "id": 18754,
-          "name": "Ramon Abatti Abel",
-          "type": "REFEREE",
-          "nationality": "Brazil"
+          "name": "Ramon Abatti Abel, Brazil",
+          "type": "REFEREE"
         }
       ],
+      "liveSource": "api_football",
+      "minute": 1,
+      "clockSeconds": 60,
+      "displayMinute": "1'",
+      "manualClockText": "1'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-15T19:01:38.709845+00:00",
       "manualClock": {
-        "seconds": 0,
-        "timer": "0:00",
-        "displayMinute": "0'",
+        "seconds": 60,
+        "timer": "1'",
+        "displayMinute": "1'",
         "active": false,
-        "status": "IN_PLAY",
-        "source": "awaiting_api_football_minute",
-        "lastApiSync": null
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-15T19:01:38.709845+00:00"
       },
-      "clockSource": "awaiting_api_football_minute",
-      "lastApiSync": null,
-      "awaitingLiveApiData": true,
-      "manualClockText": "Awaiting live API data",
-      "displayMinute": "Awaiting live API data"
+      "homeScore": 0,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "apiFootballFixtureId": 1489377,
+      "fallbackClock": 60,
+      "fallbackClockText": "1'"
     }
   ]
 }
