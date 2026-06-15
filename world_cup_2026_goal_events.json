@@ -4464,13 +4464,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T20:53:52.195008+00:00",
+    "phase_start": "2026-06-15T20:54:29.570404+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 5280,
-    "clock_seconds": 5280,
-    "displayMinute": "88'",
-    "manualClockText": "88'",
-    "lastApiSync": "2026-06-15T20:53:52.195008+00:00",
+    "base_seconds": 5400,
+    "clock_seconds": 5400,
+    "displayMinute": "90'",
+    "manualClockText": "90'",
+    "lastApiSync": "2026-06-15T20:54:29.570404+00:00",
     "apiFootballFixtureId": 1489377,
     "events": [
       {
@@ -4682,6 +4682,36 @@
         "comments": null,
         "assist": "H. Vanaken",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Egypt",
+        "player": "H. Fathy",
+        "minute": 89,
+        "extra": null,
+        "displayMinute": "89'",
+        "timer": "89:00",
+        "timerSeconds": 5340,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "I. Adel",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Egypt",
+        "player": "A. Fatouh",
+        "minute": 89,
+        "extra": null,
+        "displayMinute": "89'",
+        "timer": "89:00",
+        "timerSeconds": 5340,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "K. Hafez",
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -4865,6 +4895,36 @@
         "detail": "Substitution 5",
         "comments": null,
         "assist": "H. Vanaken",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Egypt",
+        "player": "H. Fathy",
+        "minute": 89,
+        "extra": null,
+        "displayMinute": "89'",
+        "timer": "89:00",
+        "timerSeconds": 5340,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "I. Adel",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Egypt",
+        "player": "A. Fatouh",
+        "minute": 89,
+        "extra": null,
+        "displayMinute": "89'",
+        "timer": "89:00",
+        "timerSeconds": 5340,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "K. Hafez",
         "source": "api_football"
       }
     ]
