@@ -4732,10 +4732,31 @@
     ]
   },
   "537370": {
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Saudi Arabia",
+        "player": "A. Al Amri",
+        "minute": 41,
+        "extra": null,
+        "displayMinute": "41'",
+        "timer": "41:00",
+        "timerSeconds": 2460,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football",
+        "matchId": 537370,
+        "matchUtcDate": "2026-06-15T22:00:00Z",
+        "homeTeam": "Saudi Arabia",
+        "awayTeam": "Uruguay",
+        "goalNumber": 1
+      }
+    ],
     "clock_active": false,
     "status": "1H",
-    "homeScore": 0,
+    "homeScore": 1,
     "awayScore": 0,
     "utcDate": "2026-06-15T22:00:00Z",
     "homeTeam": "Saudi Arabia",
@@ -4746,14 +4767,31 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T22:44:42.936808+00:00",
+    "phase_start": "2026-06-15T22:45:09.320891+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 2460,
     "clock_seconds": 2460,
     "displayMinute": "41'",
     "manualClockText": "41'",
-    "lastApiSync": "2026-06-15T22:44:42.936808+00:00",
-    "apiFootballFixtureId": 1489379
+    "lastApiSync": "2026-06-15T22:45:09.320891+00:00",
+    "apiFootballFixtureId": 1489379,
+    "events": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Saudi Arabia",
+        "player": "A. Al Amri",
+        "minute": 41,
+        "extra": null,
+        "displayMinute": "41'",
+        "timer": "41:00",
+        "timerSeconds": 2460,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football"
+      }
+    ]
   },
   "537364": {
     "goalEvents": [],
