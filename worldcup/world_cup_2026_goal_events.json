@@ -4048,8 +4048,8 @@
   },
   "537369": {
     "goalEvents": [],
-    "clock_active": false,
-    "status": "TIMED",
+    "clock_active": true,
+    "status": "IN_PLAY",
     "homeScore": 0,
     "awayScore": 0,
     "utcDate": "2026-06-15T16:00:00Z",
@@ -4057,12 +4057,15 @@
     "awayTeam": "Cape Verde",
     "referees": [
       {
-        "id": 129250,
-        "name": "Adham Makhadmeh",
-        "type": "REFEREE",
-        "nationality": "Jordan"
+        "name": "Adham Mohammad, Jordan",
+        "type": "REFEREE"
       }
-    ]
+    ],
+    "base_seconds": 300,
+    "clock_seconds": 300,
+    "phase_start": "2026-06-15T16:05:23.679786+00:00",
+    "source": "football_data_minute",
+    "apiFootballFixtureId": 1489380
   },
   "537363": {
     "goalEvents": [],
