@@ -501,7 +501,7 @@
     {
       "stage": "ALL",
       "type": "TOTAL",
-      "group": "Group G",
+      "group": "Atlantic Division",
       "table": [
         {
           "position": 1,
@@ -521,7 +521,14 @@
           "goalsFor": 1,
           "goalsAgainst": 1,
           "goalDifference": 0
-        },
+        }
+      ]
+    },
+    {
+      "stage": "ALL",
+      "type": "TOTAL",
+      "group": "Central Division",
+      "table": [
         {
           "position": 1,
           "team": {
@@ -539,44 +546,6 @@
           "points": 1,
           "goalsFor": 1,
           "goalsAgainst": 1,
-          "goalDifference": 0
-        },
-        {
-          "position": 3,
-          "team": {
-            "id": 840,
-            "name": "Iran",
-            "shortName": "Iran",
-            "tla": "IRN",
-            "crest": "https://crests.football-data.org/iran.svg"
-          },
-          "playedGames": 0,
-          "form": null,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
-          "goalDifference": 0
-        },
-        {
-          "position": 3,
-          "team": {
-            "id": 783,
-            "name": "New Zealand",
-            "shortName": "New Zealand",
-            "tla": "NZL",
-            "crest": "https://crests.football-data.org/783.svg"
-          },
-          "playedGames": 0,
-          "form": null,
-          "won": 0,
-          "draw": 0,
-          "lost": 0,
-          "points": 0,
-          "goalsFor": 0,
-          "goalsAgainst": 0,
           "goalDifference": 0
         }
       ]
