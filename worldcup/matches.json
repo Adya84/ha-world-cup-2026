@@ -4822,7 +4822,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-15T21:19:54Z",
+      "lastUpdated": "2026-06-15T21:20:49Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -4864,7 +4864,7 @@
       "displayMinute": "20'",
       "manualClockText": "20'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-15T19:20:12.492169+00:00",
+      "lastApiSync": "2026-06-15T19:20:52.836456+00:00",
       "manualClock": {
         "seconds": 1200,
         "timer": "20'",
@@ -4872,7 +4872,7 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-15T19:20:12.492169+00:00"
+        "lastApiSync": "2026-06-15T19:20:52.836456+00:00"
       },
       "homeScore": 0,
       "awayScore": 1,
@@ -4884,16 +4884,21 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Egypt",
-          "player": null,
-          "minute": 20,
+          "player": "E. Ashour",
+          "minute": 19,
           "extra": null,
-          "displayMinute": "20'",
-          "timer": "20:00",
-          "timerSeconds": 1200,
+          "displayMinute": "19'",
+          "timer": "19:00",
+          "timerSeconds": 1140,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
-          "source": "api_football"
+          "assist": "M. Salah",
+          "source": "api_football",
+          "matchId": 537363,
+          "matchUtcDate": "2026-06-15T19:00:00Z",
+          "homeTeam": "Belgium",
+          "awayTeam": "Egypt",
+          "goalNumber": 1
         }
       ],
       "events": [
@@ -4931,15 +4936,15 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Egypt",
-          "player": null,
-          "minute": 20,
+          "player": "E. Ashour",
+          "minute": 19,
           "extra": null,
-          "displayMinute": "20'",
-          "timer": "20:00",
-          "timerSeconds": 1200,
+          "displayMinute": "19'",
+          "timer": "19:00",
+          "timerSeconds": 1140,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "M. Salah",
           "source": "api_football"
         }
       ],
