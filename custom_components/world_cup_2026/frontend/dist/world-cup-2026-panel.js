@@ -28,6 +28,7 @@ class WorldCup2026Panel extends HTMLElement {
       records: {},
       venues: {},
       supporters: [],
+      premiumSupporters: [],
     };
     this._matchClockStorageKey = "world_cup_2026_match_clock_state_v1";
     this._goalEventStorageKey = "world_cup_2026_goal_event_times_v1";
@@ -7368,6 +7369,57 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
 
+  async loadPremiumSupporters() {
+    const sortSupporters = (supporters) => {
+      return [...supporters].sort((a, b) => {
+        const aDate = new Date(a?.date || "1900-01-01").getTime();
+        const bDate = new Date(b?.date || "1900-01-01").getTime();
+        return bDate - aDate;
+      });
+    };
+
+    const normaliseSupportersPayload = (payload) => {
+      if (Array.isArray(payload)) return sortSupporters(payload);
+      if (payload && Array.isArray(payload.premiumSupporters)) return sortSupporters(payload.premiumSupporters);
+      if (payload && Array.isArray(payload.supporters)) return sortSupporters(payload.supporters);
+      return [];
+    };
+
+    const fetchPremiumSupporters = async (url) => {
+      const response = await fetch(url, { cache: "no-store" });
+      if (!response.ok) throw new Error("Premium supporters file not available");
+      return normaliseSupportersPayload(await response.json());
+    };
+
+    const urls = [
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/premium_supporters.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/premium-supporters.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/premium-supporters/supporters.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/premium-supporters/premium_supporters.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/premium_supporters/supporters.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/premium_supporters/premium_supporters.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/premium%20supporters/supporters.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/premium%20supporters/premium_supporters.json?t=" + Date.now(),
+      "/local/worldcup/premium_supporters.json?t=" + Date.now(),
+      "/local/worldcup/premium-supporters/supporters.json?t=" + Date.now(),
+      "/local/worldcup/premium_supporters/supporters.json?t=" + Date.now(),
+      "/world_cup_2026_frontend/data/premium_supporters.json?t=" + Date.now(),
+    ];
+
+    for (const url of urls) {
+      try {
+        const supporters = await fetchPremiumSupporters(url);
+        if (supporters.length) return supporters;
+      } catch {
+        // Try the next location.
+      }
+    }
+
+    return [];
+  }
+
+
+
 
   async loadPublicGoalEvents() {
     const urls = [
@@ -7738,6 +7790,7 @@ class WorldCup2026Panel extends HTMLElement {
       this._data.records = await this.safeCall("world_cup_2026/get_records", {});
       this._data.venues = await this.safeCall("world_cup_2026/get_venues", {});
       this._data.supporters = await this.loadSupporters();
+      this._data.premiumSupporters = await this.loadPremiumSupporters();
       this.processMatchClockState();
       this.render();
     } catch (err) {
@@ -8193,6 +8246,10 @@ class WorldCup2026Panel extends HTMLElement {
         <span class="wc-football-match-clock-label">${this.esc(label)}</span>
         <span class="wc-football-match-clock" data-match-id="${this.esc(id)}">${this.esc(clockText)}</span>
       </div>
+<p><strong>⭐ Premium Supporters</strong> (minimum £10 donation) receive a permanent place on the Premium Supporters scrolling banner, including their name, country flag and an optional personal message.</p>
+<p>Funny messages are welcome, but messages containing swearing, offensive language, insults, abuse, discrimination, political content or negative comments will not be displayed.</p>
+<p>The World Cup 2026 team reserves the right to edit, shorten or reject any submitted message that does not meet these guidelines.</p>
+
     `;
   }
 
@@ -8748,7 +8805,28 @@ class WorldCup2026Panel extends HTMLElement {
       ${this.styles()}
       <div class="wc-app ">
         <div class="wc-shell">
-          <div class="wc-card">
+          
+      <div class="wc-card wc-premium-highlight" style="text-align:center;max-width:980px;margin:0 auto 14px auto;border:2px solid rgba(255,215,0,0.95);box-shadow:0 0 24px rgba(255,215,0,0.28);background:linear-gradient(135deg,rgba(255,215,0,0.16),rgba(255,255,255,0.04));">
+        <div style="font-size:1.45rem;font-weight:900;letter-spacing:.04em;margin-bottom:8px;">⭐ BECOME A PREMIUM SUPPORTER ⭐</div>
+        <div style="font-size:1.05rem;font-weight:800;margin-bottom:10px;">Want your name shown on the scrolling supporter bar?</div>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:12px auto;max-width:820px;">
+          <div class="wc-mini-card" style="padding:12px;border-radius:14px;background:rgba(255,255,255,0.08);">🇬🇧<br><strong>Name + Flag</strong></div>
+          <div class="wc-mini-card" style="padding:12px;border-radius:14px;background:rgba(255,255,255,0.08);">💬<br><strong>Your Message</strong></div>
+          <div class="wc-mini-card" style="padding:12px;border-radius:14px;background:rgba(255,255,255,0.08);">🏆<br><strong>Premium Status</strong></div>
+        </div>
+
+        <p style="font-size:1.15rem;font-weight:900;margin:12px auto;">Premium Support donation: minimum £10</p>
+        <p class="wc-muted" style="max-width:760px;margin:8px auto;">
+          Premium supporters get their name, country flag and optional personal message shown on the Premium Supporters scrolling bar.
+          Funny messages and friendly football banter are welcome, but they must stay clean.
+        </p>
+        <p class="wc-muted" style="max-width:760px;margin:8px auto;font-size:.9rem;">
+          No swearing, insults, abuse, discrimination, political content or negative comments. Unsuitable messages will not be posted.
+        </p>
+      </div>
+
+<div class="wc-card">
             <h1>${this.t("errorTitle")}</h1>
             <p>${this.t("errorText")}</p>
             <pre>${this.esc(JSON.stringify(err, null, 2))}</pre>
@@ -9041,6 +9119,213 @@ class WorldCup2026Panel extends HTMLElement {
           line-height: 1.1;
           margin-top: 1px;
           letter-spacing: 0.15px;
+        }
+
+        .overview-premium-strip {
+          position: relative;
+          display: grid;
+          grid-template-columns: auto minmax(0, 1fr) auto;
+          align-items: center;
+          gap: 12px;
+          min-height: 46px;
+          margin: 0 0 10px 0;
+          padding: 7px 8px 7px 12px;
+          border-radius: 18px;
+          overflow: hidden;
+          background:
+            radial-gradient(circle at 12% 0%, rgba(255, 236, 150, 0.30), transparent 34%),
+            linear-gradient(135deg, rgba(44, 31, 4, 0.74), rgba(13, 16, 34, 0.84) 52%, rgba(42, 26, 5, 0.76));
+          border: 1px solid rgba(255, 220, 120, 0.34);
+          box-shadow:
+            0 12px 34px rgba(0, 0, 0, 0.22),
+            inset 0 1px 0 rgba(255, 255, 255, 0.10),
+            0 0 24px rgba(255, 196, 72, 0.13);
+        }
+
+        .overview-premium-glow {
+          position: absolute;
+          inset: -60% auto auto -10%;
+          width: 180px;
+          height: 180px;
+          border-radius: 999px;
+          background: radial-gradient(circle, rgba(255, 226, 121, 0.32), transparent 64%);
+          pointer-events: none;
+          opacity: 0.75;
+        }
+
+        .overview-premium-badge {
+          position: relative;
+          z-index: 1;
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          min-width: 178px;
+          padding: 6px 10px;
+          border-radius: 14px;
+          background: rgba(0, 0, 0, 0.24);
+          border: 1px solid rgba(255, 225, 135, 0.22);
+          color: #fff4c7;
+          white-space: nowrap;
+          box-shadow: inset 0 1px 0 rgba(255,255,255,0.08);
+        }
+
+        .overview-premium-crown {
+          display: inline-grid;
+          place-items: center;
+          width: 25px;
+          height: 25px;
+          border-radius: 999px;
+          background: linear-gradient(135deg, rgba(255, 231, 134, 0.30), rgba(255, 168, 45, 0.14));
+          border: 1px solid rgba(255, 226, 135, 0.32);
+          filter: drop-shadow(0 0 10px rgba(255, 207, 72, 0.18));
+        }
+
+        .overview-premium-badge strong {
+          display: block;
+          font-size: 12px;
+          line-height: 1;
+          font-weight: 1000;
+          letter-spacing: 0.2px;
+        }
+
+        .overview-premium-badge small {
+          display: block;
+          margin-top: 2px;
+          font-size: 9px;
+          line-height: 1;
+          font-weight: 900;
+          color: rgba(255, 244, 199, 0.66);
+          text-transform: uppercase;
+          letter-spacing: 0.35px;
+        }
+
+        .overview-premium-marquee {
+          position: relative;
+          z-index: 1;
+          min-width: 0;
+          overflow: hidden;
+          mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+          -webkit-mask-image: linear-gradient(to right, transparent, #000 6%, #000 94%, transparent);
+        }
+
+        .overview-premium-track {
+          display: inline-flex;
+          align-items: center;
+          gap: 12px;
+          white-space: nowrap;
+          animation: wc-premium-supporter-scroll 140s linear infinite;
+          will-change: transform;
+        }
+
+        .overview-premium-strip:hover .overview-premium-track {
+          animation-play-state: paused;
+        }
+
+        .premium-ticker-card {
+          display: inline-flex;
+          align-items: center;
+          gap: 7px;
+          min-height: 31px;
+          padding: 6px 11px;
+          border-radius: 999px;
+          color: #fff8d8;
+          background:
+            linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.045));
+          border: 1px solid rgba(255, 222, 136, 0.22);
+          box-shadow:
+            inset 0 1px 0 rgba(255,255,255,0.08),
+            0 0 14px rgba(255, 203, 78, 0.08);
+          font-size: 13px;
+          font-weight: 950;
+        }
+
+        .premium-ticker-card small {
+          margin-left: 2px;
+          color: rgba(255, 248, 216, 0.62);
+          font-size: 10px;
+          font-weight: 850;
+        }
+
+        .premium-ticker-ad {
+          background: linear-gradient(135deg, rgba(255, 218, 110, 0.18), rgba(255, 255, 255, 0.055));
+          border-color: rgba(255, 222, 136, 0.34);
+        }
+
+        .premium-ticker-star {
+          filter: drop-shadow(0 0 8px rgba(255, 211, 82, 0.22));
+        }
+
+        .premium-ticker-flag {
+          font-size: 16px;
+          line-height: 1;
+        }
+
+        .premium-ticker-name {
+          max-width: 220px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .overview-premium-cta {
+          position: relative;
+          z-index: 1;
+          flex: 0 0 auto;
+          border: 0;
+          cursor: pointer;
+          min-height: 32px;
+          padding: 7px 12px;
+          border-radius: 999px;
+          background: linear-gradient(135deg, rgba(255, 223, 118, 0.30), rgba(255, 168, 44, 0.18));
+          color: #fff3bd;
+          font-size: 11px;
+          font-weight: 1000;
+          white-space: nowrap;
+          border: 1px solid rgba(255, 223, 118, 0.38);
+          box-shadow: 0 0 16px rgba(255, 192, 58, 0.14);
+        }
+
+        @keyframes wc-premium-supporter-scroll {
+          from { transform: translateX(0); }
+          to { transform: translateX(-33.333%); }
+        }
+
+        @media (max-width: 800px) {
+          .overview-premium-strip {
+            grid-template-columns: minmax(0, 1fr) auto;
+            min-height: 42px;
+            padding: 6px 7px;
+            gap: 8px;
+          }
+
+          .overview-premium-badge {
+            display: none;
+          }
+
+          .overview-premium-track {
+            animation-duration: 112s;
+          }
+
+          .premium-ticker-card {
+            min-height: 29px;
+            padding: 5px 9px;
+            font-size: 12px;
+          }
+
+          .premium-ticker-card small {
+            display: none;
+          }
+
+          .overview-premium-cta {
+            padding: 6px 9px;
+            font-size: 10px;
+          }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+          .overview-premium-track {
+            animation: none;
+          }
         }
 
 
@@ -14927,6 +15212,19 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+
+      .wc-premium-explainer,
+      .wc-premium-explainer p,
+      .wc-premium-explainer .wc-muted,
+      .wc-premium-explainer .wc-section-title {
+        text-align: center !important;
+      }
+      .wc-premium-explainer {
+        max-width: 900px;
+        margin-left: auto !important;
+        margin-right: auto !important;
+      }
+
 </style>
     `;
   }
@@ -15173,6 +15471,66 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+
+  overviewSupporterTicker() {
+    const premiumSupporters = Array.isArray(this._data.premiumSupporters)
+      ? this._data.premiumSupporters
+      : [];
+
+    const visibleSupporters = premiumSupporters.slice(0, 30);
+    const supporterItems = visibleSupporters.map((supporter) => {
+      const name = typeof supporter === "string" ? supporter : supporter.name;
+      const country = typeof supporter === "string" ? "" : (supporter.flag || supporter.country || supporter.countryCode || supporter.location);
+      const flag = country ? this.flag(country, true) : (typeof supporter === "object" && supporter.flag ? supporter.flag : "🌟");
+      const label = this.esc(name || this.t("anonymousSupporter"));
+      const message = typeof supporter === "string" ? "" : supporter.message;
+      const shortMessage = message ? `<small>${this.esc(message)}</small>` : "";
+      return `
+        <span class="premium-ticker-card">
+          <span class="premium-ticker-star">⭐</span>
+          <span class="premium-ticker-flag">${flag}</span>
+          <span class="premium-ticker-name">${label}</span>
+          ${shortMessage}
+        </span>
+      `;
+    });
+
+    const heroItems = [
+      `<span class="premium-ticker-card premium-ticker-ad"><span class="premium-ticker-star">🏆</span><span class="premium-ticker-name">Premium Supporters</span><small>Featured on the main dashboard</small></span>`,
+      `<span class="premium-ticker-card premium-ticker-ad"><span class="premium-ticker-star">🍺</span><span class="premium-ticker-name">Support development</span><small>Help with API costs, fixes and live updates</small></span>`,
+      `<span class="premium-ticker-card premium-ticker-ad"><span class="premium-ticker-star">⭐</span><span class="premium-ticker-name">Premium Supporter</span><small>Minimum £10 donation to be featured</small></span>`
+    ];
+
+    const items = supporterItems.length ? [...supporterItems, ...heroItems] : heroItems;
+    const repeatedItems = [...items, ...items, ...items].join("");
+
+    // Keep the marquee position stable across Home Assistant refreshes/re-renders.
+    // Without this, every data refresh rebuilds the DOM and the animation starts again.
+    const animationSeconds = 140;
+    const animationOffset = -((Date.now() / 1000) % animationSeconds).toFixed(2);
+
+    return `
+      <div class="overview-premium-strip" role="region" aria-label="World Cup 2026 premium supporters">
+        <div class="overview-premium-glow"></div>
+        <div class="overview-premium-badge">
+          <span class="overview-premium-crown">👑</span>
+          <span>
+            <strong>Premium Supporters</strong>
+            <small>Main-page featured supporters</small>
+          </span>
+        </div>
+        <div class="overview-premium-marquee">
+          <div class="overview-premium-track" style="animation-delay: ${animationOffset}s;">
+            ${repeatedItems}
+          </div>
+        </div>
+        <button class="overview-premium-cta overview-action-button" data-page="supporters" type="button">
+          🍺 Join
+        </button>
+      </div>
+    `;
+  }
+
   overviewPage() {
     const o = this._data.overview || {};
     const fixtures = this._data.fixtures || [];
@@ -15241,6 +15599,7 @@ class WorldCup2026Panel extends HTMLElement {
     const supporters = this.sortedSupporters();
     return `
       <div class="overview-pro-page">
+        ${this.overviewSupporterTicker()}
         <div class="overview-hero compact-overview-hero wc-card">
 <div class="overview-hero-main">
             <div class="overview-progress-wrap">
@@ -18194,13 +18553,97 @@ class WorldCup2026Panel extends HTMLElement {
     const allSupporters = supporters;
 
     return `
-      <div class="wc-card">
-        <div class="wc-section-title">${this.t("supportersThankYouTitle")}</div>
-        <p>
-          ${this.t("supportersIntro")}
+      <div class="wc-card wc-support-donate-card" style="text-align:center;">
+        <div class="wc-section-title">${this.t("wantNameAdded")}</div>
+        <p class="wc-muted">${this.t("supportFutureUpdates")}</p>
+        <p class="wc-muted">Support the World Cup 2026 Integration using Ko-fi or PayPal. Every donation helps with future updates, testing and new features.</p>
+        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
+          <a
+            class="wc-pill wc-donate-button"
+            href="https://ko-fi.com/supportkofi"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="display:inline-flex;text-decoration:none;"
+          >
+            ☕ Support via Ko-fi
+          </a>
+          <a
+            class="wc-pill wc-donate-button"
+            href="https://paypal.me/graffidoodle"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="display:inline-flex;text-decoration:none;"
+          >
+            💳 Support via PayPal
+          </a>
+        </div>
+      </div>
+
+      ${this.overviewSupporterTicker()}
+
+      <div class="wc-card wc-premium-support-info" style="max-width:980px;margin-left:auto;margin-right:auto;">
+        <div class="wc-section-title" style="text-align:center;">${this.t("supportersThankYouTitle")}</div>
+
+        <div style="text-align:center;font-size:18px;font-weight:900;line-height:1.45;margin:8px auto 14px auto;max-width:860px;">
+          ⭐ <strong>Premium Supporters</strong> can have their name, country flag and a personalised message featured in the World Cup 2026 Integration.
+        </div>
+
+        <p class="wc-muted" style="text-align:center;max-width:880px;margin-left:auto;margin-right:auto;">
+          The World Cup 2026 integration has grown from a small personal Home Assistant dashboard into a full tournament system with fixtures, live scores, results, groups, knockout tracking, stadiums, records, Golden Boot data and supporter features.
         </p>
-        <p class="wc-muted">
-          ${this.t("supportersSpecialThanks")}
+
+        <p class="wc-muted" style="text-align:center;max-width:880px;margin-left:auto;margin-right:auto;">
+          Every update takes time to build, test and maintain, and support also helps towards live football data, future improvements, bug fixes and project costs.
+        </p>
+
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:12px;margin-top:16px;">
+          <div class="wc-stat" style="text-align:left;border:1px solid rgba(255,215,0,0.55);background:linear-gradient(135deg,rgba(255,215,0,0.14),rgba(255,255,255,0.04));">
+            <strong>👑 Premium Supporter</strong>
+            <span style="display:block;margin-top:6px;line-height:1.5;">
+              Donate <b>£10 / $10 / €10 or more</b> to be featured as a Premium Supporter.
+            </span>
+          </div>
+
+          <div class="wc-stat" style="text-align:left;">
+            <strong>🌍 Name & Flag</strong>
+            <span style="display:block;margin-top:6px;line-height:1.5;">
+              Your name or nickname can be shown with your country flag in the integration.
+            </span>
+          </div>
+
+          <div class="wc-stat" style="text-align:left;">
+            <strong>💬 Personal Message</strong>
+            <span style="display:block;margin-top:6px;line-height:1.5;">
+              Premium Supporters can include a short message to appear with their supporter profile.
+            </span>
+          </div>
+        </div>
+
+        <div style="margin-top:16px;padding:14px;border-radius:16px;background:rgba(255,255,255,0.06);border:1px solid rgba(255,255,255,0.14);">
+          <p style="margin:0 0 8px 0;font-weight:900;text-align:center;">
+            ❤️ Every Donation Matters
+          </p>
+          <p class="wc-muted" style="margin:0;text-align:center;max-width:880px;margin-left:auto;margin-right:auto;">
+            Whilst Premium Supporters receive extra recognition, <b>every donation is genuinely appreciated regardless of amount</b>. Anyone who supports the project can still be added to the Supporters page as a thank you.
+          </p>
+        </div>
+
+        <div style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px;">
+          <div class="wc-pill" style="justify-content:center;white-space:normal;line-height:1.4;">⚽ Live data costs</div>
+          <div class="wc-pill" style="justify-content:center;white-space:normal;line-height:1.4;">🛠 Bug fixes & improvements</div>
+          <div class="wc-pill" style="justify-content:center;white-space:normal;line-height:1.4;">🚀 Future features</div>
+          <div class="wc-pill" style="justify-content:center;white-space:normal;line-height:1.4;">🌍 Community development</div>
+        </div>
+
+        <div style="margin-top:16px;text-align:center;">
+          <p style="font-weight:900;margin:0 0 8px 0;">To be added, include your name, country and optional message after donating.</p>
+          <p class="wc-muted" style="margin:0;">
+            Example: 🇬🇧 Adrian Apel — “Creator & Founder” · 🇺🇸 John Smith — “Supporting development from the USA” · 🇩🇪 Klaus Meyer — “Love the integration!”
+          </p>
+        </div>
+
+        <p style="text-align:center;font-weight:900;margin:18px 0 0 0;">
+          Every supporter matters. Every donation helps. Every contribution is appreciated. 🙏
         </p>
       </div>
 
@@ -18247,32 +18690,6 @@ class WorldCup2026Panel extends HTMLElement {
             </div>
           `
       }
-
-      <div class="wc-card" style="text-align:center;">
-        <div class="wc-section-title">${this.t("wantNameAdded")}</div>
-        <p class="wc-muted">${this.t("supportFutureUpdates")}</p>
-        <p class="wc-muted">Support the World Cup 2026 Integration using Ko-fi or PayPal. Every donation helps with future updates, testing and new features.</p>
-        <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;margin-top:8px;">
-          <a
-            class="wc-pill wc-donate-button"
-            href="https://ko-fi.com/supportkofi"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="display:inline-flex;text-decoration:none;"
-          >
-            ☕ Support via Ko-fi
-          </a>
-          <a
-            class="wc-pill wc-donate-button"
-            href="https://paypal.me/graffidoodle"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="display:inline-flex;text-decoration:none;"
-          >
-            💳 Support via PayPal
-          </a>
-        </div>
-      </div>
     `;
   }
 
