@@ -4061,9 +4061,9 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 4620,
-    "clock_seconds": 4620,
-    "phase_start": "2026-06-15T17:38:18.929451+00:00",
+    "base_seconds": 4680,
+    "clock_seconds": 4680,
+    "phase_start": "2026-06-15T17:38:56.115408+00:00",
     "source": "api_football_live_minute",
     "apiFootballFixtureId": 1489380,
     "events": [
@@ -4086,13 +4086,28 @@
         "type": "Substitution",
         "rawType": "subst",
         "team": "Cape Verde Islands",
-        "player": "D. Livramento",
+        "player": "J. Cabral",
         "minute": 61,
         "extra": null,
         "displayMinute": "61'",
         "timer": "61:00",
         "timerSeconds": 3660,
         "detail": "Substitution 1",
+        "comments": null,
+        "assist": "W. Semedo",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Cape Verde Islands",
+        "player": "D. Livramento",
+        "minute": 61,
+        "extra": null,
+        "displayMinute": "61'",
+        "timer": "61:00",
+        "timerSeconds": 3660,
+        "detail": "Substitution 2",
         "comments": null,
         "assist": "N. Da Costa",
         "source": "api_football"
@@ -4107,24 +4122,9 @@
         "displayMinute": "61'",
         "timer": "61:00",
         "timerSeconds": 3660,
-        "detail": "Substitution 2",
-        "comments": null,
-        "assist": "D. Duarte",
-        "source": "api_football"
-      },
-      {
-        "type": "Substitution",
-        "rawType": "subst",
-        "team": "Cape Verde Islands",
-        "player": "J. Cabral",
-        "minute": 61,
-        "extra": null,
-        "displayMinute": "61'",
-        "timer": "61:00",
-        "timerSeconds": 3660,
         "detail": "Substitution 3",
         "comments": null,
-        "assist": "W. Semedo",
+        "assist": "D. Duarte",
         "source": "api_football"
       },
       {
@@ -4190,10 +4190,25 @@
         "source": "api_football"
       }
     ],
-    "displayMinute": "77'",
-    "manualClockText": "77'",
-    "lastApiSync": "2026-06-15T17:38:18.929451+00:00",
+    "displayMinute": "78'",
+    "manualClockText": "78'",
+    "lastApiSync": "2026-06-15T17:38:56.115408+00:00",
     "substitutionEvents": [
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Cape Verde Islands",
+        "player": "J. Cabral",
+        "minute": 61,
+        "extra": null,
+        "displayMinute": "61'",
+        "timer": "61:00",
+        "timerSeconds": 3660,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "W. Semedo",
+        "source": "api_football"
+      },
       {
         "type": "Substitution",
         "rawType": "subst",
@@ -4204,7 +4219,7 @@
         "displayMinute": "61'",
         "timer": "61:00",
         "timerSeconds": 3660,
-        "detail": "Substitution 1",
+        "detail": "Substitution 2",
         "comments": null,
         "assist": "N. Da Costa",
         "source": "api_football"
@@ -4219,24 +4234,9 @@
         "displayMinute": "61'",
         "timer": "61:00",
         "timerSeconds": 3660,
-        "detail": "Substitution 2",
-        "comments": null,
-        "assist": "D. Duarte",
-        "source": "api_football"
-      },
-      {
-        "type": "Substitution",
-        "rawType": "subst",
-        "team": "Cape Verde Islands",
-        "player": "J. Cabral",
-        "minute": 61,
-        "extra": null,
-        "displayMinute": "61'",
-        "timer": "61:00",
-        "timerSeconds": 3660,
         "detail": "Substitution 3",
         "comments": null,
-        "assist": "W. Semedo",
+        "assist": "D. Duarte",
         "source": "api_football"
       },
       {
