@@ -4444,13 +4444,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T19:34:19.447183+00:00",
+    "phase_start": "2026-06-15T19:34:57.070842+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 2040,
-    "clock_seconds": 2040,
-    "displayMinute": "34'",
-    "manualClockText": "34'",
-    "lastApiSync": "2026-06-15T19:34:19.447183+00:00",
+    "base_seconds": 2100,
+    "clock_seconds": 2100,
+    "displayMinute": "35'",
+    "manualClockText": "35'",
+    "lastApiSync": "2026-06-15T19:34:57.070842+00:00",
     "apiFootballFixtureId": 1489377,
     "events": [
       {
@@ -4497,6 +4497,21 @@
         "comments": null,
         "assist": "M. Salah",
         "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Egypt",
+        "player": "A. Fatouh",
+        "minute": 34,
+        "extra": null,
+        "displayMinute": "34'",
+        "timer": "34:00",
+        "timerSeconds": 2040,
+        "detail": "Yellow Card",
+        "comments": "Tripping",
+        "assist": null,
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -4527,6 +4542,21 @@
         "timerSeconds": 840,
         "detail": "Yellow Card",
         "comments": "Holding",
+        "assist": null,
+        "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Egypt",
+        "player": "A. Fatouh",
+        "minute": 34,
+        "extra": null,
+        "displayMinute": "34'",
+        "timer": "34:00",
+        "timerSeconds": 2040,
+        "detail": "Yellow Card",
+        "comments": "Tripping",
         "assist": null,
         "source": "api_football"
       }
