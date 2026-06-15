@@ -5000,7 +5000,7 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 62,
+      "minute": 63,
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
       "events": [
@@ -5092,6 +5092,36 @@
           "detail": "Substitution 2",
           "comments": null,
           "assist": "Amad Diallo",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "John Yeboah",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Angelo Preciado",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "Alan Franco",
+          "minute": 63,
+          "extra": null,
+          "displayMinute": "63'",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Jackson Porozo",
           "source": "api_football"
         }
       ],
@@ -5186,6 +5216,36 @@
           "detail": "Substitution 2",
           "comments": null,
           "assist": "Amad Diallo",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "John Yeboah",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Angelo Preciado",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "Alan Franco",
+          "minute": 63,
+          "extra": null,
+          "displayMinute": "63'",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Jackson Porozo",
           "source": "api_football"
         }
       ],
@@ -5310,21 +5370,61 @@
           "homeTeam": "Ivory Coast",
           "awayTeam": "Ecuador",
           "goalNumber": 6
+        },
+        {
+          "type": "Goal",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "John Yeboah",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Angelo Preciado",
+          "source": "api_football",
+          "matchId": 537352,
+          "matchUtcDate": "2026-06-14T23:00:00Z",
+          "homeTeam": "Ivory Coast",
+          "awayTeam": "Ecuador",
+          "goalNumber": 7
+        },
+        {
+          "type": "Goal",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "Alan Franco",
+          "minute": 63,
+          "extra": null,
+          "displayMinute": "63'",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Jackson Porozo",
+          "source": "api_football",
+          "matchId": 537352,
+          "matchUtcDate": "2026-06-14T23:00:00Z",
+          "homeTeam": "Ivory Coast",
+          "awayTeam": "Ecuador",
+          "goalNumber": 8
         }
       ],
       "manualClock": {
-        "seconds": 3720,
-        "timer": "62:00",
-        "displayMinute": "62'",
+        "seconds": 3780,
+        "timer": "63:00",
+        "displayMinute": "63'",
         "active": true,
         "status": "IN_PLAY",
         "source": "local_status_timer"
       },
-      "fallbackClock": 3720,
-      "fallbackClockText": "62:00",
-      "manualClockText": "62:00",
-      "displayMinute": "62'",
-      "clockSeconds": 3720
+      "fallbackClock": 3780,
+      "fallbackClockText": "63:00",
+      "manualClockText": "63:00",
+      "displayMinute": "63'",
+      "clockSeconds": 3780
     },
     {
       "area": {
