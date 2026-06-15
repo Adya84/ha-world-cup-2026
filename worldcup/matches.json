@@ -2533,6 +2533,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489371,
       "goalEvents": [
         {
           "type": "Goal",
@@ -2575,7 +2576,6 @@
           "goalNumber": 2
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -2590,7 +2590,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Brahim D\u00edaz",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537339,
+          "matchUtcDate": "2026-06-13T22:00:00Z",
+          "homeTeam": "Brazil",
+          "awayTeam": "Morocco",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -2605,187 +2610,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Bruno Guimar\u00e3es",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Brazil",
-          "player": "Casemiro",
-          "minute": 37,
-          "extra": null,
-          "displayMinute": "37'",
-          "timer": "37:00",
-          "timerSeconds": 2220,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Brazil",
-          "player": "Roger Iba\u00f1ez",
-          "minute": 43,
-          "extra": null,
-          "displayMinute": "43'",
-          "timer": "43:00",
-          "timerSeconds": 2580,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Brazil",
-          "player": "Roger Iba\u00f1ez",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "Danilo",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Brazil",
-          "player": "Casemiro",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "Fabinho",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Brazil",
-          "player": "Igor Thiago",
-          "minute": 61,
-          "extra": null,
-          "displayMinute": "61'",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "Luiz Henrique",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Brazil",
-          "player": "Lucas Paquet\u00e1",
-          "minute": 61,
-          "extra": null,
-          "displayMinute": "61'",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "Matheus Cunha",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Morocco",
-          "player": "Azzedine Ounahi",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "Samir El Mourabet",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Morocco",
-          "player": "Brahim D\u00edaz",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "Chemsdine Talbi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Brazil",
-          "player": "Bruno Guimar\u00e3es",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "Danilo Santos",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Morocco",
-          "player": "Bilal El Khannouss",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "Ayoube Amaimouni Echghouyab",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Morocco",
-          "player": "Noussair Mazraoui",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "Anass Salah-Eddine",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Morocco",
-          "player": "Ismael Saibari",
-          "minute": 89,
-          "extra": null,
-          "displayMinute": "89'",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "Soufiane Rahimi",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537339,
+          "matchUtcDate": "2026-06-13T22:00:00Z",
+          "homeTeam": "Brazil",
+          "awayTeam": "Morocco",
+          "goalNumber": 2
         }
       ],
       "cardEvents": [
@@ -2971,8 +2801,7 @@
           "assist": "Soufiane Rahimi",
           "source": "api_football_post_match"
         }
-      ],
-      "apiFootballFixtureId": 1489371
+      ]
     },
     {
       "area": {
@@ -5272,7 +5101,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-15T03:06:34Z",
+      "lastUpdated": "2026-06-15T03:17:25Z",
       "homeTeam": {
         "id": 792,
         "name": "Sweden",
