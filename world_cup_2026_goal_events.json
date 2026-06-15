@@ -5012,9 +5012,9 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 3240,
-    "clock_seconds": 3240,
-    "phase_start": "2026-06-15T03:14:25.570276+00:00",
+    "base_seconds": 3300,
+    "clock_seconds": 3300,
+    "phase_start": "2026-06-15T03:15:04.781953+00:00",
     "source": "football_data_minute",
     "apiFootballFixtureId": 1539002,
     "events": [
@@ -5061,6 +5061,38 @@
         "detail": "Normal Goal",
         "comments": null,
         "assist": "H. Mejbri",
+        "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Tunisia",
+        "player": "R. Khedira",
+        "minute": 54,
+        "extra": null,
+        "displayMinute": "54'",
+        "timer": "54:00",
+        "timerSeconds": 3240,
+        "detail": "Yellow Card",
+        "comments": "Tripping",
+        "assist": null,
+        "source": "api_football"
+      }
+    ],
+    "cardEvents": [
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Tunisia",
+        "player": "R. Khedira",
+        "minute": 54,
+        "extra": null,
+        "displayMinute": "54'",
+        "timer": "54:00",
+        "timerSeconds": 3240,
+        "detail": "Yellow Card",
+        "comments": "Tripping",
+        "assist": null,
         "source": "api_football"
       }
     ]
