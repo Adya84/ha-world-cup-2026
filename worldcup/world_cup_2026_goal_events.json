@@ -4938,8 +4938,8 @@
   },
   "537358": {
     "goalEvents": [],
-    "clock_active": false,
-    "status": "TIMED",
+    "clock_active": true,
+    "status": "IN_PLAY",
     "homeScore": 0,
     "awayScore": 0,
     "utcDate": "2026-06-15T02:00:00Z",
@@ -4947,12 +4947,15 @@
     "awayTeam": "Tunisia",
     "referees": [
       {
-        "id": 57435,
-        "name": "Yael Falc\u00f3n",
-        "type": "REFEREE",
-        "nationality": "Argentina"
+        "name": "Yael Falcon Perez, Argentina",
+        "type": "REFEREE"
       }
-    ]
+    ],
+    "base_seconds": 180,
+    "clock_seconds": 180,
+    "phase_start": "2026-06-15T02:03:47.808373+00:00",
+    "source": "football_data_minute",
+    "apiFootballFixtureId": 1539002
   },
   "537369": {
     "goalEvents": [],
