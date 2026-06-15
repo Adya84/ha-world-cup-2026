@@ -5187,7 +5187,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T01:47:25Z",
+      "lastUpdated": "2026-06-16T01:47:52Z",
       "homeTeam": {
         "id": 801,
         "name": "Saudi Arabia",
@@ -5229,7 +5229,7 @@
       "displayMinute": "82'",
       "manualClockText": "82'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-15T23:47:28.149028+00:00",
+      "lastApiSync": "2026-06-15T23:47:55.321450+00:00",
       "manualClock": {
         "seconds": 4920,
         "timer": "82'",
@@ -5237,7 +5237,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-15T23:47:28.149028+00:00"
+        "lastApiSync": "2026-06-15T23:47:55.321450+00:00"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -5391,6 +5391,21 @@
           "comments": null,
           "assist": null,
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Uruguay",
+          "player": "M. Araujo",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "B. Rodriguez",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -5470,6 +5485,21 @@
           "detail": "Substitution 3",
           "comments": null,
           "assist": "N. de la Cruz",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Uruguay",
+          "player": "M. Araujo",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "B. Rodriguez",
           "source": "api_football"
         }
       ],
