@@ -4433,7 +4433,7 @@
     ],
     "clock_active": false,
     "status": "2H",
-    "homeScore": 0,
+    "homeScore": 1,
     "awayScore": 1,
     "utcDate": "2026-06-15T19:00:00Z",
     "homeTeam": "Belgium",
@@ -4444,13 +4444,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T20:28:08.615879+00:00",
+    "phase_start": "2026-06-15T20:28:46.871013+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 3960,
     "clock_seconds": 3960,
     "displayMinute": "66'",
     "manualClockText": "66'",
-    "lastApiSync": "2026-06-15T20:28:08.615879+00:00",
+    "lastApiSync": "2026-06-15T20:28:46.871013+00:00",
     "apiFootballFixtureId": 1489377,
     "events": [
       {
@@ -4542,6 +4542,36 @@
         "comments": null,
         "assist": "M. De Cuyper",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Belgium",
+        "player": "C. De Ketelaere",
+        "minute": 66,
+        "extra": null,
+        "displayMinute": "66'",
+        "timer": "66:00",
+        "timerSeconds": 3960,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "R. Lukaku",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Belgium",
+        "player": null,
+        "minute": 66,
+        "extra": null,
+        "displayMinute": "66'",
+        "timer": "66:00",
+        "timerSeconds": 3960,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -4620,6 +4650,21 @@
         "detail": "Substitution 2",
         "comments": null,
         "assist": "M. De Cuyper",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Belgium",
+        "player": "C. De Ketelaere",
+        "minute": 66,
+        "extra": null,
+        "displayMinute": "66'",
+        "timer": "66:00",
+        "timerSeconds": 3960,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "R. Lukaku",
         "source": "api_football"
       }
     ]
