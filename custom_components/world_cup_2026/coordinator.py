@@ -659,6 +659,9 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         self._post_match_api_football_last_fetch = None
         self._api_football_rate_limited_until = None
         self._api_football_rate_limited_logged = False
+        self._api_football_live_rate_limited_until = None
+        self._api_football_live_rate_limited_logged = False
+        self._live_events_last_fetch_by_fixture = {}
         self._goal_event_store = {}
         self._goal_event_store_loaded = False
 
@@ -683,20 +686,51 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             )
             self._api_football_rate_limited_logged = True
 
+    def _api_football_live_is_rate_limited(self):
+        """Return True only while live API-Football calls are cooling down.
+
+        Live polling must not be blocked by slower post-match/date lookups,
+        otherwise a stale HT value can remain on screen after second half starts.
+        """
+        if not self._api_football_live_rate_limited_until:
+            return False
+        now = datetime.now(timezone.utc)
+        if now >= self._api_football_live_rate_limited_until:
+            self._api_football_live_rate_limited_until = None
+            self._api_football_live_rate_limited_logged = False
+            return False
+        return True
+
+    def _mark_api_football_live_rate_limited(self, source="API-Football live lookup"):
+        """Short live-only backoff after a 429.
+
+        Do not use the 1 hour post-match backoff for live games. During a live
+        match we need to retry soon so HT can change to 2H/46' automatically.
+        """
+        self._api_football_live_rate_limited_until = datetime.now(timezone.utc) + timedelta(seconds=30)
+        if not self._api_football_live_rate_limited_logged:
+            _LOGGER.warning(
+                "%s rate limit hit. Pausing live API-Football calls for 30 seconds and using cached/football-data data.",
+                source,
+            )
+            self._api_football_live_rate_limited_logged = True
+
     @staticmethod
     def _truthy(value):
         """Return True for common YAML truthy values."""
         return str(value or "").strip().lower() in {"1", "true", "yes", "on", "main", "master"}
 
     async def _is_main_live_provider(self):
-        """Only the main/provider install should call API-Football and publish live JSON.
+        """Return True when this install is allowed to call/publish live data.
 
-        Add one of these to secrets.yaml on the master machine:
-        world_cup_2026_main_provider: true
-
-        Viewer installs should leave it missing/false so they do not hammer the API.
+        Emergency rule: if an API-Football key exists on this install, treat it
+        as the master/provider. This stops live polling being disabled because
+        a provider flag is missing/misread while a match is live. Viewer installs
+        should not have the API-Football key in secrets.yaml.
         """
         settings = await self._async_read_github_settings()
+        if settings.get("api_football_key"):
+            return True
         return any(
             self._truthy(settings.get(key))
             for key in (
@@ -707,6 +741,24 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             )
         )
 
+    def _cached_live_api_active(self, now=None):
+        """Return True when the previous API-Football live response still looks active.
+
+        This keeps the coordinator on the 20 second live loop during half-time
+        and between API status transitions, so HT can change to 2H/46' without
+        waiting for the normal slow poll.
+        """
+        now = now or datetime.now(timezone.utc)
+        if not self._live_api_football_cache or not self._live_api_football_last_fetch:
+            return False
+        if now - self._live_api_football_last_fetch > timedelta(hours=4):
+            return False
+        for data in self._live_api_football_cache.values():
+            status = self._status_from_api_football(data.get("apiFootballStatus"))
+            if status in LIVE_STATUSES:
+                return True
+        return False
+
     def _match_live_poll_window_active(self, matches, now=None):
         """Return True only when API-Football live polling is worth doing.
 
@@ -716,6 +768,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         late switching status.
         """
         now = now or datetime.now(timezone.utc)
+        if self._cached_live_api_active(now):
+            return True
         for match in matches or []:
             if str(match.get("status") or "").upper() in LIVE_STATUSES:
                 return True
@@ -745,6 +799,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
     def _choose_poll_interval(self, matches):
         """Use fast polling only when there is a live or nearly-live match."""
         now = datetime.now(timezone.utc)
+        if self._cached_live_api_active(now):
+            return SCAN_INTERVAL_LIVE
         if any(str(m.get("status") or "").upper() in LIVE_STATUSES for m in matches or []):
             return SCAN_INTERVAL_LIVE
 
@@ -1432,8 +1488,6 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
     async def _api_football_enabled(self):
         settings = await self._async_read_github_settings()
-        if not await self._is_main_live_provider():
-            return None
         return settings.get("api_football_key")
 
     def _normalise_api_football_event(self, event):
@@ -1544,6 +1598,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         """Fetch timeline events for one API-Football fixture."""
         if not fixture_id:
             return {"events": [], "goalEvents": [], "cardEvents": []}
+        if self._api_football_is_rate_limited():
+            return {"events": [], "goalEvents": [], "cardEvents": [], "substitutionEvents": []}
 
         url = f"https://v3.football.api-sports.io/fixtures/events?fixture={fixture_id}"
         try:
@@ -1597,7 +1653,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             return {}
 
         now = datetime.now(timezone.utc)
-        if self._api_football_is_rate_limited():
+        if self._api_football_live_is_rate_limited():
             return self._live_api_football_cache
         if (
             self._live_api_football_last_fetch
@@ -1615,7 +1671,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 async with session.get(url, headers=headers) as response:
                     if response.status == 429:
                         await response.text()
-                        self._mark_api_football_rate_limited("API-Football live lookup")
+                        self._mark_api_football_live_rate_limited("API-Football live lookup")
                         return self._live_api_football_cache
                     if response.status >= 400:
                         text = await response.text()
@@ -1629,6 +1685,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                     payload = await response.json()
 
                 live_items = payload.get("response", []) or []
+                if not live_items:
+                    _LOGGER.debug("API-Football live lookup returned no live fixtures")
                 for item in live_items:
                     fixture = item.get("fixture") or {}
                     fixture_id = fixture.get("id")
@@ -1660,7 +1718,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                     substitution_events = [event for event in inline_events if event.get("rawType", "").lower() in {"subst", "substitution"} or str(event.get("type", "")).lower() == "substitution" or "substitution" in str(event.get("detail", "")).lower()]
 
                     expected_goals = _expected_goal_count_from_api_football_item(item)
-                    if fixture_id and (
+                    should_fetch_fixture_events = bool(fixture_id) and (
                         not inline_events
                         or not goal_events
                         or (
@@ -1668,7 +1726,17 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             and expected_goals > 0
                             and _count_goal_events(goal_events) < expected_goals
                         )
-                    ):
+                    )
+                    if should_fetch_fixture_events and not self._api_football_is_rate_limited():
+                        last_event_fetch = self._live_events_last_fetch_by_fixture.get(str(fixture_id))
+                        # Keep the main live status/clock endpoint every 20s, but
+                        # throttle the heavier events endpoint so it cannot rate-limit
+                        # the match clock and leave the panel stuck on HT.
+                        if last_event_fetch and now - last_event_fetch < timedelta(seconds=75):
+                            should_fetch_fixture_events = False
+
+                    if should_fetch_fixture_events and not self._api_football_is_rate_limited():
+                        self._live_events_last_fetch_by_fixture[str(fixture_id)] = now
                         fixture_event_data = await self._fetch_api_football_events_for_fixture(
                             session,
                             fixture_id,
@@ -2069,9 +2137,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         if not await self._is_main_live_provider():
             return matches
 
-        if not self._match_live_poll_window_active(matches):
-            return matches
-
+        # Master installs must keep checking the live API while a match may be
+        # active. Do not let the local poll-window gate stop HT -> 2H updates.
         live_data = await self._fetch_live_data_from_api_football()
         if not live_data:
             return matches
@@ -2182,7 +2249,13 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         matches = matches_data.get("matches", [])
         matches = self._add_football_data_live_fields_to_matches(matches)
         matches = await self._add_live_api_football_data_to_matches(matches)
-        matches = await self._add_post_match_api_football_events_to_matches(matches)
+
+        # While any match is live/HT/ET, keep the coordinator focused on the
+        # lightweight live endpoint. Heavy post-match date/event lookups can hit
+        # rate limits and must not block the live clock/status polling.
+        if not any(str(m.get("status") or "").upper() in LIVE_STATUSES for m in matches or []):
+            matches = await self._add_post_match_api_football_events_to_matches(matches)
+
         matches = await self._merge_persistent_goal_events_to_matches(matches)
         standings = standings_data.get("standings", [])
         scorers = scorers_data.get("scorers", [])
