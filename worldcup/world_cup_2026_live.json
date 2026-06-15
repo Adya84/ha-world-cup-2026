@@ -27,7 +27,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-15T18:34:10Z",
+      "lastUpdated": "2026-06-15T18:35:07Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -64,7 +64,21 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 33,
+      "minute": 34,
+      "clockSeconds": 2040,
+      "displayMinute": "34'",
+      "manualClockText": "34'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-15T16:35:11.522286+00:00",
+      "manualClock": {
+        "seconds": 2040,
+        "timer": "34'",
+        "displayMinute": "34'",
+        "active": false,
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-15T16:35:11.522286+00:00"
+      },
       "homeScore": 0,
       "awayScore": 0,
       "scoreSource": "api_football_live",
@@ -105,19 +119,8 @@
         }
       ],
       "apiFootballFixtureId": 1489380,
-      "manualClock": {
-        "seconds": 1980,
-        "timer": "33:00",
-        "displayMinute": "33'",
-        "active": true,
-        "status": "1H",
-        "source": "api_football_minute"
-      },
-      "fallbackClock": 1980,
-      "fallbackClockText": "33:00",
-      "manualClockText": "33:00",
-      "displayMinute": "33'",
-      "clockSeconds": 1980
+      "fallbackClock": 2040,
+      "fallbackClockText": "34'"
     }
   ],
   "live": [
@@ -148,7 +151,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-15T18:34:10Z",
+      "lastUpdated": "2026-06-15T18:35:07Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -185,7 +188,21 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 33,
+      "minute": 34,
+      "clockSeconds": 2040,
+      "displayMinute": "34'",
+      "manualClockText": "34'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-15T16:35:11.522286+00:00",
+      "manualClock": {
+        "seconds": 2040,
+        "timer": "34'",
+        "displayMinute": "34'",
+        "active": false,
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-15T16:35:11.522286+00:00"
+      },
       "homeScore": 0,
       "awayScore": 0,
       "scoreSource": "api_football_live",
@@ -226,19 +243,8 @@
         }
       ],
       "apiFootballFixtureId": 1489380,
-      "manualClock": {
-        "seconds": 1980,
-        "timer": "33:00",
-        "displayMinute": "33'",
-        "active": true,
-        "status": "1H",
-        "source": "api_football_minute"
-      },
-      "fallbackClock": 1980,
-      "fallbackClockText": "33:00",
-      "manualClockText": "33:00",
-      "displayMinute": "33'",
-      "clockSeconds": 1980
+      "fallbackClock": 2040,
+      "fallbackClockText": "34'"
     }
   ]
 }
