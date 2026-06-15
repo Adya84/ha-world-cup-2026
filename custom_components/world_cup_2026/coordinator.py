@@ -20,7 +20,7 @@ _LOGGER = logging.getLogger(__name__)
 SCAN_INTERVAL_IDLE = timedelta(minutes=30)
 SCAN_INTERVAL_NORMAL = timedelta(minutes=5)
 SCAN_INTERVAL_PRE_MATCH = timedelta(minutes=2)
-SCAN_INTERVAL_LIVE = timedelta(seconds=20)
+SCAN_INTERVAL_LIVE = timedelta(seconds=10)
 
 TOTAL_WORLD_CUP_MATCHES = 104
 LIVE_STATUSES = {"IN_PLAY", "PAUSED", "LIVE", "1H", "2H", "HT", "HALF_TIME", "ET", "BT", "P", "SUSP", "INT"}
@@ -1687,11 +1687,32 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 live_items = payload.get("response", []) or []
                 if not live_items:
                     _LOGGER.debug("API-Football live lookup returned no live fixtures")
+                    # If the live endpoint goes empty immediately after we had a live
+                    # fixture cached, treat that cached fixture as finished so it can
+                    # leave Live Now and enter Results. Otherwise football-data can
+                    # lag behind and leave the panel stuck at 90'.
+                    if self._live_api_football_cache:
+                        finished_cache = {}
+                        for key, cached in self._live_api_football_cache.items():
+                            if not isinstance(cached, dict):
+                                continue
+                            cached_status = self._status_from_api_football(cached.get("apiFootballStatus"))
+                            if cached_status in LIVE_STATUSES:
+                                updated = dict(cached)
+                                updated["apiFootballStatus"] = "FT"
+                                updated["apiFootballStatusLong"] = "Match Finished"
+                                finished_cache[key] = updated
+                        if finished_cache:
+                            self._live_api_football_cache = finished_cache
+                            self._live_api_football_last_fetch = now
+                            _LOGGER.debug("API-Football live endpoint empty; marking previous live fixture(s) finished from cache")
+                            return finished_cache
                 for item in live_items:
                     fixture = item.get("fixture") or {}
                     fixture_id = fixture.get("id")
                     status = fixture.get("status") or {}
                     elapsed = status.get("elapsed")
+                    extra = status.get("extra")
 
                     teams = item.get("teams") or {}
                     home = (teams.get("home") or {}).get("name")
@@ -1704,6 +1725,10 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                         elapsed = int(elapsed) if elapsed is not None else None
                     except (TypeError, ValueError):
                         elapsed = None
+                    try:
+                        extra = int(extra) if extra is not None else None
+                    except (TypeError, ValueError):
+                        extra = None
 
                     inline_events = [
                         event
@@ -1765,6 +1790,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
                     item_data = {
                         "minute": elapsed,
+                        "extra": extra,
                         "homeScore": live_home_score,
                         "awayScore": live_away_score,
                         "halfTimeHome": _safe_int(halftime.get("home")),
@@ -2162,16 +2188,21 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             minute = data.get("minute")
             if minute is not None:
                 minute = int(minute)
+                extra = _safe_int(data.get("extra"))
+                display_minute = f"{minute}+{extra}'" if extra and extra > 0 else f"{minute}'"
+                clock_seconds = (minute + (extra or 0)) * 60
                 match["minute"] = minute
-                match["clockSeconds"] = minute * 60
-                match["displayMinute"] = f"{minute}'"
-                match["manualClockText"] = f"{minute}'"
+                if extra is not None:
+                    match["extra"] = extra
+                match["clockSeconds"] = clock_seconds
+                match["displayMinute"] = display_minute
+                match["manualClockText"] = display_minute
                 match["clockSource"] = "api_football_live_minute"
                 match["lastApiSync"] = datetime.now(timezone.utc).isoformat()
                 match["manualClock"] = {
-                    "seconds": minute * 60,
-                    "timer": f"{minute}'",
-                    "displayMinute": f"{minute}'",
+                    "seconds": clock_seconds,
+                    "timer": display_minute,
+                    "displayMinute": display_minute,
                     "active": False,
                     "status": match.get("status"),
                     "source": "api_football_live_minute",
