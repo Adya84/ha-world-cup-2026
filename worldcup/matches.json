@@ -4822,7 +4822,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-15T22:28:46Z",
+      "lastUpdated": "2026-06-15T22:29:05Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -4838,7 +4838,7 @@
         "crest": "https://crests.football-data.org/825.svg"
       },
       "score": {
-        "winner": "AWAY_TEAM",
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
           "home": 1,
@@ -4859,20 +4859,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 66,
-      "clockSeconds": 3960,
-      "displayMinute": "66'",
-      "manualClockText": "66'",
+      "minute": 67,
+      "clockSeconds": 4020,
+      "displayMinute": "67'",
+      "manualClockText": "67'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-15T20:28:46.871013+00:00",
+      "lastApiSync": "2026-06-15T20:29:34.313197+00:00",
       "manualClock": {
-        "seconds": 3960,
-        "timer": "66'",
-        "displayMinute": "66'",
+        "seconds": 4020,
+        "timer": "67'",
+        "displayMinute": "67'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-15T20:28:46.871013+00:00"
+        "lastApiSync": "2026-06-15T20:29:34.313197+00:00"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -4899,6 +4899,26 @@
           "homeTeam": "Belgium",
           "awayTeam": "Egypt",
           "goalNumber": 1
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Belgium",
+          "player": "R. Lukaku",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football",
+          "matchId": 537363,
+          "matchUtcDate": "2026-06-15T19:00:00Z",
+          "homeTeam": "Belgium",
+          "awayTeam": "Egypt",
+          "goalNumber": 2
         }
       ],
       "events": [
@@ -5011,7 +5031,7 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Belgium",
-          "player": null,
+          "player": "R. Lukaku",
           "minute": 66,
           "extra": null,
           "displayMinute": "66'",
@@ -5119,8 +5139,8 @@
         }
       ],
       "apiFootballFixtureId": 1489377,
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'"
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'"
     },
     {
       "area": {
