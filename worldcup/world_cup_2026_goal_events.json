@@ -4997,11 +4997,31 @@
         "homeTeam": "Sweden",
         "awayTeam": "Tunisia",
         "goalNumber": 3
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Sweden",
+        "player": "V. Gyokeres",
+        "minute": 60,
+        "extra": null,
+        "displayMinute": "60'",
+        "timer": "60:00",
+        "timerSeconds": 3600,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football",
+        "matchId": 537358,
+        "matchUtcDate": "2026-06-15T02:00:00Z",
+        "homeTeam": "Sweden",
+        "awayTeam": "Tunisia",
+        "goalNumber": 4
       }
     ],
     "clock_active": true,
     "status": "IN_PLAY",
-    "homeScore": 2,
+    "homeScore": 3,
     "awayScore": 1,
     "utcDate": "2026-06-15T02:00:00Z",
     "homeTeam": "Sweden",
@@ -5012,9 +5032,9 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 3480,
-    "clock_seconds": 3480,
-    "phase_start": "2026-06-15T03:20:03.733663+00:00",
+    "base_seconds": 3600,
+    "clock_seconds": 3600,
+    "phase_start": "2026-06-15T03:20:40.108081+00:00",
     "source": "football_data_minute",
     "apiFootballFixtureId": 1539002,
     "events": [
@@ -5075,6 +5095,21 @@
         "timerSeconds": 3240,
         "detail": "Yellow Card",
         "comments": "Tripping",
+        "assist": null,
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Sweden",
+        "player": "V. Gyokeres",
+        "minute": 60,
+        "extra": null,
+        "displayMinute": "60'",
+        "timer": "60:00",
+        "timerSeconds": 3600,
+        "detail": "Normal Goal",
+        "comments": null,
         "assist": null,
         "source": "api_football"
       }
