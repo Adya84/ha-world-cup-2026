@@ -7446,7 +7446,7 @@ class WorldCup2026Panel extends HTMLElement {
 
   async loadPublicGithubMatches() {
     const urls = [
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/matches.json?v=2?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/matches.json?v=2&t=" + Date.now(),
       "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/matches.json?t=" + Date.now(),
       "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/www/worldcup/matches.json?t=" + Date.now(),
     ];
@@ -7811,16 +7811,35 @@ class WorldCup2026Panel extends HTMLElement {
     }, Math.max(20 * 1000, refreshDelay));
   }
 
+  hasUsableMasterClock(match) {
+    if (!match || !this.isLiveMatch(match)) return false;
+    const awaiting = String(match?.displayMinute || match?.manualClockText || match?.manualClock?.displayMinute || "").toLowerCase().includes("awaiting");
+    const minute = match.minute !== undefined && match.minute !== null && match.minute !== "" ? Number(match.minute) : null;
+    if (Number.isFinite(minute) && minute >= 0) return true;
+
+    const display = String(match.displayMinute || match.manualClock?.displayMinute || match.manualClockText || "").trim();
+    if (display && !display.toLowerCase().includes("awaiting")) return true;
+
+    const secondsCandidates = [
+      match.manualClock?.seconds,
+      match.manualClock?.clockSeconds,
+      match.manualClock?.clock_seconds,
+      match.clockSeconds,
+      match.clock_seconds,
+      match.fallbackClock,
+      match.fallback_clock,
+    ];
+    for (const candidate of secondsCandidates) {
+      const value = Number(candidate);
+      if (Number.isFinite(value) && value > 0) return true;
+    }
+
+    const source = String(match?.clockSource || match?.manualClock?.source || "").toLowerCase();
+    return source.includes("api") && !awaiting;
+  }
+
   backendHasMasterLiveClock(matches) {
-    return (Array.isArray(matches) ? matches : []).some((match) => {
-      const source = String(match?.clockSource || match?.manualClock?.source || "").toLowerCase();
-      return this.isLiveMatch(match) && (
-        source.includes("api")
-        || match?.apiFootballFixtureId
-        || match?.apiFootballStatus
-        || match?.lastApiSync
-      );
-    });
+    return (Array.isArray(matches) ? matches : []).some((match) => this.hasUsableMasterClock(match));
   }
 
   async loadAll() {
@@ -7860,9 +7879,13 @@ class WorldCup2026Panel extends HTMLElement {
         publicGoalEvents
       );
       const publicLiveWithStore = this.liveMatchesFromGithub(publicMatchesWithStore);
+      const mergedLiveFromGithub = this.mergeGithubMatchData(apiLiveWithStore, publicLiveWithStore).filter((match) => this.isLiveMatch(match));
+      // Main/provider dashboards keep their API clock. Viewer dashboards can have
+      // a local live row with "Awaiting live API data"; merge the GitHub master
+      // live feed so those devices get your exported minute/events every refresh.
       this._data.live = this.backendHasMasterLiveClock(apiLiveWithStore)
-        ? apiLiveWithStore
-        : this.mergeGithubMatchData(apiLiveWithStore, publicLiveWithStore).filter((match) => this.isLiveMatch(match));
+        ? this.mergeGithubMatchData(apiLiveWithStore, publicLiveWithStore).filter((match) => this.isLiveMatch(match))
+        : mergedLiveFromGithub;
       this._data.fixtures = this.mergeUniqueMatches(
         this.mergeGithubMatchData(fixturesWithStore, publicMatchesWithStore),
         storeMatches
@@ -8045,6 +8068,16 @@ class WorldCup2026Panel extends HTMLElement {
     if (!match || typeof match !== "object") return null;
 
     const manual = match.manualClock && typeof match.manualClock === "object" ? match.manualClock : null;
+    const status = String(manual?.status || match.status || match.matchStatus || "").toUpperCase().trim();
+
+    let seconds = null;
+    const directMinute = match.minute !== undefined && match.minute !== null && match.minute !== ""
+      ? Number(match.minute)
+      : null;
+    if (Number.isFinite(directMinute)) {
+      seconds = Math.max(0, Math.floor(directMinute * 60));
+    }
+
     const candidates = [
       manual?.seconds,
       manual?.clockSeconds,
@@ -8055,19 +8088,30 @@ class WorldCup2026Panel extends HTMLElement {
       match.fallback_clock,
     ];
 
-    let seconds = null;
-    for (const candidate of candidates) {
-      const value = Number(candidate);
-      if (Number.isFinite(value)) {
-        seconds = Math.max(0, Math.floor(value));
-        break;
+    if (seconds === null) {
+      for (const candidate of candidates) {
+        const value = Number(candidate);
+        if (Number.isFinite(value)) {
+          seconds = Math.max(0, Math.floor(value));
+          break;
+        }
       }
     }
 
     const timer = manual?.timer || match.fallbackClockText || match.clockText || match.timer || null;
-    if (manual?.source === "awaiting_api_football_minute" || match.awaitingLiveApiData) {
-      return null;
+    const displayCandidate = String(match.displayMinute || manual?.displayMinute || match.manualClockText || "").trim();
+    const displayIsUsable = displayCandidate && !displayCandidate.toLowerCase().includes("awaiting");
+
+    if (seconds === null && displayIsUsable) {
+      const stoppage = displayCandidate.match(/^(\d+)\+(\d+)'?$/);
+      const minuteOnly = displayCandidate.match(/^(\d+)'?$/);
+      if (stoppage) {
+        seconds = (Number(stoppage[1]) + Number(stoppage[2])) * 60;
+      } else if (minuteOnly) {
+        seconds = Number(minuteOnly[1]) * 60;
+      }
     }
+
     if (seconds === null && timer && /^\d+:\d{2}$/.test(String(timer))) {
       const [mins, secs] = String(timer).split(":").map((part) => Number(part));
       if (Number.isFinite(mins) && Number.isFinite(secs)) {
@@ -8077,7 +8121,6 @@ class WorldCup2026Panel extends HTMLElement {
 
     if (seconds === null) return null;
 
-    const status = String(manual?.status || match.status || "").toUpperCase();
     const activeValue = manual?.active ?? match.clock_active ?? match.clockActive ?? null;
     const active = activeValue === null || activeValue === undefined
       ? this.isLiveClockStatus(status)
@@ -8086,10 +8129,10 @@ class WorldCup2026Panel extends HTMLElement {
     return {
       seconds,
       timer: timer || this.formatClockSeconds(seconds),
-      displayMinute: manual?.displayMinute || match.displayMinute || this.displayMinuteFromSeconds(seconds),
+      displayMinute: displayIsUsable ? displayCandidate : this.displayMinuteFromSeconds(seconds),
       active,
       status,
-      source: manual?.source || match.clockSource || "exported_manual_clock",
+      source: manual?.source || match.clockSource || (match.publicGithubSynced ? "github_master_clock" : "exported_manual_clock"),
     };
   }
 
@@ -8293,9 +8336,6 @@ class WorldCup2026Panel extends HTMLElement {
 
     const status = String(match.status || match.matchStatus || "").toUpperCase().trim();
 
-    // Status wins over minute display for breaks and finished states.
-    // This keeps every viewer synced to the master API/public feed instead of
-    // carrying on showing a stale minute during HT/FT/AET/PEN.
     if (this.isHalfTimeClockStatus(status)) return "HT";
     if (status === "SUSP" || status === "SUSPENDED") return "SUSP";
     if (status === "INT" || status === "INTERRUPTED") return "INT";
@@ -8303,11 +8343,9 @@ class WorldCup2026Panel extends HTMLElement {
     if (status === "AET") return "AET";
     if (status === "PEN" || status === "PENALTY_SHOOTOUT") return "PEN";
 
-    if (match.awaitingLiveApiData) return "Awaiting live API data";
-
-    // Master clock rule: the live display must show the API minute from the
-    // Home Assistant backend/public master feed. Do not build a browser timer
-    // here, otherwise every viewer can drift away from your API-fed system.
+    // Viewer devices must trust the GitHub/master feed clock. Do this before
+    // checking awaitingLiveApiData, because non-provider installs can receive
+    // a local awaiting flag while the public GitHub copy already has the minute.
     const directMinute = match.minute !== undefined && match.minute !== null && match.minute !== ""
       ? Number(match.minute)
       : null;
@@ -8318,13 +8356,12 @@ class WorldCup2026Panel extends HTMLElement {
       return Number.isFinite(extra) && extra > 0 ? `${directMinute}+${extra}'` : `${directMinute}'`;
     }
 
-    const apiDisplay = String(match.displayMinute || "").trim();
-    if (apiDisplay && apiDisplay !== "Awaiting live API data") return apiDisplay;
+    const apiDisplay = String(match.displayMinute || match.manualClock?.displayMinute || match.manualClockText || "").trim();
+    if (apiDisplay && !apiDisplay.toLowerCase().includes("awaiting")) return apiDisplay;
 
-    const manualSource = String(match.manualClock?.source || match.clockSource || "").toLowerCase();
-    const manualDisplay = String(match.manualClock?.displayMinute || match.manualClockText || "").trim();
-    if (manualSource.includes("api") && manualDisplay && manualDisplay !== "Awaiting live API data") {
-      return manualDisplay;
+    const exported = this.exportedClockState(match);
+    if (exported?.displayMinute && !String(exported.displayMinute).toLowerCase().includes("awaiting")) {
+      return exported.displayMinute;
     }
 
     return "Awaiting live API data";
@@ -9332,7 +9369,7 @@ class WorldCup2026Panel extends HTMLElement {
           align-items: center;
           gap: 12px;
           white-space: nowrap;
-          animation: wc-premium-supporter-scroll 140s linear infinite;
+          animation: wc-premium-supporter-scroll 69s linear infinite;
           will-change: transform;
         }
 
