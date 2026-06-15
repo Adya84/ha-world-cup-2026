@@ -23,11 +23,11 @@
       },
       "id": 537369,
       "utcDate": "2026-06-15T16:00:00Z",
-      "status": "IN_PLAY",
+      "status": "1H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-15T18:20:04Z",
+      "lastUpdated": "2026-06-15T18:24:37Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -63,7 +63,11 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 19,
+      "liveSource": "api_football",
+      "minute": 23,
+      "homeScore": 0,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
       "events": [
@@ -102,18 +106,18 @@
       ],
       "apiFootballFixtureId": 1489380,
       "manualClock": {
-        "seconds": 1140,
-        "timer": "19:00",
-        "displayMinute": "19'",
+        "seconds": 1380,
+        "timer": "23:00",
+        "displayMinute": "23'",
         "active": true,
-        "status": "IN_PLAY",
-        "source": "local_status_timer"
+        "status": "1H",
+        "source": "api_football_minute"
       },
-      "fallbackClock": 1140,
-      "fallbackClockText": "19:00",
-      "manualClockText": "19:00",
-      "displayMinute": "19'",
-      "clockSeconds": 1140
+      "fallbackClock": 1380,
+      "fallbackClockText": "23:00",
+      "manualClockText": "23:00",
+      "displayMinute": "23'",
+      "clockSeconds": 1380
     }
   ],
   "live": [
@@ -140,11 +144,11 @@
       },
       "id": 537369,
       "utcDate": "2026-06-15T16:00:00Z",
-      "status": "IN_PLAY",
+      "status": "1H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-15T18:20:04Z",
+      "lastUpdated": "2026-06-15T18:24:37Z",
       "homeTeam": {
         "id": 760,
         "name": "Spain",
@@ -180,7 +184,11 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 19,
+      "liveSource": "api_football",
+      "minute": 23,
+      "homeScore": 0,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
       "events": [
@@ -219,18 +227,18 @@
       ],
       "apiFootballFixtureId": 1489380,
       "manualClock": {
-        "seconds": 1140,
-        "timer": "19:00",
-        "displayMinute": "19'",
+        "seconds": 1380,
+        "timer": "23:00",
+        "displayMinute": "23'",
         "active": true,
-        "status": "IN_PLAY",
-        "source": "local_status_timer"
+        "status": "1H",
+        "source": "api_football_minute"
       },
-      "fallbackClock": 1140,
-      "fallbackClockText": "19:00",
-      "manualClockText": "19:00",
-      "displayMinute": "19'",
-      "clockSeconds": 1140
+      "fallbackClock": 1380,
+      "fallbackClockText": "23:00",
+      "manualClockText": "23:00",
+      "displayMinute": "23'",
+      "clockSeconds": 1380
     }
   ]
 }
