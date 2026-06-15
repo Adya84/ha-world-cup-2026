@@ -4822,7 +4822,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-15T22:38:10Z",
+      "lastUpdated": "2026-06-15T22:38:43Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -4864,7 +4864,7 @@
       "displayMinute": "76'",
       "manualClockText": "76'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-15T20:38:12.403575+00:00",
+      "lastApiSync": "2026-06-15T20:38:44.953636+00:00",
       "manualClock": {
         "seconds": 4560,
         "timer": "76'",
@@ -4872,7 +4872,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-15T20:38:12.403575+00:00"
+        "lastApiSync": "2026-06-15T20:38:44.953636+00:00"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -5071,6 +5071,36 @@
           "comments": "Holding",
           "assist": null,
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "M. Ziko",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Zizo",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "M. Salah",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "H. Abdelkarim",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -5195,6 +5225,36 @@
           "detail": "Substitution 1",
           "comments": null,
           "assist": "R. Rabia",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "M. Ziko",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Zizo",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "M. Salah",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "H. Abdelkarim",
           "source": "api_football"
         }
       ],
