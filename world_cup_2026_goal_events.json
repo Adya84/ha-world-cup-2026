@@ -4787,13 +4787,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T23:56:06.535976+00:00",
+    "phase_start": "2026-06-15T23:56:35.327934+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 5400,
     "clock_seconds": 5400,
     "displayMinute": "90'",
     "manualClockText": "90'",
-    "lastApiSync": "2026-06-15T23:56:06.535976+00:00",
+    "lastApiSync": "2026-06-15T23:56:35.327934+00:00",
     "apiFootballFixtureId": 1489379,
     "events": [
       {
@@ -4930,6 +4930,21 @@
         "comments": null,
         "assist": "N. Boushal",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Uruguay",
+        "player": "F. Vinas",
+        "minute": 90,
+        "extra": null,
+        "displayMinute": "90'",
+        "timer": "90:00",
+        "timerSeconds": 5400,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "R. Aguirre",
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -5038,6 +5053,21 @@
         "detail": "Substitution 2",
         "comments": null,
         "assist": "N. Boushal",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Uruguay",
+        "player": "F. Vinas",
+        "minute": 90,
+        "extra": null,
+        "displayMinute": "90'",
+        "timer": "90:00",
+        "timerSeconds": 5400,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "R. Aguirre",
         "source": "api_football"
       }
     ]
