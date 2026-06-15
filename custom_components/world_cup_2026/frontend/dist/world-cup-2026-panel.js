@@ -7444,6 +7444,33 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
 
+  async loadPublicGithubLive() {
+    const urls = [
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/world_cup_2026_live.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_live.json?t=" + Date.now(),
+      "/local/worldcup/world_cup_2026_live.json?t=" + Date.now(),
+      "/local/world_cup_2026_live.json?t=" + Date.now(),
+      "/world_cup_2026_frontend/data/world_cup_2026_live.json?t=" + Date.now(),
+    ];
+
+    for (const url of urls) {
+      try {
+        const response = await fetch(url, { cache: "no-store" });
+        if (!response.ok) continue;
+        const data = await response.json();
+        const matches = Array.isArray(data)
+          ? data
+          : (Array.isArray(data?.live) ? data.live : (Array.isArray(data?.matches) ? data.matches : []));
+        if (matches.length) return matches;
+      } catch (err) {
+        // Try the next public live path.
+      }
+    }
+
+    return [];
+  }
+
+
   async loadPublicGithubMatches() {
     const urls = [
       "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/matches.json?v=2&t=" + Date.now(),
@@ -7865,7 +7892,8 @@ class WorldCup2026Panel extends HTMLElement {
 
       const publicGoalEvents = await this.loadPublicGoalEvents();
       const publicResults = await this.loadPublicGithubResults();
-      const publicMatches = await this.loadPublicGithubMatches();
+      const publicLive = await this.loadPublicGithubLive();
+      const publicMatches = this.mergeUniqueMatches(publicLive, await this.loadPublicGithubMatches());
 
       const storeMatches = this.goalEventStoreToMatches(publicGoalEvents);
       const fixturesWithStore = this.mergePublicGoalEventStore(apiFixtures, publicGoalEvents);
@@ -8122,9 +8150,12 @@ class WorldCup2026Panel extends HTMLElement {
     if (seconds === null) return null;
 
     const activeValue = manual?.active ?? match.clock_active ?? match.clockActive ?? null;
-    const active = activeValue === null || activeValue === undefined
-      ? this.isLiveClockStatus(status)
-      : !!activeValue;
+    // Viewer panels seed from the GitHub/master feed, then tick locally between pulls.
+    // Some master feeds export active:false deliberately, so force a running viewer
+    // clock while the match status is an active live phase. HT/FT still freeze.
+    const active = this.isLiveClockStatus(status)
+      ? true
+      : (activeValue === null || activeValue === undefined ? false : !!activeValue);
 
     return {
       seconds,
@@ -8353,11 +8384,43 @@ class WorldCup2026Panel extends HTMLElement {
       const extra = match.extra !== undefined && match.extra !== null && match.extra !== ""
         ? Number(match.extra)
         : null;
+
+      // Viewer panels can be between GitHub pulls. Seed from the master minute,
+      // then keep a local display clock moving until the next GitHub refresh.
+      if (this.isLiveClockStatus(status)) {
+        const runningSeconds = this.currentClockSeconds(match);
+        if (Number.isFinite(Number(runningSeconds)) && Number(runningSeconds) > 0) {
+          const runningMinute = Math.max(0, Math.floor(Number(runningSeconds) / 60));
+          return Number.isFinite(extra) && extra > 0 && directMinute >= 90
+            ? `${directMinute}+${extra}'`
+            : `${runningMinute}'`;
+        }
+      }
+
+      // Fallback for feeds that include last sync data before local state exists.
+      const lastSyncRaw = match.lastApiSync || match.manualClock?.lastApiSync || match.apiFootballLastSync;
+      const lastSync = lastSyncRaw ? new Date(lastSyncRaw).getTime() : null;
+      const baseSeconds = Number(match.clockSeconds ?? match.manualClock?.seconds ?? match.fallbackClock);
+      if (lastSync && Number.isFinite(lastSync) && Number.isFinite(baseSeconds) && baseSeconds > 0 && this.isLiveMatch(match)) {
+        const driftSeconds = Math.max(0, Math.min(90, Math.floor((Date.now() - lastSync) / 1000)));
+        const displaySeconds = baseSeconds + driftSeconds;
+        const displayMinute = Math.max(0, Math.floor(displaySeconds / 60));
+        return Number.isFinite(extra) && extra > 0 && directMinute >= 90 ? `${directMinute}+${extra}'` : `${displayMinute}'`;
+      }
+
       return Number.isFinite(extra) && extra > 0 ? `${directMinute}+${extra}'` : `${directMinute}'`;
     }
 
     const apiDisplay = String(match.displayMinute || match.manualClock?.displayMinute || match.manualClockText || "").trim();
-    if (apiDisplay && !apiDisplay.toLowerCase().includes("awaiting")) return apiDisplay;
+    if (apiDisplay && !apiDisplay.toLowerCase().includes("awaiting")) {
+      if (this.isLiveClockStatus(status)) {
+        const runningSeconds = this.currentClockSeconds(match);
+        if (Number.isFinite(Number(runningSeconds)) && Number(runningSeconds) > 0) {
+          return this.displayMinuteFromSeconds(runningSeconds);
+        }
+      }
+      return apiDisplay;
+    }
 
     const exported = this.exportedClockState(match);
     if (exported?.displayMinute && !String(exported.displayMinute).toLowerCase().includes("awaiting")) {
@@ -8937,12 +9000,57 @@ class WorldCup2026Panel extends HTMLElement {
     return m.awayTeam || m.away || m.team2 || m.away_team || this.t("tbc");
   }
 
-  getHomeScore(m) {
+  officialHomeScore(m) {
     return m.homeScore ?? m.home_score ?? m.score?.fullTime?.home ?? m.score?.home ?? "-";
   }
 
-  getAwayScore(m) {
+  officialAwayScore(m) {
     return m.awayScore ?? m.away_score ?? m.score?.fullTime?.away ?? m.score?.away ?? "-";
+  }
+
+  provisionalLiveScoreFromEvents(m) {
+    if (!m || !this.isLiveMatch(m)) return null;
+    const homeOfficial = Number(this.officialHomeScore(m));
+    const awayOfficial = Number(this.officialAwayScore(m));
+    if (!Number.isFinite(homeOfficial) || !Number.isFinite(awayOfficial)) return null;
+
+    const events = this.normalisedMatchEvents ? this.normalisedMatchEvents(m) : [];
+    const goalEvents = events.filter((event) => event.category === "goal" && !event.isMissedPenalty);
+    if (!goalEvents.length) return null;
+
+    let homeGoals = 0;
+    let awayGoals = 0;
+    const home = this.fixtureTeamKey(this.getHomeTeam(m));
+    const away = this.fixtureTeamKey(this.getAwayTeam(m));
+
+    goalEvents.forEach((event) => {
+      const teamKey = this.fixtureTeamKey(event.team || "");
+      if (event.isOwnGoal) {
+        if (teamKey === home) awayGoals += 1;
+        else if (teamKey === away) homeGoals += 1;
+        return;
+      }
+      if (teamKey === home) homeGoals += 1;
+      else if (teamKey === away) awayGoals += 1;
+    });
+
+    const officialTotal = homeOfficial + awayOfficial;
+    const eventTotal = homeGoals + awayGoals;
+    if (eventTotal <= officialTotal) return null;
+
+    return { home: homeGoals, away: awayGoals, provisional: true };
+  }
+
+  getHomeScore(m) {
+    const provisional = this.provisionalLiveScoreFromEvents(m);
+    if (provisional) return provisional.home;
+    return this.officialHomeScore(m);
+  }
+
+  getAwayScore(m) {
+    const provisional = this.provisionalLiveScoreFromEvents(m);
+    if (provisional) return provisional.away;
+    return this.officialAwayScore(m);
   }
 
   renderLoading() {
