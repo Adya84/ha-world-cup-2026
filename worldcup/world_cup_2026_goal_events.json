@@ -4787,13 +4787,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T23:57:59.297882+00:00",
+    "phase_start": "2026-06-15T23:58:26.770407+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 5400,
     "clock_seconds": 5400,
     "displayMinute": "90'",
     "manualClockText": "90'",
-    "lastApiSync": "2026-06-15T23:57:59.297882+00:00",
+    "lastApiSync": "2026-06-15T23:58:26.770407+00:00",
     "apiFootballFixtureId": 1489379,
     "events": [
       {
@@ -4945,6 +4945,36 @@
         "comments": null,
         "assist": "R. Aguirre",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Saudi Arabia",
+        "player": "S. Abdulhamid",
+        "minute": 90,
+        "extra": 2,
+        "displayMinute": "90+2'",
+        "timer": "92:00",
+        "timerSeconds": 5520,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "A. Lajami",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Saudi Arabia",
+        "player": "M. Al Harbi",
+        "minute": 90,
+        "extra": 3,
+        "displayMinute": "90+3'",
+        "timer": "93:00",
+        "timerSeconds": 5580,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "A. Al Hamdan",
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -5068,6 +5098,36 @@
         "detail": "Substitution 5",
         "comments": null,
         "assist": "R. Aguirre",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Saudi Arabia",
+        "player": "S. Abdulhamid",
+        "minute": 90,
+        "extra": 2,
+        "displayMinute": "90+2'",
+        "timer": "92:00",
+        "timerSeconds": 5520,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "A. Lajami",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Saudi Arabia",
+        "player": "M. Al Harbi",
+        "minute": 90,
+        "extra": 3,
+        "displayMinute": "90+3'",
+        "timer": "93:00",
+        "timerSeconds": 5580,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "A. Al Hamdan",
         "source": "api_football"
       }
     ]
