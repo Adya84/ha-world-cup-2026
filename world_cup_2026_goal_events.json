@@ -4409,7 +4409,28 @@
     ]
   },
   "537363": {
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Egypt",
+        "player": "E. Ashour",
+        "minute": 19,
+        "extra": null,
+        "displayMinute": "19'",
+        "timer": "19:00",
+        "timerSeconds": 1140,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": "M. Salah",
+        "source": "api_football",
+        "matchId": 537363,
+        "matchUtcDate": "2026-06-15T19:00:00Z",
+        "homeTeam": "Belgium",
+        "awayTeam": "Egypt",
+        "goalNumber": 1
+      }
+    ],
     "clock_active": false,
     "status": "1H",
     "homeScore": 0,
@@ -4423,13 +4444,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T19:20:12.492169+00:00",
+    "phase_start": "2026-06-15T19:20:52.836456+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 1200,
     "clock_seconds": 1200,
     "displayMinute": "20'",
     "manualClockText": "20'",
-    "lastApiSync": "2026-06-15T19:20:12.492169+00:00",
+    "lastApiSync": "2026-06-15T19:20:52.836456+00:00",
     "apiFootballFixtureId": 1489377,
     "events": [
       {
@@ -4466,15 +4487,15 @@
         "type": "Goal",
         "rawType": "Goal",
         "team": "Egypt",
-        "player": null,
-        "minute": 20,
+        "player": "E. Ashour",
+        "minute": 19,
         "extra": null,
-        "displayMinute": "20'",
-        "timer": "20:00",
-        "timerSeconds": 1200,
+        "displayMinute": "19'",
+        "timer": "19:00",
+        "timerSeconds": 1140,
         "detail": "Normal Goal",
         "comments": null,
-        "assist": null,
+        "assist": "M. Salah",
         "source": "api_football"
       }
     ],
