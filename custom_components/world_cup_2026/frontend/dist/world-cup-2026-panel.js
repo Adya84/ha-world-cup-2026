@@ -16093,14 +16093,26 @@ class WorldCup2026Panel extends HTMLElement {
       match?.goals,
       match?.cardEvents,
       match?.cards,
+      match?.apiFootballCards,
       match?.substitutionEvents,
       match?.substitutions,
+      match?.apiFootballSubstitutions,
       match?.varEvents,
+      match?.vars,
+      match?.apiFootballVarEvents,
       match?.matchDetails?.events,
+      match?.matchDetails?.timeline,
+      match?.matchDetails?.incidents,
+      match?.matchDetails?.matchEvents,
       match?.matchDetails?.goalEvents,
+      match?.matchDetails?.goals,
       match?.matchDetails?.cardEvents,
+      match?.matchDetails?.cards,
       match?.matchDetails?.substitutionEvents,
+      match?.matchDetails?.substitutions,
       match?.matchDetails?.varEvents,
+      match?.matchDetails?.vars,
+      match?.matchDetails?.apiFootballEvents,
       match?.apiFootballEvents,
       match?.timeline,
       match?.incidents,
@@ -16123,35 +16135,82 @@ class WorldCup2026Panel extends HTMLElement {
       const minuteText = this.eventMinuteText(event);
       const timerSeconds = this.eventTimerSeconds(event);
 
-      const isGoal = typeText.includes("goal") || detailText.includes("goal") || event.isGoal === true;
+      const isPenalty = detailText.includes("penalty") || typeText.includes("penalty") || detailText.includes("pen") || typeText.includes("pen");
+      const isMissedPenalty = detailText.includes("missed penalty") || detailText.includes("penalty missed") || typeText.includes("missed penalty");
+      const isOwnGoal = event.isOwnGoal === true || detailText.includes("own goal") || typeText.includes("own goal") || /\bog\b/i.test(detailText) || /\bog\b/i.test(typeText);
+      const isGoal = typeText.includes("goal") || detailText.includes("goal") || event.isGoal === true || isOwnGoal || (isPenalty && !detailText.includes("awarded") && !typeText.includes("awarded"));
       const isCard = typeText.includes("card") || detailText.includes("yellow") || detailText.includes("red");
-      const isSub = typeText.includes("subst") || detailText.includes("substitution");
+      const isSub = typeText.includes("subst") || typeText.includes("substitution") || detailText.includes("substitution") || event.isSubstitution === true || event.substitution === true;
       const isVar = typeText.includes("var") || detailText.includes("var") || detailText.includes("video assistant") || detailText.includes("video review") || String(event.rawType || "").toLowerCase().includes("var");
-      const isPenalty = detailText.includes("penalty") || detailText.includes("pen");
-      const isMissedPenalty = detailText.includes("missed penalty") || detailText.includes("penalty missed");
-      const isOwnGoal = detailText.includes("own goal") || /\bog\b/i.test(detailText);
 
       let category = "";
       if (isGoal) category = "goal";
       else if (isCard) category = "card";
       else if (isSub) category = "substitution";
       else if (isVar) category = "var";
+      else if (isPenalty) category = "penalty";
       else return;
 
       let icon = "•";
-      if (category === "goal") icon = isOwnGoal ? "OG" : (isPenalty ? "PEN" : "⚽");
+      if (category === "goal") icon = isOwnGoal ? "OG" : (isMissedPenalty ? "PEN✕" : (isPenalty ? "PEN" : "⚽"));
       if (category === "card") icon = detailText.includes("red") ? "🟥" : "🟨";
       if (category === "substitution") icon = "🔄";
       if (category === "var") icon = "VAR";
-      if (isMissedPenalty) icon = "PEN";
+      if (category === "penalty") icon = isMissedPenalty ? "PEN✕" : "PEN";
 
-      const key = [
-        category,
-        this.fixtureTeamKey(team),
-        player.toLowerCase(),
-        minuteText || timerSeconds,
-        detailText,
-      ].join("|");
+      const rawDetailText = this.eventDetailText(event);
+      const assistName = this.eventAssistName(event);
+      const detailForKey = String(rawDetailText || "")
+        .toLowerCase()
+        .replace(/substitution\s*\d+/g, "substitution")
+        .replace(/\s+/g, " ")
+        .trim();
+
+      let key;
+      if (category === "substitution") {
+        // API-Football can expose the same substitution in both the full
+        // events timeline and substitutionEvents, sometimes with a different
+        // "Substitution 1/2/3" detail number. Dedupe substitutions by the
+        // real football data: minute + team + player on + player off.
+        const offMatch = rawDetailText.match(/off:\s*([^,|]+)/i);
+        const onMatch = rawDetailText.match(/on:\s*([^,|]+)/i);
+        // API-Football substitution events use player = player going off, assist = player coming on.
+        const playerOn = String(assistName || (onMatch && onMatch[1]) || "").toLowerCase().trim();
+        const playerOff = String(player || (offMatch && offMatch[1]) || "").toLowerCase().trim();
+        key = [
+          "substitution",
+          this.fixtureTeamKey(team),
+          minuteText || timerSeconds,
+          playerOn,
+          playerOff,
+        ].join("|");
+      } else if (category === "goal") {
+        key = [
+          "goal",
+          this.fixtureTeamKey(team),
+          player.toLowerCase(),
+          minuteText || timerSeconds,
+          isOwnGoal ? "og" : "",
+          isPenalty ? "pen" : "",
+          isMissedPenalty ? "missed" : "",
+        ].join("|");
+      } else if (category === "card") {
+        key = [
+          "card",
+          this.fixtureTeamKey(team),
+          player.toLowerCase(),
+          minuteText || timerSeconds,
+          detailText.includes("red") ? "red" : "yellow",
+        ].join("|");
+      } else {
+        key = [
+          category,
+          this.fixtureTeamKey(team),
+          player.toLowerCase(),
+          minuteText || timerSeconds,
+          detailForKey,
+        ].join("|");
+      }
 
       if (!key.trim() || byKey.has(key)) return;
 
@@ -16161,10 +16220,10 @@ class WorldCup2026Panel extends HTMLElement {
         icon,
         team,
         player,
-        assist: this.eventAssistName(event),
+        assist: assistName,
         minuteText,
         timerSeconds,
-        detail: this.eventDetailText(event),
+        detail: rawDetailText,
         isOwnGoal,
         isPenalty,
         isMissedPenalty,
@@ -16253,8 +16312,13 @@ class WorldCup2026Panel extends HTMLElement {
     const rows = events.map((event) => {
       const detail = event.detail && event.detail.toLowerCase() !== event.category ? event.detail : "";
       const team = event.team ? ` <em>${this.esc(this.localizedTeamName(event.team))}</em>` : "";
-      const assist = event.assist ? ` <small>Assist: ${this.esc(event.assist)}</small>` : "";
-      const player = event.player || detail || event.category;
+      const assistLabel = event.category === "substitution" ? "On" : "Assist";
+      const assist = event.assist ? ` <small>${assistLabel}: ${this.esc(event.assist)}</small>` : "";
+      let player = event.player || detail || event.category;
+      if (event.category === "substitution" && event.player) player = `Off: ${event.player}`;
+      if (event.category === "goal" && event.isOwnGoal && event.player) player = `${event.player} (OG)`;
+      if (event.category === "goal" && event.isPenalty && !event.isOwnGoal && event.player) player = `${event.player} (PEN)`;
+      if ((event.category === "goal" || event.category === "penalty") && event.isMissedPenalty && event.player) player = `${event.player} (missed pen)`;
       const minute = event.minuteText || "";
       const detailHtml = detail && String(detail).toLowerCase() !== String(player).toLowerCase()
         ? `<small>${this.esc(detail)}</small>`
@@ -16282,7 +16346,9 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   matchExtraLiveDataSection(match) {
-    const eventsHtml = this.matchEventsTimelineSection(match);
+    // Live Centre should show the full API timeline as it arrives:
+    // goals, own goals, penalties, cards, substitutions and VAR.
+    const eventsHtml = this.matchEventsTimelineSection(match, { includeSubs: true });
     const officialsHtml = this.matchOfficialsSection(match);
     if (!eventsHtml && !officialsHtml) return "";
 
