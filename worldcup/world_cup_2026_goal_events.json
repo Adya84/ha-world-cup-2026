@@ -4977,12 +4977,32 @@
         "homeTeam": "Sweden",
         "awayTeam": "Tunisia",
         "goalNumber": 2
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Tunisia",
+        "player": "O. Rekik",
+        "minute": 43,
+        "extra": null,
+        "displayMinute": "43'",
+        "timer": "43:00",
+        "timerSeconds": 2580,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": "H. Mejbri",
+        "source": "api_football",
+        "matchId": 537358,
+        "matchUtcDate": "2026-06-15T02:00:00Z",
+        "homeTeam": "Sweden",
+        "awayTeam": "Tunisia",
+        "goalNumber": 3
       }
     ],
     "clock_active": true,
     "status": "IN_PLAY",
     "homeScore": 2,
-    "awayScore": 0,
+    "awayScore": 1,
     "utcDate": "2026-06-15T02:00:00Z",
     "homeTeam": "Sweden",
     "awayTeam": "Tunisia",
@@ -4992,9 +5012,9 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 2580,
-    "clock_seconds": 2580,
-    "phase_start": "2026-06-15T02:43:21.769595+00:00",
+    "base_seconds": 2640,
+    "clock_seconds": 2640,
+    "phase_start": "2026-06-15T02:43:58.832949+00:00",
     "source": "football_data_minute",
     "apiFootballFixtureId": 1539002,
     "events": [
@@ -5026,6 +5046,21 @@
         "detail": "Normal Goal",
         "comments": null,
         "assist": "V. Gyokeres",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Tunisia",
+        "player": "O. Rekik",
+        "minute": 43,
+        "extra": null,
+        "displayMinute": "43'",
+        "timer": "43:00",
+        "timerSeconds": 2580,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": "H. Mejbri",
         "source": "api_football"
       }
     ]
