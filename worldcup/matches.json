@@ -5183,11 +5183,11 @@
       },
       "id": 537370,
       "utcDate": "2026-06-15T22:00:00Z",
-      "status": "IN_PLAY",
+      "status": "1H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_H",
-      "lastUpdated": "2026-06-16T00:04:16Z",
+      "lastUpdated": "2026-06-16T00:04:58Z",
       "homeTeam": {
         "id": 801,
         "name": "Saudi Arabia",
@@ -5210,8 +5210,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -5219,26 +5219,34 @@
       },
       "referees": [
         {
-          "id": 11043,
-          "name": "Maurizio Mariani",
-          "type": "REFEREE",
-          "nationality": "Italy"
+          "name": "Maurizio Mariani, Italy",
+          "type": "REFEREE"
         }
       ],
+      "liveSource": "api_football",
+      "minute": 1,
+      "clockSeconds": 60,
+      "displayMinute": "1'",
+      "manualClockText": "1'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-15T22:05:00.562777+00:00",
       "manualClock": {
-        "seconds": 0,
-        "timer": "0:00",
-        "displayMinute": "0'",
+        "seconds": 60,
+        "timer": "1'",
+        "displayMinute": "1'",
         "active": false,
-        "status": "IN_PLAY",
-        "source": "awaiting_api_football_minute",
-        "lastApiSync": null
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-15T22:05:00.562777+00:00"
       },
-      "clockSource": "awaiting_api_football_minute",
-      "lastApiSync": null,
-      "awaitingLiveApiData": true,
-      "manualClockText": "Awaiting live API data",
-      "displayMinute": "Awaiting live API data"
+      "homeScore": 0,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "apiFootballFixtureId": 1489379,
+      "fallbackClock": 60,
+      "fallbackClockText": "1'"
     },
     {
       "area": {
