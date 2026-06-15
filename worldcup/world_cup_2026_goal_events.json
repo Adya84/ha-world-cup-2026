@@ -4411,7 +4411,7 @@
   "537363": {
     "goalEvents": [],
     "clock_active": false,
-    "status": "IN_PLAY",
+    "status": "1H",
     "homeScore": 0,
     "awayScore": 0,
     "utcDate": "2026-06-15T19:00:00Z",
@@ -4419,14 +4419,18 @@
     "awayTeam": "Egypt",
     "referees": [
       {
-        "id": 18754,
-        "name": "Ramon Abatti Abel",
-        "type": "REFEREE",
-        "nationality": "Brazil"
+        "name": "Ramon Abatti Abel, Brazil",
+        "type": "REFEREE"
       }
     ],
-    "phase_start": null,
-    "source": "awaiting_api_football_minute"
+    "phase_start": "2026-06-15T19:01:38.709845+00:00",
+    "source": "api_football_live_minute",
+    "base_seconds": 60,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
+    "manualClockText": "1'",
+    "lastApiSync": "2026-06-15T19:01:38.709845+00:00",
+    "apiFootballFixtureId": 1489377
   },
   "537370": {
     "goalEvents": [],
