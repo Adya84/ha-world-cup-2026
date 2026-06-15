@@ -8907,7 +8907,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-15T21:19:31Z",
+      "lastUpdated": "2026-06-15T21:19:54Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -8923,15 +8923,15 @@
         "crest": "https://crests.football-data.org/825.svg"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "halfTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         }
       },
       "odds": {
@@ -8944,26 +8944,43 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 19,
-      "clockSeconds": 1140,
-      "displayMinute": "19'",
-      "manualClockText": "19'",
+      "minute": 20,
+      "clockSeconds": 1200,
+      "displayMinute": "20'",
+      "manualClockText": "20'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-15T19:19:33.463517+00:00",
+      "lastApiSync": "2026-06-15T19:20:12.492169+00:00",
       "manualClock": {
-        "seconds": 1140,
-        "timer": "19'",
-        "displayMinute": "19'",
+        "seconds": 1200,
+        "timer": "20'",
+        "displayMinute": "20'",
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-15T19:19:33.463517+00:00"
+        "lastApiSync": "2026-06-15T19:20:12.492169+00:00"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
+      "goalEvents": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Egypt",
+          "player": null,
+          "minute": 20,
+          "extra": null,
+          "displayMinute": "20'",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        }
+      ],
       "events": [
         {
           "type": "Yellow Card",
@@ -8994,8 +9011,24 @@
           "comments": "Holding",
           "assist": null,
           "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Egypt",
+          "player": null,
+          "minute": 20,
+          "extra": null,
+          "displayMinute": "20'",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "cardEvents": [
         {
           "type": "Yellow Card",
@@ -9029,8 +9062,8 @@
         }
       ],
       "apiFootballFixtureId": 1489377,
-      "fallbackClock": 1140,
-      "fallbackClockText": "19'",
+      "fallbackClock": 1200,
+      "fallbackClockText": "20'",
       "matchDetails": {
         "events": [
           {
@@ -9062,9 +9095,40 @@
             "comments": "Holding",
             "assist": null,
             "source": "api_football"
+          },
+          {
+            "type": "Goal",
+            "rawType": "Goal",
+            "team": "Egypt",
+            "player": null,
+            "minute": 20,
+            "extra": null,
+            "displayMinute": "20'",
+            "timer": "20:00",
+            "timerSeconds": 1200,
+            "detail": "Normal Goal",
+            "comments": null,
+            "assist": null,
+            "source": "api_football"
           }
         ],
-        "goalEvents": [],
+        "goalEvents": [
+          {
+            "type": "Goal",
+            "rawType": "Goal",
+            "team": "Egypt",
+            "player": null,
+            "minute": 20,
+            "extra": null,
+            "displayMinute": "20'",
+            "timer": "20:00",
+            "timerSeconds": 1200,
+            "detail": "Normal Goal",
+            "comments": null,
+            "assist": null,
+            "source": "api_football"
+          }
+        ],
         "cardEvents": [
           {
             "type": "Yellow Card",
@@ -9105,7 +9169,7 @@
           }
         ],
         "apiFootballFixtureId": 1489377,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_live"
       }
     }
   ],
@@ -18017,7 +18081,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-15T21:19:31Z",
+      "lastUpdated": "2026-06-15T21:19:54Z",
       "homeTeam": {
         "id": 805,
         "name": "Belgium",
@@ -18033,15 +18097,15 @@
         "crest": "https://crests.football-data.org/825.svg"
       },
       "score": {
-        "winner": "DRAW",
+        "winner": "AWAY_TEAM",
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "halfTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         }
       },
       "odds": {
@@ -18054,26 +18118,43 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 19,
-      "clockSeconds": 1140,
-      "displayMinute": "19'",
-      "manualClockText": "19'",
+      "minute": 20,
+      "clockSeconds": 1200,
+      "displayMinute": "20'",
+      "manualClockText": "20'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-15T19:19:33.463517+00:00",
+      "lastApiSync": "2026-06-15T19:20:12.492169+00:00",
       "manualClock": {
-        "seconds": 1140,
-        "timer": "19'",
-        "displayMinute": "19'",
+        "seconds": 1200,
+        "timer": "20'",
+        "displayMinute": "20'",
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-15T19:19:33.463517+00:00"
+        "lastApiSync": "2026-06-15T19:20:12.492169+00:00"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
+      "goalEvents": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Egypt",
+          "player": null,
+          "minute": 20,
+          "extra": null,
+          "displayMinute": "20'",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        }
+      ],
       "events": [
         {
           "type": "Yellow Card",
@@ -18104,8 +18185,24 @@
           "comments": "Holding",
           "assist": null,
           "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Egypt",
+          "player": null,
+          "minute": 20,
+          "extra": null,
+          "displayMinute": "20'",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "cardEvents": [
         {
           "type": "Yellow Card",
@@ -18139,8 +18236,8 @@
         }
       ],
       "apiFootballFixtureId": 1489377,
-      "fallbackClock": 1140,
-      "fallbackClockText": "19'",
+      "fallbackClock": 1200,
+      "fallbackClockText": "20'",
       "matchDetails": {
         "events": [
           {
@@ -18172,9 +18269,40 @@
             "comments": "Holding",
             "assist": null,
             "source": "api_football"
+          },
+          {
+            "type": "Goal",
+            "rawType": "Goal",
+            "team": "Egypt",
+            "player": null,
+            "minute": 20,
+            "extra": null,
+            "displayMinute": "20'",
+            "timer": "20:00",
+            "timerSeconds": 1200,
+            "detail": "Normal Goal",
+            "comments": null,
+            "assist": null,
+            "source": "api_football"
           }
         ],
-        "goalEvents": [],
+        "goalEvents": [
+          {
+            "type": "Goal",
+            "rawType": "Goal",
+            "team": "Egypt",
+            "player": null,
+            "minute": 20,
+            "extra": null,
+            "displayMinute": "20'",
+            "timer": "20:00",
+            "timerSeconds": 1200,
+            "detail": "Normal Goal",
+            "comments": null,
+            "assist": null,
+            "source": "api_football"
+          }
+        ],
         "cardEvents": [
           {
             "type": "Yellow Card",
@@ -18215,7 +18343,7 @@
           }
         ],
         "apiFootballFixtureId": 1489377,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_live"
       }
     }
   ]
