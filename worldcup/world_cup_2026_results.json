@@ -7453,6 +7453,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489374,
       "goalEvents": [
         {
           "type": "Goal",
@@ -7615,7 +7616,6 @@
           "goalNumber": 8
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -7630,7 +7630,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "F. Wirtz",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -7645,7 +7650,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -7660,22 +7670,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "N. Brown",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Cura\u00e7ao",
-          "player": "S. Hansen",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "J. Antonisse",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -7690,10 +7690,15 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 4
         },
         {
-          "type": "Penalty",
+          "type": "Goal",
           "rawType": "Goal",
           "team": "Germany",
           "player": "K. Havertz",
@@ -7705,37 +7710,12 @@
           "detail": "Penalty",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "J. Musiala",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "D. Undav",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Cura\u00e7ao",
-          "player": "J. Locadia",
-          "minute": 65,
-          "extra": null,
-          "displayMinute": "65'",
-          "timer": "65:00",
-          "timerSeconds": 3900,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "J. Margaritha",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 5
         },
         {
           "type": "Goal",
@@ -7750,52 +7730,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "J. Tah",
-          "minute": 73,
-          "extra": null,
-          "displayMinute": "73'",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "A. Rudiger",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "F. Nmecha",
-          "minute": 73,
-          "extra": null,
-          "displayMinute": "73'",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "L. Goretzka",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "N. Brown",
-          "minute": 73,
-          "extra": null,
-          "displayMinute": "73'",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "D. Raum",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 6
         },
         {
           "type": "Goal",
@@ -7810,37 +7750,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Cura\u00e7ao",
-          "player": "T. Chong",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "G. Kastaneer",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "J. Kimmich",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "W. Anton",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 7
         },
         {
           "type": "Goal",
@@ -7855,7 +7770,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 8
         }
       ],
       "substitutionEvents": [
@@ -7980,7 +7900,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489374,
       "matchDetails": {
         "events": [
           {
@@ -7996,7 +7915,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "F. Wirtz",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 1
           },
           {
             "type": "Goal",
@@ -8011,7 +7935,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 2
           },
           {
             "type": "Goal",
@@ -8026,22 +7955,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "N. Brown",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Cura\u00e7ao",
-            "player": "S. Hansen",
-            "minute": 46,
-            "extra": null,
-            "displayMinute": "46'",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "J. Antonisse",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 3
           },
           {
             "type": "Goal",
@@ -8056,10 +7975,15 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 4
           },
           {
-            "type": "Penalty",
+            "type": "Goal",
             "rawType": "Goal",
             "team": "Germany",
             "player": "K. Havertz",
@@ -8071,37 +7995,12 @@
             "detail": "Penalty",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "J. Musiala",
-            "minute": 64,
-            "extra": null,
-            "displayMinute": "64'",
-            "timer": "64:00",
-            "timerSeconds": 3840,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "D. Undav",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Cura\u00e7ao",
-            "player": "J. Locadia",
-            "minute": 65,
-            "extra": null,
-            "displayMinute": "65'",
-            "timer": "65:00",
-            "timerSeconds": 3900,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "J. Margaritha",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 5
           },
           {
             "type": "Goal",
@@ -8116,52 +8015,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "J. Tah",
-            "minute": 73,
-            "extra": null,
-            "displayMinute": "73'",
-            "timer": "73:00",
-            "timerSeconds": 4380,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "A. Rudiger",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "F. Nmecha",
-            "minute": 73,
-            "extra": null,
-            "displayMinute": "73'",
-            "timer": "73:00",
-            "timerSeconds": 4380,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "L. Goretzka",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "N. Brown",
-            "minute": 73,
-            "extra": null,
-            "displayMinute": "73'",
-            "timer": "73:00",
-            "timerSeconds": 4380,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "D. Raum",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 6
           },
           {
             "type": "Goal",
@@ -8176,37 +8035,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Cura\u00e7ao",
-            "player": "T. Chong",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "G. Kastaneer",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "J. Kimmich",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "W. Anton",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 7
           },
           {
             "type": "Goal",
@@ -8221,7 +8055,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 8
           }
         ],
         "goalEvents": [
@@ -8516,7 +8355,7 @@
           }
         ],
         "apiFootballFixtureId": 1489374,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     },
     {
@@ -9908,7 +9747,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-15T05:26:07Z",
+      "lastUpdated": "2026-06-15T05:26:43Z",
       "homeTeam": {
         "id": 792,
         "name": "Sweden",
@@ -17781,6 +17620,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489374,
       "goalEvents": [
         {
           "type": "Goal",
@@ -17943,7 +17783,6 @@
           "goalNumber": 8
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -17958,7 +17797,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "F. Wirtz",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -17973,7 +17817,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -17988,22 +17837,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "N. Brown",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Cura\u00e7ao",
-          "player": "S. Hansen",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "J. Antonisse",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -18018,10 +17857,15 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 4
         },
         {
-          "type": "Penalty",
+          "type": "Goal",
           "rawType": "Goal",
           "team": "Germany",
           "player": "K. Havertz",
@@ -18033,37 +17877,12 @@
           "detail": "Penalty",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "J. Musiala",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "D. Undav",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Cura\u00e7ao",
-          "player": "J. Locadia",
-          "minute": 65,
-          "extra": null,
-          "displayMinute": "65'",
-          "timer": "65:00",
-          "timerSeconds": 3900,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "J. Margaritha",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 5
         },
         {
           "type": "Goal",
@@ -18078,52 +17897,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "J. Tah",
-          "minute": 73,
-          "extra": null,
-          "displayMinute": "73'",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "A. Rudiger",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "F. Nmecha",
-          "minute": 73,
-          "extra": null,
-          "displayMinute": "73'",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "L. Goretzka",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "N. Brown",
-          "minute": 73,
-          "extra": null,
-          "displayMinute": "73'",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "D. Raum",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 6
         },
         {
           "type": "Goal",
@@ -18138,37 +17917,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Cura\u00e7ao",
-          "player": "T. Chong",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "G. Kastaneer",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Germany",
-          "player": "J. Kimmich",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "W. Anton",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 7
         },
         {
           "type": "Goal",
@@ -18183,7 +17937,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537351,
+          "matchUtcDate": "2026-06-14T17:00:00Z",
+          "homeTeam": "Germany",
+          "awayTeam": "Cura\u00e7ao",
+          "goalNumber": 8
         }
       ],
       "substitutionEvents": [
@@ -18308,7 +18067,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489374,
       "matchDetails": {
         "events": [
           {
@@ -18324,7 +18082,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "F. Wirtz",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 1
           },
           {
             "type": "Goal",
@@ -18339,7 +18102,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 2
           },
           {
             "type": "Goal",
@@ -18354,22 +18122,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "N. Brown",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Cura\u00e7ao",
-            "player": "S. Hansen",
-            "minute": 46,
-            "extra": null,
-            "displayMinute": "46'",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "J. Antonisse",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 3
           },
           {
             "type": "Goal",
@@ -18384,10 +18142,15 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 4
           },
           {
-            "type": "Penalty",
+            "type": "Goal",
             "rawType": "Goal",
             "team": "Germany",
             "player": "K. Havertz",
@@ -18399,37 +18162,12 @@
             "detail": "Penalty",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "J. Musiala",
-            "minute": 64,
-            "extra": null,
-            "displayMinute": "64'",
-            "timer": "64:00",
-            "timerSeconds": 3840,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "D. Undav",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Cura\u00e7ao",
-            "player": "J. Locadia",
-            "minute": 65,
-            "extra": null,
-            "displayMinute": "65'",
-            "timer": "65:00",
-            "timerSeconds": 3900,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "J. Margaritha",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 5
           },
           {
             "type": "Goal",
@@ -18444,52 +18182,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "J. Tah",
-            "minute": 73,
-            "extra": null,
-            "displayMinute": "73'",
-            "timer": "73:00",
-            "timerSeconds": 4380,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "A. Rudiger",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "F. Nmecha",
-            "minute": 73,
-            "extra": null,
-            "displayMinute": "73'",
-            "timer": "73:00",
-            "timerSeconds": 4380,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "L. Goretzka",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "N. Brown",
-            "minute": 73,
-            "extra": null,
-            "displayMinute": "73'",
-            "timer": "73:00",
-            "timerSeconds": 4380,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "D. Raum",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 6
           },
           {
             "type": "Goal",
@@ -18504,37 +18202,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Cura\u00e7ao",
-            "player": "T. Chong",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "G. Kastaneer",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Germany",
-            "player": "J. Kimmich",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "W. Anton",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 7
           },
           {
             "type": "Goal",
@@ -18549,7 +18222,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537351,
+            "matchUtcDate": "2026-06-14T17:00:00Z",
+            "homeTeam": "Germany",
+            "awayTeam": "Cura\u00e7ao",
+            "goalNumber": 8
           }
         ],
         "goalEvents": [
@@ -18844,7 +18522,7 @@
           }
         ],
         "apiFootballFixtureId": 1489374,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     },
     {
@@ -20236,7 +19914,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_F",
-      "lastUpdated": "2026-06-15T05:26:07Z",
+      "lastUpdated": "2026-06-15T05:26:43Z",
       "homeTeam": {
         "id": 792,
         "name": "Sweden",
