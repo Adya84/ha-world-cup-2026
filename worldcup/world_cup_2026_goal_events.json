@@ -4767,13 +4767,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T23:37:21.435680+00:00",
+    "phase_start": "2026-06-15T23:37:49.110942+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 4320,
     "clock_seconds": 4320,
     "displayMinute": "72'",
     "manualClockText": "72'",
-    "lastApiSync": "2026-06-15T23:37:21.435680+00:00",
+    "lastApiSync": "2026-06-15T23:37:49.110942+00:00",
     "apiFootballFixtureId": 1489379,
     "events": [
       {
@@ -4850,6 +4850,21 @@
         "comments": null,
         "assist": "N. Al Dawsari",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Uruguay",
+        "player": "M. Ugarte",
+        "minute": 72,
+        "extra": null,
+        "displayMinute": "72'",
+        "timer": "72:00",
+        "timerSeconds": 4320,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "N. de la Cruz",
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -4913,6 +4928,21 @@
         "detail": "Substitution 1",
         "comments": null,
         "assist": "N. Al Dawsari",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Uruguay",
+        "player": "M. Ugarte",
+        "minute": 72,
+        "extra": null,
+        "displayMinute": "72'",
+        "timer": "72:00",
+        "timerSeconds": 4320,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "N. de la Cruz",
         "source": "api_football"
       }
     ]
