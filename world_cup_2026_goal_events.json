@@ -4952,9 +4952,9 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 3900,
-    "clock_seconds": 3900,
-    "phase_start": "2026-06-15T03:29:13.462848+00:00",
+    "base_seconds": 4140,
+    "clock_seconds": 4140,
+    "phase_start": "2026-06-15T03:29:50.177779+00:00",
     "source": "football_data_minute",
     "apiFootballFixtureId": 1539002,
     "events": [
@@ -5032,6 +5032,36 @@
         "comments": null,
         "assist": "A. Isak",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Sweden",
+        "player": "G. Gudmundsson",
+        "minute": 65,
+        "extra": null,
+        "displayMinute": "65'",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "E. Stroud",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Sweden",
+        "player": "B. Nygren",
+        "minute": 65,
+        "extra": null,
+        "displayMinute": "65'",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "L. Bergvall",
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -5048,6 +5078,38 @@
         "detail": "Yellow Card",
         "comments": "Tripping",
         "assist": null,
+        "source": "api_football"
+      }
+    ],
+    "substitutionEvents": [
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Sweden",
+        "player": "G. Gudmundsson",
+        "minute": 65,
+        "extra": null,
+        "displayMinute": "65'",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "E. Stroud",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Sweden",
+        "player": "B. Nygren",
+        "minute": 65,
+        "extra": null,
+        "displayMinute": "65'",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "L. Bergvall",
         "source": "api_football"
       }
     ]
