@@ -7262,13 +7262,10 @@ class WorldCup2026Panel extends HTMLElement {
     this.applyHideSidebarFromUrl();
     this.renderLoading();
 
-    // Keep this panel synced with the Home Assistant master feed.
-    // The backend/coordinator controls the external API polling/rate limit;
-    // the frontend simply re-reads HA every 20 seconds so API minutes,
-    // scores and events do not sit stale on screen.
-    this._refreshInterval = setInterval(() => {
-      this.loadAll();
-    }, 20 * 1000);
+    // Keep this panel synced without hammering GitHub/HA all day.
+    // During live games, viewer devices pull the master GitHub/public feed
+    // every 20 seconds so their clocks match the provider dashboard.
+    this.scheduleNextRefresh(20 * 1000);
 
     this._countdownInterval = setInterval(() => {
       this.updateCountdownDisplay();
@@ -7288,7 +7285,7 @@ class WorldCup2026Panel extends HTMLElement {
     }
 
     if (this._refreshInterval) {
-      clearInterval(this._refreshInterval);
+      clearTimeout(this._refreshInterval);
       this._refreshInterval = null;
     }
 
@@ -7756,6 +7753,76 @@ class WorldCup2026Panel extends HTMLElement {
     });
   }
 
+
+  matchKickoffTime(match) {
+    const value = match?.utcDate || match?.date || match?.kickoff || match?.startTime;
+    if (!value) return null;
+    const time = new Date(value).getTime();
+    return Number.isFinite(time) ? time : null;
+  }
+
+  gameToday(matches) {
+    const now = new Date();
+    const start = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+    const end = start + 24 * 60 * 60 * 1000;
+    return (matches || []).some((match) => {
+      const kickoff = this.matchKickoffTime(match);
+      return kickoff && kickoff >= start && kickoff < end;
+    });
+  }
+
+  nextKickoffMs(matches) {
+    const now = Date.now();
+    let next = null;
+    (matches || []).forEach((match) => {
+      if (this.isFinishedMatch(match)) return;
+      const kickoff = this.matchKickoffTime(match);
+      if (!kickoff || kickoff < now) return;
+      if (next === null || kickoff < next) next = kickoff;
+    });
+    return next;
+  }
+
+  refreshDelayMs() {
+    const matches = this.allKnownMatches ? this.allKnownMatches() : [];
+    const hasLive = matches.some((match) => this.isLiveMatch(match));
+    if (hasLive) return 20 * 1000;
+
+    const next = this.nextKickoffMs(matches);
+    if (next !== null) {
+      const until = next - Date.now();
+      if (until <= 30 * 60 * 1000) return 60 * 1000;
+      if (until <= 3 * 60 * 60 * 1000) return 5 * 60 * 1000;
+    }
+
+    if (this.gameToday(matches)) return 5 * 60 * 1000;
+    return 15 * 60 * 1000;
+  }
+
+  scheduleNextRefresh(delay = null) {
+    if (this._refreshInterval) {
+      clearTimeout(this._refreshInterval);
+      this._refreshInterval = null;
+    }
+    const refreshDelay = Number.isFinite(Number(delay)) ? Number(delay) : this.refreshDelayMs();
+    this._refreshInterval = setTimeout(() => {
+      this._refreshInterval = null;
+      this.loadAll();
+    }, Math.max(20 * 1000, refreshDelay));
+  }
+
+  backendHasMasterLiveClock(matches) {
+    return (Array.isArray(matches) ? matches : []).some((match) => {
+      const source = String(match?.clockSource || match?.manualClock?.source || "").toLowerCase();
+      return this.isLiveMatch(match) && (
+        source.includes("api")
+        || match?.apiFootballFixtureId
+        || match?.apiFootballStatus
+        || match?.lastApiSync
+      );
+    });
+  }
+
   async loadAll() {
     try {
       // MASTER MODE: this panel must read tournament data from the Home Assistant
@@ -7779,19 +7846,31 @@ class WorldCup2026Panel extends HTMLElement {
 
       const publicGoalEvents = await this.loadPublicGoalEvents();
       const publicResults = await this.loadPublicGithubResults();
+      const publicMatches = await this.loadPublicGithubMatches();
 
       const storeMatches = this.goalEventStoreToMatches(publicGoalEvents);
       const fixturesWithStore = this.mergePublicGoalEventStore(apiFixtures, publicGoalEvents);
+      const publicMatchesWithStore = this.mergePublicGoalEventStore(publicMatches, publicGoalEvents);
       const apiResultsWithStore = this.mergePublicGoalEventStore(Array.isArray(apiResults) ? apiResults : [], publicGoalEvents);
       const publicResultsWithStore = this.mergePublicGoalEventStore(publicResults, publicGoalEvents);
       const combinedResults = this.mergeUniqueMatches(apiResultsWithStore, publicResultsWithStore);
 
-      this._data.live = this.mergePublicGoalEventStore(
+      const apiLiveWithStore = this.mergePublicGoalEventStore(
         (Array.isArray(apiLive) ? apiLive : []).filter((match) => this.isLiveMatch(match)),
         publicGoalEvents
       );
-      this._data.fixtures = this.mergeUniqueMatches(fixturesWithStore, storeMatches);
-      this._data.results = this.mergeResultsAndFinishedFixtures(combinedResults, this._data.fixtures);
+      const publicLiveWithStore = this.liveMatchesFromGithub(publicMatchesWithStore);
+      this._data.live = this.backendHasMasterLiveClock(apiLiveWithStore)
+        ? apiLiveWithStore
+        : this.mergeGithubMatchData(apiLiveWithStore, publicLiveWithStore).filter((match) => this.isLiveMatch(match));
+      this._data.fixtures = this.mergeUniqueMatches(
+        this.mergeGithubMatchData(fixturesWithStore, publicMatchesWithStore),
+        storeMatches
+      );
+      this._data.results = this.mergeResultsAndFinishedFixtures(
+        this.mergeUniqueMatches(combinedResults, publicMatchesWithStore.filter((match) => this.isFinishedMatch(match))),
+        this._data.fixtures
+      );
       this._data.groups = await this.callApi("world_cup_2026/get_groups");
       this._data.scorers = await this.safeCall("world_cup_2026/get_scorers", []);
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
@@ -7803,6 +7882,8 @@ class WorldCup2026Panel extends HTMLElement {
       this.render();
     } catch (err) {
       this.renderError(err);
+    } finally {
+      this.scheduleNextRefresh();
     }
   }
 
@@ -7902,6 +7983,10 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   statusLabel(status, match = null) {
+    const displayMinute = String(match?.displayMinute || match?.manualClock?.displayMinute || "").trim();
+    if (displayMinute && displayMinute !== "Awaiting live API data" && ["IN_PLAY", "LIVE", "1H", "2H", "ET"].includes(String(status).toUpperCase())) {
+      return displayMinute;
+    }
     const minute = match && match.minute !== undefined && match.minute !== null && match.minute !== "" ? Number(match.minute) : null;
     if (minute !== null && Number.isFinite(minute) && ["IN_PLAY", "LIVE", "1H", "2H"].includes(String(status))) {
       return `${minute}'`;
@@ -16093,26 +16178,14 @@ class WorldCup2026Panel extends HTMLElement {
       match?.goals,
       match?.cardEvents,
       match?.cards,
-      match?.apiFootballCards,
       match?.substitutionEvents,
       match?.substitutions,
-      match?.apiFootballSubstitutions,
       match?.varEvents,
-      match?.vars,
-      match?.apiFootballVarEvents,
       match?.matchDetails?.events,
-      match?.matchDetails?.timeline,
-      match?.matchDetails?.incidents,
-      match?.matchDetails?.matchEvents,
       match?.matchDetails?.goalEvents,
-      match?.matchDetails?.goals,
       match?.matchDetails?.cardEvents,
-      match?.matchDetails?.cards,
       match?.matchDetails?.substitutionEvents,
-      match?.matchDetails?.substitutions,
       match?.matchDetails?.varEvents,
-      match?.matchDetails?.vars,
-      match?.matchDetails?.apiFootballEvents,
       match?.apiFootballEvents,
       match?.timeline,
       match?.incidents,
@@ -16135,82 +16208,35 @@ class WorldCup2026Panel extends HTMLElement {
       const minuteText = this.eventMinuteText(event);
       const timerSeconds = this.eventTimerSeconds(event);
 
-      const isPenalty = detailText.includes("penalty") || typeText.includes("penalty") || detailText.includes("pen") || typeText.includes("pen");
-      const isMissedPenalty = detailText.includes("missed penalty") || detailText.includes("penalty missed") || typeText.includes("missed penalty");
-      const isOwnGoal = event.isOwnGoal === true || detailText.includes("own goal") || typeText.includes("own goal") || /\bog\b/i.test(detailText) || /\bog\b/i.test(typeText);
-      const isGoal = typeText.includes("goal") || detailText.includes("goal") || event.isGoal === true || isOwnGoal || (isPenalty && !detailText.includes("awarded") && !typeText.includes("awarded"));
+      const isGoal = typeText.includes("goal") || detailText.includes("goal") || event.isGoal === true;
       const isCard = typeText.includes("card") || detailText.includes("yellow") || detailText.includes("red");
-      const isSub = typeText.includes("subst") || typeText.includes("substitution") || detailText.includes("substitution") || event.isSubstitution === true || event.substitution === true;
+      const isSub = typeText.includes("subst") || detailText.includes("substitution");
       const isVar = typeText.includes("var") || detailText.includes("var") || detailText.includes("video assistant") || detailText.includes("video review") || String(event.rawType || "").toLowerCase().includes("var");
+      const isPenalty = detailText.includes("penalty") || detailText.includes("pen");
+      const isMissedPenalty = detailText.includes("missed penalty") || detailText.includes("penalty missed");
+      const isOwnGoal = detailText.includes("own goal") || /\bog\b/i.test(detailText);
 
       let category = "";
       if (isGoal) category = "goal";
       else if (isCard) category = "card";
       else if (isSub) category = "substitution";
       else if (isVar) category = "var";
-      else if (isPenalty) category = "penalty";
       else return;
 
       let icon = "•";
-      if (category === "goal") icon = isOwnGoal ? "OG" : (isMissedPenalty ? "PEN✕" : (isPenalty ? "PEN" : "⚽"));
+      if (category === "goal") icon = isOwnGoal ? "OG" : (isPenalty ? "PEN" : "⚽");
       if (category === "card") icon = detailText.includes("red") ? "🟥" : "🟨";
       if (category === "substitution") icon = "🔄";
       if (category === "var") icon = "VAR";
-      if (category === "penalty") icon = isMissedPenalty ? "PEN✕" : "PEN";
+      if (isMissedPenalty) icon = "PEN";
 
-      const rawDetailText = this.eventDetailText(event);
-      const assistName = this.eventAssistName(event);
-      const detailForKey = String(rawDetailText || "")
-        .toLowerCase()
-        .replace(/substitution\s*\d+/g, "substitution")
-        .replace(/\s+/g, " ")
-        .trim();
-
-      let key;
-      if (category === "substitution") {
-        // API-Football can expose the same substitution in both the full
-        // events timeline and substitutionEvents, sometimes with a different
-        // "Substitution 1/2/3" detail number. Dedupe substitutions by the
-        // real football data: minute + team + player on + player off.
-        const offMatch = rawDetailText.match(/off:\s*([^,|]+)/i);
-        const onMatch = rawDetailText.match(/on:\s*([^,|]+)/i);
-        // API-Football substitution events use player = player going off, assist = player coming on.
-        const playerOn = String(assistName || (onMatch && onMatch[1]) || "").toLowerCase().trim();
-        const playerOff = String(player || (offMatch && offMatch[1]) || "").toLowerCase().trim();
-        key = [
-          "substitution",
-          this.fixtureTeamKey(team),
-          minuteText || timerSeconds,
-          playerOn,
-          playerOff,
-        ].join("|");
-      } else if (category === "goal") {
-        key = [
-          "goal",
-          this.fixtureTeamKey(team),
-          player.toLowerCase(),
-          minuteText || timerSeconds,
-          isOwnGoal ? "og" : "",
-          isPenalty ? "pen" : "",
-          isMissedPenalty ? "missed" : "",
-        ].join("|");
-      } else if (category === "card") {
-        key = [
-          "card",
-          this.fixtureTeamKey(team),
-          player.toLowerCase(),
-          minuteText || timerSeconds,
-          detailText.includes("red") ? "red" : "yellow",
-        ].join("|");
-      } else {
-        key = [
-          category,
-          this.fixtureTeamKey(team),
-          player.toLowerCase(),
-          minuteText || timerSeconds,
-          detailForKey,
-        ].join("|");
-      }
+      const key = [
+        category,
+        this.fixtureTeamKey(team),
+        player.toLowerCase(),
+        minuteText || timerSeconds,
+        detailText,
+      ].join("|");
 
       if (!key.trim() || byKey.has(key)) return;
 
@@ -16220,10 +16246,10 @@ class WorldCup2026Panel extends HTMLElement {
         icon,
         team,
         player,
-        assist: assistName,
+        assist: this.eventAssistName(event),
         minuteText,
         timerSeconds,
-        detail: rawDetailText,
+        detail: this.eventDetailText(event),
         isOwnGoal,
         isPenalty,
         isMissedPenalty,
@@ -16312,13 +16338,8 @@ class WorldCup2026Panel extends HTMLElement {
     const rows = events.map((event) => {
       const detail = event.detail && event.detail.toLowerCase() !== event.category ? event.detail : "";
       const team = event.team ? ` <em>${this.esc(this.localizedTeamName(event.team))}</em>` : "";
-      const assistLabel = event.category === "substitution" ? "On" : "Assist";
-      const assist = event.assist ? ` <small>${assistLabel}: ${this.esc(event.assist)}</small>` : "";
-      let player = event.player || detail || event.category;
-      if (event.category === "substitution" && event.player) player = `Off: ${event.player}`;
-      if (event.category === "goal" && event.isOwnGoal && event.player) player = `${event.player} (OG)`;
-      if (event.category === "goal" && event.isPenalty && !event.isOwnGoal && event.player) player = `${event.player} (PEN)`;
-      if ((event.category === "goal" || event.category === "penalty") && event.isMissedPenalty && event.player) player = `${event.player} (missed pen)`;
+      const assist = event.assist ? ` <small>Assist: ${this.esc(event.assist)}</small>` : "";
+      const player = event.player || detail || event.category;
       const minute = event.minuteText || "";
       const detailHtml = detail && String(detail).toLowerCase() !== String(player).toLowerCase()
         ? `<small>${this.esc(detail)}</small>`
@@ -16346,9 +16367,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   matchExtraLiveDataSection(match) {
-    // Live Centre should show the full API timeline as it arrives:
-    // goals, own goals, penalties, cards, substitutions and VAR.
-    const eventsHtml = this.matchEventsTimelineSection(match, { includeSubs: true });
+    const eventsHtml = this.matchEventsTimelineSection(match);
     const officialsHtml = this.matchOfficialsSection(match);
     if (!eventsHtml && !officialsHtml) return "";
 
@@ -16657,7 +16676,7 @@ class WorldCup2026Panel extends HTMLElement {
     });
 
     const playedCount = sortedFixtures.filter(m => ["FINISHED", "FT", "AET", "PEN"].includes(m.status)).length;
-    const liveCount = sortedFixtures.filter(m => ["IN_PLAY", "LIVE", "PAUSED"].includes(m.status)).length;
+    const liveCount = sortedFixtures.filter(m => this.isLiveMatch(m)).length;
     const remainingCount = Math.max(sortedFixtures.length - playedCount, 0);
     const nextMatch = sortedFixtures.find(m => ["TIMED", "SCHEDULED"].includes(m.status));
     const dayCount = new Set(sortedFixtures.map(m => this.fixtureDateKey(m))).size;
