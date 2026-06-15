@@ -4734,7 +4734,7 @@
   "537370": {
     "goalEvents": [],
     "clock_active": false,
-    "status": "IN_PLAY",
+    "status": "1H",
     "homeScore": 0,
     "awayScore": 0,
     "utcDate": "2026-06-15T22:00:00Z",
@@ -4742,14 +4742,18 @@
     "awayTeam": "Uruguay",
     "referees": [
       {
-        "id": 11043,
-        "name": "Maurizio Mariani",
-        "type": "REFEREE",
-        "nationality": "Italy"
+        "name": "Maurizio Mariani, Italy",
+        "type": "REFEREE"
       }
     ],
-    "phase_start": null,
-    "source": "awaiting_api_football_minute"
+    "phase_start": "2026-06-15T22:05:00.562777+00:00",
+    "source": "api_football_live_minute",
+    "base_seconds": 60,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
+    "manualClockText": "1'",
+    "lastApiSync": "2026-06-15T22:05:00.562777+00:00",
+    "apiFootballFixtureId": 1489379
   },
   "537364": {
     "goalEvents": [],
