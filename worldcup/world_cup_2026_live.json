@@ -1,4 +1,166 @@
 {
-  "matches": [],
-  "live": []
+  "matches": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537391,
+      "utcDate": "2026-06-16T19:00:00Z",
+      "status": "IN_PLAY",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I",
+      "lastUpdated": "2026-06-16T21:01:31Z",
+      "homeTeam": {
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
+      },
+      "awayTeam": {
+        "id": 804,
+        "name": "Senegal",
+        "shortName": "Senegal",
+        "tla": "SEN",
+        "crest": "https://crests.football-data.org/senegal.svg"
+      },
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 55970,
+          "name": "Alireza Faghani",
+          "type": "REFEREE",
+          "nationality": "Iran"
+        }
+      ],
+      "manualClock": {
+        "seconds": 0,
+        "timer": "0:00",
+        "displayMinute": "0'",
+        "active": false,
+        "status": "IN_PLAY",
+        "source": "awaiting_api_football_minute",
+        "lastApiSync": null
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "lastApiSync": null,
+      "awaitingLiveApiData": true,
+      "manualClockText": "Awaiting live API data",
+      "displayMinute": "Awaiting live API data"
+    }
+  ],
+  "live": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537391,
+      "utcDate": "2026-06-16T19:00:00Z",
+      "status": "IN_PLAY",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I",
+      "lastUpdated": "2026-06-16T21:01:31Z",
+      "homeTeam": {
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA",
+        "crest": "https://crests.football-data.org/773.svg"
+      },
+      "awayTeam": {
+        "id": 804,
+        "name": "Senegal",
+        "shortName": "Senegal",
+        "tla": "SEN",
+        "crest": "https://crests.football-data.org/senegal.svg"
+      },
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 55970,
+          "name": "Alireza Faghani",
+          "type": "REFEREE",
+          "nationality": "Iran"
+        }
+      ],
+      "manualClock": {
+        "seconds": 0,
+        "timer": "0:00",
+        "displayMinute": "0'",
+        "active": false,
+        "status": "IN_PLAY",
+        "source": "awaiting_api_football_minute",
+        "lastApiSync": null
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "lastApiSync": null,
+      "awaitingLiveApiData": true,
+      "manualClockText": "Awaiting live API data",
+      "displayMinute": "Awaiting live API data"
+    }
+  ]
 }
