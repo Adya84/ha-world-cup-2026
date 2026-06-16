@@ -6230,7 +6230,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-17T01:39:31Z",
+      "lastUpdated": "2026-06-17T01:39:58Z",
       "homeTeam": {
         "id": 8062,
         "name": "Iraq",
@@ -6272,7 +6272,7 @@
       "displayMinute": "77'",
       "manualClockText": "77'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T23:39:34.525087+00:00",
+      "lastApiSync": "2026-06-16T23:40:01.565493+00:00",
       "manualClock": {
         "seconds": 4620,
         "timer": "77'",
@@ -6280,7 +6280,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T23:39:34.525087+00:00"
+        "lastApiSync": "2026-06-16T23:40:01.565493+00:00"
       },
       "homeScore": 1,
       "awayScore": 3,
@@ -6347,6 +6347,26 @@
           "homeTeam": "Iraq",
           "awayTeam": "Norway",
           "goalNumber": 3
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Norway",
+          "player": "L. Ostigard",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football",
+          "matchId": 537392,
+          "matchUtcDate": "2026-06-16T22:00:00Z",
+          "homeTeam": "Iraq",
+          "awayTeam": "Norway",
+          "goalNumber": 4
         }
       ],
       "events": [
@@ -6519,7 +6539,7 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Norway",
-          "player": null,
+          "player": "L. Ostigard",
           "minute": 77,
           "extra": null,
           "displayMinute": "77'",
