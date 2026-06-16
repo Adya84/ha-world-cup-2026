@@ -27,7 +27,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T23:01:17Z",
+      "lastUpdated": "2026-06-16T23:02:01Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -65,12 +65,12 @@
       ],
       "liveSource": "api_football",
       "minute": 90,
-      "extra": 7,
+      "extra": 8,
       "clockSeconds": 5400,
       "displayMinute": "90'",
       "manualClockText": "90'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T21:01:48.491612+00:00",
+      "lastApiSync": "2026-06-16T21:02:04.559490+00:00",
       "manualClock": {
         "seconds": 5400,
         "timer": "90'",
@@ -78,7 +78,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T21:01:48.491612+00:00"
+        "lastApiSync": "2026-06-16T21:02:04.559490+00:00"
       },
       "homeScore": 3,
       "awayScore": 1,
@@ -138,7 +138,7 @@
           "timerSeconds": 5700,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "I. Ndiaye",
           "source": "api_football",
           "matchId": 537391,
           "matchUtcDate": "2026-06-16T19:00:00Z",
@@ -270,7 +270,7 @@
           "timerSeconds": 4980,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "C. Ndiaye",
+          "assist": "I. Ndiaye",
           "source": "api_football"
         },
         {
@@ -306,21 +306,6 @@
         {
           "type": "Goal",
           "rawType": "Goal",
-          "team": "Senegal",
-          "player": "I. Mbaye",
-          "minute": 90,
-          "extra": 5,
-          "displayMinute": "90+5'",
-          "timer": "95:00",
-          "timerSeconds": 5700,
-          "detail": "Normal Goal",
-          "comments": null,
-          "assist": null,
-          "source": "api_football"
-        },
-        {
-          "type": "Goal",
-          "rawType": "Goal",
           "team": "France",
           "player": "K. Mbappe",
           "minute": 90,
@@ -331,6 +316,21 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "M. Olise",
+          "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Senegal",
+          "player": "I. Mbaye",
+          "minute": 90,
+          "extra": 5,
+          "displayMinute": "90+5'",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "I. Ndiaye",
           "source": "api_football"
         }
       ],
@@ -408,7 +408,7 @@
           "timerSeconds": 4980,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "C. Ndiaye",
+          "assist": "I. Ndiaye",
           "source": "api_football"
         },
         {
@@ -500,11 +500,11 @@
             },
             {
               "type": "Total passes",
-              "value": 546
+              "value": 561
             },
             {
               "type": "Passes accurate",
-              "value": 482
+              "value": 493
             },
             {
               "type": "Passes %",
@@ -534,7 +534,7 @@
           "statistics": [
             {
               "type": "Shots on Goal",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots off Goal",
@@ -542,7 +542,7 @@
             },
             {
               "type": "Total Shots",
-              "value": 5
+              "value": 6
             },
             {
               "type": "Blocked Shots",
@@ -550,7 +550,7 @@
             },
             {
               "type": "Shots insidebox",
-              "value": 3
+              "value": 4
             },
             {
               "type": "Shots outsidebox",
@@ -586,11 +586,11 @@
             },
             {
               "type": "Total passes",
-              "value": 465
+              "value": 476
             },
             {
               "type": "Passes accurate",
-              "value": 400
+              "value": 409
             },
             {
               "type": "Passes %",
@@ -606,9 +606,9 @@
             }
           ],
           "corners": 4,
-          "shotsOnGoal": 1,
+          "shotsOnGoal": 2,
           "shotsOffGoal": 3,
-          "totalShots": 5,
+          "totalShots": 6,
           "possession": "46%",
           "fouls": 9,
           "offsides": 3,
@@ -619,7 +619,7 @@
       "homeCorners": 6,
       "awayCorners": 4,
       "homeShotsOnGoal": 7,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "homePossession": "54%",
       "awayPossession": "46%",
       "homeFouls": 4,
@@ -659,7 +659,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T23:01:17Z",
+      "lastUpdated": "2026-06-16T23:02:01Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -697,12 +697,12 @@
       ],
       "liveSource": "api_football",
       "minute": 90,
-      "extra": 7,
+      "extra": 8,
       "clockSeconds": 5400,
       "displayMinute": "90'",
       "manualClockText": "90'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T21:01:48.491612+00:00",
+      "lastApiSync": "2026-06-16T21:02:04.559490+00:00",
       "manualClock": {
         "seconds": 5400,
         "timer": "90'",
@@ -710,7 +710,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T21:01:48.491612+00:00"
+        "lastApiSync": "2026-06-16T21:02:04.559490+00:00"
       },
       "homeScore": 3,
       "awayScore": 1,
@@ -770,7 +770,7 @@
           "timerSeconds": 5700,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "I. Ndiaye",
           "source": "api_football",
           "matchId": 537391,
           "matchUtcDate": "2026-06-16T19:00:00Z",
@@ -902,7 +902,7 @@
           "timerSeconds": 4980,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "C. Ndiaye",
+          "assist": "I. Ndiaye",
           "source": "api_football"
         },
         {
@@ -938,21 +938,6 @@
         {
           "type": "Goal",
           "rawType": "Goal",
-          "team": "Senegal",
-          "player": "I. Mbaye",
-          "minute": 90,
-          "extra": 5,
-          "displayMinute": "90+5'",
-          "timer": "95:00",
-          "timerSeconds": 5700,
-          "detail": "Normal Goal",
-          "comments": null,
-          "assist": null,
-          "source": "api_football"
-        },
-        {
-          "type": "Goal",
-          "rawType": "Goal",
           "team": "France",
           "player": "K. Mbappe",
           "minute": 90,
@@ -963,6 +948,21 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "M. Olise",
+          "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Senegal",
+          "player": "I. Mbaye",
+          "minute": 90,
+          "extra": 5,
+          "displayMinute": "90+5'",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "I. Ndiaye",
           "source": "api_football"
         }
       ],
@@ -1040,7 +1040,7 @@
           "timerSeconds": 4980,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "C. Ndiaye",
+          "assist": "I. Ndiaye",
           "source": "api_football"
         },
         {
@@ -1132,11 +1132,11 @@
             },
             {
               "type": "Total passes",
-              "value": 546
+              "value": 561
             },
             {
               "type": "Passes accurate",
-              "value": 482
+              "value": 493
             },
             {
               "type": "Passes %",
@@ -1166,7 +1166,7 @@
           "statistics": [
             {
               "type": "Shots on Goal",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots off Goal",
@@ -1174,7 +1174,7 @@
             },
             {
               "type": "Total Shots",
-              "value": 5
+              "value": 6
             },
             {
               "type": "Blocked Shots",
@@ -1182,7 +1182,7 @@
             },
             {
               "type": "Shots insidebox",
-              "value": 3
+              "value": 4
             },
             {
               "type": "Shots outsidebox",
@@ -1218,11 +1218,11 @@
             },
             {
               "type": "Total passes",
-              "value": 465
+              "value": 476
             },
             {
               "type": "Passes accurate",
-              "value": 400
+              "value": 409
             },
             {
               "type": "Passes %",
@@ -1238,9 +1238,9 @@
             }
           ],
           "corners": 4,
-          "shotsOnGoal": 1,
+          "shotsOnGoal": 2,
           "shotsOffGoal": 3,
-          "totalShots": 5,
+          "totalShots": 6,
           "possession": "46%",
           "fouls": 9,
           "offsides": 3,
@@ -1251,7 +1251,7 @@
       "homeCorners": 6,
       "awayCorners": 4,
       "homeShotsOnGoal": 7,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "homePossession": "54%",
       "awayPossession": "46%",
       "homeFouls": 4,
