@@ -5503,11 +5503,11 @@
       },
       "id": 537364,
       "utcDate": "2026-06-16T01:00:00Z",
-      "status": "2H",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T05:03:10Z",
+      "lastUpdated": "2026-06-16T05:03:37Z",
       "homeTeam": {
         "id": 840,
         "name": "Iran",
@@ -5539,32 +5539,12 @@
       },
       "referees": [
         {
-          "name": "C\u00e9sar Ramos Palazuelos, Mexico",
-          "type": "REFEREE"
+          "id": 56007,
+          "name": "C\u00e9sar Ramos",
+          "type": "REFEREE",
+          "nationality": "Mexico"
         }
       ],
-      "liveSource": "api_football",
-      "minute": 90,
-      "extra": 6,
-      "clockSeconds": 5400,
-      "displayMinute": "90'",
-      "manualClockText": "90'",
-      "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T03:03:11.538498+00:00",
-      "manualClock": {
-        "seconds": 5400,
-        "timer": "90'",
-        "displayMinute": "90'",
-        "active": false,
-        "status": "2H",
-        "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T03:03:11.538498+00:00"
-      },
-      "homeScore": 2,
-      "awayScore": 2,
-      "scoreSource": "api_football_live",
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "goalEvents": [
         {
           "type": "Goal",
@@ -5661,7 +5641,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Chris Wood",
-          "source": "api_football"
+          "source": "api_football",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -5676,37 +5661,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "Arya Yousefi",
-          "minute": 45,
-          "extra": null,
-          "displayMinute": "45'",
-          "timer": "45:00",
-          "timerSeconds": 2700,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "Mehdi Ghayedi",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "Shahriyar Moghanloo",
-          "minute": 53,
-          "extra": null,
-          "displayMinute": "53'",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "Ali Alipour",
-          "source": "api_football"
+          "source": "api_football",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -5721,7 +5681,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Chris Wood",
-          "source": "api_football"
+          "source": "api_football",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -5736,130 +5701,14 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Ramin Rezaeian",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "Saman Ghoddos",
-          "minute": 65,
-          "extra": null,
-          "displayMinute": "65'",
-          "timer": "65:00",
-          "timerSeconds": 3900,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "Ehsan Hajisafi",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "Callum McCowatt",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "Ryan Thomas",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "Liberato Cacace",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "Ben Old",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "Tim Payne",
-          "minute": 78,
-          "extra": null,
-          "displayMinute": "78'",
-          "timer": "78:00",
-          "timerSeconds": 4680,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "Callan Elliot",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "Mehdi Taremi",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "Amirhossein Hosseinzadeh",
-          "source": "api_football"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Iran",
-          "player": "Ehsan Hajisafi",
-          "minute": 89,
-          "extra": null,
-          "displayMinute": "89'",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "Sarpreet Singh",
-          "minute": 92,
-          "extra": null,
-          "displayMinute": "92'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "Jesse Randall",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "Marko Stameni\u0107",
-          "minute": 92,
-          "extra": null,
-          "displayMinute": "92'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "Tyler Bindon",
-          "source": "api_football"
+          "source": "api_football",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 4
         }
       ],
-      "goalEventsSource": "api_football_live",
       "cardEvents": [
         {
           "type": "Yellow Card",
@@ -6015,8 +5864,20 @@
         }
       ],
       "apiFootballFixtureId": 1489378,
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'"
+      "manualClock": {
+        "seconds": 5400,
+        "timer": "90:00",
+        "displayMinute": "90'",
+        "active": false,
+        "status": "IN_PLAY",
+        "source": "awaiting_api_football_minute",
+        "lastApiSync": "2026-06-16T03:03:11.538498+00:00"
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "lastApiSync": "2026-06-16T03:03:11.538498+00:00",
+      "awaitingLiveApiData": true,
+      "manualClockText": "Awaiting live API data",
+      "displayMinute": "Awaiting live API data"
     },
     {
       "area": {
