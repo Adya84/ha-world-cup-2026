@@ -4787,13 +4787,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-15T23:59:49.996434+00:00",
+    "phase_start": "2026-06-16T00:00:22.585735+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 5400,
     "clock_seconds": 5400,
     "displayMinute": "90'",
     "manualClockText": "90'",
-    "lastApiSync": "2026-06-15T23:59:49.996434+00:00",
+    "lastApiSync": "2026-06-16T00:00:22.585735+00:00",
     "apiFootballFixtureId": 1489379,
     "events": [
       {
@@ -4975,6 +4975,21 @@
         "comments": null,
         "assist": "A. Al Hamdan",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Saudi Arabia",
+        "player": "F. Al Buraikan",
+        "minute": 90,
+        "extra": 4,
+        "displayMinute": "90+4'",
+        "timer": "94:00",
+        "timerSeconds": 5640,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "A. Hejji",
+        "source": "api_football"
       }
     ],
     "cardEvents": [
@@ -5128,6 +5143,21 @@
         "detail": "Substitution 4",
         "comments": null,
         "assist": "A. Al Hamdan",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Saudi Arabia",
+        "player": "F. Al Buraikan",
+        "minute": 90,
+        "extra": 4,
+        "displayMinute": "90+4'",
+        "timer": "94:00",
+        "timerSeconds": 5640,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "A. Hejji",
         "source": "api_football"
       }
     ]
