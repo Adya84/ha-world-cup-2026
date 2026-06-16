@@ -5010,11 +5010,32 @@
     ]
   },
   "537364": {
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "New Zealand",
+        "player": "E. Just",
+        "minute": 7,
+        "extra": null,
+        "displayMinute": "7'",
+        "timer": "7:00",
+        "timerSeconds": 420,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football",
+        "matchId": 537364,
+        "matchUtcDate": "2026-06-16T01:00:00Z",
+        "homeTeam": "Iran",
+        "awayTeam": "New Zealand",
+        "goalNumber": 1
+      }
+    ],
     "clock_active": false,
     "status": "1H",
     "homeScore": 0,
-    "awayScore": 0,
+    "awayScore": 1,
     "utcDate": "2026-06-16T01:00:00Z",
     "homeTeam": "Iran",
     "awayTeam": "New Zealand",
@@ -5026,14 +5047,31 @@
         "nationality": "Mexico"
       }
     ],
-    "phase_start": "2026-06-16T01:10:51.553216+00:00",
+    "phase_start": "2026-06-16T01:11:18.272224+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 420,
-    "clock_seconds": 420,
-    "displayMinute": "7'",
-    "manualClockText": "7'",
-    "lastApiSync": "2026-06-16T01:10:51.553216+00:00",
-    "apiFootballFixtureId": 1489378
+    "base_seconds": 480,
+    "clock_seconds": 480,
+    "displayMinute": "8'",
+    "manualClockText": "8'",
+    "lastApiSync": "2026-06-16T01:11:18.272224+00:00",
+    "apiFootballFixtureId": 1489378,
+    "events": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "New Zealand",
+        "player": "E. Just",
+        "minute": 7,
+        "extra": null,
+        "displayMinute": "7'",
+        "timer": "7:00",
+        "timerSeconds": 420,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football"
+      }
+    ]
   },
   "537391": {
     "goalEvents": [],
