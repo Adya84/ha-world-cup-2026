@@ -10882,7 +10882,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T22:29:55Z",
+      "lastUpdated": "2026-06-16T22:30:43Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -10901,7 +10901,7 @@
         "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "halfTime": {
@@ -10919,26 +10919,66 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 66,
-      "clockSeconds": 3960,
-      "displayMinute": "66'",
-      "manualClockText": "66'",
+      "minute": 67,
+      "clockSeconds": 4020,
+      "displayMinute": "67'",
+      "manualClockText": "67'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T20:29:57.733154+00:00",
+      "lastApiSync": "2026-06-16T20:30:46.786414+00:00",
       "manualClock": {
-        "seconds": 3960,
-        "timer": "66'",
-        "displayMinute": "66'",
+        "seconds": 4020,
+        "timer": "67'",
+        "displayMinute": "67'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T20:29:57.733154+00:00"
+        "lastApiSync": "2026-06-16T20:30:46.786414+00:00"
       },
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
+      "goalEvents": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "France",
+          "player": "K. Mbappe",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football",
+          "matchId": 537391,
+          "matchUtcDate": "2026-06-16T19:00:00Z",
+          "homeTeam": "France",
+          "awayTeam": "Senegal",
+          "goalNumber": 1
+        }
+      ],
+      "events": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "France",
+          "player": "K. Mbappe",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "liveStatistics": {
         "home": {
           "team": "France",
@@ -10953,15 +10993,15 @@
             },
             {
               "type": "Total Shots",
-              "value": 4
+              "value": 5
             },
             {
               "type": "Blocked Shots",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots insidebox",
-              "value": 2
+              "value": 3
             },
             {
               "type": "Shots outsidebox",
@@ -10997,15 +11037,15 @@
             },
             {
               "type": "Total passes",
-              "value": 403
+              "value": 424
             },
             {
               "type": "Passes accurate",
-              "value": 351
+              "value": 371
             },
             {
               "type": "Passes %",
-              "value": "87%"
+              "value": "88%"
             },
             {
               "type": "expected_goals",
@@ -11019,7 +11059,7 @@
           "corners": 5,
           "shotsOnGoal": 2,
           "shotsOffGoal": 1,
-          "totalShots": 4,
+          "totalShots": 5,
           "possession": "55%",
           "fouls": 3,
           "offsides": 1,
@@ -11083,11 +11123,11 @@
             },
             {
               "type": "Total passes",
-              "value": 338
+              "value": 352
             },
             {
               "type": "Passes accurate",
-              "value": 287
+              "value": 300
             },
             {
               "type": "Passes %",
@@ -11124,11 +11164,48 @@
       "homeOffsides": 1,
       "awayOffsides": 1,
       "apiFootballFixtureId": 1489383,
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "matchDetails": {
-        "events": [],
-        "goalEvents": [],
+        "events": [
+          {
+            "type": "Goal",
+            "rawType": "Goal",
+            "team": "France",
+            "player": "K. Mbappe",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Normal Goal",
+            "comments": null,
+            "assist": null,
+            "source": "api_football"
+          }
+        ],
+        "goalEvents": [
+          {
+            "type": "Goal",
+            "rawType": "Goal",
+            "team": "France",
+            "player": "K. Mbappe",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Normal Goal",
+            "comments": null,
+            "assist": null,
+            "source": "api_football",
+            "matchId": 537391,
+            "matchUtcDate": "2026-06-16T19:00:00Z",
+            "homeTeam": "France",
+            "awayTeam": "Senegal",
+            "goalNumber": 1
+          }
+        ],
         "cardEvents": [],
         "substitutionEvents": [],
         "referees": [
@@ -11138,7 +11215,7 @@
           }
         ],
         "apiFootballFixtureId": 1489383,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_live"
       }
     }
   ],
@@ -22025,7 +22102,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T22:29:55Z",
+      "lastUpdated": "2026-06-16T22:30:43Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -22044,7 +22121,7 @@
         "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "halfTime": {
@@ -22062,26 +22139,66 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 66,
-      "clockSeconds": 3960,
-      "displayMinute": "66'",
-      "manualClockText": "66'",
+      "minute": 67,
+      "clockSeconds": 4020,
+      "displayMinute": "67'",
+      "manualClockText": "67'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T20:29:57.733154+00:00",
+      "lastApiSync": "2026-06-16T20:30:46.786414+00:00",
       "manualClock": {
-        "seconds": 3960,
-        "timer": "66'",
-        "displayMinute": "66'",
+        "seconds": 4020,
+        "timer": "67'",
+        "displayMinute": "67'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T20:29:57.733154+00:00"
+        "lastApiSync": "2026-06-16T20:30:46.786414+00:00"
       },
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
+      "goalEvents": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "France",
+          "player": "K. Mbappe",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football",
+          "matchId": 537391,
+          "matchUtcDate": "2026-06-16T19:00:00Z",
+          "homeTeam": "France",
+          "awayTeam": "Senegal",
+          "goalNumber": 1
+        }
+      ],
+      "events": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "France",
+          "player": "K. Mbappe",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "liveStatistics": {
         "home": {
           "team": "France",
@@ -22096,15 +22213,15 @@
             },
             {
               "type": "Total Shots",
-              "value": 4
+              "value": 5
             },
             {
               "type": "Blocked Shots",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots insidebox",
-              "value": 2
+              "value": 3
             },
             {
               "type": "Shots outsidebox",
@@ -22140,15 +22257,15 @@
             },
             {
               "type": "Total passes",
-              "value": 403
+              "value": 424
             },
             {
               "type": "Passes accurate",
-              "value": 351
+              "value": 371
             },
             {
               "type": "Passes %",
-              "value": "87%"
+              "value": "88%"
             },
             {
               "type": "expected_goals",
@@ -22162,7 +22279,7 @@
           "corners": 5,
           "shotsOnGoal": 2,
           "shotsOffGoal": 1,
-          "totalShots": 4,
+          "totalShots": 5,
           "possession": "55%",
           "fouls": 3,
           "offsides": 1,
@@ -22226,11 +22343,11 @@
             },
             {
               "type": "Total passes",
-              "value": 338
+              "value": 352
             },
             {
               "type": "Passes accurate",
-              "value": 287
+              "value": 300
             },
             {
               "type": "Passes %",
@@ -22267,11 +22384,48 @@
       "homeOffsides": 1,
       "awayOffsides": 1,
       "apiFootballFixtureId": 1489383,
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "matchDetails": {
-        "events": [],
-        "goalEvents": [],
+        "events": [
+          {
+            "type": "Goal",
+            "rawType": "Goal",
+            "team": "France",
+            "player": "K. Mbappe",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Normal Goal",
+            "comments": null,
+            "assist": null,
+            "source": "api_football"
+          }
+        ],
+        "goalEvents": [
+          {
+            "type": "Goal",
+            "rawType": "Goal",
+            "team": "France",
+            "player": "K. Mbappe",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Normal Goal",
+            "comments": null,
+            "assist": null,
+            "source": "api_football",
+            "matchId": 537391,
+            "matchUtcDate": "2026-06-16T19:00:00Z",
+            "homeTeam": "France",
+            "awayTeam": "Senegal",
+            "goalNumber": 1
+          }
+        ],
         "cardEvents": [],
         "substitutionEvents": [],
         "referees": [
@@ -22281,7 +22435,7 @@
           }
         ],
         "apiFootballFixtureId": 1489383,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_live"
       }
     }
   ]
