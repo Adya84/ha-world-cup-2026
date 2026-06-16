@@ -23,11 +23,11 @@
       },
       "id": 537364,
       "utcDate": "2026-06-16T01:00:00Z",
-      "status": "HT",
+      "status": "2H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T04:12:31Z",
+      "lastUpdated": "2026-06-16T04:12:58Z",
       "homeTeam": {
         "id": 840,
         "name": "Iran",
@@ -64,27 +64,26 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 45,
-      "extra": 7,
-      "clockSeconds": 2700,
-      "displayMinute": "45'",
-      "manualClockText": "45'",
+      "minute": 46,
+      "clockSeconds": 2760,
+      "displayMinute": "46'",
+      "manualClockText": "46'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T02:12:32.738978+00:00",
+      "lastApiSync": "2026-06-16T02:13:00.540904+00:00",
       "manualClock": {
-        "seconds": 2700,
-        "timer": "45'",
-        "displayMinute": "45'",
+        "seconds": 2760,
+        "timer": "46'",
+        "displayMinute": "46'",
         "active": false,
-        "status": "HT",
+        "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T02:12:32.738978+00:00"
+        "lastApiSync": "2026-06-16T02:13:00.540904+00:00"
       },
       "homeScore": 1,
       "awayScore": 1,
       "scoreSource": "api_football_live",
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "goalEvents": [
         {
           "type": "Goal",
@@ -157,12 +156,44 @@
           "comments": null,
           "assist": "S. Moghanlou",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "A. Yousefi",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "M. Ghaedi",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
+      "substitutionEvents": [
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "A. Yousefi",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "M. Ghaedi",
+          "source": "api_football"
+        }
+      ],
       "apiFootballFixtureId": 1489378,
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'"
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'"
     }
   ],
   "live": [
@@ -189,11 +220,11 @@
       },
       "id": 537364,
       "utcDate": "2026-06-16T01:00:00Z",
-      "status": "HT",
+      "status": "2H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T04:12:31Z",
+      "lastUpdated": "2026-06-16T04:12:58Z",
       "homeTeam": {
         "id": 840,
         "name": "Iran",
@@ -230,27 +261,26 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 45,
-      "extra": 7,
-      "clockSeconds": 2700,
-      "displayMinute": "45'",
-      "manualClockText": "45'",
+      "minute": 46,
+      "clockSeconds": 2760,
+      "displayMinute": "46'",
+      "manualClockText": "46'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T02:12:32.738978+00:00",
+      "lastApiSync": "2026-06-16T02:13:00.540904+00:00",
       "manualClock": {
-        "seconds": 2700,
-        "timer": "45'",
-        "displayMinute": "45'",
+        "seconds": 2760,
+        "timer": "46'",
+        "displayMinute": "46'",
         "active": false,
-        "status": "HT",
+        "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T02:12:32.738978+00:00"
+        "lastApiSync": "2026-06-16T02:13:00.540904+00:00"
       },
       "homeScore": 1,
       "awayScore": 1,
       "scoreSource": "api_football_live",
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "goalEvents": [
         {
           "type": "Goal",
@@ -323,12 +353,44 @@
           "comments": null,
           "assist": "S. Moghanlou",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "A. Yousefi",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "M. Ghaedi",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
+      "substitutionEvents": [
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "A. Yousefi",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "M. Ghaedi",
+          "source": "api_football"
+        }
+      ],
       "apiFootballFixtureId": 1489378,
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'"
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'"
     }
   ]
 }
