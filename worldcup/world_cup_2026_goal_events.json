@@ -5398,7 +5398,7 @@
     "clock_active": false,
     "status": "2H",
     "homeScore": 2,
-    "awayScore": 0,
+    "awayScore": 1,
     "utcDate": "2026-06-16T19:00:00Z",
     "homeTeam": "France",
     "awayTeam": "Senegal",
@@ -5408,13 +5408,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-16T20:58:55.539059+00:00",
+    "phase_start": "2026-06-16T20:59:24.624199+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 5400,
     "clock_seconds": 5400,
     "displayMinute": "90'",
     "manualClockText": "90'",
-    "lastApiSync": "2026-06-16T20:58:55.539059+00:00",
+    "lastApiSync": "2026-06-16T20:59:24.624199+00:00",
     "apiFootballFixtureId": 1489383,
     "events": [
       {
@@ -5496,7 +5496,7 @@
         "type": "Substitution",
         "rawType": "subst",
         "team": "Senegal",
-        "player": "N. Jackson",
+        "player": "P. Gueye",
         "minute": 83,
         "extra": null,
         "displayMinute": "83'",
@@ -5504,14 +5504,14 @@
         "timerSeconds": 4980,
         "detail": "Substitution 3",
         "comments": null,
-        "assist": "B. Dieng",
+        "assist": "C. Ndiaye",
         "source": "api_football"
       },
       {
         "type": "Substitution",
         "rawType": "subst",
         "team": "Senegal",
-        "player": "P. Gueye",
+        "player": "N. Jackson",
         "minute": 83,
         "extra": null,
         "displayMinute": "83'",
@@ -5519,7 +5519,7 @@
         "timerSeconds": 4980,
         "detail": "Substitution 4",
         "comments": null,
-        "assist": "C. Ndiaye",
+        "assist": "B. Dieng",
         "source": "api_football"
       },
       {
@@ -5550,6 +5550,21 @@
         "detail": "Substitution 5",
         "comments": null,
         "assist": "P. Ciss",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Senegal",
+        "player": null,
+        "minute": 90,
+        "extra": 5,
+        "displayMinute": "90+5'",
+        "timer": "95:00",
+        "timerSeconds": 5700,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
         "source": "api_football"
       }
     ],
@@ -5603,7 +5618,7 @@
         "type": "Substitution",
         "rawType": "subst",
         "team": "Senegal",
-        "player": "N. Jackson",
+        "player": "P. Gueye",
         "minute": 83,
         "extra": null,
         "displayMinute": "83'",
@@ -5611,14 +5626,14 @@
         "timerSeconds": 4980,
         "detail": "Substitution 3",
         "comments": null,
-        "assist": "B. Dieng",
+        "assist": "C. Ndiaye",
         "source": "api_football"
       },
       {
         "type": "Substitution",
         "rawType": "subst",
         "team": "Senegal",
-        "player": "P. Gueye",
+        "player": "N. Jackson",
         "minute": 83,
         "extra": null,
         "displayMinute": "83'",
@@ -5626,7 +5641,7 @@
         "timerSeconds": 4980,
         "detail": "Substitution 4",
         "comments": null,
-        "assist": "C. Ndiaye",
+        "assist": "B. Dieng",
         "source": "api_football"
       },
       {
