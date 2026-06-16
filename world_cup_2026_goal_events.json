@@ -5105,13 +5105,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-16T02:35:31.847465+00:00",
+    "phase_start": "2026-06-16T02:35:59.499154+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 4080,
-    "clock_seconds": 4080,
-    "displayMinute": "68'",
-    "manualClockText": "68'",
-    "lastApiSync": "2026-06-16T02:35:31.847465+00:00",
+    "base_seconds": 4140,
+    "clock_seconds": 4140,
+    "displayMinute": "69'",
+    "manualClockText": "69'",
+    "lastApiSync": "2026-06-16T02:35:59.499154+00:00",
     "apiFootballFixtureId": 1489378,
     "events": [
       {
@@ -5218,6 +5218,36 @@
         "comments": null,
         "assist": "E. Hajsafi",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "New Zealand",
+        "player": "L. Cacace",
+        "minute": 68,
+        "extra": null,
+        "displayMinute": "68'",
+        "timer": "68:00",
+        "timerSeconds": 4080,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "B. Old",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "New Zealand",
+        "player": "C. McCowatt",
+        "minute": 68,
+        "extra": null,
+        "displayMinute": "68'",
+        "timer": "68:00",
+        "timerSeconds": 4080,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "R. Thomas",
+        "source": "api_football"
       }
     ],
     "substitutionEvents": [
@@ -5264,6 +5294,36 @@
         "detail": "Substitution 3",
         "comments": null,
         "assist": "E. Hajsafi",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "New Zealand",
+        "player": "L. Cacace",
+        "minute": 68,
+        "extra": null,
+        "displayMinute": "68'",
+        "timer": "68:00",
+        "timerSeconds": 4080,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "B. Old",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "New Zealand",
+        "player": "C. McCowatt",
+        "minute": 68,
+        "extra": null,
+        "displayMinute": "68'",
+        "timer": "68:00",
+        "timerSeconds": 4080,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "R. Thomas",
         "source": "api_football"
       }
     ]
