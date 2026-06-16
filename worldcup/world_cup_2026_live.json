@@ -1,4 +1,554 @@
 {
-  "matches": [],
-  "live": []
+  "matches": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537392,
+      "utcDate": "2026-06-16T22:00:00Z",
+      "status": "1H",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I",
+      "lastUpdated": "2026-06-17T00:05:55Z",
+      "homeTeam": {
+        "id": 8062,
+        "name": "Iraq",
+        "shortName": "Iraq",
+        "tla": "IRQ",
+        "crest": "https://crests.football-data.org/iraq.svg"
+      },
+      "awayTeam": {
+        "id": 8872,
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
+      },
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 276648,
+          "name": "Pierre Atcho",
+          "type": "REFEREE",
+          "nationality": "Gabon"
+        }
+      ],
+      "liveSource": "api_football",
+      "minute": 5,
+      "clockSeconds": 300,
+      "displayMinute": "5'",
+      "manualClockText": "5'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-16T22:05:57.546796+00:00",
+      "manualClock": {
+        "seconds": 300,
+        "timer": "5'",
+        "displayMinute": "5'",
+        "active": false,
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-16T22:05:57.546796+00:00"
+      },
+      "homeScore": 0,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "liveStatistics": {
+        "home": {
+          "team": "Iraq",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 0
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 0
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 0
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 0
+            },
+            {
+              "type": "Fouls",
+              "value": 0
+            },
+            {
+              "type": "Corner Kicks",
+              "value": null
+            },
+            {
+              "type": "Offsides",
+              "value": null
+            },
+            {
+              "type": "Ball Possession",
+              "value": "47%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": null
+            },
+            {
+              "type": "Total passes",
+              "value": 8
+            },
+            {
+              "type": "Passes accurate",
+              "value": 4
+            },
+            {
+              "type": "Passes %",
+              "value": "50%"
+            },
+            {
+              "type": "expected_goals",
+              "value": null
+            },
+            {
+              "type": "goals_prevented",
+              "value": null
+            }
+          ],
+          "corners": null,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 0,
+          "possession": "47%",
+          "fouls": 0,
+          "offsides": null,
+          "yellowCards": null,
+          "redCards": null
+        },
+        "away": {
+          "team": "Norway",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 0
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 0
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 0
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 0
+            },
+            {
+              "type": "Fouls",
+              "value": 0
+            },
+            {
+              "type": "Corner Kicks",
+              "value": null
+            },
+            {
+              "type": "Offsides",
+              "value": null
+            },
+            {
+              "type": "Ball Possession",
+              "value": "53%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": null
+            },
+            {
+              "type": "Total passes",
+              "value": 8
+            },
+            {
+              "type": "Passes accurate",
+              "value": 5
+            },
+            {
+              "type": "Passes %",
+              "value": "63%"
+            },
+            {
+              "type": "expected_goals",
+              "value": null
+            },
+            {
+              "type": "goals_prevented",
+              "value": null
+            }
+          ],
+          "corners": null,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 0,
+          "possession": "53%",
+          "fouls": 0,
+          "offsides": null,
+          "yellowCards": null,
+          "redCards": null
+        }
+      },
+      "homeCorners": null,
+      "awayCorners": null,
+      "homeShotsOnGoal": 0,
+      "awayShotsOnGoal": 0,
+      "homePossession": "47%",
+      "awayPossession": "53%",
+      "homeFouls": 0,
+      "awayFouls": 0,
+      "homeOffsides": null,
+      "awayOffsides": null,
+      "apiFootballFixtureId": 1539016,
+      "fallbackClock": 300,
+      "fallbackClockText": "5'"
+    }
+  ],
+  "live": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537392,
+      "utcDate": "2026-06-16T22:00:00Z",
+      "status": "1H",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_I",
+      "lastUpdated": "2026-06-17T00:05:55Z",
+      "homeTeam": {
+        "id": 8062,
+        "name": "Iraq",
+        "shortName": "Iraq",
+        "tla": "IRQ",
+        "crest": "https://crests.football-data.org/iraq.svg"
+      },
+      "awayTeam": {
+        "id": 8872,
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR",
+        "crest": "https://crests.football-data.org/813.svg"
+      },
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": 0,
+          "away": 0
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 276648,
+          "name": "Pierre Atcho",
+          "type": "REFEREE",
+          "nationality": "Gabon"
+        }
+      ],
+      "liveSource": "api_football",
+      "minute": 5,
+      "clockSeconds": 300,
+      "displayMinute": "5'",
+      "manualClockText": "5'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-16T22:05:57.546796+00:00",
+      "manualClock": {
+        "seconds": 300,
+        "timer": "5'",
+        "displayMinute": "5'",
+        "active": false,
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-16T22:05:57.546796+00:00"
+      },
+      "homeScore": 0,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "liveStatistics": {
+        "home": {
+          "team": "Iraq",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 0
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 0
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 0
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 0
+            },
+            {
+              "type": "Fouls",
+              "value": 0
+            },
+            {
+              "type": "Corner Kicks",
+              "value": null
+            },
+            {
+              "type": "Offsides",
+              "value": null
+            },
+            {
+              "type": "Ball Possession",
+              "value": "47%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": null
+            },
+            {
+              "type": "Total passes",
+              "value": 8
+            },
+            {
+              "type": "Passes accurate",
+              "value": 4
+            },
+            {
+              "type": "Passes %",
+              "value": "50%"
+            },
+            {
+              "type": "expected_goals",
+              "value": null
+            },
+            {
+              "type": "goals_prevented",
+              "value": null
+            }
+          ],
+          "corners": null,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 0,
+          "possession": "47%",
+          "fouls": 0,
+          "offsides": null,
+          "yellowCards": null,
+          "redCards": null
+        },
+        "away": {
+          "team": "Norway",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 0
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 0
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 0
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 0
+            },
+            {
+              "type": "Fouls",
+              "value": 0
+            },
+            {
+              "type": "Corner Kicks",
+              "value": null
+            },
+            {
+              "type": "Offsides",
+              "value": null
+            },
+            {
+              "type": "Ball Possession",
+              "value": "53%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": null
+            },
+            {
+              "type": "Total passes",
+              "value": 8
+            },
+            {
+              "type": "Passes accurate",
+              "value": 5
+            },
+            {
+              "type": "Passes %",
+              "value": "63%"
+            },
+            {
+              "type": "expected_goals",
+              "value": null
+            },
+            {
+              "type": "goals_prevented",
+              "value": null
+            }
+          ],
+          "corners": null,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 0,
+          "possession": "53%",
+          "fouls": 0,
+          "offsides": null,
+          "yellowCards": null,
+          "redCards": null
+        }
+      },
+      "homeCorners": null,
+      "awayCorners": null,
+      "homeShotsOnGoal": 0,
+      "awayShotsOnGoal": 0,
+      "homePossession": "47%",
+      "awayPossession": "53%",
+      "homeFouls": 0,
+      "awayFouls": 0,
+      "homeOffsides": null,
+      "awayOffsides": null,
+      "apiFootballFixtureId": 1539016,
+      "fallbackClock": 300,
+      "fallbackClockText": "5'"
+    }
+  ]
 }
