@@ -6230,7 +6230,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-17T01:48:28Z",
+      "lastUpdated": "2026-06-17T01:48:55Z",
       "homeTeam": {
         "id": 8062,
         "name": "Iraq",
@@ -6272,7 +6272,7 @@
       "displayMinute": "86'",
       "manualClockText": "86'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T23:48:29.748393+00:00",
+      "lastApiSync": "2026-06-16T23:48:57.471927+00:00",
       "manualClock": {
         "seconds": 5160,
         "timer": "86'",
@@ -6280,7 +6280,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T23:48:29.748393+00:00"
+        "lastApiSync": "2026-06-16T23:48:57.471927+00:00"
       },
       "homeScore": 1,
       "awayScore": 3,
@@ -6579,9 +6579,41 @@
           "comments": null,
           "assist": "P. Berg",
           "source": "api_football"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Iraq",
+          "player": "Z. Tahseen",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Yellow Card",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
+      "cardEvents": [
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Iraq",
+          "player": "Z. Tahseen",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Yellow Card",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        }
+      ],
       "substitutionEvents": [
         {
           "type": "Substitution",
