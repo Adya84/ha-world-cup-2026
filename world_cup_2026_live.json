@@ -46,7 +46,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 2,
+          "home": 3,
           "away": 1
         },
         "halfTime": {
@@ -65,12 +65,12 @@
       ],
       "liveSource": "api_football",
       "minute": 90,
-      "extra": 6,
+      "extra": 7,
       "clockSeconds": 5400,
       "displayMinute": "90'",
       "manualClockText": "90'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T21:00:24.723134+00:00",
+      "lastApiSync": "2026-06-16T21:00:52.497330+00:00",
       "manualClock": {
         "seconds": 5400,
         "timer": "90'",
@@ -78,9 +78,9 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T21:00:24.723134+00:00"
+        "lastApiSync": "2026-06-16T21:00:52.497330+00:00"
       },
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 1,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
@@ -145,6 +145,26 @@
           "homeTeam": "France",
           "awayTeam": "Senegal",
           "goalNumber": 3
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "France",
+          "player": "K. Mbappe",
+          "minute": 90,
+          "extra": 6,
+          "displayMinute": "90+6'",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "M. Olise",
+          "source": "api_football",
+          "matchId": 537391,
+          "matchUtcDate": "2026-06-16T19:00:00Z",
+          "homeTeam": "France",
+          "awayTeam": "Senegal",
+          "goalNumber": 4
         }
       ],
       "events": [
@@ -227,7 +247,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Senegal",
-          "player": "P. Gueye",
+          "player": "N. Jackson",
           "minute": 83,
           "extra": null,
           "displayMinute": "83'",
@@ -235,14 +255,14 @@
           "timerSeconds": 4980,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "C. Ndiaye",
+          "assist": "B. Dieng",
           "source": "api_football"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Senegal",
-          "player": "N. Jackson",
+          "player": "P. Gueye",
           "minute": 83,
           "extra": null,
           "displayMinute": "83'",
@@ -250,7 +270,7 @@
           "timerSeconds": 4980,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "B. Dieng",
+          "assist": "C. Ndiaye",
           "source": "api_football"
         },
         {
@@ -296,6 +316,21 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
+          "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "France",
+          "player": "K. Mbappe",
+          "minute": 90,
+          "extra": 6,
+          "displayMinute": "90+6'",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "M. Olise",
           "source": "api_football"
         }
       ],
@@ -350,7 +385,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Senegal",
-          "player": "P. Gueye",
+          "player": "N. Jackson",
           "minute": 83,
           "extra": null,
           "displayMinute": "83'",
@@ -358,14 +393,14 @@
           "timerSeconds": 4980,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "C. Ndiaye",
+          "assist": "B. Dieng",
           "source": "api_football"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Senegal",
-          "player": "N. Jackson",
+          "player": "P. Gueye",
           "minute": 83,
           "extra": null,
           "displayMinute": "83'",
@@ -373,7 +408,7 @@
           "timerSeconds": 4980,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "B. Dieng",
+          "assist": "C. Ndiaye",
           "source": "api_football"
         },
         {
@@ -643,7 +678,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 2,
+          "home": 3,
           "away": 1
         },
         "halfTime": {
@@ -662,12 +697,12 @@
       ],
       "liveSource": "api_football",
       "minute": 90,
-      "extra": 6,
+      "extra": 7,
       "clockSeconds": 5400,
       "displayMinute": "90'",
       "manualClockText": "90'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T21:00:24.723134+00:00",
+      "lastApiSync": "2026-06-16T21:00:52.497330+00:00",
       "manualClock": {
         "seconds": 5400,
         "timer": "90'",
@@ -675,9 +710,9 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T21:00:24.723134+00:00"
+        "lastApiSync": "2026-06-16T21:00:52.497330+00:00"
       },
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 1,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
@@ -742,6 +777,26 @@
           "homeTeam": "France",
           "awayTeam": "Senegal",
           "goalNumber": 3
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "France",
+          "player": "K. Mbappe",
+          "minute": 90,
+          "extra": 6,
+          "displayMinute": "90+6'",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "M. Olise",
+          "source": "api_football",
+          "matchId": 537391,
+          "matchUtcDate": "2026-06-16T19:00:00Z",
+          "homeTeam": "France",
+          "awayTeam": "Senegal",
+          "goalNumber": 4
         }
       ],
       "events": [
@@ -824,7 +879,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Senegal",
-          "player": "P. Gueye",
+          "player": "N. Jackson",
           "minute": 83,
           "extra": null,
           "displayMinute": "83'",
@@ -832,14 +887,14 @@
           "timerSeconds": 4980,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "C. Ndiaye",
+          "assist": "B. Dieng",
           "source": "api_football"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Senegal",
-          "player": "N. Jackson",
+          "player": "P. Gueye",
           "minute": 83,
           "extra": null,
           "displayMinute": "83'",
@@ -847,7 +902,7 @@
           "timerSeconds": 4980,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "B. Dieng",
+          "assist": "C. Ndiaye",
           "source": "api_football"
         },
         {
@@ -893,6 +948,21 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
+          "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "France",
+          "player": "K. Mbappe",
+          "minute": 90,
+          "extra": 6,
+          "displayMinute": "90+6'",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "M. Olise",
           "source": "api_football"
         }
       ],
@@ -947,7 +1017,7 @@
           "type": "Substitution",
           "rawType": "subst",
           "team": "Senegal",
-          "player": "P. Gueye",
+          "player": "N. Jackson",
           "minute": 83,
           "extra": null,
           "displayMinute": "83'",
@@ -955,14 +1025,14 @@
           "timerSeconds": 4980,
           "detail": "Substitution 3",
           "comments": null,
-          "assist": "C. Ndiaye",
+          "assist": "B. Dieng",
           "source": "api_football"
         },
         {
           "type": "Substitution",
           "rawType": "subst",
           "team": "Senegal",
-          "player": "N. Jackson",
+          "player": "P. Gueye",
           "minute": 83,
           "extra": null,
           "displayMinute": "83'",
@@ -970,7 +1040,7 @@
           "timerSeconds": 4980,
           "detail": "Substitution 4",
           "comments": null,
-          "assist": "B. Dieng",
+          "assist": "C. Ndiaye",
           "source": "api_football"
         },
         {
