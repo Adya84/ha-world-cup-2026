@@ -27,7 +27,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T21:47:25Z",
+      "lastUpdated": "2026-06-16T21:48:04Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -65,11 +65,12 @@
       ],
       "liveSource": "api_football",
       "minute": 45,
+      "extra": 1,
       "clockSeconds": 2700,
       "displayMinute": "45'",
       "manualClockText": "45'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T19:47:29.050652+00:00",
+      "lastApiSync": "2026-06-16T19:48:08.572825+00:00",
       "manualClock": {
         "seconds": 2700,
         "timer": "45'",
@@ -77,13 +78,197 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T19:47:29.050652+00:00"
+        "lastApiSync": "2026-06-16T19:48:08.572825+00:00"
       },
       "homeScore": 0,
       "awayScore": 0,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
+      "liveStatistics": {
+        "home": {
+          "team": "France",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 1
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 0
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 1
+            },
+            {
+              "type": "Fouls",
+              "value": 3
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Offsides",
+              "value": 0
+            },
+            {
+              "type": "Ball Possession",
+              "value": "57%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 1
+            },
+            {
+              "type": "Total passes",
+              "value": 268
+            },
+            {
+              "type": "Passes accurate",
+              "value": 235
+            },
+            {
+              "type": "Passes %",
+              "value": "88%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.02"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "0.00"
+            }
+          ],
+          "corners": 2,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 1,
+          "possession": "57%",
+          "fouls": 3,
+          "offsides": 0,
+          "yellowCards": null,
+          "redCards": null
+        },
+        "away": {
+          "team": "Senegal",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 1
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 2
+            },
+            {
+              "type": "Total Shots",
+              "value": 4
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 2
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 2
+            },
+            {
+              "type": "Fouls",
+              "value": 4
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Offsides",
+              "value": 1
+            },
+            {
+              "type": "Ball Possession",
+              "value": "43%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 0
+            },
+            {
+              "type": "Total passes",
+              "value": 204
+            },
+            {
+              "type": "Passes accurate",
+              "value": 173
+            },
+            {
+              "type": "Passes %",
+              "value": "85%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.27"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "0.00"
+            }
+          ],
+          "corners": 2,
+          "shotsOnGoal": 1,
+          "shotsOffGoal": 2,
+          "totalShots": 4,
+          "possession": "43%",
+          "fouls": 4,
+          "offsides": 1,
+          "yellowCards": null,
+          "redCards": null
+        }
+      },
+      "homeCorners": 2,
+      "awayCorners": 2,
+      "homeShotsOnGoal": 0,
+      "awayShotsOnGoal": 1,
+      "homePossession": "57%",
+      "awayPossession": "43%",
+      "homeFouls": 3,
+      "awayFouls": 4,
+      "homeOffsides": 0,
+      "awayOffsides": 1,
       "apiFootballFixtureId": 1489383,
       "fallbackClock": 2700,
       "fallbackClockText": "45'"
@@ -117,7 +302,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T21:47:25Z",
+      "lastUpdated": "2026-06-16T21:48:04Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -155,11 +340,12 @@
       ],
       "liveSource": "api_football",
       "minute": 45,
+      "extra": 1,
       "clockSeconds": 2700,
       "displayMinute": "45'",
       "manualClockText": "45'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T19:47:29.050652+00:00",
+      "lastApiSync": "2026-06-16T19:48:08.572825+00:00",
       "manualClock": {
         "seconds": 2700,
         "timer": "45'",
@@ -167,13 +353,197 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T19:47:29.050652+00:00"
+        "lastApiSync": "2026-06-16T19:48:08.572825+00:00"
       },
       "homeScore": 0,
       "awayScore": 0,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
+      "liveStatistics": {
+        "home": {
+          "team": "France",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 1
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 0
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 1
+            },
+            {
+              "type": "Fouls",
+              "value": 3
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Offsides",
+              "value": 0
+            },
+            {
+              "type": "Ball Possession",
+              "value": "57%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 1
+            },
+            {
+              "type": "Total passes",
+              "value": 268
+            },
+            {
+              "type": "Passes accurate",
+              "value": 235
+            },
+            {
+              "type": "Passes %",
+              "value": "88%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.02"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "0.00"
+            }
+          ],
+          "corners": 2,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 1,
+          "possession": "57%",
+          "fouls": 3,
+          "offsides": 0,
+          "yellowCards": null,
+          "redCards": null
+        },
+        "away": {
+          "team": "Senegal",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 1
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 2
+            },
+            {
+              "type": "Total Shots",
+              "value": 4
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 2
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 2
+            },
+            {
+              "type": "Fouls",
+              "value": 4
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Offsides",
+              "value": 1
+            },
+            {
+              "type": "Ball Possession",
+              "value": "43%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 0
+            },
+            {
+              "type": "Total passes",
+              "value": 204
+            },
+            {
+              "type": "Passes accurate",
+              "value": 173
+            },
+            {
+              "type": "Passes %",
+              "value": "85%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.27"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "0.00"
+            }
+          ],
+          "corners": 2,
+          "shotsOnGoal": 1,
+          "shotsOffGoal": 2,
+          "totalShots": 4,
+          "possession": "43%",
+          "fouls": 4,
+          "offsides": 1,
+          "yellowCards": null,
+          "redCards": null
+        }
+      },
+      "homeCorners": 2,
+      "awayCorners": 2,
+      "homeShotsOnGoal": 0,
+      "awayShotsOnGoal": 1,
+      "homePossession": "57%",
+      "awayPossession": "43%",
+      "homeFouls": 3,
+      "awayFouls": 4,
+      "homeOffsides": 0,
+      "awayOffsides": 1,
       "apiFootballFixtureId": 1489383,
       "fallbackClock": 2700,
       "fallbackClockText": "45'"
