@@ -5012,7 +5012,7 @@
   "537364": {
     "goalEvents": [],
     "clock_active": false,
-    "status": "IN_PLAY",
+    "status": "1H",
     "homeScore": 0,
     "awayScore": 0,
     "utcDate": "2026-06-16T01:00:00Z",
@@ -5026,8 +5026,14 @@
         "nationality": "Mexico"
       }
     ],
-    "phase_start": null,
-    "source": "awaiting_api_football_minute"
+    "phase_start": "2026-06-16T01:04:28.555980+00:00",
+    "source": "api_football_live_minute",
+    "base_seconds": 60,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
+    "manualClockText": "1'",
+    "lastApiSync": "2026-06-16T01:04:28.555980+00:00",
+    "apiFootballFixtureId": 1489378
   },
   "537391": {
     "goalEvents": [],
