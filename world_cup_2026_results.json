@@ -11878,7 +11878,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489380,
       "events": [
         {
           "type": "Yellow Card",
@@ -12215,6 +12214,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489380,
       "matchDetails": {
         "events": [
           {
@@ -14590,6 +14590,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489378,
       "goalEvents": [
         {
           "type": "Goal",
@@ -14672,7 +14673,6 @@
           "goalNumber": 4
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -14687,7 +14687,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -14702,37 +14707,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "A. Yousefi",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "M. Ghaedi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "S. Moghanlou",
-          "minute": 53,
-          "extra": null,
-          "displayMinute": "53'",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "A. Alipour",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -14747,7 +14727,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -14762,127 +14747,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Rezaeian",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "S. Ghoddos",
-          "minute": 65,
-          "extra": null,
-          "displayMinute": "65'",
-          "timer": "65:00",
-          "timerSeconds": 3900,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "E. Hajsafi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "L. Cacace",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "B. Old",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "C. McCowatt",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "R. Thomas",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "T. Payne",
-          "minute": 78,
-          "extra": null,
-          "displayMinute": "78'",
-          "timer": "78:00",
-          "timerSeconds": 4680,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "C. Elliot",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "M. Taremi",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "A. Hosseinzadeh",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Iran",
-          "player": "E. Hajsafi",
-          "minute": 89,
-          "extra": null,
-          "displayMinute": "89'",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "S. Singh",
-          "minute": 90,
-          "extra": 2,
-          "displayMinute": "90+2'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "J. Randall",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "M. Stamenic",
-          "minute": 90,
-          "extra": 2,
-          "displayMinute": "90+2'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "T. Bindon",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 4
         }
       ],
       "cardEvents": [
@@ -15039,7 +14909,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489378,
       "matchDetails": {
         "events": [
           {
@@ -15055,7 +14924,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 1
           },
           {
             "type": "Goal",
@@ -15070,37 +14944,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "A. Yousefi",
-            "minute": 46,
-            "extra": null,
-            "displayMinute": "46'",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "M. Ghaedi",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "S. Moghanlou",
-            "minute": 53,
-            "extra": null,
-            "displayMinute": "53'",
-            "timer": "53:00",
-            "timerSeconds": 3180,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "A. Alipour",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 2
           },
           {
             "type": "Goal",
@@ -15115,7 +14964,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 3
           },
           {
             "type": "Goal",
@@ -15130,127 +14984,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Rezaeian",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "S. Ghoddos",
-            "minute": 65,
-            "extra": null,
-            "displayMinute": "65'",
-            "timer": "65:00",
-            "timerSeconds": 3900,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "E. Hajsafi",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "L. Cacace",
-            "minute": 68,
-            "extra": null,
-            "displayMinute": "68'",
-            "timer": "68:00",
-            "timerSeconds": 4080,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "B. Old",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "C. McCowatt",
-            "minute": 68,
-            "extra": null,
-            "displayMinute": "68'",
-            "timer": "68:00",
-            "timerSeconds": 4080,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "R. Thomas",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "T. Payne",
-            "minute": 78,
-            "extra": null,
-            "displayMinute": "78'",
-            "timer": "78:00",
-            "timerSeconds": 4680,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "C. Elliot",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "M. Taremi",
-            "minute": 80,
-            "extra": null,
-            "displayMinute": "80'",
-            "timer": "80:00",
-            "timerSeconds": 4800,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "A. Hosseinzadeh",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Iran",
-            "player": "E. Hajsafi",
-            "minute": 89,
-            "extra": null,
-            "displayMinute": "89'",
-            "timer": "89:00",
-            "timerSeconds": 5340,
-            "detail": "Yellow Card",
-            "comments": "Tripping",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "S. Singh",
-            "minute": 90,
-            "extra": 2,
-            "displayMinute": "90+2'",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "J. Randall",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "M. Stamenic",
-            "minute": 90,
-            "extra": 2,
-            "displayMinute": "90+2'",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "T. Bindon",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 4
           }
         ],
         "goalEvents": [
@@ -15496,7 +15235,7 @@
           }
         ],
         "apiFootballFixtureId": 1489378,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     }
   ],
@@ -27379,7 +27118,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489380,
       "events": [
         {
           "type": "Yellow Card",
@@ -27716,6 +27454,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489380,
       "matchDetails": {
         "events": [
           {
@@ -30091,6 +29830,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489378,
       "goalEvents": [
         {
           "type": "Goal",
@@ -30173,7 +29913,6 @@
           "goalNumber": 4
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -30188,7 +29927,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -30203,37 +29947,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "A. Yousefi",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "M. Ghaedi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "S. Moghanlou",
-          "minute": 53,
-          "extra": null,
-          "displayMinute": "53'",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "A. Alipour",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -30248,7 +29967,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -30263,127 +29987,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Rezaeian",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "S. Ghoddos",
-          "minute": 65,
-          "extra": null,
-          "displayMinute": "65'",
-          "timer": "65:00",
-          "timerSeconds": 3900,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "E. Hajsafi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "L. Cacace",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "B. Old",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "C. McCowatt",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "R. Thomas",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "T. Payne",
-          "minute": 78,
-          "extra": null,
-          "displayMinute": "78'",
-          "timer": "78:00",
-          "timerSeconds": 4680,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "C. Elliot",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "M. Taremi",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "A. Hosseinzadeh",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Iran",
-          "player": "E. Hajsafi",
-          "minute": 89,
-          "extra": null,
-          "displayMinute": "89'",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "S. Singh",
-          "minute": 90,
-          "extra": 2,
-          "displayMinute": "90+2'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "J. Randall",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "M. Stamenic",
-          "minute": 90,
-          "extra": 2,
-          "displayMinute": "90+2'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "T. Bindon",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 4
         }
       ],
       "cardEvents": [
@@ -30540,7 +30149,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489378,
       "matchDetails": {
         "events": [
           {
@@ -30556,7 +30164,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 1
           },
           {
             "type": "Goal",
@@ -30571,37 +30184,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "A. Yousefi",
-            "minute": 46,
-            "extra": null,
-            "displayMinute": "46'",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "M. Ghaedi",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "S. Moghanlou",
-            "minute": 53,
-            "extra": null,
-            "displayMinute": "53'",
-            "timer": "53:00",
-            "timerSeconds": 3180,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "A. Alipour",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 2
           },
           {
             "type": "Goal",
@@ -30616,7 +30204,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 3
           },
           {
             "type": "Goal",
@@ -30631,127 +30224,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Rezaeian",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "S. Ghoddos",
-            "minute": 65,
-            "extra": null,
-            "displayMinute": "65'",
-            "timer": "65:00",
-            "timerSeconds": 3900,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "E. Hajsafi",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "L. Cacace",
-            "minute": 68,
-            "extra": null,
-            "displayMinute": "68'",
-            "timer": "68:00",
-            "timerSeconds": 4080,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "B. Old",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "C. McCowatt",
-            "minute": 68,
-            "extra": null,
-            "displayMinute": "68'",
-            "timer": "68:00",
-            "timerSeconds": 4080,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "R. Thomas",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "T. Payne",
-            "minute": 78,
-            "extra": null,
-            "displayMinute": "78'",
-            "timer": "78:00",
-            "timerSeconds": 4680,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "C. Elliot",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "M. Taremi",
-            "minute": 80,
-            "extra": null,
-            "displayMinute": "80'",
-            "timer": "80:00",
-            "timerSeconds": 4800,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "A. Hosseinzadeh",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Iran",
-            "player": "E. Hajsafi",
-            "minute": 89,
-            "extra": null,
-            "displayMinute": "89'",
-            "timer": "89:00",
-            "timerSeconds": 5340,
-            "detail": "Yellow Card",
-            "comments": "Tripping",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "S. Singh",
-            "minute": 90,
-            "extra": 2,
-            "displayMinute": "90+2'",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "J. Randall",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "M. Stamenic",
-            "minute": 90,
-            "extra": 2,
-            "displayMinute": "90+2'",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "T. Bindon",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 4
           }
         ],
         "goalEvents": [
@@ -30997,7 +30475,7 @@
           }
         ],
         "apiFootballFixtureId": 1489378,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     }
   ]
