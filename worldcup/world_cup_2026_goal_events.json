@@ -5030,11 +5030,31 @@
         "homeTeam": "Iran",
         "awayTeam": "New Zealand",
         "goalNumber": 1
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Iran",
+        "player": "R. Rezaeian",
+        "minute": 32,
+        "extra": null,
+        "displayMinute": "32'",
+        "timer": "32:00",
+        "timerSeconds": 1920,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football",
+        "matchId": 537364,
+        "matchUtcDate": "2026-06-16T01:00:00Z",
+        "homeTeam": "Iran",
+        "awayTeam": "New Zealand",
+        "goalNumber": 2
       }
     ],
     "clock_active": false,
     "status": "1H",
-    "homeScore": 0,
+    "homeScore": 1,
     "awayScore": 1,
     "utcDate": "2026-06-16T01:00:00Z",
     "homeTeam": "Iran",
@@ -5045,13 +5065,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-16T01:36:08.839298+00:00",
+    "phase_start": "2026-06-16T01:36:35.448395+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 1740,
-    "clock_seconds": 1740,
-    "displayMinute": "29'",
-    "manualClockText": "29'",
-    "lastApiSync": "2026-06-16T01:36:08.839298+00:00",
+    "base_seconds": 1980,
+    "clock_seconds": 1980,
+    "displayMinute": "33'",
+    "manualClockText": "33'",
+    "lastApiSync": "2026-06-16T01:36:35.448395+00:00",
     "apiFootballFixtureId": 1489378,
     "events": [
       {
@@ -5067,6 +5087,21 @@
         "detail": "Normal Goal",
         "comments": null,
         "assist": "C. Wood",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Iran",
+        "player": "R. Rezaeian",
+        "minute": 32,
+        "extra": null,
+        "displayMinute": "32'",
+        "timer": "32:00",
+        "timerSeconds": 1920,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
         "source": "api_football"
       }
     ]
