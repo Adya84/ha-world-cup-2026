@@ -5395,8 +5395,8 @@
         "goalNumber": 2
       }
     ],
-    "clock_active": true,
-    "status": "IN_PLAY",
+    "clock_active": false,
+    "status": "2H",
     "homeScore": 2,
     "awayScore": 0,
     "utcDate": "2026-06-16T19:00:00Z",
@@ -5408,13 +5408,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-16T20:52:51.090521+00:00",
-    "source": "football_data_minute",
-    "base_seconds": 5280,
-    "clock_seconds": 5280,
-    "displayMinute": "88'",
-    "manualClockText": "88'",
-    "lastApiSync": "2026-06-16T20:52:10.800108+00:00",
+    "phase_start": "2026-06-16T20:54:10.583624+00:00",
+    "source": "api_football_live_minute",
+    "base_seconds": 5400,
+    "clock_seconds": 5400,
+    "displayMinute": "90'",
+    "manualClockText": "90'",
+    "lastApiSync": "2026-06-16T20:54:10.583624+00:00",
     "apiFootballFixtureId": 1489383,
     "events": [
       {
@@ -5511,7 +5511,7 @@
         "type": "Substitution",
         "rawType": "subst",
         "team": "Senegal",
-        "player": "I. Gueye",
+        "player": "P. Gueye",
         "minute": 83,
         "extra": null,
         "displayMinute": "83'",
@@ -5535,6 +5535,21 @@
         "detail": "Substitution 2",
         "comments": null,
         "assist": "R. Cherki",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Senegal",
+        "player": "I. Gueye",
+        "minute": 88,
+        "extra": null,
+        "displayMinute": "88'",
+        "timer": "88:00",
+        "timerSeconds": 5280,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "P. Ciss",
         "source": "api_football"
       }
     ],
@@ -5603,7 +5618,7 @@
         "type": "Substitution",
         "rawType": "subst",
         "team": "Senegal",
-        "player": "I. Gueye",
+        "player": "P. Gueye",
         "minute": 83,
         "extra": null,
         "displayMinute": "83'",
@@ -5627,6 +5642,21 @@
         "detail": "Substitution 2",
         "comments": null,
         "assist": "R. Cherki",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Senegal",
+        "player": "I. Gueye",
+        "minute": 88,
+        "extra": null,
+        "displayMinute": "88'",
+        "timer": "88:00",
+        "timerSeconds": 5280,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "P. Ciss",
         "source": "api_football"
       }
     ]
