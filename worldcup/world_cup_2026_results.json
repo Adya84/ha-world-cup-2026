@@ -10882,7 +10882,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T22:39:25Z",
+      "lastUpdated": "2026-06-16T22:39:52Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -10919,20 +10919,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 75,
-      "clockSeconds": 4500,
-      "displayMinute": "75'",
-      "manualClockText": "75'",
+      "minute": 76,
+      "clockSeconds": 4560,
+      "displayMinute": "76'",
+      "manualClockText": "76'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T20:39:27.673063+00:00",
+      "lastApiSync": "2026-06-16T20:39:55.500197+00:00",
       "manualClock": {
-        "seconds": 4500,
-        "timer": "75'",
-        "displayMinute": "75'",
+        "seconds": 4560,
+        "timer": "76'",
+        "displayMinute": "76'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T20:39:27.673063+00:00"
+        "lastApiSync": "2026-06-16T20:39:55.500197+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
@@ -10976,9 +10976,41 @@
           "comments": null,
           "assist": "M. Olise",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Senegal",
+          "player": "I. Sarr",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "I. Mbaye",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
+      "substitutionEvents": [
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Senegal",
+          "player": "I. Sarr",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "I. Mbaye",
+          "source": "api_football"
+        }
+      ],
       "liveStatistics": {
         "home": {
           "team": "France",
@@ -11164,8 +11196,8 @@
       "homeOffsides": 1,
       "awayOffsides": 2,
       "apiFootballFixtureId": 1489383,
-      "fallbackClock": 4500,
-      "fallbackClockText": "75'",
+      "fallbackClock": 4560,
+      "fallbackClockText": "76'",
       "matchDetails": {
         "events": [
           {
@@ -11181,6 +11213,21 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "M. Olise",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Senegal",
+            "player": "I. Sarr",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "I. Mbaye",
             "source": "api_football"
           }
         ],
@@ -11207,7 +11254,23 @@
           }
         ],
         "cardEvents": [],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Senegal",
+            "player": "I. Sarr",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "I. Mbaye",
+            "source": "api_football"
+          }
+        ],
         "referees": [
           {
             "name": "Alireza Faghani, Australia",
@@ -22102,7 +22165,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T22:39:25Z",
+      "lastUpdated": "2026-06-16T22:39:52Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -22139,20 +22202,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 75,
-      "clockSeconds": 4500,
-      "displayMinute": "75'",
-      "manualClockText": "75'",
+      "minute": 76,
+      "clockSeconds": 4560,
+      "displayMinute": "76'",
+      "manualClockText": "76'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T20:39:27.673063+00:00",
+      "lastApiSync": "2026-06-16T20:39:55.500197+00:00",
       "manualClock": {
-        "seconds": 4500,
-        "timer": "75'",
-        "displayMinute": "75'",
+        "seconds": 4560,
+        "timer": "76'",
+        "displayMinute": "76'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T20:39:27.673063+00:00"
+        "lastApiSync": "2026-06-16T20:39:55.500197+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
@@ -22196,9 +22259,41 @@
           "comments": null,
           "assist": "M. Olise",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Senegal",
+          "player": "I. Sarr",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "I. Mbaye",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
+      "substitutionEvents": [
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Senegal",
+          "player": "I. Sarr",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "I. Mbaye",
+          "source": "api_football"
+        }
+      ],
       "liveStatistics": {
         "home": {
           "team": "France",
@@ -22384,8 +22479,8 @@
       "homeOffsides": 1,
       "awayOffsides": 2,
       "apiFootballFixtureId": 1489383,
-      "fallbackClock": 4500,
-      "fallbackClockText": "75'",
+      "fallbackClock": 4560,
+      "fallbackClockText": "76'",
       "matchDetails": {
         "events": [
           {
@@ -22401,6 +22496,21 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "M. Olise",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Senegal",
+            "player": "I. Sarr",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "I. Mbaye",
             "source": "api_football"
           }
         ],
@@ -22427,7 +22537,23 @@
           }
         ],
         "cardEvents": [],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Senegal",
+            "player": "I. Sarr",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "I. Mbaye",
+            "source": "api_football"
+          }
+        ],
         "referees": [
           {
             "name": "Alireza Faghani, Australia",
