@@ -5507,7 +5507,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T03:10:49Z",
+      "lastUpdated": "2026-06-16T03:11:16Z",
       "homeTeam": {
         "id": 840,
         "name": "Iran",
@@ -5527,11 +5527,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "halfTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         }
       },
       "odds": {
@@ -5546,29 +5546,69 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 7,
-      "clockSeconds": 420,
-      "displayMinute": "7'",
-      "manualClockText": "7'",
+      "minute": 8,
+      "clockSeconds": 480,
+      "displayMinute": "8'",
+      "manualClockText": "8'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T01:10:51.553216+00:00",
+      "lastApiSync": "2026-06-16T01:11:18.272224+00:00",
       "manualClock": {
-        "seconds": 420,
-        "timer": "7'",
-        "displayMinute": "7'",
+        "seconds": 480,
+        "timer": "8'",
+        "displayMinute": "8'",
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T01:10:51.553216+00:00"
+        "lastApiSync": "2026-06-16T01:11:18.272224+00:00"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
+      "goalEvents": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "New Zealand",
+          "player": "E. Just",
+          "minute": 7,
+          "extra": null,
+          "displayMinute": "7'",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 1
+        }
+      ],
+      "events": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "New Zealand",
+          "player": "E. Just",
+          "minute": 7,
+          "extra": null,
+          "displayMinute": "7'",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "apiFootballFixtureId": 1489378,
-      "fallbackClock": 420,
-      "fallbackClockText": "7'"
+      "fallbackClock": 480,
+      "fallbackClockText": "8'"
     },
     {
       "area": {
