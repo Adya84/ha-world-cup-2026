@@ -5649,11 +5649,32 @@
     ]
   },
   "537392": {
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Norway",
+        "player": "E. Haaland",
+        "minute": 29,
+        "extra": null,
+        "displayMinute": "29'",
+        "timer": "29:00",
+        "timerSeconds": 1740,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football",
+        "matchId": 537392,
+        "matchUtcDate": "2026-06-16T22:00:00Z",
+        "homeTeam": "Iraq",
+        "awayTeam": "Norway",
+        "goalNumber": 1
+      }
+    ],
     "clock_active": false,
     "status": "1H",
     "homeScore": 0,
-    "awayScore": 0,
+    "awayScore": 1,
     "utcDate": "2026-06-16T22:00:00Z",
     "homeTeam": "Iraq",
     "awayTeam": "Norway",
@@ -5665,14 +5686,31 @@
         "nationality": "Gabon"
       }
     ],
-    "base_seconds": 1680,
-    "clock_seconds": 1680,
-    "phase_start": "2026-06-16T22:29:15.384565+00:00",
+    "base_seconds": 1740,
+    "clock_seconds": 1740,
+    "phase_start": "2026-06-16T22:29:41.524113+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "28'",
-    "manualClockText": "28'",
-    "lastApiSync": "2026-06-16T22:29:15.384565+00:00",
-    "apiFootballFixtureId": 1539016
+    "displayMinute": "29'",
+    "manualClockText": "29'",
+    "lastApiSync": "2026-06-16T22:29:41.524113+00:00",
+    "apiFootballFixtureId": 1539016,
+    "events": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Norway",
+        "player": "E. Haaland",
+        "minute": 29,
+        "extra": null,
+        "displayMinute": "29'",
+        "timer": "29:00",
+        "timerSeconds": 1740,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football"
+      }
+    ]
   },
   "537397": {
     "goalEvents": [],
