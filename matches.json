@@ -5507,7 +5507,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T04:32:22Z",
+      "lastUpdated": "2026-06-16T04:32:46Z",
       "homeTeam": {
         "id": 840,
         "name": "Iran",
@@ -5523,7 +5523,7 @@
         "crest": "https://crests.football-data.org/783.svg"
       },
       "score": {
-        "winner": "AWAY_TEAM",
+        "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
           "home": 2,
@@ -5549,7 +5549,7 @@
       "displayMinute": "65'",
       "manualClockText": "65'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T02:32:22.511058+00:00",
+      "lastApiSync": "2026-06-16T02:32:49.232816+00:00",
       "manualClock": {
         "seconds": 3900,
         "timer": "65'",
@@ -5557,7 +5557,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T02:32:22.511058+00:00"
+        "lastApiSync": "2026-06-16T02:32:49.232816+00:00"
       },
       "homeScore": 2,
       "awayScore": 2,
@@ -5736,6 +5736,21 @@
           "comments": null,
           "assist": "R. Rezaeian",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "S. Ghoddos",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "E. Hajsafi",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -5768,6 +5783,21 @@
           "detail": "Substitution 2",
           "comments": null,
           "assist": "A. Alipour",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "S. Ghoddos",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "E. Hajsafi",
           "source": "api_football"
         }
       ],
