@@ -27,7 +27,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-17T01:59:01Z",
+      "lastUpdated": "2026-06-17T01:59:19Z",
       "homeTeam": {
         "id": 8062,
         "name": "Iraq",
@@ -47,7 +47,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "home": 1,
-          "away": 3
+          "away": 4
         },
         "halfTime": {
           "home": 1,
@@ -65,12 +65,12 @@
       ],
       "liveSource": "api_football",
       "minute": 90,
-      "extra": 6,
+      "extra": 7,
       "clockSeconds": 5400,
       "displayMinute": "90'",
       "manualClockText": "90'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T23:59:04.001224+00:00",
+      "lastApiSync": "2026-06-16T23:59:22.617579+00:00",
       "manualClock": {
         "seconds": 5400,
         "timer": "90'",
@@ -78,10 +78,10 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T23:59:04.001224+00:00"
+        "lastApiSync": "2026-06-16T23:59:22.617579+00:00"
       },
       "homeScore": 1,
-      "awayScore": 3,
+      "awayScore": 4,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
@@ -392,6 +392,21 @@
           "comments": "Holding",
           "assist": null,
           "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Norway",
+          "player": null,
+          "minute": 90,
+          "extra": 7,
+          "displayMinute": "90+7'",
+          "timer": "97:00",
+          "timerSeconds": 5820,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -594,7 +609,7 @@
             },
             {
               "type": "Fouls",
-              "value": 10
+              "value": 11
             },
             {
               "type": "Corner Kicks",
@@ -606,7 +621,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "37%"
+              "value": "39%"
             },
             {
               "type": "Yellow Cards",
@@ -622,15 +637,15 @@
             },
             {
               "type": "Total passes",
-              "value": 304
+              "value": 332
             },
             {
               "type": "Passes accurate",
-              "value": 243
+              "value": 270
             },
             {
               "type": "Passes %",
-              "value": "80%"
+              "value": "81%"
             },
             {
               "type": "expected_goals",
@@ -645,8 +660,8 @@
           "shotsOnGoal": 1,
           "shotsOffGoal": 8,
           "totalShots": 11,
-          "possession": "37%",
-          "fouls": 10,
+          "possession": "39%",
+          "fouls": 11,
           "offsides": 1,
           "yellowCards": 1,
           "redCards": null
@@ -680,7 +695,7 @@
             },
             {
               "type": "Fouls",
-              "value": 12
+              "value": 13
             },
             {
               "type": "Corner Kicks",
@@ -692,7 +707,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "63%"
+              "value": "61%"
             },
             {
               "type": "Yellow Cards",
@@ -708,7 +723,7 @@
             },
             {
               "type": "Total passes",
-              "value": 528
+              "value": 530
             },
             {
               "type": "Passes accurate",
@@ -731,8 +746,8 @@
           "shotsOnGoal": 5,
           "shotsOffGoal": 4,
           "totalShots": 12,
-          "possession": "63%",
-          "fouls": 12,
+          "possession": "61%",
+          "fouls": 13,
           "offsides": 0,
           "yellowCards": 0,
           "redCards": null
@@ -742,10 +757,10 @@
       "awayCorners": 5,
       "homeShotsOnGoal": 1,
       "awayShotsOnGoal": 5,
-      "homePossession": "37%",
-      "awayPossession": "63%",
-      "homeFouls": 10,
-      "awayFouls": 12,
+      "homePossession": "39%",
+      "awayPossession": "61%",
+      "homeFouls": 11,
+      "awayFouls": 13,
       "homeOffsides": 1,
       "awayOffsides": 0,
       "apiFootballFixtureId": 1539016,
@@ -781,7 +796,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-17T01:59:01Z",
+      "lastUpdated": "2026-06-17T01:59:19Z",
       "homeTeam": {
         "id": 8062,
         "name": "Iraq",
@@ -801,7 +816,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "home": 1,
-          "away": 3
+          "away": 4
         },
         "halfTime": {
           "home": 1,
@@ -819,12 +834,12 @@
       ],
       "liveSource": "api_football",
       "minute": 90,
-      "extra": 6,
+      "extra": 7,
       "clockSeconds": 5400,
       "displayMinute": "90'",
       "manualClockText": "90'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T23:59:04.001224+00:00",
+      "lastApiSync": "2026-06-16T23:59:22.617579+00:00",
       "manualClock": {
         "seconds": 5400,
         "timer": "90'",
@@ -832,10 +847,10 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T23:59:04.001224+00:00"
+        "lastApiSync": "2026-06-16T23:59:22.617579+00:00"
       },
       "homeScore": 1,
-      "awayScore": 3,
+      "awayScore": 4,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
@@ -1146,6 +1161,21 @@
           "comments": "Holding",
           "assist": null,
           "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Norway",
+          "player": null,
+          "minute": 90,
+          "extra": 7,
+          "displayMinute": "90+7'",
+          "timer": "97:00",
+          "timerSeconds": 5820,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -1348,7 +1378,7 @@
             },
             {
               "type": "Fouls",
-              "value": 10
+              "value": 11
             },
             {
               "type": "Corner Kicks",
@@ -1360,7 +1390,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "37%"
+              "value": "39%"
             },
             {
               "type": "Yellow Cards",
@@ -1376,15 +1406,15 @@
             },
             {
               "type": "Total passes",
-              "value": 304
+              "value": 332
             },
             {
               "type": "Passes accurate",
-              "value": 243
+              "value": 270
             },
             {
               "type": "Passes %",
-              "value": "80%"
+              "value": "81%"
             },
             {
               "type": "expected_goals",
@@ -1399,8 +1429,8 @@
           "shotsOnGoal": 1,
           "shotsOffGoal": 8,
           "totalShots": 11,
-          "possession": "37%",
-          "fouls": 10,
+          "possession": "39%",
+          "fouls": 11,
           "offsides": 1,
           "yellowCards": 1,
           "redCards": null
@@ -1434,7 +1464,7 @@
             },
             {
               "type": "Fouls",
-              "value": 12
+              "value": 13
             },
             {
               "type": "Corner Kicks",
@@ -1446,7 +1476,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "63%"
+              "value": "61%"
             },
             {
               "type": "Yellow Cards",
@@ -1462,7 +1492,7 @@
             },
             {
               "type": "Total passes",
-              "value": 528
+              "value": 530
             },
             {
               "type": "Passes accurate",
@@ -1485,8 +1515,8 @@
           "shotsOnGoal": 5,
           "shotsOffGoal": 4,
           "totalShots": 12,
-          "possession": "63%",
-          "fouls": 12,
+          "possession": "61%",
+          "fouls": 13,
           "offsides": 0,
           "yellowCards": 0,
           "redCards": null
@@ -1496,10 +1526,10 @@
       "awayCorners": 5,
       "homeShotsOnGoal": 1,
       "awayShotsOnGoal": 5,
-      "homePossession": "37%",
-      "awayPossession": "63%",
-      "homeFouls": 10,
-      "awayFouls": 12,
+      "homePossession": "39%",
+      "awayPossession": "61%",
+      "homeFouls": 11,
+      "awayFouls": 13,
       "homeOffsides": 1,
       "awayOffsides": 0,
       "apiFootballFixtureId": 1539016,
