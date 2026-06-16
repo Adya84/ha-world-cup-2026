@@ -5669,11 +5669,31 @@
         "homeTeam": "Iraq",
         "awayTeam": "Norway",
         "goalNumber": 1
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Iraq",
+        "player": "A. Hussein",
+        "minute": 39,
+        "extra": null,
+        "displayMinute": "39'",
+        "timer": "39:00",
+        "timerSeconds": 2340,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football",
+        "matchId": 537392,
+        "matchUtcDate": "2026-06-16T22:00:00Z",
+        "homeTeam": "Iraq",
+        "awayTeam": "Norway",
+        "goalNumber": 2
       }
     ],
     "clock_active": false,
     "status": "1H",
-    "homeScore": 0,
+    "homeScore": 1,
     "awayScore": 1,
     "utcDate": "2026-06-16T22:00:00Z",
     "homeTeam": "Iraq",
@@ -5686,11 +5706,11 @@
     ],
     "base_seconds": 2340,
     "clock_seconds": 2340,
-    "phase_start": "2026-06-16T22:39:38.508251+00:00",
+    "phase_start": "2026-06-16T22:40:06.282548+00:00",
     "source": "api_football_live_minute",
     "displayMinute": "39'",
     "manualClockText": "39'",
-    "lastApiSync": "2026-06-16T22:39:38.508251+00:00",
+    "lastApiSync": "2026-06-16T22:40:06.282548+00:00",
     "apiFootballFixtureId": 1539016,
     "events": [
       {
@@ -5706,6 +5726,21 @@
         "detail": "Normal Goal",
         "comments": null,
         "assist": "D. Wolfe",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Iraq",
+        "player": "A. Hussein",
+        "minute": 39,
+        "extra": null,
+        "displayMinute": "39'",
+        "timer": "39:00",
+        "timerSeconds": 2340,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
         "source": "api_football"
       }
     ]
