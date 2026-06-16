@@ -5679,6 +5679,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489372,
       "goalEvents": [
         {
           "type": "Goal",
@@ -5701,7 +5702,6 @@
           "goalNumber": 1
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -5716,187 +5716,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Haiti",
-          "player": "Jean-Ricner Bellegarde",
-          "minute": 39,
-          "extra": null,
-          "displayMinute": "39'",
-          "timer": "39:00",
-          "timerSeconds": 2340,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Scotland",
-          "player": "Aaron Hickey",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Haiti",
-          "player": "L. Deedson",
-          "minute": 61,
-          "extra": null,
-          "displayMinute": "61'",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "J. Casimir",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "B. Gannon-Doak",
-          "minute": 75,
-          "extra": null,
-          "displayMinute": "75'",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "R. Christie",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "C. Adams",
-          "minute": 75,
-          "extra": null,
-          "displayMinute": "75'",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "L. Dykes",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "A. Hickey",
-          "minute": 75,
-          "extra": null,
-          "displayMinute": "75'",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "N. Patterson",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Haiti",
-          "player": "W. Isidor",
-          "minute": 76,
-          "extra": null,
-          "displayMinute": "76'",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "L. Joseph",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "L. Shankland",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "K. McLean",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "J. McGinn",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "F. Curtis",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Haiti",
-          "player": "R. Providence",
-          "minute": 85,
-          "extra": null,
-          "displayMinute": "85'",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "Y. Fortune",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Scotland",
-          "player": "Findlay Curtis",
-          "minute": 90,
-          "extra": 1,
-          "displayMinute": "90+1'",
-          "timer": "91:00",
-          "timerSeconds": 5460,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Scotland",
-          "player": "Kenny McLean",
-          "minute": 90,
-          "extra": 5,
-          "displayMinute": "90+5'",
-          "timer": "95:00",
-          "timerSeconds": 5700,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537340,
+          "matchUtcDate": "2026-06-14T01:00:00Z",
+          "homeTeam": "Haiti",
+          "awayTeam": "Scotland",
+          "goalNumber": 1
         }
       ],
       "cardEvents": [
@@ -6083,7 +5908,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489372,
       "matchDetails": {
         "events": [
           {
@@ -6099,187 +5923,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Haiti",
-            "player": "Jean-Ricner Bellegarde",
-            "minute": 39,
-            "extra": null,
-            "displayMinute": "39'",
-            "timer": "39:00",
-            "timerSeconds": 2340,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Scotland",
-            "player": "Aaron Hickey",
-            "minute": 46,
-            "extra": null,
-            "displayMinute": "46'",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Haiti",
-            "player": "L. Deedson",
-            "minute": 61,
-            "extra": null,
-            "displayMinute": "61'",
-            "timer": "61:00",
-            "timerSeconds": 3660,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "J. Casimir",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "B. Gannon-Doak",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "R. Christie",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "C. Adams",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "L. Dykes",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "A. Hickey",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "N. Patterson",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Haiti",
-            "player": "W. Isidor",
-            "minute": 76,
-            "extra": null,
-            "displayMinute": "76'",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "L. Joseph",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "L. Shankland",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "K. McLean",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "J. McGinn",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "F. Curtis",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Haiti",
-            "player": "R. Providence",
-            "minute": 85,
-            "extra": null,
-            "displayMinute": "85'",
-            "timer": "85:00",
-            "timerSeconds": 5100,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "Y. Fortune",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Scotland",
-            "player": "Findlay Curtis",
-            "minute": 90,
-            "extra": 1,
-            "displayMinute": "90+1'",
-            "timer": "91:00",
-            "timerSeconds": 5460,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Scotland",
-            "player": "Kenny McLean",
-            "minute": 90,
-            "extra": 5,
-            "displayMinute": "90+5'",
-            "timer": "95:00",
-            "timerSeconds": 5700,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537340,
+            "matchUtcDate": "2026-06-14T01:00:00Z",
+            "homeTeam": "Haiti",
+            "awayTeam": "Scotland",
+            "goalNumber": 1
           }
         ],
         "goalEvents": [
@@ -6495,7 +6144,7 @@
           }
         ],
         "apiFootballFixtureId": 1489372,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     },
     {
@@ -14590,7 +14239,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489378,
       "goalEvents": [
         {
           "type": "Goal",
@@ -14673,6 +14321,7 @@
           "goalNumber": 4
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -14687,12 +14336,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match",
-          "matchId": 537364,
-          "matchUtcDate": "2026-06-16T01:00:00Z",
-          "homeTeam": "Iran",
-          "awayTeam": "New Zealand",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -14707,12 +14351,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537364,
-          "matchUtcDate": "2026-06-16T01:00:00Z",
-          "homeTeam": "Iran",
-          "awayTeam": "New Zealand",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "A. Yousefi",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "M. Ghaedi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "S. Moghanlou",
+          "minute": 53,
+          "extra": null,
+          "displayMinute": "53'",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Alipour",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -14727,12 +14396,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match",
-          "matchId": 537364,
-          "matchUtcDate": "2026-06-16T01:00:00Z",
-          "homeTeam": "Iran",
-          "awayTeam": "New Zealand",
-          "goalNumber": 3
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -14747,12 +14411,127 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Rezaeian",
-          "source": "api_football_post_match",
-          "matchId": 537364,
-          "matchUtcDate": "2026-06-16T01:00:00Z",
-          "homeTeam": "Iran",
-          "awayTeam": "New Zealand",
-          "goalNumber": 4
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "S. Ghoddos",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "E. Hajsafi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "L. Cacace",
+          "minute": 68,
+          "extra": null,
+          "displayMinute": "68'",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "B. Old",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "C. McCowatt",
+          "minute": 68,
+          "extra": null,
+          "displayMinute": "68'",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "R. Thomas",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "T. Payne",
+          "minute": 78,
+          "extra": null,
+          "displayMinute": "78'",
+          "timer": "78:00",
+          "timerSeconds": 4680,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "C. Elliot",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "M. Taremi",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Hosseinzadeh",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Iran",
+          "player": "E. Hajsafi",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "S. Singh",
+          "minute": 90,
+          "extra": 2,
+          "displayMinute": "90+2'",
+          "timer": "92:00",
+          "timerSeconds": 5520,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "J. Randall",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "M. Stamenic",
+          "minute": 90,
+          "extra": 2,
+          "displayMinute": "90+2'",
+          "timer": "92:00",
+          "timerSeconds": 5520,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "T. Bindon",
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -14909,6 +14688,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489378,
       "matchDetails": {
         "events": [
           {
@@ -14924,12 +14704,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match",
-            "matchId": 537364,
-            "matchUtcDate": "2026-06-16T01:00:00Z",
-            "homeTeam": "Iran",
-            "awayTeam": "New Zealand",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -14944,12 +14719,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537364,
-            "matchUtcDate": "2026-06-16T01:00:00Z",
-            "homeTeam": "Iran",
-            "awayTeam": "New Zealand",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Iran",
+            "player": "A. Yousefi",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "M. Ghaedi",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Iran",
+            "player": "S. Moghanlou",
+            "minute": 53,
+            "extra": null,
+            "displayMinute": "53'",
+            "timer": "53:00",
+            "timerSeconds": 3180,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Alipour",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -14964,12 +14764,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match",
-            "matchId": 537364,
-            "matchUtcDate": "2026-06-16T01:00:00Z",
-            "homeTeam": "Iran",
-            "awayTeam": "New Zealand",
-            "goalNumber": 3
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -14984,12 +14779,127 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Rezaeian",
-            "source": "api_football_post_match",
-            "matchId": 537364,
-            "matchUtcDate": "2026-06-16T01:00:00Z",
-            "homeTeam": "Iran",
-            "awayTeam": "New Zealand",
-            "goalNumber": 4
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Iran",
+            "player": "S. Ghoddos",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "E. Hajsafi",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "L. Cacace",
+            "minute": 68,
+            "extra": null,
+            "displayMinute": "68'",
+            "timer": "68:00",
+            "timerSeconds": 4080,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "B. Old",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "C. McCowatt",
+            "minute": 68,
+            "extra": null,
+            "displayMinute": "68'",
+            "timer": "68:00",
+            "timerSeconds": 4080,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "R. Thomas",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "T. Payne",
+            "minute": 78,
+            "extra": null,
+            "displayMinute": "78'",
+            "timer": "78:00",
+            "timerSeconds": 4680,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "C. Elliot",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Iran",
+            "player": "M. Taremi",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Hosseinzadeh",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Iran",
+            "player": "E. Hajsafi",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Yellow Card",
+            "comments": "Tripping",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "S. Singh",
+            "minute": 90,
+            "extra": 2,
+            "displayMinute": "90+2'",
+            "timer": "92:00",
+            "timerSeconds": 5520,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "J. Randall",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "M. Stamenic",
+            "minute": 90,
+            "extra": 2,
+            "displayMinute": "90+2'",
+            "timer": "92:00",
+            "timerSeconds": 5520,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "T. Bindon",
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -15235,7 +15145,7 @@
           }
         ],
         "apiFootballFixtureId": 1489378,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     }
   ],
@@ -20919,6 +20829,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489372,
       "goalEvents": [
         {
           "type": "Goal",
@@ -20941,7 +20852,6 @@
           "goalNumber": 1
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -20956,187 +20866,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Haiti",
-          "player": "Jean-Ricner Bellegarde",
-          "minute": 39,
-          "extra": null,
-          "displayMinute": "39'",
-          "timer": "39:00",
-          "timerSeconds": 2340,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Scotland",
-          "player": "Aaron Hickey",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Haiti",
-          "player": "L. Deedson",
-          "minute": 61,
-          "extra": null,
-          "displayMinute": "61'",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "J. Casimir",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "B. Gannon-Doak",
-          "minute": 75,
-          "extra": null,
-          "displayMinute": "75'",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "R. Christie",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "C. Adams",
-          "minute": 75,
-          "extra": null,
-          "displayMinute": "75'",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "L. Dykes",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "A. Hickey",
-          "minute": 75,
-          "extra": null,
-          "displayMinute": "75'",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "N. Patterson",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Haiti",
-          "player": "W. Isidor",
-          "minute": 76,
-          "extra": null,
-          "displayMinute": "76'",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "L. Joseph",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "L. Shankland",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "K. McLean",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Scotland",
-          "player": "J. McGinn",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "F. Curtis",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Haiti",
-          "player": "R. Providence",
-          "minute": 85,
-          "extra": null,
-          "displayMinute": "85'",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "Y. Fortune",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Scotland",
-          "player": "Findlay Curtis",
-          "minute": 90,
-          "extra": 1,
-          "displayMinute": "90+1'",
-          "timer": "91:00",
-          "timerSeconds": 5460,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Scotland",
-          "player": "Kenny McLean",
-          "minute": 90,
-          "extra": 5,
-          "displayMinute": "90+5'",
-          "timer": "95:00",
-          "timerSeconds": 5700,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537340,
+          "matchUtcDate": "2026-06-14T01:00:00Z",
+          "homeTeam": "Haiti",
+          "awayTeam": "Scotland",
+          "goalNumber": 1
         }
       ],
       "cardEvents": [
@@ -21323,7 +21058,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489372,
       "matchDetails": {
         "events": [
           {
@@ -21339,187 +21073,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Haiti",
-            "player": "Jean-Ricner Bellegarde",
-            "minute": 39,
-            "extra": null,
-            "displayMinute": "39'",
-            "timer": "39:00",
-            "timerSeconds": 2340,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Scotland",
-            "player": "Aaron Hickey",
-            "minute": 46,
-            "extra": null,
-            "displayMinute": "46'",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Haiti",
-            "player": "L. Deedson",
-            "minute": 61,
-            "extra": null,
-            "displayMinute": "61'",
-            "timer": "61:00",
-            "timerSeconds": 3660,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "J. Casimir",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "B. Gannon-Doak",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "R. Christie",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "C. Adams",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "L. Dykes",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "A. Hickey",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "N. Patterson",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Haiti",
-            "player": "W. Isidor",
-            "minute": 76,
-            "extra": null,
-            "displayMinute": "76'",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "L. Joseph",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "L. Shankland",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "K. McLean",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Scotland",
-            "player": "J. McGinn",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "F. Curtis",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Haiti",
-            "player": "R. Providence",
-            "minute": 85,
-            "extra": null,
-            "displayMinute": "85'",
-            "timer": "85:00",
-            "timerSeconds": 5100,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "Y. Fortune",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Scotland",
-            "player": "Findlay Curtis",
-            "minute": 90,
-            "extra": 1,
-            "displayMinute": "90+1'",
-            "timer": "91:00",
-            "timerSeconds": 5460,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Scotland",
-            "player": "Kenny McLean",
-            "minute": 90,
-            "extra": 5,
-            "displayMinute": "90+5'",
-            "timer": "95:00",
-            "timerSeconds": 5700,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537340,
+            "matchUtcDate": "2026-06-14T01:00:00Z",
+            "homeTeam": "Haiti",
+            "awayTeam": "Scotland",
+            "goalNumber": 1
           }
         ],
         "goalEvents": [
@@ -21735,7 +21294,7 @@
           }
         ],
         "apiFootballFixtureId": 1489372,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     },
     {
@@ -29830,7 +29389,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489378,
       "goalEvents": [
         {
           "type": "Goal",
@@ -29913,6 +29471,7 @@
           "goalNumber": 4
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -29927,12 +29486,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match",
-          "matchId": 537364,
-          "matchUtcDate": "2026-06-16T01:00:00Z",
-          "homeTeam": "Iran",
-          "awayTeam": "New Zealand",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -29947,12 +29501,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537364,
-          "matchUtcDate": "2026-06-16T01:00:00Z",
-          "homeTeam": "Iran",
-          "awayTeam": "New Zealand",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "A. Yousefi",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "M. Ghaedi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "S. Moghanlou",
+          "minute": 53,
+          "extra": null,
+          "displayMinute": "53'",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Alipour",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -29967,12 +29546,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match",
-          "matchId": 537364,
-          "matchUtcDate": "2026-06-16T01:00:00Z",
-          "homeTeam": "Iran",
-          "awayTeam": "New Zealand",
-          "goalNumber": 3
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -29987,12 +29561,127 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Rezaeian",
-          "source": "api_football_post_match",
-          "matchId": 537364,
-          "matchUtcDate": "2026-06-16T01:00:00Z",
-          "homeTeam": "Iran",
-          "awayTeam": "New Zealand",
-          "goalNumber": 4
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "S. Ghoddos",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "E. Hajsafi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "L. Cacace",
+          "minute": 68,
+          "extra": null,
+          "displayMinute": "68'",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "B. Old",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "C. McCowatt",
+          "minute": 68,
+          "extra": null,
+          "displayMinute": "68'",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "R. Thomas",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "T. Payne",
+          "minute": 78,
+          "extra": null,
+          "displayMinute": "78'",
+          "timer": "78:00",
+          "timerSeconds": 4680,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "C. Elliot",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "M. Taremi",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Hosseinzadeh",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Iran",
+          "player": "E. Hajsafi",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Yellow Card",
+          "comments": "Tripping",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "S. Singh",
+          "minute": 90,
+          "extra": 2,
+          "displayMinute": "90+2'",
+          "timer": "92:00",
+          "timerSeconds": 5520,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "J. Randall",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "New Zealand",
+          "player": "M. Stamenic",
+          "minute": 90,
+          "extra": 2,
+          "displayMinute": "90+2'",
+          "timer": "92:00",
+          "timerSeconds": 5520,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "T. Bindon",
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -30149,6 +29838,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489378,
       "matchDetails": {
         "events": [
           {
@@ -30164,12 +29854,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match",
-            "matchId": 537364,
-            "matchUtcDate": "2026-06-16T01:00:00Z",
-            "homeTeam": "Iran",
-            "awayTeam": "New Zealand",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -30184,12 +29869,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537364,
-            "matchUtcDate": "2026-06-16T01:00:00Z",
-            "homeTeam": "Iran",
-            "awayTeam": "New Zealand",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Iran",
+            "player": "A. Yousefi",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "M. Ghaedi",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Iran",
+            "player": "S. Moghanlou",
+            "minute": 53,
+            "extra": null,
+            "displayMinute": "53'",
+            "timer": "53:00",
+            "timerSeconds": 3180,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Alipour",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -30204,12 +29914,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match",
-            "matchId": 537364,
-            "matchUtcDate": "2026-06-16T01:00:00Z",
-            "homeTeam": "Iran",
-            "awayTeam": "New Zealand",
-            "goalNumber": 3
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -30224,12 +29929,127 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Rezaeian",
-            "source": "api_football_post_match",
-            "matchId": 537364,
-            "matchUtcDate": "2026-06-16T01:00:00Z",
-            "homeTeam": "Iran",
-            "awayTeam": "New Zealand",
-            "goalNumber": 4
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Iran",
+            "player": "S. Ghoddos",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "E. Hajsafi",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "L. Cacace",
+            "minute": 68,
+            "extra": null,
+            "displayMinute": "68'",
+            "timer": "68:00",
+            "timerSeconds": 4080,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "B. Old",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "C. McCowatt",
+            "minute": 68,
+            "extra": null,
+            "displayMinute": "68'",
+            "timer": "68:00",
+            "timerSeconds": 4080,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "R. Thomas",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "T. Payne",
+            "minute": 78,
+            "extra": null,
+            "displayMinute": "78'",
+            "timer": "78:00",
+            "timerSeconds": 4680,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "C. Elliot",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Iran",
+            "player": "M. Taremi",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Hosseinzadeh",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Iran",
+            "player": "E. Hajsafi",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Yellow Card",
+            "comments": "Tripping",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "S. Singh",
+            "minute": 90,
+            "extra": 2,
+            "displayMinute": "90+2'",
+            "timer": "92:00",
+            "timerSeconds": 5520,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "J. Randall",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "New Zealand",
+            "player": "M. Stamenic",
+            "minute": 90,
+            "extra": 2,
+            "displayMinute": "90+2'",
+            "timer": "92:00",
+            "timerSeconds": 5520,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "T. Bindon",
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -30475,7 +30295,7 @@
           }
         ],
         "apiFootballFixtureId": 1489378,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     }
   ]
