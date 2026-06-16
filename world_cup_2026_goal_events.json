@@ -5724,13 +5724,13 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 3540,
-    "clock_seconds": 3540,
-    "phase_start": "2026-06-16T23:22:52.666300+00:00",
+    "base_seconds": 3600,
+    "clock_seconds": 3600,
+    "phase_start": "2026-06-16T23:23:18.520913+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "59'",
-    "manualClockText": "59'",
-    "lastApiSync": "2026-06-16T23:22:52.666300+00:00",
+    "displayMinute": "60'",
+    "manualClockText": "60'",
+    "lastApiSync": "2026-06-16T23:23:18.520913+00:00",
     "apiFootballFixtureId": 1539016,
     "events": [
       {
@@ -5776,6 +5776,68 @@
         "detail": "Normal Goal",
         "comments": null,
         "assist": null,
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Iraq",
+        "player": "Z. Ismaeel",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "Z. Iqbal",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Iraq",
+        "player": "A. Al Hamadi",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "M. Farji",
+        "source": "api_football"
+      }
+    ],
+    "substitutionEvents": [
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Iraq",
+        "player": "Z. Ismaeel",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "Z. Iqbal",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Iraq",
+        "player": "A. Al Hamadi",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "M. Farji",
         "source": "api_football"
       }
     ]
