@@ -5507,7 +5507,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_G",
-      "lastUpdated": "2026-06-16T04:20:13Z",
+      "lastUpdated": "2026-06-16T04:20:40Z",
       "homeTeam": {
         "id": 840,
         "name": "Iran",
@@ -5549,7 +5549,7 @@
       "displayMinute": "53'",
       "manualClockText": "53'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-16T02:20:14.835849+00:00",
+      "lastApiSync": "2026-06-16T02:20:42.395177+00:00",
       "manualClock": {
         "seconds": 3180,
         "timer": "53'",
@@ -5557,7 +5557,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-16T02:20:14.835849+00:00"
+        "lastApiSync": "2026-06-16T02:20:42.395177+00:00"
       },
       "homeScore": 1,
       "awayScore": 1,
@@ -5651,6 +5651,21 @@
           "comments": null,
           "assist": "M. Ghaedi",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "S. Moghanlou",
+          "minute": 53,
+          "extra": null,
+          "displayMinute": "53'",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Alipour",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -5668,6 +5683,21 @@
           "detail": "Substitution 1",
           "comments": null,
           "assist": "M. Ghaedi",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Iran",
+          "player": "S. Moghanlou",
+          "minute": 53,
+          "extra": null,
+          "displayMinute": "53'",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Alipour",
           "source": "api_football"
         }
       ],
