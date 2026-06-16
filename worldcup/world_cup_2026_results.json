@@ -4727,7 +4727,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489371,
       "goalEvents": [
         {
           "type": "Goal",
@@ -4770,6 +4769,7 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -4784,12 +4784,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "B. Diaz",
-          "source": "api_football_post_match",
-          "matchId": 537339,
-          "matchUtcDate": "2026-06-13T22:00:00Z",
-          "homeTeam": "Brazil",
-          "awayTeam": "Morocco",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -4804,12 +4799,187 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Bruno Guimaraes",
-          "source": "api_football_post_match",
-          "matchId": 537339,
-          "matchUtcDate": "2026-06-13T22:00:00Z",
-          "homeTeam": "Brazil",
-          "awayTeam": "Morocco",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Brazil",
+          "player": "Casemiro",
+          "minute": 37,
+          "extra": null,
+          "displayMinute": "37'",
+          "timer": "37:00",
+          "timerSeconds": 2220,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Brazil",
+          "player": "Roger Iba\u00f1ez",
+          "minute": 43,
+          "extra": null,
+          "displayMinute": "43'",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "Ibanez",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Danilo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "Casemiro",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Fabinho",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "Lucas Paqueta",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "M. Cunha",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "I. Thiago",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Luiz Henrique",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "B. Diaz",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "C. Talbi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "A. Ounahi",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "S. El Mourabet",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "Bruno Guimaraes",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Danilo Santos",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "N. Mazraoui",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "A. Salah-Eddine",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "B. El Khannouss",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Amaimouni",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "I. Saibari",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "S. Rahimi",
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -4996,6 +5166,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489371,
       "matchDetails": {
         "events": [
           {
@@ -5011,12 +5182,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "B. Diaz",
-            "source": "api_football_post_match",
-            "matchId": 537339,
-            "matchUtcDate": "2026-06-13T22:00:00Z",
-            "homeTeam": "Brazil",
-            "awayTeam": "Morocco",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -5031,12 +5197,187 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Bruno Guimaraes",
-            "source": "api_football_post_match",
-            "matchId": 537339,
-            "matchUtcDate": "2026-06-13T22:00:00Z",
-            "homeTeam": "Brazil",
-            "awayTeam": "Morocco",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Brazil",
+            "player": "Casemiro",
+            "minute": 37,
+            "extra": null,
+            "displayMinute": "37'",
+            "timer": "37:00",
+            "timerSeconds": 2220,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Brazil",
+            "player": "Roger Iba\u00f1ez",
+            "minute": 43,
+            "extra": null,
+            "displayMinute": "43'",
+            "timer": "43:00",
+            "timerSeconds": 2580,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "Ibanez",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Danilo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "Casemiro",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Fabinho",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "Lucas Paqueta",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "M. Cunha",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "I. Thiago",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "Luiz Henrique",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "B. Diaz",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "C. Talbi",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "A. Ounahi",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "S. El Mourabet",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "Bruno Guimaraes",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Danilo Santos",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "N. Mazraoui",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "A. Salah-Eddine",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "B. El Khannouss",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Amaimouni",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "I. Saibari",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "S. Rahimi",
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -5272,7 +5613,7 @@
           }
         ],
         "apiFootballFixtureId": 1489371,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -5334,10 +5675,8 @@
       },
       "referees": [
         {
-          "id": 190017,
-          "name": "Mustapha Ghorbal",
-          "type": "REFEREE",
-          "nationality": null
+          "name": "Mustapha Ghorbal, Algeria",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -5362,6 +5701,7 @@
           "goalNumber": 1
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -5376,12 +5716,187 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537340,
-          "matchUtcDate": "2026-06-14T01:00:00Z",
-          "homeTeam": "Haiti",
-          "awayTeam": "Scotland",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Haiti",
+          "player": "Jean-Ricner Bellegarde",
+          "minute": 39,
+          "extra": null,
+          "displayMinute": "39'",
+          "timer": "39:00",
+          "timerSeconds": 2340,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "Aaron Hickey",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "L. Deedson",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Casimir",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "B. Gannon-Doak",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "R. Christie",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "C. Adams",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Dykes",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "N. Patterson",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "W. Isidor",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Joseph",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "L. Shankland",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "K. McLean",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "J. McGinn",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "F. Curtis",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "R. Providence",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Y. Fortune",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "Findlay Curtis",
+          "minute": 90,
+          "extra": 1,
+          "displayMinute": "90+1'",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "Kenny McLean",
+          "minute": 90,
+          "extra": 5,
+          "displayMinute": "90+5'",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -5584,12 +6099,187 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537340,
-            "matchUtcDate": "2026-06-14T01:00:00Z",
-            "homeTeam": "Haiti",
-            "awayTeam": "Scotland",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Haiti",
+            "player": "Jean-Ricner Bellegarde",
+            "minute": 39,
+            "extra": null,
+            "displayMinute": "39'",
+            "timer": "39:00",
+            "timerSeconds": 2340,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "Aaron Hickey",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "L. Deedson",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Casimir",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "B. Gannon-Doak",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "R. Christie",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "C. Adams",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "L. Dykes",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "A. Hickey",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "N. Patterson",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "W. Isidor",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "L. Joseph",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "L. Shankland",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "K. McLean",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "J. McGinn",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "F. Curtis",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "R. Providence",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Y. Fortune",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "Findlay Curtis",
+            "minute": 90,
+            "extra": 1,
+            "displayMinute": "90+1'",
+            "timer": "91:00",
+            "timerSeconds": 5460,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "Kenny McLean",
+            "minute": 90,
+            "extra": 5,
+            "displayMinute": "90+5'",
+            "timer": "95:00",
+            "timerSeconds": 5700,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -5800,14 +6490,12 @@
         ],
         "referees": [
           {
-            "id": 190017,
-            "name": "Mustapha Ghorbal",
-            "type": "REFEREE",
-            "nationality": null
+            "name": "Mustapha Ghorbal, Algeria",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489372,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -5869,10 +6557,8 @@
       },
       "referees": [
         {
-          "id": 28805,
-          "name": "Jes\u00fas Valenzuela",
-          "type": "REFEREE",
-          "nationality": "Venezuela"
+          "name": "Jes\u00fas Valenzuela, Venezuela",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -5917,6 +6603,7 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -5931,12 +6618,82 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "P. Okon-Engstler",
-          "source": "api_football_post_match",
-          "matchId": 537346,
-          "matchUtcDate": "2026-06-14T04:00:00Z",
-          "homeTeam": "Australia",
-          "awayTeam": "Turkey",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "B. Yilmaz",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "K. Yildiz",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "N. Irankunda",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Velupillay",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "O. Kokcu",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Y. Akgun",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Italiano",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Geria",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "M. Toure",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "T. Yengi",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -5951,12 +6708,97 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537346,
-          "matchUtcDate": "2026-06-14T04:00:00Z",
-          "homeTeam": "Australia",
-          "awayTeam": "Turkey",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "Z. Celik",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "M. Muldur",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "I. Yuksek",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "S. Ozcan",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Bos",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Behich",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "P. Okon-Engstler",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "J. Irvine",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "K. Akturkoglu",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "D. Gul",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "T\u00fcrkiye",
+          "player": "Yunus Akg\u00fcn",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -6144,12 +6986,82 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "P. Okon-Engstler",
-            "source": "api_football_post_match",
-            "matchId": 537346,
-            "matchUtcDate": "2026-06-14T04:00:00Z",
-            "homeTeam": "Australia",
-            "awayTeam": "Turkey",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "B. Yilmaz",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "K. Yildiz",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "N. Irankunda",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Velupillay",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "O. Kokcu",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Y. Akgun",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "J. Italiano",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Geria",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "M. Toure",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "T. Yengi",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -6164,12 +7076,97 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537346,
-            "matchUtcDate": "2026-06-14T04:00:00Z",
-            "homeTeam": "Australia",
-            "awayTeam": "Turkey",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "Z. Celik",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "M. Muldur",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "I. Yuksek",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "S. Ozcan",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "J. Bos",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Behich",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "P. Okon-Engstler",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "J. Irvine",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "K. Akturkoglu",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "D. Gul",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "T\u00fcrkiye",
+            "player": "Yunus Akg\u00fcn",
+            "minute": 86,
+            "extra": null,
+            "displayMinute": "86'",
+            "timer": "86:00",
+            "timerSeconds": 5160,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -6385,14 +7382,12 @@
         ],
         "referees": [
           {
-            "id": 28805,
-            "name": "Jes\u00fas Valenzuela",
-            "type": "REFEREE",
-            "nationality": "Venezuela"
+            "name": "Jes\u00fas Valenzuela, Venezuela",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1539001,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -6454,10 +7449,8 @@
       },
       "referees": [
         {
-          "id": 289426,
-          "name": "Jalal Jayed",
-          "type": "REFEREE",
-          "nationality": "Morocco"
+          "name": "Jalal Jayed, Morocco",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -6622,6 +7615,7 @@
           "goalNumber": 8
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -6636,12 +7630,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "F. Wirtz",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6656,12 +7645,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 2
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6676,15 +7660,10 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "N. Brown",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 3
+          "source": "api_football_post_match"
         },
         {
-          "type": "Goal",
+          "type": "Penalty",
           "rawType": "Goal",
           "team": "Germany",
           "player": "K. Havertz",
@@ -6696,12 +7675,22 @@
           "detail": "Penalty",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 4
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "S. Hansen",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Antonisse",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6716,12 +7705,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 5
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Musiala",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "D. Undav",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "J. Locadia",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Margaritha",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6736,12 +7750,52 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 6
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "F. Nmecha",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Goretzka",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Tah",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "A. Rudiger",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "N. Brown",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "D. Raum",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6756,12 +7810,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 7
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Kimmich",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "W. Anton",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "T. Chong",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "G. Kastaneer",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -6776,12 +7855,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 8
+          "source": "api_football_post_match"
         }
       ],
       "substitutionEvents": [
@@ -6922,12 +7996,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "F. Wirtz",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -6942,12 +8011,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 2
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -6962,15 +8026,10 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "N. Brown",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 3
+            "source": "api_football_post_match"
           },
           {
-            "type": "Goal",
+            "type": "Penalty",
             "rawType": "Goal",
             "team": "Germany",
             "player": "K. Havertz",
@@ -6982,12 +8041,22 @@
             "detail": "Penalty",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 4
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "S. Hansen",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Antonisse",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7002,12 +8071,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 5
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Musiala",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "D. Undav",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "J. Locadia",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Margaritha",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7022,12 +8116,52 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 6
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "F. Nmecha",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "L. Goretzka",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Tah",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "A. Rudiger",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "N. Brown",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "D. Raum",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7042,12 +8176,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 7
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Kimmich",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "W. Anton",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "T. Chong",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "G. Kastaneer",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7062,12 +8221,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 8
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -7357,14 +8511,12 @@
         ],
         "referees": [
           {
-            "id": 289426,
-            "name": "Jalal Jayed",
-            "type": "REFEREE",
-            "nationality": "Morocco"
+            "name": "Jalal Jayed, Morocco",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489374,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -7426,10 +8578,8 @@
       },
       "referees": [
         {
-          "id": 76608,
-          "name": "Ismail Elfath",
-          "type": "REFEREE",
-          "nationality": "United States"
+          "name": "Ismail Elfath, USA",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -7514,6 +8664,7 @@
           "goalNumber": 4
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -7528,12 +8679,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Gravenberch",
-          "source": "api_football_post_match",
-          "matchId": 537357,
-          "matchUtcDate": "2026-06-14T20:00:00Z",
-          "homeTeam": "Netherlands",
-          "awayTeam": "Japan",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7548,12 +8694,22 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "T. Kubo",
-          "source": "api_football_post_match",
-          "matchId": 537357,
-          "matchUtcDate": "2026-06-14T20:00:00Z",
-          "homeTeam": "Netherlands",
-          "awayTeam": "Japan",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Netherlands",
+          "player": "Crysencio Summerville",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7568,12 +8724,172 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Gravenberch",
-          "source": "api_football_post_match",
-          "matchId": 537357,
-          "matchUtcDate": "2026-06-14T20:00:00Z",
-          "homeTeam": "Netherlands",
-          "awayTeam": "Japan",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "D. Maeda",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Ito",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "D. Malen",
+          "minute": 70,
+          "extra": null,
+          "displayMinute": "70'",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "M. Depay",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "T. Reijnders",
+          "minute": 70,
+          "extra": null,
+          "displayMinute": "70'",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Q. Timber",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "C. Summerville",
+          "minute": 70,
+          "extra": null,
+          "displayMinute": "70'",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "T. Koopmeiners",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "T. Watanabe",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Tomiyasu",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "R. Doan",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Y. Sugawara",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "T. Kubo",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "K. Ogawa",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "R. Gravenberch",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "N. Ake",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Netherlands",
+          "player": "Memphis Depay",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "A. Ueda",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "K. Shiogai",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "C. Gakpo",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "B. Brobbey",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -7588,12 +8904,22 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "K. Ogawa",
-          "source": "api_football_post_match",
-          "matchId": 537357,
-          "matchUtcDate": "2026-06-14T20:00:00Z",
-          "homeTeam": "Netherlands",
-          "awayTeam": "Japan",
-          "goalNumber": 4
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Netherlands",
+          "player": "Micky van de Ven",
+          "minute": 90,
+          "extra": 1,
+          "displayMinute": "90+1'",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -7811,12 +9137,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Gravenberch",
-            "source": "api_football_post_match",
-            "matchId": 537357,
-            "matchUtcDate": "2026-06-14T20:00:00Z",
-            "homeTeam": "Netherlands",
-            "awayTeam": "Japan",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7831,12 +9152,22 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "T. Kubo",
-            "source": "api_football_post_match",
-            "matchId": 537357,
-            "matchUtcDate": "2026-06-14T20:00:00Z",
-            "homeTeam": "Netherlands",
-            "awayTeam": "Japan",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Netherlands",
+            "player": "Crysencio Summerville",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7851,12 +9182,172 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Gravenberch",
-            "source": "api_football_post_match",
-            "matchId": 537357,
-            "matchUtcDate": "2026-06-14T20:00:00Z",
-            "homeTeam": "Netherlands",
-            "awayTeam": "Japan",
-            "goalNumber": 3
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "D. Maeda",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Ito",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "D. Malen",
+            "minute": 70,
+            "extra": null,
+            "displayMinute": "70'",
+            "timer": "70:00",
+            "timerSeconds": 4200,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "M. Depay",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "T. Reijnders",
+            "minute": 70,
+            "extra": null,
+            "displayMinute": "70'",
+            "timer": "70:00",
+            "timerSeconds": 4200,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Q. Timber",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "C. Summerville",
+            "minute": 70,
+            "extra": null,
+            "displayMinute": "70'",
+            "timer": "70:00",
+            "timerSeconds": 4200,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "T. Koopmeiners",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "T. Watanabe",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Tomiyasu",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "R. Doan",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Y. Sugawara",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "T. Kubo",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "K. Ogawa",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "R. Gravenberch",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "N. Ake",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Netherlands",
+            "player": "Memphis Depay",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "A. Ueda",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "K. Shiogai",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "C. Gakpo",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "B. Brobbey",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -7871,12 +9362,22 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "K. Ogawa",
-            "source": "api_football_post_match",
-            "matchId": 537357,
-            "matchUtcDate": "2026-06-14T20:00:00Z",
-            "homeTeam": "Netherlands",
-            "awayTeam": "Japan",
-            "goalNumber": 4
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Netherlands",
+            "player": "Micky van de Ven",
+            "minute": 90,
+            "extra": 1,
+            "displayMinute": "90+1'",
+            "timer": "91:00",
+            "timerSeconds": 5460,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -8162,14 +9663,12 @@
         ],
         "referees": [
           {
-            "id": 76608,
-            "name": "Ismail Elfath",
-            "type": "REFEREE",
-            "nationality": "United States"
+            "name": "Ismail Elfath, USA",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489376,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -8231,10 +9730,8 @@
       },
       "referees": [
         {
-          "id": 43918,
-          "name": "Fran\u00e7ois Letexier",
-          "type": "REFEREE",
-          "nationality": "France"
+          "name": "Fran\u00e7ois Letexier, France",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -8259,7 +9756,203 @@
           "goalNumber": 1
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Ivory Coast",
+          "player": "Seko Fofana",
+          "minute": 28,
+          "extra": null,
+          "displayMinute": "28'",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Ivory Coast",
+          "player": "Franck Kessi\u00e9",
+          "minute": 38,
+          "extra": null,
+          "displayMinute": "38'",
+          "timer": "38:00",
+          "timerSeconds": 2280,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Ivory Coast",
+          "player": "Gu\u00e9la Dou\u00e9",
+          "minute": 40,
+          "extra": null,
+          "displayMinute": "40'",
+          "timer": "40:00",
+          "timerSeconds": 2400,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "B. Toure",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "A. Diallo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "E. Wahi",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Bonny",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "A. Minda",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Angulo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "J. Yeboah",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Preciado",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "A. Franco",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "J. Porozo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Ecuador",
+          "player": "Jackson Porozo",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "S. Fofana",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "I. Sangare",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "N. Pepe",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "C. Inao Oulai",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "E. Valencia",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "K. Rodriguez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "G. Doue",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "O. Kossounou",
+          "source": "api_football_post_match"
+        },
         {
           "type": "Goal",
           "rawType": "Goal",
@@ -8273,12 +9966,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "W. Singo",
-          "source": "api_football_post_match",
-          "matchId": 537352,
-          "matchUtcDate": "2026-06-14T23:00:00Z",
-          "homeTeam": "Ivory Coast",
-          "awayTeam": "Ecuador",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -8484,6 +10172,201 @@
       "matchDetails": {
         "events": [
           {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Ivory Coast",
+            "player": "Seko Fofana",
+            "minute": 28,
+            "extra": null,
+            "displayMinute": "28'",
+            "timer": "28:00",
+            "timerSeconds": 1680,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Ivory Coast",
+            "player": "Franck Kessi\u00e9",
+            "minute": 38,
+            "extra": null,
+            "displayMinute": "38'",
+            "timer": "38:00",
+            "timerSeconds": 2280,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Ivory Coast",
+            "player": "Gu\u00e9la Dou\u00e9",
+            "minute": 40,
+            "extra": null,
+            "displayMinute": "40'",
+            "timer": "40:00",
+            "timerSeconds": 2400,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "B. Toure",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "A. Diallo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "E. Wahi",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Bonny",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ecuador",
+            "player": "A. Minda",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Angulo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ecuador",
+            "player": "J. Yeboah",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Preciado",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ecuador",
+            "player": "A. Franco",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "J. Porozo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Ecuador",
+            "player": "Jackson Porozo",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "S. Fofana",
+            "minute": 77,
+            "extra": null,
+            "displayMinute": "77'",
+            "timer": "77:00",
+            "timerSeconds": 4620,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "I. Sangare",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "N. Pepe",
+            "minute": 77,
+            "extra": null,
+            "displayMinute": "77'",
+            "timer": "77:00",
+            "timerSeconds": 4620,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "C. Inao Oulai",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ecuador",
+            "player": "E. Valencia",
+            "minute": 77,
+            "extra": null,
+            "displayMinute": "77'",
+            "timer": "77:00",
+            "timerSeconds": 4620,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "K. Rodriguez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "G. Doue",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "O. Kossounou",
+            "source": "api_football_post_match"
+          },
+          {
             "type": "Goal",
             "rawType": "Goal",
             "team": "Ivory Coast",
@@ -8496,12 +10379,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "W. Singo",
-            "source": "api_football_post_match",
-            "matchId": 537352,
-            "matchUtcDate": "2026-06-14T23:00:00Z",
-            "homeTeam": "Ivory Coast",
-            "awayTeam": "Ecuador",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -8727,14 +10605,12 @@
         ],
         "referees": [
           {
-            "id": 43918,
-            "name": "Fran\u00e7ois Letexier",
-            "type": "REFEREE",
-            "nationality": "France"
+            "name": "Fran\u00e7ois Letexier, France",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489375,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -18352,7 +20228,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489371,
       "goalEvents": [
         {
           "type": "Goal",
@@ -18395,6 +20270,7 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -18409,12 +20285,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "B. Diaz",
-          "source": "api_football_post_match",
-          "matchId": 537339,
-          "matchUtcDate": "2026-06-13T22:00:00Z",
-          "homeTeam": "Brazil",
-          "awayTeam": "Morocco",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -18429,12 +20300,187 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Bruno Guimaraes",
-          "source": "api_football_post_match",
-          "matchId": 537339,
-          "matchUtcDate": "2026-06-13T22:00:00Z",
-          "homeTeam": "Brazil",
-          "awayTeam": "Morocco",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Brazil",
+          "player": "Casemiro",
+          "minute": 37,
+          "extra": null,
+          "displayMinute": "37'",
+          "timer": "37:00",
+          "timerSeconds": 2220,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Brazil",
+          "player": "Roger Iba\u00f1ez",
+          "minute": 43,
+          "extra": null,
+          "displayMinute": "43'",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "Ibanez",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Danilo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "Casemiro",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Fabinho",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "Lucas Paqueta",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "M. Cunha",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "I. Thiago",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Luiz Henrique",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "B. Diaz",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "C. Talbi",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "A. Ounahi",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "S. El Mourabet",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Brazil",
+          "player": "Bruno Guimaraes",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Danilo Santos",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "N. Mazraoui",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "A. Salah-Eddine",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "B. El Khannouss",
+          "minute": 80,
+          "extra": null,
+          "displayMinute": "80'",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Amaimouni",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Morocco",
+          "player": "I. Saibari",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "S. Rahimi",
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -18621,6 +20667,7 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489371,
       "matchDetails": {
         "events": [
           {
@@ -18636,12 +20683,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "B. Diaz",
-            "source": "api_football_post_match",
-            "matchId": 537339,
-            "matchUtcDate": "2026-06-13T22:00:00Z",
-            "homeTeam": "Brazil",
-            "awayTeam": "Morocco",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -18656,12 +20698,187 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Bruno Guimaraes",
-            "source": "api_football_post_match",
-            "matchId": 537339,
-            "matchUtcDate": "2026-06-13T22:00:00Z",
-            "homeTeam": "Brazil",
-            "awayTeam": "Morocco",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Brazil",
+            "player": "Casemiro",
+            "minute": 37,
+            "extra": null,
+            "displayMinute": "37'",
+            "timer": "37:00",
+            "timerSeconds": 2220,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Brazil",
+            "player": "Roger Iba\u00f1ez",
+            "minute": 43,
+            "extra": null,
+            "displayMinute": "43'",
+            "timer": "43:00",
+            "timerSeconds": 2580,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "Ibanez",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Danilo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "Casemiro",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Fabinho",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "Lucas Paqueta",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "M. Cunha",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "I. Thiago",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "Luiz Henrique",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "B. Diaz",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "C. Talbi",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "A. Ounahi",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "S. El Mourabet",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Brazil",
+            "player": "Bruno Guimaraes",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Danilo Santos",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "N. Mazraoui",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "A. Salah-Eddine",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "B. El Khannouss",
+            "minute": 80,
+            "extra": null,
+            "displayMinute": "80'",
+            "timer": "80:00",
+            "timerSeconds": 4800,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Amaimouni",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Morocco",
+            "player": "I. Saibari",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "S. Rahimi",
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -18897,7 +21114,7 @@
           }
         ],
         "apiFootballFixtureId": 1489371,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -18959,10 +21176,8 @@
       },
       "referees": [
         {
-          "id": 190017,
-          "name": "Mustapha Ghorbal",
-          "type": "REFEREE",
-          "nationality": null
+          "name": "Mustapha Ghorbal, Algeria",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -18987,6 +21202,7 @@
           "goalNumber": 1
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -19001,12 +21217,187 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537340,
-          "matchUtcDate": "2026-06-14T01:00:00Z",
-          "homeTeam": "Haiti",
-          "awayTeam": "Scotland",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Haiti",
+          "player": "Jean-Ricner Bellegarde",
+          "minute": 39,
+          "extra": null,
+          "displayMinute": "39'",
+          "timer": "39:00",
+          "timerSeconds": 2340,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "Aaron Hickey",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "L. Deedson",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Casimir",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "B. Gannon-Doak",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "R. Christie",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "C. Adams",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Dykes",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "A. Hickey",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "N. Patterson",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "W. Isidor",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Joseph",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "L. Shankland",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "K. McLean",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Scotland",
+          "player": "J. McGinn",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "F. Curtis",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Haiti",
+          "player": "R. Providence",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Y. Fortune",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "Findlay Curtis",
+          "minute": 90,
+          "extra": 1,
+          "displayMinute": "90+1'",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Scotland",
+          "player": "Kenny McLean",
+          "minute": 90,
+          "extra": 5,
+          "displayMinute": "90+5'",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -19209,12 +21600,187 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537340,
-            "matchUtcDate": "2026-06-14T01:00:00Z",
-            "homeTeam": "Haiti",
-            "awayTeam": "Scotland",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Haiti",
+            "player": "Jean-Ricner Bellegarde",
+            "minute": 39,
+            "extra": null,
+            "displayMinute": "39'",
+            "timer": "39:00",
+            "timerSeconds": 2340,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "Aaron Hickey",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "L. Deedson",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Casimir",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "B. Gannon-Doak",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "R. Christie",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "C. Adams",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "L. Dykes",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "A. Hickey",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "N. Patterson",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "W. Isidor",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "L. Joseph",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "L. Shankland",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "K. McLean",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Scotland",
+            "player": "J. McGinn",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "F. Curtis",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Haiti",
+            "player": "R. Providence",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Y. Fortune",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "Findlay Curtis",
+            "minute": 90,
+            "extra": 1,
+            "displayMinute": "90+1'",
+            "timer": "91:00",
+            "timerSeconds": 5460,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Scotland",
+            "player": "Kenny McLean",
+            "minute": 90,
+            "extra": 5,
+            "displayMinute": "90+5'",
+            "timer": "95:00",
+            "timerSeconds": 5700,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -19425,14 +21991,12 @@
         ],
         "referees": [
           {
-            "id": 190017,
-            "name": "Mustapha Ghorbal",
-            "type": "REFEREE",
-            "nationality": null
+            "name": "Mustapha Ghorbal, Algeria",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489372,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -19494,10 +22058,8 @@
       },
       "referees": [
         {
-          "id": 28805,
-          "name": "Jes\u00fas Valenzuela",
-          "type": "REFEREE",
-          "nationality": "Venezuela"
+          "name": "Jes\u00fas Valenzuela, Venezuela",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -19542,6 +22104,7 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -19556,12 +22119,82 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "P. Okon-Engstler",
-          "source": "api_football_post_match",
-          "matchId": 537346,
-          "matchUtcDate": "2026-06-14T04:00:00Z",
-          "homeTeam": "Australia",
-          "awayTeam": "Turkey",
-          "goalNumber": 1
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "B. Yilmaz",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "K. Yildiz",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "N. Irankunda",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Velupillay",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "O. Kokcu",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Y. Akgun",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Italiano",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Geria",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "M. Toure",
+          "minute": 74,
+          "extra": null,
+          "displayMinute": "74'",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "T. Yengi",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -19576,12 +22209,97 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537346,
-          "matchUtcDate": "2026-06-14T04:00:00Z",
-          "homeTeam": "Australia",
-          "awayTeam": "Turkey",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "Z. Celik",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "M. Muldur",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "I. Yuksek",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "S. Ozcan",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "J. Bos",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "A. Behich",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Australia",
+          "player": "P. Okon-Engstler",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "J. Irvine",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "T\u00fcrkiye",
+          "player": "K. Akturkoglu",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "D. Gul",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "T\u00fcrkiye",
+          "player": "Yunus Akg\u00fcn",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -19769,12 +22487,82 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "P. Okon-Engstler",
-            "source": "api_football_post_match",
-            "matchId": 537346,
-            "matchUtcDate": "2026-06-14T04:00:00Z",
-            "homeTeam": "Australia",
-            "awayTeam": "Turkey",
-            "goalNumber": 1
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "B. Yilmaz",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "K. Yildiz",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "N. Irankunda",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Velupillay",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "O. Kokcu",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Y. Akgun",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "J. Italiano",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Geria",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "M. Toure",
+            "minute": 74,
+            "extra": null,
+            "displayMinute": "74'",
+            "timer": "74:00",
+            "timerSeconds": 4440,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "T. Yengi",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -19789,12 +22577,97 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537346,
-            "matchUtcDate": "2026-06-14T04:00:00Z",
-            "homeTeam": "Australia",
-            "awayTeam": "Turkey",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "Z. Celik",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "M. Muldur",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "I. Yuksek",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "S. Ozcan",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "J. Bos",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "A. Behich",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Australia",
+            "player": "P. Okon-Engstler",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "J. Irvine",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "T\u00fcrkiye",
+            "player": "K. Akturkoglu",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "D. Gul",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "T\u00fcrkiye",
+            "player": "Yunus Akg\u00fcn",
+            "minute": 86,
+            "extra": null,
+            "displayMinute": "86'",
+            "timer": "86:00",
+            "timerSeconds": 5160,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -20010,14 +22883,12 @@
         ],
         "referees": [
           {
-            "id": 28805,
-            "name": "Jes\u00fas Valenzuela",
-            "type": "REFEREE",
-            "nationality": "Venezuela"
+            "name": "Jes\u00fas Valenzuela, Venezuela",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1539001,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -20079,10 +22950,8 @@
       },
       "referees": [
         {
-          "id": 289426,
-          "name": "Jalal Jayed",
-          "type": "REFEREE",
-          "nationality": "Morocco"
+          "name": "Jalal Jayed, Morocco",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -20247,6 +23116,7 @@
           "goalNumber": 8
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -20261,12 +23131,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "F. Wirtz",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -20281,12 +23146,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 2
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -20301,15 +23161,10 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "N. Brown",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 3
+          "source": "api_football_post_match"
         },
         {
-          "type": "Goal",
+          "type": "Penalty",
           "rawType": "Goal",
           "team": "Germany",
           "player": "K. Havertz",
@@ -20321,12 +23176,22 @@
           "detail": "Penalty",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 4
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "S. Hansen",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Antonisse",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -20341,12 +23206,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 5
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Musiala",
+          "minute": 64,
+          "extra": null,
+          "displayMinute": "64'",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "D. Undav",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "J. Locadia",
+          "minute": 65,
+          "extra": null,
+          "displayMinute": "65'",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Margaritha",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -20361,12 +23251,52 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 6
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "F. Nmecha",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "L. Goretzka",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Tah",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "A. Rudiger",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "N. Brown",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "D. Raum",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -20381,12 +23311,37 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "J. Kimmich",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 7
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Germany",
+          "player": "J. Kimmich",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "W. Anton",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Cura\u00e7ao",
+          "player": "T. Chong",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "G. Kastaneer",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -20401,12 +23356,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "D. Undav",
-          "source": "api_football_post_match",
-          "matchId": 537351,
-          "matchUtcDate": "2026-06-14T17:00:00Z",
-          "homeTeam": "Germany",
-          "awayTeam": "Cura\u00e7ao",
-          "goalNumber": 8
+          "source": "api_football_post_match"
         }
       ],
       "substitutionEvents": [
@@ -20547,12 +23497,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "F. Wirtz",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -20567,12 +23512,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 2
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -20587,15 +23527,10 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "N. Brown",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 3
+            "source": "api_football_post_match"
           },
           {
-            "type": "Goal",
+            "type": "Penalty",
             "rawType": "Goal",
             "team": "Germany",
             "player": "K. Havertz",
@@ -20607,12 +23542,22 @@
             "detail": "Penalty",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 4
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "S. Hansen",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Antonisse",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -20627,12 +23572,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 5
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Musiala",
+            "minute": 64,
+            "extra": null,
+            "displayMinute": "64'",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "D. Undav",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "J. Locadia",
+            "minute": 65,
+            "extra": null,
+            "displayMinute": "65'",
+            "timer": "65:00",
+            "timerSeconds": 3900,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Margaritha",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -20647,12 +23617,52 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 6
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "F. Nmecha",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "L. Goretzka",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Tah",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "A. Rudiger",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "N. Brown",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "D. Raum",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -20667,12 +23677,37 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "J. Kimmich",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 7
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Germany",
+            "player": "J. Kimmich",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "W. Anton",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Cura\u00e7ao",
+            "player": "T. Chong",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "G. Kastaneer",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -20687,12 +23722,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "D. Undav",
-            "source": "api_football_post_match",
-            "matchId": 537351,
-            "matchUtcDate": "2026-06-14T17:00:00Z",
-            "homeTeam": "Germany",
-            "awayTeam": "Cura\u00e7ao",
-            "goalNumber": 8
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -20982,14 +24012,12 @@
         ],
         "referees": [
           {
-            "id": 289426,
-            "name": "Jalal Jayed",
-            "type": "REFEREE",
-            "nationality": "Morocco"
+            "name": "Jalal Jayed, Morocco",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489374,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -21051,10 +24079,8 @@
       },
       "referees": [
         {
-          "id": 76608,
-          "name": "Ismail Elfath",
-          "type": "REFEREE",
-          "nationality": "United States"
+          "name": "Ismail Elfath, USA",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -21139,6 +24165,7 @@
           "goalNumber": 4
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -21153,12 +24180,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Gravenberch",
-          "source": "api_football_post_match",
-          "matchId": 537357,
-          "matchUtcDate": "2026-06-14T20:00:00Z",
-          "homeTeam": "Netherlands",
-          "awayTeam": "Japan",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -21173,12 +24195,22 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "T. Kubo",
-          "source": "api_football_post_match",
-          "matchId": 537357,
-          "matchUtcDate": "2026-06-14T20:00:00Z",
-          "homeTeam": "Netherlands",
-          "awayTeam": "Japan",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Netherlands",
+          "player": "Crysencio Summerville",
+          "minute": 61,
+          "extra": null,
+          "displayMinute": "61'",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -21193,12 +24225,172 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Gravenberch",
-          "source": "api_football_post_match",
-          "matchId": 537357,
-          "matchUtcDate": "2026-06-14T20:00:00Z",
-          "homeTeam": "Netherlands",
-          "awayTeam": "Japan",
-          "goalNumber": 3
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "D. Maeda",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "J. Ito",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "D. Malen",
+          "minute": 70,
+          "extra": null,
+          "displayMinute": "70'",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "M. Depay",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "T. Reijnders",
+          "minute": 70,
+          "extra": null,
+          "displayMinute": "70'",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Q. Timber",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "C. Summerville",
+          "minute": 70,
+          "extra": null,
+          "displayMinute": "70'",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "T. Koopmeiners",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "T. Watanabe",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "T. Tomiyasu",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "R. Doan",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Y. Sugawara",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "T. Kubo",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "K. Ogawa",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "R. Gravenberch",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "N. Ake",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Netherlands",
+          "player": "Memphis Depay",
+          "minute": 83,
+          "extra": null,
+          "displayMinute": "83'",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Japan",
+          "player": "A. Ueda",
+          "minute": 84,
+          "extra": null,
+          "displayMinute": "84'",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "K. Shiogai",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Netherlands",
+          "player": "C. Gakpo",
+          "minute": 85,
+          "extra": null,
+          "displayMinute": "85'",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "B. Brobbey",
+          "source": "api_football_post_match"
         },
         {
           "type": "Goal",
@@ -21213,12 +24405,22 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "K. Ogawa",
-          "source": "api_football_post_match",
-          "matchId": 537357,
-          "matchUtcDate": "2026-06-14T20:00:00Z",
-          "homeTeam": "Netherlands",
-          "awayTeam": "Japan",
-          "goalNumber": 4
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Netherlands",
+          "player": "Micky van de Ven",
+          "minute": 90,
+          "extra": 1,
+          "displayMinute": "90+1'",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -21436,12 +24638,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Gravenberch",
-            "source": "api_football_post_match",
-            "matchId": 537357,
-            "matchUtcDate": "2026-06-14T20:00:00Z",
-            "homeTeam": "Netherlands",
-            "awayTeam": "Japan",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -21456,12 +24653,22 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "T. Kubo",
-            "source": "api_football_post_match",
-            "matchId": 537357,
-            "matchUtcDate": "2026-06-14T20:00:00Z",
-            "homeTeam": "Netherlands",
-            "awayTeam": "Japan",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Netherlands",
+            "player": "Crysencio Summerville",
+            "minute": 61,
+            "extra": null,
+            "displayMinute": "61'",
+            "timer": "61:00",
+            "timerSeconds": 3660,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -21476,12 +24683,172 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Gravenberch",
-            "source": "api_football_post_match",
-            "matchId": 537357,
-            "matchUtcDate": "2026-06-14T20:00:00Z",
-            "homeTeam": "Netherlands",
-            "awayTeam": "Japan",
-            "goalNumber": 3
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "D. Maeda",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "J. Ito",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "D. Malen",
+            "minute": 70,
+            "extra": null,
+            "displayMinute": "70'",
+            "timer": "70:00",
+            "timerSeconds": 4200,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "M. Depay",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "T. Reijnders",
+            "minute": 70,
+            "extra": null,
+            "displayMinute": "70'",
+            "timer": "70:00",
+            "timerSeconds": 4200,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Q. Timber",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "C. Summerville",
+            "minute": 70,
+            "extra": null,
+            "displayMinute": "70'",
+            "timer": "70:00",
+            "timerSeconds": 4200,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "T. Koopmeiners",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "T. Watanabe",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "T. Tomiyasu",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "R. Doan",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Y. Sugawara",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "T. Kubo",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "K. Ogawa",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "R. Gravenberch",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "N. Ake",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Netherlands",
+            "player": "Memphis Depay",
+            "minute": 83,
+            "extra": null,
+            "displayMinute": "83'",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Japan",
+            "player": "A. Ueda",
+            "minute": 84,
+            "extra": null,
+            "displayMinute": "84'",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "K. Shiogai",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Netherlands",
+            "player": "C. Gakpo",
+            "minute": 85,
+            "extra": null,
+            "displayMinute": "85'",
+            "timer": "85:00",
+            "timerSeconds": 5100,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "B. Brobbey",
+            "source": "api_football_post_match"
           },
           {
             "type": "Goal",
@@ -21496,12 +24863,22 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "K. Ogawa",
-            "source": "api_football_post_match",
-            "matchId": 537357,
-            "matchUtcDate": "2026-06-14T20:00:00Z",
-            "homeTeam": "Netherlands",
-            "awayTeam": "Japan",
-            "goalNumber": 4
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Netherlands",
+            "player": "Micky van de Ven",
+            "minute": 90,
+            "extra": 1,
+            "displayMinute": "90+1'",
+            "timer": "91:00",
+            "timerSeconds": 5460,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -21787,14 +25164,12 @@
         ],
         "referees": [
           {
-            "id": 76608,
-            "name": "Ismail Elfath",
-            "type": "REFEREE",
-            "nationality": "United States"
+            "name": "Ismail Elfath, USA",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489376,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -21856,10 +25231,8 @@
       },
       "referees": [
         {
-          "id": 43918,
-          "name": "Fran\u00e7ois Letexier",
-          "type": "REFEREE",
-          "nationality": "France"
+          "name": "Fran\u00e7ois Letexier, France",
+          "type": "REFEREE"
         }
       ],
       "goalEvents": [
@@ -21884,7 +25257,203 @@
           "goalNumber": 1
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Ivory Coast",
+          "player": "Seko Fofana",
+          "minute": 28,
+          "extra": null,
+          "displayMinute": "28'",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Ivory Coast",
+          "player": "Franck Kessi\u00e9",
+          "minute": 38,
+          "extra": null,
+          "displayMinute": "38'",
+          "timer": "38:00",
+          "timerSeconds": 2280,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Ivory Coast",
+          "player": "Gu\u00e9la Dou\u00e9",
+          "minute": 40,
+          "extra": null,
+          "displayMinute": "40'",
+          "timer": "40:00",
+          "timerSeconds": 2400,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "B. Toure",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "A. Diallo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "E. Wahi",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Bonny",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "A. Minda",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Angulo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "J. Yeboah",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "A. Preciado",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "A. Franco",
+          "minute": 62,
+          "extra": null,
+          "displayMinute": "62'",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "J. Porozo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Ecuador",
+          "player": "Jackson Porozo",
+          "minute": 73,
+          "extra": null,
+          "displayMinute": "73'",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "S. Fofana",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "I. Sangare",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "N. Pepe",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "C. Inao Oulai",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ecuador",
+          "player": "E. Valencia",
+          "minute": 77,
+          "extra": null,
+          "displayMinute": "77'",
+          "timer": "77:00",
+          "timerSeconds": 4620,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "K. Rodriguez",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Ivory Coast",
+          "player": "G. Doue",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "O. Kossounou",
+          "source": "api_football_post_match"
+        },
         {
           "type": "Goal",
           "rawType": "Goal",
@@ -21898,12 +25467,7 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "W. Singo",
-          "source": "api_football_post_match",
-          "matchId": 537352,
-          "matchUtcDate": "2026-06-14T23:00:00Z",
-          "homeTeam": "Ivory Coast",
-          "awayTeam": "Ecuador",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -22109,6 +25673,201 @@
       "matchDetails": {
         "events": [
           {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Ivory Coast",
+            "player": "Seko Fofana",
+            "minute": 28,
+            "extra": null,
+            "displayMinute": "28'",
+            "timer": "28:00",
+            "timerSeconds": 1680,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Ivory Coast",
+            "player": "Franck Kessi\u00e9",
+            "minute": 38,
+            "extra": null,
+            "displayMinute": "38'",
+            "timer": "38:00",
+            "timerSeconds": 2280,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Ivory Coast",
+            "player": "Gu\u00e9la Dou\u00e9",
+            "minute": 40,
+            "extra": null,
+            "displayMinute": "40'",
+            "timer": "40:00",
+            "timerSeconds": 2400,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "B. Toure",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "A. Diallo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "E. Wahi",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Bonny",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ecuador",
+            "player": "A. Minda",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Angulo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ecuador",
+            "player": "J. Yeboah",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "A. Preciado",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ecuador",
+            "player": "A. Franco",
+            "minute": 62,
+            "extra": null,
+            "displayMinute": "62'",
+            "timer": "62:00",
+            "timerSeconds": 3720,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "J. Porozo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Ecuador",
+            "player": "Jackson Porozo",
+            "minute": 73,
+            "extra": null,
+            "displayMinute": "73'",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "S. Fofana",
+            "minute": 77,
+            "extra": null,
+            "displayMinute": "77'",
+            "timer": "77:00",
+            "timerSeconds": 4620,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "I. Sangare",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "N. Pepe",
+            "minute": 77,
+            "extra": null,
+            "displayMinute": "77'",
+            "timer": "77:00",
+            "timerSeconds": 4620,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "C. Inao Oulai",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ecuador",
+            "player": "E. Valencia",
+            "minute": 77,
+            "extra": null,
+            "displayMinute": "77'",
+            "timer": "77:00",
+            "timerSeconds": 4620,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "K. Rodriguez",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Ivory Coast",
+            "player": "G. Doue",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "O. Kossounou",
+            "source": "api_football_post_match"
+          },
+          {
             "type": "Goal",
             "rawType": "Goal",
             "team": "Ivory Coast",
@@ -22121,12 +25880,7 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "W. Singo",
-            "source": "api_football_post_match",
-            "matchId": 537352,
-            "matchUtcDate": "2026-06-14T23:00:00Z",
-            "homeTeam": "Ivory Coast",
-            "awayTeam": "Ecuador",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -22352,14 +26106,12 @@
         ],
         "referees": [
           {
-            "id": 43918,
-            "name": "Fran\u00e7ois Letexier",
-            "type": "REFEREE",
-            "nationality": "France"
+            "name": "Fran\u00e7ois Letexier, France",
+            "type": "REFEREE"
           }
         ],
         "apiFootballFixtureId": 1489375,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
