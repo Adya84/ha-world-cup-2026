@@ -5744,13 +5744,13 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 4860,
-    "clock_seconds": 4860,
-    "phase_start": "2026-06-16T23:44:06.606318+00:00",
+    "base_seconds": 4920,
+    "clock_seconds": 4920,
+    "phase_start": "2026-06-16T23:44:34.688029+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "81'",
-    "manualClockText": "81'",
-    "lastApiSync": "2026-06-16T23:44:06.606318+00:00",
+    "displayMinute": "82'",
+    "manualClockText": "82'",
+    "lastApiSync": "2026-06-16T23:44:34.688029+00:00",
     "apiFootballFixtureId": 1539016,
     "events": [
       {
@@ -5947,6 +5947,21 @@
         "comments": null,
         "assist": "Meme",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Norway",
+        "player": "M. Odegaard",
+        "minute": 81,
+        "extra": null,
+        "displayMinute": "81'",
+        "timer": "81:00",
+        "timerSeconds": 4860,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "P. Berg",
+        "source": "api_football"
       }
     ],
     "substitutionEvents": [
@@ -6083,6 +6098,21 @@
         "detail": "Substitution 5",
         "comments": null,
         "assist": "Meme",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Norway",
+        "player": "M. Odegaard",
+        "minute": 81,
+        "extra": null,
+        "displayMinute": "81'",
+        "timer": "81:00",
+        "timerSeconds": 4860,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "P. Berg",
         "source": "api_football"
       }
     ]
