@@ -23,11 +23,11 @@
       },
       "id": 537391,
       "utcDate": "2026-06-16T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "2H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T22:53:28Z",
+      "lastUpdated": "2026-06-16T22:54:07Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -63,7 +63,25 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 89,
+      "liveSource": "api_football",
+      "minute": 90,
+      "clockSeconds": 5400,
+      "displayMinute": "90'",
+      "manualClockText": "90'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-16T20:54:10.583624+00:00",
+      "manualClock": {
+        "seconds": 5400,
+        "timer": "90'",
+        "displayMinute": "90'",
+        "active": false,
+        "status": "2H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-16T20:54:10.583624+00:00"
+      },
+      "homeScore": 2,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
       "goalEvents": [
@@ -353,327 +371,193 @@
           "source": "api_football"
         }
       ],
+      "liveStatistics": {
+        "home": {
+          "team": "France",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 7
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 1
+            },
+            {
+              "type": "Total Shots",
+              "value": 10
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 2
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 7
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 3
+            },
+            {
+              "type": "Fouls",
+              "value": 4
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 6
+            },
+            {
+              "type": "Offsides",
+              "value": 1
+            },
+            {
+              "type": "Ball Possession",
+              "value": "55%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 1
+            },
+            {
+              "type": "Total passes",
+              "value": 525
+            },
+            {
+              "type": "Passes accurate",
+              "value": 463
+            },
+            {
+              "type": "Passes %",
+              "value": "88%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "1.86"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "-0.25"
+            }
+          ],
+          "corners": 6,
+          "shotsOnGoal": 7,
+          "shotsOffGoal": 1,
+          "totalShots": 10,
+          "possession": "55%",
+          "fouls": 4,
+          "offsides": 1,
+          "yellowCards": null,
+          "redCards": null
+        },
+        "away": {
+          "team": "Senegal",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 1
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 3
+            },
+            {
+              "type": "Total Shots",
+              "value": 5
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 3
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 2
+            },
+            {
+              "type": "Fouls",
+              "value": 7
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 3
+            },
+            {
+              "type": "Offsides",
+              "value": 3
+            },
+            {
+              "type": "Ball Possession",
+              "value": "45%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 5
+            },
+            {
+              "type": "Total passes",
+              "value": 432
+            },
+            {
+              "type": "Passes accurate",
+              "value": 371
+            },
+            {
+              "type": "Passes %",
+              "value": "86%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.44"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "-0.25"
+            }
+          ],
+          "corners": 3,
+          "shotsOnGoal": 1,
+          "shotsOffGoal": 3,
+          "totalShots": 5,
+          "possession": "45%",
+          "fouls": 7,
+          "offsides": 3,
+          "yellowCards": null,
+          "redCards": null
+        }
+      },
+      "homeCorners": 6,
+      "awayCorners": 3,
+      "homeShotsOnGoal": 7,
+      "awayShotsOnGoal": 1,
+      "homePossession": "55%",
+      "awayPossession": "45%",
+      "homeFouls": 4,
+      "awayFouls": 7,
+      "homeOffsides": 1,
+      "awayOffsides": 3,
       "apiFootballFixtureId": 1489383,
-      "manualClock": {
-        "seconds": 5340,
-        "timer": "89:00",
-        "displayMinute": "89'",
-        "active": true,
-        "status": "IN_PLAY",
-        "source": "local_status_timer"
-      },
-      "fallbackClock": 5340,
-      "fallbackClockText": "89:00",
-      "manualClockText": "89:00",
-      "displayMinute": "89'",
-      "clockSeconds": 5340,
-      "matchDetails": {
-        "events": [
-          {
-            "type": "Goal",
-            "rawType": "Goal",
-            "team": "France",
-            "player": "K. Mbappe",
-            "minute": 66,
-            "extra": null,
-            "displayMinute": "66'",
-            "timer": "66:00",
-            "timerSeconds": 3960,
-            "detail": "Normal Goal",
-            "comments": null,
-            "assist": "M. Olise",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "I. Sarr",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "I. Mbaye",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "L. Camara",
-            "minute": 76,
-            "extra": null,
-            "displayMinute": "76'",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "H. Diarra",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "France",
-            "player": "O. Dembele",
-            "minute": 80,
-            "extra": null,
-            "displayMinute": "80'",
-            "timer": "80:00",
-            "timerSeconds": 4800,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "B. Barcola",
-            "source": "api_football"
-          },
-          {
-            "type": "Goal",
-            "rawType": "Goal",
-            "team": "France",
-            "player": "B. Barcola",
-            "minute": 82,
-            "extra": null,
-            "displayMinute": "82'",
-            "timer": "82:00",
-            "timerSeconds": 4920,
-            "detail": "Normal Goal",
-            "comments": null,
-            "assist": "A. Rabiot",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "N. Jackson",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "B. Dieng",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "P. Gueye",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "C. Ndiaye",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "France",
-            "player": "D. Doue",
-            "minute": 87,
-            "extra": null,
-            "displayMinute": "87'",
-            "timer": "87:00",
-            "timerSeconds": 5220,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "R. Cherki",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "I. Gueye",
-            "minute": 88,
-            "extra": null,
-            "displayMinute": "88'",
-            "timer": "88:00",
-            "timerSeconds": 5280,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "P. Ciss",
-            "source": "api_football"
-          }
-        ],
-        "goalEvents": [
-          {
-            "type": "Goal",
-            "rawType": "Goal",
-            "team": "France",
-            "player": "K. Mbappe",
-            "minute": 66,
-            "extra": null,
-            "displayMinute": "66'",
-            "timer": "66:00",
-            "timerSeconds": 3960,
-            "detail": "Normal Goal",
-            "comments": null,
-            "assist": "M. Olise",
-            "source": "api_football",
-            "matchId": 537391,
-            "matchUtcDate": "2026-06-16T19:00:00Z",
-            "homeTeam": "France",
-            "awayTeam": "Senegal",
-            "goalNumber": 1
-          },
-          {
-            "type": "Goal",
-            "rawType": "Goal",
-            "team": "France",
-            "player": "B. Barcola",
-            "minute": 82,
-            "extra": null,
-            "displayMinute": "82'",
-            "timer": "82:00",
-            "timerSeconds": 4920,
-            "detail": "Normal Goal",
-            "comments": null,
-            "assist": "A. Rabiot",
-            "source": "api_football",
-            "matchId": 537391,
-            "matchUtcDate": "2026-06-16T19:00:00Z",
-            "homeTeam": "France",
-            "awayTeam": "Senegal",
-            "goalNumber": 2
-          }
-        ],
-        "cardEvents": [],
-        "substitutionEvents": [
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "I. Sarr",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "I. Mbaye",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "L. Camara",
-            "minute": 76,
-            "extra": null,
-            "displayMinute": "76'",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "H. Diarra",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "France",
-            "player": "O. Dembele",
-            "minute": 80,
-            "extra": null,
-            "displayMinute": "80'",
-            "timer": "80:00",
-            "timerSeconds": 4800,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "B. Barcola",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "N. Jackson",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "B. Dieng",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "P. Gueye",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "C. Ndiaye",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "France",
-            "player": "D. Doue",
-            "minute": 87,
-            "extra": null,
-            "displayMinute": "87'",
-            "timer": "87:00",
-            "timerSeconds": 5220,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "R. Cherki",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "I. Gueye",
-            "minute": 88,
-            "extra": null,
-            "displayMinute": "88'",
-            "timer": "88:00",
-            "timerSeconds": 5280,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "P. Ciss",
-            "source": "api_football"
-          }
-        ],
-        "varEvents": [],
-        "referees": [
-          {
-            "name": "Alireza Faghani, Australia",
-            "type": "REFEREE"
-          }
-        ],
-        "officials": [],
-        "lineups": [],
-        "teamStatistics": [],
-        "playerStatistics": [],
-        "liveStatistics": {},
-        "apiFootballFixtureId": 1489383,
-        "goalEventsSource": "api_football_live"
-      },
-      "lineups": [],
-      "teamStatistics": [],
-      "playerStatistics": [],
-      "liveStatistics": {}
+      "fallbackClock": 5400,
+      "fallbackClockText": "90'"
     }
   ],
   "live": [
@@ -700,11 +584,11 @@
       },
       "id": 537391,
       "utcDate": "2026-06-16T19:00:00Z",
-      "status": "IN_PLAY",
+      "status": "2H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_I",
-      "lastUpdated": "2026-06-16T22:53:28Z",
+      "lastUpdated": "2026-06-16T22:54:07Z",
       "homeTeam": {
         "id": 773,
         "name": "France",
@@ -740,7 +624,25 @@
           "type": "REFEREE"
         }
       ],
-      "minute": 89,
+      "liveSource": "api_football",
+      "minute": 90,
+      "clockSeconds": 5400,
+      "displayMinute": "90'",
+      "manualClockText": "90'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-16T20:54:10.583624+00:00",
+      "manualClock": {
+        "seconds": 5400,
+        "timer": "90'",
+        "displayMinute": "90'",
+        "active": false,
+        "status": "2H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-16T20:54:10.583624+00:00"
+      },
+      "homeScore": 2,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
       "apiFootballStatusLong": "Second Half",
       "goalEvents": [
@@ -1030,327 +932,193 @@
           "source": "api_football"
         }
       ],
+      "liveStatistics": {
+        "home": {
+          "team": "France",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 7
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 1
+            },
+            {
+              "type": "Total Shots",
+              "value": 10
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 2
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 7
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 3
+            },
+            {
+              "type": "Fouls",
+              "value": 4
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 6
+            },
+            {
+              "type": "Offsides",
+              "value": 1
+            },
+            {
+              "type": "Ball Possession",
+              "value": "55%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 1
+            },
+            {
+              "type": "Total passes",
+              "value": 525
+            },
+            {
+              "type": "Passes accurate",
+              "value": 463
+            },
+            {
+              "type": "Passes %",
+              "value": "88%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "1.86"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "-0.25"
+            }
+          ],
+          "corners": 6,
+          "shotsOnGoal": 7,
+          "shotsOffGoal": 1,
+          "totalShots": 10,
+          "possession": "55%",
+          "fouls": 4,
+          "offsides": 1,
+          "yellowCards": null,
+          "redCards": null
+        },
+        "away": {
+          "team": "Senegal",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 1
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 3
+            },
+            {
+              "type": "Total Shots",
+              "value": 5
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 3
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 2
+            },
+            {
+              "type": "Fouls",
+              "value": 7
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 3
+            },
+            {
+              "type": "Offsides",
+              "value": 3
+            },
+            {
+              "type": "Ball Possession",
+              "value": "45%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 5
+            },
+            {
+              "type": "Total passes",
+              "value": 432
+            },
+            {
+              "type": "Passes accurate",
+              "value": 371
+            },
+            {
+              "type": "Passes %",
+              "value": "86%"
+            },
+            {
+              "type": "expected_goals",
+              "value": "0.44"
+            },
+            {
+              "type": "goals_prevented",
+              "value": "-0.25"
+            }
+          ],
+          "corners": 3,
+          "shotsOnGoal": 1,
+          "shotsOffGoal": 3,
+          "totalShots": 5,
+          "possession": "45%",
+          "fouls": 7,
+          "offsides": 3,
+          "yellowCards": null,
+          "redCards": null
+        }
+      },
+      "homeCorners": 6,
+      "awayCorners": 3,
+      "homeShotsOnGoal": 7,
+      "awayShotsOnGoal": 1,
+      "homePossession": "55%",
+      "awayPossession": "45%",
+      "homeFouls": 4,
+      "awayFouls": 7,
+      "homeOffsides": 1,
+      "awayOffsides": 3,
       "apiFootballFixtureId": 1489383,
-      "manualClock": {
-        "seconds": 5340,
-        "timer": "89:00",
-        "displayMinute": "89'",
-        "active": true,
-        "status": "IN_PLAY",
-        "source": "local_status_timer"
-      },
-      "fallbackClock": 5340,
-      "fallbackClockText": "89:00",
-      "manualClockText": "89:00",
-      "displayMinute": "89'",
-      "clockSeconds": 5340,
-      "matchDetails": {
-        "events": [
-          {
-            "type": "Goal",
-            "rawType": "Goal",
-            "team": "France",
-            "player": "K. Mbappe",
-            "minute": 66,
-            "extra": null,
-            "displayMinute": "66'",
-            "timer": "66:00",
-            "timerSeconds": 3960,
-            "detail": "Normal Goal",
-            "comments": null,
-            "assist": "M. Olise",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "I. Sarr",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "I. Mbaye",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "L. Camara",
-            "minute": 76,
-            "extra": null,
-            "displayMinute": "76'",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "H. Diarra",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "France",
-            "player": "O. Dembele",
-            "minute": 80,
-            "extra": null,
-            "displayMinute": "80'",
-            "timer": "80:00",
-            "timerSeconds": 4800,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "B. Barcola",
-            "source": "api_football"
-          },
-          {
-            "type": "Goal",
-            "rawType": "Goal",
-            "team": "France",
-            "player": "B. Barcola",
-            "minute": 82,
-            "extra": null,
-            "displayMinute": "82'",
-            "timer": "82:00",
-            "timerSeconds": 4920,
-            "detail": "Normal Goal",
-            "comments": null,
-            "assist": "A. Rabiot",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "N. Jackson",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "B. Dieng",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "P. Gueye",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "C. Ndiaye",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "France",
-            "player": "D. Doue",
-            "minute": 87,
-            "extra": null,
-            "displayMinute": "87'",
-            "timer": "87:00",
-            "timerSeconds": 5220,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "R. Cherki",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "I. Gueye",
-            "minute": 88,
-            "extra": null,
-            "displayMinute": "88'",
-            "timer": "88:00",
-            "timerSeconds": 5280,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "P. Ciss",
-            "source": "api_football"
-          }
-        ],
-        "goalEvents": [
-          {
-            "type": "Goal",
-            "rawType": "Goal",
-            "team": "France",
-            "player": "K. Mbappe",
-            "minute": 66,
-            "extra": null,
-            "displayMinute": "66'",
-            "timer": "66:00",
-            "timerSeconds": 3960,
-            "detail": "Normal Goal",
-            "comments": null,
-            "assist": "M. Olise",
-            "source": "api_football",
-            "matchId": 537391,
-            "matchUtcDate": "2026-06-16T19:00:00Z",
-            "homeTeam": "France",
-            "awayTeam": "Senegal",
-            "goalNumber": 1
-          },
-          {
-            "type": "Goal",
-            "rawType": "Goal",
-            "team": "France",
-            "player": "B. Barcola",
-            "minute": 82,
-            "extra": null,
-            "displayMinute": "82'",
-            "timer": "82:00",
-            "timerSeconds": 4920,
-            "detail": "Normal Goal",
-            "comments": null,
-            "assist": "A. Rabiot",
-            "source": "api_football",
-            "matchId": 537391,
-            "matchUtcDate": "2026-06-16T19:00:00Z",
-            "homeTeam": "France",
-            "awayTeam": "Senegal",
-            "goalNumber": 2
-          }
-        ],
-        "cardEvents": [],
-        "substitutionEvents": [
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "I. Sarr",
-            "minute": 75,
-            "extra": null,
-            "displayMinute": "75'",
-            "timer": "75:00",
-            "timerSeconds": 4500,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "I. Mbaye",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "L. Camara",
-            "minute": 76,
-            "extra": null,
-            "displayMinute": "76'",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "H. Diarra",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "France",
-            "player": "O. Dembele",
-            "minute": 80,
-            "extra": null,
-            "displayMinute": "80'",
-            "timer": "80:00",
-            "timerSeconds": 4800,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "B. Barcola",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "N. Jackson",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "B. Dieng",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "P. Gueye",
-            "minute": 83,
-            "extra": null,
-            "displayMinute": "83'",
-            "timer": "83:00",
-            "timerSeconds": 4980,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "C. Ndiaye",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "France",
-            "player": "D. Doue",
-            "minute": 87,
-            "extra": null,
-            "displayMinute": "87'",
-            "timer": "87:00",
-            "timerSeconds": 5220,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "R. Cherki",
-            "source": "api_football"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Senegal",
-            "player": "I. Gueye",
-            "minute": 88,
-            "extra": null,
-            "displayMinute": "88'",
-            "timer": "88:00",
-            "timerSeconds": 5280,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "P. Ciss",
-            "source": "api_football"
-          }
-        ],
-        "varEvents": [],
-        "referees": [
-          {
-            "name": "Alireza Faghani, Australia",
-            "type": "REFEREE"
-          }
-        ],
-        "officials": [],
-        "lineups": [],
-        "teamStatistics": [],
-        "playerStatistics": [],
-        "liveStatistics": {},
-        "apiFootballFixtureId": 1489383,
-        "goalEventsSource": "api_football_live"
-      },
-      "lineups": [],
-      "teamStatistics": [],
-      "playerStatistics": [],
-      "liveStatistics": {}
+      "fallbackClock": 5400,
+      "fallbackClockText": "90'"
     }
   ]
 }
