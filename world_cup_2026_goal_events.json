@@ -5355,7 +5355,7 @@
   "537391": {
     "goalEvents": [],
     "clock_active": false,
-    "status": "IN_PLAY",
+    "status": "1H",
     "homeScore": 0,
     "awayScore": 0,
     "utcDate": "2026-06-16T19:00:00Z",
@@ -5363,14 +5363,18 @@
     "awayTeam": "Senegal",
     "referees": [
       {
-        "id": 55970,
-        "name": "Alireza Faghani",
-        "type": "REFEREE",
-        "nationality": "Iran"
+        "name": "Alireza Faghani, Australia",
+        "type": "REFEREE"
       }
     ],
-    "phase_start": null,
-    "source": "awaiting_api_football_minute"
+    "phase_start": "2026-06-16T19:03:28.475881+00:00",
+    "source": "api_football_live_minute",
+    "base_seconds": 60,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
+    "manualClockText": "1'",
+    "lastApiSync": "2026-06-16T19:03:28.475881+00:00",
+    "apiFootballFixtureId": 1489383
   },
   "537392": {
     "goalEvents": [],
