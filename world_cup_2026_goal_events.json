@@ -5746,11 +5746,11 @@
     ],
     "base_seconds": 5160,
     "clock_seconds": 5160,
-    "phase_start": "2026-06-16T23:48:29.748393+00:00",
+    "phase_start": "2026-06-16T23:48:57.471927+00:00",
     "source": "api_football_live_minute",
     "displayMinute": "86'",
     "manualClockText": "86'",
-    "lastApiSync": "2026-06-16T23:48:29.748393+00:00",
+    "lastApiSync": "2026-06-16T23:48:57.471927+00:00",
     "apiFootballFixtureId": 1539016,
     "events": [
       {
@@ -5962,6 +5962,21 @@
         "comments": null,
         "assist": "P. Berg",
         "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Iraq",
+        "player": "Z. Tahseen",
+        "minute": 86,
+        "extra": null,
+        "displayMinute": "86'",
+        "timer": "86:00",
+        "timerSeconds": 5160,
+        "detail": "Yellow Card",
+        "comments": null,
+        "assist": null,
+        "source": "api_football"
       }
     ],
     "substitutionEvents": [
@@ -6113,6 +6128,23 @@
         "detail": "Substitution 5",
         "comments": null,
         "assist": "P. Berg",
+        "source": "api_football"
+      }
+    ],
+    "cardEvents": [
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Iraq",
+        "player": "Z. Tahseen",
+        "minute": 86,
+        "extra": null,
+        "displayMinute": "86'",
+        "timer": "86:00",
+        "timerSeconds": 5160,
+        "detail": "Yellow Card",
+        "comments": null,
+        "assist": null,
         "source": "api_football"
       }
     ]
