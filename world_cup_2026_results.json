@@ -1225,6 +1225,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1538999,
       "goalEvents": [
         {
           "type": "Goal",
@@ -1287,7 +1288,6 @@
           "goalNumber": 3
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -1302,67 +1302,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "V. Coufal",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Lee Jae-Sung",
-          "minute": 62,
-          "extra": null,
-          "displayMinute": "62'",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "Hwang Hee-Chan",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Czechia",
-          "player": "P. Sulc",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "A. Hlozek",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Czechia",
-          "player": "P. Schick",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "T. Chory",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Czechia",
-          "player": "L. Provod",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "M. Sadilek",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537328,
+          "matchUtcDate": "2026-06-12T02:00:00Z",
+          "homeTeam": "Korea Republic",
+          "awayTeam": "Czechia",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -1377,37 +1322,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Lee Kang-In",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Son Heung-Min",
-          "minute": 69,
-          "extra": null,
-          "displayMinute": "69'",
-          "timer": "69:00",
-          "timerSeconds": 4140,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "Oh Hyeon-Gyu",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Lee Tae-Seok",
-          "minute": 69,
-          "extra": null,
-          "displayMinute": "69'",
-          "timer": "69:00",
-          "timerSeconds": 4140,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "Eom Ji-Sung",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537328,
+          "matchUtcDate": "2026-06-12T02:00:00Z",
+          "homeTeam": "Korea Republic",
+          "awayTeam": "Czechia",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -1422,67 +1342,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Hwang In-Beom",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Hwang In-Beom",
-          "minute": 84,
-          "extra": null,
-          "displayMinute": "84'",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "Kim Jin-Gyu",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Paik Seung-Ho",
-          "minute": 84,
-          "extra": null,
-          "displayMinute": "84'",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "Park Jin-Seob",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Czechia",
-          "player": "A. Sojka",
-          "minute": 84,
-          "extra": null,
-          "displayMinute": "84'",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "M. Chytil",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "South Korea",
-          "player": "Gi-Hyuk Lee",
-          "minute": 90,
-          "extra": 6,
-          "displayMinute": "90+6'",
-          "timer": "96:00",
-          "timerSeconds": 5760,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537328,
+          "matchUtcDate": "2026-06-12T02:00:00Z",
+          "homeTeam": "Korea Republic",
+          "awayTeam": "Czechia",
+          "goalNumber": 3
         }
       ],
       "cardEvents": [
@@ -1639,7 +1504,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1538999,
       "matchDetails": {
         "events": [
           {
@@ -1655,67 +1519,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "V. Coufal",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Lee Jae-Sung",
-            "minute": 62,
-            "extra": null,
-            "displayMinute": "62'",
-            "timer": "62:00",
-            "timerSeconds": 3720,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "Hwang Hee-Chan",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Czechia",
-            "player": "P. Sulc",
-            "minute": 64,
-            "extra": null,
-            "displayMinute": "64'",
-            "timer": "64:00",
-            "timerSeconds": 3840,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "A. Hlozek",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Czechia",
-            "player": "P. Schick",
-            "minute": 64,
-            "extra": null,
-            "displayMinute": "64'",
-            "timer": "64:00",
-            "timerSeconds": 3840,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "T. Chory",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Czechia",
-            "player": "L. Provod",
-            "minute": 64,
-            "extra": null,
-            "displayMinute": "64'",
-            "timer": "64:00",
-            "timerSeconds": 3840,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "M. Sadilek",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537328,
+            "matchUtcDate": "2026-06-12T02:00:00Z",
+            "homeTeam": "Korea Republic",
+            "awayTeam": "Czechia",
+            "goalNumber": 1
           },
           {
             "type": "Goal",
@@ -1730,37 +1539,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Lee Kang-In",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Son Heung-Min",
-            "minute": 69,
-            "extra": null,
-            "displayMinute": "69'",
-            "timer": "69:00",
-            "timerSeconds": 4140,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "Oh Hyeon-Gyu",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Lee Tae-Seok",
-            "minute": 69,
-            "extra": null,
-            "displayMinute": "69'",
-            "timer": "69:00",
-            "timerSeconds": 4140,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "Eom Ji-Sung",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537328,
+            "matchUtcDate": "2026-06-12T02:00:00Z",
+            "homeTeam": "Korea Republic",
+            "awayTeam": "Czechia",
+            "goalNumber": 2
           },
           {
             "type": "Goal",
@@ -1775,67 +1559,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Hwang In-Beom",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Hwang In-Beom",
-            "minute": 84,
-            "extra": null,
-            "displayMinute": "84'",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "Kim Jin-Gyu",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Paik Seung-Ho",
-            "minute": 84,
-            "extra": null,
-            "displayMinute": "84'",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "Park Jin-Seob",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Czechia",
-            "player": "A. Sojka",
-            "minute": 84,
-            "extra": null,
-            "displayMinute": "84'",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "M. Chytil",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "South Korea",
-            "player": "Gi-Hyuk Lee",
-            "minute": 90,
-            "extra": 6,
-            "displayMinute": "90+6'",
-            "timer": "96:00",
-            "timerSeconds": 5760,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537328,
+            "matchUtcDate": "2026-06-12T02:00:00Z",
+            "homeTeam": "Korea Republic",
+            "awayTeam": "Czechia",
+            "goalNumber": 3
           }
         ],
         "goalEvents": [
@@ -2061,7 +1790,7 @@
           }
         ],
         "apiFootballFixtureId": 1538999,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     },
     {
@@ -12626,7 +12355,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489377,
       "goalEvents": [
         {
           "type": "Goal",
@@ -12669,7 +12397,38 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Egypt",
+          "player": "Marwan Attia",
+          "minute": 13,
+          "extra": null,
+          "displayMinute": "13'",
+          "timer": "13:00",
+          "timerSeconds": 780,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Belgium",
+          "player": "Timothy Castagne",
+          "minute": 14,
+          "extra": null,
+          "displayMinute": "14'",
+          "timer": "14:00",
+          "timerSeconds": 840,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
         {
           "type": "Goal",
           "rawType": "Goal",
@@ -12683,15 +12442,55 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Mohamed Salah",
-          "source": "api_football_post_match",
-          "matchId": 537363,
-          "matchUtcDate": "2026-06-15T19:00:00Z",
-          "homeTeam": "Belgium",
-          "awayTeam": "Egypt",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
-          "type": "Goal",
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Egypt",
+          "player": "Ahmed Fatouh",
+          "minute": 34,
+          "extra": null,
+          "displayMinute": "34'",
+          "timer": "34:00",
+          "timerSeconds": 2040,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "Amadou Onana",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Maxim De Cuyper",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "Timothy Castagne",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Nicolas Raskin",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Own Goal",
           "rawType": "Goal",
           "team": "Belgium",
           "player": "Mohamed Hany",
@@ -12703,12 +12502,142 @@
           "detail": "Own Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537363,
-          "matchUtcDate": "2026-06-15T19:00:00Z",
-          "homeTeam": "Belgium",
-          "awayTeam": "Egypt",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "Charles De Ketelaere",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Romelu Lukaku",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Emam Ashour",
+          "minute": 71,
+          "extra": null,
+          "displayMinute": "71'",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Rami Rabia",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Belgium",
+          "player": "Maxim De Cuyper",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Mohamed Salah",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Hamza Abdelkarim",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Mostafa Ziko",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Zizo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "Kevin De Bruyne",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Hans Vanaken",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "J\u00e9r\u00e9my Doku",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Mat\u00edas Fern\u00e1ndez-Pardo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Hamdy Fathy",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Ibrahim Adel",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Ahmed Fatouh",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Karim Hafez",
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -12925,8 +12854,39 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489377,
       "matchDetails": {
         "events": [
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Egypt",
+            "player": "Marwan Attia",
+            "minute": 13,
+            "extra": null,
+            "displayMinute": "13'",
+            "timer": "13:00",
+            "timerSeconds": 780,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Belgium",
+            "player": "Timothy Castagne",
+            "minute": 14,
+            "extra": null,
+            "displayMinute": "14'",
+            "timer": "14:00",
+            "timerSeconds": 840,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
           {
             "type": "Goal",
             "rawType": "Goal",
@@ -12940,15 +12900,55 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Mohamed Salah",
-            "source": "api_football_post_match",
-            "matchId": 537363,
-            "matchUtcDate": "2026-06-15T19:00:00Z",
-            "homeTeam": "Belgium",
-            "awayTeam": "Egypt",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
-            "type": "Goal",
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Egypt",
+            "player": "Ahmed Fatouh",
+            "minute": 34,
+            "extra": null,
+            "displayMinute": "34'",
+            "timer": "34:00",
+            "timerSeconds": 2040,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "Amadou Onana",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Maxim De Cuyper",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "Timothy Castagne",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Nicolas Raskin",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Own Goal",
             "rawType": "Goal",
             "team": "Belgium",
             "player": "Mohamed Hany",
@@ -12960,12 +12960,142 @@
             "detail": "Own Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537363,
-            "matchUtcDate": "2026-06-15T19:00:00Z",
-            "homeTeam": "Belgium",
-            "awayTeam": "Egypt",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "Charles De Ketelaere",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Romelu Lukaku",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Emam Ashour",
+            "minute": 71,
+            "extra": null,
+            "displayMinute": "71'",
+            "timer": "71:00",
+            "timerSeconds": 4260,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Rami Rabia",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Belgium",
+            "player": "Maxim De Cuyper",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Mohamed Salah",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Hamza Abdelkarim",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Mostafa Ziko",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Zizo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "Kevin De Bruyne",
+            "minute": 86,
+            "extra": null,
+            "displayMinute": "86'",
+            "timer": "86:00",
+            "timerSeconds": 5160,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "Hans Vanaken",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "J\u00e9r\u00e9my Doku",
+            "minute": 86,
+            "extra": null,
+            "displayMinute": "86'",
+            "timer": "86:00",
+            "timerSeconds": 5160,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Mat\u00edas Fern\u00e1ndez-Pardo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Hamdy Fathy",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "Ibrahim Adel",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Ahmed Fatouh",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Karim Hafez",
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -13231,7 +13361,7 @@
           }
         ],
         "apiFootballFixtureId": 1489377,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -13878,6 +14008,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489378,
       "goalEvents": [
         {
           "type": "Goal",
@@ -13960,7 +14091,6 @@
           "goalNumber": 4
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -13975,7 +14105,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -13990,37 +14125,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "A. Yousefi",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "M. Ghaedi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "S. Moghanlou",
-          "minute": 53,
-          "extra": null,
-          "displayMinute": "53'",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "A. Alipour",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -14035,7 +14145,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -14050,127 +14165,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Rezaeian",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "S. Ghoddos",
-          "minute": 65,
-          "extra": null,
-          "displayMinute": "65'",
-          "timer": "65:00",
-          "timerSeconds": 3900,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "E. Hajsafi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "L. Cacace",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "B. Old",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "C. McCowatt",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "R. Thomas",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "T. Payne",
-          "minute": 78,
-          "extra": null,
-          "displayMinute": "78'",
-          "timer": "78:00",
-          "timerSeconds": 4680,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "C. Elliot",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "M. Taremi",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "A. Hosseinzadeh",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Iran",
-          "player": "E. Hajsafi",
-          "minute": 89,
-          "extra": null,
-          "displayMinute": "89'",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "S. Singh",
-          "minute": 90,
-          "extra": 2,
-          "displayMinute": "90+2'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "J. Randall",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "M. Stamenic",
-          "minute": 90,
-          "extra": 2,
-          "displayMinute": "90+2'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "T. Bindon",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 4
         }
       ],
       "cardEvents": [
@@ -14327,7 +14327,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489378,
       "matchDetails": {
         "events": [
           {
@@ -14343,7 +14342,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 1
           },
           {
             "type": "Goal",
@@ -14358,37 +14362,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "A. Yousefi",
-            "minute": 46,
-            "extra": null,
-            "displayMinute": "46'",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "M. Ghaedi",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "S. Moghanlou",
-            "minute": 53,
-            "extra": null,
-            "displayMinute": "53'",
-            "timer": "53:00",
-            "timerSeconds": 3180,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "A. Alipour",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 2
           },
           {
             "type": "Goal",
@@ -14403,7 +14382,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 3
           },
           {
             "type": "Goal",
@@ -14418,127 +14402,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Rezaeian",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "S. Ghoddos",
-            "minute": 65,
-            "extra": null,
-            "displayMinute": "65'",
-            "timer": "65:00",
-            "timerSeconds": 3900,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "E. Hajsafi",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "L. Cacace",
-            "minute": 68,
-            "extra": null,
-            "displayMinute": "68'",
-            "timer": "68:00",
-            "timerSeconds": 4080,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "B. Old",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "C. McCowatt",
-            "minute": 68,
-            "extra": null,
-            "displayMinute": "68'",
-            "timer": "68:00",
-            "timerSeconds": 4080,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "R. Thomas",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "T. Payne",
-            "minute": 78,
-            "extra": null,
-            "displayMinute": "78'",
-            "timer": "78:00",
-            "timerSeconds": 4680,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "C. Elliot",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "M. Taremi",
-            "minute": 80,
-            "extra": null,
-            "displayMinute": "80'",
-            "timer": "80:00",
-            "timerSeconds": 4800,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "A. Hosseinzadeh",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Iran",
-            "player": "E. Hajsafi",
-            "minute": 89,
-            "extra": null,
-            "displayMinute": "89'",
-            "timer": "89:00",
-            "timerSeconds": 5340,
-            "detail": "Yellow Card",
-            "comments": "Tripping",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "S. Singh",
-            "minute": 90,
-            "extra": 2,
-            "displayMinute": "90+2'",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "J. Randall",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "M. Stamenic",
-            "minute": 90,
-            "extra": 2,
-            "displayMinute": "90+2'",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "T. Bindon",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 4
           }
         ],
         "goalEvents": [
@@ -14784,7 +14653,7 @@
           }
         ],
         "apiFootballFixtureId": 1489378,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     }
   ],
@@ -16014,6 +15883,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1538999,
       "goalEvents": [
         {
           "type": "Goal",
@@ -16076,7 +15946,6 @@
           "goalNumber": 3
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -16091,67 +15960,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "V. Coufal",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Lee Jae-Sung",
-          "minute": 62,
-          "extra": null,
-          "displayMinute": "62'",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "Hwang Hee-Chan",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Czechia",
-          "player": "P. Sulc",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "A. Hlozek",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Czechia",
-          "player": "P. Schick",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "T. Chory",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Czechia",
-          "player": "L. Provod",
-          "minute": 64,
-          "extra": null,
-          "displayMinute": "64'",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "M. Sadilek",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537328,
+          "matchUtcDate": "2026-06-12T02:00:00Z",
+          "homeTeam": "Korea Republic",
+          "awayTeam": "Czechia",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -16166,37 +15980,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Lee Kang-In",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Son Heung-Min",
-          "minute": 69,
-          "extra": null,
-          "displayMinute": "69'",
-          "timer": "69:00",
-          "timerSeconds": 4140,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "Oh Hyeon-Gyu",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Lee Tae-Seok",
-          "minute": 69,
-          "extra": null,
-          "displayMinute": "69'",
-          "timer": "69:00",
-          "timerSeconds": 4140,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "Eom Ji-Sung",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537328,
+          "matchUtcDate": "2026-06-12T02:00:00Z",
+          "homeTeam": "Korea Republic",
+          "awayTeam": "Czechia",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -16211,67 +16000,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Hwang In-Beom",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Hwang In-Beom",
-          "minute": 84,
-          "extra": null,
-          "displayMinute": "84'",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "Kim Jin-Gyu",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "South Korea",
-          "player": "Paik Seung-Ho",
-          "minute": 84,
-          "extra": null,
-          "displayMinute": "84'",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "Park Jin-Seob",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Czechia",
-          "player": "A. Sojka",
-          "minute": 84,
-          "extra": null,
-          "displayMinute": "84'",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "M. Chytil",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "South Korea",
-          "player": "Gi-Hyuk Lee",
-          "minute": 90,
-          "extra": 6,
-          "displayMinute": "90+6'",
-          "timer": "96:00",
-          "timerSeconds": 5760,
-          "detail": "Yellow Card",
-          "comments": "Foul",
-          "assist": null,
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537328,
+          "matchUtcDate": "2026-06-12T02:00:00Z",
+          "homeTeam": "Korea Republic",
+          "awayTeam": "Czechia",
+          "goalNumber": 3
         }
       ],
       "cardEvents": [
@@ -16428,7 +16162,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1538999,
       "matchDetails": {
         "events": [
           {
@@ -16444,67 +16177,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "V. Coufal",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Lee Jae-Sung",
-            "minute": 62,
-            "extra": null,
-            "displayMinute": "62'",
-            "timer": "62:00",
-            "timerSeconds": 3720,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "Hwang Hee-Chan",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Czechia",
-            "player": "P. Sulc",
-            "minute": 64,
-            "extra": null,
-            "displayMinute": "64'",
-            "timer": "64:00",
-            "timerSeconds": 3840,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "A. Hlozek",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Czechia",
-            "player": "P. Schick",
-            "minute": 64,
-            "extra": null,
-            "displayMinute": "64'",
-            "timer": "64:00",
-            "timerSeconds": 3840,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "T. Chory",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Czechia",
-            "player": "L. Provod",
-            "minute": 64,
-            "extra": null,
-            "displayMinute": "64'",
-            "timer": "64:00",
-            "timerSeconds": 3840,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "M. Sadilek",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537328,
+            "matchUtcDate": "2026-06-12T02:00:00Z",
+            "homeTeam": "Korea Republic",
+            "awayTeam": "Czechia",
+            "goalNumber": 1
           },
           {
             "type": "Goal",
@@ -16519,37 +16197,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Lee Kang-In",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Son Heung-Min",
-            "minute": 69,
-            "extra": null,
-            "displayMinute": "69'",
-            "timer": "69:00",
-            "timerSeconds": 4140,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "Oh Hyeon-Gyu",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Lee Tae-Seok",
-            "minute": 69,
-            "extra": null,
-            "displayMinute": "69'",
-            "timer": "69:00",
-            "timerSeconds": 4140,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "Eom Ji-Sung",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537328,
+            "matchUtcDate": "2026-06-12T02:00:00Z",
+            "homeTeam": "Korea Republic",
+            "awayTeam": "Czechia",
+            "goalNumber": 2
           },
           {
             "type": "Goal",
@@ -16564,67 +16217,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Hwang In-Beom",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Hwang In-Beom",
-            "minute": 84,
-            "extra": null,
-            "displayMinute": "84'",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "Kim Jin-Gyu",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "South Korea",
-            "player": "Paik Seung-Ho",
-            "minute": 84,
-            "extra": null,
-            "displayMinute": "84'",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "Park Jin-Seob",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Czechia",
-            "player": "A. Sojka",
-            "minute": 84,
-            "extra": null,
-            "displayMinute": "84'",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "M. Chytil",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "South Korea",
-            "player": "Gi-Hyuk Lee",
-            "minute": 90,
-            "extra": 6,
-            "displayMinute": "90+6'",
-            "timer": "96:00",
-            "timerSeconds": 5760,
-            "detail": "Yellow Card",
-            "comments": "Foul",
-            "assist": null,
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537328,
+            "matchUtcDate": "2026-06-12T02:00:00Z",
+            "homeTeam": "Korea Republic",
+            "awayTeam": "Czechia",
+            "goalNumber": 3
           }
         ],
         "goalEvents": [
@@ -16850,7 +16448,7 @@
           }
         ],
         "apiFootballFixtureId": 1538999,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     },
     {
@@ -27415,7 +27013,6 @@
           "type": "REFEREE"
         }
       ],
-      "apiFootballFixtureId": 1489377,
       "goalEvents": [
         {
           "type": "Goal",
@@ -27458,7 +27055,38 @@
           "goalNumber": 2
         }
       ],
+      "goalEventsSource": "api_football_post_match",
       "events": [
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Egypt",
+          "player": "Marwan Attia",
+          "minute": 13,
+          "extra": null,
+          "displayMinute": "13'",
+          "timer": "13:00",
+          "timerSeconds": 780,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Belgium",
+          "player": "Timothy Castagne",
+          "minute": 14,
+          "extra": null,
+          "displayMinute": "14'",
+          "timer": "14:00",
+          "timerSeconds": 840,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
         {
           "type": "Goal",
           "rawType": "Goal",
@@ -27472,15 +27100,55 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "Mohamed Salah",
-          "source": "api_football_post_match",
-          "matchId": 537363,
-          "matchUtcDate": "2026-06-15T19:00:00Z",
-          "homeTeam": "Belgium",
-          "awayTeam": "Egypt",
-          "goalNumber": 1
+          "source": "api_football_post_match"
         },
         {
-          "type": "Goal",
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Egypt",
+          "player": "Ahmed Fatouh",
+          "minute": 34,
+          "extra": null,
+          "displayMinute": "34'",
+          "timer": "34:00",
+          "timerSeconds": 2040,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "Amadou Onana",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Maxim De Cuyper",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "Timothy Castagne",
+          "minute": 56,
+          "extra": null,
+          "displayMinute": "56'",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Nicolas Raskin",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Own Goal",
           "rawType": "Goal",
           "team": "Belgium",
           "player": "Mohamed Hany",
@@ -27492,12 +27160,142 @@
           "detail": "Own Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match",
-          "matchId": 537363,
-          "matchUtcDate": "2026-06-15T19:00:00Z",
-          "homeTeam": "Belgium",
-          "awayTeam": "Egypt",
-          "goalNumber": 2
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "Charles De Ketelaere",
+          "minute": 66,
+          "extra": null,
+          "displayMinute": "66'",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Romelu Lukaku",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Emam Ashour",
+          "minute": 71,
+          "extra": null,
+          "displayMinute": "71'",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "Rami Rabia",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Yellow Card",
+          "rawType": "Card",
+          "team": "Belgium",
+          "player": "Maxim De Cuyper",
+          "minute": 75,
+          "extra": null,
+          "displayMinute": "75'",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "detail": "Yellow Card",
+          "comments": "Foul",
+          "assist": null,
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Mohamed Salah",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "Hamza Abdelkarim",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Mostafa Ziko",
+          "minute": 76,
+          "extra": null,
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "Zizo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "Kevin De Bruyne",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Hans Vanaken",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Belgium",
+          "player": "J\u00e9r\u00e9my Doku",
+          "minute": 86,
+          "extra": null,
+          "displayMinute": "86'",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Mat\u00edas Fern\u00e1ndez-Pardo",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Hamdy Fathy",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "Ibrahim Adel",
+          "source": "api_football_post_match"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Egypt",
+          "player": "Ahmed Fatouh",
+          "minute": 89,
+          "extra": null,
+          "displayMinute": "89'",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "Karim Hafez",
+          "source": "api_football_post_match"
         }
       ],
       "cardEvents": [
@@ -27714,8 +27512,39 @@
           "source": "api_football_post_match"
         }
       ],
+      "apiFootballFixtureId": 1489377,
       "matchDetails": {
         "events": [
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Egypt",
+            "player": "Marwan Attia",
+            "minute": 13,
+            "extra": null,
+            "displayMinute": "13'",
+            "timer": "13:00",
+            "timerSeconds": 780,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Belgium",
+            "player": "Timothy Castagne",
+            "minute": 14,
+            "extra": null,
+            "displayMinute": "14'",
+            "timer": "14:00",
+            "timerSeconds": 840,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
           {
             "type": "Goal",
             "rawType": "Goal",
@@ -27729,15 +27558,55 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "Mohamed Salah",
-            "source": "api_football_post_match",
-            "matchId": 537363,
-            "matchUtcDate": "2026-06-15T19:00:00Z",
-            "homeTeam": "Belgium",
-            "awayTeam": "Egypt",
-            "goalNumber": 1
+            "source": "api_football_post_match"
           },
           {
-            "type": "Goal",
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Egypt",
+            "player": "Ahmed Fatouh",
+            "minute": 34,
+            "extra": null,
+            "displayMinute": "34'",
+            "timer": "34:00",
+            "timerSeconds": 2040,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "Amadou Onana",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Maxim De Cuyper",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "Timothy Castagne",
+            "minute": 56,
+            "extra": null,
+            "displayMinute": "56'",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Nicolas Raskin",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Own Goal",
             "rawType": "Goal",
             "team": "Belgium",
             "player": "Mohamed Hany",
@@ -27749,12 +27618,142 @@
             "detail": "Own Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match",
-            "matchId": 537363,
-            "matchUtcDate": "2026-06-15T19:00:00Z",
-            "homeTeam": "Belgium",
-            "awayTeam": "Egypt",
-            "goalNumber": 2
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "Charles De Ketelaere",
+            "minute": 66,
+            "extra": null,
+            "displayMinute": "66'",
+            "timer": "66:00",
+            "timerSeconds": 3960,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Romelu Lukaku",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Emam Ashour",
+            "minute": 71,
+            "extra": null,
+            "displayMinute": "71'",
+            "timer": "71:00",
+            "timerSeconds": 4260,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "Rami Rabia",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Yellow Card",
+            "rawType": "Card",
+            "team": "Belgium",
+            "player": "Maxim De Cuyper",
+            "minute": 75,
+            "extra": null,
+            "displayMinute": "75'",
+            "timer": "75:00",
+            "timerSeconds": 4500,
+            "detail": "Yellow Card",
+            "comments": "Foul",
+            "assist": null,
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Mohamed Salah",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "Hamza Abdelkarim",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Mostafa Ziko",
+            "minute": 76,
+            "extra": null,
+            "displayMinute": "76'",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "detail": "Substitution 3",
+            "comments": null,
+            "assist": "Zizo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "Kevin De Bruyne",
+            "minute": 86,
+            "extra": null,
+            "displayMinute": "86'",
+            "timer": "86:00",
+            "timerSeconds": 5160,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "Hans Vanaken",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Belgium",
+            "player": "J\u00e9r\u00e9my Doku",
+            "minute": 86,
+            "extra": null,
+            "displayMinute": "86'",
+            "timer": "86:00",
+            "timerSeconds": 5160,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Mat\u00edas Fern\u00e1ndez-Pardo",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Hamdy Fathy",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "Ibrahim Adel",
+            "source": "api_football_post_match"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Egypt",
+            "player": "Ahmed Fatouh",
+            "minute": 89,
+            "extra": null,
+            "displayMinute": "89'",
+            "timer": "89:00",
+            "timerSeconds": 5340,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "Karim Hafez",
+            "source": "api_football_post_match"
           }
         ],
         "goalEvents": [
@@ -28020,7 +28019,7 @@
           }
         ],
         "apiFootballFixtureId": 1489377,
-        "goalEventsSource": null
+        "goalEventsSource": "api_football_post_match"
       }
     },
     {
@@ -28667,6 +28666,7 @@
           "type": "REFEREE"
         }
       ],
+      "apiFootballFixtureId": 1489378,
       "goalEvents": [
         {
           "type": "Goal",
@@ -28749,7 +28749,6 @@
           "goalNumber": 4
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "events": [
         {
           "type": "Goal",
@@ -28764,7 +28763,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -28779,37 +28783,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "A. Yousefi",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "M. Ghaedi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "S. Moghanlou",
-          "minute": 53,
-          "extra": null,
-          "displayMinute": "53'",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "A. Alipour",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 2
         },
         {
           "type": "Goal",
@@ -28824,7 +28803,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "C. Wood",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 3
         },
         {
           "type": "Goal",
@@ -28839,127 +28823,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "R. Rezaeian",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "S. Ghoddos",
-          "minute": 65,
-          "extra": null,
-          "displayMinute": "65'",
-          "timer": "65:00",
-          "timerSeconds": 3900,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "E. Hajsafi",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "L. Cacace",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "B. Old",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "C. McCowatt",
-          "minute": 68,
-          "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "R. Thomas",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "T. Payne",
-          "minute": 78,
-          "extra": null,
-          "displayMinute": "78'",
-          "timer": "78:00",
-          "timerSeconds": 4680,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "C. Elliot",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Iran",
-          "player": "M. Taremi",
-          "minute": 80,
-          "extra": null,
-          "displayMinute": "80'",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "A. Hosseinzadeh",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Iran",
-          "player": "E. Hajsafi",
-          "minute": 89,
-          "extra": null,
-          "displayMinute": "89'",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "S. Singh",
-          "minute": 90,
-          "extra": 2,
-          "displayMinute": "90+2'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "J. Randall",
-          "source": "api_football_post_match"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "New Zealand",
-          "player": "M. Stamenic",
-          "minute": 90,
-          "extra": 2,
-          "displayMinute": "90+2'",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "T. Bindon",
-          "source": "api_football_post_match"
+          "source": "api_football_post_match",
+          "matchId": 537364,
+          "matchUtcDate": "2026-06-16T01:00:00Z",
+          "homeTeam": "Iran",
+          "awayTeam": "New Zealand",
+          "goalNumber": 4
         }
       ],
       "cardEvents": [
@@ -29116,7 +28985,6 @@
           "source": "api_football_post_match"
         }
       ],
-      "apiFootballFixtureId": 1489378,
       "matchDetails": {
         "events": [
           {
@@ -29132,7 +29000,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 1
           },
           {
             "type": "Goal",
@@ -29147,37 +29020,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "A. Yousefi",
-            "minute": 46,
-            "extra": null,
-            "displayMinute": "46'",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "M. Ghaedi",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "S. Moghanlou",
-            "minute": 53,
-            "extra": null,
-            "displayMinute": "53'",
-            "timer": "53:00",
-            "timerSeconds": 3180,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "A. Alipour",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 2
           },
           {
             "type": "Goal",
@@ -29192,7 +29040,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "C. Wood",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 3
           },
           {
             "type": "Goal",
@@ -29207,127 +29060,12 @@
             "detail": "Normal Goal",
             "comments": null,
             "assist": "R. Rezaeian",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "S. Ghoddos",
-            "minute": 65,
-            "extra": null,
-            "displayMinute": "65'",
-            "timer": "65:00",
-            "timerSeconds": 3900,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "E. Hajsafi",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "L. Cacace",
-            "minute": 68,
-            "extra": null,
-            "displayMinute": "68'",
-            "timer": "68:00",
-            "timerSeconds": 4080,
-            "detail": "Substitution 1",
-            "comments": null,
-            "assist": "B. Old",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "C. McCowatt",
-            "minute": 68,
-            "extra": null,
-            "displayMinute": "68'",
-            "timer": "68:00",
-            "timerSeconds": 4080,
-            "detail": "Substitution 2",
-            "comments": null,
-            "assist": "R. Thomas",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "T. Payne",
-            "minute": 78,
-            "extra": null,
-            "displayMinute": "78'",
-            "timer": "78:00",
-            "timerSeconds": 4680,
-            "detail": "Substitution 3",
-            "comments": null,
-            "assist": "C. Elliot",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "Iran",
-            "player": "M. Taremi",
-            "minute": 80,
-            "extra": null,
-            "displayMinute": "80'",
-            "timer": "80:00",
-            "timerSeconds": 4800,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "A. Hosseinzadeh",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Yellow Card",
-            "rawType": "Card",
-            "team": "Iran",
-            "player": "E. Hajsafi",
-            "minute": 89,
-            "extra": null,
-            "displayMinute": "89'",
-            "timer": "89:00",
-            "timerSeconds": 5340,
-            "detail": "Yellow Card",
-            "comments": "Tripping",
-            "assist": null,
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "S. Singh",
-            "minute": 90,
-            "extra": 2,
-            "displayMinute": "90+2'",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "detail": "Substitution 4",
-            "comments": null,
-            "assist": "J. Randall",
-            "source": "api_football_post_match"
-          },
-          {
-            "type": "Substitution",
-            "rawType": "subst",
-            "team": "New Zealand",
-            "player": "M. Stamenic",
-            "minute": 90,
-            "extra": 2,
-            "displayMinute": "90+2'",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "detail": "Substitution 5",
-            "comments": null,
-            "assist": "T. Bindon",
-            "source": "api_football_post_match"
+            "source": "api_football_post_match",
+            "matchId": 537364,
+            "matchUtcDate": "2026-06-16T01:00:00Z",
+            "homeTeam": "Iran",
+            "awayTeam": "New Zealand",
+            "goalNumber": 4
           }
         ],
         "goalEvents": [
@@ -29573,7 +29311,7 @@
           }
         ],
         "apiFootballFixtureId": 1489378,
-        "goalEventsSource": "api_football_post_match"
+        "goalEventsSource": null
       }
     }
   ]
