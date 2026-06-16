@@ -11740,17 +11740,38 @@ class WorldCup2026Panel extends HTMLElement {
           grid-column: 1 / -1;
           width: 100%;
           display: grid;
-          grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.8fr);
-          gap: 10px;
+          grid-template-columns: minmax(0, 1fr);
+          gap: 8px;
           margin-top: 8px;
+          justify-items: center;
         }
 
         .match-events-box,
         .match-officials-box {
+          width: 100%;
           padding: 10px 12px;
           border-radius: 13px;
           background: rgba(0,0,0,0.18);
           border: 1px solid rgba(255,255,255,0.10);
+        }
+
+        .match-live-statistics-box {
+          width: min(72%, 980px);
+          margin: 0 auto;
+          justify-self: center;
+        }
+
+        .match-events-box:not(.match-live-statistics-box) {
+          width: min(72%, 980px);
+          margin: 0 auto;
+        }
+
+        .match-officials-box {
+          width: min(72%, 980px);
+          margin: 0 auto;
+          padding: 6px 9px;
+          border-radius: 999px;
+          background: rgba(0,0,0,0.13);
         }
 
         .match-extra-title {
@@ -11768,6 +11789,12 @@ class WorldCup2026Panel extends HTMLElement {
           max-height: 210px;
           overflow: auto;
           padding-right: 2px;
+        }
+
+        .match-live-statistics-box .match-events-list {
+          max-height: none;
+          overflow: visible;
+          gap: 7px;
         }
 
         .match-event-row {
@@ -11816,22 +11843,98 @@ class WorldCup2026Panel extends HTMLElement {
           font-weight: 800;
         }
 
+        .match-stat-bar-row {
+          display: grid;
+          grid-template-columns: 58px minmax(150px, 1fr) 58px;
+          gap: 10px;
+          align-items: center;
+          padding: 6px 9px;
+          border-radius: 12px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .match-stat-value {
+          color: rgba(255,255,255,0.88);
+          font-size: 12px;
+          font-weight: 950;
+          text-align: center;
+          white-space: nowrap;
+        }
+
+        .match-stat-middle {
+          min-width: 0;
+        }
+
+        .match-stat-label {
+          margin-bottom: 3px;
+          color: rgba(255,255,255,0.82);
+          font-size: 10px;
+          font-weight: 950;
+          text-align: center;
+          text-transform: uppercase;
+          letter-spacing: 0.35px;
+        }
+
+        .match-stat-track {
+          position: relative;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          height: 7px;
+          overflow: hidden;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.12);
+          border: 1px solid rgba(255,255,255,0.08);
+        }
+
+        .match-stat-fill-home,
+        .match-stat-fill-away {
+          height: 100%;
+          min-width: 3px;
+          background: rgba(0,220,255,0.78);
+        }
+
+        .match-stat-fill-home {
+          justify-self: end;
+          border-radius: 999px 0 0 999px;
+        }
+
+        .match-stat-fill-away {
+          justify-self: start;
+          background: rgba(255,255,255,0.82);
+          border-radius: 0 999px 999px 0;
+        }
+
         .match-officials-list {
           display: flex;
           flex-wrap: wrap;
-          gap: 6px;
+          gap: 5px;
+          align-items: center;
+        }
+
+        .match-officials-box .match-extra-title {
+          margin: 0 7px 0 0;
+          display: inline-flex;
+          vertical-align: middle;
+          font-size: 9px;
+          letter-spacing: 0.35px;
+        }
+
+        .match-officials-box .match-officials-list {
+          display: inline-flex;
+          vertical-align: middle;
         }
 
         .match-official-pill {
           display: inline-flex;
           align-items: center;
-          gap: 5px;
-          padding: 6px 8px;
+          gap: 4px;
+          padding: 3px 7px;
           border-radius: 999px;
-          background: rgba(255,255,255,0.09);
-          border: 1px solid rgba(255,255,255,0.10);
-          color: rgba(255,255,255,0.88);
-          font-size: 11px;
+          background: rgba(255,255,255,0.08);
+          border: 1px solid rgba(255,255,255,0.09);
+          color: rgba(255,255,255,0.86);
+          font-size: 10px;
           font-weight: 850;
         }
 
@@ -11846,6 +11949,12 @@ class WorldCup2026Panel extends HTMLElement {
         @media (max-width: 760px) {
           .match-extra-live-data {
             grid-template-columns: 1fr;
+          }
+
+          .match-live-statistics-box,
+          .match-events-box:not(.match-live-statistics-box),
+          .match-officials-box {
+            width: 100%;
           }
         }
 
@@ -16511,13 +16620,73 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  matchLiveStatisticsSection(match) {
+    const stats = match?.liveStatistics || {};
+    const homeStats = stats.home || {};
+    const awayStats = stats.away || {};
+
+    const value = (direct, sideStats, key) => {
+      const result = direct ?? sideStats?.[key];
+      return result === null || result === undefined || result === "" ? "" : result;
+    };
+
+    const cleanNumber = (raw) => {
+      if (raw === null || raw === undefined || raw === "") return null;
+      const text = String(raw).replace("%", "").trim();
+      const num = Number(text);
+      return Number.isFinite(num) ? num : null;
+    };
+
+    const rows = [
+      ["Corners", value(match?.homeCorners, homeStats, "corners"), value(match?.awayCorners, awayStats, "corners")],
+      ["Shots On Target", value(match?.homeShotsOnGoal, homeStats, "shotsOnGoal"), value(match?.awayShotsOnGoal, awayStats, "shotsOnGoal")],
+      ["Possession", value(match?.homePossession, homeStats, "possession"), value(match?.awayPossession, awayStats, "possession")],
+      ["Fouls", value(match?.homeFouls, homeStats, "fouls"), value(match?.awayFouls, awayStats, "fouls")],
+      ["Offsides", value(match?.homeOffsides, homeStats, "offsides"), value(match?.awayOffsides, awayStats, "offsides")],
+    ].filter((row) => row[1] !== "" || row[2] !== "");
+
+    if (!rows.length) return "";
+
+    return `
+      <div class="match-events-box match-live-statistics-box">
+        <div class="match-extra-title">Live Match Stats</div>
+        <div class="match-events-list">
+          ${rows.map(([label, home, away]) => {
+            const homeText = home || "-";
+            const awayText = away || "-";
+            const homeNum = cleanNumber(home);
+            const awayNum = cleanNumber(away);
+            const total = (homeNum !== null && awayNum !== null && (homeNum + awayNum) > 0) ? homeNum + awayNum : 2;
+            const homePct = homeNum !== null ? Math.max(4, Math.min(100, (homeNum / total) * 100)) : 50;
+            const awayPct = awayNum !== null ? Math.max(4, Math.min(100, (awayNum / total) * 100)) : 50;
+            return `
+              <div class="match-stat-bar-row">
+                <span class="match-stat-value">${this.esc(homeText)}</span>
+                <span class="match-stat-middle">
+                  <span class="match-stat-label">${this.esc(label)}</span>
+                  <span class="match-stat-track">
+                    <span class="match-stat-fill-home" style="width:${homePct}%"></span>
+                    <span class="match-stat-fill-away" style="width:${awayPct}%"></span>
+                  </span>
+                </span>
+                <span class="match-stat-value">${this.esc(awayText)}</span>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    `;
+  }
+
   matchExtraLiveDataSection(match) {
-    const eventsHtml = this.matchEventsTimelineSection(match);
+    const eventsHtml = this.matchEventsTimelineSection(match, { includeSubs: true });
+    const statisticsHtml = this.matchLiveStatisticsSection(match);
     const officialsHtml = this.matchOfficialsSection(match);
-    if (!eventsHtml && !officialsHtml) return "";
+    if (!eventsHtml && !statisticsHtml && !officialsHtml) return "";
 
     return `
       <div class="match-extra-live-data">
+        ${statisticsHtml}
         ${eventsHtml}
         ${officialsHtml}
       </div>
