@@ -1,4 +1,166 @@
 {
-  "matches": [],
-  "live": []
+  "matches": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537364,
+      "utcDate": "2026-06-16T01:00:00Z",
+      "status": "IN_PLAY",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G",
+      "lastUpdated": "2026-06-16T03:00:46Z",
+      "homeTeam": {
+        "id": 840,
+        "name": "Iran",
+        "shortName": "Iran",
+        "tla": "IRN",
+        "crest": "https://crests.football-data.org/iran.svg"
+      },
+      "awayTeam": {
+        "id": 783,
+        "name": "New Zealand",
+        "shortName": "New Zealand",
+        "tla": "NZL",
+        "crest": "https://crests.football-data.org/783.svg"
+      },
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 56007,
+          "name": "C\u00e9sar Ramos",
+          "type": "REFEREE",
+          "nationality": "Mexico"
+        }
+      ],
+      "manualClock": {
+        "seconds": 0,
+        "timer": "0:00",
+        "displayMinute": "0'",
+        "active": false,
+        "status": "IN_PLAY",
+        "source": "awaiting_api_football_minute",
+        "lastApiSync": null
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "lastApiSync": null,
+      "awaitingLiveApiData": true,
+      "manualClockText": "Awaiting live API data",
+      "displayMinute": "Awaiting live API data"
+    }
+  ],
+  "live": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537364,
+      "utcDate": "2026-06-16T01:00:00Z",
+      "status": "IN_PLAY",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_G",
+      "lastUpdated": "2026-06-16T03:00:46Z",
+      "homeTeam": {
+        "id": 840,
+        "name": "Iran",
+        "shortName": "Iran",
+        "tla": "IRN",
+        "crest": "https://crests.football-data.org/iran.svg"
+      },
+      "awayTeam": {
+        "id": 783,
+        "name": "New Zealand",
+        "shortName": "New Zealand",
+        "tla": "NZL",
+        "crest": "https://crests.football-data.org/783.svg"
+      },
+      "score": {
+        "winner": "DRAW",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 0,
+          "away": 0
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 56007,
+          "name": "C\u00e9sar Ramos",
+          "type": "REFEREE",
+          "nationality": "Mexico"
+        }
+      ],
+      "manualClock": {
+        "seconds": 0,
+        "timer": "0:00",
+        "displayMinute": "0'",
+        "active": false,
+        "status": "IN_PLAY",
+        "source": "awaiting_api_football_minute",
+        "lastApiSync": null
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "lastApiSync": null,
+      "awaitingLiveApiData": true,
+      "manualClockText": "Awaiting live API data",
+      "displayMinute": "Awaiting live API data"
+    }
+  ]
 }
