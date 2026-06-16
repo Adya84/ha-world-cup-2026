@@ -5105,13 +5105,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-16T02:32:22.511058+00:00",
+    "phase_start": "2026-06-16T02:32:49.232816+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 3900,
     "clock_seconds": 3900,
     "displayMinute": "65'",
     "manualClockText": "65'",
-    "lastApiSync": "2026-06-16T02:32:22.511058+00:00",
+    "lastApiSync": "2026-06-16T02:32:49.232816+00:00",
     "apiFootballFixtureId": 1489378,
     "events": [
       {
@@ -5203,6 +5203,21 @@
         "comments": null,
         "assist": "R. Rezaeian",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Iran",
+        "player": "S. Ghoddos",
+        "minute": 65,
+        "extra": null,
+        "displayMinute": "65'",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "E. Hajsafi",
+        "source": "api_football"
       }
     ],
     "substitutionEvents": [
@@ -5234,6 +5249,21 @@
         "detail": "Substitution 2",
         "comments": null,
         "assist": "A. Alipour",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Iran",
+        "player": "S. Ghoddos",
+        "minute": 65,
+        "extra": null,
+        "displayMinute": "65'",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "E. Hajsafi",
         "source": "api_football"
       }
     ]
