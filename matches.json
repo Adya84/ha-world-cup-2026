@@ -6670,7 +6670,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T03:03:58Z",
+      "lastUpdated": "2026-06-17T03:04:25Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6707,29 +6707,213 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 1,
-      "clockSeconds": 60,
-      "displayMinute": "1'",
-      "manualClockText": "1'",
+      "minute": 2,
+      "clockSeconds": 120,
+      "displayMinute": "2'",
+      "manualClockText": "2'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T01:04:01.510935+00:00",
+      "lastApiSync": "2026-06-17T01:04:28.738958+00:00",
       "manualClock": {
-        "seconds": 60,
-        "timer": "1'",
-        "displayMinute": "1'",
+        "seconds": 120,
+        "timer": "2'",
+        "displayMinute": "2'",
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T01:04:01.510935+00:00"
+        "lastApiSync": "2026-06-17T01:04:28.738958+00:00"
       },
       "homeScore": 0,
       "awayScore": 0,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
+      "liveStatistics": {
+        "home": {
+          "team": "Argentina",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 0
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 0
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 0
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 0
+            },
+            {
+              "type": "Fouls",
+              "value": 0
+            },
+            {
+              "type": "Corner Kicks",
+              "value": null
+            },
+            {
+              "type": "Offsides",
+              "value": null
+            },
+            {
+              "type": "Ball Possession",
+              "value": "100%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": null
+            },
+            {
+              "type": "Total passes",
+              "value": 2
+            },
+            {
+              "type": "Passes accurate",
+              "value": 2
+            },
+            {
+              "type": "Passes %",
+              "value": "100%"
+            },
+            {
+              "type": "expected_goals",
+              "value": null
+            },
+            {
+              "type": "goals_prevented",
+              "value": null
+            }
+          ],
+          "corners": null,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 0,
+          "possession": "100%",
+          "fouls": 0,
+          "offsides": null,
+          "yellowCards": null,
+          "redCards": null
+        },
+        "away": {
+          "team": "Algeria",
+          "statistics": [
+            {
+              "type": "Shots on Goal",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 0
+            },
+            {
+              "type": "Blocked Shots",
+              "value": 0
+            },
+            {
+              "type": "Shots insidebox",
+              "value": 0
+            },
+            {
+              "type": "Shots outsidebox",
+              "value": 0
+            },
+            {
+              "type": "Fouls",
+              "value": 0
+            },
+            {
+              "type": "Corner Kicks",
+              "value": null
+            },
+            {
+              "type": "Offsides",
+              "value": null
+            },
+            {
+              "type": "Ball Possession",
+              "value": "0%"
+            },
+            {
+              "type": "Yellow Cards",
+              "value": null
+            },
+            {
+              "type": "Red Cards",
+              "value": null
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": null
+            },
+            {
+              "type": "Total passes",
+              "value": 0
+            },
+            {
+              "type": "Passes accurate",
+              "value": 0
+            },
+            {
+              "type": "Passes %",
+              "value": null
+            },
+            {
+              "type": "expected_goals",
+              "value": null
+            },
+            {
+              "type": "goals_prevented",
+              "value": null
+            }
+          ],
+          "corners": null,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 0,
+          "possession": "0%",
+          "fouls": 0,
+          "offsides": null,
+          "yellowCards": null,
+          "redCards": null
+        }
+      },
+      "homeCorners": null,
+      "awayCorners": null,
+      "homeShotsOnGoal": 0,
+      "awayShotsOnGoal": 0,
+      "homePossession": "100%",
+      "awayPossession": "0%",
+      "homeFouls": 0,
+      "awayFouls": 0,
+      "homeOffsides": null,
+      "awayOffsides": null,
       "apiFootballFixtureId": 1489381,
-      "fallbackClock": 60,
-      "fallbackClockText": "1'"
+      "fallbackClock": 120,
+      "fallbackClockText": "2'"
     },
     {
       "area": {
