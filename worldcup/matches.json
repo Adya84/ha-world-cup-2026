@@ -6666,11 +6666,11 @@
       },
       "id": 537397,
       "utcDate": "2026-06-17T01:00:00Z",
-      "status": "IN_PLAY",
+      "status": "1H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T03:02:58Z",
+      "lastUpdated": "2026-06-17T03:03:31Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6693,8 +6693,8 @@
           "away": 0
         },
         "halfTime": {
-          "home": null,
-          "away": null
+          "home": 0,
+          "away": 0
         }
       },
       "odds": {
@@ -6702,26 +6702,34 @@
       },
       "referees": [
         {
-          "id": 43888,
-          "name": "Szymon Marciniak",
-          "type": "REFEREE",
-          "nationality": "Poland"
+          "name": "Szymon Marciniak, Poland",
+          "type": "REFEREE"
         }
       ],
+      "liveSource": "api_football",
+      "minute": 1,
+      "clockSeconds": 60,
+      "displayMinute": "1'",
+      "manualClockText": "1'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-17T01:03:34.740585+00:00",
       "manualClock": {
-        "seconds": 0,
-        "timer": "0:00",
-        "displayMinute": "0'",
+        "seconds": 60,
+        "timer": "1'",
+        "displayMinute": "1'",
         "active": false,
-        "status": "IN_PLAY",
-        "source": "awaiting_api_football_minute",
-        "lastApiSync": null
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-17T01:03:34.740585+00:00"
       },
-      "clockSource": "awaiting_api_football_minute",
-      "lastApiSync": null,
-      "awaitingLiveApiData": true,
-      "manualClockText": "Awaiting live API data",
-      "displayMinute": "Awaiting live API data"
+      "homeScore": 0,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "apiFootballFixtureId": 1489381,
+      "fallbackClock": 60,
+      "fallbackClockText": "1'"
     },
     {
       "area": {
