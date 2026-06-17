@@ -6425,11 +6425,11 @@
     ],
     "base_seconds": 4680,
     "clock_seconds": 4680,
-    "phase_start": "2026-06-17T05:43:01.550627+00:00",
+    "phase_start": "2026-06-17T05:43:30.421070+00:00",
     "source": "api_football_live_minute",
     "displayMinute": "78'",
     "manualClockText": "78'",
-    "lastApiSync": "2026-06-17T05:43:01.550627+00:00",
+    "lastApiSync": "2026-06-17T05:43:30.421070+00:00",
     "events": [
       {
         "type": "Goal",
@@ -6565,6 +6565,21 @@
         "comments": null,
         "assist": null,
         "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Austria",
+        "player": "M. Sabitzer",
+        "minute": 77,
+        "extra": null,
+        "displayMinute": "77'",
+        "timer": "77:00",
+        "timerSeconds": 4620,
+        "detail": "Yellow Card",
+        "comments": "Unsportsmanlike conduct",
+        "assist": null,
+        "source": "api_football"
       }
     ],
     "apiFootballFixtureId": 1489382,
@@ -6642,6 +6657,23 @@
         "detail": "Substitution 1",
         "comments": null,
         "assist": "S. Obaid",
+        "source": "api_football"
+      }
+    ],
+    "cardEvents": [
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Austria",
+        "player": "M. Sabitzer",
+        "minute": 77,
+        "extra": null,
+        "displayMinute": "77'",
+        "timer": "77:00",
+        "timerSeconds": 4620,
+        "detail": "Yellow Card",
+        "comments": "Unsportsmanlike conduct",
+        "assist": null,
         "source": "api_football"
       }
     ]
