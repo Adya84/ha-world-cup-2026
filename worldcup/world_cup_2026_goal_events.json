@@ -6102,13 +6102,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-17T02:27:28.603288+00:00",
+    "phase_start": "2026-06-17T02:27:55.509339+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 3840,
-    "clock_seconds": 3840,
-    "displayMinute": "64'",
-    "manualClockText": "64'",
-    "lastApiSync": "2026-06-17T02:27:28.603288+00:00",
+    "base_seconds": 3900,
+    "clock_seconds": 3900,
+    "displayMinute": "65'",
+    "manualClockText": "65'",
+    "lastApiSync": "2026-06-17T02:27:55.509339+00:00",
     "apiFootballFixtureId": 1489381,
     "events": [
       {
@@ -6215,6 +6215,36 @@
         "comments": null,
         "assist": "H. Aouar",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Algeria",
+        "player": "A. Gouiri",
+        "minute": 64,
+        "extra": null,
+        "displayMinute": "64'",
+        "timer": "64:00",
+        "timerSeconds": 3840,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "M. Amoura",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Algeria",
+        "player": "A. Hadj Moussa",
+        "minute": 64,
+        "extra": null,
+        "displayMinute": "64'",
+        "timer": "64:00",
+        "timerSeconds": 3840,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "R. Mahrez",
+        "source": "api_football"
       }
     ],
     "substitutionEvents": [
@@ -6276,6 +6306,36 @@
         "detail": "Substitution 1",
         "comments": null,
         "assist": "H. Aouar",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Algeria",
+        "player": "A. Gouiri",
+        "minute": 64,
+        "extra": null,
+        "displayMinute": "64'",
+        "timer": "64:00",
+        "timerSeconds": 3840,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "M. Amoura",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Algeria",
+        "player": "A. Hadj Moussa",
+        "minute": 64,
+        "extra": null,
+        "displayMinute": "64'",
+        "timer": "64:00",
+        "timerSeconds": 3840,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "R. Mahrez",
         "source": "api_football"
       }
     ]
