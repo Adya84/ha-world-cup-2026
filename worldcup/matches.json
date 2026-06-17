@@ -7009,11 +7009,11 @@
       },
       "id": 537398,
       "utcDate": "2026-06-17T04:00:00Z",
-      "status": "2H",
+      "status": "IN_PLAY",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T08:08:19Z",
+      "lastUpdated": "2026-06-17T08:08:46Z",
       "homeTeam": {
         "id": 816,
         "name": "Austria",
@@ -7045,32 +7045,12 @@
       },
       "referees": [
         {
-          "name": "Dahane Beida, Mauritania",
-          "type": "REFEREE"
+          "id": 262323,
+          "name": "Dahane Beida",
+          "type": "REFEREE",
+          "nationality": "Mauritania"
         }
       ],
-      "liveSource": "api_football",
-      "minute": 90,
-      "extra": 13,
-      "clockSeconds": 5400,
-      "displayMinute": "90'",
-      "manualClockText": "90'",
-      "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T06:08:21.406948+00:00",
-      "manualClock": {
-        "seconds": 5400,
-        "timer": "90'",
-        "displayMinute": "90'",
-        "active": false,
-        "status": "2H",
-        "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T06:08:21.406948+00:00"
-      },
-      "homeScore": 3,
-      "awayScore": 1,
-      "scoreSource": "api_football_live",
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "goalEvents": [
         {
           "type": "Goal",
@@ -7167,22 +7147,12 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "X. Schlager",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Austria",
-          "player": "S. Kalajdzic",
-          "minute": 46,
-          "extra": null,
-          "displayMinute": "46'",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "M. Arnautovic",
-          "source": "api_football"
+          "source": "api_football",
+          "matchId": 537398,
+          "matchUtcDate": "2026-06-17T04:00:00Z",
+          "homeTeam": "Austria",
+          "awayTeam": "Jordan",
+          "goalNumber": 1
         },
         {
           "type": "Goal",
@@ -7197,85 +7167,15 @@
           "detail": "Normal Goal",
           "comments": null,
           "assist": "N. Al Rawabdeh",
-          "source": "api_football"
+          "source": "api_football",
+          "matchId": 537398,
+          "matchUtcDate": "2026-06-17T04:00:00Z",
+          "homeTeam": "Austria",
+          "awayTeam": "Jordan",
+          "goalNumber": 2
         },
         {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Austria",
-          "player": "X. Schlager",
-          "minute": 59,
-          "extra": null,
-          "displayMinute": "59'",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "C. Chukwuemeka",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Austria",
-          "player": "D. Alaba",
-          "minute": 59,
-          "extra": null,
-          "displayMinute": "59'",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "K. Danso",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Austria",
-          "player": "P. Mwene",
-          "minute": 59,
-          "extra": null,
-          "displayMinute": "59'",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "P. Wanner",
-          "source": "api_football"
-        },
-        {
-          "type": "VAR",
-          "rawType": "Var",
-          "team": "Austria",
-          "player": "M. Arnautovic",
-          "minute": 67,
-          "extra": null,
-          "displayMinute": "67'",
-          "timer": "67:00",
-          "timerSeconds": 4020,
-          "detail": "Goal Disallowed - handball",
-          "comments": null,
-          "assist": null,
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Jordan",
-          "player": "M. Abualnadi",
-          "minute": 72,
-          "extra": null,
-          "displayMinute": "72'",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "detail": "Substitution 1",
-          "comments": null,
-          "assist": "S. Obaid",
-          "source": "api_football"
-        },
-        {
-          "type": "Own Goal",
+          "type": "Goal",
           "rawType": "Goal",
           "team": "Austria",
           "player": "Y. Al Arab",
@@ -7287,100 +7187,15 @@
           "detail": "Own Goal",
           "comments": null,
           "assist": null,
-          "source": "api_football"
+          "source": "api_football",
+          "matchId": 537398,
+          "matchUtcDate": "2026-06-17T04:00:00Z",
+          "homeTeam": "Austria",
+          "awayTeam": "Jordan",
+          "goalNumber": 3
         },
         {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Austria",
-          "player": "M. Sabitzer",
-          "minute": 77,
-          "extra": null,
-          "displayMinute": "77'",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "detail": "Yellow Card",
-          "comments": "Unsportsmanlike conduct",
-          "assist": null,
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Jordan",
-          "player": "A. Nasib",
-          "minute": 81,
-          "extra": null,
-          "displayMinute": "81'",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "detail": "Substitution 2",
-          "comments": null,
-          "assist": "S. Al Rosan",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Jordan",
-          "player": "E. Haddad",
-          "minute": 81,
-          "extra": null,
-          "displayMinute": "81'",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "detail": "Substitution 3",
-          "comments": null,
-          "assist": "M. Al Mardi",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Austria",
-          "player": "R. Schmid",
-          "minute": 83,
-          "extra": null,
-          "displayMinute": "83'",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "P. Wimmer",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Jordan",
-          "player": "M. Tamari",
-          "minute": 88,
-          "extra": null,
-          "displayMinute": "88'",
-          "timer": "88:00",
-          "timerSeconds": 5280,
-          "detail": "Substitution 4",
-          "comments": null,
-          "assist": "M. Al Daoud",
-          "source": "api_football"
-        },
-        {
-          "type": "Substitution",
-          "rawType": "subst",
-          "team": "Jordan",
-          "player": "O. Al Fakhouri",
-          "minute": 89,
-          "extra": null,
-          "displayMinute": "89'",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "detail": "Substitution 5",
-          "comments": null,
-          "assist": "A. Azaizeh",
-          "source": "api_football"
-        },
-        {
-          "type": "Penalty",
+          "type": "Goal",
           "rawType": "Goal",
           "team": "Austria",
           "player": "M. Arnautovic",
@@ -7392,10 +7207,14 @@
           "detail": "Penalty",
           "comments": null,
           "assist": null,
-          "source": "api_football"
+          "source": "api_football",
+          "matchId": 537398,
+          "matchUtcDate": "2026-06-17T04:00:00Z",
+          "homeTeam": "Austria",
+          "awayTeam": "Jordan",
+          "goalNumber": 4
         }
       ],
-      "goalEventsSource": "api_football_live",
       "cardEvents": [
         {
           "type": "Yellow Card",
@@ -7565,193 +7384,21 @@
           "source": "api_football"
         }
       ],
-      "liveStatistics": {
-        "home": {
-          "team": "Austria",
-          "statistics": [
-            {
-              "type": "Shots on Goal",
-              "value": 4
-            },
-            {
-              "type": "Shots off Goal",
-              "value": 6
-            },
-            {
-              "type": "Total Shots",
-              "value": 11
-            },
-            {
-              "type": "Blocked Shots",
-              "value": 1
-            },
-            {
-              "type": "Shots insidebox",
-              "value": 6
-            },
-            {
-              "type": "Shots outsidebox",
-              "value": 5
-            },
-            {
-              "type": "Fouls",
-              "value": 12
-            },
-            {
-              "type": "Corner Kicks",
-              "value": 4
-            },
-            {
-              "type": "Offsides",
-              "value": 3
-            },
-            {
-              "type": "Ball Possession",
-              "value": "63%"
-            },
-            {
-              "type": "Yellow Cards",
-              "value": 1
-            },
-            {
-              "type": "Red Cards",
-              "value": null
-            },
-            {
-              "type": "Goalkeeper Saves",
-              "value": 3
-            },
-            {
-              "type": "Total passes",
-              "value": 580
-            },
-            {
-              "type": "Passes accurate",
-              "value": 488
-            },
-            {
-              "type": "Passes %",
-              "value": "84%"
-            },
-            {
-              "type": "expected_goals",
-              "value": "0.83"
-            },
-            {
-              "type": "goals_prevented",
-              "value": "-1.31"
-            }
-          ],
-          "corners": 4,
-          "shotsOnGoal": 4,
-          "shotsOffGoal": 6,
-          "totalShots": 11,
-          "possession": "63%",
-          "fouls": 12,
-          "offsides": 3,
-          "yellowCards": 1,
-          "redCards": null
-        },
-        "away": {
-          "team": "Jordan",
-          "statistics": [
-            {
-              "type": "Shots on Goal",
-              "value": 4
-            },
-            {
-              "type": "Shots off Goal",
-              "value": 5
-            },
-            {
-              "type": "Total Shots",
-              "value": 11
-            },
-            {
-              "type": "Blocked Shots",
-              "value": 2
-            },
-            {
-              "type": "Shots insidebox",
-              "value": 7
-            },
-            {
-              "type": "Shots outsidebox",
-              "value": 4
-            },
-            {
-              "type": "Fouls",
-              "value": 7
-            },
-            {
-              "type": "Corner Kicks",
-              "value": 3
-            },
-            {
-              "type": "Offsides",
-              "value": 1
-            },
-            {
-              "type": "Ball Possession",
-              "value": "37%"
-            },
-            {
-              "type": "Yellow Cards",
-              "value": 0
-            },
-            {
-              "type": "Red Cards",
-              "value": null
-            },
-            {
-              "type": "Goalkeeper Saves",
-              "value": 1
-            },
-            {
-              "type": "Total passes",
-              "value": 328
-            },
-            {
-              "type": "Passes accurate",
-              "value": 240
-            },
-            {
-              "type": "Passes %",
-              "value": "73%"
-            },
-            {
-              "type": "expected_goals",
-              "value": "0.53"
-            },
-            {
-              "type": "goals_prevented",
-              "value": "-1.31"
-            }
-          ],
-          "corners": 3,
-          "shotsOnGoal": 4,
-          "shotsOffGoal": 5,
-          "totalShots": 11,
-          "possession": "37%",
-          "fouls": 7,
-          "offsides": 1,
-          "yellowCards": 0,
-          "redCards": null
-        }
-      },
-      "homeCorners": 4,
-      "awayCorners": 3,
-      "homeShotsOnGoal": 4,
-      "awayShotsOnGoal": 4,
-      "homePossession": "63%",
-      "awayPossession": "37%",
-      "homeFouls": 12,
-      "awayFouls": 7,
-      "homeOffsides": 3,
-      "awayOffsides": 1,
       "apiFootballFixtureId": 1489382,
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'"
+      "manualClock": {
+        "seconds": 5400,
+        "timer": "90:00",
+        "displayMinute": "90'",
+        "active": false,
+        "status": "IN_PLAY",
+        "source": "awaiting_api_football_minute",
+        "lastApiSync": "2026-06-17T06:08:21.406948+00:00"
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "lastApiSync": "2026-06-17T06:08:21.406948+00:00",
+      "awaitingLiveApiData": true,
+      "manualClockText": "Awaiting live API data",
+      "displayMinute": "Awaiting live API data"
     },
     {
       "area": {
