@@ -1,303 +1,232 @@
 {
-  "matches": [
-    {
-      "area": {
-        "id": 2267,
-        "name": "World",
-        "code": "INT",
-        "flag": null
-      },
-      "competition": {
-        "id": 2000,
-        "name": "FIFA World Cup",
-        "code": "WC",
-        "type": "CUP",
-        "emblem": "https://crests.football-data.org/wm26.png"
-      },
-      "season": {
-        "id": 2398,
-        "startDate": "2026-06-11",
-        "endDate": "2026-07-19",
-        "currentMatchday": 1,
-        "winner": null
-      },
-      "id": 537403,
-      "utcDate": "2026-06-17T17:00:00Z",
-      "status": "1H",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_K",
-      "lastUpdated": "2026-06-17T19:36:58Z",
-      "homeTeam": {
-        "id": 765,
-        "name": "Portugal",
-        "shortName": "Portugal",
-        "tla": "POR",
-        "crest": "https://crests.football-data.org/765.svg"
-      },
-      "awayTeam": {
-        "id": 1934,
-        "name": "Congo DR",
-        "shortName": "Congo DR",
-        "tla": "COD",
-        "crest": "https://crests.football-data.org/congo_dr.svg"
-      },
-      "score": {
-        "winner": "HOME_TEAM",
-        "duration": "REGULAR",
-        "fullTime": {
-          "home": 1,
-          "away": 0
-        },
-        "halfTime": {
-          "home": 1,
-          "away": 0
-        }
-      },
-      "odds": {
-        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
-      },
-      "referees": [
-        {
-          "name": "Abdulrahman Al-Jassim, Qatar",
-          "type": "REFEREE"
-        }
-      ],
-      "liveSource": "api_football",
-      "minute": 36,
-      "clockSeconds": 2160,
-      "displayMinute": "36'",
-      "manualClockText": "36'",
-      "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T17:37:03.976125+00:00",
-      "manualClock": {
-        "seconds": 2160,
-        "timer": "36'",
-        "displayMinute": "36'",
-        "active": false,
-        "status": "1H",
-        "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T17:37:03.976125+00:00"
-      },
-      "homeScore": 1,
-      "awayScore": 0,
-      "scoreSource": "api_football_live",
-      "apiFootballStatus": "1H",
-      "apiFootballStatusLong": "First Half",
-      "goalEvents": [
-        {
-          "type": "Goal",
-          "rawType": "Goal",
-          "team": "Portugal",
-          "player": "J. Neves",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 6,
-          "extra": null,
-          "displayMinute": "6'",
-          "timer": "6:00",
-          "timerSeconds": 360,
-          "detail": "Normal Goal",
-          "comments": null,
-          "assist": "P. Neto",
-          "isDisallowed": false,
-          "source": "api_football",
-          "matchId": 537403,
-          "matchUtcDate": "2026-06-17T17:00:00Z",
-          "homeTeam": "Portugal",
-          "awayTeam": "Congo DR",
-          "goalNumber": 1
-        }
-      ],
-      "events": [
-        {
-          "type": "Goal",
-          "rawType": "Goal",
-          "team": "Portugal",
-          "player": "J. Neves",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 6,
-          "extra": null,
-          "displayMinute": "6'",
-          "timer": "6:00",
-          "timerSeconds": 360,
-          "detail": "Normal Goal",
-          "comments": null,
-          "assist": "P. Neto",
-          "isDisallowed": false,
-          "source": "api_football"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Portugal",
-          "player": "B. Silva",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 13,
-          "extra": null,
-          "displayMinute": "13'",
-          "timer": "13:00",
-          "timerSeconds": 780,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "isDisallowed": false,
-          "source": "api_football"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Congo DR",
-          "player": "C. Mbemba",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 32,
-          "extra": null,
-          "displayMinute": "32'",
-          "timer": "32:00",
-          "timerSeconds": 1920,
-          "detail": "Yellow Card",
-          "comments": "Roughing",
-          "assist": null,
-          "isDisallowed": false,
-          "source": "api_football"
-        }
-      ],
-      "goalEventsSource": "api_football_live",
-      "cardEvents": [
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Portugal",
-          "player": "B. Silva",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 13,
-          "extra": null,
-          "displayMinute": "13'",
-          "timer": "13:00",
-          "timerSeconds": 780,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "isDisallowed": false,
-          "source": "api_football"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Congo DR",
-          "player": "C. Mbemba",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 32,
-          "extra": null,
-          "displayMinute": "32'",
-          "timer": "32:00",
-          "timerSeconds": 1920,
-          "detail": "Yellow Card",
-          "comments": "Roughing",
-          "assist": null,
-          "isDisallowed": false,
-          "source": "api_football"
-        }
-      ],
-      "liveStatistics": {
-        "home": {
-          "corners": 1,
-          "shotsOnGoal": 1,
-          "shotsOffGoal": 1,
-          "totalShots": 1,
-          "possession": "79%",
-          "fouls": 2,
-          "offsides": 1,
-          "yellowCards": 1,
-          "redCards": null
-        },
-        "away": {
-          "corners": 1,
-          "shotsOnGoal": 1,
-          "shotsOffGoal": 1,
-          "totalShots": 3,
-          "possession": "21%",
-          "fouls": 2,
-          "offsides": 1,
-          "yellowCards": 1,
-          "redCards": null
-        }
-      },
-      "homeCorners": 1,
-      "awayCorners": 1,
-      "homeShotsOnGoal": 1,
-      "awayShotsOnGoal": 1,
-      "homePossession": "79%",
-      "awayPossession": "21%",
-      "homeFouls": 2,
-      "awayFouls": 2,
-      "homeOffsides": 1,
-      "awayOffsides": 1,
-      "apiFootballFixtureId": 1539003,
-      "fallbackClock": 2160,
-      "fallbackClockText": "36'"
-    }
-  ],
   "live": [
     {
+      "apiFootballFixtureId": 1539003,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
-        "id": 2267,
-        "name": "World",
         "code": "INT",
-        "flag": null
+        "flag": null,
+        "id": 2267,
+        "name": "World"
       },
-      "competition": {
-        "id": 2000,
-        "name": "FIFA World Cup",
-        "code": "WC",
-        "type": "CUP",
-        "emblem": "https://crests.football-data.org/wm26.png"
-      },
-      "season": {
-        "id": 2398,
-        "startDate": "2026-06-11",
-        "endDate": "2026-07-19",
-        "currentMatchday": 1,
-        "winner": null
-      },
-      "id": 537403,
-      "utcDate": "2026-06-17T17:00:00Z",
-      "status": "1H",
-      "matchday": 1,
-      "stage": "GROUP_STAGE",
-      "group": "GROUP_K",
-      "lastUpdated": "2026-06-17T19:36:58Z",
-      "homeTeam": {
-        "id": 765,
-        "name": "Portugal",
-        "shortName": "Portugal",
-        "tla": "POR",
-        "crest": "https://crests.football-data.org/765.svg"
-      },
+      "awayCorners": 1,
+      "awayFouls": 2,
+      "awayOffsides": 1,
+      "awayPossession": "20%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 1,
       "awayTeam": {
+        "crest": "https://crests.football-data.org/congo_dr.svg",
         "id": 1934,
         "name": "Congo DR",
         "shortName": "Congo DR",
-        "tla": "COD",
-        "crest": "https://crests.football-data.org/congo_dr.svg"
+        "tla": "COD"
       },
-      "score": {
-        "winner": "HOME_TEAM",
-        "duration": "REGULAR",
-        "fullTime": {
-          "home": 1,
-          "away": 0
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "13'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 13,
+          "player": "B. Silva",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "13:00",
+          "timerSeconds": 780,
+          "type": "Yellow Card"
         },
-        "halfTime": {
-          "home": 1,
-          "away": 0
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "C. Mbemba",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 2160,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "36'",
+      "events": [
+        {
+          "assist": "P. Neto",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "6'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 6,
+          "player": "J. Neves",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "6:00",
+          "timerSeconds": 360,
+          "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "13'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 13,
+          "player": "B. Silva",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "13:00",
+          "timerSeconds": 780,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "C. Mbemba",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Yellow Card"
+        }
+      ],
+      "fallbackClock": 2160,
+      "fallbackClockText": "36'",
+      "goalEvents": [
+        {
+          "assist": "P. Neto",
+          "awayTeam": "Congo DR",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "6'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Portugal",
+          "isDisallowed": false,
+          "matchId": 537403,
+          "matchUtcDate": "2026-06-17T17:00:00Z",
+          "minute": 6,
+          "player": "J. Neves",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "6:00",
+          "timerSeconds": 360,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
+      "group": "GROUP_K",
+      "homeCorners": 1,
+      "homeFouls": 2,
+      "homeOffsides": 1,
+      "homePossession": "80%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 1,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/765.svg",
+        "id": 765,
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR"
+      },
+      "id": 537403,
+      "lastApiSync": "2026-06-17T17:37:47.854699+00:00",
+      "lastUpdated": "2026-06-17T19:37:43Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 1,
+          "fouls": 2,
+          "offsides": 1,
+          "possession": "20%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 3,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 2,
+          "offsides": 1,
+          "possession": "80%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 1,
+          "yellowCards": 1
         }
       },
+      "manualClock": {
+        "active": false,
+        "displayMinute": "36'",
+        "lastApiSync": "2026-06-17T17:37:47.854699+00:00",
+        "seconds": 2160,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "36'"
+      },
+      "manualClockText": "36'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "cloudCoverage": 27.3,
+        "condition": "partlycloudy",
+        "dewPoint": 12.8,
+        "entityId": "weather.forecast_home",
+        "humidity": 53,
+        "name": "Forecast Home",
+        "pressure": 1013.7,
+        "pressureUnit": "mbar",
+        "source": "home_assistant",
+        "temperature": 22.8,
+        "temperatureUnit": "\u00b0C",
+        "uvIndex": 1.4,
+        "windBearing": 246.1,
+        "windSpeed": 11.18,
+        "windSpeedUnit": "mph"
+      },
+      "matchday": 1,
+      "minute": 36,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -307,184 +236,327 @@
           "type": "REFEREE"
         }
       ],
-      "liveSource": "api_football",
-      "minute": 36,
-      "clockSeconds": 2160,
-      "displayMinute": "36'",
-      "manualClockText": "36'",
-      "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T17:37:03.976125+00:00",
-      "manualClock": {
-        "seconds": 2160,
-        "timer": "36'",
-        "displayMinute": "36'",
-        "active": false,
-        "status": "1H",
-        "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T17:37:03.976125+00:00"
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 1
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 1
+        },
+        "winner": "HOME_TEAM"
       },
-      "homeScore": 1,
-      "awayScore": 0,
       "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 1,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-17T17:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "cloudCoverage": 27.3,
+        "condition": "partlycloudy",
+        "dewPoint": 12.8,
+        "entityId": "weather.forecast_home",
+        "humidity": 53,
+        "name": "Forecast Home",
+        "pressure": 1013.7,
+        "pressureUnit": "mbar",
+        "source": "home_assistant",
+        "temperature": 22.8,
+        "temperatureUnit": "\u00b0C",
+        "uvIndex": 1.4,
+        "windBearing": 246.1,
+        "windSpeed": 11.18,
+        "windSpeedUnit": "mph"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "apiFootballFixtureId": 1539003,
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
-      "goalEvents": [
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayCorners": 1,
+      "awayFouls": 2,
+      "awayOffsides": 1,
+      "awayPossession": "20%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 1,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/congo_dr.svg",
+        "id": 1934,
+        "name": "Congo DR",
+        "shortName": "Congo DR",
+        "tla": "COD"
+      },
+      "cardEvents": [
         {
-          "type": "Goal",
-          "rawType": "Goal",
-          "team": "Portugal",
-          "player": "J. Neves",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 6,
-          "extra": null,
-          "displayMinute": "6'",
-          "timer": "6:00",
-          "timerSeconds": 360,
-          "detail": "Normal Goal",
-          "comments": null,
-          "assist": "P. Neto",
-          "isDisallowed": false,
-          "source": "api_football",
-          "matchId": 537403,
-          "matchUtcDate": "2026-06-17T17:00:00Z",
-          "homeTeam": "Portugal",
-          "awayTeam": "Congo DR",
-          "goalNumber": 1
-        }
-      ],
-      "events": [
-        {
-          "type": "Goal",
-          "rawType": "Goal",
-          "team": "Portugal",
-          "player": "J. Neves",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 6,
-          "extra": null,
-          "displayMinute": "6'",
-          "timer": "6:00",
-          "timerSeconds": 360,
-          "detail": "Normal Goal",
-          "comments": null,
-          "assist": "P. Neto",
-          "isDisallowed": false,
-          "source": "api_football"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Portugal",
-          "player": "B. Silva",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 13,
-          "extra": null,
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
           "displayMinute": "13'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 13,
+          "player": "B. Silva",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Portugal",
           "timer": "13:00",
           "timerSeconds": 780,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "isDisallowed": false,
-          "source": "api_football"
+          "type": "Yellow Card"
         },
         {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Congo DR",
-          "player": "C. Mbemba",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 32,
-          "extra": null,
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
           "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "C. Mbemba",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Congo DR",
           "timer": "32:00",
           "timerSeconds": 1920,
-          "detail": "Yellow Card",
-          "comments": "Roughing",
-          "assist": null,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 2160,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "36'",
+      "events": [
+        {
+          "assist": "P. Neto",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "6'",
+          "extra": null,
           "isDisallowed": false,
-          "source": "api_football"
+          "minute": 6,
+          "player": "J. Neves",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "6:00",
+          "timerSeconds": 360,
+          "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "13'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 13,
+          "player": "B. Silva",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "13:00",
+          "timerSeconds": 780,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "C. Mbemba",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Yellow Card"
+        }
+      ],
+      "fallbackClock": 2160,
+      "fallbackClockText": "36'",
+      "goalEvents": [
+        {
+          "assist": "P. Neto",
+          "awayTeam": "Congo DR",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "6'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Portugal",
+          "isDisallowed": false,
+          "matchId": 537403,
+          "matchUtcDate": "2026-06-17T17:00:00Z",
+          "minute": 6,
+          "player": "J. Neves",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "6:00",
+          "timerSeconds": 360,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
-      "cardEvents": [
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Portugal",
-          "player": "B. Silva",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 13,
-          "extra": null,
-          "displayMinute": "13'",
-          "timer": "13:00",
-          "timerSeconds": 780,
-          "detail": "Yellow Card",
-          "comments": "Tripping",
-          "assist": null,
-          "isDisallowed": false,
-          "source": "api_football"
-        },
-        {
-          "type": "Yellow Card",
-          "rawType": "Card",
-          "team": "Congo DR",
-          "player": "C. Mbemba",
-          "playerOn": null,
-          "playerOff": null,
-          "minute": 32,
-          "extra": null,
-          "displayMinute": "32'",
-          "timer": "32:00",
-          "timerSeconds": 1920,
-          "detail": "Yellow Card",
-          "comments": "Roughing",
-          "assist": null,
-          "isDisallowed": false,
-          "source": "api_football"
-        }
-      ],
+      "group": "GROUP_K",
+      "homeCorners": 1,
+      "homeFouls": 2,
+      "homeOffsides": 1,
+      "homePossession": "80%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 1,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/765.svg",
+        "id": 765,
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR"
+      },
+      "id": 537403,
+      "lastApiSync": "2026-06-17T17:37:47.854699+00:00",
+      "lastUpdated": "2026-06-17T19:37:43Z",
+      "liveSource": "api_football",
       "liveStatistics": {
-        "home": {
-          "corners": 1,
-          "shotsOnGoal": 1,
-          "shotsOffGoal": 1,
-          "totalShots": 1,
-          "possession": "79%",
-          "fouls": 2,
-          "offsides": 1,
-          "yellowCards": 1,
-          "redCards": null
-        },
         "away": {
           "corners": 1,
-          "shotsOnGoal": 1,
-          "shotsOffGoal": 1,
-          "totalShots": 3,
-          "possession": "21%",
           "fouls": 2,
           "offsides": 1,
-          "yellowCards": 1,
-          "redCards": null
+          "possession": "20%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 3,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 2,
+          "offsides": 1,
+          "possession": "80%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 1,
+          "yellowCards": 1
         }
       },
-      "homeCorners": 1,
-      "awayCorners": 1,
-      "homeShotsOnGoal": 1,
-      "awayShotsOnGoal": 1,
-      "homePossession": "79%",
-      "awayPossession": "21%",
-      "homeFouls": 2,
-      "awayFouls": 2,
-      "homeOffsides": 1,
-      "awayOffsides": 1,
-      "apiFootballFixtureId": 1539003,
-      "fallbackClock": 2160,
-      "fallbackClockText": "36'"
+      "manualClock": {
+        "active": false,
+        "displayMinute": "36'",
+        "lastApiSync": "2026-06-17T17:37:47.854699+00:00",
+        "seconds": 2160,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "36'"
+      },
+      "manualClockText": "36'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "cloudCoverage": 27.3,
+        "condition": "partlycloudy",
+        "dewPoint": 12.8,
+        "entityId": "weather.forecast_home",
+        "humidity": 53,
+        "name": "Forecast Home",
+        "pressure": 1013.7,
+        "pressureUnit": "mbar",
+        "source": "home_assistant",
+        "temperature": 22.8,
+        "temperatureUnit": "\u00b0C",
+        "uvIndex": 1.4,
+        "windBearing": 246.1,
+        "windSpeed": 11.18,
+        "windSpeedUnit": "mph"
+      },
+      "matchday": 1,
+      "minute": 36,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "name": "Abdulrahman Al-Jassim, Qatar",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 1
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 1
+        },
+        "winner": "HOME_TEAM"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 1,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-17T17:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "cloudCoverage": 27.3,
+        "condition": "partlycloudy",
+        "dewPoint": 12.8,
+        "entityId": "weather.forecast_home",
+        "humidity": 53,
+        "name": "Forecast Home",
+        "pressure": 1013.7,
+        "pressureUnit": "mbar",
+        "source": "home_assistant",
+        "temperature": 22.8,
+        "temperatureUnit": "\u00b0C",
+        "uvIndex": 1.4,
+        "windBearing": 246.1,
+        "windSpeed": 11.18,
+        "windSpeedUnit": "mph"
+      }
     }
   ]
 }
