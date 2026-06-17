@@ -6122,13 +6122,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-17T02:45:05.466139+00:00",
+    "phase_start": "2026-06-17T02:45:33.470872+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 4860,
-    "clock_seconds": 4860,
-    "displayMinute": "81'",
-    "manualClockText": "81'",
-    "lastApiSync": "2026-06-17T02:45:05.466139+00:00",
+    "base_seconds": 4920,
+    "clock_seconds": 4920,
+    "displayMinute": "82'",
+    "manualClockText": "82'",
+    "lastApiSync": "2026-06-17T02:45:33.470872+00:00",
     "apiFootballFixtureId": 1489381,
     "events": [
       {
@@ -6310,6 +6310,36 @@
         "comments": null,
         "assist": "N. Otamendi",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Algeria",
+        "player": "N. Bentaleb",
+        "minute": 81,
+        "extra": null,
+        "displayMinute": "81'",
+        "timer": "81:00",
+        "timerSeconds": 4860,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "R. Zerrouki",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Algeria",
+        "player": "I. Maza",
+        "minute": 82,
+        "extra": null,
+        "displayMinute": "82'",
+        "timer": "82:00",
+        "timerSeconds": 4920,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "A. Boulbina",
+        "source": "api_football"
       }
     ],
     "substitutionEvents": [
@@ -6431,6 +6461,36 @@
         "detail": "Substitution 5",
         "comments": null,
         "assist": "N. Otamendi",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Algeria",
+        "player": "N. Bentaleb",
+        "minute": 81,
+        "extra": null,
+        "displayMinute": "81'",
+        "timer": "81:00",
+        "timerSeconds": 4860,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "R. Zerrouki",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Algeria",
+        "player": "I. Maza",
+        "minute": 82,
+        "extra": null,
+        "displayMinute": "82'",
+        "timer": "82:00",
+        "timerSeconds": 4920,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "A. Boulbina",
         "source": "api_football"
       }
     ]
