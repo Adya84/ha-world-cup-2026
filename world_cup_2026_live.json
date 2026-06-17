@@ -27,7 +27,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T03:10:40Z",
+      "lastUpdated": "2026-06-17T03:11:10Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -64,20 +64,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 8,
-      "clockSeconds": 480,
-      "displayMinute": "8'",
-      "manualClockText": "8'",
+      "minute": 9,
+      "clockSeconds": 540,
+      "displayMinute": "9'",
+      "manualClockText": "9'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T01:10:43.644348+00:00",
+      "lastApiSync": "2026-06-17T01:11:11.701576+00:00",
       "manualClock": {
-        "seconds": 480,
-        "timer": "8'",
-        "displayMinute": "8'",
+        "seconds": 540,
+        "timer": "9'",
+        "displayMinute": "9'",
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T01:10:43.644348+00:00"
+        "lastApiSync": "2026-06-17T01:11:11.701576+00:00"
       },
       "homeScore": 0,
       "awayScore": 1,
@@ -89,7 +89,7 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Algeria",
-          "player": null,
+          "player": "F. Chaibi",
           "minute": 8,
           "extra": null,
           "displayMinute": "8'",
@@ -97,8 +97,13 @@
           "timerSeconds": 480,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
-          "source": "api_football"
+          "assist": "I. Maza",
+          "source": "api_football",
+          "matchId": 537397,
+          "matchUtcDate": "2026-06-17T01:00:00Z",
+          "homeTeam": "Argentina",
+          "awayTeam": "Algeria",
+          "goalNumber": 1
         }
       ],
       "events": [
@@ -106,7 +111,7 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Algeria",
-          "player": null,
+          "player": "F. Chaibi",
           "minute": 8,
           "extra": null,
           "displayMinute": "8'",
@@ -114,7 +119,7 @@
           "timerSeconds": 480,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "I. Maza",
           "source": "api_football"
         }
       ],
@@ -304,8 +309,8 @@
       "homeOffsides": 1,
       "awayOffsides": 0,
       "apiFootballFixtureId": 1489381,
-      "fallbackClock": 480,
-      "fallbackClockText": "8'"
+      "fallbackClock": 540,
+      "fallbackClockText": "9'"
     }
   ],
   "live": [
@@ -336,7 +341,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T03:10:40Z",
+      "lastUpdated": "2026-06-17T03:11:10Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -373,20 +378,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 8,
-      "clockSeconds": 480,
-      "displayMinute": "8'",
-      "manualClockText": "8'",
+      "minute": 9,
+      "clockSeconds": 540,
+      "displayMinute": "9'",
+      "manualClockText": "9'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T01:10:43.644348+00:00",
+      "lastApiSync": "2026-06-17T01:11:11.701576+00:00",
       "manualClock": {
-        "seconds": 480,
-        "timer": "8'",
-        "displayMinute": "8'",
+        "seconds": 540,
+        "timer": "9'",
+        "displayMinute": "9'",
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T01:10:43.644348+00:00"
+        "lastApiSync": "2026-06-17T01:11:11.701576+00:00"
       },
       "homeScore": 0,
       "awayScore": 1,
@@ -398,7 +403,7 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Algeria",
-          "player": null,
+          "player": "F. Chaibi",
           "minute": 8,
           "extra": null,
           "displayMinute": "8'",
@@ -406,8 +411,13 @@
           "timerSeconds": 480,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
-          "source": "api_football"
+          "assist": "I. Maza",
+          "source": "api_football",
+          "matchId": 537397,
+          "matchUtcDate": "2026-06-17T01:00:00Z",
+          "homeTeam": "Argentina",
+          "awayTeam": "Algeria",
+          "goalNumber": 1
         }
       ],
       "events": [
@@ -415,7 +425,7 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Algeria",
-          "player": null,
+          "player": "F. Chaibi",
           "minute": 8,
           "extra": null,
           "displayMinute": "8'",
@@ -423,7 +433,7 @@
           "timerSeconds": 480,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": null,
+          "assist": "I. Maza",
           "source": "api_football"
         }
       ],
@@ -613,8 +623,8 @@
       "homeOffsides": 1,
       "awayOffsides": 0,
       "apiFootballFixtureId": 1489381,
-      "fallbackClock": 480,
-      "fallbackClockText": "8'"
+      "fallbackClock": 540,
+      "fallbackClockText": "9'"
     }
   ]
 }
