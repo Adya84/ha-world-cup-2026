@@ -7013,7 +7013,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T07:32:01Z",
+      "lastUpdated": "2026-06-17T07:32:28Z",
       "homeTeam": {
         "id": 816,
         "name": "Austria",
@@ -7032,7 +7032,7 @@
         "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 1,
+          "home": 2,
           "away": 1
         },
         "halfTime": {
@@ -7050,22 +7050,22 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 67,
-      "clockSeconds": 4020,
-      "displayMinute": "67'",
-      "manualClockText": "67'",
+      "minute": 68,
+      "clockSeconds": 4080,
+      "displayMinute": "68'",
+      "manualClockText": "68'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T05:32:03.667901+00:00",
+      "lastApiSync": "2026-06-17T05:32:31.458999+00:00",
       "manualClock": {
-        "seconds": 4020,
-        "timer": "67'",
-        "displayMinute": "67'",
+        "seconds": 4080,
+        "timer": "68'",
+        "displayMinute": "68'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T05:32:03.667901+00:00"
+        "lastApiSync": "2026-06-17T05:32:31.458999+00:00"
       },
-      "homeScore": 1,
+      "homeScore": 2,
       "awayScore": 1,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
@@ -7201,6 +7201,21 @@
           "detail": "Substitution 4",
           "comments": null,
           "assist": "P. Wanner",
+          "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Austria",
+          "player": null,
+          "minute": 68,
+          "extra": null,
+          "displayMinute": "68'",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
           "source": "api_football"
         }
       ],
@@ -7452,8 +7467,8 @@
       "homeOffsides": 2,
       "awayOffsides": 0,
       "apiFootballFixtureId": 1489382,
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'"
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'"
     },
     {
       "area": {
