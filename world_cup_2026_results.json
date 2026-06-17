@@ -12329,7 +12329,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T04:17:58Z",
+      "lastUpdated": "2026-06-17T04:18:28Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -12371,7 +12371,7 @@
       "displayMinute": "55'",
       "manualClockText": "55'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T02:18:02.425837+00:00",
+      "lastApiSync": "2026-06-17T02:18:30.716138+00:00",
       "manualClock": {
         "seconds": 3300,
         "timer": "55'",
@@ -12379,7 +12379,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T02:18:02.425837+00:00"
+        "lastApiSync": "2026-06-17T02:18:30.716138+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
@@ -12453,6 +12453,21 @@
           "comments": null,
           "assist": "N. Molina",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "L. Martinez",
+          "minute": 55,
+          "extra": null,
+          "displayMinute": "55'",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Alvarez",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -12471,6 +12486,21 @@
           "comments": null,
           "assist": "N. Molina",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "L. Martinez",
+          "minute": 55,
+          "extra": null,
+          "displayMinute": "55'",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Alvarez",
+          "source": "api_football"
         }
       ],
       "liveStatistics": {
@@ -12479,7 +12509,7 @@
           "statistics": [
             {
               "type": "Shots on Goal",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots off Goal",
@@ -12487,7 +12517,7 @@
             },
             {
               "type": "Total Shots",
-              "value": 5
+              "value": 6
             },
             {
               "type": "Blocked Shots",
@@ -12495,7 +12525,7 @@
             },
             {
               "type": "Shots insidebox",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots outsidebox",
@@ -12515,7 +12545,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "53%"
+              "value": "54%"
             },
             {
               "type": "Yellow Cards",
@@ -12527,15 +12557,15 @@
             },
             {
               "type": "Goalkeeper Saves",
-              "value": null
+              "value": 0
             },
             {
               "type": "Total passes",
-              "value": 357
+              "value": 372
             },
             {
               "type": "Passes accurate",
-              "value": 323
+              "value": 336
             },
             {
               "type": "Passes %",
@@ -12551,10 +12581,10 @@
             }
           ],
           "corners": 0,
-          "shotsOnGoal": 1,
+          "shotsOnGoal": 2,
           "shotsOffGoal": 4,
-          "totalShots": 5,
-          "possession": "53%",
+          "totalShots": 6,
+          "possession": "54%",
           "fouls": 8,
           "offsides": 3,
           "yellowCards": null,
@@ -12601,7 +12631,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "47%"
+              "value": "46%"
             },
             {
               "type": "Yellow Cards",
@@ -12613,15 +12643,15 @@
             },
             {
               "type": "Goalkeeper Saves",
-              "value": null
+              "value": 1
             },
             {
               "type": "Total passes",
-              "value": 313
+              "value": 316
             },
             {
               "type": "Passes accurate",
-              "value": 287
+              "value": 290
             },
             {
               "type": "Passes %",
@@ -12640,7 +12670,7 @@
           "shotsOnGoal": 0,
           "shotsOffGoal": 3,
           "totalShots": 4,
-          "possession": "47%",
+          "possession": "46%",
           "fouls": 4,
           "offsides": 1,
           "yellowCards": null,
@@ -12649,10 +12679,10 @@
       },
       "homeCorners": 0,
       "awayCorners": 2,
-      "homeShotsOnGoal": 1,
+      "homeShotsOnGoal": 2,
       "awayShotsOnGoal": 0,
-      "homePossession": "53%",
-      "awayPossession": "47%",
+      "homePossession": "54%",
+      "awayPossession": "46%",
       "homeFouls": 8,
       "awayFouls": 4,
       "homeOffsides": 3,
@@ -12706,6 +12736,21 @@
             "comments": null,
             "assist": "N. Molina",
             "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Argentina",
+            "player": "L. Martinez",
+            "minute": 55,
+            "extra": null,
+            "displayMinute": "55'",
+            "timer": "55:00",
+            "timerSeconds": 3300,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Alvarez",
+            "source": "api_football"
           }
         ],
         "goalEvents": [
@@ -12745,6 +12790,21 @@
             "detail": "Substitution 1",
             "comments": null,
             "assist": "N. Molina",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Argentina",
+            "player": "L. Martinez",
+            "minute": 55,
+            "extra": null,
+            "displayMinute": "55'",
+            "timer": "55:00",
+            "timerSeconds": 3300,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Alvarez",
             "source": "api_football"
           }
         ],
@@ -25089,7 +25149,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T04:17:58Z",
+      "lastUpdated": "2026-06-17T04:18:28Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -25131,7 +25191,7 @@
       "displayMinute": "55'",
       "manualClockText": "55'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T02:18:02.425837+00:00",
+      "lastApiSync": "2026-06-17T02:18:30.716138+00:00",
       "manualClock": {
         "seconds": 3300,
         "timer": "55'",
@@ -25139,7 +25199,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T02:18:02.425837+00:00"
+        "lastApiSync": "2026-06-17T02:18:30.716138+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
@@ -25213,6 +25273,21 @@
           "comments": null,
           "assist": "N. Molina",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "L. Martinez",
+          "minute": 55,
+          "extra": null,
+          "displayMinute": "55'",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Alvarez",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -25231,6 +25306,21 @@
           "comments": null,
           "assist": "N. Molina",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "L. Martinez",
+          "minute": 55,
+          "extra": null,
+          "displayMinute": "55'",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "detail": "Substitution 2",
+          "comments": null,
+          "assist": "J. Alvarez",
+          "source": "api_football"
         }
       ],
       "liveStatistics": {
@@ -25239,7 +25329,7 @@
           "statistics": [
             {
               "type": "Shots on Goal",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots off Goal",
@@ -25247,7 +25337,7 @@
             },
             {
               "type": "Total Shots",
-              "value": 5
+              "value": 6
             },
             {
               "type": "Blocked Shots",
@@ -25255,7 +25345,7 @@
             },
             {
               "type": "Shots insidebox",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots outsidebox",
@@ -25275,7 +25365,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "53%"
+              "value": "54%"
             },
             {
               "type": "Yellow Cards",
@@ -25287,15 +25377,15 @@
             },
             {
               "type": "Goalkeeper Saves",
-              "value": null
+              "value": 0
             },
             {
               "type": "Total passes",
-              "value": 357
+              "value": 372
             },
             {
               "type": "Passes accurate",
-              "value": 323
+              "value": 336
             },
             {
               "type": "Passes %",
@@ -25311,10 +25401,10 @@
             }
           ],
           "corners": 0,
-          "shotsOnGoal": 1,
+          "shotsOnGoal": 2,
           "shotsOffGoal": 4,
-          "totalShots": 5,
-          "possession": "53%",
+          "totalShots": 6,
+          "possession": "54%",
           "fouls": 8,
           "offsides": 3,
           "yellowCards": null,
@@ -25361,7 +25451,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "47%"
+              "value": "46%"
             },
             {
               "type": "Yellow Cards",
@@ -25373,15 +25463,15 @@
             },
             {
               "type": "Goalkeeper Saves",
-              "value": null
+              "value": 1
             },
             {
               "type": "Total passes",
-              "value": 313
+              "value": 316
             },
             {
               "type": "Passes accurate",
-              "value": 287
+              "value": 290
             },
             {
               "type": "Passes %",
@@ -25400,7 +25490,7 @@
           "shotsOnGoal": 0,
           "shotsOffGoal": 3,
           "totalShots": 4,
-          "possession": "47%",
+          "possession": "46%",
           "fouls": 4,
           "offsides": 1,
           "yellowCards": null,
@@ -25409,10 +25499,10 @@
       },
       "homeCorners": 0,
       "awayCorners": 2,
-      "homeShotsOnGoal": 1,
+      "homeShotsOnGoal": 2,
       "awayShotsOnGoal": 0,
-      "homePossession": "53%",
-      "awayPossession": "47%",
+      "homePossession": "54%",
+      "awayPossession": "46%",
       "homeFouls": 8,
       "awayFouls": 4,
       "homeOffsides": 3,
@@ -25466,6 +25556,21 @@
             "comments": null,
             "assist": "N. Molina",
             "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Argentina",
+            "player": "L. Martinez",
+            "minute": 55,
+            "extra": null,
+            "displayMinute": "55'",
+            "timer": "55:00",
+            "timerSeconds": 3300,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Alvarez",
+            "source": "api_football"
           }
         ],
         "goalEvents": [
@@ -25505,6 +25610,21 @@
             "detail": "Substitution 1",
             "comments": null,
             "assist": "N. Molina",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Argentina",
+            "player": "L. Martinez",
+            "minute": 55,
+            "extra": null,
+            "displayMinute": "55'",
+            "timer": "55:00",
+            "timerSeconds": 3300,
+            "detail": "Substitution 2",
+            "comments": null,
+            "assist": "J. Alvarez",
             "source": "api_football"
           }
         ],
