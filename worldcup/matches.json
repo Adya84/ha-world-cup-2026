@@ -7013,7 +7013,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T07:32:28Z",
+      "lastUpdated": "2026-06-17T07:32:58Z",
       "homeTeam": {
         "id": 816,
         "name": "Austria",
@@ -7055,7 +7055,7 @@
       "displayMinute": "68'",
       "manualClockText": "68'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T05:32:31.458999+00:00",
+      "lastApiSync": "2026-06-17T05:32:59.431413+00:00",
       "manualClock": {
         "seconds": 4080,
         "timer": "68'",
@@ -7063,7 +7063,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T05:32:31.458999+00:00"
+        "lastApiSync": "2026-06-17T05:32:59.431413+00:00"
       },
       "homeScore": 2,
       "awayScore": 1,
@@ -7110,6 +7110,26 @@
           "homeTeam": "Austria",
           "awayTeam": "Jordan",
           "goalNumber": 2
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Austria",
+          "player": "M. Arnautovic",
+          "minute": 67,
+          "extra": null,
+          "displayMinute": "67'",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football",
+          "matchId": 537398,
+          "matchUtcDate": "2026-06-17T04:00:00Z",
+          "homeTeam": "Austria",
+          "awayTeam": "Jordan",
+          "goalNumber": 3
         }
       ],
       "events": [
@@ -7207,12 +7227,12 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Austria",
-          "player": null,
-          "minute": 68,
+          "player": "M. Arnautovic",
+          "minute": 67,
           "extra": null,
-          "displayMinute": "68'",
-          "timer": "68:00",
-          "timerSeconds": 4080,
+          "displayMinute": "67'",
+          "timer": "67:00",
+          "timerSeconds": 4020,
           "detail": "Normal Goal",
           "comments": null,
           "assist": null,
@@ -7288,7 +7308,7 @@
           "statistics": [
             {
               "type": "Shots on Goal",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Shots off Goal",
@@ -7300,7 +7320,7 @@
             },
             {
               "type": "Blocked Shots",
-              "value": 2
+              "value": 1
             },
             {
               "type": "Shots insidebox",
@@ -7340,11 +7360,11 @@
             },
             {
               "type": "Total passes",
-              "value": 431
+              "value": 437
             },
             {
               "type": "Passes accurate",
-              "value": 366
+              "value": 371
             },
             {
               "type": "Passes %",
@@ -7360,7 +7380,7 @@
             }
           ],
           "corners": 1,
-          "shotsOnGoal": 1,
+          "shotsOnGoal": 2,
           "shotsOffGoal": 6,
           "totalShots": 9,
           "possession": "65%",
@@ -7406,7 +7426,7 @@
             },
             {
               "type": "Offsides",
-              "value": 0
+              "value": 1
             },
             {
               "type": "Ball Possession",
@@ -7451,21 +7471,21 @@
           "totalShots": 10,
           "possession": "35%",
           "fouls": 6,
-          "offsides": 0,
+          "offsides": 1,
           "yellowCards": null,
           "redCards": null
         }
       },
       "homeCorners": 1,
       "awayCorners": 3,
-      "homeShotsOnGoal": 1,
+      "homeShotsOnGoal": 2,
       "awayShotsOnGoal": 4,
       "homePossession": "65%",
       "awayPossession": "35%",
       "homeFouls": 8,
       "awayFouls": 6,
       "homeOffsides": 2,
-      "awayOffsides": 0,
+      "awayOffsides": 1,
       "apiFootballFixtureId": 1489382,
       "fallbackClock": 4080,
       "fallbackClockText": "68'"
