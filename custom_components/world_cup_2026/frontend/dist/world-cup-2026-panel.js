@@ -4,8 +4,9 @@ class WorldCup2026Panel extends HTMLElement {
     super();
     this._hass = null;
     const savedPage = localStorage.getItem("world_cup_2026_last_page") || "overview";
-    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
+    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "teams", "venues", "supporters"]);
     this._page = validPages.has(savedPage) ? savedPage : "overview";
+    this._selectedTeamKey = localStorage.getItem("world_cup_2026_selected_team") || "";
     this._loaded = false;
     this._refreshInterval = null;
     this._countdownInterval = null;
@@ -7722,6 +7723,8 @@ class WorldCup2026Panel extends HTMLElement {
         awayOffsides: publicMatch.awayOffsides ?? publicMatch.matchDetails?.awayOffsides ?? match.awayOffsides,
         lineups: publicMatch.lineups || publicMatch.lineupsData || publicMatch.matchDetails?.lineups || publicMatch.matchDetails?.lineupsData || match.lineups,
         lineupsData: publicMatch.lineupsData || publicMatch.lineups || publicMatch.matchDetails?.lineupsData || publicMatch.matchDetails?.lineups || match.lineupsData,
+        weather: publicMatch.weather || publicMatch.matchWeather || publicMatch.matchDetails?.weather || match.weather,
+        matchWeather: publicMatch.matchWeather || publicMatch.weather || publicMatch.matchDetails?.weather || match.matchWeather,
         publicGithubSynced: true,
       };
     });
@@ -7935,6 +7938,8 @@ class WorldCup2026Panel extends HTMLElement {
         awayOffsides: extra.awayOffsides ?? extra.matchDetails?.awayOffsides ?? match.awayOffsides,
         lineups: extra.lineups || extra.lineupsData || extra.matchDetails?.lineups || extra.matchDetails?.lineupsData || match.lineups,
         lineupsData: extra.lineupsData || extra.lineups || extra.matchDetails?.lineupsData || extra.matchDetails?.lineups || match.lineupsData,
+        weather: extra.weather || extra.matchWeather || extra.matchDetails?.weather || match.weather,
+        matchWeather: extra.matchWeather || extra.weather || extra.matchDetails?.weather || match.matchWeather,
         publicGoalEventsSynced: true,
       };
     });
@@ -8104,7 +8109,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   changePage(page) {
-    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "venues", "supporters"]);
+    const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "teams", "venues", "supporters"]);
     if (!validPages.has(page)) page = "overview";
     this._page = page;
     try { localStorage.setItem("world_cup_2026_last_page", page); } catch (e) {}
@@ -15732,6 +15737,7 @@ class WorldCup2026Panel extends HTMLElement {
   nav() {
     const items = [
       ["overview", this.t("overview")],
+      ["teams", "Teams"],
       ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
       ["results", this.t("results")],
@@ -15758,6 +15764,7 @@ class WorldCup2026Panel extends HTMLElement {
   tabletHeaderNav() {
     const items = [
       ["overview", this.t("overview")],
+      ["teams", "Teams"],
       ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
       ["results", this.t("results")],
@@ -16771,16 +16778,55 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  matchWeatherSection(match) {
+    const weather = match?.weather || match?.matchWeather || {};
+    if (!weather || typeof weather !== "object" || !Object.keys(weather).length) return "";
+
+    const temp = weather.temperature !== null && weather.temperature !== undefined && weather.temperature !== ""
+      ? `${weather.temperature}${weather.temperatureUnit || ""}`
+      : "";
+    const condition = weather.condition ? String(weather.condition).replaceAll("_", " ") : "";
+    const wind = weather.windSpeed !== null && weather.windSpeed !== undefined && weather.windSpeed !== ""
+      ? `${weather.windSpeed}${weather.windSpeedUnit ? ` ${weather.windSpeedUnit}` : ""}`
+      : "";
+    const details = [
+      weather.humidity !== null && weather.humidity !== undefined && weather.humidity !== "" ? `Humidity: ${weather.humidity}%` : "",
+      wind ? `Wind: ${wind}` : "",
+      weather.cloudCoverage !== null && weather.cloudCoverage !== undefined && weather.cloudCoverage !== "" ? `Cloud: ${weather.cloudCoverage}%` : "",
+      weather.uvIndex !== null && weather.uvIndex !== undefined && weather.uvIndex !== "" ? `UV: ${weather.uvIndex}` : "",
+    ].filter(Boolean).join(" / ");
+
+    if (!temp && !condition && !details) return "";
+
+    return `
+      <div class="match-events-box match-weather-box">
+        <div class="match-extra-title">Weather</div>
+        <div class="match-events-list">
+          <div class="match-event-row match-event-weather">
+            <span class="match-event-minute">${this.esc(temp || "-")}</span>
+            <span class="match-event-icon">WX</span>
+            <span class="match-event-main">
+              <strong>${this.esc(condition || weather.name || "Forecast Home")}</strong>
+              ${details ? `<small>${this.esc(details)}</small>` : ""}
+            </span>
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
   matchExtraLiveDataSection(match) {
     const eventsHtml = this.matchEventsTimelineSection(match);
     const statisticsHtml = this.matchLiveStatisticsSection(match);
+    const weatherHtml = this.matchWeatherSection(match);
     const officialsHtml = this.matchOfficialsSection(match);
-    if (!eventsHtml && !statisticsHtml && !officialsHtml) return "";
+    if (!eventsHtml && !statisticsHtml && !weatherHtml && !officialsHtml) return "";
 
     return `
       <div class="match-extra-live-data">
         ${eventsHtml}
         ${statisticsHtml}
+        ${weatherHtml}
         ${officialsHtml}
       </div>
     `;
@@ -18815,327 +18861,492 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
-  statsPage() {
-    const a = this.statsHubAnalytics();
-    const eventColour = a.dataCoverage >= 80 ? "#22c55e" : (a.dataCoverage >= 40 ? "#f59e0b" : "#ef4444");
-    const safeNumber = (value) => Number.isFinite(Number(value)) ? Number(value) : 0;
-    const pct = (part, total) => total ? Math.round((part / total) * 100) : 0;
-
-    const statCard = (label, value, sub = "", accent = "#93c5fd") => `
-      <div class="wc-stat" style="min-height:106px;display:flex;flex-direction:column;justify-content:center;gap:6px;background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.042));border:1px solid rgba(255,255,255,.105);box-shadow:0 10px 30px rgba(0,0,0,.18);">
-        <strong style="font-size:2rem;line-height:1;color:${accent};">${this.esc(value)}</strong>
-        <span style="font-weight:900;">${this.esc(label)}</span>
-        ${sub ? `<small style="color:rgba(255,255,255,.60);line-height:1.35;">${this.esc(sub)}</small>` : ""}
-      </div>
-    `;
-
-    const chip = (label, value, accent = "#93c5fd") => `
-      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);">
-        <span style="color:rgba(255,255,255,.68);font-weight:800;">${this.esc(label)}</span>
-        <strong style="color:${accent};font-size:1.05rem;">${this.esc(value)}</strong>
-      </div>
-    `;
-
-    const extractLineups = (match) => {
-      const candidates = [
-        match?.lineups,
-        match?.lineupsData,
-        match?.teamLineups,
-        match?.apiFootballLineups,
-        match?.matchLineups,
-        match?.matchDetails?.lineups,
-        match?.matchDetails?.lineupsData,
-        match?.details?.lineups,
-        match?.fixture?.lineups,
-      ];
-      for (const candidate of candidates) {
-        if (Array.isArray(candidate) && candidate.length) return candidate;
-        if (candidate && typeof candidate === "object") {
-          const values = Object.values(candidate).filter(Boolean);
-          if (values.length) return values;
-        }
-      }
-      return [];
+  teamCentreOptions() {
+    const teams = new Map();
+    const addTeam = (team) => {
+      const label = this.localizedTeamName(team || "");
+      const key = this.fixtureTeamKey(label);
+      if (!key || key === this.fixtureTeamKey(this.t("tbc"))) return;
+      if (!teams.has(key)) teams.set(key, label);
     };
 
-    const lineupTeamName = (lineup, fallback = "") => {
-      const team = lineup?.team || lineup?.teamName || lineup?.name || lineup?.side || fallback;
-      if (team && typeof team === "object") return team.name || team.shortName || team.tla || fallback;
-      return team || fallback;
-    };
-
-    const playerName = (player) => {
-      if (!player) return "";
-      if (typeof player === "string") return player;
-      return player.name || player.playerName || player.fullName || player?.player?.name || player?.athlete?.displayName || "";
-    };
-
-    const playerNumber = (player) => {
-      if (!player || typeof player === "string") return "";
-      return player.number || player.shirtNumber || player.jerseyNumber || player?.player?.number || "";
-    };
-
-    const playersFrom = (lineup, keys) => {
-      for (const key of keys) {
-        const value = lineup?.[key];
-        if (Array.isArray(value)) return value;
-        if (value && typeof value === "object" && Array.isArray(value.players)) return value.players;
-      }
-      return [];
-    };
-
-    const lineupMatches = [];
-    const formationMap = new Map();
-    const lineupTeamMap = new Map();
-    const starterMap = new Map();
-    const benchMap = new Map();
-
-    (a.matches || []).forEach((match) => {
-      const lineups = extractLineups(match);
-      if (!lineups.length) return;
-      lineupMatches.push(match);
-      lineups.forEach((lineup, index) => {
-        const fallbackTeam = index === 0 ? this.getHomeTeam(match) : this.getAwayTeam(match);
-        const team = this.localizedTeamName(lineupTeamName(lineup, fallbackTeam));
-        const formation = lineup?.formation || lineup?.system || lineup?.tacticalFormation || lineup?.shape || "Unknown";
-        const starters = playersFrom(lineup, ["startXI", "startingXI", "starters", "starting", "lineup", "players"]);
-        const bench = playersFrom(lineup, ["substitutes", "subs", "bench"]);
-        const key = `${this.fixtureTeamKey(team)}|${formation}`;
-        const teamKey = this.fixtureTeamKey(team);
-
-        formationMap.set(key, {
-          team,
-          formation,
-          count: (formationMap.get(key)?.count || 0) + 1,
-        });
-
-        lineupTeamMap.set(teamKey, {
-          team,
-          matches: (lineupTeamMap.get(teamKey)?.matches || 0) + 1,
-          starters: (lineupTeamMap.get(teamKey)?.starters || 0) + starters.length,
-          bench: (lineupTeamMap.get(teamKey)?.bench || 0) + bench.length,
-        });
-
-        starters.forEach((player) => {
-          const name = playerName(player);
-          if (!name) return;
-          const pkey = `${String(name).toLowerCase()}|${teamKey}`;
-          starterMap.set(pkey, {
-            player: name,
-            number: playerNumber(player),
-            team,
-            starts: (starterMap.get(pkey)?.starts || 0) + 1,
-          });
-        });
-
-        bench.forEach((player) => {
-          const name = playerName(player);
-          if (!name) return;
-          const pkey = `${String(name).toLowerCase()}|${teamKey}`;
-          benchMap.set(pkey, {
-            player: name,
-            number: playerNumber(player),
-            team,
-            bench: (benchMap.get(pkey)?.bench || 0) + 1,
-          });
-        });
-      });
+    this.statsHubAllMatches().forEach((match) => {
+      addTeam(this.getHomeTeam(match));
+      addTeam(this.getAwayTeam(match));
     });
 
-    const formationRows = Array.from(formationMap.values()).sort((x, y) => y.count - x.count || x.team.localeCompare(y.team)).slice(0, 10);
-    const lineupTeamRows = Array.from(lineupTeamMap.values()).sort((x, y) => y.matches - x.matches || x.team.localeCompare(y.team)).slice(0, 10);
-    const starterRows = Array.from(starterMap.values()).sort((x, y) => y.starts - x.starts || x.player.localeCompare(y.player)).slice(0, 10);
-    const benchRows = Array.from(benchMap.values()).sort((x, y) => y.bench - x.bench || x.player.localeCompare(y.player)).slice(0, 8);
+    (Array.isArray(this._data.standings) ? this._data.standings : []).forEach((group) => {
+      const rows = group?.table || group?.standings || group?.teams || [];
+      (Array.isArray(rows) ? rows : []).forEach((row) => addTeam(row.team || row.name || row));
+    });
 
-    const totalCards = safeNumber(a.yellowCards) + safeNumber(a.redCards);
-    const eventRate = a.finished.length ? (safeNumber(a.events) / a.finished.length).toFixed(1) : "0.0";
-    const cardsPerMatch = a.finished.length ? (totalCards / a.finished.length).toFixed(1) : "0.0";
-    const goalsPerMatch = a.goalsPerMatch || (a.finished.length ? (safeNumber(a.goals) / a.finished.length).toFixed(2) : "0.00");
-    const lineupCoverage = a.finished.length ? pct(lineupMatches.length, a.finished.length) : 0;
+    (Array.isArray(this._data.scorers) ? this._data.scorers : []).forEach((scorer) => {
+      addTeam(this.scorerTeamName(scorer));
+    });
 
-    const teamSnapshotRows = (a.teamRows || []).slice(0, 10).map((row) => ({
-      ...row,
-      gdText: row.gd > 0 ? `+${row.gd}` : row.gd,
-      goalRate: row.played ? (safeNumber(row.gf) / row.played).toFixed(2) : "0.00",
-    }));
+    return Array.from(teams.entries())
+      .map(([key, name]) => ({ key, name }))
+      .sort((a, b) => a.name.localeCompare(b.name));
+  }
+
+  selectedTeamOption() {
+    const options = this.teamCentreOptions();
+    if (!options.length) return null;
+    const selected = options.find((team) => team.key === this._selectedTeamKey) || options[0];
+    if (selected.key !== this._selectedTeamKey) {
+      this._selectedTeamKey = selected.key;
+      localStorage.setItem("world_cup_2026_selected_team", selected.key);
+    }
+    return selected;
+  }
+
+  teamCentreGroupRow(teamKey) {
+    for (const group of (Array.isArray(this._data.groups) ? this._data.groups : [])) {
+      const rows = group?.table || group?.standings || group?.teams || [];
+      for (const row of (Array.isArray(rows) ? rows : [])) {
+        const team = row.team || row.name || row;
+        if (this.fixtureTeamKey(team) !== teamKey) continue;
+        return {
+          group: group.group || group.name || group.stage || "",
+          pos: row.position ?? row.rank ?? row.pos ?? "",
+          played: row.playedGames ?? row.played ?? row.matchesPlayed ?? "",
+          wins: row.won ?? row.wins ?? "",
+          draws: row.draw ?? row.draws ?? "",
+          losses: row.lost ?? row.losses ?? "",
+          gf: row.goalsFor ?? row.gf ?? "",
+          ga: row.goalsAgainst ?? row.ga ?? "",
+          gd: row.goalDifference ?? row.gd ?? "",
+          points: row.points ?? row.pts ?? "",
+        };
+      }
+    }
+    return null;
+  }
+
+  teamCentreMatchRows(matches, teamKey) {
+    return matches.map((match) => {
+      const home = this.getHomeTeam(match);
+      const away = this.getAwayTeam(match);
+      const isHome = this.fixtureTeamKey(home) === teamKey;
+      const opponent = isHome ? away : home;
+      const homeScore = this.getHomeScore(match);
+      const awayScore = this.getAwayScore(match);
+      const hasScore = homeScore !== "-" || awayScore !== "-";
+      const venue = this.fixtureVenueInfo(match);
+      return {
+        date: this.formatDate(match.utcDate || match.date),
+        opponent: `${isHome ? "v" : "@"} ${this.localizedTeamName(opponent)}`,
+        score: hasScore ? `${homeScore} - ${awayScore}` : this.statusLabel(match.status, match) || this.t("scheduled"),
+        status: this.statusLabel(match.status, match) || "",
+        venue: venue?.name || match.venue || match.stadium || "",
+      };
+    });
+  }
+
+  teamsPage() {
+    const selected = this.selectedTeamOption();
+    const options = this.teamCentreOptions();
+    const a = this.statsHubAnalytics();
+
+    if (!selected) {
+      return `<div class="wc-card"><div class="wc-empty">No teams loaded yet</div></div>`;
+    }
+
+    const teamKey = selected.key;
+    const teamName = selected.name;
+    const matches = this.statsHubAllMatches()
+      .filter((match) => this.fixtureTeamKey(this.getHomeTeam(match)) === teamKey || this.fixtureTeamKey(this.getAwayTeam(match)) === teamKey)
+      .sort((x, y) => new Date(x.utcDate || x.date || 0) - new Date(y.utcDate || y.date || 0));
+    const finished = matches.filter((match) => this.isFinishedMatch(match));
+    const live = matches.filter((match) => this.isLiveMatch(match));
+    const upcoming = matches.filter((match) => !this.isFinishedMatch(match) && !this.isLiveMatch(match));
+    const nextMatch = live[0] || upcoming[0] || null;
+    const recent = finished.slice(-5).reverse();
+    const teamStats = (a.teamRows || []).find((row) => this.fixtureTeamKey(row.team) === teamKey) || {
+      played: finished.length, wins: 0, draws: 0, losses: 0, gf: 0, ga: 0, gd: 0, goals: 0, assists: 0,
+      cards: 0, yellowCards: 0, redCards: 0, substitutions: 0, varEvents: 0, cleanSheets: 0,
+    };
+    const groupRow = this.teamCentreGroupRow(teamKey);
+    const groupRows = (() => {
+      for (const group of (Array.isArray(this._data.groups) ? this._data.groups : [])) {
+        const rows = group?.table || group?.standings || group?.teams || [];
+        const normalised = (Array.isArray(rows) ? rows : []).map((row) => {
+          const team = row.team || row.name || row;
+          return {
+            team: this.localizedTeamName(team),
+            key: this.fixtureTeamKey(team),
+            pos: row.position ?? row.rank ?? row.pos ?? "",
+            played: row.playedGames ?? row.played ?? row.matchesPlayed ?? "",
+            gd: row.goalDifference ?? row.gd ?? "",
+            points: row.points ?? row.pts ?? "",
+          };
+        });
+        if (normalised.some((row) => row.key === teamKey)) return normalised;
+      }
+      return [];
+    })();
+    const events = matches.flatMap((match) => this.normalisedMatchEvents(match).filter((event) => this.fixtureTeamKey(event.team) === teamKey));
+    const goals = events.filter((event) => event.category === "goal").length;
+    const yellowCardsFromEvents = events.filter((event) => event.category === "card" && !(String(event.icon || "").includes("🟥") || String(event.detail || "").toLowerCase().includes("red"))).length;
+    const redCardsFromEvents = events.filter((event) => event.category === "card" && (String(event.icon || "").includes("🟥") || String(event.detail || "").toLowerCase().includes("red"))).length;
+    const cards = yellowCardsFromEvents + redCardsFromEvents;
+    const teamYellowCards = Number(teamStats.yellowCards || 0) || yellowCardsFromEvents;
+    const teamRedCards = Number(teamStats.redCards || 0) || redCardsFromEvents;
+    const subs = events.filter((event) => event.category === "substitution").length;
+    const vars = events.filter((event) => event.category === "var").length;
+    const playerRows = (a.topPlayers || [])
+      .filter((row) => this.fixtureTeamKey(row.team) === teamKey)
+      .map((row) => ({ ...row, total: (row.goals || 0) + (row.assists || 0) + (row.cards || 0) }))
+      .sort((x, y) => (y.total || 0) - (x.total || 0));
+    const spotlightPlayer = playerRows[0];
+
+    const matchStage = (match) => this.stageLabel(match?.stage || match?.round || match?.matchday || match?.group || "") || match?.stage || match?.round || "World Cup Match";
+    const matchDateTime = (match) => {
+      const raw = match?.utcDate || match?.date;
+      const date = this.formatDate(raw);
+      const time = this.formatTime ? this.formatTime(raw) : "";
+      return [date, time].filter(Boolean).join(" • ");
+    };
+    const matchVenue = (match) => {
+      const venue = this.fixtureVenueInfo(match);
+      return venue?.name || match?.venue || match?.stadium || "Venue TBC";
+    };
+    const matchTeams = (match) => {
+      const home = this.localizedTeamName(this.getHomeTeam(match));
+      const away = this.localizedTeamName(this.getAwayTeam(match));
+      return { home, away };
+    };
+    const matchScore = (match) => {
+      const hs = this.getHomeScore(match);
+      const as = this.getAwayScore(match);
+      return hs !== "-" || as !== "-" ? `${hs} - ${as}` : "v";
+    };
+    const matchResultClass = (match) => {
+      if (!this.isFinishedMatch(match)) return this.isLiveMatch(match) ? "LIVE" : "UPCOMING";
+      const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
+      const hs = Number(this.getHomeScore(match));
+      const as = Number(this.getAwayScore(match));
+      if (!Number.isFinite(hs) || !Number.isFinite(as)) return "FT";
+      if (hs === as) return "DRAW";
+      const teamWon = homeKey === teamKey ? hs > as : as > hs;
+      return teamWon ? "WIN" : "LOSS";
+    };
+    const opponentText = (match) => {
+      const home = this.getHomeTeam(match);
+      const away = this.getAwayTeam(match);
+      const isHome = this.fixtureTeamKey(home) === teamKey;
+      const opponent = this.localizedTeamName(isHome ? away : home);
+      return `${isHome ? "v" : "@"} ${opponent}`;
+    };
+    const statCard = (label, value, sub = "", accent = "#93c5fd") => `
+      <div style="min-height:86px;padding:13px;border-radius:18px;background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.045));border:1px solid rgba(255,255,255,.12);box-shadow:0 18px 38px rgba(0,0,0,.22);display:flex;flex-direction:column;justify-content:center;gap:7px;">
+        <strong style="font-size:1.66rem;line-height:1;color:${accent};font-weight:1000;letter-spacing:-.04em;">${this.esc(value ?? 0)}</strong>
+        <span style="font-size:.72rem;font-weight:1000;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.82);">${this.esc(label)}</span>
+        ${sub ? `<em style="font-size:.74rem;color:rgba(255,255,255,.58);font-style:normal;line-height:1.35;">${this.esc(sub)}</em>` : ""}
+      </div>
+    `;
+    const tinyPill = (text, accent = "#93c5fd") => `<span style="display:inline-flex;align-items:center;gap:6px;padding:6px 9px;border-radius:999px;background:${accent}22;border:1px solid ${accent}55;color:rgba(255,255,255,.9);font-size:.72rem;font-weight:1000;text-transform:uppercase;letter-spacing:.04em;">${this.esc(text)}</span>`;
+
+    const nextMatchCard = nextMatch ? (() => {
+      const teams = matchTeams(nextMatch);
+      const status = this.isLiveMatch(nextMatch) ? "LIVE NOW" : "NEXT MATCH";
+      return `
+        <div style="position:relative;overflow:hidden;border-radius:28px;padding:22px;background:radial-gradient(circle at 18% 0%,rgba(34,197,94,.22),transparent 34%),radial-gradient(circle at 96% 8%,rgba(59,130,246,.18),transparent 35%),rgba(4,10,22,.72);border:1px solid rgba(255,255,255,.13);box-shadow:0 22px 46px rgba(0,0,0,.28);">
+          <div style="position:absolute;right:-22px;top:-28px;opacity:.08;font-size:9rem;font-weight:1000;line-height:1;">${this.esc(teamName.slice(0, 3).toUpperCase())}</div>
+          <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin-bottom:18px;">
+            ${tinyPill(status, this.isLiveMatch(nextMatch) ? "#22c55e" : "#60a5fa")}
+            ${tinyPill(matchStage(nextMatch), "#facc15")}
+          </div>
+          <div style="position:relative;display:grid;grid-template-columns:1fr auto 1fr;gap:16px;align-items:center;">
+            <div style="text-align:right;font-size:1.25rem;font-weight:1000;min-width:0;">${this.flag(teams.home, true)} ${this.esc(teams.home)}</div>
+            <div style="min-width:92px;text-align:center;font-size:2.05rem;font-weight:1000;color:#fff;text-shadow:0 0 18px rgba(255,255,255,.25);">${this.esc(matchScore(nextMatch))}</div>
+            <div style="text-align:left;font-size:1.25rem;font-weight:1000;min-width:0;">${this.flag(teams.away, true)} ${this.esc(teams.away)}</div>
+          </div>
+          <div style="position:relative;margin-top:18px;display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:10px;">
+            <div style="padding:11px 13px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);"><strong>🕒 ${this.esc(matchDateTime(nextMatch) || "Time TBC")}</strong></div>
+            <div style="padding:11px 13px;border-radius:16px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.09);"><strong>📍 ${this.esc(matchVenue(nextMatch))}</strong></div>
+          </div>
+        </div>
+      `;
+    })() : `<div class="wc-empty">No upcoming match loaded for this team yet</div>`;
+
+    const recentCards = recent.length ? recent.map((match) => {
+      const badge = matchResultClass(match);
+      const accent = badge === "WIN" ? "#22c55e" : badge === "LOSS" ? "#ef4444" : "#facc15";
+      return `
+        <div style="display:grid;grid-template-columns:auto 1fr auto;gap:11px;align-items:center;padding:12px 13px;border-radius:17px;background:rgba(255,255,255,.065);border:1px solid rgba(255,255,255,.09);">
+          <span style="min-width:50px;text-align:center;padding:6px 8px;border-radius:999px;background:${accent}24;border:1px solid ${accent}66;color:${accent};font-size:.72rem;font-weight:1000;">${this.esc(badge)}</span>
+          <div style="min-width:0;"><strong>${this.esc(opponentText(match))}</strong><div class="wc-muted">${this.esc(matchDateTime(match))}</div></div>
+          <strong style="font-size:1.08rem;">${this.esc(matchScore(match))}</strong>
+        </div>
+      `;
+    }).join("") : `<div class="wc-empty">No finished results loaded for this team yet</div>`;
+
+    const timeline = matches.length ? matches.map((match, index) => {
+      const status = matchResultClass(match);
+      const isNow = this.isLiveMatch(match);
+      const isDone = this.isFinishedMatch(match);
+      const accent = isNow ? "#22c55e" : isDone ? "#60a5fa" : "#facc15";
+      return `
+        <div style="position:relative;display:grid;grid-template-columns:36px 1fr auto;gap:12px;align-items:start;padding:0 0 18px;">
+          <div style="position:relative;display:grid;place-items:center;width:30px;height:30px;border-radius:50%;background:${accent}30;border:1px solid ${accent}88;color:#fff;font-weight:1000;box-shadow:0 0 18px ${accent}33;">${isDone ? "✓" : isNow ? "●" : index + 1}</div>
+          <div style="padding:13px 14px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);">
+            <div style="display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap;">
+              <strong>${this.esc(matchStage(match))}</strong>
+              ${tinyPill(status, accent)}
+            </div>
+            <div style="margin-top:8px;font-size:1rem;font-weight:950;">${this.esc(opponentText(match))} <span style="color:rgba(255,255,255,.55);">${this.esc(matchScore(match))}</span></div>
+            <div class="wc-muted" style="margin-top:5px;">${this.esc(matchDateTime(match))} • ${this.esc(matchVenue(match))}</div>
+          </div>
+        </div>
+      `;
+    }).join("") : `<div class="wc-empty">No fixtures loaded for this team yet</div>`;
+
+    const groupSnapshot = groupRows.length ? groupRows.map((row) => `
+      <div style="display:grid;grid-template-columns:34px 1fr 44px 44px;gap:8px;align-items:center;padding:10px 11px;border-radius:14px;background:${row.key === teamKey ? "rgba(96,165,250,.18)" : "rgba(255,255,255,.055)"};border:1px solid ${row.key === teamKey ? "rgba(96,165,250,.42)" : "rgba(255,255,255,.08)"};">
+        <strong style="text-align:center;color:rgba(255,255,255,.66);">${this.esc(row.pos || "-")}</strong>
+        <strong style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${this.flag(row.team, true)} ${this.esc(row.team)}</strong>
+        <span style="text-align:center;color:rgba(255,255,255,.66);font-weight:900;">${this.esc(row.gd || 0)}</span>
+        <strong style="text-align:center;color:#facc15;">${this.esc(row.points || 0)}</strong>
+      </div>
+    `).join("") : `<div class="wc-empty">No group table loaded for this team yet</div>`;
+
+    const playerSpotlight = spotlightPlayer ? `
+      <div style="padding:18px;border-radius:23px;background:radial-gradient(circle at top left,rgba(250,204,21,.2),transparent 38%),rgba(255,255,255,.06);border:1px solid rgba(250,204,21,.22);">
+        <div style="font-size:.74rem;font-weight:1000;text-transform:uppercase;letter-spacing:.14em;color:#fde68a;">⭐ Player Spotlight</div>
+        <div style="margin-top:10px;font-size:1.35rem;font-weight:1000;">${this.esc(spotlightPlayer.player || "Team Player")}</div>
+        <div class="wc-muted" style="margin-top:4px;">${this.esc(teamName)}</div>
+        <div style="margin-top:15px;display:grid;grid-template-columns:repeat(3,1fr);gap:9px;">
+          ${statCard("Goals", spotlightPlayer.goals || 0, "", "#fde68a")}
+          ${statCard("Assists", spotlightPlayer.assists || 0, "", "#93c5fd")}
+          ${statCard("Cards", spotlightPlayer.cards || 0, "", "#fca5a5")}
+        </div>
+      </div>
+    ` : `<div class="wc-empty">No player event data loaded for this team yet</div>`;
+
+    const resultDots = recent.length ? recent.map((match) => {
+      const result = matchResultClass(match);
+      const accent = result === "WIN" ? "#22c55e" : result === "LOSS" ? "#ef4444" : "#facc15";
+      const label = result === "WIN" ? "W" : result === "LOSS" ? "L" : result === "DRAW" ? "D" : "-";
+      return `<span title="${this.esc(result)}" style="display:grid;place-items:center;width:38px;height:38px;border-radius:50%;background:${accent}25;border:1px solid ${accent}77;color:${accent};font-weight:1000;box-shadow:0 0 18px ${accent}22;">${label}</span>`;
+    }).join("") : `<span class="wc-muted">No form data yet</span>`;
+
+    const uniqueVenues = [];
+    matches.forEach((match) => {
+      const venue = matchVenue(match);
+      if (venue && venue !== "Venue TBC" && !uniqueVenues.includes(venue)) uniqueVenues.push(venue);
+    });
+    const nextVenue = nextMatch ? matchVenue(nextMatch) : "Venue TBC";
+    const stadiumTracker = uniqueVenues.length ? uniqueVenues.slice(0, 5).map((venue) => `
+      <div style="padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);font-weight:900;">🏟 ${this.esc(venue)}</div>
+    `).join("") : `<div class="wc-empty">No stadium data loaded for this team yet</div>`;
+
+    const topPlayerList = playerRows.length ? playerRows.slice(0, 5).map((player, index) => `
+      <div style="display:grid;grid-template-columns:34px 1fr repeat(3,44px);gap:8px;align-items:center;padding:11px 12px;border-radius:15px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);">
+        <strong style="text-align:center;color:#93c5fd;">${index + 1}</strong>
+        <strong style="min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">${this.esc(player.player || "Player")}</strong>
+        <span style="text-align:center;color:#fde68a;font-weight:1000;">${this.esc(player.goals || 0)}</span>
+        <span style="text-align:center;color:#93c5fd;font-weight:1000;">${this.esc(player.assists || 0)}</span>
+        <span style="text-align:center;color:#fca5a5;font-weight:1000;">${this.esc(player.cards || 0)}</span>
+      </div>
+    `).join("") : `<div class="wc-empty">No country player data loaded yet</div>`;
+
+    const upcomingList = upcoming.length ? upcoming.slice(0, 6).map((match) => {
+      const teams = matchTeams(match);
+      return `
+        <div style="padding:13px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);">
+          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;">
+            <strong>${this.flag(teams.home, true)} ${this.esc(teams.home)} <span style="color:rgba(255,255,255,.48);">v</span> ${this.flag(teams.away, true)} ${this.esc(teams.away)}</strong>
+            ${tinyPill(matchStage(match), "#60a5fa")}
+          </div>
+          <div class="wc-muted" style="margin-top:6px;">${this.esc(matchDateTime(match) || "Time TBC")} • ${this.esc(matchVenue(match))}</div>
+        </div>
+      `;
+    }).join("") : `<div class="wc-empty">No upcoming fixtures loaded for this team yet</div>`;
+
+    const resultList = finished.length ? finished.slice(-6).reverse().map((match) => {
+      const teams = matchTeams(match);
+      const badge = matchResultClass(match);
+      const accent = badge === "WIN" ? "#22c55e" : badge === "LOSS" ? "#ef4444" : "#facc15";
+      return `
+        <div style="padding:13px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);">
+          <div style="display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;align-items:center;">
+            <strong>${this.flag(teams.home, true)} ${this.esc(teams.home)} <span style="color:#fff;">${this.esc(matchScore(match))}</span> ${this.flag(teams.away, true)} ${this.esc(teams.away)}</strong>
+            ${tinyPill(badge, accent)}
+          </div>
+          <div class="wc-muted" style="margin-top:6px;">${this.esc(matchDateTime(match))} • ${this.esc(matchVenue(match))}</div>
+        </div>
+      `;
+    }).join("") : `<div class="wc-empty">No results loaded for this team yet</div>`;
+
+    const stages = ["Group Stage", "Round of 32", "Round of 16", "Quarter Finals", "Semi Finals", "Final"];
+    const stageCards = stages.map((stage) => {
+      const stageKey = this.fixtureTeamKey(stage);
+      const stageMatches = matches.filter((match) => this.fixtureTeamKey(matchStage(match)).includes(stageKey) || this.fixtureTeamKey(match?.stage || match?.round || "").includes(stageKey));
+      const done = stageMatches.some((match) => this.isFinishedMatch(match));
+      const now = stageMatches.some((match) => this.isLiveMatch(match));
+      const future = stageMatches.some((match) => !this.isFinishedMatch(match) && !this.isLiveMatch(match));
+      const accent = done ? "#22c55e" : now ? "#facc15" : future ? "#60a5fa" : "rgba(255,255,255,.22)";
+      const icon = done ? "✓" : now ? "●" : future ? "→" : "";
+      return `<div style="padding:12px;border-radius:16px;background:${done || now || future ? accent + "22" : "rgba(255,255,255,.045)"};border:1px solid ${done || now || future ? accent + "77" : "rgba(255,255,255,.08)"};font-weight:1000;text-align:center;">${icon} ${this.esc(stage)}</div>`;
+    }).join("");
+
+    const countryProfile = `
+      <div style="position:relative;overflow:hidden;padding:20px;border-radius:24px;background:radial-gradient(circle at 8% 0%,rgba(96,165,250,.2),transparent 36%),linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.11);">
+        <div style="position:absolute;right:-10px;bottom:-34px;font-size:7rem;font-weight:1000;opacity:.05;line-height:1;">${this.esc(teamName.slice(0, 3).toUpperCase())}</div>
+        <div style="position:relative;font-size:.74rem;font-weight:1000;text-transform:uppercase;letter-spacing:.14em;color:#93c5fd;">🌍 Country Profile</div>
+        <div style="position:relative;margin-top:9px;font-size:1.45rem;font-weight:1000;">${this.flag(teamName, true)} ${this.esc(teamName)}</div>
+        <div style="position:relative;margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
+          ${statCard("Matches", matches.length, "Loaded for team", "#93c5fd")}
+          ${statCard("Group Pos", groupRow?.pos || groupRows.find((row) => row.key === teamKey)?.pos || "-", "Current snapshot", "#fde68a")}
+          ${statCard("Points", groupRow?.points ?? groupRows.find((row) => row.key === teamKey)?.points ?? "-", "Group table", "#86efac")}
+        </div>
+      </div>
+    `;
+
+    const squadOverview = `
+      <div class="wc-card" style="background:linear-gradient(145deg,rgba(255,255,255,.085),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.11);">
+        <div class="wc-section-title">👥 Country Players</div>
+        <div class="wc-muted" style="margin-bottom:10px;">Player cards are built from loaded goals, assists and event data.</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-bottom:12px;">
+          ${statCard("Players", playerRows.length, "Tracked", "#c4b5fd")}
+          ${statCard("Goals", playerRows.reduce((sum, p) => sum + Number(p.goals || 0), 0), "By players", "#fde68a")}
+          ${statCard("Assists", playerRows.reduce((sum, p) => sum + Number(p.assists || 0), 0), "By players", "#93c5fd")}
+        </div>
+        <div style="display:grid;grid-template-columns:34px 1fr repeat(3,44px);gap:8px;padding:0 12px 8px;color:rgba(255,255,255,.52);font-size:.7rem;font-weight:1000;text-transform:uppercase;letter-spacing:.06em;"><span>#</span><span>Player</span><span style="text-align:center;">G</span><span style="text-align:center;">A</span><span style="text-align:center;">C</span></div>
+        <div style="display:grid;gap:8px;">${topPlayerList}</div>
+      </div>
+    `;
+
+    const compactCardStyle = "background:linear-gradient(145deg,rgba(255,255,255,.085),rgba(255,255,255,.035));border:1px solid rgba(255,255,255,.11);height:100%;";
+    const disciplineCard = `
+      <div class="wc-card" style="${compactCardStyle}">
+        <div class="wc-section-title">🟨 Team Discipline</div>
+        <div class="wc-muted" style="margin:6px 0 12px;">Cards for ${this.esc(teamName)} from loaded match event data.</div>
+        <div style="display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;">
+          ${statCard("Yellow", teamYellowCards, "Yellow cards", "#fde68a")}
+          ${statCard("Red", teamRedCards, "Red cards", "#fca5a5")}
+          ${statCard("Total", cards || teamStats.cards || 0, "All cards", "#c4b5fd")}
+        </div>
+      </div>
+    `;
 
     return `
-      <div class="wc-card" style="overflow:hidden;position:relative;background:radial-gradient(circle at top left,rgba(56,189,248,.22),transparent 34%),radial-gradient(circle at bottom right,rgba(250,204,21,.16),transparent 36%),linear-gradient(135deg,rgba(7,12,24,.97),rgba(10,18,35,.94));border:1px solid rgba(147,197,253,.18);">
-        <div style="position:absolute;inset:auto -80px -120px auto;width:260px;height:260px;border-radius:999px;background:rgba(59,130,246,.10);filter:blur(4px);"></div>
-        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
-          <div>
-            <div style="font-size:.76rem;font-weight:1000;text-transform:uppercase;letter-spacing:.16em;color:#93c5fd;">Tournament Intelligence</div>
-            <div class="wc-section-title" style="font-size:1.7rem;margin-top:5px;">Stats Hub</div>
-            <p class="wc-muted" style="margin:7px 0 0;max-width:760px;line-height:1.5;">A proper tournament stats centre built from results, timelines, cards, substitutions, VAR, referees, player involvement and team lineups already loaded into the integration.</p>
-          </div>
-          <div style="display:grid;grid-template-columns:repeat(2,minmax(110px,1fr));gap:10px;min-width:260px;">
-            <div style="text-align:center;padding:13px;border-radius:18px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.10);">
-              <div style="font-size:2rem;font-weight:1000;color:${eventColour};">${a.dataCoverage}%</div>
-              <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.68);">Event Coverage</div>
-            </div>
-            <div style="text-align:center;padding:13px;border-radius:18px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.10);">
-              <div style="font-size:2rem;font-weight:1000;color:#fde68a;">${lineupCoverage}%</div>
-              <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.68);">Lineup Coverage</div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div class="wc-grid">
-        ${statCard(this.t("matchesPlayed"), a.finished.length, `${a.live.length} live • ${a.scheduled} upcoming`, "#93c5fd")}
-        ${statCard(this.t("totalGoals"), a.goals, `${goalsPerMatch} goals per match`, "#86efac")}
-        ${statCard("Assists", a.assists, "from match timelines", "#c4b5fd")}
-        ${statCard("PEN", a.penalties, `${a.missedPens} missed pens`, "#fde68a")}
-        ${statCard("OG", a.ownGoals, "own goals", "#fca5a5")}
-        ${statCard("VAR", a.varEvents, "video reviews", "#67e8f9")}
-        ${statCard("Yellow Cards", a.yellowCards, `${a.redCards} red cards`, "#facc15")}
-        ${statCard("Substitutions", a.substitutions, "recorded changes", "#a7f3d0")}
-        ${statCard("Lineups", lineupMatches.length, `${formationRows.length} formations tracked`, "#f0abfc")}
-        ${statCard("Referees", a.refs, "officials tracked", "#fdba74")}
-        ${statCard("Events / Match", eventRate, `${a.events} timeline events`, "#93c5fd")}
-        ${statCard("Cards / Match", cardsPerMatch, `${totalCards} total cards`, "#fbbf24")}
-      </div>
-
-      <div class="wc-two">
-        <div class="wc-card" style="background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.04));">
-          <div class="wc-section-title">📊 Tournament Rates</div>
-          <div style="display:grid;gap:10px;">
-            ${chip("Progress", `${a.progress}%`, "#93c5fd")}
-            ${chip("BTTS", `${a.bttsRate}%`, "#86efac")}
-            ${chip("Over 2.5 Goals", `${a.over25Rate}%`, "#fde68a")}
-            ${chip("Draw Rate", `${a.drawRate}%`, "#c4b5fd")}
-          </div>
-        </div>
-
-        <div class="wc-card" style="background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.04));">
-          <div class="wc-section-title">📡 Data Health</div>
-          <div style="display:grid;gap:12px;">
+      <div style="position:relative;overflow:hidden;border-radius:28px;padding:18px;margin-bottom:14px;background:radial-gradient(circle at 12% 0%,rgba(96,165,250,.24),transparent 34%),radial-gradient(circle at 96% 14%,rgba(250,204,21,.18),transparent 35%),linear-gradient(145deg,rgba(8,15,31,.96),rgba(2,6,23,.94));border:1px solid rgba(255,255,255,.13);box-shadow:0 24px 56px rgba(0,0,0,.32);">
+        <div style="position:absolute;right:-18px;bottom:-42px;font-size:11rem;font-weight:1000;opacity:.055;line-height:1;pointer-events:none;">${this.esc(teamName.slice(0, 3).toUpperCase())}</div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;">
+          <div style="display:flex;align-items:center;gap:14px;min-width:250px;">
+            <div style="transform:scale(1.1);transform-origin:left center;">${this.flag(teamName, false)}</div>
             <div>
-              <div style="display:flex;justify-content:space-between;font-weight:900;margin-bottom:6px;"><span>Event timelines</span><span>${a.dataCoverage}%</span></div>
-              <div style="height:13px;border-radius:999px;background:rgba(255,255,255,.10);overflow:hidden;"><div style="height:100%;width:${Math.max(0, Math.min(100, a.dataCoverage))}%;background:${eventColour};border-radius:999px;"></div></div>
+              <div style="font-size:.72rem;font-weight:1000;text-transform:uppercase;letter-spacing:.18em;color:#93c5fd;">Team Command Centre</div>
+              <div class="wc-section-title" style="font-size:1.78rem;margin-top:3px;letter-spacing:-.04em;">${this.esc(teamName)}</div>
+              <p class="wc-muted" style="margin:5px 0 0;max-width:760px;line-height:1.38;">Compact team hub with fixtures, results, cards, players, group table and tournament journey.</p>
             </div>
-            <div>
-              <div style="display:flex;justify-content:space-between;font-weight:900;margin-bottom:6px;"><span>Lineups</span><span>${lineupCoverage}%</span></div>
-              <div style="height:13px;border-radius:999px;background:rgba(255,255,255,.10);overflow:hidden;"><div style="height:100%;width:${Math.max(0, Math.min(100, lineupCoverage))}%;background:#fde68a;border-radius:999px;"></div></div>
+          </div>
+          <select id="wc-team-select" class="wc-language-select" style="min-width:245px;">
+            ${options.map((team) => `<option value="${this.esc(team.key)}" ${team.key === teamKey ? "selected" : ""}>${this.esc(team.name)}</option>`).join("")}
+          </select>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;align-items:stretch;">
+        <div style="grid-column:span 3;">${statCard("Matches", matches.length, `${live.length} live / ${upcoming.length} upcoming`, "#93c5fd")}</div>
+        <div style="grid-column:span 3;">${statCard("Record", `${teamStats.wins || 0}-${teamStats.draws || 0}-${teamStats.losses || 0}`, `${teamStats.played || finished.length} played`, "#86efac")}</div>
+        <div style="grid-column:span 3;">${statCard("Goals", `${teamStats.gf ?? goals}-${teamStats.ga ?? 0}`, `GD ${Number(teamStats.gd || 0) > 0 ? "+" : ""}${teamStats.gd || 0}`, "#fde68a")}</div>
+        <div style="grid-column:span 3;">${statCard("Cards", `${teamYellowCards}Y ${teamRedCards}R`, `${subs} subs / ${vars} VAR`, "#fca5a5")}</div>
+
+        <div style="grid-column:span 7;min-width:0;"><div class="wc-card" style="padding:0;background:transparent;border:0;box-shadow:none;height:100%;">${nextMatchCard}</div></div>
+        <div style="grid-column:span 5;min-width:0;">${countryProfile}</div>
+
+        <div style="grid-column:span 4;min-width:0;">
+          <div class="wc-card" style="${compactCardStyle}">
+            <div class="wc-section-title">🔥 Form Guide</div>
+            <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:10px;">${resultDots}</div>
+            <div style="margin-top:10px;display:grid;gap:8px;">${recentCards}</div>
+          </div>
+        </div>
+        <div style="grid-column:span 4;min-width:0;">${disciplineCard}</div>
+        <div style="grid-column:span 4;min-width:0;">
+          <div class="wc-card" style="${compactCardStyle}">
+            <div class="wc-section-title">Group Snapshot</div>
+            <div style="margin:9px 0 7px;display:grid;grid-template-columns:34px 1fr 44px 44px;gap:8px;padding:0 11px;color:rgba(255,255,255,.52);font-size:.7rem;font-weight:1000;text-transform:uppercase;letter-spacing:.06em;">
+              <span>Pos</span><span>Team</span><span style="text-align:center;">GD</span><span style="text-align:center;">Pts</span>
             </div>
-            <p class="wc-muted" style="margin:0;line-height:1.45;">Stats Hub only uses data already loaded into the panel. This page does not trigger extra API pulls.</p>
+            <div style="display:grid;gap:7px;">${groupSnapshot}</div>
+          </div>
+        </div>
+
+        <div style="grid-column:span 8;min-width:0;">
+          <div class="wc-card" style="${compactCardStyle}">
+            <div class="wc-section-title">🏆 Tournament Journey</div>
+            <div style="margin-top:10px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:8px;">${stageCards}</div>
+            <div style="margin-top:12px;max-height:520px;overflow:auto;padding-right:4px;">${timeline}</div>
+          </div>
+        </div>
+        <div style="grid-column:span 4;min-width:0;display:grid;gap:12px;">
+          ${playerSpotlight}
+          <div class="wc-card" style="${compactCardStyle}">
+            <div class="wc-section-title">🏟 Stadium Tracker</div>
+            <div class="wc-muted" style="margin:6px 0 9px;">Next: <strong>${this.esc(nextVenue)}</strong></div>
+            <div style="display:grid;gap:7px;">${stadiumTracker}</div>
+          </div>
+        </div>
+
+        <div style="grid-column:span 6;min-width:0;">
+          <div class="wc-card" style="${compactCardStyle}">
+            <div class="wc-section-title">📅 Upcoming Fixtures</div>
+            <div style="display:grid;gap:8px;margin-top:10px;">${upcomingList}</div>
+          </div>
+        </div>
+        <div style="grid-column:span 6;min-width:0;">
+          <div class="wc-card" style="${compactCardStyle}">
+            <div class="wc-section-title">✅ Previous Results</div>
+            <div style="display:grid;gap:8px;margin-top:10px;">${resultList}</div>
+          </div>
+        </div>
+
+        <div style="grid-column:span 7;min-width:0;">${squadOverview}</div>
+        <div style="grid-column:span 5;min-width:0;display:grid;gap:12px;">
+          <div class="wc-card" style="${compactCardStyle}">
+            <div class="wc-section-title">Team Statistics</div>
+            ${this.statsMiniTable([{
+              goals: goals || teamStats.goals || teamStats.gf || 0,
+              assists: teamStats.assists || 0,
+              yellowCards: teamYellowCards,
+              redCards: teamRedCards,
+              substitutions: subs || teamStats.substitutions || 0,
+              varEvents: vars || teamStats.varEvents || 0,
+            }], [
+              { label: "G", key: "goals", align: "center" },
+              { label: "Ast", key: "assists", align: "center" },
+              { label: "YC", key: "yellowCards", align: "center" },
+              { label: "RC", key: "redCards", align: "center" },
+              { label: "Subs", key: "substitutions", align: "center" },
+              { label: "VAR", key: "varEvents", align: "center" },
+            ])}
+          </div>
+          <div class="wc-card" style="${compactCardStyle}">
+            <div class="wc-section-title">⚽ Goals Breakdown</div>
+            <div style="display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:10px;">
+              ${statCard("For", teamStats.gf ?? goals ?? 0, "Scored", "#fde68a")}
+              ${statCard("Against", teamStats.ga ?? 0, "Conceded", "#fca5a5")}
+              ${statCard("Clean", teamStats.cleanSheets || 0, "Sheets", "#86efac")}
+              ${statCard("GD", `${Number(teamStats.gd || 0) > 0 ? "+" : ""}${teamStats.gd || 0}`, "Current", "#93c5fd")}
+            </div>
           </div>
         </div>
       </div>
 
-      <div class="wc-two">
-        <div class="wc-card">
-          <div class="wc-section-title">⚽ Team Performance</div>
-          ${this.statsMiniTable(teamSnapshotRows, [
-            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
-            { label: "P", key: "played", align: "center" },
-            { label: "GF", key: "gf", align: "center" },
-            { label: "GA", key: "ga", align: "center" },
-            { label: "GD", key: "gdText", align: "center" },
-            { label: "G/M", key: "goalRate", align: "center" },
-            { label: "CS", key: "cleanSheets", align: "center" },
-          ], "No team stats yet")}
-        </div>
-
-        <div class="wc-card">
-          <div class="wc-section-title">🧠 Team Event Leaders</div>
-          ${this.statsMiniTable((a.eventLeaderRows || []).slice(0, 10), [
-            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
-            { label: "Events", key: "eventCount", align: "center" },
-            { label: "Goals", key: "goals", align: "center" },
-            { label: "Ast", key: "assists", align: "center" },
-            { label: "PEN", key: "penalties", align: "center" },
-            { label: "VAR", key: "varEvents", align: "center" },
-          ], "No event data yet")}
-        </div>
-      </div>
-
-      <div class="wc-two">
-        <div class="wc-card">
-          <div class="wc-section-title">🧩 Lineups & Formations</div>
-          ${this.statsMiniTable(formationRows, [
-            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
-            { label: "Formation", render: (row) => `<strong>${this.esc(row.formation)}</strong>`, align: "center" },
-            { label: "Used", key: "count", align: "center" },
-          ], "No lineup data loaded yet")}
-        </div>
-
-        <div class="wc-card">
-          <div class="wc-section-title">👥 Squad Usage</div>
-          ${this.statsMiniTable(lineupTeamRows, [
-            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
-            { label: "Lineups", key: "matches", align: "center" },
-            { label: "Starters", key: "starters", align: "center" },
-            { label: "Bench", key: "bench", align: "center" },
-          ], "No squad usage data yet")}
-        </div>
-      </div>
-
-      <div class="wc-two">
-        <div class="wc-card">
-          <div class="wc-section-title">⭐ Player Starts</div>
-          ${this.statsMiniTable(starterRows, [
-            { label: "Player", render: (row) => `<strong>${row.number ? `${this.esc(row.number)} ` : ""}${this.esc(row.player)}</strong><div class="wc-muted">${this.flag(row.team, true)} ${this.esc(row.team)}</div>` },
-            { label: "Starts", key: "starts", align: "center" },
-          ], "No starting XI data yet")}
-        </div>
-
-        <div class="wc-card">
-          <div class="wc-section-title">🪑 Bench Watch</div>
-          ${this.statsMiniTable(benchRows, [
-            { label: "Player", render: (row) => `<strong>${row.number ? `${this.esc(row.number)} ` : ""}${this.esc(row.player)}</strong><div class="wc-muted">${this.flag(row.team, true)} ${this.esc(row.team)}</div>` },
-            { label: "Bench", key: "bench", align: "center" },
-          ], "No bench data yet")}
-        </div>
-      </div>
-
-      <div class="wc-two">
-        <div class="wc-card">
-          <div class="wc-section-title">🟨 Discipline Centre</div>
-          ${this.statsMiniTable((a.disciplineRows || []).slice(0, 12), [
-            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
-            { label: "Cards", key: "cards", align: "center" },
-            { label: "Yellow", key: "yellowCards", align: "center" },
-            { label: "Red", key: "redCards", align: "center" },
-            { label: "Subs", key: "substitutions", align: "center" },
-          ], "No discipline data yet")}
-        </div>
-
-        <div class="wc-card">
-          <div class="wc-section-title">⭐ Player Event Watch</div>
-          ${this.statsMiniTable(a.topPlayers, [
-            { label: "Player", render: (row) => `<strong>${this.esc(row.player)}</strong><div class="wc-muted">${this.flag(row.team, true)} ${this.esc(row.team || "")}</div>` },
-            { label: "G", key: "goals", align: "center" },
-            { label: "A", key: "assists", align: "center" },
-            { label: "PEN", key: "penalties", align: "center" },
-            { label: "Cards", key: "cards", align: "center" },
-          ], "No player event data yet")}
-        </div>
-      </div>
-
-      <div class="wc-two">
-        <div class="wc-card">
-          <div class="wc-section-title">🧑‍⚖️ Referee Stats</div>
-          ${this.statsMiniTable(a.refereeRows, [
-            { label: "Official", render: (row) => `<strong>${this.esc(row.name || "Unknown")}</strong><div class="wc-muted">${this.esc(row.nationality || row.country || "")}</div>` },
-            { label: "Matches", key: "matches", align: "center" },
-          ], "No referee data yet")}
-        </div>
-
-        <div class="wc-card">
-          <div class="wc-section-title">🔥 Match Records</div>
-          <div style="display:grid;gap:12px;">
-            <div style="padding:12px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);">
-              <div class="wc-muted" style="font-weight:900;margin-bottom:8px;">Highest scoring match</div>
-              ${a.highestScoringMatch ? this.matchRow(a.highestScoringMatch) : `<div class="wc-empty">${this.t("noResult")}</div>`}
-            </div>
-            <div style="padding:12px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);">
-              <div class="wc-muted" style="font-weight:900;margin-bottom:8px;">Biggest win</div>
-              ${a.biggestWin ? this.matchRow(a.biggestWin) : `<div class="wc-empty">${this.t("noResult")}</div>`}
-            </div>
-          </div>
-        </div>
-      </div>
+      <style>
+        @media (max-width: 1100px) {
+          :host div[style*="grid-column:span 7"],
+          :host div[style*="grid-column:span 8"],
+          :host div[style*="grid-column:span 6"],
+          :host div[style*="grid-column:span 5"],
+          :host div[style*="grid-column:span 4"],
+          :host div[style*="grid-column:span 3"] { grid-column: span 12 !important; }
+        }
+      </style>
     `;
   }
 
@@ -19677,6 +19888,7 @@ class WorldCup2026Panel extends HTMLElement {
     if (this._page === "players") return this.playersPage();
     if (this._page === "records") return this.recordsPage();
     if (this._page === "stats") return this.statsPage();
+    if (this._page === "teams") return this.teamsPage();
     if (this._page === "venues") return this.venuesPage();
     if (this._page === "supporters") return this.supportersPage();
     return this.overviewPage();
@@ -19760,6 +19972,15 @@ class WorldCup2026Panel extends HTMLElement {
     this.querySelectorAll("#wc-view-select, #wc-view-select-tablet").forEach((viewSelect) => {
       this.setupViewSelect(viewSelect);
     });
+
+    const teamSelect = this.querySelector("#wc-team-select");
+    if (teamSelect) {
+      teamSelect.onchange = (e) => {
+        this._selectedTeamKey = e.target.value || "";
+        localStorage.setItem("world_cup_2026_selected_team", this._selectedTeamKey);
+        this.render();
+      };
+    }
 
     this.querySelectorAll("#wc-sidebar-select, #wc-sidebar-select-tablet").forEach((sidebarSelect) => {
       this.setupSidebarSelect(sidebarSelect);
