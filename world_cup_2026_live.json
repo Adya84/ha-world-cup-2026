@@ -1,4 +1,172 @@
 {
-  "matches": [],
-  "live": []
+  "matches": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537403,
+      "utcDate": "2026-06-17T17:00:00Z",
+      "status": "LIVE",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K",
+      "lastUpdated": "2026-06-17T18:03:19Z",
+      "homeTeam": {
+        "id": 765,
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
+      },
+      "awayTeam": {
+        "id": 1934,
+        "name": "Congo DR",
+        "shortName": "Congo DR",
+        "tla": "COD",
+        "crest": "https://crests.football-data.org/congo_dr.svg"
+      },
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": null,
+          "away": null
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 236084,
+          "name": "Abdulrahman Al Jassim",
+          "type": "REFEREE",
+          "nationality": "Qatar"
+        }
+      ],
+      "liveSource": "pre_kickoff_window",
+      "awaitingLiveApiData": true,
+      "minute": null,
+      "clockSeconds": 0,
+      "displayMinute": "Awaiting kickoff API data",
+      "manualClockText": "Awaiting kickoff API data",
+      "clockSource": "awaiting_api_football_minute",
+      "manualClock": {
+        "seconds": 0,
+        "timer": "0:00",
+        "displayMinute": "0'",
+        "active": false,
+        "status": "LIVE",
+        "source": "awaiting_api_football_minute",
+        "lastApiSync": null
+      },
+      "lastApiSync": null
+    }
+  ],
+  "live": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537403,
+      "utcDate": "2026-06-17T17:00:00Z",
+      "status": "LIVE",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_K",
+      "lastUpdated": "2026-06-17T18:03:19Z",
+      "homeTeam": {
+        "id": 765,
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR",
+        "crest": "https://crests.football-data.org/765.svg"
+      },
+      "awayTeam": {
+        "id": 1934,
+        "name": "Congo DR",
+        "shortName": "Congo DR",
+        "tla": "COD",
+        "crest": "https://crests.football-data.org/congo_dr.svg"
+      },
+      "score": {
+        "winner": null,
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": null,
+          "away": null
+        },
+        "halfTime": {
+          "home": null,
+          "away": null
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 236084,
+          "name": "Abdulrahman Al Jassim",
+          "type": "REFEREE",
+          "nationality": "Qatar"
+        }
+      ],
+      "liveSource": "pre_kickoff_window",
+      "awaitingLiveApiData": true,
+      "minute": null,
+      "clockSeconds": 0,
+      "displayMinute": "Awaiting kickoff API data",
+      "manualClockText": "Awaiting kickoff API data",
+      "clockSource": "awaiting_api_football_minute",
+      "manualClock": {
+        "seconds": 0,
+        "timer": "0:00",
+        "displayMinute": "0'",
+        "active": false,
+        "status": "LIVE",
+        "source": "awaiting_api_football_minute",
+        "lastApiSync": null
+      },
+      "lastApiSync": null
+    }
+  ]
 }
