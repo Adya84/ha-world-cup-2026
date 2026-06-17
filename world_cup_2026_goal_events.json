@@ -6403,13 +6403,13 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 3540,
-    "clock_seconds": 3540,
-    "phase_start": "2026-06-17T05:24:15.430146+00:00",
+    "base_seconds": 3600,
+    "clock_seconds": 3600,
+    "phase_start": "2026-06-17T05:24:43.426487+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "59'",
-    "manualClockText": "59'",
-    "lastApiSync": "2026-06-17T05:24:15.430146+00:00",
+    "displayMinute": "60'",
+    "manualClockText": "60'",
+    "lastApiSync": "2026-06-17T05:24:43.426487+00:00",
     "events": [
       {
         "type": "Goal",
@@ -6455,6 +6455,51 @@
         "comments": null,
         "assist": "Noor Al-Rawabdeh",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Austria",
+        "player": "Phillipp Mwene",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "Paul Wanner",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Austria",
+        "player": "Xaver Schlager",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "Carney Chukwuemeka",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Austria",
+        "player": "David Alaba",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "Kevin Danso",
+        "source": "api_football"
       }
     ],
     "apiFootballFixtureId": 1489382,
@@ -6472,6 +6517,51 @@
         "detail": "Substitution 1",
         "comments": null,
         "assist": "Marko Arnautovi\u0107",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Austria",
+        "player": "Phillipp Mwene",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "Paul Wanner",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Austria",
+        "player": "Xaver Schlager",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "Carney Chukwuemeka",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Austria",
+        "player": "David Alaba",
+        "minute": 59,
+        "extra": null,
+        "displayMinute": "59'",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "Kevin Danso",
         "source": "api_football"
       }
     ]
