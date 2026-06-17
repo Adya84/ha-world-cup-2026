@@ -274,6 +274,7 @@ class WorldCup2026Panel extends HTMLElement {
         assists: "Assists",
         language: "Dashboard Language",
         viewMode: "Dashboard View",
+        mobileView: "Mobile view",
         tabletView: "Tablet view",
         pcView: "PC view",
         controlCentre: 'World Cup 2026 Control Centre',
@@ -7470,6 +7471,14 @@ class WorldCup2026Panel extends HTMLElement {
     }
   }
 
+  async safeAsync(fn, fallback) {
+    try {
+      return await fn();
+    } catch {
+      return fallback;
+    }
+  }
+
   async loadSupporters() {
     const sortSupporters = (supporters) => {
       return [...supporters].sort((a, b) => {
@@ -8041,10 +8050,19 @@ class WorldCup2026Panel extends HTMLElement {
       // football-data.org API and then export JSON for public/GitHub viewers.
       // Do not let GitHub/public JSON override this live panel, otherwise your
       // own dashboard can end up showing stale public data instead of your API pull.
-      this._data.overview = await this.callApi("world_cup_2026/get_overview");
+      this._data.overview = await this.safeCall("world_cup_2026/get_overview", {
+        total_matches: 104,
+        played_matches: 0,
+        upcoming_matches: 0,
+        live_matches: 0,
+        total_goals: 0,
+        goals_per_match: 0,
+        groups: 0,
+        scorers: 0,
+      });
 
-      const apiLive = await this.callApi("world_cup_2026/get_live_matches");
-      const apiFixtures = this.completeOfficialFixtures(await this.callApi("world_cup_2026/get_fixtures"));
+      const apiLive = await this.safeCall("world_cup_2026/get_live_matches", []);
+      const apiFixtures = this.completeOfficialFixtures(await this.safeCall("world_cup_2026/get_fixtures", []));
       const apiResults = await this.safeCall("world_cup_2026/get_results", []);
 
       // Pure backend/API-only test feed. Do not merge GitHub or goal_events here.
@@ -8055,10 +8073,10 @@ class WorldCup2026Panel extends HTMLElement {
         this.mergeResultsAndFinishedFixtures(apiResults, apiFixtures)
       );
 
-      const publicGoalEvents = await this.loadPublicGoalEvents();
-      const publicResults = await this.loadPublicGithubResults();
-      const publicLive = await this.loadPublicGithubLive();
-      const publicMatches = this.mergeUniqueMatches(publicLive, await this.loadPublicGithubMatches());
+      const publicGoalEvents = await this.safeAsync(() => this.loadPublicGoalEvents(), {});
+      const publicResults = await this.safeAsync(() => this.loadPublicGithubResults(), []);
+      const publicLive = await this.safeAsync(() => this.loadPublicGithubLive(), []);
+      const publicMatches = this.mergeUniqueMatches(publicLive, await this.safeAsync(() => this.loadPublicGithubMatches(), []));
 
       const storeMatches = this.goalEventStoreToMatches(publicGoalEvents);
       const fixturesWithStore = this.mergePublicGoalEventStore(apiFixtures, publicGoalEvents);
@@ -8087,17 +8105,17 @@ class WorldCup2026Panel extends HTMLElement {
         this.mergeUniqueMatches(combinedResults, publicMatchesWithStore.filter((match) => this.isFinishedMatch(match))),
         this._data.fixtures
       );
-      this._data.groups = await this.callApi("world_cup_2026/get_groups");
+      this._data.groups = await this.safeCall("world_cup_2026/get_groups", []);
       this._data.scorers = await this.safeCall("world_cup_2026/get_scorers", []);
       this._data.statistics = await this.safeCall("world_cup_2026/get_statistics", {});
       this._data.records = await this.safeCall("world_cup_2026/get_records", {});
       this._data.venues = await this.safeCall("world_cup_2026/get_venues", {});
-      this._data.supporters = await this.loadSupporters();
-      this._data.premiumSupporters = await this.loadPremiumSupporters();
+      this._data.supporters = await this.safeAsync(() => this.loadSupporters(), []);
+      this._data.premiumSupporters = await this.safeAsync(() => this.loadPremiumSupporters(), []);
       this.processMatchClockState();
       this.render();
     } catch (err) {
-      this.renderError(err);
+      this.renderError(err, { resetSavedPage: false });
     } finally {
       this.scheduleNextRefresh();
     }
@@ -8116,6 +8134,15 @@ class WorldCup2026Panel extends HTMLElement {
     this.render();
   }
 
+  resetPanelView() {
+    try {
+      localStorage.removeItem("world_cup_2026_last_page");
+      localStorage.removeItem("world_cup_2026_selected_team");
+    } catch (e) {}
+    this._page = "overview";
+    this.render();
+  }
+
   changeLanguage(language) {
     this._language = language;
     localStorage.setItem("world_cup_2026_language", language);
@@ -8123,7 +8150,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   changeViewMode(viewMode) {
-    this._viewMode = viewMode === "tablet" ? "tablet" : "pc";
+    this._viewMode = ["pc", "tablet", "mobile"].includes(viewMode) ? viewMode : "pc";
     localStorage.setItem("world_cup_2026_view_mode", this._viewMode);
     this.render();
   }
@@ -9229,40 +9256,38 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
-  renderError(err) {
+  errorCard(err, title = this.t("errorTitle"), text = this.t("errorText")) {
+    return `
+      <div class="wc-card">
+        <h1>${this.esc(title)}</h1>
+        <p>${this.esc(text)}</p>
+        <button class="wc-pill wc-reset-panel-button" id="wc-reset-panel-button" type="button">Reset panel view</button>
+        <pre>${this.esc(JSON.stringify(err || {}, null, 2))}</pre>
+      </div>
+    `;
+  }
+
+  renderError(err, options = {}) {
+    if (options.resetSavedPage) {
+      try { localStorage.removeItem("world_cup_2026_last_page"); } catch (e) {}
+      this._page = "overview";
+    }
+
     this.innerHTML = `
       ${this.styles()}
-      <div class="wc-app ">
+      <div class="wc-app wc-view-${this._viewMode} wc-page-error">
         <div class="wc-shell">
-          
-      <div class="wc-card wc-premium-highlight" style="text-align:center;max-width:980px;margin:0 auto 14px auto;border:2px solid rgba(255,215,0,0.95);box-shadow:0 0 24px rgba(255,215,0,0.28);background:linear-gradient(135deg,rgba(255,215,0,0.16),rgba(255,255,255,0.04));">
-        <div style="font-size:1.45rem;font-weight:900;letter-spacing:.04em;margin-bottom:8px;">⭐ BECOME A PREMIUM SUPPORTER ⭐</div>
-        <div style="font-size:1.05rem;font-weight:800;margin-bottom:10px;">Want your name shown on the scrolling supporter bar?</div>
-
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:10px;margin:12px auto;max-width:820px;">
-          <div class="wc-mini-card" style="padding:12px;border-radius:14px;background:rgba(255,255,255,0.08);">🇬🇧<br><strong>Name + Flag</strong></div>
-          <div class="wc-mini-card" style="padding:12px;border-radius:14px;background:rgba(255,255,255,0.08);">💬<br><strong>Your Message</strong></div>
-          <div class="wc-mini-card" style="padding:12px;border-radius:14px;background:rgba(255,255,255,0.08);">🏆<br><strong>Premium Status</strong></div>
-        </div>
-
-        <p style="font-size:1.15rem;font-weight:900;margin:12px auto;">Premium Support donation: minimum £10</p>
-        <p class="wc-muted" style="max-width:760px;margin:8px auto;">
-          Premium supporters get their name, country flag and optional personal message shown on the Premium Supporters scrolling bar.
-          Funny messages and friendly football banter are welcome, but they must stay clean.
-        </p>
-        <p class="wc-muted" style="max-width:760px;margin:8px auto;font-size:.9rem;">
-          No swearing, insults, abuse, discrimination, political content or negative comments. Unsuitable messages will not be posted.
-        </p>
-      </div>
-
-<div class="wc-card">
-            <h1>${this.t("errorTitle")}</h1>
-            <p>${this.t("errorText")}</p>
-            <pre>${this.esc(JSON.stringify(err, null, 2))}</pre>
-          </div>
+          ${this.nav()}
+          ${this.errorCard(err)}
         </div>
       </div>
     `;
+
+    const resetButton = this.querySelector("#wc-reset-panel-button");
+    if (resetButton) resetButton.onclick = () => this.resetPanelView();
+    this.querySelectorAll(".wc-nav button").forEach((button) => {
+      button.onclick = () => this.changePage(button.getAttribute("data-page"));
+    });
   }
 
   styles() {
@@ -9991,6 +10016,365 @@ class WorldCup2026Panel extends HTMLElement {
           font-weight: 700;
           line-height: 1.35;
           text-align: center;
+        }
+
+
+        .live-premium-page {
+          display: flex;
+          flex-direction: column;
+          gap: 14px;
+        }
+
+        .live-premium-hero {
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          justify-content: space-between;
+          align-items: stretch;
+          gap: 18px;
+          background:
+            radial-gradient(circle at 12% 0%, rgba(239,68,68,.26), transparent 35%),
+            radial-gradient(circle at 88% 8%, rgba(34,197,94,.20), transparent 32%),
+            linear-gradient(135deg, rgba(10,18,35,.98), rgba(6,11,25,.94));
+          border: 1px solid rgba(255,255,255,.12);
+        }
+
+        .live-kicker {
+          font-size: .76rem;
+          font-weight: 1000;
+          text-transform: uppercase;
+          letter-spacing: .14em;
+          color: #86efac;
+          margin-bottom: 5px;
+        }
+
+        .live-premium-hero p {
+          margin: 6px 0 0;
+          max-width: 760px;
+          color: rgba(235,245,255,.72);
+          font-size: .88rem;
+          line-height: 1.35;
+          font-weight: 700;
+        }
+
+        .live-premium-hero-stats {
+          display: grid;
+          grid-template-columns: repeat(4, minmax(72px, 1fr));
+          gap: 8px;
+          min-width: min(440px, 100%);
+        }
+
+        .live-premium-hero-stats div,
+        .live-premium-count {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          min-height: 76px;
+          border-radius: 18px;
+          background: rgba(255,255,255,.07);
+          border: 1px solid rgba(255,255,255,.12);
+          box-shadow: inset 0 0 0 1px rgba(255,255,255,.025);
+        }
+
+        .live-premium-hero-stats strong,
+        .live-premium-count strong {
+          font-size: 1.9rem;
+          line-height: 1;
+          font-weight: 1000;
+          color: #fff;
+        }
+
+        .live-premium-hero-stats span,
+        .live-premium-count span {
+          margin-top: 5px;
+          font-size: .68rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: .08em;
+          color: rgba(255,255,255,.62);
+        }
+
+        .live-premium-feed {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+          gap: 14px;
+          align-items: start;
+        }
+
+        .live-premium-match {
+          overflow: hidden;
+          border-radius: 24px;
+          padding: 14px;
+          background:
+            radial-gradient(circle at top left, rgba(239,68,68,.20), transparent 34%),
+            radial-gradient(circle at bottom right, rgba(59,130,246,.16), transparent 38%),
+            rgba(7,12,24,.94);
+          border: 1px solid rgba(255,255,255,.12);
+          box-shadow: 0 16px 32px rgba(0,0,0,.22);
+        }
+
+        .live-premium-main {
+          grid-column: 1 / -1;
+        }
+
+        .live-premium-topline {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 12px;
+        }
+
+        .live-premium-topline span {
+          padding: 5px 9px;
+          border-radius: 999px;
+          background: rgba(255,255,255,.08);
+          border: 1px solid rgba(255,255,255,.10);
+          color: rgba(255,255,255,.76);
+          font-size: .72rem;
+          font-weight: 900;
+        }
+
+        .live-premium-topline .live-on-air {
+          color: #fecaca;
+          background: rgba(239,68,68,.20);
+          border-color: rgba(248,113,113,.38);
+          animation: wcLivePulse 1.4s infinite;
+        }
+
+        .live-premium-scoreboard {
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr);
+          gap: 14px;
+          align-items: center;
+        }
+
+        .live-premium-team {
+          min-width: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          gap: 8px;
+          text-align: center;
+          padding: 12px 10px;
+          border-radius: 20px;
+          background: rgba(255,255,255,.055);
+          border: 1px solid rgba(255,255,255,.10);
+        }
+
+        .live-premium-team img,
+        .live-premium-team .wc-flag {
+          transform: scale(1.35);
+          margin-bottom: 5px;
+        }
+
+        .live-premium-team strong {
+          font-size: clamp(1rem, 2vw, 1.45rem);
+          font-weight: 1000;
+          line-height: 1.05;
+        }
+
+        .live-premium-team small {
+          color: rgba(255,255,255,.66);
+          font-weight: 900;
+        }
+
+        .live-premium-score-centre {
+          min-width: 150px;
+          text-align: center;
+          padding: 10px 12px;
+          border-radius: 22px;
+          background: rgba(0,0,0,.30);
+          border: 1px solid rgba(255,255,255,.12);
+        }
+
+        .live-premium-score {
+          font-size: clamp(2.25rem, 5vw, 4rem);
+          line-height: .95;
+          font-weight: 1000;
+          color: #fff;
+          text-shadow: 0 0 18px rgba(255,255,255,.18);
+        }
+
+        .live-premium-clock {
+          margin: 8px 0;
+          display: flex;
+          justify-content: center;
+        }
+
+        .live-premium-status {
+          font-size: .72rem;
+          font-weight: 1000;
+          color: rgba(255,255,255,.75);
+        }
+
+        .live-premium-scorers {
+          margin-top: 12px;
+        }
+
+        .live-premium-lower-grid {
+          margin-top: 12px;
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+          gap: 10px;
+          align-items: stretch;
+        }
+
+        .live-premium-card,
+        .live-premium-lower-grid .match-events-box,
+        .live-premium-lower-grid .match-officials-box {
+          margin: 0;
+          padding: 11px;
+          border-radius: 17px;
+          background: rgba(255,255,255,.055);
+          border: 1px solid rgba(255,255,255,.10);
+        }
+
+        .live-premium-card-title {
+          font-size: .78rem;
+          font-weight: 1000;
+          text-transform: uppercase;
+          letter-spacing: .08em;
+          color: #bfdbfe;
+          margin-bottom: 9px;
+        }
+
+        .live-stat-bars {
+          display: flex;
+          flex-direction: column;
+          gap: 8px;
+        }
+
+        .live-stat-row {
+          display: grid;
+          grid-template-columns: 42px 1fr 42px;
+          gap: 8px;
+          align-items: center;
+          font-weight: 900;
+          font-size: .78rem;
+        }
+
+        .live-stat-row > span:first-child { text-align: right; }
+        .live-stat-row > span:last-child { text-align: left; }
+
+        .live-stat-bar-wrap small {
+          display: block;
+          text-align: center;
+          color: rgba(255,255,255,.62);
+          font-size: .65rem;
+          font-weight: 900;
+          text-transform: uppercase;
+          letter-spacing: .06em;
+          margin-bottom: 3px;
+        }
+
+        .live-stat-bar {
+          display: flex;
+          height: 7px;
+          overflow: hidden;
+          border-radius: 999px;
+          background: rgba(255,255,255,.08);
+        }
+
+        .live-stat-bar i,
+        .live-stat-bar b {
+          display: block;
+          min-width: 4px;
+        }
+
+        .live-stat-bar i { background: rgba(34,197,94,.82); }
+        .live-stat-bar b { background: rgba(59,130,246,.82); }
+
+        .live-premium-timeline {
+          display: flex;
+          flex-direction: column;
+          gap: 6px;
+        }
+
+        .live-timeline-row {
+          display: grid;
+          grid-template-columns: 38px 34px minmax(0, 1fr);
+          gap: 7px;
+          align-items: center;
+          padding: 7px 8px;
+          border-radius: 12px;
+          background: rgba(0,0,0,.18);
+          font-size: .78rem;
+        }
+
+        .live-timeline-row span {
+          color: #fde68a;
+          font-weight: 1000;
+          text-align: right;
+        }
+
+        .live-timeline-row b {
+          text-align: center;
+        }
+
+        .live-timeline-row strong {
+          min-width: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .live-timeline-row em {
+          grid-column: 3;
+          color: rgba(255,255,255,.55);
+          font-style: normal;
+          font-size: .68rem;
+          margin-top: -5px;
+        }
+
+        .live-discipline-grid {
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 8px;
+        }
+
+        .live-discipline-grid div {
+          padding: 10px;
+          border-radius: 13px;
+          background: rgba(0,0,0,.18);
+          text-align: center;
+        }
+
+        .live-discipline-grid strong {
+          display: block;
+          font-size: 1.45rem;
+          line-height: 1;
+          font-weight: 1000;
+        }
+
+        .live-discipline-grid span {
+          display: block;
+          margin-top: 5px;
+          color: rgba(255,255,255,.62);
+          font-size: .68rem;
+          font-weight: 800;
+        }
+
+        @media (max-width: 760px) {
+          .live-premium-hero,
+          .live-premium-scoreboard {
+            grid-template-columns: 1fr;
+            flex-direction: column;
+          }
+
+          .live-premium-hero-stats {
+            grid-template-columns: repeat(2, 1fr);
+          }
+
+          .live-premium-score-centre {
+            order: -1;
+          }
+
+          .live-premium-feed {
+            grid-template-columns: 1fr;
+          }
         }
 
         @keyframes wcLivePulse {
@@ -10831,6 +11215,207 @@ class WorldCup2026Panel extends HTMLElement {
           .wc-page-knockout .wc-web-round:not(:last-child) .wc-web-match::after {
             right: -7px !important;
             width: 7px !important;
+          }
+        }
+
+        .wc-page-knockout .wc-web-card {
+          overflow-x: auto !important;
+          overflow-y: hidden !important;
+        }
+
+        .wc-page-knockout .wc-knockout-spider {
+          position: relative;
+          z-index: 2;
+          display: grid;
+          grid-template-columns:
+            minmax(210px, 1.28fr)
+            minmax(185px, 1.08fr)
+            minmax(170px, 0.96fr)
+            minmax(160px, 0.88fr)
+            minmax(170px, 0.94fr)
+            minmax(112px, 0.58fr);
+          grid-template-rows: 24px repeat(32, minmax(17px, 1fr));
+          column-gap: 30px;
+          min-width: 1120px;
+          min-height: 690px;
+          padding: 0 8px 10px 0;
+        }
+
+        .wc-page-knockout .wc-spider-round-title {
+          align-self: center;
+          justify-self: stretch;
+          color: rgba(255,255,255,0.94);
+          font-size: 10px;
+          font-weight: 950;
+          letter-spacing: 0.04em;
+          line-height: 1;
+          text-align: center;
+          text-transform: uppercase;
+          text-shadow: 0 2px 7px rgba(0,0,0,0.72);
+        }
+
+        .wc-page-knockout .wc-spider-slot {
+          position: relative;
+          display: flex;
+          align-items: center;
+          min-width: 0;
+        }
+
+        .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -30px;
+          width: 30px;
+          height: 2px;
+          transform: translateY(-50%);
+          background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.74));
+          border-radius: 999px;
+          pointer-events: none;
+        }
+
+        .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::after {
+          content: "";
+          position: absolute;
+          top: 12%;
+          bottom: 12%;
+          left: -30px;
+          width: 2px;
+          background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.58), rgba(255,255,255,0.2));
+          border-radius: 999px;
+          pointer-events: none;
+        }
+
+        .wc-page-knockout .wc-spider-match {
+          position: relative;
+          z-index: 1;
+          display: grid;
+          grid-template-columns: minmax(0, 1fr) 35px minmax(0, 1fr);
+          align-items: center;
+          gap: 5px;
+          width: 100%;
+          min-height: 36px;
+          padding: 5px 7px;
+          border-radius: 8px;
+          background: linear-gradient(135deg, rgba(255,255,255,0.12), rgba(255,255,255,0.045));
+          border: 1px solid rgba(255,255,255,0.18);
+          box-shadow: 0 5px 13px rgba(0,0,0,0.24);
+        }
+
+        .wc-page-knockout .wc-spider-final .wc-spider-match {
+          border-color: rgba(255,215,90,0.48);
+          background:
+            radial-gradient(circle at top left, rgba(255,215,90,0.18), transparent 45%),
+            linear-gradient(135deg, rgba(255,255,255,0.13), rgba(255,255,255,0.05));
+        }
+
+        .wc-page-knockout .wc-spider-match-empty {
+          opacity: 0.72;
+          border-style: dashed;
+        }
+
+        .wc-page-knockout .wc-spider-team {
+          display: flex;
+          align-items: center;
+          gap: 5px;
+          min-width: 0;
+          color: rgba(255,255,255,0.94);
+          font-size: 10px;
+          font-weight: 900;
+          line-height: 1;
+        }
+
+        .wc-page-knockout .wc-spider-team:last-child {
+          justify-content: flex-end;
+          text-align: right;
+        }
+
+        .wc-page-knockout .wc-spider-team span {
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+        }
+
+        .wc-page-knockout .wc-spider-team .group-flag-img,
+        .wc-page-knockout .wc-spider-team .group-flag-missing {
+          width: 14px !important;
+          min-width: 14px !important;
+          height: 10px !important;
+          border-radius: 2px !important;
+          font-size: 7px !important;
+        }
+
+        .wc-page-knockout .wc-spider-vs {
+          color: rgba(255,255,255,0.72);
+          font-size: 8px;
+          font-weight: 950;
+          line-height: 1;
+          text-align: center;
+        }
+
+        .wc-page-knockout .wc-spider-final-label {
+          position: relative;
+          grid-column: 6;
+          grid-row: 2 / span 32;
+          align-self: center;
+          display: grid;
+          gap: 4px;
+          justify-items: center;
+          padding: 10px 8px;
+          border-radius: 8px;
+          color: rgba(255,255,255,0.94);
+          background: linear-gradient(135deg, rgba(255,215,90,0.2), rgba(255,255,255,0.055));
+          border: 1px solid rgba(255,215,90,0.44);
+          box-shadow: 0 8px 20px rgba(0,0,0,0.28);
+          text-align: center;
+        }
+
+        .wc-page-knockout .wc-spider-final-label::before {
+          content: "";
+          position: absolute;
+          top: 50%;
+          left: -30px;
+          width: 30px;
+          height: 2px;
+          transform: translateY(-50%);
+          background: linear-gradient(90deg, rgba(255,255,255,0.25), rgba(255,215,90,0.75));
+          border-radius: 999px;
+        }
+
+        .wc-page-knockout .wc-spider-final-label span {
+          font-size: 10px;
+          font-weight: 950;
+          letter-spacing: 0.04em;
+          text-transform: uppercase;
+        }
+
+        .wc-page-knockout .wc-spider-final-label strong {
+          font-size: 14px;
+          line-height: 1;
+        }
+
+        @media (max-width: 1400px) {
+          .wc-page-knockout .wc-knockout-spider {
+            grid-template-columns:
+              minmax(196px, 1.22fr)
+              minmax(174px, 1fr)
+              minmax(160px, 0.9fr)
+              minmax(152px, 0.84fr)
+              minmax(160px, 0.9fr)
+              minmax(104px, 0.55fr);
+            column-gap: 24px;
+            min-width: 1040px;
+            min-height: 640px;
+          }
+
+          .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::before,
+          .wc-page-knockout .wc-spider-final-label::before {
+            left: -24px;
+            width: 24px;
+          }
+
+          .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::after {
+            left: -24px;
           }
         }
 
@@ -15730,6 +16315,616 @@ class WorldCup2026Panel extends HTMLElement {
         margin-right: auto !important;
       }
 
+      /* Tablet view: keep the same top nav design, but let it wrap instead of overlapping. */
+      .wc-app.wc-view-tablet .wc-header-title-row {
+        align-items: start !important;
+      }
+
+      .wc-app.wc-view-tablet .wc-tablet-header-nav {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        align-items: stretch !important;
+        align-content: start !important;
+        justify-content: flex-start !important;
+        gap: 4px !important;
+        overflow: visible !important;
+        min-height: 44px !important;
+        height: auto !important;
+      }
+
+      .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+        flex: 1 1 calc(16.666% - 4px) !important;
+        min-width: 64px !important;
+        max-width: none !important;
+        min-height: 20px !important;
+        height: 20px !important;
+        padding: 4px 6px !important;
+        font-size: 7px !important;
+        line-height: 1 !important;
+        letter-spacing: 0 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      @media (max-width: 760px) {
+        .wc-app.wc-view-tablet .wc-tablet-header-nav {
+          gap: 3px !important;
+          min-height: 63px !important;
+        }
+
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button {
+          flex-basis: calc(25% - 3px) !important;
+          min-width: 58px !important;
+          min-height: 18px !important;
+          height: 18px !important;
+          padding: 3px 4px !important;
+          font-size: 6px !important;
+        }
+      }
+
+      /* Mobile view: same theme, phone-first spacing and controls. */
+      .wc-app.wc-view-mobile {
+        padding: 8px !important;
+        font-size: 13px !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-shell {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-header {
+        display: grid !important;
+        gap: 8px !important;
+        padding: 10px !important;
+        margin-bottom: 8px !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-header-title-row {
+        display: grid !important;
+        grid-template-columns: 1fr auto !important;
+        gap: 6px !important;
+        align-items: start !important;
+        width: 100% !important;
+        overflow: visible !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-tablet-header-nav {
+        display: none !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-title-stack {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        min-width: 0 !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-title {
+        font-size: 24px !important;
+        line-height: 1.05 !important;
+        white-space: normal !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-header-subtitle-inline {
+        max-width: 100% !important;
+        font-size: 10px !important;
+        line-height: 1.25 !important;
+        white-space: normal !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-header-live-pill,
+      .wc-app.wc-view-mobile .wc-header-scheduled-pill {
+        justify-self: start !important;
+        max-width: 100% !important;
+        min-height: 22px !important;
+        padding: 5px 8px !important;
+        font-size: 9px !important;
+        line-height: 1 !important;
+        white-space: nowrap !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-header-countdown-pill {
+        grid-column: 1 / -1 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-height: 34px !important;
+        height: auto !important;
+        margin: 0 !important;
+        padding: 7px 10px !important;
+        font-size: 18px !important;
+        justify-content: center !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-header-controls {
+        position: static !important;
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+        width: 100% !important;
+        margin: 0 !important;
+        justify-content: stretch !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-tablet-top-controls {
+        display: none !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-language-wrap,
+      .wc-app.wc-view-mobile .wc-view-wrap,
+      .wc-app.wc-view-mobile .wc-sidebar-wrap,
+      .wc-app.wc-view-mobile .wc-updated-wrap {
+        width: 100% !important;
+        min-width: 0 !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-language-select,
+      .wc-app.wc-view-mobile .wc-view-select,
+      .wc-app.wc-view-mobile .wc-sidebar-select,
+      .wc-app.wc-view-mobile .wc-updated-pill,
+      .wc-app.wc-view-mobile .wc-header-controls .wc-back-button {
+        width: 100% !important;
+        min-width: 0 !important;
+        min-height: 34px !important;
+        height: 34px !important;
+        padding: 7px 8px !important;
+        font-size: 11px !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-nav {
+        display: grid !important;
+        grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+        gap: 5px !important;
+        overflow: visible !important;
+        margin: 0 0 8px !important;
+        padding: 0 !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-nav button {
+        min-width: 0 !important;
+        min-height: 34px !important;
+        padding: 6px 4px !important;
+        border-radius: 8px !important;
+        font-size: 10px !important;
+        line-height: 1.05 !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-card,
+      .wc-app.wc-view-mobile .wc-section,
+      .wc-app.wc-view-mobile .overview-panel,
+      .wc-app.wc-view-mobile .overview-donate-card,
+      .wc-app.wc-view-mobile .overview-supporters-card {
+        padding: 10px !important;
+        margin-bottom: 8px !important;
+        border-radius: 8px !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-section-title {
+        font-size: 17px !important;
+        line-height: 1.15 !important;
+      }
+
+      .wc-app.wc-view-mobile .mobile-stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 7px !important;
+      }
+
+      .wc-app.wc-view-mobile .mobile-stats-card {
+        min-height: 78px !important;
+        padding: 9px 7px !important;
+        text-align: center !important;
+      }
+
+      .wc-app.wc-view-mobile .mobile-stats-card strong {
+        font-size: 24px !important;
+        line-height: 1 !important;
+      }
+
+      .wc-app.wc-view-mobile .mobile-stats-card span,
+      .wc-app.wc-view-mobile .mobile-stats-card em {
+        font-size: 10px !important;
+        line-height: 1.1 !important;
+      }
+
+      .wc-app.wc-view-mobile .mobile-stats-list {
+        display: grid !important;
+        gap: 6px !important;
+        margin-top: 9px !important;
+      }
+
+      .wc-app.wc-view-mobile .mobile-stats-row {
+        display: grid !important;
+        grid-template-columns: 24px minmax(0, 1fr) auto !important;
+        gap: 7px !important;
+        align-items: center !important;
+        padding: 8px !important;
+        border-radius: 8px !important;
+        background: rgba(255,255,255,0.08) !important;
+        border: 1px solid rgba(255,255,255,0.10) !important;
+      }
+
+      .wc-app.wc-view-mobile .mobile-stats-row strong {
+        min-width: 0 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        font-size: 11px !important;
+      }
+
+      .wc-app.wc-view-mobile .mobile-stats-row em,
+      .wc-app.wc-view-mobile .mobile-stats-row span {
+        font-size: 11px !important;
+        font-weight: 900 !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-main-grid,
+      .wc-app.wc-view-mobile .overview-lower-grid,
+      .wc-app.wc-view-mobile .overview-supporters-layout,
+      .wc-app.wc-view-mobile .wc-grid,
+      .wc-app.wc-view-mobile .fixtures-grid,
+      .wc-app.wc-view-mobile .results-grid,
+      .wc-app.wc-view-mobile .live-grid,
+      .wc-app.wc-view-mobile .venues-grid,
+      .wc-app.wc-view-mobile .supporters-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        gap: 8px !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-stat-grid,
+      .wc-app.wc-view-mobile .overview-stat-grid.overview-stat-grid-in-progress {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        gap: 6px !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-stat-tile,
+      .wc-app.wc-view-mobile .overview-progress-wrap .overview-stat-tile {
+        min-height: 74px !important;
+        padding: 8px 6px !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-stat-tile strong,
+      .wc-app.wc-view-mobile .overview-progress-wrap .overview-stat-tile strong {
+        font-size: 22px !important;
+        line-height: 1 !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-stat-tile span,
+      .wc-app.wc-view-mobile .overview-stat-tile em {
+        font-size: 10px !important;
+        line-height: 1.1 !important;
+      }
+
+      .wc-app.wc-view-mobile .fixture-card,
+      .wc-app.wc-view-mobile .wc-bracket-match,
+      .wc-app.wc-view-mobile .live-match-card {
+        padding: 10px !important;
+        border-radius: 8px !important;
+      }
+
+      .wc-app.wc-view-mobile .fixture-teams-big,
+      .wc-app.wc-view-mobile .live-scoreboard,
+      .wc-app.wc-view-mobile .match-scoreboard {
+        grid-template-columns: minmax(0, 1fr) auto minmax(0, 1fr) !important;
+        gap: 6px !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-score {
+        font-size: 24px !important;
+        line-height: 1 !important;
+      }
+
+      .wc-app.wc-view-mobile .team-name,
+      .wc-app.wc-view-mobile .fixture-team-name,
+      .wc-app.wc-view-mobile .wc-team-name {
+        font-size: 11px !important;
+        line-height: 1.1 !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-table-wrap,
+      .wc-app.wc-view-mobile .golden-table-wrap,
+      .wc-app.wc-view-mobile .wc-bracket,
+      .wc-app.wc-view-mobile .wc-knockout-spider {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-table {
+        min-width: 620px !important;
+        font-size: 11px !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-table th,
+      .wc-app.wc-view-mobile .wc-table td {
+        padding: 6px 5px !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups,
+      .wc-app.wc-view-mobile.wc-page-groups .wc-shell,
+      .wc-app.wc-view-mobile.wc-page-groups .wc-groups-grid,
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card,
+      .wc-app.wc-view-mobile.wc-page-groups .wc-table-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-groups-grid {
+        grid-template-columns: 1fr !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card {
+        padding: 8px !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-section-title {
+        font-size: 16px !important;
+        margin-bottom: 7px !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table {
+        width: 100% !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        table-layout: fixed !important;
+        font-size: 8.5px !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th,
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td {
+        padding: 4px 1px !important;
+        line-height: 1.05 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th {
+        font-size: 7px !important;
+        letter-spacing: 0 !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(1),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(1) {
+        width: 6% !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(2),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(2) {
+        width: 34% !important;
+        padding-left: 2px !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(3),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(3),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(4),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(4),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(5),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(5),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(6),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(6),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(7),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(7),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(8),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(8) {
+        width: 6% !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(9),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(9),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(10),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(10) {
+        width: 8% !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-team-cell {
+        gap: 3px !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-team-cell strong {
+        min-width: 0 !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        font-size: 8.5px !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-flag-img,
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-flag-missing {
+        width: 11px !important;
+        min-width: 11px !important;
+        height: 8px !important;
+        font-size: 6px !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-knockout-spider {
+        min-width: 960px !important;
+        min-height: 600px !important;
+      }
+
+      .wc-app.wc-view-mobile .wc-web-card {
+        overflow-x: auto !important;
+      }
+
+      .wc-app.wc-view-mobile img,
+      .wc-app.wc-view-mobile .fixture-stadium-image {
+        max-width: 100% !important;
+        height: auto !important;
+      }
+
+      @media (max-width: 420px) {
+        .wc-app.wc-view-mobile {
+          padding: 6px !important;
+        }
+
+        .wc-app.wc-view-mobile .wc-title {
+          font-size: 21px !important;
+        }
+
+        .wc-app.wc-view-mobile .wc-header-controls {
+          grid-template-columns: 1fr !important;
+        }
+
+        .wc-app.wc-view-mobile .wc-nav {
+          grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        }
+
+        .wc-app.wc-view-mobile .overview-stat-grid,
+        .wc-app.wc-view-mobile .overview-stat-grid.overview-stat-grid-in-progress {
+          grid-template-columns: 1fr !important;
+        }
+      }
+
+
+
+      /* Mobile only: compact Groups page so each group table fits inside phone width */
+      .wc-app.wc-view-mobile.wc-page-groups {
+        width: 100vw !important;
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-shell {
+        width: 100% !important;
+        max-width: 100vw !important;
+        padding-left: 8px !important;
+        padding-right: 8px !important;
+        overflow-x: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-groups-grid {
+        display: grid !important;
+        grid-template-columns: minmax(0, 1fr) !important;
+        gap: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        padding: 9px 7px !important;
+        border-radius: 14px !important;
+        overflow: hidden !important;
+        box-sizing: border-box !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-section-title {
+        font-size: 15px !important;
+        line-height: 1.05 !important;
+        margin: 0 0 6px !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-table-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        overflow: hidden !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table {
+        width: 100% !important;
+        max-width: 100% !important;
+        min-width: 0 !important;
+        table-layout: fixed !important;
+        border-collapse: collapse !important;
+        font-size: 9px !important;
+      }
+
+      /* On mobile keep the important group columns only: Pos, Team, P, GD, Pts */
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(4),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(4),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(5),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(5),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(6),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(6),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(7),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(7),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(8),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(8) {
+        display: none !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th,
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td {
+        padding: 5px 2px !important;
+        line-height: 1.08 !important;
+        white-space: nowrap !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        box-sizing: border-box !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th {
+        font-size: 7.4px !important;
+        letter-spacing: 0 !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(1),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(1) {
+        width: 9% !important;
+        text-align: center !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(2),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(2) {
+        width: 53% !important;
+        text-align: left !important;
+        padding-left: 2px !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(3),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(3),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(9),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(9),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(10),
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(10) {
+        width: 12.5% !important;
+        text-align: center !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-team-cell {
+        display: flex !important;
+        align-items: center !important;
+        gap: 4px !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-team-cell strong {
+        display: block !important;
+        min-width: 0 !important;
+        max-width: 100% !important;
+        overflow: hidden !important;
+        text-overflow: ellipsis !important;
+        white-space: nowrap !important;
+        font-size: 9px !important;
+        line-height: 1.05 !important;
+      }
+
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-flag-img,
+      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-flag-missing {
+        width: 16px !important;
+        min-width: 16px !important;
+        max-width: 16px !important;
+        height: 11px !important;
+        font-size: 7px !important;
+        flex: 0 0 16px !important;
+      }
 </style>
     `;
   }
@@ -15827,6 +17022,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   viewCodeFor(value) {
+    if (value === "mobile") return "MOB";
     return value === "tablet" ? "TAB" : "PC";
   }
 
@@ -15971,6 +17167,7 @@ class WorldCup2026Panel extends HTMLElement {
       <div class="wc-view-wrap">
         <div class="wc-view-label">${this.esc(this.t("viewMode"))}</div>
         <select class="wc-view-select" id="wc-view-select" title="${this.esc(this.t("viewMode"))}">
+          <option value="mobile" ${this._viewMode === "mobile" ? "selected" : ""}>${this.esc(this.t("mobileView"))}</option>
           <option value="tablet" ${this._viewMode === "tablet" ? "selected" : ""}>${this.esc(this.t("tabletView"))}</option>
           <option value="pc" ${this._viewMode === "pc" ? "selected" : ""}>${this.esc(this.t("pcView"))}</option>
         </select>
@@ -16904,25 +18101,223 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  liveMatchDiscipline(match) {
+    const cards = this.normalisedMatchEvents(match).filter((event) => event.category === "card");
+    const teamCount = (team, colour) => {
+      const key = this.fixtureTeamKey(team);
+      return cards.filter((event) => {
+        const sameTeam = this.fixtureTeamKey(event.team) === key;
+        const detail = `${event.icon || ""} ${event.detail || ""}`.toLowerCase();
+        const isRed = detail.includes("🟥") || detail.includes("red");
+        const isYellow = detail.includes("🟨") || detail.includes("yellow") || !isRed;
+        return sameTeam && (colour === "red" ? isRed : isYellow);
+      }).length;
+    };
+
+    const homeTeam = this.getHomeTeam(match);
+    const awayTeam = this.getAwayTeam(match);
+    return {
+      homeYellow: teamCount(homeTeam, "yellow"),
+      homeRed: teamCount(homeTeam, "red"),
+      awayYellow: teamCount(awayTeam, "yellow"),
+      awayRed: teamCount(awayTeam, "red"),
+      total: cards.length,
+    };
+  }
+
+  liveStatValue(match, side, keys) {
+    const stats = match?.liveStatistics || match?.statistics || match?.stats || {};
+    const sideStats = side === "home" ? (stats.home || stats.homeTeam || {}) : (stats.away || stats.awayTeam || {});
+    const directPrefixes = side === "home" ? ["home", "homeTeam"] : ["away", "awayTeam"];
+
+    for (const key of keys) {
+      for (const prefix of directPrefixes) {
+        const directKey = `${prefix}${key.charAt(0).toUpperCase()}${key.slice(1)}`;
+        if (match?.[directKey] !== null && match?.[directKey] !== undefined && match?.[directKey] !== "") return match[directKey];
+      }
+      if (sideStats?.[key] !== null && sideStats?.[key] !== undefined && sideStats?.[key] !== "") return sideStats[key];
+    }
+    return "";
+  }
+
+  livePossessionPercent(value) {
+    if (value === null || value === undefined || value === "") return null;
+    const match = String(value).match(/\d+(?:\.\d+)?/);
+    if (!match) return null;
+    const num = Number(match[0]);
+    return Number.isFinite(num) ? Math.max(0, Math.min(100, num)) : null;
+  }
+
+  livePremiumStatsBars(match) {
+    const rows = [
+      { label: "Possession", keys: ["possession", "ballPossession"] },
+      { label: "Shots", keys: ["shots", "totalShots", "shotsTotal"] },
+      { label: "On Target", keys: ["shotsOnGoal", "shotsOnTarget", "onTarget"] },
+      { label: "Corners", keys: ["corners", "cornerKicks"] },
+      { label: "Fouls", keys: ["fouls", "foulsCommitted"] },
+    ].map((row) => {
+      const home = this.liveStatValue(match, "home", row.keys);
+      const away = this.liveStatValue(match, "away", row.keys);
+      return { ...row, home, away };
+    }).filter((row) => row.home !== "" || row.away !== "");
+
+    if (!rows.length) return "";
+
+    return `
+      <div class="live-premium-card live-premium-stats-card">
+        <div class="live-premium-card-title">📊 Live Stats</div>
+        <div class="live-stat-bars">
+          ${rows.map((row) => {
+            const homeNum = this.livePossessionPercent(row.home);
+            const awayNum = this.livePossessionPercent(row.away);
+            const total = homeNum !== null && awayNum !== null ? Math.max(homeNum + awayNum, 1) : 0;
+            const left = total ? Math.round((homeNum / total) * 100) : 50;
+            const right = total ? Math.round((awayNum / total) * 100) : 50;
+            return `
+              <div class="live-stat-row">
+                <span>${this.esc(row.home || "-")}</span>
+                <div class="live-stat-bar-wrap">
+                  <small>${this.esc(row.label)}</small>
+                  <div class="live-stat-bar"><i style="width:${left}%"></i><b style="width:${right}%"></b></div>
+                </div>
+                <span>${this.esc(row.away || "-")}</span>
+              </div>
+            `;
+          }).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  livePremiumTimeline(match) {
+    const events = this.normalisedMatchEvents(match).filter((event) => event.category !== "substitution").slice(-10);
+    if (!events.length) return "";
+    return `
+      <div class="live-premium-card live-premium-timeline-card">
+        <div class="live-premium-card-title">⚡ Live Timeline</div>
+        <div class="live-premium-timeline">
+          ${events.map((event) => `
+            <div class="live-timeline-row live-timeline-${this.esc(event.category)}">
+              <span>${this.esc(event.minuteText || "-")}</span>
+              <b>${this.esc(event.icon || "•")}</b>
+              <strong>${this.esc(event.player || event.detail || event.category)}</strong>
+              ${event.team ? `<em>${this.esc(this.localizedTeamName(event.team))}</em>` : ""}
+            </div>
+          `).join("")}
+        </div>
+      </div>
+    `;
+  }
+
+  livePremiumMatchCard(match, index = 0) {
+    const homeTeam = this.getHomeTeam(match);
+    const awayTeam = this.getAwayTeam(match);
+    const homeScore = this.getHomeScore(match);
+    const awayScore = this.getAwayScore(match);
+    const stage = String(match.group || this.stageLabel(match.stage) || "").replaceAll("_", " ");
+    const venueInfo = this.fixtureVenueInfo(match);
+    const date = this.formatDate(match.utcDate || match.date);
+    const discipline = this.liveMatchDiscipline(match);
+    const clock = this.footballClockHtml(match);
+    const scorers = this.matchScorersSection(homeTeam, awayTeam, match);
+    const stats = this.livePremiumStatsBars(match);
+    const timeline = this.livePremiumTimeline(match);
+    const weather = this.matchWeatherSection(match);
+    const officials = this.matchOfficialsSection(match);
+
+    return `
+      <div class="live-premium-match ${index === 0 ? "live-premium-main" : ""}">
+        <div class="live-premium-topline">
+          <span class="live-on-air">● LIVE</span>
+          ${stage ? `<span>${this.esc(stage)}</span>` : ""}
+          ${venueInfo?.name ? `<span>🏟 ${this.esc(venueInfo.name)}</span>` : ""}
+          <span>${this.esc(date)}</span>
+        </div>
+
+        <div class="live-premium-scoreboard">
+          <div class="live-premium-team">
+            ${this.flag(homeTeam, true)}
+            <strong>${this.esc(this.localizedTeamName(homeTeam))}</strong>
+            <small>🟨 ${discipline.homeYellow} &nbsp; 🟥 ${discipline.homeRed}</small>
+          </div>
+
+          <div class="live-premium-score-centre">
+            <div class="live-premium-score">${this.esc(homeScore)} - ${this.esc(awayScore)}</div>
+            <div class="live-premium-clock">${clock}</div>
+            <div class="live-premium-status">${this.statusHtml(match)}</div>
+          </div>
+
+          <div class="live-premium-team">
+            ${this.flag(awayTeam, true)}
+            <strong>${this.esc(this.localizedTeamName(awayTeam))}</strong>
+            <small>🟨 ${discipline.awayYellow} &nbsp; 🟥 ${discipline.awayRed}</small>
+          </div>
+        </div>
+
+        ${scorers ? `<div class="live-premium-scorers">${scorers}</div>` : ""}
+
+        <div class="live-premium-lower-grid">
+          ${stats}
+          ${timeline}
+          ${discipline.total ? `
+            <div class="live-premium-card live-premium-discipline-card">
+              <div class="live-premium-card-title">🟨 Discipline</div>
+              <div class="live-discipline-grid">
+                <div><strong>${discipline.homeYellow}</strong><span>${this.esc(this.localizedTeamName(homeTeam))} yellows</span></div>
+                <div><strong>${discipline.homeRed}</strong><span>${this.esc(this.localizedTeamName(homeTeam))} reds</span></div>
+                <div><strong>${discipline.awayYellow}</strong><span>${this.esc(this.localizedTeamName(awayTeam))} yellows</span></div>
+                <div><strong>${discipline.awayRed}</strong><span>${this.esc(this.localizedTeamName(awayTeam))} reds</span></div>
+              </div>
+            </div>
+          ` : ""}
+          ${weather}
+          ${officials}
+        </div>
+      </div>
+    `;
+  }
+
   livePage() {
     const live = (this._data.live || []).filter((match) => this.isLiveMatch(match));
 
     if (!live.length) {
       return `
-        <div class="wc-card">
-          <div class="wc-section-title">${this.t("live")}</div>
-          <div class="wc-live-sync-notice">ℹ️ ${this.t("manualTimerNotice")}</div>
-          <div class="wc-empty">${this.t("noLiveMatches")}</div>
+        <div class="live-premium-page">
+          <div class="wc-card live-premium-hero live-premium-empty-hero">
+            <div>
+              <div class="live-kicker">⚽ Matchday Control Room</div>
+              <div class="wc-section-title">${this.t("live")}</div>
+              <p>${this.t("manualTimerNotice")}</p>
+            </div>
+            <div class="live-premium-count"><strong>0</strong><span>${this.t("liveNow")}</span></div>
+          </div>
+          <div class="wc-card"><div class="wc-empty">${this.t("noLiveMatches")}</div></div>
         </div>
       `;
     }
 
+    const totalCards = live.reduce((sum, match) => sum + this.liveMatchDiscipline(match).total, 0);
+    const totalGoals = live.reduce((sum, match) => sum + this.normalisedMatchEvents(match).filter((event) => event.category === "goal").length, 0);
+    const totalEvents = live.reduce((sum, match) => sum + this.normalisedMatchEvents(match).length, 0);
+
     return `
-      <div class="wc-card">
-        <div class="wc-section-title">${this.t("live")} <span class="wc-badge wc-live">${this.t("liveStatus")}</span></div>
-        <div class="wc-live-sync-notice">ℹ️ ${this.t("manualTimerNotice")}</div>
-        <div class="wc-list">
-          ${live.map(m => this.matchRow(m)).join("")}
+      <div class="live-premium-page">
+        <div class="wc-card live-premium-hero">
+          <div>
+            <div class="live-kicker">⚽ Matchday Control Room</div>
+            <div class="wc-section-title">${this.t("live")} <span class="wc-badge wc-live">${this.t("liveStatus")}</span></div>
+            <p>${this.t("manualTimerNotice")}</p>
+          </div>
+          <div class="live-premium-hero-stats">
+            <div><strong>${live.length}</strong><span>${this.t("liveNow")}</span></div>
+            <div><strong>${totalGoals}</strong><span>Goals</span></div>
+            <div><strong>${totalCards}</strong><span>Cards</span></div>
+            <div><strong>${totalEvents}</strong><span>Events</span></div>
+          </div>
+        </div>
+
+        <div class="live-premium-feed">
+          ${live.map((m, index) => this.livePremiumMatchCard(m, index)).join("")}
         </div>
       </div>
     `;
@@ -18360,43 +19755,111 @@ class WorldCup2026Panel extends HTMLElement {
       const matches = fixtures
         .filter(m => this.normaliseKnockoutStage(m.stage) === stage)
         .sort((a, b) => {
+          const aSlot = this.knockoutDerivedMatchNumber(stage, -1, a);
+          const bSlot = this.knockoutDerivedMatchNumber(stage, -1, b);
+          if (aSlot && bSlot && aSlot !== bSlot) return aSlot - bSlot;
           const aTime = new Date(a.utcDate || a.date || 0).getTime();
           const bTime = new Date(b.utcDate || b.date || 0).getTime();
-          return aTime - bTime;
-        });
+          if (aTime !== bTime) return aTime - bTime;
+          const aTeams = `${this.fixtureTeamKey(this.getHomeTeam(a))}|${this.fixtureTeamKey(this.getAwayTeam(a))}`;
+          const bTeams = `${this.fixtureTeamKey(this.getHomeTeam(b))}|${this.fixtureTeamKey(this.getAwayTeam(b))}`;
+          return aTeams.localeCompare(bTeams);
+      });
       return { stage, label, matches };
     });
+
+    const spiderCounts = {
+      LAST_32: 16,
+      LAST_16: 8,
+      QUARTER_FINALS: 4,
+      SEMI_FINALS: 2,
+      FINAL: 1,
+    };
+
+    const spiderSlotsForRound = (stage, matches) => {
+      const expected = spiderCounts[stage] || matches.length || 1;
+      const start = this.knockoutRoundStarts()[stage];
+      const slots = Array.from({ length: expected }, () => null);
+      const overflow = [];
+
+      matches.forEach((match, fallbackIndex) => {
+        const matchNumber = this.knockoutDerivedMatchNumber(stage, fallbackIndex, match);
+        const slotIndex = start && matchNumber ? matchNumber - start : fallbackIndex;
+        if (slotIndex >= 0 && slotIndex < expected && !slots[slotIndex]) {
+          slots[slotIndex] = match;
+        } else {
+          overflow.push(match);
+        }
+      });
+
+      overflow.forEach((match) => {
+        const emptyIndex = slots.findIndex((slot) => !slot);
+        if (emptyIndex >= 0) slots[emptyIndex] = match;
+      });
+
+      return slots;
+    };
+
+    const spiderMatch = (match) => {
+      if (!match) {
+        return `
+          <div class="wc-spider-match wc-spider-match-empty">
+            <div class="wc-spider-team"><span>${this.t("tbc")}</span></div>
+            <div class="wc-spider-vs">${this.t("versus")}</div>
+            <div class="wc-spider-team"><span>${this.t("tbc")}</span></div>
+          </div>
+        `;
+      }
+
+      const homeTeam = this.getHomeTeam(match);
+      const awayTeam = this.getAwayTeam(match);
+      const homeScore = this.getHomeScore(match);
+      const awayScore = this.getAwayScore(match);
+      const scoreText = homeScore !== "-" || awayScore !== "-" ? `${homeScore} - ${awayScore}` : this.t("versus");
+
+      return `
+        <div class="wc-spider-match">
+          <div class="wc-spider-team">
+            ${this.flag(homeTeam, true)}
+            <span>${this.esc(this.localizedTeamName(homeTeam))}</span>
+          </div>
+          <div class="wc-spider-vs">${this.esc(scoreText)}</div>
+          <div class="wc-spider-team">
+            ${this.flag(awayTeam, true)}
+            <span>${this.esc(this.localizedTeamName(awayTeam))}</span>
+          </div>
+        </div>
+      `;
+    };
 
     return `
       <div class="wc-card wc-web-card">
         <div class="wc-section-title">Knockout Stage</div>
-        <div class="wc-knockout-web">
-          ${roundMatches.map(({ stage, label, matches }) => `
-            <div class="wc-web-round">
-              <div class="wc-web-round-title">${label}</div>
-              ${matches.length ? matches.map((m) => `
-                <div class="wc-web-match">
-                  <div class="wc-web-team">
-                    ${this.flag(this.getHomeTeam(m), true)}
-                    <span>${this.esc(this.localizedTeamName(this.getHomeTeam(m)))}</span>
-                  </div>
-                  <div class="wc-web-vs">${this.t("versus")}</div>
-                  <div class="wc-web-team">
-                    ${this.flag(this.getAwayTeam(m), true)}
-                    <span>${this.esc(this.localizedTeamName(this.getAwayTeam(m)))}</span>
-                  </div>
-                </div>
-              `).join("") : `<div class="wc-web-match"><div class="wc-web-team"><span>${this.t("tbc")}</span></div><div class="wc-web-vs">${this.t("fixturesNotAvailable")}</div></div>`}
-            </div>
+        <div class="wc-knockout-spider">
+          ${roundMatches.map(({ label }, roundIndex) => `
+            <div class="wc-spider-round-title" style="grid-column:${roundIndex + 1};">${label}</div>
           `).join("")}
-          <div class="wc-web-round wc-web-round-winner">
-            <div class="wc-web-round-title">Winner</div>
-            <div class="wc-web-match wc-web-winner-card">
-              <div class="wc-web-team wc-web-winner-team">
-                <span class="wc-winner-trophy">🏆</span>
-                <span>${this.t("tbc")}</span>
-              </div>
-            </div>
+          ${roundMatches.map(({ stage, matches }, roundIndex) => {
+            const slots = spiderSlotsForRound(stage, matches);
+            const expected = slots.length;
+            const span = 32 / expected;
+            return Array.from({ length: expected }, (_, index) => {
+              const start = (index * span) + 2;
+              const classes = [
+                "wc-spider-slot",
+                roundIndex === 0 ? "wc-spider-first" : "",
+                roundIndex === roundMatches.length - 1 ? "wc-spider-final" : "",
+              ].filter(Boolean).join(" ");
+              return `
+                <div class="${classes}" style="grid-column:${roundIndex + 1};grid-row:${start} / span ${span};">
+                  ${spiderMatch(slots[index])}
+                </div>
+              `;
+            }).join("");
+          }).join("")}
+          <div class="wc-spider-final-label">
+            <span>Winner</span>
+            <strong>${this.t("tbc")}</strong>
           </div>
         </div>
       </div>
@@ -18618,6 +20081,330 @@ class WorldCup2026Panel extends HTMLElement {
             { label: "Cards", key: "cards", align: "center" },
             { label: "VAR", key: "varEvents", align: "center" },
           ], "No team event records yet")}
+        </div>
+      </div>
+    `;
+  }
+
+  statsPage() {
+    const a = this.statsHubAnalytics();
+    const eventColour = a.dataCoverage >= 80 ? "#22c55e" : (a.dataCoverage >= 40 ? "#f59e0b" : "#ef4444");
+    const safeNumber = (value) => Number.isFinite(Number(value)) ? Number(value) : 0;
+    const pct = (part, total) => total ? Math.round((part / total) * 100) : 0;
+
+    const statCard = (label, value, sub = "", accent = "#93c5fd") => `
+      <div class="wc-stat" style="min-height:106px;display:flex;flex-direction:column;justify-content:center;gap:6px;background:linear-gradient(145deg,rgba(255,255,255,.105),rgba(255,255,255,.042));border:1px solid rgba(255,255,255,.105);box-shadow:0 10px 30px rgba(0,0,0,.18);">
+        <strong style="font-size:2rem;line-height:1;color:${accent};">${this.esc(value)}</strong>
+        <span style="font-weight:900;">${this.esc(label)}</span>
+        ${sub ? `<small style="color:rgba(255,255,255,.60);line-height:1.35;">${this.esc(sub)}</small>` : ""}
+      </div>
+    `;
+
+    const chip = (label, value, accent = "#93c5fd") => `
+      <div style="display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 12px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);">
+        <span style="color:rgba(255,255,255,.68);font-weight:800;">${this.esc(label)}</span>
+        <strong style="color:${accent};font-size:1.05rem;">${this.esc(value)}</strong>
+      </div>
+    `;
+
+    const extractLineups = (match) => {
+      const candidates = [
+        match?.lineups,
+        match?.lineupsData,
+        match?.teamLineups,
+        match?.apiFootballLineups,
+        match?.matchLineups,
+        match?.matchDetails?.lineups,
+        match?.matchDetails?.lineupsData,
+        match?.details?.lineups,
+        match?.fixture?.lineups,
+      ];
+      for (const candidate of candidates) {
+        if (Array.isArray(candidate) && candidate.length) return candidate;
+        if (candidate && typeof candidate === "object") {
+          const values = Object.values(candidate).filter(Boolean);
+          if (values.length) return values;
+        }
+      }
+      return [];
+    };
+
+    const lineupTeamName = (lineup, fallback = "") => {
+      const team = lineup?.team || lineup?.teamName || lineup?.name || lineup?.side || fallback;
+      if (team && typeof team === "object") return team.name || team.shortName || team.tla || fallback;
+      return team || fallback;
+    };
+
+    const playerName = (player) => {
+      if (!player) return "";
+      if (typeof player === "string") return player;
+      return player.name || player.playerName || player.fullName || player?.player?.name || player?.athlete?.displayName || "";
+    };
+
+    const playerNumber = (player) => {
+      if (!player || typeof player === "string") return "";
+      return player.number || player.shirtNumber || player.jerseyNumber || player?.player?.number || "";
+    };
+
+    const playersFrom = (lineup, keys) => {
+      for (const key of keys) {
+        const value = lineup?.[key];
+        if (Array.isArray(value)) return value;
+        if (value && typeof value === "object" && Array.isArray(value.players)) return value.players;
+      }
+      return [];
+    };
+
+    const lineupMatches = [];
+    const formationMap = new Map();
+    const lineupTeamMap = new Map();
+    const starterMap = new Map();
+    const benchMap = new Map();
+
+    (a.matches || []).forEach((match) => {
+      const lineups = extractLineups(match);
+      if (!lineups.length) return;
+      lineupMatches.push(match);
+      lineups.forEach((lineup, index) => {
+        const fallbackTeam = index === 0 ? this.getHomeTeam(match) : this.getAwayTeam(match);
+        const team = this.localizedTeamName(lineupTeamName(lineup, fallbackTeam));
+        const formation = lineup?.formation || lineup?.system || lineup?.tacticalFormation || lineup?.shape || "Unknown";
+        const starters = playersFrom(lineup, ["startXI", "startingXI", "starters", "starting", "lineup", "players"]);
+        const bench = playersFrom(lineup, ["substitutes", "subs", "bench"]);
+        const key = `${this.fixtureTeamKey(team)}|${formation}`;
+        const teamKey = this.fixtureTeamKey(team);
+
+        formationMap.set(key, {
+          team,
+          formation,
+          count: (formationMap.get(key)?.count || 0) + 1,
+        });
+
+        lineupTeamMap.set(teamKey, {
+          team,
+          matches: (lineupTeamMap.get(teamKey)?.matches || 0) + 1,
+          starters: (lineupTeamMap.get(teamKey)?.starters || 0) + starters.length,
+          bench: (lineupTeamMap.get(teamKey)?.bench || 0) + bench.length,
+        });
+
+        starters.forEach((player) => {
+          const name = playerName(player);
+          if (!name) return;
+          const pkey = `${String(name).toLowerCase()}|${teamKey}`;
+          starterMap.set(pkey, {
+            player: name,
+            number: playerNumber(player),
+            team,
+            starts: (starterMap.get(pkey)?.starts || 0) + 1,
+          });
+        });
+
+        bench.forEach((player) => {
+          const name = playerName(player);
+          if (!name) return;
+          const pkey = `${String(name).toLowerCase()}|${teamKey}`;
+          benchMap.set(pkey, {
+            player: name,
+            number: playerNumber(player),
+            team,
+            bench: (benchMap.get(pkey)?.bench || 0) + 1,
+          });
+        });
+      });
+    });
+
+    const formationRows = Array.from(formationMap.values()).sort((x, y) => y.count - x.count || x.team.localeCompare(y.team)).slice(0, 10);
+    const lineupTeamRows = Array.from(lineupTeamMap.values()).sort((x, y) => y.matches - x.matches || x.team.localeCompare(y.team)).slice(0, 10);
+    const starterRows = Array.from(starterMap.values()).sort((x, y) => y.starts - x.starts || x.player.localeCompare(y.player)).slice(0, 10);
+    const benchRows = Array.from(benchMap.values()).sort((x, y) => y.bench - x.bench || x.player.localeCompare(y.player)).slice(0, 8);
+
+    const totalCards = safeNumber(a.yellowCards) + safeNumber(a.redCards);
+    const eventRate = a.finished.length ? (safeNumber(a.events) / a.finished.length).toFixed(1) : "0.0";
+    const cardsPerMatch = a.finished.length ? (totalCards / a.finished.length).toFixed(1) : "0.0";
+    const goalsPerMatch = a.goalsPerMatch || (a.finished.length ? (safeNumber(a.goals) / a.finished.length).toFixed(2) : "0.00");
+    const lineupCoverage = a.finished.length ? pct(lineupMatches.length, a.finished.length) : 0;
+
+    const teamSnapshotRows = (a.teamRows || []).slice(0, 10).map((row) => ({
+      ...row,
+      gdText: row.gd > 0 ? `+${row.gd}` : row.gd,
+      goalRate: row.played ? (safeNumber(row.gf) / row.played).toFixed(2) : "0.00",
+    }));
+
+    return `
+      <div class="wc-card" style="overflow:hidden;position:relative;background:radial-gradient(circle at top left,rgba(56,189,248,.22),transparent 34%),radial-gradient(circle at bottom right,rgba(250,204,21,.16),transparent 36%),linear-gradient(135deg,rgba(7,12,24,.97),rgba(10,18,35,.94));border:1px solid rgba(147,197,253,.18);">
+        <div style="position:absolute;inset:auto -80px -120px auto;width:260px;height:260px;border-radius:999px;background:rgba(59,130,246,.10);filter:blur(4px);"></div>
+        <div style="position:relative;display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap;">
+          <div>
+            <div style="font-size:.76rem;font-weight:1000;text-transform:uppercase;letter-spacing:.16em;color:#93c5fd;">Tournament Intelligence</div>
+            <div class="wc-section-title" style="font-size:1.7rem;margin-top:5px;">Stats Hub</div>
+            <p class="wc-muted" style="margin:7px 0 0;max-width:760px;line-height:1.5;">A proper tournament stats centre built from results, timelines, cards, substitutions, VAR, referees, player involvement and team lineups already loaded into the integration.</p>
+          </div>
+          <div style="display:grid;grid-template-columns:repeat(2,minmax(110px,1fr));gap:10px;min-width:260px;">
+            <div style="text-align:center;padding:13px;border-radius:18px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.10);">
+              <div style="font-size:2rem;font-weight:1000;color:${eventColour};">${a.dataCoverage}%</div>
+              <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.68);">Event Coverage</div>
+            </div>
+            <div style="text-align:center;padding:13px;border-radius:18px;background:rgba(0,0,0,.24);border:1px solid rgba(255,255,255,.10);">
+              <div style="font-size:2rem;font-weight:1000;color:#fde68a;">${lineupCoverage}%</div>
+              <div style="font-size:.72rem;text-transform:uppercase;letter-spacing:.08em;color:rgba(255,255,255,.68);">Lineup Coverage</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="wc-grid">
+        ${statCard(this.t("matchesPlayed"), a.finished.length, `${a.live.length} live • ${a.scheduled} upcoming`, "#93c5fd")}
+        ${statCard(this.t("totalGoals"), a.goals, `${goalsPerMatch} goals per match`, "#86efac")}
+        ${statCard("Assists", a.assists, "from match timelines", "#c4b5fd")}
+        ${statCard("PEN", a.penalties, `${a.missedPens} missed pens`, "#fde68a")}
+        ${statCard("OG", a.ownGoals, "own goals", "#fca5a5")}
+        ${statCard("VAR", a.varEvents, "video reviews", "#67e8f9")}
+        ${statCard("Yellow Cards", a.yellowCards, `${a.redCards} red cards`, "#facc15")}
+        ${statCard("Substitutions", a.substitutions, "recorded changes", "#a7f3d0")}
+        ${statCard("Lineups", lineupMatches.length, `${formationRows.length} formations tracked`, "#f0abfc")}
+        ${statCard("Referees", a.refs, "officials tracked", "#fdba74")}
+        ${statCard("Events / Match", eventRate, `${a.events} timeline events`, "#93c5fd")}
+        ${statCard("Cards / Match", cardsPerMatch, `${totalCards} total cards`, "#fbbf24")}
+      </div>
+
+      <div class="wc-two">
+        <div class="wc-card" style="background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.04));">
+          <div class="wc-section-title">📊 Tournament Rates</div>
+          <div style="display:grid;gap:10px;">
+            ${chip("Progress", `${a.progress}%`, "#93c5fd")}
+            ${chip("BTTS", `${a.bttsRate}%`, "#86efac")}
+            ${chip("Over 2.5 Goals", `${a.over25Rate}%`, "#fde68a")}
+            ${chip("Draw Rate", `${a.drawRate}%`, "#c4b5fd")}
+          </div>
+        </div>
+
+        <div class="wc-card" style="background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.04));">
+          <div class="wc-section-title">📡 Data Health</div>
+          <div style="display:grid;gap:12px;">
+            <div>
+              <div style="display:flex;justify-content:space-between;font-weight:900;margin-bottom:6px;"><span>Event timelines</span><span>${a.dataCoverage}%</span></div>
+              <div style="height:13px;border-radius:999px;background:rgba(255,255,255,.10);overflow:hidden;"><div style="height:100%;width:${Math.max(0, Math.min(100, a.dataCoverage))}%;background:${eventColour};border-radius:999px;"></div></div>
+            </div>
+            <div>
+              <div style="display:flex;justify-content:space-between;font-weight:900;margin-bottom:6px;"><span>Lineups</span><span>${lineupCoverage}%</span></div>
+              <div style="height:13px;border-radius:999px;background:rgba(255,255,255,.10);overflow:hidden;"><div style="height:100%;width:${Math.max(0, Math.min(100, lineupCoverage))}%;background:#fde68a;border-radius:999px;"></div></div>
+            </div>
+            <p class="wc-muted" style="margin:0;line-height:1.45;">Stats Hub only uses data already loaded into the panel. This page does not trigger extra API pulls.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="wc-two">
+        <div class="wc-card">
+          <div class="wc-section-title">⚽ Team Performance</div>
+          ${this.statsMiniTable(teamSnapshotRows, [
+            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
+            { label: "P", key: "played", align: "center" },
+            { label: "GF", key: "gf", align: "center" },
+            { label: "GA", key: "ga", align: "center" },
+            { label: "GD", key: "gdText", align: "center" },
+            { label: "G/M", key: "goalRate", align: "center" },
+            { label: "CS", key: "cleanSheets", align: "center" },
+          ], "No team stats yet")}
+        </div>
+
+        <div class="wc-card">
+          <div class="wc-section-title">🧠 Team Event Leaders</div>
+          ${this.statsMiniTable((a.eventLeaderRows || []).slice(0, 10), [
+            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
+            { label: "Events", key: "eventCount", align: "center" },
+            { label: "Goals", key: "goals", align: "center" },
+            { label: "Ast", key: "assists", align: "center" },
+            { label: "PEN", key: "penalties", align: "center" },
+            { label: "VAR", key: "varEvents", align: "center" },
+          ], "No event data yet")}
+        </div>
+      </div>
+
+      <div class="wc-two">
+        <div class="wc-card">
+          <div class="wc-section-title">🧩 Lineups & Formations</div>
+          ${this.statsMiniTable(formationRows, [
+            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
+            { label: "Formation", render: (row) => `<strong>${this.esc(row.formation)}</strong>`, align: "center" },
+            { label: "Used", key: "count", align: "center" },
+          ], "No lineup data loaded yet")}
+        </div>
+
+        <div class="wc-card">
+          <div class="wc-section-title">👥 Squad Usage</div>
+          ${this.statsMiniTable(lineupTeamRows, [
+            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
+            { label: "Lineups", key: "matches", align: "center" },
+            { label: "Starters", key: "starters", align: "center" },
+            { label: "Bench", key: "bench", align: "center" },
+          ], "No squad usage data yet")}
+        </div>
+      </div>
+
+      <div class="wc-two">
+        <div class="wc-card">
+          <div class="wc-section-title">⭐ Player Starts</div>
+          ${this.statsMiniTable(starterRows, [
+            { label: "Player", render: (row) => `<strong>${row.number ? `${this.esc(row.number)} ` : ""}${this.esc(row.player)}</strong><div class="wc-muted">${this.flag(row.team, true)} ${this.esc(row.team)}</div>` },
+            { label: "Starts", key: "starts", align: "center" },
+          ], "No starting XI data yet")}
+        </div>
+
+        <div class="wc-card">
+          <div class="wc-section-title">🪑 Bench Watch</div>
+          ${this.statsMiniTable(benchRows, [
+            { label: "Player", render: (row) => `<strong>${row.number ? `${this.esc(row.number)} ` : ""}${this.esc(row.player)}</strong><div class="wc-muted">${this.flag(row.team, true)} ${this.esc(row.team)}</div>` },
+            { label: "Bench", key: "bench", align: "center" },
+          ], "No bench data yet")}
+        </div>
+      </div>
+
+      <div class="wc-two">
+        <div class="wc-card">
+          <div class="wc-section-title">🟨 Discipline Centre</div>
+          ${this.statsMiniTable((a.disciplineRows || []).slice(0, 12), [
+            { label: "Team", render: (row) => `${this.flag(row.team, true)} <strong>${this.esc(row.team)}</strong>` },
+            { label: "Cards", key: "cards", align: "center" },
+            { label: "Yellow", key: "yellowCards", align: "center" },
+            { label: "Red", key: "redCards", align: "center" },
+            { label: "Subs", key: "substitutions", align: "center" },
+          ], "No discipline data yet")}
+        </div>
+
+        <div class="wc-card">
+          <div class="wc-section-title">⭐ Player Event Watch</div>
+          ${this.statsMiniTable(a.topPlayers, [
+            { label: "Player", render: (row) => `<strong>${this.esc(row.player)}</strong><div class="wc-muted">${this.flag(row.team, true)} ${this.esc(row.team || "")}</div>` },
+            { label: "G", key: "goals", align: "center" },
+            { label: "A", key: "assists", align: "center" },
+            { label: "PEN", key: "penalties", align: "center" },
+            { label: "Cards", key: "cards", align: "center" },
+          ], "No player event data yet")}
+        </div>
+      </div>
+
+      <div class="wc-two">
+        <div class="wc-card">
+          <div class="wc-section-title">🧑‍⚖️ Referee Stats</div>
+          ${this.statsMiniTable(a.refereeRows, [
+            { label: "Official", render: (row) => `<strong>${this.esc(row.name || "Unknown")}</strong><div class="wc-muted">${this.esc(row.nationality || row.country || "")}</div>` },
+            { label: "Matches", key: "matches", align: "center" },
+          ], "No referee data yet")}
+        </div>
+
+        <div class="wc-card">
+          <div class="wc-section-title">🔥 Match Records</div>
+          <div style="display:grid;gap:12px;">
+            <div style="padding:12px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);">
+              <div class="wc-muted" style="font-weight:900;margin-bottom:8px;">Highest scoring match</div>
+              ${a.highestScoringMatch ? this.matchRow(a.highestScoringMatch) : `<div class="wc-empty">${this.t("noResult")}</div>`}
+            </div>
+            <div style="padding:12px;border-radius:14px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08);">
+              <div class="wc-muted" style="font-weight:900;margin-bottom:8px;">Biggest win</div>
+              ${a.biggestWin ? this.matchRow(a.biggestWin) : `<div class="wc-empty">${this.t("noResult")}</div>`}
+            </div>
+          </div>
         </div>
       </div>
     `;
@@ -19878,20 +21665,30 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   pageContent() {
-    if (this._page === "overview") return this.overviewPage();
-    if (this._page === "live") return this.livePage();
-    if (this._page === "fixtures") return this.fixturesPage();
-    if (this._page === "results") return this.resultsPage();
-    if (this._page === "apiresults") { this._page = "results"; return this.resultsPage(); }
-    if (this._page === "groups") return this.groupsPage();
-    if (this._page === "knockout") return this.knockoutPage();
-    if (this._page === "players") return this.playersPage();
-    if (this._page === "records") return this.recordsPage();
-    if (this._page === "stats") return this.statsPage();
-    if (this._page === "teams") return this.teamsPage();
-    if (this._page === "venues") return this.venuesPage();
-    if (this._page === "supporters") return this.supportersPage();
-    return this.overviewPage();
+    const requestedPage = this._page;
+    try {
+      if (this._page === "overview") return this.overviewPage();
+      if (this._page === "live") return this.livePage();
+      if (this._page === "fixtures") return this.fixturesPage();
+      if (this._page === "results") return this.resultsPage();
+      if (this._page === "apiresults") { this._page = "results"; return this.resultsPage(); }
+      if (this._page === "groups") return this.groupsPage();
+      if (this._page === "knockout") return this.knockoutPage();
+      if (this._page === "players") return this.playersPage();
+      if (this._page === "records") return this.recordsPage();
+      if (this._page === "stats") return this.statsPage();
+      if (this._page === "teams") return this.teamsPage();
+      if (this._page === "venues") return this.venuesPage();
+      if (this._page === "supporters") return this.supportersPage();
+      return this.overviewPage();
+    } catch (err) {
+      try { localStorage.removeItem("world_cup_2026_last_page"); } catch (e) {}
+      this._page = "overview";
+      return `
+        ${this.errorCard(err, "Page recovered", `The ${requestedPage || "selected"} page had a problem, so the dashboard has been returned to Overview.`)}
+        ${this.overviewPage()}
+      `;
+    }
   }
 
   render() {
@@ -19921,6 +21718,7 @@ class WorldCup2026Panel extends HTMLElement {
                   <option value="ar" ${this._language === "ar" ? "selected" : ""}>Arabic</option>
                 </select>
                 <select class="wc-view-select wc-view-select-tablet" id="wc-view-select-tablet" title="${this.esc(this.t("viewMode"))}">
+                  <option value="mobile" ${this._viewMode === "mobile" ? "selected" : ""}>${this.esc(this.t("mobileView"))}</option>
                   <option value="tablet" ${this._viewMode === "tablet" ? "selected" : ""}>${this.esc(this.t("tabletView"))}</option>
                   <option value="pc" ${this._viewMode === "pc" ? "selected" : ""}>${this.esc(this.t("pcView"))}</option>
                 </select>
@@ -19991,6 +21789,13 @@ class WorldCup2026Panel extends HTMLElement {
         e.preventDefault();
         e.stopPropagation();
         this.goBackToHomeAssistant();
+      };
+    });
+
+    this.querySelectorAll("#wc-reset-panel-button, .wc-reset-panel-button").forEach((resetButton) => {
+      resetButton.onclick = (e) => {
+        e.preventDefault();
+        this.resetPanelView();
       };
     });
   }
