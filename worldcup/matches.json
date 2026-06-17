@@ -8857,7 +8857,7 @@
         "shortName": "Croatia",
         "tla": "CRO"
       },
-      "clockSeconds": 540,
+      "clockSeconds": 600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -8866,9 +8866,55 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "9'",
-      "fallbackClock": 540,
-      "fallbackClockText": "9'",
+      "displayMinute": "10'",
+      "events": [
+        {
+          "assist": "H. Kane",
+          "comments": null,
+          "detail": "Missed Penalty",
+          "displayMinute": "10'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 10,
+          "player": "H. Kane",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "England",
+          "timer": "10:00",
+          "timerSeconds": 600,
+          "type": "Penalty"
+        }
+      ],
+      "fallbackClock": 600,
+      "fallbackClockText": "10'",
+      "goalEvents": [
+        {
+          "assist": "H. Kane",
+          "awayTeam": "Croatia",
+          "comments": null,
+          "detail": "Missed Penalty",
+          "displayMinute": "10'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "England",
+          "isDisallowed": false,
+          "matchId": 537409,
+          "matchUtcDate": "2026-06-17T20:00:00Z",
+          "minute": 10,
+          "player": "H. Kane",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "England",
+          "timer": "10:00",
+          "timerSeconds": 600,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_L",
       "homeCorners": 0,
       "homeFouls": 0,
@@ -8884,8 +8930,8 @@
         "tla": "ENG"
       },
       "id": 537409,
-      "lastApiSync": "2026-06-17T20:09:30.969915+00:00",
-      "lastUpdated": "2026-06-17T22:09:28Z",
+      "lastApiSync": "2026-06-17T20:09:56.322735+00:00",
+      "lastUpdated": "2026-06-17T22:09:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -8913,14 +8959,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "9'",
-        "lastApiSync": "2026-06-17T20:09:30.969915+00:00",
-        "seconds": 540,
+        "displayMinute": "10'",
+        "lastApiSync": "2026-06-17T20:09:56.322735+00:00",
+        "seconds": 600,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "9'"
+        "timer": "10'"
       },
-      "manualClockText": "9'",
+      "manualClockText": "10'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "cloudCoverage": 17.2,
@@ -8940,7 +8986,7 @@
         "windSpeedUnit": "mph"
       },
       "matchday": 1,
-      "minute": 9,
+      "minute": 10,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
