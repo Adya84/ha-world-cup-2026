@@ -6670,7 +6670,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T03:19:25Z",
+      "lastUpdated": "2026-06-17T03:19:52Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6689,11 +6689,11 @@
         "winner": "DRAW",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         },
         "halfTime": {
-          "home": 0,
+          "home": 1,
           "away": 0
         }
       },
@@ -6712,7 +6712,7 @@
       "displayMinute": "17'",
       "manualClockText": "17'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T01:19:27.740637+00:00",
+      "lastApiSync": "2026-06-17T01:19:54.452943+00:00",
       "manualClock": {
         "seconds": 1020,
         "timer": "17'",
@@ -6720,9 +6720,9 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T01:19:27.740637+00:00"
+        "lastApiSync": "2026-06-17T01:19:54.452943+00:00"
       },
-      "homeScore": 0,
+      "homeScore": 1,
       "awayScore": 0,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
@@ -6751,8 +6751,8 @@
       ],
       "events": [
         {
-          "type": "Goal",
-          "rawType": "Goal",
+          "type": "VAR",
+          "rawType": "Var",
           "team": "Algeria",
           "player": "F. Chaibi",
           "minute": 8,
@@ -6760,9 +6760,24 @@
           "displayMinute": "8'",
           "timer": "8:00",
           "timerSeconds": 480,
+          "detail": "Goal Disallowed - offside",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Argentina",
+          "player": null,
+          "minute": 17,
+          "extra": null,
+          "displayMinute": "17'",
+          "timer": "17:00",
+          "timerSeconds": 1020,
           "detail": "Normal Goal",
           "comments": null,
-          "assist": "I. Maza",
+          "assist": null,
           "source": "api_football"
         }
       ],
