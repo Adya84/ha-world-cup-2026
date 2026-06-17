@@ -8314,7 +8314,7 @@
   },
   "537403": {
     "apiFootballFixtureId": 1539003,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Congo DR",
     "base_seconds": 2700,
     "cardEvents": [
@@ -8412,6 +8412,24 @@
         "timer": "32:00",
         "timerSeconds": 1920,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "A. Masuaku",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "45+5'",
+        "extra": 5,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "Y. Wissa",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Congo DR",
+        "timer": "50:00",
+        "timerSeconds": 3000,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -8437,13 +8455,36 @@
         "timer": "6:00",
         "timerSeconds": 360,
         "type": "Goal"
+      },
+      {
+        "assist": "A. Masuaku",
+        "awayTeam": "Congo DR",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "45+5'",
+        "extra": 5,
+        "goalNumber": 2,
+        "homeTeam": "Portugal",
+        "isDisallowed": false,
+        "matchId": 537403,
+        "matchUtcDate": "2026-06-17T17:00:00Z",
+        "minute": 45,
+        "player": "Y. Wissa",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Congo DR",
+        "timer": "50:00",
+        "timerSeconds": 3000,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "Portugal",
-    "lastApiSync": "2026-06-17T17:51:16.645169+00:00",
+    "lastApiSync": "2026-06-17T17:51:41.809867+00:00",
     "manualClockText": "45'",
-    "phase_start": "2026-06-17T17:51:16.645169+00:00",
+    "phase_start": "2026-06-17T17:51:41.809867+00:00",
     "referees": [
       {
         "name": "Abdulrahman Al-Jassim, Qatar",
