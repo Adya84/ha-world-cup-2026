@@ -7755,7 +7755,7 @@
   "537403": {
     "goalEvents": [],
     "clock_active": false,
-    "status": "IN_PLAY",
+    "status": "1H",
     "homeScore": 0,
     "awayScore": 0,
     "utcDate": "2026-06-17T17:00:00Z",
@@ -7763,14 +7763,18 @@
     "awayTeam": "Congo DR",
     "referees": [
       {
-        "id": 236084,
-        "name": "Abdulrahman Al Jassim",
-        "type": "REFEREE",
-        "nationality": "Qatar"
+        "name": "Abdulrahman Al-Jassim, Qatar",
+        "type": "REFEREE"
       }
     ],
-    "phase_start": null,
-    "source": "awaiting_api_football_minute"
+    "phase_start": "2026-06-17T17:02:16.755422+00:00",
+    "source": "api_football_live_minute",
+    "base_seconds": 60,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
+    "manualClockText": "1'",
+    "lastApiSync": "2026-06-17T17:02:16.755422+00:00",
+    "apiFootballFixtureId": 1539003
   },
   "537409": {
     "goalEvents": [],
