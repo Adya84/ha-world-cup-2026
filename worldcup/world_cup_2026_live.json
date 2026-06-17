@@ -1,4 +1,534 @@
 {
-  "matches": [],
-  "live": []
+  "matches": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537398,
+      "utcDate": "2026-06-17T04:00:00Z",
+      "status": "1H",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_J",
+      "lastUpdated": "2026-06-17T06:30:28Z",
+      "homeTeam": {
+        "id": 816,
+        "name": "Austria",
+        "shortName": "Austria",
+        "tla": "AUT",
+        "crest": "https://crests.football-data.org/816.svg"
+      },
+      "awayTeam": {
+        "id": 8049,
+        "name": "Jordan",
+        "shortName": "Jordan",
+        "tla": "JOR",
+        "crest": "https://crests.football-data.org/8049.png"
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 1,
+          "away": 0
+        },
+        "halfTime": {
+          "home": 1,
+          "away": 0
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "name": "Dahane Beida, Mauritania",
+          "type": "REFEREE"
+        }
+      ],
+      "liveSource": "api_football",
+      "minute": 28,
+      "clockSeconds": 1680,
+      "displayMinute": "28'",
+      "manualClockText": "28'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-17T04:30:31.549463+00:00",
+      "manualClock": {
+        "seconds": 1680,
+        "timer": "28'",
+        "displayMinute": "28'",
+        "active": false,
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-17T04:30:31.549463+00:00"
+      },
+      "homeScore": 1,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "goalEvents": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Austria",
+          "player": "Romano Schmid",
+          "minute": 20,
+          "extra": null,
+          "displayMinute": "20'",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "Xaver Schlager",
+          "source": "api_football",
+          "matchId": 537398,
+          "matchUtcDate": "2026-06-17T04:00:00Z",
+          "homeTeam": "Austria",
+          "awayTeam": "Jordan",
+          "goalNumber": 1
+        }
+      ],
+      "events": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Austria",
+          "player": "Romano Schmid",
+          "minute": 20,
+          "extra": null,
+          "displayMinute": "20'",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "Xaver Schlager",
+          "source": "api_football"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
+      "liveStatistics": {
+        "home": {
+          "team": "Austria",
+          "statistics": [
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Free Kicks",
+              "value": 1
+            },
+            {
+              "type": "Shots on Goal",
+              "value": 1
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 2
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 1
+            },
+            {
+              "type": "Offsides",
+              "value": 2
+            },
+            {
+              "type": "Total Shots",
+              "value": 3
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 1
+            },
+            {
+              "type": "Fouls",
+              "value": 3
+            },
+            {
+              "type": "Red Cards",
+              "value": 0
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 0
+            },
+            {
+              "type": "Ball Possession",
+              "value": "73%"
+            }
+          ],
+          "corners": 1,
+          "shotsOnGoal": 1,
+          "shotsOffGoal": 1,
+          "totalShots": 3,
+          "possession": "73%",
+          "fouls": 3,
+          "offsides": 2,
+          "yellowCards": 0,
+          "redCards": 0
+        },
+        "away": {
+          "team": "Jordan",
+          "statistics": [
+            {
+              "type": "Blocked Shots",
+              "value": 0
+            },
+            {
+              "type": "Free Kicks",
+              "value": 2
+            },
+            {
+              "type": "Shots on Goal",
+              "value": 2
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 2
+            },
+            {
+              "type": "Offsides",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 4
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Fouls",
+              "value": 1
+            },
+            {
+              "type": "Red Cards",
+              "value": 0
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 0
+            },
+            {
+              "type": "Ball Possession",
+              "value": "27%"
+            }
+          ],
+          "corners": 2,
+          "shotsOnGoal": 2,
+          "shotsOffGoal": 2,
+          "totalShots": 4,
+          "possession": "27%",
+          "fouls": 1,
+          "offsides": 0,
+          "yellowCards": 0,
+          "redCards": 0
+        }
+      },
+      "homeCorners": 1,
+      "awayCorners": 2,
+      "homeShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
+      "homePossession": "73%",
+      "awayPossession": "27%",
+      "homeFouls": 3,
+      "awayFouls": 1,
+      "homeOffsides": 2,
+      "awayOffsides": 0,
+      "apiFootballFixtureId": 1489382,
+      "fallbackClock": 1680,
+      "fallbackClockText": "28'"
+    }
+  ],
+  "live": [
+    {
+      "area": {
+        "id": 2267,
+        "name": "World",
+        "code": "INT",
+        "flag": null
+      },
+      "competition": {
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "code": "WC",
+        "type": "CUP",
+        "emblem": "https://crests.football-data.org/wm26.png"
+      },
+      "season": {
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "endDate": "2026-07-19",
+        "currentMatchday": 1,
+        "winner": null
+      },
+      "id": 537398,
+      "utcDate": "2026-06-17T04:00:00Z",
+      "status": "1H",
+      "matchday": 1,
+      "stage": "GROUP_STAGE",
+      "group": "GROUP_J",
+      "lastUpdated": "2026-06-17T06:30:28Z",
+      "homeTeam": {
+        "id": 816,
+        "name": "Austria",
+        "shortName": "Austria",
+        "tla": "AUT",
+        "crest": "https://crests.football-data.org/816.svg"
+      },
+      "awayTeam": {
+        "id": 8049,
+        "name": "Jordan",
+        "shortName": "Jordan",
+        "tla": "JOR",
+        "crest": "https://crests.football-data.org/8049.png"
+      },
+      "score": {
+        "winner": "HOME_TEAM",
+        "duration": "REGULAR",
+        "fullTime": {
+          "home": 1,
+          "away": 0
+        },
+        "halfTime": {
+          "home": 1,
+          "away": 0
+        }
+      },
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "name": "Dahane Beida, Mauritania",
+          "type": "REFEREE"
+        }
+      ],
+      "liveSource": "api_football",
+      "minute": 28,
+      "clockSeconds": 1680,
+      "displayMinute": "28'",
+      "manualClockText": "28'",
+      "clockSource": "api_football_live_minute",
+      "lastApiSync": "2026-06-17T04:30:31.549463+00:00",
+      "manualClock": {
+        "seconds": 1680,
+        "timer": "28'",
+        "displayMinute": "28'",
+        "active": false,
+        "status": "1H",
+        "source": "api_football_live_minute",
+        "lastApiSync": "2026-06-17T04:30:31.549463+00:00"
+      },
+      "homeScore": 1,
+      "awayScore": 0,
+      "scoreSource": "api_football_live",
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "goalEvents": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Austria",
+          "player": "Romano Schmid",
+          "minute": 20,
+          "extra": null,
+          "displayMinute": "20'",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "Xaver Schlager",
+          "source": "api_football",
+          "matchId": 537398,
+          "matchUtcDate": "2026-06-17T04:00:00Z",
+          "homeTeam": "Austria",
+          "awayTeam": "Jordan",
+          "goalNumber": 1
+        }
+      ],
+      "events": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Austria",
+          "player": "Romano Schmid",
+          "minute": 20,
+          "extra": null,
+          "displayMinute": "20'",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": "Xaver Schlager",
+          "source": "api_football"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
+      "liveStatistics": {
+        "home": {
+          "team": "Austria",
+          "statistics": [
+            {
+              "type": "Blocked Shots",
+              "value": 1
+            },
+            {
+              "type": "Free Kicks",
+              "value": 1
+            },
+            {
+              "type": "Shots on Goal",
+              "value": 1
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 2
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 1
+            },
+            {
+              "type": "Offsides",
+              "value": 2
+            },
+            {
+              "type": "Total Shots",
+              "value": 3
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 1
+            },
+            {
+              "type": "Fouls",
+              "value": 3
+            },
+            {
+              "type": "Red Cards",
+              "value": 0
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 0
+            },
+            {
+              "type": "Ball Possession",
+              "value": "73%"
+            }
+          ],
+          "corners": 1,
+          "shotsOnGoal": 1,
+          "shotsOffGoal": 1,
+          "totalShots": 3,
+          "possession": "73%",
+          "fouls": 3,
+          "offsides": 2,
+          "yellowCards": 0,
+          "redCards": 0
+        },
+        "away": {
+          "team": "Jordan",
+          "statistics": [
+            {
+              "type": "Blocked Shots",
+              "value": 0
+            },
+            {
+              "type": "Free Kicks",
+              "value": 2
+            },
+            {
+              "type": "Shots on Goal",
+              "value": 2
+            },
+            {
+              "type": "Goalkeeper Saves",
+              "value": 0
+            },
+            {
+              "type": "Shots off Goal",
+              "value": 2
+            },
+            {
+              "type": "Offsides",
+              "value": 0
+            },
+            {
+              "type": "Total Shots",
+              "value": 4
+            },
+            {
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Fouls",
+              "value": 1
+            },
+            {
+              "type": "Red Cards",
+              "value": 0
+            },
+            {
+              "type": "Yellow Cards",
+              "value": 0
+            },
+            {
+              "type": "Ball Possession",
+              "value": "27%"
+            }
+          ],
+          "corners": 2,
+          "shotsOnGoal": 2,
+          "shotsOffGoal": 2,
+          "totalShots": 4,
+          "possession": "27%",
+          "fouls": 1,
+          "offsides": 0,
+          "yellowCards": 0,
+          "redCards": 0
+        }
+      },
+      "homeCorners": 1,
+      "awayCorners": 2,
+      "homeShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
+      "homePossession": "73%",
+      "awayPossession": "27%",
+      "homeFouls": 3,
+      "awayFouls": 1,
+      "homeOffsides": 2,
+      "awayOffsides": 0,
+      "apiFootballFixtureId": 1489382,
+      "fallbackClock": 1680,
+      "fallbackClockText": "28'"
+    }
+  ]
 }
