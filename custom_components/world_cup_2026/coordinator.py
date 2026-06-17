@@ -5,6 +5,7 @@ from __future__ import annotations
 from datetime import timedelta, datetime, timezone
 import asyncio
 import base64
+import hashlib
 import json
 import logging
 from pathlib import Path
@@ -730,6 +731,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         self._live_statistics_last_fetch_by_fixture = {}
         self._goal_event_store = {}
         self._goal_event_store_loaded = False
+        self._github_payload_hashes = {}
 
     def _api_football_is_rate_limited(self):
         """Return True while API-Football is in rate-limit cool-down."""
@@ -894,6 +896,42 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 "source": "awaiting_api_football_minute",
                 "lastApiSync": None,
             }
+        return matches
+
+    def _home_weather_snapshot(self):
+        """Read the local HA weather entity without modifying it."""
+        state = self.hass.states.get("weather.forecast_home")
+        if not state:
+            return None
+        attrs = state.attributes or {}
+        return {
+            "entityId": "weather.forecast_home",
+            "name": attrs.get("friendly_name") or state.name or "Forecast Home",
+            "condition": state.state,
+            "temperature": attrs.get("temperature"),
+            "temperatureUnit": attrs.get("temperature_unit"),
+            "humidity": attrs.get("humidity"),
+            "cloudCoverage": attrs.get("cloud_coverage"),
+            "uvIndex": attrs.get("uv_index"),
+            "pressure": attrs.get("pressure"),
+            "pressureUnit": attrs.get("pressure_unit"),
+            "windBearing": attrs.get("wind_bearing"),
+            "windSpeed": attrs.get("wind_speed"),
+            "windSpeedUnit": attrs.get("wind_speed_unit"),
+            "dewPoint": attrs.get("dew_point"),
+            "attribution": attrs.get("attribution"),
+            "source": "home_assistant",
+        }
+
+    def _add_home_weather_to_live_matches(self, matches):
+        """Attach local home weather to live/pre-live matches for display/export."""
+        weather = self._home_weather_snapshot()
+        if not weather:
+            return matches
+        for match in matches or []:
+            if str(match.get("status") or "").upper() in LIVE_STATUSES:
+                match["weather"] = weather
+                match["matchWeather"] = weather
         return matches
 
     def _choose_poll_interval(self, matches):
@@ -1343,7 +1381,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         """Read GitHub sync settings from /config/secrets.yaml off the event loop.
 
         Expected entries:
-        github_token: "github_pat_..."
+        github_token: "your GitHub token"
         github_repo: "Adya84/ha-world-cup-2026"
         github_branch: "main"   # optional
         """
@@ -1429,6 +1467,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 "awayOffsides": public_match.get("awayOffsides"),
                 "lineups": public_match.get("lineups") or public_match.get("lineupsData") or public_match.get("teamLineups") or [],
                 "lineupsData": public_match.get("lineupsData") or public_match.get("lineups") or public_match.get("teamLineups") or [],
+                "weather": public_match.get("weather") or public_match.get("matchWeather") or {},
             }
             results.append(public_match)
 
@@ -1502,7 +1541,12 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
     async def _github_upload_file(self, session, repo, branch, filename, payload, headers):
         """Upload one JSON file to GitHub."""
-        raw_content = json.dumps(payload, indent=2)
+        raw_content = json.dumps(payload, indent=2, sort_keys=True)
+        payload_hash = hashlib.sha256(raw_content.encode("utf-8")).hexdigest()
+        cache_key = f"{repo}:{branch}:{filename}"
+        if self._github_payload_hashes.get(cache_key) == payload_hash:
+            return False
+
         encoded_content = base64.b64encode(raw_content.encode("utf-8")).decode("utf-8")
         url = f"https://api.github.com/repos/{repo}/contents/{filename}"
 
@@ -1523,6 +1567,8 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 raise UpdateFailed(
                     f"GitHub upload failed for {filename}: {response.status} {text}"
                 )
+        self._github_payload_hashes[cache_key] = payload_hash
+        return True
 
     async def _async_read_github_settings(self):
         """Read GitHub/API keys without blocking Home Assistant."""
@@ -1552,20 +1598,36 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             "X-GitHub-Api-Version": "2022-11-28",
         }
 
+        live_first = [
+            "world_cup_2026_live.json",
+            "worldcup/world_cup_2026_live.json",
+            "world_cup_2026_goal_events.json",
+            "worldcup/world_cup_2026_goal_events.json",
+            "matches.json",
+            "worldcup/matches.json",
+        ]
+        ordered_filenames = [
+            *[filename for filename in live_first if filename in files],
+            *[filename for filename in files if filename not in live_first],
+        ]
+
         timeout = aiohttp.ClientTimeout(total=30)
+        uploaded_count = 0
 
         async with aiohttp.ClientSession(timeout=timeout) as session:
-            for filename, payload in files.items():
-                await self._github_upload_file(
+            for filename in ordered_filenames:
+                uploaded = await self._github_upload_file(
                     session,
                     repo,
                     branch,
                     filename,
-                    payload,
+                    files[filename],
                     headers,
                 )
+                if uploaded:
+                    uploaded_count += 1
 
-        _LOGGER.info("World Cup public JSON synced to GitHub repo %s", repo)
+        _LOGGER.info("World Cup public JSON synced to GitHub repo %s (%s files changed)", repo, uploaded_count)
 
 
     def _add_football_data_live_fields_to_matches(self, matches):
@@ -2482,6 +2544,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         matches = self._add_football_data_live_fields_to_matches(matches)
         matches = await self._add_live_api_football_data_to_matches(matches)
         matches = self._promote_near_kickoff_matches_to_live(matches)
+        matches = self._add_home_weather_to_live_matches(matches)
 
         # While any match is live/HT/ET, keep the coordinator focused on the
         # lightweight live endpoint. Heavy post-match date/event lookups can hit
