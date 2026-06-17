@@ -6392,7 +6392,7 @@
     ],
     "clock_active": false,
     "status": "2H",
-    "homeScore": 1,
+    "homeScore": 2,
     "awayScore": 1,
     "utcDate": "2026-06-17T04:00:00Z",
     "homeTeam": "Austria",
@@ -6403,13 +6403,13 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 4020,
-    "clock_seconds": 4020,
-    "phase_start": "2026-06-17T05:32:03.667901+00:00",
+    "base_seconds": 4080,
+    "clock_seconds": 4080,
+    "phase_start": "2026-06-17T05:32:31.458999+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "67'",
-    "manualClockText": "67'",
-    "lastApiSync": "2026-06-17T05:32:03.667901+00:00",
+    "displayMinute": "68'",
+    "manualClockText": "68'",
+    "lastApiSync": "2026-06-17T05:32:31.458999+00:00",
     "events": [
       {
         "type": "Goal",
@@ -6499,6 +6499,21 @@
         "detail": "Substitution 4",
         "comments": null,
         "assist": "P. Wanner",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Austria",
+        "player": null,
+        "minute": 68,
+        "extra": null,
+        "displayMinute": "68'",
+        "timer": "68:00",
+        "timerSeconds": 4080,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
         "source": "api_football"
       }
     ],
