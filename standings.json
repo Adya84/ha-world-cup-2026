@@ -835,14 +835,33 @@
       "stage": "ALL",
       "table": [
         {
-          "draw": 0,
+          "draw": 1,
           "form": null,
-          "goalDifference": 1,
-          "goalsAgainst": 0,
+          "goalDifference": 0,
+          "goalsAgainst": 1,
           "goalsFor": 1,
           "lost": 0,
           "playedGames": 1,
-          "points": 3,
+          "points": 1,
+          "position": 1,
+          "team": {
+            "crest": "https://crests.football-data.org/congo_dr.svg",
+            "id": 1934,
+            "name": "Congo DR",
+            "shortName": "Congo DR",
+            "tla": "COD"
+          },
+          "won": 0
+        },
+        {
+          "draw": 1,
+          "form": null,
+          "goalDifference": 0,
+          "goalsAgainst": 1,
+          "goalsFor": 1,
+          "lost": 0,
+          "playedGames": 1,
+          "points": 1,
           "position": 1,
           "team": {
             "crest": "https://crests.football-data.org/765.svg",
@@ -851,7 +870,7 @@
             "shortName": "Portugal",
             "tla": "POR"
           },
-          "won": 1
+          "won": 0
         },
         {
           "draw": 0,
@@ -862,7 +881,7 @@
           "lost": 0,
           "playedGames": 0,
           "points": 0,
-          "position": 2,
+          "position": 3,
           "team": {
             "crest": "https://crests.football-data.org/818.svg",
             "id": 818,
@@ -881,32 +900,13 @@
           "lost": 0,
           "playedGames": 0,
           "points": 0,
-          "position": 2,
+          "position": 3,
           "team": {
             "crest": "https://crests.football-data.org/8070.png",
             "id": 8070,
             "name": "Uzbekistan",
             "shortName": "Uzbekistan",
             "tla": "UZB"
-          },
-          "won": 0
-        },
-        {
-          "draw": 0,
-          "form": null,
-          "goalDifference": -1,
-          "goalsAgainst": 1,
-          "goalsFor": 0,
-          "lost": 1,
-          "playedGames": 1,
-          "points": 0,
-          "position": 4,
-          "team": {
-            "crest": "https://crests.football-data.org/congo_dr.svg",
-            "id": 1934,
-            "name": "Congo DR",
-            "shortName": "Congo DR",
-            "tla": "COD"
           },
           "won": 0
         }
