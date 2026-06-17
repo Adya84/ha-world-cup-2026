@@ -6670,7 +6670,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T04:18:55Z",
+      "lastUpdated": "2026-06-17T04:19:22Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6712,7 +6712,7 @@
       "displayMinute": "56'",
       "manualClockText": "56'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T02:18:57.463292+00:00",
+      "lastApiSync": "2026-06-17T02:19:24.527639+00:00",
       "manualClock": {
         "seconds": 3360,
         "timer": "56'",
@@ -6720,7 +6720,7 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T02:18:57.463292+00:00"
+        "lastApiSync": "2026-06-17T02:19:24.527639+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
@@ -6809,6 +6809,21 @@
           "comments": null,
           "assist": "J. Alvarez",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "T. Almada",
+          "minute": 55,
+          "extra": null,
+          "displayMinute": "55'",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "N. Gonzalez",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -6841,6 +6856,21 @@
           "detail": "Substitution 2",
           "comments": null,
           "assist": "J. Alvarez",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "T. Almada",
+          "minute": 55,
+          "extra": null,
+          "displayMinute": "55'",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "detail": "Substitution 3",
+          "comments": null,
+          "assist": "N. Gonzalez",
           "source": "api_football"
         }
       ],
