@@ -8725,10 +8725,10 @@
     "apiFootballFixtureId": 1489384,
     "awayScore": 2,
     "awayTeam": "Croatia",
-    "base_seconds": 3420,
+    "base_seconds": 3480,
     "clock_active": false,
-    "clock_seconds": 3420,
-    "displayMinute": "57'",
+    "clock_seconds": 3480,
+    "displayMinute": "58'",
     "events": [
       {
         "assist": null,
@@ -8819,6 +8819,24 @@
         "timer": "50:00",
         "timerSeconds": 3000,
         "type": "Goal"
+      },
+      {
+        "assist": "M. Kovacic",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "58'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 58,
+        "player": "L. Modric",
+        "playerOff": "L. Modric",
+        "playerOn": "M. Kovacic",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Croatia",
+        "timer": "58:00",
+        "timerSeconds": 3480,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -8940,9 +8958,9 @@
     ],
     "homeScore": 3,
     "homeTeam": "England",
-    "lastApiSync": "2026-06-17T21:21:28.222794+00:00",
-    "manualClockText": "57'",
-    "phase_start": "2026-06-17T21:21:28.222794+00:00",
+    "lastApiSync": "2026-06-17T21:21:52.953602+00:00",
+    "manualClockText": "58'",
+    "phase_start": "2026-06-17T21:21:52.953602+00:00",
     "referees": [
       {
         "name": "Clement Turpin, France",
@@ -8951,6 +8969,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "M. Kovacic",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "58'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 58,
+        "player": "L. Modric",
+        "playerOff": "L. Modric",
+        "playerOn": "M. Kovacic",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Croatia",
+        "timer": "58:00",
+        "timerSeconds": 3480,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-17T20:00:00Z"
   },
   "537410": {
