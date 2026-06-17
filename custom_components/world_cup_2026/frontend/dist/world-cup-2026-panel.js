@@ -10573,6 +10573,52 @@ class WorldCup2026Panel extends HTMLElement {
           border-color: rgba(120,220,255,0.7);
         }
 
+        .wc-nav button.wc-live-nav-button.is-offline,
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button.wc-live-nav-button.is-offline {
+          background: rgba(231, 76, 60, 0.24);
+          border-color: rgba(231, 76, 60, 0.62);
+          box-shadow: 0 0 14px rgba(231, 76, 60, 0.18);
+          animation: wcLiveNavPulseRed 1.4s ease-in-out infinite;
+        }
+
+        .wc-nav button.wc-live-nav-button.is-live,
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button.wc-live-nav-button.is-live {
+          background: rgba(46, 204, 113, 0.24);
+          border-color: rgba(46, 204, 113, 0.68);
+          box-shadow: 0 0 14px rgba(46, 204, 113, 0.20);
+          animation: wcLiveNavPulseGreen 1.4s ease-in-out infinite;
+        }
+
+        .wc-nav button.wc-live-nav-button.is-offline:hover,
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button.wc-live-nav-button.is-offline:hover {
+          background: rgba(231, 76, 60, 0.34);
+          border-color: rgba(231, 76, 60, 0.82);
+        }
+
+        .wc-nav button.wc-live-nav-button.is-live:hover,
+        .wc-app.wc-view-tablet .wc-tablet-header-nav button.wc-live-nav-button.is-live:hover {
+          background: rgba(46, 204, 113, 0.34);
+          border-color: rgba(46, 204, 113, 0.88);
+        }
+
+        @keyframes wcLiveNavPulseGreen {
+          0%, 100% {
+            box-shadow: 0 0 12px rgba(46, 204, 113, 0.34), 0 0 22px rgba(46, 204, 113, 0.16);
+          }
+          50% {
+            box-shadow: 0 0 24px rgba(46, 204, 113, 0.86), 0 0 46px rgba(46, 204, 113, 0.46), 0 0 70px rgba(46, 204, 113, 0.24);
+          }
+        }
+
+        @keyframes wcLiveNavPulseRed {
+          0%, 100% {
+            box-shadow: 0 0 12px rgba(231, 76, 60, 0.34), 0 0 22px rgba(231, 76, 60, 0.16);
+          }
+          50% {
+            box-shadow: 0 0 24px rgba(231, 76, 60, 0.86), 0 0 46px rgba(231, 76, 60, 0.46), 0 0 70px rgba(231, 76, 60, 0.24);
+          }
+        }
+
         .wc-tablet-header-nav {
           display: none;
         }
@@ -16784,156 +16830,16 @@ class WorldCup2026Panel extends HTMLElement {
         }
       }
 
-
-
-      /* Mobile only: compact Groups page so each group table fits inside phone width */
-      .wc-app.wc-view-mobile.wc-page-groups {
-        width: 100vw !important;
-        max-width: 100vw !important;
-        overflow-x: hidden !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-shell {
-        width: 100% !important;
-        max-width: 100vw !important;
-        padding-left: 8px !important;
-        padding-right: 8px !important;
-        overflow-x: hidden !important;
-        box-sizing: border-box !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-groups-grid {
-        display: grid !important;
-        grid-template-columns: minmax(0, 1fr) !important;
-        gap: 10px !important;
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        overflow: hidden !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        padding: 9px 7px !important;
-        border-radius: 14px !important;
-        overflow: hidden !important;
-        box-sizing: border-box !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-section-title {
-        font-size: 15px !important;
-        line-height: 1.05 !important;
-        margin: 0 0 6px !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-table-wrap {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        overflow: hidden !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table {
-        width: 100% !important;
-        max-width: 100% !important;
-        min-width: 0 !important;
-        table-layout: fixed !important;
-        border-collapse: collapse !important;
-        font-size: 9px !important;
-      }
-
-      /* On mobile keep the important group columns only: Pos, Team, P, GD, Pts */
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(4),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(4),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(5),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(5),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(6),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(6),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(7),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(7),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(8),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(8) {
-        display: none !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th,
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td {
-        padding: 5px 2px !important;
-        line-height: 1.08 !important;
-        white-space: nowrap !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        box-sizing: border-box !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th {
-        font-size: 7.4px !important;
-        letter-spacing: 0 !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(1),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(1) {
-        width: 9% !important;
-        text-align: center !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(2),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(2) {
-        width: 53% !important;
-        text-align: left !important;
-        padding-left: 2px !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(3),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(3),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(9),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(9),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table th:nth-child(10),
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .wc-table td:nth-child(10) {
-        width: 12.5% !important;
-        text-align: center !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-team-cell {
-        display: flex !important;
-        align-items: center !important;
-        gap: 4px !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        overflow: hidden !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-team-cell strong {
-        display: block !important;
-        min-width: 0 !important;
-        max-width: 100% !important;
-        overflow: hidden !important;
-        text-overflow: ellipsis !important;
-        white-space: nowrap !important;
-        font-size: 9px !important;
-        line-height: 1.05 !important;
-      }
-
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-flag-img,
-      .wc-app.wc-view-mobile.wc-page-groups .wc-group-card .group-flag-missing {
-        width: 16px !important;
-        min-width: 16px !important;
-        max-width: 16px !important;
-        height: 11px !important;
-        font-size: 7px !important;
-        flex: 0 0 16px !important;
-      }
 </style>
     `;
   }
 
   nav() {
+    const liveNavClass = (this._data.live || []).some((match) => this.isLiveMatch(match)) ? " is-live" : " is-offline";
     const items = [
+      ["live", this.t("live")],
       ["overview", this.t("overview")],
       ["teams", "Teams"],
-      ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
       ["results", this.t("results")],
       ["groups", this.t("groups")],
@@ -16948,7 +16854,7 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <div class="wc-nav">
         ${items.map(([key, label]) => `
-          <button class="${this._page === key ? "active" : ""}" data-page="${key}">
+          <button class="${this._page === key ? "active" : ""}${key === "live" ? ` wc-live-nav-button${liveNavClass}` : ""}" data-page="${key}">
             ${this.esc(label)}
           </button>
         `).join("")}
@@ -16957,10 +16863,11 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   tabletHeaderNav() {
+    const liveNavClass = (this._data.live || []).some((match) => this.isLiveMatch(match)) ? " is-live" : " is-offline";
     const items = [
+      ["live", this.t("live")],
       ["overview", this.t("overview")],
       ["teams", "Teams"],
-      ["live", this.t("live")],
       ["fixtures", this.t("fixtures")],
       ["results", this.t("results")],
       ["groups", this.t("groups")],
@@ -16975,7 +16882,7 @@ class WorldCup2026Panel extends HTMLElement {
     return `
       <div class="wc-tablet-header-nav">
         ${items.map(([key, label]) => `
-          <button class="${this._page === key ? "active" : ""}" data-page="${key}" title="${this.esc(label)}">
+          <button class="${this._page === key ? "active" : ""}${key === "live" ? ` wc-live-nav-button${liveNavClass}` : ""}" data-page="${key}" title="${this.esc(label)}">
             ${this.esc(label)}
           </button>
         `).join("")}
@@ -17691,6 +17598,63 @@ class WorldCup2026Panel extends HTMLElement {
     return String(event?.detail || event?.comments || event?.subType || event?.reason || event?.type || "").trim();
   }
 
+  eventGoalMethod(event) {
+    const text = [
+      event?.detail,
+      event?.comments,
+      event?.reason,
+      event?.subType,
+      event?.type,
+      event?.rawType,
+    ].map((value) => String(value || "").toLowerCase()).join(" ");
+
+    if (event?.isDisallowed) return "Disallowed";
+    if (event?.isMissedPenalty || text.includes("missed penalty") || text.includes("penalty missed")) return "Missed penalty";
+    if (event?.isOwnGoal || text.includes("own goal")) return "Own goal";
+    if (event?.isPenalty || text.includes("penalty")) return "Penalty";
+    if (text.includes("header") || text.includes("headed")) return "Header";
+    if (text.includes("free kick") || text.includes("freekick")) return "Free kick";
+    if (text.includes("left foot")) return "Left foot";
+    if (text.includes("right foot")) return "Right foot";
+
+    const detail = this.eventDetailText(event);
+    if (!detail || /^goal$/i.test(detail)) return "Normal Goal";
+    return detail;
+  }
+
+  eventDetailParts(event) {
+    const parts = [];
+    const detail = this.eventDetailText(event);
+
+    if (event.category === "goal") {
+      const method = this.eventGoalMethod(event);
+      if (method) parts.push(method);
+      if (event.assist) parts.push(`Assist: ${event.assist}`);
+      return parts;
+    }
+
+    if (event.category === "substitution") {
+      if (event.playerOn) parts.push(`On: ${event.playerOn}`);
+      if (event.playerOff) parts.push(`Off: ${event.playerOff}`);
+      return parts;
+    }
+
+    if (event.category === "card") {
+      if (detail && detail.toLowerCase() !== "card") parts.push(detail);
+      return parts;
+    }
+
+    if (event.category === "var") {
+      const reason = event.comments || event.reason || event.subType || "";
+      if (detail) parts.push(detail);
+      if (reason && String(reason).toLowerCase() !== String(detail).toLowerCase()) parts.push(reason);
+      return parts;
+    }
+
+    if (detail) parts.push(detail);
+    return parts;
+  }
+
   rawMatchEvents(match) {
     const combined = [];
     [
@@ -17902,19 +17866,14 @@ class WorldCup2026Panel extends HTMLElement {
     const rows = events.map((event) => {
       const detail = event.detail && event.detail.toLowerCase() !== event.category ? event.detail : "";
       const team = event.team ? ` <em>${this.esc(this.localizedTeamName(event.team))}</em>` : "";
-      const assist = event.category !== "substitution" && event.assist ? ` <small>Assist: ${this.esc(event.assist)}</small>` : "";
+      const detailParts = this.eventDetailParts(event);
+      const detailsHtml = detailParts.length ? ` <small>${this.esc(detailParts.join(" / "))}</small>` : "";
       const subOn = event.category === "substitution" ? (event.playerOn || event.assist || "") : "";
       const subOff = event.category === "substitution" ? (event.playerOff || event.player || "") : "";
       const player = event.category === "substitution"
         ? (subOn || subOff || detail || event.category)
         : (event.player || detail || event.category);
       const minute = event.minuteText || "";
-      const subHtml = event.category === "substitution"
-        ? `<small>${subOn ? `On: ${this.esc(subOn)}` : ""}${subOn && subOff ? " / " : ""}${subOff ? `Off: ${this.esc(subOff)}` : ""}</small>`
-        : "";
-      const detailHtml = event.category !== "substitution" && detail && String(detail).toLowerCase() !== String(player).toLowerCase()
-        ? `<small>${this.esc(detail)}</small>`
-        : "";
 
       return `
         <div class="match-event-row match-event-${this.esc(event.category)}">
@@ -17922,9 +17881,7 @@ class WorldCup2026Panel extends HTMLElement {
           <span class="match-event-icon">${this.esc(event.icon)}</span>
           <span class="match-event-main">
             <strong>${this.esc(player)}</strong>${team}
-            ${subHtml}
-            ${detailHtml}
-            ${assist}
+            ${detailsHtml}
           </span>
         </div>
       `;
@@ -18013,7 +17970,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   matchExtraLiveDataSection(match) {
-    const eventsHtml = this.matchEventsTimelineSection(match);
+    const eventsHtml = this.matchEventsTimelineSection(match, { includeSubs: true });
     const statisticsHtml = this.matchLiveStatisticsSection(match);
     const weatherHtml = this.matchWeatherSection(match);
     const officialsHtml = this.matchOfficialsSection(match);
@@ -18061,6 +18018,8 @@ class WorldCup2026Panel extends HTMLElement {
           isPenalty: event.isPenalty,
           isMissedPenalty: event.isMissedPenalty,
           detail: event.detail,
+          method: this.eventGoalMethod(event),
+          assist: event.assist,
           source: event.source || "",
         }))
         .filter((event) => event.name && String(event.name).toLowerCase() !== "goal");
@@ -18078,9 +18037,14 @@ class WorldCup2026Panel extends HTMLElement {
           const minuteText = item.displayMinute ? ` ${item.displayMinute}` : "";
           const detailText = item.isOwnGoal ? " (OG)" : (item.isPenalty ? " (PEN)" : "");
           const icon = item.isOwnGoal ? "OG" : (item.isPenalty ? "PEN" : "⚽");
-          const titleParts = [item.detail, item.timer].filter(Boolean);
+          const visibleParts = [
+            item.method && item.method !== "Own goal" && item.method !== "Penalty" ? item.method : "",
+            item.assist ? `Assist: ${item.assist}` : "",
+          ].filter(Boolean);
+          const detailHtml = visibleParts.length ? ` - ${this.esc(visibleParts.join(" / "))}` : "";
+          const titleParts = [item.detail, item.assist ? `Assist: ${item.assist}` : "", item.timer].filter(Boolean);
           const title = titleParts.length ? ` title="${this.esc(titleParts.join(" • "))}"` : "";
-          return `<span class="match-scorer-pill"${title}>${icon} ${this.esc(name)}${this.esc(minuteText)}${this.esc(detailText)}</span>`;
+          return `<span class="match-scorer-pill"${title}>${icon} ${this.esc(name)}${this.esc(minuteText)}${this.esc(detailText)}${detailHtml}</span>`;
         }).join("")
       : `<span class="match-scorer-empty">-</span>`;
 
@@ -18190,7 +18154,7 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   livePremiumTimeline(match) {
-    const events = this.normalisedMatchEvents(match).filter((event) => event.category !== "substitution").slice(-10);
+    const events = this.normalisedMatchEvents(match).slice(-12);
     if (!events.length) return "";
     return `
       <div class="live-premium-card live-premium-timeline-card">
@@ -18200,8 +18164,14 @@ class WorldCup2026Panel extends HTMLElement {
             <div class="live-timeline-row live-timeline-${this.esc(event.category)}">
               <span>${this.esc(event.minuteText || "-")}</span>
               <b>${this.esc(event.icon || "•")}</b>
-              <strong>${this.esc(event.player || event.detail || event.category)}</strong>
-              ${event.team ? `<em>${this.esc(this.localizedTeamName(event.team))}</em>` : ""}
+              <strong>${this.esc((event.category === "substitution" ? (event.playerOn || event.playerOff || event.player) : "") || event.player || event.detail || event.category)}</strong>
+              ${(() => {
+                const line = [
+                  event.team ? this.localizedTeamName(event.team) : "",
+                  ...this.eventDetailParts(event),
+                ].filter(Boolean).join(" / ");
+                return line ? `<em>${this.esc(line)}</em>` : "";
+              })()}
             </div>
           `).join("")}
         </div>
