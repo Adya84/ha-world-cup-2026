@@ -6670,7 +6670,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T03:48:04Z",
+      "lastUpdated": "2026-06-17T03:48:31Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6708,11 +6708,12 @@
       ],
       "liveSource": "api_football",
       "minute": 45,
+      "extra": 1,
       "clockSeconds": 2700,
       "displayMinute": "45'",
       "manualClockText": "45'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T01:48:05.580960+00:00",
+      "lastApiSync": "2026-06-17T01:48:33.635336+00:00",
       "manualClock": {
         "seconds": 2700,
         "timer": "45'",
@@ -6720,7 +6721,7 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T01:48:05.580960+00:00"
+        "lastApiSync": "2026-06-17T01:48:33.635336+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
@@ -6792,11 +6793,11 @@
             },
             {
               "type": "Shots off Goal",
-              "value": 0
+              "value": 1
             },
             {
               "type": "Total Shots",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Blocked Shots",
@@ -6808,11 +6809,11 @@
             },
             {
               "type": "Shots outsidebox",
-              "value": 1
+              "value": 2
             },
             {
               "type": "Fouls",
-              "value": 5
+              "value": 6
             },
             {
               "type": "Corner Kicks",
@@ -6824,7 +6825,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "61%"
+              "value": "59%"
             },
             {
               "type": "Yellow Cards",
@@ -6840,11 +6841,11 @@
             },
             {
               "type": "Total passes",
-              "value": 296
+              "value": 298
             },
             {
               "type": "Passes accurate",
-              "value": 274
+              "value": 276
             },
             {
               "type": "Passes %",
@@ -6852,7 +6853,7 @@
             },
             {
               "type": "expected_goals",
-              "value": "0.09"
+              "value": "0.13"
             },
             {
               "type": "goals_prevented",
@@ -6861,10 +6862,10 @@
           ],
           "corners": 0,
           "shotsOnGoal": 1,
-          "shotsOffGoal": 0,
-          "totalShots": 1,
-          "possession": "61%",
-          "fouls": 5,
+          "shotsOffGoal": 1,
+          "totalShots": 2,
+          "possession": "59%",
+          "fouls": 6,
           "offsides": 3,
           "yellowCards": null,
           "redCards": null
@@ -6910,7 +6911,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "39%"
+              "value": "41%"
             },
             {
               "type": "Yellow Cards",
@@ -6926,19 +6927,19 @@
             },
             {
               "type": "Total passes",
-              "value": 188
+              "value": 201
             },
             {
               "type": "Passes accurate",
-              "value": 170
+              "value": 182
             },
             {
               "type": "Passes %",
-              "value": "90%"
+              "value": "91%"
             },
             {
               "type": "expected_goals",
-              "value": "0.04"
+              "value": "0.02"
             },
             {
               "type": "goals_prevented",
@@ -6949,7 +6950,7 @@
           "shotsOnGoal": 0,
           "shotsOffGoal": 1,
           "totalShots": 1,
-          "possession": "39%",
+          "possession": "41%",
           "fouls": 2,
           "offsides": 1,
           "yellowCards": null,
@@ -6960,9 +6961,9 @@
       "awayCorners": 1,
       "homeShotsOnGoal": 1,
       "awayShotsOnGoal": 0,
-      "homePossession": "61%",
-      "awayPossession": "39%",
-      "homeFouls": 5,
+      "homePossession": "59%",
+      "awayPossession": "41%",
+      "homeFouls": 6,
       "awayFouls": 2,
       "homeOffsides": 3,
       "awayOffsides": 1,
