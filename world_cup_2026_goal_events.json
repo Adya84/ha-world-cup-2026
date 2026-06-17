@@ -6405,11 +6405,11 @@
     ],
     "base_seconds": 4380,
     "clock_seconds": 4380,
-    "phase_start": "2026-06-17T05:37:33.437448+00:00",
+    "phase_start": "2026-06-17T05:38:00.796909+00:00",
     "source": "api_football_live_minute",
     "displayMinute": "73'",
     "manualClockText": "73'",
-    "lastApiSync": "2026-06-17T05:37:33.437448+00:00",
+    "lastApiSync": "2026-06-17T05:38:00.796909+00:00",
     "events": [
       {
         "type": "Goal",
@@ -6515,6 +6515,21 @@
         "comments": null,
         "assist": null,
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "M. Abualnadi",
+        "minute": 73,
+        "extra": null,
+        "displayMinute": "73'",
+        "timer": "73:00",
+        "timerSeconds": 4380,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "S. Obaid",
+        "source": "api_football"
       }
     ],
     "apiFootballFixtureId": 1489382,
@@ -6577,6 +6592,21 @@
         "detail": "Substitution 4",
         "comments": null,
         "assist": "P. Wanner",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "M. Abualnadi",
+        "minute": 73,
+        "extra": null,
+        "displayMinute": "73'",
+        "timer": "73:00",
+        "timerSeconds": 4380,
+        "detail": "Substitution 1",
+        "comments": null,
+        "assist": "S. Obaid",
         "source": "api_football"
       }
     ]
