@@ -18010,20 +18010,13 @@
     },
     {
       "apiFootballFixtureId": 1489385,
-      "apiFootballStatus": "1H",
-      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
-      "awayFouls": 1,
-      "awayOffsides": 1,
-      "awayPossession": "66%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -18051,8 +18044,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1920,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -18060,7 +18052,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "32'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -18081,15 +18073,7 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 1920,
-      "fallbackClockText": "32'",
       "group": "GROUP_L",
-      "homeCorners": null,
-      "homeFouls": 3,
-      "homeOffsides": 2,
-      "homePossession": "34%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/ghana.svg",
         "id": 763,
@@ -18099,49 +18083,24 @@
       },
       "id": 537410,
       "lastApiSync": "2026-06-17T23:32:21.080987+00:00",
-      "lastUpdated": "2026-06-18T01:32:19Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": null,
-          "fouls": 1,
-          "offsides": 1,
-          "possession": "66%",
-          "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 1,
-          "totalShots": 2,
-          "yellowCards": 0
-        },
-        "home": {
-          "corners": null,
-          "fouls": 3,
-          "offsides": 2,
-          "possession": "34%",
-          "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 0,
-          "yellowCards": 1
-        }
-      },
+      "lastUpdated": "2026-06-18T01:32:43Z",
       "manualClock": {
         "active": false,
         "displayMinute": "32'",
         "lastApiSync": "2026-06-17T23:32:21.080987+00:00",
         "seconds": 1920,
-        "source": "api_football_live_minute",
-        "status": "1H",
-        "timer": "32'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "32:00"
       },
-      "manualClockText": "32'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1489385,
         "awayCorners": null,
-        "awayFouls": 1,
-        "awayOffsides": 1,
-        "awayPossession": "66%",
-        "awayShotsOnGoal": 1,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -18185,55 +18144,26 @@
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": null,
-        "homeFouls": 3,
-        "homeOffsides": 2,
-        "homePossession": "34%",
-        "homeShotsOnGoal": 0,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": null,
-            "fouls": 1,
-            "offsides": 1,
-            "possession": "66%",
-            "redCards": null,
-            "shotsOffGoal": 0,
-            "shotsOnGoal": 1,
-            "totalShots": 2,
-            "yellowCards": 0
-          },
-          "home": {
-            "corners": null,
-            "fouls": 3,
-            "offsides": 2,
-            "possession": "34%",
-            "redCards": null,
-            "shotsOffGoal": 0,
-            "shotsOnGoal": 0,
-            "totalShots": 0,
-            "yellowCards": 1
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 30960,
             "name": "Glenn Nyberg",
             "nationality": "Sweden",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Glenn Nyberg, Sweden",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 30960,
             "name": "Glenn Nyberg",
             "nationality": "Sweden",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Glenn Nyberg, Sweden",
             "type": "REFEREE"
           }
         ],
@@ -18286,29 +18216,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": 32,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Glenn Nyberg",
-          "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Glenn Nyberg, Sweden",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 30960,
           "name": "Glenn Nyberg",
           "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Glenn Nyberg, Sweden",
           "type": "REFEREE"
         }
       ],
@@ -18319,12 +18234,11 @@
           "home": 0
         },
         "halfTime": {
-          "away": 0,
-          "home": 0
+          "away": null,
+          "home": null
         },
         "winner": "DRAW"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 1,
         "endDate": "2026-07-19",
@@ -18333,13 +18247,8 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "1H",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-17T23:00:00Z",
-      "venue": {
-        "city": "Toronto",
-        "id": 312,
-        "name": "BMO Field"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -36376,20 +36285,13 @@
     },
     {
       "apiFootballFixtureId": 1489385,
-      "apiFootballStatus": "1H",
-      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
-      "awayFouls": 1,
-      "awayOffsides": 1,
-      "awayPossession": "66%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -36417,8 +36319,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1920,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -36426,7 +36327,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "32'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -36447,15 +36348,7 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 1920,
-      "fallbackClockText": "32'",
       "group": "GROUP_L",
-      "homeCorners": null,
-      "homeFouls": 3,
-      "homeOffsides": 2,
-      "homePossession": "34%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/ghana.svg",
         "id": 763,
@@ -36465,49 +36358,24 @@
       },
       "id": 537410,
       "lastApiSync": "2026-06-17T23:32:21.080987+00:00",
-      "lastUpdated": "2026-06-18T01:32:19Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": null,
-          "fouls": 1,
-          "offsides": 1,
-          "possession": "66%",
-          "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 1,
-          "totalShots": 2,
-          "yellowCards": 0
-        },
-        "home": {
-          "corners": null,
-          "fouls": 3,
-          "offsides": 2,
-          "possession": "34%",
-          "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 0,
-          "yellowCards": 1
-        }
-      },
+      "lastUpdated": "2026-06-18T01:32:43Z",
       "manualClock": {
         "active": false,
         "displayMinute": "32'",
         "lastApiSync": "2026-06-17T23:32:21.080987+00:00",
         "seconds": 1920,
-        "source": "api_football_live_minute",
-        "status": "1H",
-        "timer": "32'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "32:00"
       },
-      "manualClockText": "32'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1489385,
         "awayCorners": null,
-        "awayFouls": 1,
-        "awayOffsides": 1,
-        "awayPossession": "66%",
-        "awayShotsOnGoal": 1,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -36551,55 +36419,26 @@
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": null,
-        "homeFouls": 3,
-        "homeOffsides": 2,
-        "homePossession": "34%",
-        "homeShotsOnGoal": 0,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": null,
-            "fouls": 1,
-            "offsides": 1,
-            "possession": "66%",
-            "redCards": null,
-            "shotsOffGoal": 0,
-            "shotsOnGoal": 1,
-            "totalShots": 2,
-            "yellowCards": 0
-          },
-          "home": {
-            "corners": null,
-            "fouls": 3,
-            "offsides": 2,
-            "possession": "34%",
-            "redCards": null,
-            "shotsOffGoal": 0,
-            "shotsOnGoal": 0,
-            "totalShots": 0,
-            "yellowCards": 1
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 30960,
             "name": "Glenn Nyberg",
             "nationality": "Sweden",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Glenn Nyberg, Sweden",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 30960,
             "name": "Glenn Nyberg",
             "nationality": "Sweden",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Glenn Nyberg, Sweden",
             "type": "REFEREE"
           }
         ],
@@ -36652,29 +36491,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": 32,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Glenn Nyberg",
-          "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Glenn Nyberg, Sweden",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 30960,
           "name": "Glenn Nyberg",
           "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Glenn Nyberg, Sweden",
           "type": "REFEREE"
         }
       ],
@@ -36685,12 +36509,11 @@
           "home": 0
         },
         "halfTime": {
-          "away": 0,
-          "home": 0
+          "away": null,
+          "home": null
         },
         "winner": "DRAW"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 1,
         "endDate": "2026-07-19",
@@ -36699,13 +36522,8 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "1H",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-17T23:00:00Z",
-      "venue": {
-        "city": "Toronto",
-        "id": 312,
-        "name": "BMO Field"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
