@@ -7575,6 +7575,19 @@ class WorldCup2026Panel extends HTMLElement {
         referees: Array.isArray(publicMatch.referees) && publicMatch.referees.length ? publicMatch.referees : match.referees,
         referee: publicMatch.referee || match.referee,
         attendance: publicMatch.attendance ?? match.attendance,
+        liveStatistics: publicMatch.liveStatistics || publicMatch.matchDetails?.liveStatistics || match.liveStatistics,
+        homeCorners: publicMatch.homeCorners ?? publicMatch.matchDetails?.homeCorners ?? match.homeCorners,
+        awayCorners: publicMatch.awayCorners ?? publicMatch.matchDetails?.awayCorners ?? match.awayCorners,
+        homeShotsOnGoal: publicMatch.homeShotsOnGoal ?? publicMatch.matchDetails?.homeShotsOnGoal ?? match.homeShotsOnGoal,
+        awayShotsOnGoal: publicMatch.awayShotsOnGoal ?? publicMatch.matchDetails?.awayShotsOnGoal ?? match.awayShotsOnGoal,
+        homePossession: publicMatch.homePossession ?? publicMatch.matchDetails?.homePossession ?? match.homePossession,
+        awayPossession: publicMatch.awayPossession ?? publicMatch.matchDetails?.awayPossession ?? match.awayPossession,
+        homeFouls: publicMatch.homeFouls ?? publicMatch.matchDetails?.homeFouls ?? match.homeFouls,
+        awayFouls: publicMatch.awayFouls ?? publicMatch.matchDetails?.awayFouls ?? match.awayFouls,
+        homeOffsides: publicMatch.homeOffsides ?? publicMatch.matchDetails?.homeOffsides ?? match.homeOffsides,
+        awayOffsides: publicMatch.awayOffsides ?? publicMatch.matchDetails?.awayOffsides ?? match.awayOffsides,
+        lineups: publicMatch.lineups || publicMatch.lineupsData || publicMatch.matchDetails?.lineups || publicMatch.matchDetails?.lineupsData || match.lineups,
+        lineupsData: publicMatch.lineupsData || publicMatch.lineups || publicMatch.matchDetails?.lineupsData || publicMatch.matchDetails?.lineups || match.lineupsData,
         publicGithubSynced: true,
       };
     });
@@ -7775,6 +7788,19 @@ class WorldCup2026Panel extends HTMLElement {
         referees: referees.length ? referees : (Array.isArray(match.referees) ? match.referees : []),
         referee: extra.referee || match.referee,
         apiFootballFixtureId: extra.apiFootballFixtureId || match.apiFootballFixtureId,
+        liveStatistics: extra.liveStatistics || extra.matchDetails?.liveStatistics || match.liveStatistics,
+        homeCorners: extra.homeCorners ?? extra.matchDetails?.homeCorners ?? match.homeCorners,
+        awayCorners: extra.awayCorners ?? extra.matchDetails?.awayCorners ?? match.awayCorners,
+        homeShotsOnGoal: extra.homeShotsOnGoal ?? extra.matchDetails?.homeShotsOnGoal ?? match.homeShotsOnGoal,
+        awayShotsOnGoal: extra.awayShotsOnGoal ?? extra.matchDetails?.awayShotsOnGoal ?? match.awayShotsOnGoal,
+        homePossession: extra.homePossession ?? extra.matchDetails?.homePossession ?? match.homePossession,
+        awayPossession: extra.awayPossession ?? extra.matchDetails?.awayPossession ?? match.awayPossession,
+        homeFouls: extra.homeFouls ?? extra.matchDetails?.homeFouls ?? match.homeFouls,
+        awayFouls: extra.awayFouls ?? extra.matchDetails?.awayFouls ?? match.awayFouls,
+        homeOffsides: extra.homeOffsides ?? extra.matchDetails?.homeOffsides ?? match.homeOffsides,
+        awayOffsides: extra.awayOffsides ?? extra.matchDetails?.awayOffsides ?? match.awayOffsides,
+        lineups: extra.lineups || extra.lineupsData || extra.matchDetails?.lineups || extra.matchDetails?.lineupsData || match.lineups,
+        lineupsData: extra.lineupsData || extra.lineups || extra.matchDetails?.lineupsData || extra.matchDetails?.lineups || match.lineupsData,
         publicGoalEventsSynced: true,
       };
     });
@@ -7813,7 +7839,7 @@ class WorldCup2026Panel extends HTMLElement {
   refreshDelayMs() {
     const matches = this.allKnownMatches ? this.allKnownMatches() : [];
     const hasLive = matches.some((match) => this.isLiveMatch(match));
-    if (hasLive) return 20 * 1000;
+    if (hasLive) return 10 * 1000;
 
     const next = this.nextKickoffMs(matches);
     if (next !== null) {
@@ -7835,7 +7861,7 @@ class WorldCup2026Panel extends HTMLElement {
     this._refreshInterval = setTimeout(() => {
       this._refreshInterval = null;
       this.loadAll();
-    }, Math.max(20 * 1000, refreshDelay));
+    }, Math.max(10 * 1000, refreshDelay));
   }
 
   hasUsableMasterClock(match) {
@@ -11740,38 +11766,17 @@ class WorldCup2026Panel extends HTMLElement {
           grid-column: 1 / -1;
           width: 100%;
           display: grid;
-          grid-template-columns: minmax(0, 1fr);
-          gap: 8px;
+          grid-template-columns: minmax(0, 1.5fr) minmax(220px, 0.8fr);
+          gap: 10px;
           margin-top: 8px;
-          justify-items: center;
         }
 
         .match-events-box,
         .match-officials-box {
-          width: 100%;
           padding: 10px 12px;
           border-radius: 13px;
           background: rgba(0,0,0,0.18);
           border: 1px solid rgba(255,255,255,0.10);
-        }
-
-        .match-live-statistics-box {
-          width: min(72%, 980px);
-          margin: 0 auto;
-          justify-self: center;
-        }
-
-        .match-events-box:not(.match-live-statistics-box) {
-          width: min(72%, 980px);
-          margin: 0 auto;
-        }
-
-        .match-officials-box {
-          width: min(72%, 980px);
-          margin: 0 auto;
-          padding: 6px 9px;
-          border-radius: 999px;
-          background: rgba(0,0,0,0.13);
         }
 
         .match-extra-title {
@@ -11789,12 +11794,6 @@ class WorldCup2026Panel extends HTMLElement {
           max-height: 210px;
           overflow: auto;
           padding-right: 2px;
-        }
-
-        .match-live-statistics-box .match-events-list {
-          max-height: none;
-          overflow: visible;
-          gap: 7px;
         }
 
         .match-event-row {
@@ -11843,98 +11842,22 @@ class WorldCup2026Panel extends HTMLElement {
           font-weight: 800;
         }
 
-        .match-stat-bar-row {
-          display: grid;
-          grid-template-columns: 58px minmax(150px, 1fr) 58px;
-          gap: 10px;
-          align-items: center;
-          padding: 6px 9px;
-          border-radius: 12px;
-          background: rgba(255,255,255,0.075);
-          border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .match-stat-value {
-          color: rgba(255,255,255,0.88);
-          font-size: 12px;
-          font-weight: 950;
-          text-align: center;
-          white-space: nowrap;
-        }
-
-        .match-stat-middle {
-          min-width: 0;
-        }
-
-        .match-stat-label {
-          margin-bottom: 3px;
-          color: rgba(255,255,255,0.82);
-          font-size: 10px;
-          font-weight: 950;
-          text-align: center;
-          text-transform: uppercase;
-          letter-spacing: 0.35px;
-        }
-
-        .match-stat-track {
-          position: relative;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          height: 7px;
-          overflow: hidden;
-          border-radius: 999px;
-          background: rgba(255,255,255,0.12);
-          border: 1px solid rgba(255,255,255,0.08);
-        }
-
-        .match-stat-fill-home,
-        .match-stat-fill-away {
-          height: 100%;
-          min-width: 3px;
-          background: rgba(0,220,255,0.78);
-        }
-
-        .match-stat-fill-home {
-          justify-self: end;
-          border-radius: 999px 0 0 999px;
-        }
-
-        .match-stat-fill-away {
-          justify-self: start;
-          background: rgba(255,255,255,0.82);
-          border-radius: 0 999px 999px 0;
-        }
-
         .match-officials-list {
           display: flex;
           flex-wrap: wrap;
-          gap: 5px;
-          align-items: center;
-        }
-
-        .match-officials-box .match-extra-title {
-          margin: 0 7px 0 0;
-          display: inline-flex;
-          vertical-align: middle;
-          font-size: 9px;
-          letter-spacing: 0.35px;
-        }
-
-        .match-officials-box .match-officials-list {
-          display: inline-flex;
-          vertical-align: middle;
+          gap: 6px;
         }
 
         .match-official-pill {
           display: inline-flex;
           align-items: center;
-          gap: 4px;
-          padding: 3px 7px;
+          gap: 5px;
+          padding: 6px 8px;
           border-radius: 999px;
-          background: rgba(255,255,255,0.08);
-          border: 1px solid rgba(255,255,255,0.09);
-          color: rgba(255,255,255,0.86);
-          font-size: 10px;
+          background: rgba(255,255,255,0.09);
+          border: 1px solid rgba(255,255,255,0.10);
+          color: rgba(255,255,255,0.88);
+          font-size: 11px;
           font-weight: 850;
         }
 
@@ -11949,12 +11872,6 @@ class WorldCup2026Panel extends HTMLElement {
         @media (max-width: 760px) {
           .match-extra-live-data {
             grid-template-columns: 1fr;
-          }
-
-          .match-live-statistics-box,
-          .match-events-box:not(.match-live-statistics-box),
-          .match-officials-box {
-            width: 100%;
           }
         }
 
@@ -16420,6 +16337,18 @@ class WorldCup2026Panel extends HTMLElement {
     return String(assist || "").trim();
   }
 
+  eventSubPlayerName(event, keys) {
+    for (const key of keys) {
+      const value = event?.[key];
+      if (value && typeof value === "object") {
+        const name = value.name || value.shortName || value.displayName || "";
+        if (name) return String(name).trim();
+      }
+      if (value) return String(value).trim();
+    }
+    return "";
+  }
+
   eventDetailText(event) {
     return String(event?.detail || event?.comments || event?.subType || event?.reason || event?.type || "").trim();
   }
@@ -16453,24 +16382,60 @@ class WorldCup2026Panel extends HTMLElement {
   normalisedMatchEvents(match) {
     const events = this.rawMatchEvents(match);
     const byKey = new Map();
+    const disallowedSourceEvents = events.filter((event) => {
+      const sourceText = [
+        event?.type,
+        event?.rawType,
+        this.eventDetailText(event),
+        event?.comments,
+        event?.reason,
+        event?.subType,
+      ].map((value) => String(value || "").toLowerCase()).join(" ");
+      return event?.isDisallowed === true
+        || sourceText.includes("disallowed")
+        || sourceText.includes("disallow")
+        || sourceText.includes("cancelled")
+        || sourceText.includes("canceled")
+        || sourceText.includes("no goal");
+    });
 
     events.forEach((event) => {
       const typeText = String(event.type || event.rawType || event.eventType || event.kind || "").toLowerCase();
       const detailText = this.eventDetailText(event).toLowerCase();
+      const combinedText = [
+        typeText,
+        detailText,
+        event.comments,
+        event.reason,
+        event.subType,
+      ].map((value) => String(value || "").toLowerCase()).join(" ");
       const player = this.eventPlayerName(event);
       const team = this.eventTeamName(event);
       const minuteText = this.eventMinuteText(event);
       const timerSeconds = this.eventTimerSeconds(event);
 
-      const isGoal = typeText.includes("goal") || detailText.includes("goal") || event.isGoal === true;
+      const isDisallowed = event.isDisallowed === true
+        || combinedText.includes("disallowed")
+        || combinedText.includes("disallow")
+        || combinedText.includes("cancelled")
+        || combinedText.includes("canceled")
+        || combinedText.includes("no goal");
+      const hasMatchingDisallowed = !isDisallowed && disallowedSourceEvents.some((other) => {
+        const sameMinute = this.eventTimerSeconds(other) === timerSeconds || this.eventMinuteText(other) === minuteText;
+        const sameTeam = this.fixtureTeamKey(this.eventTeamName(other)) === this.fixtureTeamKey(team);
+        const samePlayer = this.eventPlayerName(other).toLowerCase() === player.toLowerCase();
+        return sameMinute && (sameTeam || samePlayer);
+      });
+      const isGoal = !isDisallowed && (typeText.includes("goal") || detailText.includes("goal") || event.isGoal === true);
       const isCard = typeText.includes("card") || detailText.includes("yellow") || detailText.includes("red");
       const isSub = typeText.includes("subst") || detailText.includes("substitution");
-      const isVar = typeText.includes("var") || detailText.includes("var") || detailText.includes("video assistant") || detailText.includes("video review") || String(event.rawType || "").toLowerCase().includes("var");
+      const isVar = isDisallowed || typeText.includes("var") || detailText.includes("var") || detailText.includes("video assistant") || detailText.includes("video review") || String(event.rawType || "").toLowerCase().includes("var");
       const isPenalty = detailText.includes("penalty") || detailText.includes("pen");
       const isMissedPenalty = detailText.includes("missed penalty") || detailText.includes("penalty missed");
-      const isOwnGoal = detailText.includes("own goal") || /\bog\b/i.test(detailText);
+      const isOwnGoal = !isDisallowed && (detailText.includes("own goal") || /\bog\b/i.test(detailText));
 
       let category = "";
+      if (isGoal && hasMatchingDisallowed) return;
       if (isGoal) category = "goal";
       else if (isCard) category = "card";
       else if (isSub) category = "substitution";
@@ -16501,12 +16466,19 @@ class WorldCup2026Panel extends HTMLElement {
         team,
         player,
         assist: this.eventAssistName(event),
+        playerOn: category === "substitution"
+          ? this.eventSubPlayerName(event, ["playerOn", "playerIn", "in", "on"]) || this.eventAssistName(event)
+          : this.eventSubPlayerName(event, ["playerOn", "playerIn", "in", "on"]),
+        playerOff: category === "substitution"
+          ? this.eventSubPlayerName(event, ["playerOff", "playerOut", "out", "off"]) || player
+          : this.eventSubPlayerName(event, ["playerOff", "playerOut", "out", "off"]),
         minuteText,
         timerSeconds,
         detail: this.eventDetailText(event),
         isOwnGoal,
         isPenalty,
         isMissedPenalty,
+        isDisallowed,
       });
     });
 
@@ -16592,10 +16564,17 @@ class WorldCup2026Panel extends HTMLElement {
     const rows = events.map((event) => {
       const detail = event.detail && event.detail.toLowerCase() !== event.category ? event.detail : "";
       const team = event.team ? ` <em>${this.esc(this.localizedTeamName(event.team))}</em>` : "";
-      const assist = event.assist ? ` <small>Assist: ${this.esc(event.assist)}</small>` : "";
-      const player = event.player || detail || event.category;
+      const assist = event.category !== "substitution" && event.assist ? ` <small>Assist: ${this.esc(event.assist)}</small>` : "";
+      const subOn = event.category === "substitution" ? (event.playerOn || event.assist || "") : "";
+      const subOff = event.category === "substitution" ? (event.playerOff || event.player || "") : "";
+      const player = event.category === "substitution"
+        ? (subOn || subOff || detail || event.category)
+        : (event.player || detail || event.category);
       const minute = event.minuteText || "";
-      const detailHtml = detail && String(detail).toLowerCase() !== String(player).toLowerCase()
+      const subHtml = event.category === "substitution"
+        ? `<small>${subOn ? `On: ${this.esc(subOn)}` : ""}${subOn && subOff ? " / " : ""}${subOff ? `Off: ${this.esc(subOff)}` : ""}</small>`
+        : "";
+      const detailHtml = event.category !== "substitution" && detail && String(detail).toLowerCase() !== String(player).toLowerCase()
         ? `<small>${this.esc(detail)}</small>`
         : "";
 
@@ -16605,6 +16584,7 @@ class WorldCup2026Panel extends HTMLElement {
           <span class="match-event-icon">${this.esc(event.icon)}</span>
           <span class="match-event-main">
             <strong>${this.esc(player)}</strong>${team}
+            ${subHtml}
             ${detailHtml}
             ${assist}
           </span>
@@ -16624,25 +16604,16 @@ class WorldCup2026Panel extends HTMLElement {
     const stats = match?.liveStatistics || {};
     const homeStats = stats.home || {};
     const awayStats = stats.away || {};
-
-    const value = (direct, sideStats, key) => {
-      const result = direct ?? sideStats?.[key];
-      return result === null || result === undefined || result === "" ? "" : result;
+    const pick = (direct, sideStats, key) => {
+      const value = direct ?? sideStats?.[key];
+      return value === null || value === undefined || value === "" ? "" : value;
     };
-
-    const cleanNumber = (raw) => {
-      if (raw === null || raw === undefined || raw === "") return null;
-      const text = String(raw).replace("%", "").trim();
-      const num = Number(text);
-      return Number.isFinite(num) ? num : null;
-    };
-
     const rows = [
-      ["Corners", value(match?.homeCorners, homeStats, "corners"), value(match?.awayCorners, awayStats, "corners")],
-      ["Shots On Target", value(match?.homeShotsOnGoal, homeStats, "shotsOnGoal"), value(match?.awayShotsOnGoal, awayStats, "shotsOnGoal")],
-      ["Possession", value(match?.homePossession, homeStats, "possession"), value(match?.awayPossession, awayStats, "possession")],
-      ["Fouls", value(match?.homeFouls, homeStats, "fouls"), value(match?.awayFouls, awayStats, "fouls")],
-      ["Offsides", value(match?.homeOffsides, homeStats, "offsides"), value(match?.awayOffsides, awayStats, "offsides")],
+      ["Corners", pick(match?.homeCorners, homeStats, "corners"), pick(match?.awayCorners, awayStats, "corners")],
+      ["Shots on target", pick(match?.homeShotsOnGoal, homeStats, "shotsOnGoal"), pick(match?.awayShotsOnGoal, awayStats, "shotsOnGoal")],
+      ["Possession", pick(match?.homePossession, homeStats, "possession"), pick(match?.awayPossession, awayStats, "possession")],
+      ["Fouls", pick(match?.homeFouls, homeStats, "fouls"), pick(match?.awayFouls, awayStats, "fouls")],
+      ["Offsides", pick(match?.homeOffsides, homeStats, "offsides"), pick(match?.awayOffsides, awayStats, "offsides")],
     ].filter((row) => row[1] !== "" || row[2] !== "");
 
     if (!rows.length) return "";
@@ -16651,43 +16622,31 @@ class WorldCup2026Panel extends HTMLElement {
       <div class="match-events-box match-live-statistics-box">
         <div class="match-extra-title">Live Match Stats</div>
         <div class="match-events-list">
-          ${rows.map(([label, home, away]) => {
-            const homeText = home || "-";
-            const awayText = away || "-";
-            const homeNum = cleanNumber(home);
-            const awayNum = cleanNumber(away);
-            const total = (homeNum !== null && awayNum !== null && (homeNum + awayNum) > 0) ? homeNum + awayNum : 2;
-            const homePct = homeNum !== null ? Math.max(4, Math.min(100, (homeNum / total) * 100)) : 50;
-            const awayPct = awayNum !== null ? Math.max(4, Math.min(100, (awayNum / total) * 100)) : 50;
-            return `
-              <div class="match-stat-bar-row">
-                <span class="match-stat-value">${this.esc(homeText)}</span>
-                <span class="match-stat-middle">
-                  <span class="match-stat-label">${this.esc(label)}</span>
-                  <span class="match-stat-track">
-                    <span class="match-stat-fill-home" style="width:${homePct}%"></span>
-                    <span class="match-stat-fill-away" style="width:${awayPct}%"></span>
-                  </span>
-                </span>
-                <span class="match-stat-value">${this.esc(awayText)}</span>
-              </div>
-            `;
-          }).join("")}
+          ${rows.map(([label, home, away]) => `
+            <div class="match-event-row match-event-stat">
+              <span class="match-event-minute">${this.esc(home || "-")}</span>
+              <span class="match-event-icon">STAT</span>
+              <span class="match-event-main">
+                <strong>${this.esc(label)}</strong>
+                <small>Away: ${this.esc(away || "-")}</small>
+              </span>
+            </div>
+          `).join("")}
         </div>
       </div>
     `;
   }
 
   matchExtraLiveDataSection(match) {
-    const eventsHtml = this.matchEventsTimelineSection(match, { includeSubs: true });
+    const eventsHtml = this.matchEventsTimelineSection(match);
     const statisticsHtml = this.matchLiveStatisticsSection(match);
     const officialsHtml = this.matchOfficialsSection(match);
     if (!eventsHtml && !statisticsHtml && !officialsHtml) return "";
 
     return `
       <div class="match-extra-live-data">
-        ${statisticsHtml}
         ${eventsHtml}
+        ${statisticsHtml}
         ${officialsHtml}
       </div>
     `;
