@@ -12325,11 +12325,11 @@
       },
       "id": 537397,
       "utcDate": "2026-06-17T01:00:00Z",
-      "status": "HT",
+      "status": "2H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T04:08:37Z",
+      "lastUpdated": "2026-06-17T04:09:04Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -12366,27 +12366,26 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 45,
-      "extra": 5,
-      "clockSeconds": 2700,
-      "displayMinute": "45'",
-      "manualClockText": "45'",
+      "minute": 46,
+      "clockSeconds": 2760,
+      "displayMinute": "46'",
+      "manualClockText": "46'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T02:08:40.552526+00:00",
+      "lastApiSync": "2026-06-17T02:09:07.396309+00:00",
       "manualClock": {
-        "seconds": 2700,
-        "timer": "45'",
-        "displayMinute": "45'",
+        "seconds": 2760,
+        "timer": "46'",
+        "displayMinute": "46'",
         "active": false,
-        "status": "HT",
+        "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T02:08:40.552526+00:00"
+        "lastApiSync": "2026-06-17T02:09:07.396309+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
       "scoreSource": "api_football_live",
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "goalEvents": [
         {
           "type": "Goal",
@@ -12439,9 +12438,41 @@
           "comments": null,
           "assist": "R. de Paul",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "G. Montiel",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Molina",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
+      "substitutionEvents": [
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "G. Montiel",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Molina",
+          "source": "api_football"
+        }
+      ],
       "liveStatistics": {
         "home": {
           "team": "Argentina",
@@ -12627,8 +12658,8 @@
       "homeOffsides": 3,
       "awayOffsides": 1,
       "apiFootballFixtureId": 1489381,
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "matchDetails": {
         "events": [
           {
@@ -12660,6 +12691,21 @@
             "comments": null,
             "assist": "R. de Paul",
             "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Argentina",
+            "player": "G. Montiel",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Molina",
+            "source": "api_football"
           }
         ],
         "goalEvents": [
@@ -12685,7 +12731,23 @@
           }
         ],
         "cardEvents": [],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Argentina",
+            "player": "G. Montiel",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Molina",
+            "source": "api_football"
+          }
+        ],
         "referees": [
           {
             "name": "Szymon Marciniak, Poland",
@@ -25023,11 +25085,11 @@
       },
       "id": 537397,
       "utcDate": "2026-06-17T01:00:00Z",
-      "status": "HT",
+      "status": "2H",
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T04:08:37Z",
+      "lastUpdated": "2026-06-17T04:09:04Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -25064,27 +25126,26 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 45,
-      "extra": 5,
-      "clockSeconds": 2700,
-      "displayMinute": "45'",
-      "manualClockText": "45'",
+      "minute": 46,
+      "clockSeconds": 2760,
+      "displayMinute": "46'",
+      "manualClockText": "46'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T02:08:40.552526+00:00",
+      "lastApiSync": "2026-06-17T02:09:07.396309+00:00",
       "manualClock": {
-        "seconds": 2700,
-        "timer": "45'",
-        "displayMinute": "45'",
+        "seconds": 2760,
+        "timer": "46'",
+        "displayMinute": "46'",
         "active": false,
-        "status": "HT",
+        "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T02:08:40.552526+00:00"
+        "lastApiSync": "2026-06-17T02:09:07.396309+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
       "scoreSource": "api_football_live",
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "goalEvents": [
         {
           "type": "Goal",
@@ -25137,9 +25198,41 @@
           "comments": null,
           "assist": "R. de Paul",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "G. Montiel",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Molina",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
+      "substitutionEvents": [
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Argentina",
+          "player": "G. Montiel",
+          "minute": 46,
+          "extra": null,
+          "displayMinute": "46'",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "detail": "Substitution 1",
+          "comments": null,
+          "assist": "N. Molina",
+          "source": "api_football"
+        }
+      ],
       "liveStatistics": {
         "home": {
           "team": "Argentina",
@@ -25325,8 +25418,8 @@
       "homeOffsides": 3,
       "awayOffsides": 1,
       "apiFootballFixtureId": 1489381,
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "matchDetails": {
         "events": [
           {
@@ -25358,6 +25451,21 @@
             "comments": null,
             "assist": "R. de Paul",
             "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Argentina",
+            "player": "G. Montiel",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Molina",
+            "source": "api_football"
           }
         ],
         "goalEvents": [
@@ -25383,7 +25491,23 @@
           }
         ],
         "cardEvents": [],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Argentina",
+            "player": "G. Montiel",
+            "minute": 46,
+            "extra": null,
+            "displayMinute": "46'",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "detail": "Substitution 1",
+            "comments": null,
+            "assist": "N. Molina",
+            "source": "api_football"
+          }
+        ],
         "referees": [
           {
             "name": "Szymon Marciniak, Poland",
