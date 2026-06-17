@@ -7013,7 +7013,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T08:07:13Z",
+      "lastUpdated": "2026-06-17T08:07:40Z",
       "homeTeam": {
         "id": 816,
         "name": "Austria",
@@ -7032,7 +7032,7 @@
         "winner": "HOME_TEAM",
         "duration": "REGULAR",
         "fullTime": {
-          "home": 2,
+          "home": 3,
           "away": 1
         },
         "halfTime": {
@@ -7051,12 +7051,12 @@
       ],
       "liveSource": "api_football",
       "minute": 90,
-      "extra": 12,
+      "extra": 13,
       "clockSeconds": 5400,
       "displayMinute": "90'",
       "manualClockText": "90'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T06:07:15.475137+00:00",
+      "lastApiSync": "2026-06-17T06:07:43.528948+00:00",
       "manualClock": {
         "seconds": 5400,
         "timer": "90'",
@@ -7064,9 +7064,9 @@
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T06:07:15.475137+00:00"
+        "lastApiSync": "2026-06-17T06:07:43.528948+00:00"
       },
-      "homeScore": 2,
+      "homeScore": 3,
       "awayScore": 1,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "2H",
@@ -7131,6 +7131,26 @@
           "homeTeam": "Austria",
           "awayTeam": "Jordan",
           "goalNumber": 3
+        },
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Austria",
+          "player": "M. Arnautovic",
+          "minute": 90,
+          "extra": 12,
+          "displayMinute": "90+12'",
+          "timer": "102:00",
+          "timerSeconds": 6120,
+          "detail": "Penalty",
+          "comments": null,
+          "assist": null,
+          "source": "api_football",
+          "matchId": 537398,
+          "matchUtcDate": "2026-06-17T04:00:00Z",
+          "homeTeam": "Austria",
+          "awayTeam": "Jordan",
+          "goalNumber": 4
         }
       ],
       "events": [
@@ -7357,6 +7377,21 @@
           "detail": "Substitution 5",
           "comments": null,
           "assist": "A. Azaizeh",
+          "source": "api_football"
+        },
+        {
+          "type": "Penalty",
+          "rawType": "Goal",
+          "team": "Austria",
+          "player": "M. Arnautovic",
+          "minute": 90,
+          "extra": 12,
+          "displayMinute": "90+12'",
+          "timer": "102:00",
+          "timerSeconds": 6120,
+          "detail": "Penalty",
+          "comments": null,
+          "assist": null,
           "source": "api_football"
         }
       ],
