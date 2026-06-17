@@ -7753,10 +7753,34 @@
     ]
   },
   "537403": {
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Portugal",
+        "player": "J. Neves",
+        "playerOn": null,
+        "playerOff": null,
+        "minute": 6,
+        "extra": null,
+        "displayMinute": "6'",
+        "timer": "6:00",
+        "timerSeconds": 360,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "isDisallowed": false,
+        "source": "api_football",
+        "matchId": 537403,
+        "matchUtcDate": "2026-06-17T17:00:00Z",
+        "homeTeam": "Portugal",
+        "awayTeam": "Congo DR",
+        "goalNumber": 1
+      }
+    ],
     "clock_active": false,
     "status": "1H",
-    "homeScore": 0,
+    "homeScore": 1,
     "awayScore": 0,
     "utcDate": "2026-06-17T17:00:00Z",
     "homeTeam": "Portugal",
@@ -7767,14 +7791,34 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-17T17:07:20.515631+00:00",
+    "phase_start": "2026-06-17T17:07:52.122650+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 360,
-    "clock_seconds": 360,
-    "displayMinute": "6'",
-    "manualClockText": "6'",
-    "lastApiSync": "2026-06-17T17:07:20.515631+00:00",
-    "apiFootballFixtureId": 1539003
+    "base_seconds": 420,
+    "clock_seconds": 420,
+    "displayMinute": "7'",
+    "manualClockText": "7'",
+    "lastApiSync": "2026-06-17T17:07:52.122650+00:00",
+    "apiFootballFixtureId": 1539003,
+    "events": [
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Portugal",
+        "player": "J. Neves",
+        "playerOn": null,
+        "playerOff": null,
+        "minute": 6,
+        "extra": null,
+        "displayMinute": "6'",
+        "timer": "6:00",
+        "timerSeconds": 360,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "isDisallowed": false,
+        "source": "api_football"
+      }
+    ]
   },
   "537409": {
     "goalEvents": [],
