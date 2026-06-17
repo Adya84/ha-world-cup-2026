@@ -6087,11 +6087,31 @@
         "homeTeam": "Argentina",
         "awayTeam": "Algeria",
         "goalNumber": 2
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Argentina",
+        "player": "L. Messi",
+        "minute": 76,
+        "extra": null,
+        "displayMinute": "76'",
+        "timer": "76:00",
+        "timerSeconds": 4560,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": "N. Gonzalez",
+        "source": "api_football",
+        "matchId": 537397,
+        "matchUtcDate": "2026-06-17T01:00:00Z",
+        "homeTeam": "Argentina",
+        "awayTeam": "Algeria",
+        "goalNumber": 3
       }
     ],
     "clock_active": false,
     "status": "2H",
-    "homeScore": 2,
+    "homeScore": 3,
     "awayScore": 0,
     "utcDate": "2026-06-17T01:00:00Z",
     "homeTeam": "Argentina",
@@ -6102,13 +6122,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-17T02:39:27.586645+00:00",
+    "phase_start": "2026-06-17T02:39:54.393802+00:00",
     "source": "api_football_live_minute",
-    "base_seconds": 4560,
-    "clock_seconds": 4560,
-    "displayMinute": "76'",
-    "manualClockText": "76'",
-    "lastApiSync": "2026-06-17T02:39:27.586645+00:00",
+    "base_seconds": 4620,
+    "clock_seconds": 4620,
+    "displayMinute": "77'",
+    "manualClockText": "77'",
+    "lastApiSync": "2026-06-17T02:39:54.393802+00:00",
     "apiFootballFixtureId": 1489381,
     "events": [
       {
@@ -6244,6 +6264,21 @@
         "detail": "Substitution 3",
         "comments": null,
         "assist": "R. Mahrez",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Argentina",
+        "player": "L. Messi",
+        "minute": 76,
+        "extra": null,
+        "displayMinute": "76'",
+        "timer": "76:00",
+        "timerSeconds": 4560,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": "N. Gonzalez",
         "source": "api_football"
       }
     ],
