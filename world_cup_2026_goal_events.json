@@ -6373,7 +6373,7 @@
     "clock_active": false,
     "status": "2H",
     "homeScore": 1,
-    "awayScore": 0,
+    "awayScore": 1,
     "utcDate": "2026-06-17T04:00:00Z",
     "homeTeam": "Austria",
     "awayTeam": "Jordan",
@@ -6383,13 +6383,13 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 2940,
-    "clock_seconds": 2940,
-    "phase_start": "2026-06-17T05:14:19.446341+00:00",
+    "base_seconds": 3000,
+    "clock_seconds": 3000,
+    "phase_start": "2026-06-17T05:14:46.351142+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "49'",
-    "manualClockText": "49'",
-    "lastApiSync": "2026-06-17T05:14:19.446341+00:00",
+    "displayMinute": "50'",
+    "manualClockText": "50'",
+    "lastApiSync": "2026-06-17T05:14:46.351142+00:00",
     "events": [
       {
         "type": "Goal",
@@ -6419,6 +6419,21 @@
         "detail": "Substitution 1",
         "comments": null,
         "assist": "M. Arnautovic",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Jordan",
+        "player": null,
+        "minute": 50,
+        "extra": null,
+        "displayMinute": "50'",
+        "timer": "50:00",
+        "timerSeconds": 3000,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
         "source": "api_football"
       }
     ],
