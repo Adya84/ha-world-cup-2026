@@ -8725,10 +8725,10 @@
     "apiFootballFixtureId": 1489384,
     "awayScore": 2,
     "awayTeam": "Croatia",
-    "base_seconds": 2820,
+    "base_seconds": 2880,
     "clock_active": false,
-    "clock_seconds": 2820,
-    "displayMinute": "47'",
+    "clock_seconds": 2880,
+    "displayMinute": "48'",
     "events": [
       {
         "assist": null,
@@ -8782,6 +8782,24 @@
         "team": "England",
         "timer": "42:00",
         "timerSeconds": 2520,
+        "type": "Goal"
+      },
+      {
+        "assist": "E. Anderson",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "47'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 47,
+        "player": "J. Bellingham",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "47:00",
+        "timerSeconds": 2820,
         "type": "Goal"
       },
       {
@@ -8874,13 +8892,36 @@
         "type": "Goal"
       },
       {
+        "assist": "E. Anderson",
+        "awayTeam": "Croatia",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "47'",
+        "extra": null,
+        "goalNumber": 4,
+        "homeTeam": "England",
+        "isDisallowed": false,
+        "matchId": 537409,
+        "matchUtcDate": "2026-06-17T20:00:00Z",
+        "minute": 47,
+        "player": "J. Bellingham",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "47:00",
+        "timerSeconds": 2820,
+        "type": "Goal"
+      },
+      {
         "assist": "I. Perisic",
         "awayTeam": "Croatia",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "45+5'",
         "extra": 5,
-        "goalNumber": 4,
+        "goalNumber": 5,
         "homeTeam": "England",
         "isDisallowed": false,
         "matchId": 537409,
@@ -8897,11 +8938,11 @@
         "type": "Goal"
       }
     ],
-    "homeScore": 2,
+    "homeScore": 3,
     "homeTeam": "England",
-    "lastApiSync": "2026-06-17T21:11:00.982097+00:00",
-    "manualClockText": "47'",
-    "phase_start": "2026-06-17T21:11:00.982097+00:00",
+    "lastApiSync": "2026-06-17T21:11:27.213853+00:00",
+    "manualClockText": "48'",
+    "phase_start": "2026-06-17T21:11:27.213853+00:00",
     "referees": [
       {
         "name": "Clement Turpin, France",
