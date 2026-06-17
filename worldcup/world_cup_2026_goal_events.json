@@ -6388,11 +6388,31 @@
         "homeTeam": "Austria",
         "awayTeam": "Jordan",
         "goalNumber": 2
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Austria",
+        "player": "M. Arnautovic",
+        "minute": 77,
+        "extra": null,
+        "displayMinute": "77'",
+        "timer": "77:00",
+        "timerSeconds": 4620,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
+        "source": "api_football",
+        "matchId": 537398,
+        "matchUtcDate": "2026-06-17T04:00:00Z",
+        "homeTeam": "Austria",
+        "awayTeam": "Jordan",
+        "goalNumber": 3
       }
     ],
     "clock_active": false,
     "status": "2H",
-    "homeScore": 1,
+    "homeScore": 2,
     "awayScore": 1,
     "utcDate": "2026-06-17T04:00:00Z",
     "homeTeam": "Austria",
@@ -6403,13 +6423,13 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 4560,
-    "clock_seconds": 4560,
-    "phase_start": "2026-06-17T05:41:13.452896+00:00",
+    "base_seconds": 4620,
+    "clock_seconds": 4620,
+    "phase_start": "2026-06-17T05:41:40.428897+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "76'",
-    "manualClockText": "76'",
-    "lastApiSync": "2026-06-17T05:41:13.452896+00:00",
+    "displayMinute": "77'",
+    "manualClockText": "77'",
+    "lastApiSync": "2026-06-17T05:41:40.428897+00:00",
     "events": [
       {
         "type": "Goal",
@@ -6529,6 +6549,21 @@
         "detail": "Substitution 1",
         "comments": null,
         "assist": "S. Obaid",
+        "source": "api_football"
+      },
+      {
+        "type": "Goal",
+        "rawType": "Goal",
+        "team": "Austria",
+        "player": "M. Arnautovic",
+        "minute": 77,
+        "extra": null,
+        "displayMinute": "77'",
+        "timer": "77:00",
+        "timerSeconds": 4620,
+        "detail": "Normal Goal",
+        "comments": null,
+        "assist": null,
         "source": "api_football"
       }
     ],
