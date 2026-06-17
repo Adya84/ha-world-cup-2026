@@ -8316,7 +8316,7 @@
     "apiFootballFixtureId": 1539003,
     "awayScore": 1,
     "awayTeam": "Congo DR",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "cardEvents": [
       {
         "assist": null,
@@ -8356,8 +8356,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": "P. Neto",
@@ -8430,6 +8430,24 @@
         "timer": "50:00",
         "timerSeconds": 3000,
         "type": "Goal"
+      },
+      {
+        "assist": "F. Conceicao",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "B. Silva",
+        "playerOff": "B. Silva",
+        "playerOn": "F. Conceicao",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Portugal",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -8482,9 +8500,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Portugal",
-    "lastApiSync": "2026-06-17T18:09:07.202348+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-06-17T18:09:07.202348+00:00",
+    "lastApiSync": "2026-06-17T18:09:33.245931+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-06-17T18:09:33.245931+00:00",
     "referees": [
       {
         "name": "Abdulrahman Al-Jassim, Qatar",
@@ -8492,7 +8510,27 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "F. Conceicao",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "B. Silva",
+        "playerOff": "B. Silva",
+        "playerOn": "F. Conceicao",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Portugal",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-17T17:00:00Z"
   },
   "537404": {
