@@ -6049,7 +6049,7 @@
   "537397": {
     "goalEvents": [],
     "clock_active": false,
-    "status": "IN_PLAY",
+    "status": "1H",
     "homeScore": 0,
     "awayScore": 0,
     "utcDate": "2026-06-17T01:00:00Z",
@@ -6057,14 +6057,18 @@
     "awayTeam": "Algeria",
     "referees": [
       {
-        "id": 43888,
-        "name": "Szymon Marciniak",
-        "type": "REFEREE",
-        "nationality": "Poland"
+        "name": "Szymon Marciniak, Poland",
+        "type": "REFEREE"
       }
     ],
-    "phase_start": null,
-    "source": "awaiting_api_football_minute"
+    "phase_start": "2026-06-17T01:03:34.740585+00:00",
+    "source": "api_football_live_minute",
+    "base_seconds": 60,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
+    "manualClockText": "1'",
+    "lastApiSync": "2026-06-17T01:03:34.740585+00:00",
+    "apiFootballFixtureId": 1489381
   },
   "537398": {
     "goalEvents": [],
