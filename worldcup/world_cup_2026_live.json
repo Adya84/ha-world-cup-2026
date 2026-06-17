@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4440,
+      "clockSeconds": 4500,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "74'",
+      "displayMinute": "75'",
       "events": [
         {
           "assist": "P. Neto",
@@ -181,9 +181,27 @@
           "type": "Substitution"
         },
         {
-          "assist": "R. Leao",
+          "assist": "N. Semedo",
           "comments": null,
           "detail": "Substitution 2",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "N. Mendes",
+          "playerOff": "N. Mendes",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Leao",
+          "comments": null,
+          "detail": "Substitution 3",
           "displayMinute": "72'",
           "extra": null,
           "isDisallowed": false,
@@ -199,26 +217,44 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Semedo",
+          "assist": "J. Kayembe",
           "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "72'",
+          "detail": "Substitution 2",
+          "displayMinute": "75'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 72,
-          "player": "N. Mendes",
-          "playerOff": "N. Mendes",
-          "playerOn": "N. Semedo",
+          "minute": 75,
+          "player": "A. Masuaku",
+          "playerOff": "A. Masuaku",
+          "playerOn": "J. Kayembe",
           "rawType": "subst",
           "source": "api_football",
-          "team": "Portugal",
-          "timer": "72:00",
-          "timerSeconds": 4320,
+          "team": "Congo DR",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Pickel",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "75'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 75,
+          "player": "E. Kayembe",
+          "playerOff": "E. Kayembe",
+          "playerOn": "C. Pickel",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4440,
-      "fallbackClockText": "74'",
+      "fallbackClock": 4500,
+      "fallbackClockText": "75'",
       "goalEvents": [
         {
           "assist": "P. Neto",
@@ -283,8 +319,8 @@
         "tla": "POR"
       },
       "id": 537403,
-      "lastApiSync": "2026-06-17T18:38:30.681591+00:00",
-      "lastUpdated": "2026-06-17T20:38:28Z",
+      "lastApiSync": "2026-06-17T18:38:58.107810+00:00",
+      "lastUpdated": "2026-06-17T20:38:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -312,14 +348,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "74'",
-        "lastApiSync": "2026-06-17T18:38:30.681591+00:00",
-        "seconds": 4440,
+        "displayMinute": "75'",
+        "lastApiSync": "2026-06-17T18:38:58.107810+00:00",
+        "seconds": 4500,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "74'"
+        "timer": "75'"
       },
-      "manualClockText": "74'",
+      "manualClockText": "75'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "cloudCoverage": 13.3,
@@ -339,7 +375,7 @@
         "windSpeedUnit": "mph"
       },
       "matchday": 1,
-      "minute": 74,
+      "minute": 75,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -409,9 +445,27 @@
           "type": "Substitution"
         },
         {
-          "assist": "R. Leao",
+          "assist": "N. Semedo",
           "comments": null,
           "detail": "Substitution 2",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "N. Mendes",
+          "playerOff": "N. Mendes",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Leao",
+          "comments": null,
+          "detail": "Substitution 3",
           "displayMinute": "72'",
           "extra": null,
           "isDisallowed": false,
@@ -427,21 +481,39 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Semedo",
+          "assist": "J. Kayembe",
           "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "72'",
+          "detail": "Substitution 2",
+          "displayMinute": "75'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 72,
-          "player": "N. Mendes",
-          "playerOff": "N. Mendes",
-          "playerOn": "N. Semedo",
+          "minute": 75,
+          "player": "A. Masuaku",
+          "playerOff": "A. Masuaku",
+          "playerOn": "J. Kayembe",
           "rawType": "subst",
           "source": "api_football",
-          "team": "Portugal",
-          "timer": "72:00",
-          "timerSeconds": 4320,
+          "team": "Congo DR",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Pickel",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "75'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 75,
+          "player": "E. Kayembe",
+          "playerOff": "E. Kayembe",
+          "playerOn": "C. Pickel",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         }
       ],
@@ -528,7 +600,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4440,
+      "clockSeconds": 4500,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -537,7 +609,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "74'",
+      "displayMinute": "75'",
       "events": [
         {
           "assist": "P. Neto",
@@ -648,9 +720,27 @@
           "type": "Substitution"
         },
         {
-          "assist": "R. Leao",
+          "assist": "N. Semedo",
           "comments": null,
           "detail": "Substitution 2",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "N. Mendes",
+          "playerOff": "N. Mendes",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Leao",
+          "comments": null,
+          "detail": "Substitution 3",
           "displayMinute": "72'",
           "extra": null,
           "isDisallowed": false,
@@ -666,26 +756,44 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Semedo",
+          "assist": "J. Kayembe",
           "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "72'",
+          "detail": "Substitution 2",
+          "displayMinute": "75'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 72,
-          "player": "N. Mendes",
-          "playerOff": "N. Mendes",
-          "playerOn": "N. Semedo",
+          "minute": 75,
+          "player": "A. Masuaku",
+          "playerOff": "A. Masuaku",
+          "playerOn": "J. Kayembe",
           "rawType": "subst",
           "source": "api_football",
-          "team": "Portugal",
-          "timer": "72:00",
-          "timerSeconds": 4320,
+          "team": "Congo DR",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Pickel",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "75'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 75,
+          "player": "E. Kayembe",
+          "playerOff": "E. Kayembe",
+          "playerOn": "C. Pickel",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4440,
-      "fallbackClockText": "74'",
+      "fallbackClock": 4500,
+      "fallbackClockText": "75'",
       "goalEvents": [
         {
           "assist": "P. Neto",
@@ -750,8 +858,8 @@
         "tla": "POR"
       },
       "id": 537403,
-      "lastApiSync": "2026-06-17T18:38:30.681591+00:00",
-      "lastUpdated": "2026-06-17T20:38:28Z",
+      "lastApiSync": "2026-06-17T18:38:58.107810+00:00",
+      "lastUpdated": "2026-06-17T20:38:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -779,14 +887,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "74'",
-        "lastApiSync": "2026-06-17T18:38:30.681591+00:00",
-        "seconds": 4440,
+        "displayMinute": "75'",
+        "lastApiSync": "2026-06-17T18:38:58.107810+00:00",
+        "seconds": 4500,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "74'"
+        "timer": "75'"
       },
-      "manualClockText": "74'",
+      "manualClockText": "75'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "cloudCoverage": 13.3,
@@ -806,7 +914,7 @@
         "windSpeedUnit": "mph"
       },
       "matchday": 1,
-      "minute": 74,
+      "minute": 75,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -876,9 +984,27 @@
           "type": "Substitution"
         },
         {
-          "assist": "R. Leao",
+          "assist": "N. Semedo",
           "comments": null,
           "detail": "Substitution 2",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "N. Mendes",
+          "playerOff": "N. Mendes",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Leao",
+          "comments": null,
+          "detail": "Substitution 3",
           "displayMinute": "72'",
           "extra": null,
           "isDisallowed": false,
@@ -894,21 +1020,39 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Semedo",
+          "assist": "J. Kayembe",
           "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "72'",
+          "detail": "Substitution 2",
+          "displayMinute": "75'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 72,
-          "player": "N. Mendes",
-          "playerOff": "N. Mendes",
-          "playerOn": "N. Semedo",
+          "minute": 75,
+          "player": "A. Masuaku",
+          "playerOff": "A. Masuaku",
+          "playerOn": "J. Kayembe",
           "rawType": "subst",
           "source": "api_football",
-          "team": "Portugal",
-          "timer": "72:00",
-          "timerSeconds": 4320,
+          "team": "Congo DR",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Pickel",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "75'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 75,
+          "player": "E. Kayembe",
+          "playerOff": "E. Kayembe",
+          "playerOn": "C. Pickel",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         }
       ],
