@@ -7013,7 +7013,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T07:42:34Z",
+      "lastUpdated": "2026-06-17T07:42:58Z",
       "homeTeam": {
         "id": 816,
         "name": "Austria",
@@ -7050,20 +7050,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 77,
-      "clockSeconds": 4620,
-      "displayMinute": "77'",
-      "manualClockText": "77'",
+      "minute": 78,
+      "clockSeconds": 4680,
+      "displayMinute": "78'",
+      "manualClockText": "78'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T05:42:35.414500+00:00",
+      "lastApiSync": "2026-06-17T05:43:01.550627+00:00",
       "manualClock": {
-        "seconds": 4620,
-        "timer": "77'",
-        "displayMinute": "77'",
+        "seconds": 4680,
+        "timer": "78'",
+        "displayMinute": "78'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T05:42:35.414500+00:00"
+        "lastApiSync": "2026-06-17T05:43:01.550627+00:00"
       },
       "homeScore": 2,
       "awayScore": 1,
@@ -7115,15 +7115,15 @@
           "type": "Goal",
           "rawType": "Goal",
           "team": "Austria",
-          "player": "M. Arnautovic",
-          "minute": 77,
+          "player": "Y. Al Arab",
+          "minute": 76,
           "extra": null,
-          "displayMinute": "77'",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "detail": "Normal Goal",
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Own Goal",
           "comments": null,
-          "assist": "M. Sabitzer",
+          "assist": null,
           "source": "api_football",
           "matchId": 537398,
           "matchUtcDate": "2026-06-17T04:00:00Z",
@@ -7254,18 +7254,18 @@
           "source": "api_football"
         },
         {
-          "type": "Goal",
+          "type": "Own Goal",
           "rawType": "Goal",
           "team": "Austria",
-          "player": "M. Arnautovic",
-          "minute": 77,
+          "player": "Y. Al Arab",
+          "minute": 76,
           "extra": null,
-          "displayMinute": "77'",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "detail": "Normal Goal",
+          "displayMinute": "76'",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "detail": "Own Goal",
           "comments": null,
-          "assist": "M. Sabitzer",
+          "assist": null,
           "source": "api_football"
         }
       ],
@@ -7381,7 +7381,7 @@
             },
             {
               "type": "Corner Kicks",
-              "value": 2
+              "value": 3
             },
             {
               "type": "Offsides",
@@ -7405,11 +7405,11 @@
             },
             {
               "type": "Total passes",
-              "value": 455
+              "value": 458
             },
             {
               "type": "Passes accurate",
-              "value": 388
+              "value": 389
             },
             {
               "type": "Passes %",
@@ -7421,10 +7421,10 @@
             },
             {
               "type": "goals_prevented",
-              "value": "-1.60"
+              "value": "-0.60"
             }
           ],
-          "corners": 2,
+          "corners": 3,
           "shotsOnGoal": 2,
           "shotsOffGoal": 5,
           "totalShots": 8,
@@ -7491,7 +7491,7 @@
             },
             {
               "type": "Total passes",
-              "value": 234
+              "value": 235
             },
             {
               "type": "Passes accurate",
@@ -7507,7 +7507,7 @@
             },
             {
               "type": "goals_prevented",
-              "value": "-1.60"
+              "value": "-0.60"
             }
           ],
           "corners": 3,
@@ -7521,7 +7521,7 @@
           "redCards": null
         }
       },
-      "homeCorners": 2,
+      "homeCorners": 3,
       "awayCorners": 3,
       "homeShotsOnGoal": 2,
       "awayShotsOnGoal": 4,
@@ -7532,8 +7532,8 @@
       "homeOffsides": 2,
       "awayOffsides": 1,
       "apiFootballFixtureId": 1489382,
-      "fallbackClock": 4620,
-      "fallbackClockText": "77'"
+      "fallbackClock": 4680,
+      "fallbackClockText": "78'"
     },
     {
       "area": {
