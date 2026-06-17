@@ -6670,7 +6670,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T03:08:13Z",
+      "lastUpdated": "2026-06-17T03:08:40Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6712,7 +6712,7 @@
       "displayMinute": "6'",
       "manualClockText": "6'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T01:08:16.455460+00:00",
+      "lastApiSync": "2026-06-17T01:08:43.858569+00:00",
       "manualClock": {
         "seconds": 360,
         "timer": "6'",
@@ -6720,7 +6720,7 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T01:08:16.455460+00:00"
+        "lastApiSync": "2026-06-17T01:08:43.858569+00:00"
       },
       "homeScore": 0,
       "awayScore": 0,
@@ -6765,11 +6765,11 @@
             },
             {
               "type": "Offsides",
-              "value": null
+              "value": 1
             },
             {
               "type": "Ball Possession",
-              "value": "71%"
+              "value": "64%"
             },
             {
               "type": "Yellow Cards",
@@ -6785,15 +6785,15 @@
             },
             {
               "type": "Total passes",
-              "value": 12
+              "value": 44
             },
             {
               "type": "Passes accurate",
-              "value": 11
+              "value": 38
             },
             {
               "type": "Passes %",
-              "value": "92%"
+              "value": "86%"
             },
             {
               "type": "expected_goals",
@@ -6808,9 +6808,9 @@
           "shotsOnGoal": 0,
           "shotsOffGoal": 0,
           "totalShots": 0,
-          "possession": "71%",
+          "possession": "64%",
           "fouls": 1,
-          "offsides": null,
+          "offsides": 1,
           "yellowCards": null,
           "redCards": null
         },
@@ -6851,11 +6851,11 @@
             },
             {
               "type": "Offsides",
-              "value": null
+              "value": 0
             },
             {
               "type": "Ball Possession",
-              "value": "29%"
+              "value": "36%"
             },
             {
               "type": "Yellow Cards",
@@ -6871,15 +6871,15 @@
             },
             {
               "type": "Total passes",
-              "value": 5
+              "value": 25
             },
             {
               "type": "Passes accurate",
-              "value": 5
+              "value": 22
             },
             {
               "type": "Passes %",
-              "value": "100%"
+              "value": "88%"
             },
             {
               "type": "expected_goals",
@@ -6894,9 +6894,9 @@
           "shotsOnGoal": 0,
           "shotsOffGoal": 0,
           "totalShots": 0,
-          "possession": "29%",
+          "possession": "36%",
           "fouls": 0,
-          "offsides": null,
+          "offsides": 0,
           "yellowCards": null,
           "redCards": null
         }
@@ -6905,12 +6905,12 @@
       "awayCorners": null,
       "homeShotsOnGoal": 0,
       "awayShotsOnGoal": 0,
-      "homePossession": "71%",
-      "awayPossession": "29%",
+      "homePossession": "64%",
+      "awayPossession": "36%",
       "homeFouls": 1,
       "awayFouls": 0,
-      "homeOffsides": null,
-      "awayOffsides": null,
+      "homeOffsides": 1,
+      "awayOffsides": 0,
       "apiFootballFixtureId": 1489381,
       "fallbackClock": 360,
       "fallbackClockText": "6'"
