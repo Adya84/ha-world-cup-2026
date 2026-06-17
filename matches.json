@@ -8435,8 +8435,8 @@
     },
     {
       "apiFootballFixtureId": 1539003,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -8494,7 +8494,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -8503,7 +8503,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "P. Neto",
@@ -8576,10 +8576,28 @@
           "timer": "50:00",
           "timerSeconds": 3000,
           "type": "Goal"
+        },
+        {
+          "assist": "F. Conceicao",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "B. Silva",
+          "playerOff": "B. Silva",
+          "playerOn": "F. Conceicao",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "P. Neto",
@@ -8644,8 +8662,8 @@
         "tla": "POR"
       },
       "id": 537403,
-      "lastApiSync": "2026-06-17T18:09:07.202348+00:00",
-      "lastUpdated": "2026-06-17T20:09:01Z",
+      "lastApiSync": "2026-06-17T18:09:33.245931+00:00",
+      "lastUpdated": "2026-06-17T20:09:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -8673,14 +8691,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-17T18:09:07.202348+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-17T18:09:33.245931+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "cloudCoverage": 27.3,
@@ -8700,7 +8718,7 @@
         "windSpeedUnit": "mph"
       },
       "matchday": 1,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -8731,7 +8749,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "F. Conceicao",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "B. Silva",
+          "playerOff": "B. Silva",
+          "playerOn": "F. Conceicao",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-17T17:00:00Z",
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
