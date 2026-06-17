@@ -918,14 +918,14 @@
       "stage": "ALL",
       "table": [
         {
-          "draw": 0,
+          "draw": 1,
           "form": null,
-          "goalDifference": 1,
-          "goalsAgainst": 0,
-          "goalsFor": 1,
+          "goalDifference": 0,
+          "goalsAgainst": 2,
+          "goalsFor": 2,
           "lost": 0,
           "playedGames": 1,
-          "points": 3,
+          "points": 1,
           "position": 1,
           "team": {
             "crest": "https://crests.football-data.org/770.svg",
@@ -934,7 +934,26 @@
             "shortName": "England",
             "tla": "ENG"
           },
-          "won": 1
+          "won": 0
+        },
+        {
+          "draw": 1,
+          "form": null,
+          "goalDifference": 0,
+          "goalsAgainst": 2,
+          "goalsFor": 2,
+          "lost": 0,
+          "playedGames": 1,
+          "points": 1,
+          "position": 1,
+          "team": {
+            "crest": "https://crests.football-data.org/799.svg",
+            "id": 799,
+            "name": "Croatia",
+            "shortName": "Croatia",
+            "tla": "CRO"
+          },
+          "won": 0
         },
         {
           "draw": 0,
@@ -945,7 +964,7 @@
           "lost": 0,
           "playedGames": 0,
           "points": 0,
-          "position": 2,
+          "position": 3,
           "team": {
             "crest": "https://crests.football-data.org/ghana.svg",
             "id": 763,
@@ -964,32 +983,13 @@
           "lost": 0,
           "playedGames": 0,
           "points": 0,
-          "position": 2,
+          "position": 3,
           "team": {
             "crest": "https://crests.football-data.org/panama.svg",
             "id": 1836,
             "name": "Panama",
             "shortName": "Panama",
             "tla": "PAN"
-          },
-          "won": 0
-        },
-        {
-          "draw": 0,
-          "form": null,
-          "goalDifference": -1,
-          "goalsAgainst": 1,
-          "goalsFor": 0,
-          "lost": 1,
-          "playedGames": 1,
-          "points": 0,
-          "position": 4,
-          "team": {
-            "crest": "https://crests.football-data.org/799.svg",
-            "id": 799,
-            "name": "Croatia",
-            "shortName": "Croatia",
-            "tla": "CRO"
           },
           "won": 0
         }
