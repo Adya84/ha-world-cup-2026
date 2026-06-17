@@ -8460,7 +8460,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_K",
-      "lastUpdated": "2026-06-17T19:03:19Z",
+      "lastUpdated": "2026-06-17T19:03:49Z",
       "homeTeam": {
         "id": 765,
         "name": "Portugal",
@@ -8497,29 +8497,63 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 2,
-      "clockSeconds": 120,
-      "displayMinute": "2'",
-      "manualClockText": "2'",
+      "minute": 3,
+      "clockSeconds": 180,
+      "displayMinute": "3'",
+      "manualClockText": "3'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T17:03:21.671898+00:00",
+      "lastApiSync": "2026-06-17T17:03:53.551554+00:00",
       "manualClock": {
-        "seconds": 120,
-        "timer": "2'",
-        "displayMinute": "2'",
+        "seconds": 180,
+        "timer": "3'",
+        "displayMinute": "3'",
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T17:03:21.671898+00:00"
+        "lastApiSync": "2026-06-17T17:03:53.551554+00:00"
       },
       "homeScore": 0,
       "awayScore": 0,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
+      "liveStatistics": {
+        "home": {
+          "corners": null,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 0,
+          "possession": "100%",
+          "fouls": 0,
+          "offsides": null,
+          "yellowCards": null,
+          "redCards": null
+        },
+        "away": {
+          "corners": null,
+          "shotsOnGoal": 0,
+          "shotsOffGoal": 0,
+          "totalShots": 0,
+          "possession": "0%",
+          "fouls": 0,
+          "offsides": null,
+          "yellowCards": null,
+          "redCards": null
+        }
+      },
+      "homeCorners": null,
+      "awayCorners": null,
+      "homeShotsOnGoal": 0,
+      "awayShotsOnGoal": 0,
+      "homePossession": "100%",
+      "awayPossession": "0%",
+      "homeFouls": 0,
+      "awayFouls": 0,
+      "homeOffsides": null,
+      "awayOffsides": null,
       "apiFootballFixtureId": 1539003,
-      "fallbackClock": 120,
-      "fallbackClockText": "2'"
+      "fallbackClock": 180,
+      "fallbackClockText": "3'"
     },
     {
       "area": {
