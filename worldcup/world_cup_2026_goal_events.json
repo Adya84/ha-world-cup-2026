@@ -6423,13 +6423,13 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 4860,
-    "clock_seconds": 4860,
-    "phase_start": "2026-06-17T05:46:15.486637+00:00",
+    "base_seconds": 4920,
+    "clock_seconds": 4920,
+    "phase_start": "2026-06-17T05:46:42.398223+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "81'",
-    "manualClockText": "81'",
-    "lastApiSync": "2026-06-17T05:46:15.486637+00:00",
+    "displayMinute": "82'",
+    "manualClockText": "82'",
+    "lastApiSync": "2026-06-17T05:46:42.398223+00:00",
     "events": [
       {
         "type": "Goal",
@@ -6580,6 +6580,36 @@
         "comments": "Unsportsmanlike conduct",
         "assist": null,
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "A. Nasib",
+        "minute": 81,
+        "extra": null,
+        "displayMinute": "81'",
+        "timer": "81:00",
+        "timerSeconds": 4860,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "S. Al Rosan",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "E. Haddad",
+        "minute": 82,
+        "extra": null,
+        "displayMinute": "82'",
+        "timer": "82:00",
+        "timerSeconds": 4920,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "M. Al Mardi",
+        "source": "api_football"
       }
     ],
     "apiFootballFixtureId": 1489382,
@@ -6657,6 +6687,36 @@
         "detail": "Substitution 1",
         "comments": null,
         "assist": "S. Obaid",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "A. Nasib",
+        "minute": 81,
+        "extra": null,
+        "displayMinute": "81'",
+        "timer": "81:00",
+        "timerSeconds": 4860,
+        "detail": "Substitution 2",
+        "comments": null,
+        "assist": "S. Al Rosan",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "E. Haddad",
+        "minute": 82,
+        "extra": null,
+        "displayMinute": "82'",
+        "timer": "82:00",
+        "timerSeconds": 4920,
+        "detail": "Substitution 3",
+        "comments": null,
+        "assist": "M. Al Mardi",
         "source": "api_football"
       }
     ],
