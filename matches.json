@@ -6670,7 +6670,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T03:10:13Z",
+      "lastUpdated": "2026-06-17T03:10:40Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -6690,11 +6690,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         },
         "halfTime": {
           "home": 0,
-          "away": 0
+          "away": 1
         }
       },
       "odds": {
@@ -6712,7 +6712,7 @@
       "displayMinute": "8'",
       "manualClockText": "8'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T01:10:15.794161+00:00",
+      "lastApiSync": "2026-06-17T01:10:43.644348+00:00",
       "manualClock": {
         "seconds": 480,
         "timer": "8'",
@@ -6720,13 +6720,48 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T01:10:15.794161+00:00"
+        "lastApiSync": "2026-06-17T01:10:43.644348+00:00"
       },
       "homeScore": 0,
-      "awayScore": 0,
+      "awayScore": 1,
       "scoreSource": "api_football_live",
       "apiFootballStatus": "1H",
       "apiFootballStatusLong": "First Half",
+      "goalEvents": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Algeria",
+          "player": null,
+          "minute": 8,
+          "extra": null,
+          "displayMinute": "8'",
+          "timer": "8:00",
+          "timerSeconds": 480,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        }
+      ],
+      "events": [
+        {
+          "type": "Goal",
+          "rawType": "Goal",
+          "team": "Algeria",
+          "player": null,
+          "minute": 8,
+          "extra": null,
+          "displayMinute": "8'",
+          "timer": "8:00",
+          "timerSeconds": 480,
+          "detail": "Normal Goal",
+          "comments": null,
+          "assist": null,
+          "source": "api_football"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "liveStatistics": {
         "home": {
           "team": "Argentina",
