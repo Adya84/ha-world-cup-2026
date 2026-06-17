@@ -7791,13 +7791,13 @@
         "type": "REFEREE"
       }
     ],
-    "phase_start": "2026-06-17T17:13:46.885229+00:00",
+    "phase_start": "2026-06-17T17:14:19.025215+00:00",
     "source": "api_football_live_minute",
     "base_seconds": 780,
     "clock_seconds": 780,
     "displayMinute": "13'",
     "manualClockText": "13'",
-    "lastApiSync": "2026-06-17T17:13:46.885229+00:00",
+    "lastApiSync": "2026-06-17T17:14:19.025215+00:00",
     "apiFootballFixtureId": 1539003,
     "events": [
       {
@@ -7815,6 +7815,44 @@
         "detail": "Normal Goal",
         "comments": null,
         "assist": "P. Neto",
+        "isDisallowed": false,
+        "source": "api_football"
+      },
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Portugal",
+        "player": "B. Silva",
+        "playerOn": null,
+        "playerOff": null,
+        "minute": 13,
+        "extra": null,
+        "displayMinute": "13'",
+        "timer": "13:00",
+        "timerSeconds": 780,
+        "detail": "Yellow Card",
+        "comments": "Tripping",
+        "assist": null,
+        "isDisallowed": false,
+        "source": "api_football"
+      }
+    ],
+    "cardEvents": [
+      {
+        "type": "Yellow Card",
+        "rawType": "Card",
+        "team": "Portugal",
+        "player": "B. Silva",
+        "playerOn": null,
+        "playerOff": null,
+        "minute": 13,
+        "extra": null,
+        "displayMinute": "13'",
+        "timer": "13:00",
+        "timerSeconds": 780,
+        "detail": "Yellow Card",
+        "comments": "Tripping",
+        "assist": null,
         "isDisallowed": false,
         "source": "api_football"
       }
