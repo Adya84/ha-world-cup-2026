@@ -8723,7 +8723,7 @@
   },
   "537409": {
     "apiFootballFixtureId": 1489384,
-    "awayScore": 1,
+    "awayScore": 2,
     "awayTeam": "Croatia",
     "base_seconds": 2700,
     "clock_active": false,
@@ -8782,6 +8782,24 @@
         "team": "England",
         "timer": "42:00",
         "timerSeconds": 2520,
+        "type": "Goal"
+      },
+      {
+        "assist": "I. Perisic",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "45+5'",
+        "extra": 5,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "P. Musa",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Croatia",
+        "timer": "50:00",
+        "timerSeconds": 3000,
         "type": "Goal"
       }
     ],
@@ -8854,13 +8872,36 @@
         "timer": "42:00",
         "timerSeconds": 2520,
         "type": "Goal"
+      },
+      {
+        "assist": "I. Perisic",
+        "awayTeam": "Croatia",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "45+5'",
+        "extra": 5,
+        "goalNumber": 4,
+        "homeTeam": "England",
+        "isDisallowed": false,
+        "matchId": 537409,
+        "matchUtcDate": "2026-06-17T20:00:00Z",
+        "minute": 45,
+        "player": "P. Musa",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Croatia",
+        "timer": "50:00",
+        "timerSeconds": 3000,
+        "type": "Goal"
       }
     ],
     "homeScore": 2,
     "homeTeam": "England",
-    "lastApiSync": "2026-06-17T20:50:36.235212+00:00",
+    "lastApiSync": "2026-06-17T20:51:00.318028+00:00",
     "manualClockText": "45'",
-    "phase_start": "2026-06-17T20:50:36.235212+00:00",
+    "phase_start": "2026-06-17T20:51:00.318028+00:00",
     "referees": [
       {
         "name": "Clement Turpin, France",
