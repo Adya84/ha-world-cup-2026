@@ -12329,7 +12329,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T04:45:04Z",
+      "lastUpdated": "2026-06-17T04:45:31Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -12366,20 +12366,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 81,
-      "clockSeconds": 4860,
-      "displayMinute": "81'",
-      "manualClockText": "81'",
+      "minute": 82,
+      "clockSeconds": 4920,
+      "displayMinute": "82'",
+      "manualClockText": "82'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T02:45:05.466139+00:00",
+      "lastApiSync": "2026-06-17T02:45:33.470872+00:00",
       "manualClock": {
-        "seconds": 4860,
-        "timer": "81'",
-        "displayMinute": "81'",
+        "seconds": 4920,
+        "timer": "82'",
+        "displayMinute": "82'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T02:45:05.466139+00:00"
+        "lastApiSync": "2026-06-17T02:45:33.470872+00:00"
       },
       "homeScore": 3,
       "awayScore": 0,
@@ -12628,6 +12628,36 @@
           "comments": null,
           "assist": "N. Otamendi",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Algeria",
+          "player": "N. Bentaleb",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "R. Zerrouki",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Algeria",
+          "player": "I. Maza",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "A. Boulbina",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -12751,6 +12781,36 @@
           "comments": null,
           "assist": "N. Otamendi",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Algeria",
+          "player": "N. Bentaleb",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "R. Zerrouki",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Algeria",
+          "player": "I. Maza",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "A. Boulbina",
+          "source": "api_football"
         }
       ],
       "liveStatistics": {
@@ -12795,7 +12855,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "50%"
+              "value": "51%"
             },
             {
               "type": "Yellow Cards",
@@ -12811,11 +12871,11 @@
             },
             {
               "type": "Total passes",
-              "value": 477
+              "value": 490
             },
             {
               "type": "Passes accurate",
-              "value": 431
+              "value": 443
             },
             {
               "type": "Passes %",
@@ -12834,7 +12894,7 @@
           "shotsOnGoal": 6,
           "shotsOffGoal": 4,
           "totalShots": 10,
-          "possession": "50%",
+          "possession": "51%",
           "fouls": 9,
           "offsides": 3,
           "yellowCards": null,
@@ -12881,7 +12941,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "50%"
+              "value": "49%"
             },
             {
               "type": "Yellow Cards",
@@ -12901,7 +12961,7 @@
             },
             {
               "type": "Passes accurate",
-              "value": 432
+              "value": 433
             },
             {
               "type": "Passes %",
@@ -12920,7 +12980,7 @@
           "shotsOnGoal": 0,
           "shotsOffGoal": 4,
           "totalShots": 6,
-          "possession": "50%",
+          "possession": "49%",
           "fouls": 7,
           "offsides": 1,
           "yellowCards": null,
@@ -12931,15 +12991,15 @@
       "awayCorners": 2,
       "homeShotsOnGoal": 6,
       "awayShotsOnGoal": 0,
-      "homePossession": "50%",
-      "awayPossession": "50%",
+      "homePossession": "51%",
+      "awayPossession": "49%",
       "homeFouls": 9,
       "awayFouls": 7,
       "homeOffsides": 3,
       "awayOffsides": 1,
       "apiFootballFixtureId": 1489381,
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "matchDetails": {
         "events": [
           {
@@ -13120,6 +13180,36 @@
             "detail": "Substitution 5",
             "comments": null,
             "assist": "N. Otamendi",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Algeria",
+            "player": "N. Bentaleb",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "R. Zerrouki",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Algeria",
+            "player": "I. Maza",
+            "minute": 82,
+            "extra": null,
+            "displayMinute": "82'",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "A. Boulbina",
             "source": "api_football"
           }
         ],
@@ -13305,6 +13395,36 @@
             "detail": "Substitution 5",
             "comments": null,
             "assist": "N. Otamendi",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Algeria",
+            "player": "N. Bentaleb",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "R. Zerrouki",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Algeria",
+            "player": "I. Maza",
+            "minute": 82,
+            "extra": null,
+            "displayMinute": "82'",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "A. Boulbina",
             "source": "api_football"
           }
         ],
@@ -25649,7 +25769,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T04:45:04Z",
+      "lastUpdated": "2026-06-17T04:45:31Z",
       "homeTeam": {
         "id": 762,
         "name": "Argentina",
@@ -25686,20 +25806,20 @@
         }
       ],
       "liveSource": "api_football",
-      "minute": 81,
-      "clockSeconds": 4860,
-      "displayMinute": "81'",
-      "manualClockText": "81'",
+      "minute": 82,
+      "clockSeconds": 4920,
+      "displayMinute": "82'",
+      "manualClockText": "82'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T02:45:05.466139+00:00",
+      "lastApiSync": "2026-06-17T02:45:33.470872+00:00",
       "manualClock": {
-        "seconds": 4860,
-        "timer": "81'",
-        "displayMinute": "81'",
+        "seconds": 4920,
+        "timer": "82'",
+        "displayMinute": "82'",
         "active": false,
         "status": "2H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T02:45:05.466139+00:00"
+        "lastApiSync": "2026-06-17T02:45:33.470872+00:00"
       },
       "homeScore": 3,
       "awayScore": 0,
@@ -25948,6 +26068,36 @@
           "comments": null,
           "assist": "N. Otamendi",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Algeria",
+          "player": "N. Bentaleb",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "R. Zerrouki",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Algeria",
+          "player": "I. Maza",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "A. Boulbina",
+          "source": "api_football"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -26071,6 +26221,36 @@
           "comments": null,
           "assist": "N. Otamendi",
           "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Algeria",
+          "player": "N. Bentaleb",
+          "minute": 81,
+          "extra": null,
+          "displayMinute": "81'",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "detail": "Substitution 4",
+          "comments": null,
+          "assist": "R. Zerrouki",
+          "source": "api_football"
+        },
+        {
+          "type": "Substitution",
+          "rawType": "subst",
+          "team": "Algeria",
+          "player": "I. Maza",
+          "minute": 82,
+          "extra": null,
+          "displayMinute": "82'",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "detail": "Substitution 5",
+          "comments": null,
+          "assist": "A. Boulbina",
+          "source": "api_football"
         }
       ],
       "liveStatistics": {
@@ -26115,7 +26295,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "50%"
+              "value": "51%"
             },
             {
               "type": "Yellow Cards",
@@ -26131,11 +26311,11 @@
             },
             {
               "type": "Total passes",
-              "value": 477
+              "value": 490
             },
             {
               "type": "Passes accurate",
-              "value": 431
+              "value": 443
             },
             {
               "type": "Passes %",
@@ -26154,7 +26334,7 @@
           "shotsOnGoal": 6,
           "shotsOffGoal": 4,
           "totalShots": 10,
-          "possession": "50%",
+          "possession": "51%",
           "fouls": 9,
           "offsides": 3,
           "yellowCards": null,
@@ -26201,7 +26381,7 @@
             },
             {
               "type": "Ball Possession",
-              "value": "50%"
+              "value": "49%"
             },
             {
               "type": "Yellow Cards",
@@ -26221,7 +26401,7 @@
             },
             {
               "type": "Passes accurate",
-              "value": 432
+              "value": 433
             },
             {
               "type": "Passes %",
@@ -26240,7 +26420,7 @@
           "shotsOnGoal": 0,
           "shotsOffGoal": 4,
           "totalShots": 6,
-          "possession": "50%",
+          "possession": "49%",
           "fouls": 7,
           "offsides": 1,
           "yellowCards": null,
@@ -26251,15 +26431,15 @@
       "awayCorners": 2,
       "homeShotsOnGoal": 6,
       "awayShotsOnGoal": 0,
-      "homePossession": "50%",
-      "awayPossession": "50%",
+      "homePossession": "51%",
+      "awayPossession": "49%",
       "homeFouls": 9,
       "awayFouls": 7,
       "homeOffsides": 3,
       "awayOffsides": 1,
       "apiFootballFixtureId": 1489381,
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "matchDetails": {
         "events": [
           {
@@ -26440,6 +26620,36 @@
             "detail": "Substitution 5",
             "comments": null,
             "assist": "N. Otamendi",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Algeria",
+            "player": "N. Bentaleb",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "R. Zerrouki",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Algeria",
+            "player": "I. Maza",
+            "minute": 82,
+            "extra": null,
+            "displayMinute": "82'",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "A. Boulbina",
             "source": "api_football"
           }
         ],
@@ -26625,6 +26835,36 @@
             "detail": "Substitution 5",
             "comments": null,
             "assist": "N. Otamendi",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Algeria",
+            "player": "N. Bentaleb",
+            "minute": 81,
+            "extra": null,
+            "displayMinute": "81'",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "detail": "Substitution 4",
+            "comments": null,
+            "assist": "R. Zerrouki",
+            "source": "api_football"
+          },
+          {
+            "type": "Substitution",
+            "rawType": "subst",
+            "team": "Algeria",
+            "player": "I. Maza",
+            "minute": 82,
+            "extra": null,
+            "displayMinute": "82'",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "detail": "Substitution 5",
+            "comments": null,
+            "assist": "A. Boulbina",
             "source": "api_football"
           }
         ],
