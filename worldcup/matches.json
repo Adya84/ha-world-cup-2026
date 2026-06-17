@@ -8446,7 +8446,7 @@
       "awayCorners": 3,
       "awayFouls": 5,
       "awayOffsides": 1,
-      "awayPossession": "20%",
+      "awayPossession": "21%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -8494,7 +8494,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3000,
+      "clockSeconds": 3060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -8503,7 +8503,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "50'",
+      "displayMinute": "51'",
       "events": [
         {
           "assist": "P. Neto",
@@ -8596,8 +8596,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 3000,
-      "fallbackClockText": "50'",
+      "fallbackClock": 3060,
+      "fallbackClockText": "51'",
       "goalEvents": [
         {
           "assist": "P. Neto",
@@ -8651,7 +8651,7 @@
       "homeCorners": 1,
       "homeFouls": 3,
       "homeOffsides": 1,
-      "homePossession": "80%",
+      "homePossession": "79%",
       "homeScore": 1,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -8662,15 +8662,15 @@
         "tla": "POR"
       },
       "id": 537403,
-      "lastApiSync": "2026-06-17T18:14:15.208325+00:00",
-      "lastUpdated": "2026-06-17T20:14:10Z",
+      "lastApiSync": "2026-06-17T18:15:18.724093+00:00",
+      "lastUpdated": "2026-06-17T20:15:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
           "fouls": 5,
           "offsides": 1,
-          "possession": "20%",
+          "possession": "21%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 2,
@@ -8681,7 +8681,7 @@
           "corners": 1,
           "fouls": 3,
           "offsides": 1,
-          "possession": "80%",
+          "possession": "79%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -8691,34 +8691,34 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "50'",
-        "lastApiSync": "2026-06-17T18:14:15.208325+00:00",
-        "seconds": 3000,
+        "displayMinute": "51'",
+        "lastApiSync": "2026-06-17T18:15:18.724093+00:00",
+        "seconds": 3060,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "50'"
+        "timer": "51'"
       },
-      "manualClockText": "50'",
+      "manualClockText": "51'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "cloudCoverage": 27.3,
+        "cloudCoverage": 13.3,
         "condition": "partlycloudy",
-        "dewPoint": 12.8,
+        "dewPoint": 12.5,
         "entityId": "weather.forecast_home",
-        "humidity": 53,
+        "humidity": 55,
         "name": "Forecast Home",
-        "pressure": 1013.7,
+        "pressure": 1014.0,
         "pressureUnit": "mbar",
         "source": "home_assistant",
-        "temperature": 22.8,
+        "temperature": 22.0,
         "temperatureUnit": "\u00b0C",
-        "uvIndex": 1.4,
-        "windBearing": 246.1,
-        "windSpeed": 11.18,
+        "uvIndex": 0.6,
+        "windBearing": 251.1,
+        "windSpeed": 9.38,
         "windSpeedUnit": "mph"
       },
       "matchday": 1,
-      "minute": 50,
+      "minute": 51,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -8773,20 +8773,20 @@
       "utcDate": "2026-06-17T17:00:00Z",
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "cloudCoverage": 27.3,
+        "cloudCoverage": 13.3,
         "condition": "partlycloudy",
-        "dewPoint": 12.8,
+        "dewPoint": 12.5,
         "entityId": "weather.forecast_home",
-        "humidity": 53,
+        "humidity": 55,
         "name": "Forecast Home",
-        "pressure": 1013.7,
+        "pressure": 1014.0,
         "pressureUnit": "mbar",
         "source": "home_assistant",
-        "temperature": 22.8,
+        "temperature": 22.0,
         "temperatureUnit": "\u00b0C",
-        "uvIndex": 1.4,
-        "windBearing": 246.1,
-        "windSpeed": 11.18,
+        "uvIndex": 0.6,
+        "windBearing": 251.1,
+        "windSpeed": 9.38,
         "windSpeedUnit": "mph"
       }
     },
