@@ -6423,13 +6423,13 @@
         "type": "REFEREE"
       }
     ],
-    "base_seconds": 5220,
-    "clock_seconds": 5220,
-    "phase_start": "2026-06-17T05:52:14.669639+00:00",
+    "base_seconds": 5280,
+    "clock_seconds": 5280,
+    "phase_start": "2026-06-17T05:52:41.377744+00:00",
     "source": "api_football_live_minute",
-    "displayMinute": "87'",
-    "manualClockText": "87'",
-    "lastApiSync": "2026-06-17T05:52:14.669639+00:00",
+    "displayMinute": "88'",
+    "manualClockText": "88'",
+    "lastApiSync": "2026-06-17T05:52:41.377744+00:00",
     "events": [
       {
         "type": "Goal",
@@ -6625,6 +6625,36 @@
         "comments": null,
         "assist": "P. Wimmer",
         "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "M. Tamari",
+        "minute": 88,
+        "extra": null,
+        "displayMinute": "88'",
+        "timer": "88:00",
+        "timerSeconds": 5280,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "M. Al Daoud",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "O. Al Fakhouri",
+        "minute": 88,
+        "extra": null,
+        "displayMinute": "88'",
+        "timer": "88:00",
+        "timerSeconds": 5280,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "A. Azaizeh",
+        "source": "api_football"
       }
     ],
     "apiFootballFixtureId": 1489382,
@@ -6747,6 +6777,36 @@
         "detail": "Substitution 5",
         "comments": null,
         "assist": "P. Wimmer",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "M. Tamari",
+        "minute": 88,
+        "extra": null,
+        "displayMinute": "88'",
+        "timer": "88:00",
+        "timerSeconds": 5280,
+        "detail": "Substitution 4",
+        "comments": null,
+        "assist": "M. Al Daoud",
+        "source": "api_football"
+      },
+      {
+        "type": "Substitution",
+        "rawType": "subst",
+        "team": "Jordan",
+        "player": "O. Al Fakhouri",
+        "minute": 88,
+        "extra": null,
+        "displayMinute": "88'",
+        "timer": "88:00",
+        "timerSeconds": 5280,
+        "detail": "Substitution 5",
+        "comments": null,
+        "assist": "A. Azaizeh",
         "source": "api_football"
       }
     ],
