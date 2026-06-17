@@ -12961,7 +12961,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T06:35:22Z",
+      "lastUpdated": "2026-06-17T06:35:49Z",
       "homeTeam": {
         "id": 816,
         "name": "Austria",
@@ -13003,7 +13003,7 @@
       "displayMinute": "33'",
       "manualClockText": "33'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T04:35:25.407599+00:00",
+      "lastApiSync": "2026-06-17T04:35:51.462993+00:00",
       "manualClock": {
         "seconds": 1980,
         "timer": "33'",
@@ -13011,7 +13011,7 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T04:35:25.407599+00:00"
+        "lastApiSync": "2026-06-17T04:35:51.462993+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
@@ -13063,35 +13063,23 @@
           "team": "Austria",
           "statistics": [
             {
-              "type": "Shots on Goal",
-              "value": 1
-            },
-            {
-              "type": "Shots off Goal",
-              "value": 1
-            },
-            {
-              "type": "Total Shots",
-              "value": 3
-            },
-            {
               "type": "Blocked Shots",
               "value": 1
             },
             {
-              "type": "Shots insidebox",
-              "value": 0
+              "type": "Free Kicks",
+              "value": 1
             },
             {
-              "type": "Shots outsidebox",
-              "value": 3
+              "type": "Shots on Goal",
+              "value": 1
             },
             {
-              "type": "Fouls",
-              "value": 3
+              "type": "Goalkeeper Saves",
+              "value": 2
             },
             {
-              "type": "Corner Kicks",
+              "type": "Shots off Goal",
               "value": 1
             },
             {
@@ -13099,40 +13087,28 @@
               "value": 2
             },
             {
-              "type": "Ball Possession",
-              "value": "73%"
+              "type": "Total Shots",
+              "value": 3
             },
             {
-              "type": "Yellow Cards",
-              "value": null
+              "type": "Corner Kicks",
+              "value": 1
+            },
+            {
+              "type": "Fouls",
+              "value": 3
             },
             {
               "type": "Red Cards",
-              "value": null
+              "value": 0
             },
             {
-              "type": "Goalkeeper Saves",
-              "value": 2
+              "type": "Yellow Cards",
+              "value": 0
             },
             {
-              "type": "Total passes",
-              "value": 180
-            },
-            {
-              "type": "Passes accurate",
-              "value": 156
-            },
-            {
-              "type": "Passes %",
-              "value": "87%"
-            },
-            {
-              "type": "expected_goals",
-              "value": "0.08"
-            },
-            {
-              "type": "goals_prevented",
-              "value": "-0.60"
+              "type": "Ball Possession",
+              "value": "73%"
             }
           ],
           "corners": 1,
@@ -13142,42 +13118,30 @@
           "possession": "73%",
           "fouls": 3,
           "offsides": 2,
-          "yellowCards": null,
-          "redCards": null
+          "yellowCards": 0,
+          "redCards": 0
         },
         "away": {
           "team": "Jordan",
           "statistics": [
             {
-              "type": "Shots on Goal",
-              "value": 2
-            },
-            {
-              "type": "Shots off Goal",
-              "value": 2
-            },
-            {
-              "type": "Total Shots",
-              "value": 4
-            },
-            {
               "type": "Blocked Shots",
               "value": 0
             },
             {
-              "type": "Shots insidebox",
+              "type": "Free Kicks",
               "value": 2
             },
             {
-              "type": "Shots outsidebox",
+              "type": "Shots on Goal",
               "value": 2
             },
             {
-              "type": "Fouls",
-              "value": 1
+              "type": "Goalkeeper Saves",
+              "value": 0
             },
             {
-              "type": "Corner Kicks",
+              "type": "Shots off Goal",
               "value": 2
             },
             {
@@ -13185,40 +13149,28 @@
               "value": 0
             },
             {
-              "type": "Ball Possession",
-              "value": "27%"
+              "type": "Total Shots",
+              "value": 4
             },
             {
-              "type": "Yellow Cards",
-              "value": null
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Fouls",
+              "value": 1
             },
             {
               "type": "Red Cards",
-              "value": null
-            },
-            {
-              "type": "Goalkeeper Saves",
               "value": 0
             },
             {
-              "type": "Total passes",
-              "value": 66
+              "type": "Yellow Cards",
+              "value": 0
             },
             {
-              "type": "Passes accurate",
-              "value": 46
-            },
-            {
-              "type": "Passes %",
-              "value": "70%"
-            },
-            {
-              "type": "expected_goals",
-              "value": "0.16"
-            },
-            {
-              "type": "goals_prevented",
-              "value": "-0.60"
+              "type": "Ball Possession",
+              "value": "27%"
             }
           ],
           "corners": 2,
@@ -13228,8 +13180,8 @@
           "possession": "27%",
           "fouls": 1,
           "offsides": 0,
-          "yellowCards": null,
-          "redCards": null
+          "yellowCards": 0,
+          "redCards": 0
         }
       },
       "homeCorners": 1,
@@ -26260,7 +26212,7 @@
       "matchday": 1,
       "stage": "GROUP_STAGE",
       "group": "GROUP_J",
-      "lastUpdated": "2026-06-17T06:35:22Z",
+      "lastUpdated": "2026-06-17T06:35:49Z",
       "homeTeam": {
         "id": 816,
         "name": "Austria",
@@ -26302,7 +26254,7 @@
       "displayMinute": "33'",
       "manualClockText": "33'",
       "clockSource": "api_football_live_minute",
-      "lastApiSync": "2026-06-17T04:35:25.407599+00:00",
+      "lastApiSync": "2026-06-17T04:35:51.462993+00:00",
       "manualClock": {
         "seconds": 1980,
         "timer": "33'",
@@ -26310,7 +26262,7 @@
         "active": false,
         "status": "1H",
         "source": "api_football_live_minute",
-        "lastApiSync": "2026-06-17T04:35:25.407599+00:00"
+        "lastApiSync": "2026-06-17T04:35:51.462993+00:00"
       },
       "homeScore": 1,
       "awayScore": 0,
@@ -26362,35 +26314,23 @@
           "team": "Austria",
           "statistics": [
             {
-              "type": "Shots on Goal",
-              "value": 1
-            },
-            {
-              "type": "Shots off Goal",
-              "value": 1
-            },
-            {
-              "type": "Total Shots",
-              "value": 3
-            },
-            {
               "type": "Blocked Shots",
               "value": 1
             },
             {
-              "type": "Shots insidebox",
-              "value": 0
+              "type": "Free Kicks",
+              "value": 1
             },
             {
-              "type": "Shots outsidebox",
-              "value": 3
+              "type": "Shots on Goal",
+              "value": 1
             },
             {
-              "type": "Fouls",
-              "value": 3
+              "type": "Goalkeeper Saves",
+              "value": 2
             },
             {
-              "type": "Corner Kicks",
+              "type": "Shots off Goal",
               "value": 1
             },
             {
@@ -26398,40 +26338,28 @@
               "value": 2
             },
             {
-              "type": "Ball Possession",
-              "value": "73%"
+              "type": "Total Shots",
+              "value": 3
             },
             {
-              "type": "Yellow Cards",
-              "value": null
+              "type": "Corner Kicks",
+              "value": 1
+            },
+            {
+              "type": "Fouls",
+              "value": 3
             },
             {
               "type": "Red Cards",
-              "value": null
+              "value": 0
             },
             {
-              "type": "Goalkeeper Saves",
-              "value": 2
+              "type": "Yellow Cards",
+              "value": 0
             },
             {
-              "type": "Total passes",
-              "value": 180
-            },
-            {
-              "type": "Passes accurate",
-              "value": 156
-            },
-            {
-              "type": "Passes %",
-              "value": "87%"
-            },
-            {
-              "type": "expected_goals",
-              "value": "0.08"
-            },
-            {
-              "type": "goals_prevented",
-              "value": "-0.60"
+              "type": "Ball Possession",
+              "value": "73%"
             }
           ],
           "corners": 1,
@@ -26441,42 +26369,30 @@
           "possession": "73%",
           "fouls": 3,
           "offsides": 2,
-          "yellowCards": null,
-          "redCards": null
+          "yellowCards": 0,
+          "redCards": 0
         },
         "away": {
           "team": "Jordan",
           "statistics": [
             {
-              "type": "Shots on Goal",
-              "value": 2
-            },
-            {
-              "type": "Shots off Goal",
-              "value": 2
-            },
-            {
-              "type": "Total Shots",
-              "value": 4
-            },
-            {
               "type": "Blocked Shots",
               "value": 0
             },
             {
-              "type": "Shots insidebox",
+              "type": "Free Kicks",
               "value": 2
             },
             {
-              "type": "Shots outsidebox",
+              "type": "Shots on Goal",
               "value": 2
             },
             {
-              "type": "Fouls",
-              "value": 1
+              "type": "Goalkeeper Saves",
+              "value": 0
             },
             {
-              "type": "Corner Kicks",
+              "type": "Shots off Goal",
               "value": 2
             },
             {
@@ -26484,40 +26400,28 @@
               "value": 0
             },
             {
-              "type": "Ball Possession",
-              "value": "27%"
+              "type": "Total Shots",
+              "value": 4
             },
             {
-              "type": "Yellow Cards",
-              "value": null
+              "type": "Corner Kicks",
+              "value": 2
+            },
+            {
+              "type": "Fouls",
+              "value": 1
             },
             {
               "type": "Red Cards",
-              "value": null
-            },
-            {
-              "type": "Goalkeeper Saves",
               "value": 0
             },
             {
-              "type": "Total passes",
-              "value": 66
+              "type": "Yellow Cards",
+              "value": 0
             },
             {
-              "type": "Passes accurate",
-              "value": 46
-            },
-            {
-              "type": "Passes %",
-              "value": "70%"
-            },
-            {
-              "type": "expected_goals",
-              "value": "0.16"
-            },
-            {
-              "type": "goals_prevented",
-              "value": "-0.60"
+              "type": "Ball Possession",
+              "value": "27%"
             }
           ],
           "corners": 2,
@@ -26527,8 +26431,8 @@
           "possession": "27%",
           "fouls": 1,
           "offsides": 0,
-          "yellowCards": null,
-          "redCards": null
+          "yellowCards": 0,
+          "redCards": 0
         }
       },
       "homeCorners": 1,
