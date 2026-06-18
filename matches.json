@@ -10616,10 +10616,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
+      "awayCorners": 0,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "27%",
+      "awayPossession": "25%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -10649,7 +10649,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 600,
+      "clockSeconds": 660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -10658,7 +10658,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "10'",
+      "displayMinute": "11'",
       "events": [
         {
           "assist": null,
@@ -10679,15 +10679,15 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 600,
-      "fallbackClockText": "10'",
+      "fallbackClock": 660,
+      "fallbackClockText": "11'",
       "group": "GROUP_B",
-      "homeCorners": null,
-      "homeFouls": 0,
+      "homeCorners": 1,
+      "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "73%",
+      "homePossession": "75%",
       "homeScore": 0,
-      "homeShotsOnGoal": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
         "id": 828,
@@ -10696,15 +10696,15 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T22:11:02.865107+00:00",
-      "lastUpdated": "2026-06-19T00:10:59Z",
+      "lastApiSync": "2026-06-18T22:11:25.868023+00:00",
+      "lastUpdated": "2026-06-19T00:11:23Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
+          "corners": 0,
           "fouls": 0,
           "offsides": null,
-          "possession": "27%",
+          "possession": "25%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -10712,27 +10712,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": null,
-          "fouls": 0,
+          "corners": 1,
+          "fouls": 1,
           "offsides": null,
-          "possession": "73%",
+          "possession": "75%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 0,
+          "shotsOnGoal": 1,
+          "totalShots": 1,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "10'",
-        "lastApiSync": "2026-06-18T22:11:02.865107+00:00",
-        "seconds": 600,
+        "displayMinute": "11'",
+        "lastApiSync": "2026-06-18T22:11:25.868023+00:00",
+        "seconds": 660,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "10'"
+        "timer": "11'"
       },
-      "manualClockText": "10'",
+      "manualClockText": "11'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -10757,7 +10757,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 10,
+      "minute": 11,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
