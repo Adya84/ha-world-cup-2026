@@ -10703,7 +10703,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4260,
+      "clockSeconds": 4320,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -10712,7 +10712,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "71'",
+      "displayMinute": "72'",
       "events": [
         {
           "assist": null,
@@ -10983,10 +10983,28 @@
           "timer": "71:00",
           "timerSeconds": 4260,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Oluwaseyi",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "A. Ahmed",
+          "playerOff": "A. Ahmed",
+          "playerOn": "T. Oluwaseyi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4260,
-      "fallbackClockText": "71'",
+      "fallbackClock": 4320,
+      "fallbackClockText": "72'",
       "goalEvents": [
         {
           "assist": null,
@@ -11097,8 +11115,8 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T23:33:09.772929+00:00",
-      "lastUpdated": "2026-06-19T01:33:04Z",
+      "lastApiSync": "2026-06-18T23:33:34.109916+00:00",
+      "lastUpdated": "2026-06-19T01:33:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -11126,14 +11144,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "71'",
-        "lastApiSync": "2026-06-18T23:33:09.772929+00:00",
-        "seconds": 4260,
+        "displayMinute": "72'",
+        "lastApiSync": "2026-06-18T23:33:34.109916+00:00",
+        "seconds": 4320,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "71'"
+        "timer": "72'"
       },
-      "manualClockText": "71'",
+      "manualClockText": "72'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -11158,7 +11176,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 71,
+      "minute": 72,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -11326,6 +11344,24 @@
           "player": "L. De Fougerolles",
           "playerOff": "L. De Fougerolles",
           "playerOn": "J. Shaffelburg",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Oluwaseyi",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "A. Ahmed",
+          "playerOff": "A. Ahmed",
+          "playerOn": "T. Oluwaseyi",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
