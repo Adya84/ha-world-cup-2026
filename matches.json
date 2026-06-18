@@ -9371,7 +9371,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -9435,7 +9434,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -9443,7 +9441,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "B. Thomas-Asante",
@@ -9503,41 +9500,7 @@
         "tla": "GHA"
       },
       "id": 537410,
-      "lastApiSync": "2026-06-18T01:03:11.252630+00:00",
-      "lastUpdated": "2026-06-18T03:04:22Z",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-18T01:03:11.252630+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "90:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Toronto",
-        "cloudCoverage": 100.0,
-        "condition": "lightrain",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-18T01:01:23.171193+00:00",
-        "humidity": 78.8,
-        "latitude": 43.6332,
-        "longitude": -79.4186,
-        "name": "BMO Field weather",
-        "observedAt": "2026-06-18T00:00:00Z",
-        "pressure": 1002.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BMO Field",
-        "temperature": 17.8,
-        "temperatureUnit": "C",
-        "windBearing": 196.3,
-        "windSpeed": 6.2,
-        "windSpeedUnit": "m/s"
-      },
+      "lastUpdated": "2026-06-18T03:04:31Z",
       "matchday": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
@@ -9570,7 +9533,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "B. Asare",
@@ -9735,30 +9698,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-17T23:00:00Z",
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Toronto",
-        "cloudCoverage": 100.0,
-        "condition": "lightrain",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-18T01:01:23.171193+00:00",
-        "humidity": 78.8,
-        "latitude": 43.6332,
-        "longitude": -79.4186,
-        "name": "BMO Field weather",
-        "observedAt": "2026-06-18T00:00:00Z",
-        "pressure": 1002.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BMO Field",
-        "temperature": 17.8,
-        "temperatureUnit": "C",
-        "windBearing": 196.3,
-        "windSpeed": 6.2,
-        "windSpeedUnit": "m/s"
-      }
+      "utcDate": "2026-06-17T23:00:00Z"
     },
     {
       "area": {
