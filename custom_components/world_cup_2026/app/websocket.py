@@ -332,8 +332,14 @@ def _normalise_scorer(scorer):
 
     if isinstance(player, dict):
         player_name = player.get("name") or player.get("firstName") or "Unknown"
+        player_id = player.get("id")
+        api_football_player_id = player.get("apiFootballPlayerId") or player.get("apiSportsPlayerId")
+        player_photo = player.get("photo") or player.get("image") or player.get("picture")
     else:
         player_name = player or "Unknown"
+        player_id = scorer.get("player_id") or scorer.get("playerId")
+        api_football_player_id = scorer.get("apiFootballPlayerId") or scorer.get("apiSportsPlayerId")
+        player_photo = scorer.get("photo") or scorer.get("image") or scorer.get("picture")
 
     if isinstance(team, dict):
         team_name = team.get("shortName") or team.get("name") or team.get("tla") or "TBC"
@@ -343,6 +349,15 @@ def _normalise_scorer(scorer):
     return {
         "player": player_name,
         "name": player_name,
+        "playerId": player_id,
+        "apiFootballPlayerId": api_football_player_id,
+        "apiSportsPlayerId": api_football_player_id,
+        "photo": player_photo,
+        "image": player_photo,
+        "photoLookup": scorer.get("photoLookup"),
+        "photoScore": scorer.get("photoScore"),
+        "photoMatchedName": scorer.get("photoMatchedName"),
+        "photoMatchedId": scorer.get("photoMatchedId"),
         "team": team_name,
         "goals": scorer.get("goals", 0),
         "assists": scorer.get("assists", 0),
