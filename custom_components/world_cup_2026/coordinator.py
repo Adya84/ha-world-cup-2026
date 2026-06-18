@@ -843,6 +843,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         self._goal_event_store_loaded = False
         self._github_payload_hashes = {}
         self._stadium_weather_cache = {}
+        self._api_football_player_photo_cache = {}
 
     def _api_football_is_rate_limited(self):
         """Return True while API-Football is in rate-limit cool-down."""
@@ -1898,6 +1899,212 @@ class WorldCupCoordinator(DataUpdateCoordinator):
     async def _api_football_enabled(self):
         settings = await self._async_read_github_settings()
         return settings.get("api_football_key")
+
+    def _scorer_player_name(self, scorer):
+        player = scorer.get("player", {}) if isinstance(scorer, dict) else {}
+        if isinstance(player, dict):
+            return player.get("name") or player.get("firstName") or scorer.get("name")
+        return player or scorer.get("name") if isinstance(scorer, dict) else None
+
+    def _scorer_team_name(self, scorer):
+        team = scorer.get("team", {}) if isinstance(scorer, dict) else {}
+        if isinstance(team, dict):
+            return team.get("shortName") or team.get("name") or team.get("tla") or scorer.get("teamName")
+        return team or scorer.get("teamName") or scorer.get("nationality") if isinstance(scorer, dict) else None
+
+    def _api_football_player_result_matches_team(self, item, team_name):
+        if not team_name:
+            return True
+        for stat in item.get("statistics") or []:
+            stat_team = (stat.get("team") or {}).get("name")
+            if stat_team and _team_names_match(stat_team, team_name):
+                return True
+        return False
+
+    def _api_football_player_searches(self, player_name):
+        """Return API-Football player-photo searches, starting with World Cup then major club leagues."""
+        seasons = [2025, 2024, 2026]
+        major_leagues = [
+            39,   # Premier League
+            140,  # La Liga
+            135,  # Serie A
+            78,   # Bundesliga
+            61,   # Ligue 1
+            253,  # MLS
+            262,  # Liga MX
+            307,  # Saudi Pro League
+            88,   # Eredivisie
+            94,   # Primeira Liga
+            203,  # Turkish Super Lig
+            2,    # UEFA Champions League
+            3,    # UEFA Europa League
+        ]
+
+        searches = [{"endpoint": "players/profiles", "params": {"search": player_name}}]
+        searches.append({"endpoint": "players", "params": {"search": player_name, "league": 1, "season": 2026}})
+        for season in seasons:
+            for league in major_leagues:
+                searches.append({"endpoint": "players", "params": {"search": player_name, "league": league, "season": season}})
+        searches.append({"endpoint": "players", "params": {"search": player_name}})
+        return searches
+
+    def _normalise_person_name(self, value):
+        return " ".join(
+            "".join(
+                ch if ch.isalnum() else " "
+                for ch in str(value or "").lower()
+            ).split()
+        )
+
+    def _api_football_player_name_score(self, api_name, wanted_name):
+        api_norm = self._normalise_person_name(api_name)
+        wanted_norm = self._normalise_person_name(wanted_name)
+        if not api_norm or not wanted_norm:
+            return 0
+        if api_norm == wanted_norm:
+            return 100
+
+        api_parts = api_norm.split()
+        wanted_parts = wanted_norm.split()
+        api_set = set(api_parts)
+        wanted_set = set(wanted_parts)
+        if wanted_set and wanted_set.issubset(api_set):
+            return 75
+        if api_set and api_set.issubset(wanted_set):
+            return 65
+
+        api_last = api_parts[-1] if api_parts else ""
+        wanted_last = wanted_parts[-1] if wanted_parts else ""
+        api_first = api_parts[0] if api_parts else ""
+        wanted_first = wanted_parts[0] if wanted_parts else ""
+        if api_last and api_last == wanted_last:
+            if api_first and wanted_first and api_first[0] == wanted_first[0]:
+                return 80
+            return 55
+        return 0
+
+    def _api_football_player_match_score(self, item, player_name, team_name):
+        player = item.get("player") or {}
+        score = self._api_football_player_name_score(player.get("name"), player_name)
+        if not score:
+            return 0
+
+        nationality = player.get("nationality")
+        if nationality and team_name and _team_names_match(nationality, team_name):
+            score += 30
+        if self._api_football_player_result_matches_team(item, team_name):
+            score += 20
+        if player.get("photo"):
+            score += 10
+        return score
+
+    async def _fetch_api_football_player_photo(self, session, headers, player_name, team_name):
+        """Find the correct API-Football player photo by player name and team."""
+        player_name = str(player_name or "").strip()
+        team_name = str(team_name or "").strip()
+        if not player_name or player_name.lower() == "unknown":
+            return {}
+
+        cache_key = f"{_normalise_team_name(team_name)}|{player_name.lower()}"
+        if cache_key in self._api_football_player_photo_cache:
+            return self._api_football_player_photo_cache.get(cache_key) or {}
+
+        if self._api_football_is_rate_limited():
+            return {}
+
+        matched = None
+        best_score = 0
+        matched_with_photo = None
+        best_photo_score = 0
+
+        for search in self._api_football_player_searches(player_name):
+            endpoint = search.get("endpoint") or "players"
+            params = search.get("params") or {}
+            url = f"https://v3.football.api-sports.io/{endpoint}"
+            try:
+                async with session.get(url, headers=headers, params=params) as response:
+                    if response.status == 429:
+                        await response.text()
+                        self._mark_api_football_rate_limited("API-Football player photo lookup")
+                        return {}
+                    if response.status >= 400:
+                        text = await response.text()
+                        _LOGGER.warning("API-Football player photo lookup failed for %s: %s %s", player_name, response.status, text)
+                        continue
+                    payload = await response.json()
+            except Exception as err:  # pylint: disable=broad-exception-caught
+                _LOGGER.warning("API-Football player photo lookup failed for %s: %s", player_name, err)
+                continue
+
+            for item in payload.get("response", []) or []:
+                if endpoint == "players/profiles":
+                    item = {"player": item.get("player") or item}
+                score = self._api_football_player_match_score(item, player_name, team_name)
+                if score > best_score:
+                    matched = item
+                    best_score = score
+                if ((item.get("player") or {}).get("photo")) and score > best_photo_score:
+                    matched_with_photo = item
+                    best_photo_score = score
+            if matched_with_photo and best_photo_score >= 80:
+                break
+
+        if matched_with_photo:
+            matched = matched_with_photo
+            best_score = best_photo_score
+
+        if best_score < 80:
+            matched = None
+
+        player = (matched or {}).get("player") or {}
+        player_id = player.get("id")
+        photo_url = player.get("photo") or (f"https://media.api-sports.io/football/players/{player_id}.png" if player_id else None)
+        if photo_url:
+            result = {
+                "apiFootballPlayerId": player_id,
+                "photo": photo_url,
+                "image": photo_url,
+                "photoLookup": "matched_with_photo" if player.get("photo") else "matched_with_api_id_photo",
+                "photoScore": best_score,
+                "photoMatchedName": player.get("name"),
+                "photoMatchedId": player_id,
+            }
+        else:
+            result = {
+                "photoLookup": "matched_no_photo" if matched else "no_match",
+                "photoScore": best_score,
+                "photoMatchedName": player.get("name"),
+                "photoMatchedId": player_id,
+            }
+
+        self._api_football_player_photo_cache[cache_key] = result
+        return result
+
+    async def _add_api_football_photos_to_scorers(self, scorers, limit=12):
+        """Attach real API-Football player photos to scorer rows when available."""
+        if not scorers:
+            return scorers
+        api_key = await self._api_football_enabled()
+        if not api_key:
+            return scorers
+
+        enriched = [dict(scorer) for scorer in scorers]
+        headers = {"x-apisports-key": api_key}
+        timeout = aiohttp.ClientTimeout(total=30)
+
+        async with aiohttp.ClientSession(timeout=timeout) as session:
+            for scorer in enriched[:limit]:
+                player_name = self._scorer_player_name(scorer)
+                team_name = self._scorer_team_name(scorer)
+                photo_data = await self._fetch_api_football_player_photo(session, headers, player_name, team_name)
+                if not photo_data:
+                    continue
+                scorer.update(photo_data)
+                player = scorer.get("player")
+                if isinstance(player, dict):
+                    player.update(photo_data)
+
+        return enriched
 
     def _normalise_api_football_event(self, event):
         """Convert one API-Football timeline event into a panel-friendly object."""
@@ -3027,6 +3234,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         matches = await self._merge_persistent_goal_events_to_matches(matches)
         standings = standings_data.get("standings", [])
         scorers = scorers_data.get("scorers", [])
+        scorers = await self._add_api_football_photos_to_scorers(scorers)
 
         new_interval = self._choose_poll_interval(matches)
 
