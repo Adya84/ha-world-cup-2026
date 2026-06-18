@@ -7644,65 +7644,6 @@ class WorldCup2026Panel extends HTMLElement {
           margin-top: -5px;
         }
 
-        .live-premium-timeline {
-          position: relative;
-        }
-
-        .live-premium-timeline::before {
-          content: "";
-          position: absolute;
-          left: 25px;
-          top: 8px;
-          bottom: 8px;
-          width: 2px;
-          border-radius: 99px;
-          background: linear-gradient(180deg, rgba(34,197,94,.75), rgba(59,130,246,.40), rgba(244,63,94,.40));
-          box-shadow: 0 0 16px rgba(34,197,94,.24);
-          pointer-events: none;
-        }
-
-        .live-timeline-row {
-          position: relative;
-          border: 1px solid rgba(255,255,255,.07);
-          box-shadow: inset 0 0 0 1px rgba(255,255,255,.025);
-        }
-
-        .live-timeline-row b {
-          position: relative;
-          z-index: 1;
-          border-radius: 999px;
-          background: rgba(15,23,42,.92);
-          min-height: 28px;
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          box-shadow: 0 0 12px rgba(255,255,255,.08);
-        }
-
-        .live-timeline-goal {
-          background: linear-gradient(135deg, rgba(34,197,94,.22), rgba(0,0,0,.18));
-          border-color: rgba(74,222,128,.34);
-        }
-        .live-timeline-goal b { color: #dcfce7; box-shadow: 0 0 16px rgba(34,197,94,.34); }
-
-        .live-timeline-card {
-          background: linear-gradient(135deg, rgba(245,158,11,.18), rgba(0,0,0,.18));
-          border-color: rgba(250,204,21,.30);
-        }
-        .live-timeline-card b { box-shadow: 0 0 15px rgba(250,204,21,.30); }
-
-        .live-timeline-substitution {
-          background: linear-gradient(135deg, rgba(6,182,212,.18), rgba(0,0,0,.18));
-          border-color: rgba(34,211,238,.28);
-        }
-        .live-timeline-substitution b { box-shadow: 0 0 15px rgba(34,211,238,.26); }
-
-        .live-timeline-var {
-          background: linear-gradient(135deg, rgba(59,130,246,.20), rgba(0,0,0,.18));
-          border-color: rgba(96,165,250,.32);
-        }
-        .live-timeline-var b { color: #bfdbfe; box-shadow: 0 0 15px rgba(96,165,250,.28); }
-
         .live-discipline-grid {
           display: grid;
           grid-template-columns: repeat(2, 1fr);
@@ -7749,31 +7690,6 @@ class WorldCup2026Panel extends HTMLElement {
           gap: 12px;
           align-items: flex-start;
           margin-bottom: 10px;
-        }
-
-        .live-weather-head-right {
-          display: inline-flex;
-          align-items: center;
-          justify-content: flex-end;
-          gap: 8px;
-          flex-wrap: wrap;
-          flex: 0 0 auto;
-        }
-
-        .live-weather-time {
-          display: inline-flex;
-          align-items: center;
-          justify-content: center;
-          padding: 7px 11px;
-          border-radius: 999px;
-          background: rgba(34,197,94,.13);
-          border: 1px solid rgba(74,222,128,.30);
-          color: #dcfce7;
-          font-size: .82rem;
-          line-height: 1;
-          font-weight: 1000;
-          box-shadow: 0 0 14px rgba(34,197,94,.12);
-          white-space: nowrap;
         }
 
         .live-weather-head .live-premium-card-title {
@@ -7910,11 +7826,6 @@ class WorldCup2026Panel extends HTMLElement {
 
           .live-weather-metrics {
             grid-template-columns: repeat(2, minmax(0, 1fr));
-          }
-
-          .live-weather-head-right {
-            justify-content: flex-start;
-            width: 100%;
           }
 
         }
@@ -8121,8 +8032,8 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-app.wc-view-tablet .wc-tablet-header-nav button.wc-live-nav-button.is-offline {
           background: rgba(231, 76, 60, 0.24);
           border-color: rgba(231, 76, 60, 0.62);
-          box-shadow: 0 0 12px rgba(231, 76, 60, 0.42), 0 0 24px rgba(231, 76, 60, 0.16);
-          animation: none;
+          box-shadow: 0 0 14px rgba(231, 76, 60, 0.18);
+          animation: wcLiveNavPulseRed 1.4s ease-in-out infinite;
         }
 
         .wc-nav button.wc-live-nav-button.is-live,
@@ -11211,6 +11122,107 @@ class WorldCup2026Panel extends HTMLElement {
           align-items: center;
           gap: 8px;
           min-width: 0;
+        }
+
+        .golden-profile-section {
+          border-color: rgba(255,220,120,0.22);
+        }
+
+        .golden-profile-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(245px, 1fr));
+          gap: 12px;
+        }
+
+        .golden-profile-card {
+          display: grid;
+          grid-template-columns: 82px 1fr;
+          gap: 12px;
+          align-items: center;
+          min-width: 0;
+          padding: 13px;
+          border-radius: 18px;
+          background: rgba(255,255,255,0.075);
+          border: 1px solid rgba(255,255,255,0.12);
+        }
+
+        .golden-profile-photo {
+          position: relative;
+          width: 82px;
+          height: 82px;
+          border-radius: 20px;
+          overflow: hidden;
+          background: rgba(255,220,120,0.18);
+          border: 1px solid rgba(255,220,120,0.28);
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          box-shadow: 0 14px 28px rgba(0,0,0,0.22);
+        }
+
+        .golden-profile-photo img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          display: block;
+        }
+
+        .golden-profile-fallback {
+          width: 100%;
+          height: 100%;
+          align-items: center;
+          justify-content: center;
+          font-size: 24px;
+          font-weight: 1000;
+          color: #fff7d6;
+        }
+
+        .golden-profile-main {
+          min-width: 0;
+        }
+
+        .golden-profile-rank {
+          display: inline-flex;
+          margin-bottom: 5px;
+          padding: 3px 8px;
+          border-radius: 999px;
+          background: rgba(255,220,120,0.16);
+          color: #fde68a;
+          font-size: 11px;
+          font-weight: 1000;
+        }
+
+        .golden-profile-main h3 {
+          margin: 0;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;
+          font-size: 17px;
+        }
+
+        .golden-profile-main p {
+          margin: 5px 0 9px;
+          opacity: 0.82;
+          font-weight: 800;
+        }
+
+        .golden-profile-stats {
+          display: flex;
+          gap: 8px;
+          flex-wrap: wrap;
+        }
+
+        .golden-profile-stats span {
+          padding: 5px 8px;
+          border-radius: 999px;
+          background: rgba(255,255,255,0.08);
+          font-size: 11px;
+          font-weight: 900;
+        }
+
+        .golden-profile-stats strong {
+          margin-right: 4px;
+          color: #fde68a;
         }
 
         .golden-table-medal {
@@ -17706,53 +17718,6 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
-  stadiumTimeZoneFor(match, weather = {}) {
-    const direct = weather.timeZone || weather.timezone || weather.tz || weather.ianaTimeZone
-      || match?.venueTimeZone || match?.venueTimezone || match?.timeZone || match?.timezone;
-    if (direct) return String(direct);
-
-    const venue = this.fixtureVenueInfo(match) || {};
-    const city = String(weather.city || venue.city || match?.venueCity || match?.city || "").toLowerCase();
-    const stadium = String(weather.stadium || venue.name || venue.realName || match?.venue || match?.stadium || "").toLowerCase();
-    const key = `${city} ${stadium}`;
-
-    const zones = [
-      [["toronto"], "America/Toronto"],
-      [["vancouver"], "America/Vancouver"],
-      [["mexico city", "ciudad de mexico", "azteca"], "America/Mexico_City"],
-      [["guadalajara"], "America/Mexico_City"],
-      [["monterrey"], "America/Monterrey"],
-      [["atlanta"], "America/New_York"],
-      [["boston", "foxborough"], "America/New_York"],
-      [["miami"], "America/New_York"],
-      [["new york", "new jersey", "metlife", "east rutherford"], "America/New_York"],
-      [["philadelphia"], "America/New_York"],
-      [["kansas city"], "America/Chicago"],
-      [["dallas", "arlington"], "America/Chicago"],
-      [["houston"], "America/Chicago"],
-      [["los angeles", "inglewood"], "America/Los_Angeles"],
-      [["san francisco", "bay area", "santa clara"], "America/Los_Angeles"],
-      [["seattle"], "America/Los_Angeles"],
-    ];
-
-    const found = zones.find(([needles]) => needles.some((needle) => key.includes(needle)));
-    return found ? found[1] : "";
-  }
-
-  venueLocalTime(match, weather = {}) {
-    const timeZone = this.stadiumTimeZoneFor(match, weather);
-    if (!timeZone) return "";
-    try {
-      return new Date().toLocaleTimeString(this.locale(), {
-        hour: "2-digit",
-        minute: "2-digit",
-        timeZone,
-      });
-    } catch {
-      return "";
-    }
-  }
-
   matchWeatherSection(match) {
     const weather = match?.matchWeather || match?.weather || {};
     if (!weather || typeof weather !== "object" || !Object.keys(weather).length) return "";
@@ -17768,9 +17733,8 @@ class WorldCup2026Panel extends HTMLElement {
     const humidity = weather.humidity !== null && weather.humidity !== undefined && weather.humidity !== "" ? `${weather.humidity}%` : "";
     const cloud = weather.cloudCoverage !== null && weather.cloudCoverage !== undefined && weather.cloudCoverage !== "" ? `${weather.cloudCoverage}%` : "";
     const uv = weather.uvIndex !== null && weather.uvIndex !== undefined && weather.uvIndex !== "" ? `${weather.uvIndex}` : "";
-    const localTime = this.venueLocalTime(match, weather);
 
-    if (!temp && !condition && !wind && !humidity && !cloud && !uv && !localTime) return "";
+    if (!temp && !condition && !wind && !humidity && !cloud && !uv) return "";
 
     const metric = (icon, value, label) => value
       ? `<div class="live-weather-metric"><strong>${this.esc(icon)} ${this.esc(value)}</strong><span>${this.esc(label)}</span></div>`
@@ -17783,12 +17747,7 @@ class WorldCup2026Panel extends HTMLElement {
             <div class="live-premium-card-title">🌤 Stadium Weather</div>
             ${locationLabel ? `<small>${this.esc(locationLabel)}</small>` : ""}
           </div>
-          ${(localTime || temp) ? `
-            <div class="live-weather-head-right">
-              ${localTime ? `<span class="live-weather-time">🕒 ${this.esc(localTime)}</span>` : ""}
-              ${temp ? `<strong class="live-weather-temp">${this.esc(temp)}</strong>` : ""}
-            </div>
-          ` : ""}
+          ${temp ? `<strong class="live-weather-temp">${this.esc(temp)}</strong>` : ""}
         </div>
         <div class="live-weather-main">
           <div class="live-weather-condition">
@@ -19221,6 +19180,94 @@ class WorldCup2026Panel extends HTMLElement {
     return undefined;
   }
 
+  playerPhotoUrl(player) {
+    if (!player || typeof player !== "object") return "";
+    const manualPhotos = {
+      "lionel messi|argentina": "/local/worldcup/players/lionel-messi.png",
+      "lionel messi|arg": "/local/worldcup/players/lionel-messi.png",
+      "harry kane|england": "/local/worldcup/players/harry-kane.jpg",
+      "harry kane|eng": "/local/worldcup/players/harry-kane.jpg",
+      "kylian mbappe|france": "/local/worldcup/players/kylian-mbappe.jpg",
+      "kylian mbappe|fra": "/local/worldcup/players/kylian-mbappe.jpg",
+      "kylian mbappé|france": "/local/worldcup/players/kylian-mbappe.jpg",
+      "kylian mbappé|fra": "/local/worldcup/players/kylian-mbappe.jpg",
+      "elijah just|new zealand": "/local/worldcup/players/elijah-just.jpg",
+      "elijah just|nzl": "/local/worldcup/players/elijah-just.jpg",
+      "erling haaland|norway": "/local/worldcup/players/erling-haaland.jpg",
+      "erling haaland|nor": "/local/worldcup/players/erling-haaland.jpg",
+      "erling harland|norway": "/local/worldcup/players/erling-haaland.jpg",
+      "erling harland|nor": "/local/worldcup/players/erling-haaland.jpg",
+      "folarin balogun|usa": "/local/worldcup/players/folarin-balogun.jpg",
+      "folarin balogun|united states": "/local/worldcup/players/folarin-balogun.jpg",
+    };
+    const manualKey = `${String(player.name || player.player || "").toLowerCase().trim()}|${String(player.team || "").toLowerCase().trim()}`;
+    if (manualPhotos[manualKey]) return manualPhotos[manualKey];
+
+    const direct = player.photo || player.image || player.picture || player.headshot || player.avatar || player.playerPhoto;
+    if (direct) return String(direct);
+    const nested = player.player && typeof player.player === "object"
+      ? (player.player.photo || player.player.image || player.player.picture)
+      : "";
+    if (nested) return String(nested);
+    const id = player.apiFootballPlayerId || player.apiSportsPlayerId || player.apiFootballId || player.apiSportsId || player.player?.apiFootballPlayerId || player.player?.apiSportsPlayerId;
+    return id ? `https://media.api-sports.io/football/players/${id}.png` : "";
+  }
+
+  playerPhotoFallbackUrl(primary = "") {
+    const localPrefix = "/local/worldcup/players/";
+    if (!primary || !String(primary).startsWith(localPrefix)) return "";
+    const filename = String(primary).slice(localPrefix.length);
+    return filename
+      ? `https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/${filename}`
+      : "";
+  }
+
+  playerInitials(name) {
+    const parts = String(name || "").trim().split(/\s+/).filter(Boolean).slice(0, 2);
+    return parts.map((part) => part[0] || "").join("").toUpperCase() || "PL";
+  }
+
+  playerProfileCards(players = []) {
+    const cards = players.slice(0, 6);
+    if (!cards.length) return "";
+
+    return `
+      <section class="wc-section golden-profile-section">
+        <div class="golden-card-head">
+          <div>
+            <div class="section-kicker">Player Profiles</div>
+            <h2>Profile Cards</h2>
+          </div>
+        </div>
+        <div class="golden-profile-grid">
+          ${cards.map((player, index) => {
+            const photo = this.playerPhotoUrl(player);
+            const fallbackPhoto = this.playerPhotoFallbackUrl(photo);
+            const initials = this.playerInitials(player.name);
+            return `
+              <article class="golden-profile-card">
+                <div class="golden-profile-photo">
+                  ${photo ? `<img src="${this.esc(photo)}"${fallbackPhoto ? ` data-fallback-src="${this.esc(fallbackPhoto)}"` : ""} alt="${this.esc(player.name)}" loading="lazy" onerror="if(this.dataset.fallbackSrc){this.src=this.dataset.fallbackSrc;this.dataset.fallbackSrc='';}else{this.style.display='none';this.nextElementSibling.style.display='flex';}">` : ""}
+                  <span class="golden-profile-fallback" style="${photo ? "display:none" : ""}">${this.esc(initials)}</span>
+                </div>
+                <div class="golden-profile-main">
+                  <div class="golden-profile-rank">#${index + 1}</div>
+                  <h3>${this.esc(player.name)}</h3>
+                  <p>${this.flag(player.team, true)} ${this.esc(player.team)}</p>
+                  <div class="golden-profile-stats">
+                    <span><strong>${player.goals}</strong>${this.t("goals")}</span>
+                    <span><strong>${player.assists}</strong>${this.t("assists")}</span>
+                    <span><strong>${player.totalInvolvements}</strong>G+A</span>
+                  </div>
+                </div>
+              </article>
+            `;
+          }).join("")}
+        </div>
+      </section>
+    `;
+  }
+
   playersPage() {
     const rawScorers = Array.isArray(this._data.scorers) ? this._data.scorers : [];
     const allMatchSources = [
@@ -19246,7 +19293,7 @@ class WorldCup2026Panel extends HTMLElement {
     const isPenalty = (event) => `${eventText(event, "type")} ${eventText(event, "detail")}`.includes("penalty");
     const eventTeam = (event) => this.localizedTeamName(event?.team || event?.teamName || event?.country || this.t("tbc"));
     const eventPlayer = (event) => event?.player || event?.playerName || event?.name || "";
-    const getOrCreate = (map, name, team) => {
+    const getOrCreate = (map, name, team, source = {}) => {
       const safeName = String(name || "").trim();
       const safeTeam = this.localizedTeamName(team || this.t("tbc"));
       const key = playerKey(safeName, safeTeam);
@@ -19262,7 +19309,13 @@ class WorldCup2026Panel extends HTMLElement {
           totalInvolvements: 0,
           matches: new Set(),
           source: "match events",
+          photo: this.playerPhotoUrl(source),
+          playerId: source.playerId || source.id || source.apiFootballPlayerId || source.apiSportsPlayerId || source.player?.id || "",
         });
+      } else {
+        const existing = map.get(key);
+        if (!existing.photo) existing.photo = this.playerPhotoUrl(source);
+        if (!existing.playerId) existing.playerId = source.playerId || source.id || source.apiFootballPlayerId || source.apiSportsPlayerId || source.player?.id || "";
       }
       return map.get(key);
     };
@@ -19280,7 +19333,7 @@ class WorldCup2026Panel extends HTMLElement {
           ? s.team
           : s.team?.shortName || s.team?.name || s.team?.tla || s.nationality || this.t("tbc");
 
-      const row = getOrCreate(playerMap, playerName, teamName);
+      const row = getOrCreate(playerMap, playerName, teamName, s);
       if (!row) return;
       row.goals = Math.max(row.goals, this.numberValue(this.resolvedPlayerStat(s, "goals", "scored", "goal_count", "total_goals", "totalGoals")));
       row.assists = Math.max(row.assists, this.numberValue(this.resolvedPlayerStat(s, "assists", "assist", "assist_count", "total_assists", "totalAssists")));
@@ -19477,6 +19530,8 @@ class WorldCup2026Panel extends HTMLElement {
           ${miniStat(matchesWithEvents, "event matches")}
         </div>
       </section>
+
+      ${this.playerProfileCards(scorers)}
 
       <section class="wc-section golden-clean-podium">
         <div class="golden-card-head">
