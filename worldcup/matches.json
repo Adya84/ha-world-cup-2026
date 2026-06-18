@@ -9702,18 +9702,18 @@
     },
     {
       "apiFootballFixtureId": 1489386,
-      "apiFootballStatus": "1H",
-      "apiFootballStatusLong": "First Half",
+      "apiFootballStatus": "HT",
+      "apiFootballStatusLong": "Halftime",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
+      "awayCorners": 2,
       "awayFouls": 5,
       "awayOffsides": 2,
-      "awayPossession": "72%",
+      "awayPossession": "73%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -9859,7 +9859,7 @@
       "homeCorners": 1,
       "homeFouls": 9,
       "homeOffsides": 0,
-      "homePossession": "28%",
+      "homePossession": "27%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -9870,40 +9870,40 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastApiSync": "2026-06-18T02:50:18.594930+00:00",
-      "lastUpdated": "2026-06-18T04:50:16Z",
+      "lastApiSync": "2026-06-18T02:50:42.428569+00:00",
+      "lastUpdated": "2026-06-18T04:50:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
+          "corners": 2,
           "fouls": 5,
           "offsides": 2,
-          "possession": "72%",
+          "possession": "73%",
           "redCards": null,
-          "shotsOffGoal": 2,
+          "shotsOffGoal": 3,
           "shotsOnGoal": 2,
-          "totalShots": 5,
+          "totalShots": 6,
           "yellowCards": 1
         },
         "home": {
           "corners": 1,
           "fouls": 9,
           "offsides": 0,
-          "possession": "28%",
+          "possession": "27%",
           "redCards": null,
-          "shotsOffGoal": 0,
+          "shotsOffGoal": 1,
           "shotsOnGoal": 0,
-          "totalShots": 0,
+          "totalShots": 1,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-18T02:50:18.594930+00:00",
+        "lastApiSync": "2026-06-18T02:50:42.428569+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
-        "status": "1H",
+        "status": "HT",
         "timer": "45'"
       },
       "manualClockText": "45'",
@@ -9978,7 +9978,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "1H",
+      "status": "HT",
       "utcDate": "2026-06-18T02:00:00Z",
       "venue": {
         "city": "Mexico City",
