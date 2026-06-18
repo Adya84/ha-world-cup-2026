@@ -10608,8 +10608,8 @@
     },
     {
       "apiFootballFixtureId": 1489387,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -10667,7 +10667,7 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -10676,7 +10676,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": null,
@@ -10785,10 +10785,64 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Goal"
+        },
+        {
+          "assist": "A. Fathi",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Edmilson Junior",
+          "playerOff": "Edmilson Junior",
+          "playerOn": "A. Fathi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Qatar",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Al Mannai",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Gaber",
+          "playerOff": "J. Gaber",
+          "playerOn": "M. Al Mannai",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Qatar",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Bombito",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Cornelius",
+          "playerOff": "D. Cornelius",
+          "playerOn": "M. Bombito",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": null,
@@ -10876,8 +10930,8 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T23:07:27.033740+00:00",
-      "lastUpdated": "2026-06-19T01:07:24Z",
+      "lastApiSync": "2026-06-18T23:07:51.521755+00:00",
+      "lastUpdated": "2026-06-19T01:07:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -10905,14 +10959,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-18T23:07:27.033740+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-18T23:07:51.521755+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -10937,7 +10991,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -10984,7 +11038,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
       "substitutionEvents": [
         {
           "assist": "S. Al Brake",
@@ -11002,6 +11056,60 @@
           "team": "Qatar",
           "timer": "40:00",
           "timerSeconds": 2400,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Fathi",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Edmilson Junior",
+          "playerOff": "Edmilson Junior",
+          "playerOn": "A. Fathi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Qatar",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Al Mannai",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Gaber",
+          "playerOff": "J. Gaber",
+          "playerOn": "M. Al Mannai",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Qatar",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Bombito",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Cornelius",
+          "playerOff": "D. Cornelius",
+          "playerOn": "M. Bombito",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "46:00",
+          "timerSeconds": 2760,
           "type": "Substitution"
         }
       ],
