@@ -2,8 +2,8 @@
   "live": [
     {
       "apiFootballFixtureId": 1539004,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "A. Sojka",
@@ -125,10 +125,28 @@
           "timer": "40:00",
           "timerSeconds": 2400,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "R. Mofokeng",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Adams",
+          "playerOff": "J. Adams",
+          "playerOn": "R. Mofokeng",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "A. Sojka",
@@ -170,7 +188,7 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T17:06:44.552013+00:00",
+      "lastApiSync": "2026-06-18T17:07:11.017290+00:00",
       "lastUpdated": "2026-06-18T19:06:18Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -199,14 +217,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-18T17:06:44.552013+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-18T17:07:11.017290+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -231,7 +249,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -278,7 +296,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "R. Mofokeng",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Adams",
+          "playerOff": "J. Adams",
+          "playerOn": "R. Mofokeng",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-18T16:00:00Z",
       "venue": {
         "city": "Atlanta",
@@ -313,8 +351,8 @@
   "matches": [
     {
       "apiFootballFixtureId": 1539004,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -372,7 +410,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -381,7 +419,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "A. Sojka",
@@ -436,10 +474,28 @@
           "timer": "40:00",
           "timerSeconds": 2400,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "R. Mofokeng",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Adams",
+          "playerOff": "J. Adams",
+          "playerOn": "R. Mofokeng",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "A. Sojka",
@@ -481,7 +537,7 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T17:06:44.552013+00:00",
+      "lastApiSync": "2026-06-18T17:07:11.017290+00:00",
       "lastUpdated": "2026-06-18T19:06:18Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -510,14 +566,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-18T17:06:44.552013+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-18T17:07:11.017290+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -542,7 +598,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -589,7 +645,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "R. Mofokeng",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Adams",
+          "playerOff": "J. Adams",
+          "playerOn": "R. Mofokeng",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-18T16:00:00Z",
       "venue": {
         "city": "Atlanta",
