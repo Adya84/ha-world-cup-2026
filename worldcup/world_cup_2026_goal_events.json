@@ -1757,23 +1757,32 @@
     "utcDate": "2026-06-18T19:00:00Z"
   },
   "537336": {
+    "apiFootballFixtureId": 1489387,
     "awayScore": 0,
     "awayTeam": "Qatar",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Canada",
-    "phase_start": null,
+    "lastApiSync": "2026-06-18T22:01:32.438526+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-18T22:01:32.438526+00:00",
     "referees": [
       {
-        "id": 58065,
         "name": "Cristi\u00e1n Garay",
         "nationality": "Chile",
         "type": "REFEREE"
+      },
+      {
+        "name": "Cristian Garay, Chile",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-18T22:00:00Z"
   },
   "537337": {
