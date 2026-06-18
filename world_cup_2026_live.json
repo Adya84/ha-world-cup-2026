@@ -11,10 +11,10 @@
         "name": "World"
       },
       "awayCorners": 1,
-      "awayFouls": 4,
+      "awayFouls": 5,
       "awayOffsides": 1,
-      "awayPossession": "71%",
-      "awayScore": 0,
+      "awayPossession": "73%",
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/818.svg",
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2400,
+      "clockSeconds": 2460,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "40'",
+      "displayMinute": "41'",
       "events": [
         {
           "assist": null,
@@ -107,15 +107,54 @@
           "timer": "34:00",
           "timerSeconds": 2040,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "41'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 41,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Colombia",
+          "timer": "41:00",
+          "timerSeconds": 2460,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 2400,
-      "fallbackClockText": "40'",
+      "fallbackClock": 2460,
+      "fallbackClockText": "41'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "41'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 41,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Colombia",
+          "timer": "41:00",
+          "timerSeconds": 2460,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_K",
       "homeCorners": 0,
       "homeFouls": 8,
       "homeOffsides": 0,
-      "homePossession": "29%",
+      "homePossession": "27%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -126,15 +165,15 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastApiSync": "2026-06-18T02:40:15.913764+00:00",
-      "lastUpdated": "2026-06-18T04:40:13Z",
+      "lastApiSync": "2026-06-18T02:40:38.587411+00:00",
+      "lastUpdated": "2026-06-18T04:40:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
-          "fouls": 4,
+          "fouls": 5,
           "offsides": 1,
-          "possession": "71%",
+          "possession": "73%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 0,
@@ -145,7 +184,7 @@
           "corners": 0,
           "fouls": 8,
           "offsides": 0,
-          "possession": "29%",
+          "possession": "27%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -155,14 +194,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "40'",
-        "lastApiSync": "2026-06-18T02:40:15.913764+00:00",
-        "seconds": 2400,
+        "displayMinute": "41'",
+        "lastApiSync": "2026-06-18T02:40:38.587411+00:00",
+        "seconds": 2460,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "40'"
+        "timer": "41'"
       },
-      "manualClockText": "40'",
+      "manualClockText": "41'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -187,7 +226,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": 40,
+      "minute": 41,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -216,11 +255,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -278,10 +317,10 @@
         "name": "World"
       },
       "awayCorners": 1,
-      "awayFouls": 4,
+      "awayFouls": 5,
       "awayOffsides": 1,
-      "awayPossession": "71%",
-      "awayScore": 0,
+      "awayPossession": "73%",
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/818.svg",
@@ -328,7 +367,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2400,
+      "clockSeconds": 2460,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -337,7 +376,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "40'",
+      "displayMinute": "41'",
       "events": [
         {
           "assist": null,
@@ -374,15 +413,54 @@
           "timer": "34:00",
           "timerSeconds": 2040,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "41'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 41,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Colombia",
+          "timer": "41:00",
+          "timerSeconds": 2460,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 2400,
-      "fallbackClockText": "40'",
+      "fallbackClock": 2460,
+      "fallbackClockText": "41'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "41'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 41,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Colombia",
+          "timer": "41:00",
+          "timerSeconds": 2460,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_K",
       "homeCorners": 0,
       "homeFouls": 8,
       "homeOffsides": 0,
-      "homePossession": "29%",
+      "homePossession": "27%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -393,15 +471,15 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastApiSync": "2026-06-18T02:40:15.913764+00:00",
-      "lastUpdated": "2026-06-18T04:40:13Z",
+      "lastApiSync": "2026-06-18T02:40:38.587411+00:00",
+      "lastUpdated": "2026-06-18T04:40:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
-          "fouls": 4,
+          "fouls": 5,
           "offsides": 1,
-          "possession": "71%",
+          "possession": "73%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 0,
@@ -412,7 +490,7 @@
           "corners": 0,
           "fouls": 8,
           "offsides": 0,
-          "possession": "29%",
+          "possession": "27%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -422,14 +500,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "40'",
-        "lastApiSync": "2026-06-18T02:40:15.913764+00:00",
-        "seconds": 2400,
+        "displayMinute": "41'",
+        "lastApiSync": "2026-06-18T02:40:38.587411+00:00",
+        "seconds": 2460,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "40'"
+        "timer": "41'"
       },
-      "manualClockText": "40'",
+      "manualClockText": "41'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -454,7 +532,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": 40,
+      "minute": 41,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -483,11 +561,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
