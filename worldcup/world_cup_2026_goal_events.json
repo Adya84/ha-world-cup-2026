@@ -935,23 +935,32 @@
     "utcDate": "2026-06-12T02:00:00Z"
   },
   "537329": {
+    "apiFootballFixtureId": 1539004,
     "awayScore": 0,
     "awayTeam": "South Africa",
+    "base_seconds": 120,
     "clock_active": false,
+    "clock_seconds": 120,
+    "displayMinute": "2'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Czechia",
-    "phase_start": null,
+    "lastApiSync": "2026-06-18T16:01:40.111076+00:00",
+    "manualClockText": "2'",
+    "phase_start": "2026-06-18T16:01:40.111076+00:00",
     "referees": [
       {
-        "id": 212450,
         "name": "Tori Penso",
         "nationality": "USA",
         "type": "REFEREE"
+      },
+      {
+        "name": "Tori Penso, USA",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-18T16:00:00Z"
   },
   "537330": {
