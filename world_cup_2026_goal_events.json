@@ -8675,7 +8675,7 @@
     "apiFootballFixtureId": 1489386,
     "awayScore": 2,
     "awayTeam": "Colombia",
-    "base_seconds": 4320,
+    "base_seconds": 4380,
     "cardEvents": [
       {
         "assist": null,
@@ -8715,8 +8715,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4320,
-    "displayMinute": "72'",
+    "clock_seconds": 4380,
+    "displayMinute": "73'",
     "events": [
       {
         "assist": null,
@@ -8843,6 +8843,24 @@
         "timer": "65:00",
         "timerSeconds": 3900,
         "type": "Goal"
+      },
+      {
+        "assist": "J. Campaz",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "72'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 72,
+        "player": "J. Rodriguez",
+        "playerOff": "J. Rodriguez",
+        "playerOn": "J. Campaz",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "72:00",
+        "timerSeconds": 4320,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -8918,9 +8936,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Uzbekistan",
-    "lastApiSync": "2026-06-18T03:32:44.501442+00:00",
-    "manualClockText": "72'",
-    "phase_start": "2026-06-18T03:32:44.501442+00:00",
+    "lastApiSync": "2026-06-18T03:33:07.141976+00:00",
+    "manualClockText": "73'",
+    "phase_start": "2026-06-18T03:33:07.141976+00:00",
     "referees": [
       {
         "name": "Anthony Taylor",
@@ -8969,6 +8987,24 @@
         "team": "Uzbekistan",
         "timer": "46:00",
         "timerSeconds": 2760,
+        "type": "Substitution"
+      },
+      {
+        "assist": "J. Campaz",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "72'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 72,
+        "player": "J. Rodriguez",
+        "playerOff": "J. Rodriguez",
+        "playerOn": "J. Campaz",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "72:00",
+        "timerSeconds": 4320,
         "type": "Substitution"
       }
     ],
