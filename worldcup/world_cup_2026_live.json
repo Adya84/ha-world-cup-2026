@@ -26,13 +26,13 @@
       "cardEvents": [
         {
           "assist": null,
-          "comments": "Tripping",
+          "comments": "Foul",
           "detail": "Yellow Card",
           "displayMinute": "9'",
           "extra": null,
           "isDisallowed": false,
           "minute": 9,
-          "player": "D. Cornelius",
+          "player": "Derek Cornelius",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -44,13 +44,13 @@
         },
         {
           "assist": null,
-          "comments": "Foul",
+          "comments": null,
           "detail": "Red Card",
           "displayMinute": "33'",
           "extra": null,
           "isDisallowed": false,
           "minute": 33,
-          "player": "H. Al Amin",
+          "player": "Homam Ahmed",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -61,7 +61,7 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 2520,
+      "clockSeconds": 2700,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,17 +70,17 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "42'",
+      "displayMinute": "45'",
       "events": [
         {
           "assist": null,
-          "comments": "Tripping",
+          "comments": "Foul",
           "detail": "Yellow Card",
           "displayMinute": "9'",
           "extra": null,
           "isDisallowed": false,
           "minute": 9,
-          "player": "D. Cornelius",
+          "player": "Derek Cornelius",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -98,7 +98,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 16,
-          "player": "C. Larin",
+          "player": "Cyle Larin",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -116,7 +116,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 29,
-          "player": "J. David",
+          "player": "Jonathan David",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -128,13 +128,31 @@
         },
         {
           "assist": null,
-          "comments": "Foul",
+          "comments": null,
+          "detail": "Penalty cancelled",
+          "displayMinute": "33'",
+          "extra": null,
+          "isDisallowed": true,
+          "minute": 33,
+          "player": "Tajon Buchanan",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Var",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "33:00",
+          "timerSeconds": 1980,
+          "type": "Disallowed Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
           "detail": "Red Card",
           "displayMinute": "33'",
           "extra": null,
           "isDisallowed": false,
           "minute": 33,
-          "player": "H. Al Amin",
+          "player": "Homam Ahmed",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -145,16 +163,16 @@
           "type": "Red Card"
         },
         {
-          "assist": "S. Al Brake",
+          "assist": "Sultan Al-Brake",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "40'",
           "extra": null,
           "isDisallowed": false,
           "minute": 40,
-          "player": "Y. Abdurisag",
-          "playerOff": "Y. Abdurisag",
-          "playerOn": "S. Al Brake",
+          "player": "Yusuf Abdurisag",
+          "playerOff": "Yusuf Abdurisag",
+          "playerOn": "Sultan Al-Brake",
           "rawType": "subst",
           "source": "api_football",
           "team": "Qatar",
@@ -163,8 +181,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 2520,
-      "fallbackClockText": "42'",
+      "fallbackClock": 2700,
+      "fallbackClockText": "45'",
       "goalEvents": [
         {
           "assist": null,
@@ -179,7 +197,7 @@
           "matchId": 537336,
           "matchUtcDate": "2026-06-18T22:00:00Z",
           "minute": 16,
-          "player": "C. Larin",
+          "player": "Cyle Larin",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -202,7 +220,7 @@
           "matchId": 537336,
           "matchUtcDate": "2026-06-18T22:00:00Z",
           "minute": 29,
-          "player": "J. David",
+          "player": "Jonathan David",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -229,8 +247,8 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T22:46:29.942904+00:00",
-      "lastUpdated": "2026-06-19T00:46:28Z",
+      "lastApiSync": "2026-06-18T22:46:52.511962+00:00",
+      "lastUpdated": "2026-06-19T00:46:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -258,14 +276,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "42'",
-        "lastApiSync": "2026-06-18T22:46:29.942904+00:00",
-        "seconds": 2520,
+        "displayMinute": "45'",
+        "lastApiSync": "2026-06-18T22:46:52.511962+00:00",
+        "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "42'"
+        "timer": "45'"
       },
-      "manualClockText": "42'",
+      "manualClockText": "45'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -290,7 +308,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 42,
+      "minute": 45,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -340,16 +358,16 @@
       "status": "1H",
       "substitutionEvents": [
         {
-          "assist": "S. Al Brake",
+          "assist": "Sultan Al-Brake",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "40'",
           "extra": null,
           "isDisallowed": false,
           "minute": 40,
-          "player": "Y. Abdurisag",
-          "playerOff": "Y. Abdurisag",
-          "playerOn": "S. Al Brake",
+          "player": "Yusuf Abdurisag",
+          "playerOff": "Yusuf Abdurisag",
+          "playerOn": "Sultan Al-Brake",
           "rawType": "subst",
           "source": "api_football",
           "team": "Qatar",
@@ -416,13 +434,13 @@
       "cardEvents": [
         {
           "assist": null,
-          "comments": "Tripping",
+          "comments": "Foul",
           "detail": "Yellow Card",
           "displayMinute": "9'",
           "extra": null,
           "isDisallowed": false,
           "minute": 9,
-          "player": "D. Cornelius",
+          "player": "Derek Cornelius",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -434,13 +452,13 @@
         },
         {
           "assist": null,
-          "comments": "Foul",
+          "comments": null,
           "detail": "Red Card",
           "displayMinute": "33'",
           "extra": null,
           "isDisallowed": false,
           "minute": 33,
-          "player": "H. Al Amin",
+          "player": "Homam Ahmed",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -451,7 +469,7 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 2520,
+      "clockSeconds": 2700,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -460,17 +478,17 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "42'",
+      "displayMinute": "45'",
       "events": [
         {
           "assist": null,
-          "comments": "Tripping",
+          "comments": "Foul",
           "detail": "Yellow Card",
           "displayMinute": "9'",
           "extra": null,
           "isDisallowed": false,
           "minute": 9,
-          "player": "D. Cornelius",
+          "player": "Derek Cornelius",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -488,7 +506,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 16,
-          "player": "C. Larin",
+          "player": "Cyle Larin",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -506,7 +524,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 29,
-          "player": "J. David",
+          "player": "Jonathan David",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -518,13 +536,31 @@
         },
         {
           "assist": null,
-          "comments": "Foul",
+          "comments": null,
+          "detail": "Penalty cancelled",
+          "displayMinute": "33'",
+          "extra": null,
+          "isDisallowed": true,
+          "minute": 33,
+          "player": "Tajon Buchanan",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Var",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "33:00",
+          "timerSeconds": 1980,
+          "type": "Disallowed Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
           "detail": "Red Card",
           "displayMinute": "33'",
           "extra": null,
           "isDisallowed": false,
           "minute": 33,
-          "player": "H. Al Amin",
+          "player": "Homam Ahmed",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -535,16 +571,16 @@
           "type": "Red Card"
         },
         {
-          "assist": "S. Al Brake",
+          "assist": "Sultan Al-Brake",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "40'",
           "extra": null,
           "isDisallowed": false,
           "minute": 40,
-          "player": "Y. Abdurisag",
-          "playerOff": "Y. Abdurisag",
-          "playerOn": "S. Al Brake",
+          "player": "Yusuf Abdurisag",
+          "playerOff": "Yusuf Abdurisag",
+          "playerOn": "Sultan Al-Brake",
           "rawType": "subst",
           "source": "api_football",
           "team": "Qatar",
@@ -553,8 +589,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 2520,
-      "fallbackClockText": "42'",
+      "fallbackClock": 2700,
+      "fallbackClockText": "45'",
       "goalEvents": [
         {
           "assist": null,
@@ -569,7 +605,7 @@
           "matchId": 537336,
           "matchUtcDate": "2026-06-18T22:00:00Z",
           "minute": 16,
-          "player": "C. Larin",
+          "player": "Cyle Larin",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -592,7 +628,7 @@
           "matchId": 537336,
           "matchUtcDate": "2026-06-18T22:00:00Z",
           "minute": 29,
-          "player": "J. David",
+          "player": "Jonathan David",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -619,8 +655,8 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T22:46:29.942904+00:00",
-      "lastUpdated": "2026-06-19T00:46:28Z",
+      "lastApiSync": "2026-06-18T22:46:52.511962+00:00",
+      "lastUpdated": "2026-06-19T00:46:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -648,14 +684,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "42'",
-        "lastApiSync": "2026-06-18T22:46:29.942904+00:00",
-        "seconds": 2520,
+        "displayMinute": "45'",
+        "lastApiSync": "2026-06-18T22:46:52.511962+00:00",
+        "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "42'"
+        "timer": "45'"
       },
-      "manualClockText": "42'",
+      "manualClockText": "45'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -680,7 +716,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 42,
+      "minute": 45,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -730,16 +766,16 @@
       "status": "1H",
       "substitutionEvents": [
         {
-          "assist": "S. Al Brake",
+          "assist": "Sultan Al-Brake",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "40'",
           "extra": null,
           "isDisallowed": false,
           "minute": 40,
-          "player": "Y. Abdurisag",
-          "playerOff": "Y. Abdurisag",
-          "playerOn": "S. Al Brake",
+          "player": "Yusuf Abdurisag",
+          "playerOff": "Yusuf Abdurisag",
+          "playerOn": "Sultan Al-Brake",
           "rawType": "subst",
           "source": "api_football",
           "team": "Qatar",
