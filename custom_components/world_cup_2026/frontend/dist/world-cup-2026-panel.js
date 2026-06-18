@@ -4892,8 +4892,6 @@ class WorldCup2026Panel extends HTMLElement {
       "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/world_cup_2026_live.json?t=" + Date.now(),
       "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_live.json?t=" + Date.now(),
       "/local/worldcup/world_cup_2026_live.json?t=" + Date.now(),
-      "/local/world_cup_2026_live.json?t=" + Date.now(),
-      "/world_cup_2026_frontend/data/world_cup_2026_live.json?t=" + Date.now(),
     ];
 
     for (const url of urls) {
@@ -4904,7 +4902,7 @@ class WorldCup2026Panel extends HTMLElement {
         const matches = Array.isArray(data)
           ? data
           : (Array.isArray(data?.live) ? data.live : (Array.isArray(data?.matches) ? data.matches : []));
-        if (matches.length) return matches;
+        if (Array.isArray(data) || Array.isArray(data?.live) || Array.isArray(data?.matches)) return matches;
       } catch (err) {
         // Try the next public live path.
       }
