@@ -936,9 +936,9 @@
   },
   "537329": {
     "apiFootballFixtureId": 1539004,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "South Africa",
-    "base_seconds": 4980,
+    "base_seconds": 5040,
     "cardEvents": [
       {
         "assist": null,
@@ -996,8 +996,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4980,
-    "displayMinute": "83'",
+    "clock_seconds": 5040,
+    "displayMinute": "84'",
     "events": [
       {
         "assist": "A. Sojka",
@@ -1196,6 +1196,24 @@
         "timer": "78:00",
         "timerSeconds": 4680,
         "type": "Substitution"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Penalty",
+        "displayMinute": "81'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 81,
+        "player": "T. Mokoena",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "South Africa",
+        "timer": "81:00",
+        "timerSeconds": 4860,
+        "type": "Penalty"
       }
     ],
     "goalEvents": [
@@ -1221,13 +1239,36 @@
         "timer": "6:00",
         "timerSeconds": 360,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "South Africa",
+        "comments": null,
+        "detail": "Penalty",
+        "displayMinute": "81'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "Czechia",
+        "isDisallowed": false,
+        "matchId": 537329,
+        "matchUtcDate": "2026-06-18T16:00:00Z",
+        "minute": 81,
+        "player": "T. Mokoena",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "South Africa",
+        "timer": "81:00",
+        "timerSeconds": 4860,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "Czechia",
-    "lastApiSync": "2026-06-18T17:44:19.766797+00:00",
-    "manualClockText": "83'",
-    "phase_start": "2026-06-18T17:44:19.766797+00:00",
+    "lastApiSync": "2026-06-18T17:44:45.508612+00:00",
+    "manualClockText": "84'",
+    "phase_start": "2026-06-18T17:44:45.508612+00:00",
     "referees": [
       {
         "name": "Tori Penso",
