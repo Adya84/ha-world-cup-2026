@@ -8672,23 +8672,32 @@
     "utcDate": "2026-06-17T17:00:00Z"
   },
   "537404": {
+    "apiFootballFixtureId": 1489386,
     "awayScore": 0,
     "awayTeam": "Colombia",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Uzbekistan",
-    "phase_start": null,
+    "lastApiSync": "2026-06-18T02:00:50.037509+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-18T02:00:50.037509+00:00",
     "referees": [
       {
-        "id": 11580,
         "name": "Anthony Taylor",
         "nationality": "England",
         "type": "REFEREE"
+      },
+      {
+        "name": "Anthony Taylor, England",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-18T02:00:00Z"
   },
   "537405": {
