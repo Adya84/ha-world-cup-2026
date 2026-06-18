@@ -19576,10 +19576,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
-      "awayFouls": 0,
+      "awayCorners": 0,
+      "awayFouls": 1,
       "awayOffsides": null,
-      "awayPossession": "9%",
+      "awayPossession": "40%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -19599,14 +19599,60 @@
         "type": "CUP"
       },
       "displayMinute": "6'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "6'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 6,
+          "player": "M. Sadilek",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "6:00",
+          "timerSeconds": 360,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 360,
       "fallbackClockText": "6'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "South Africa",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "6'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Czechia",
+          "isDisallowed": false,
+          "matchId": 537329,
+          "matchUtcDate": "2026-06-18T16:00:00Z",
+          "minute": 6,
+          "player": "M. Sadilek",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "6:00",
+          "timerSeconds": 360,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_A",
-      "homeCorners": null,
+      "homeCorners": 1,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "91%",
-      "homeScore": 0,
+      "homePossession": "60%",
+      "homeScore": 1,
       "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/798.svg",
@@ -19616,15 +19662,15 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T16:05:36.246220+00:00",
-      "lastUpdated": "2026-06-18T18:05:34Z",
+      "lastApiSync": "2026-06-18T16:06:05.843779+00:00",
+      "lastUpdated": "2026-06-18T18:05:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
-          "fouls": 0,
+          "corners": 0,
+          "fouls": 1,
           "offsides": null,
-          "possession": "9%",
+          "possession": "40%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -19632,10 +19678,10 @@
           "yellowCards": null
         },
         "home": {
-          "corners": null,
+          "corners": 1,
           "fouls": 0,
           "offsides": null,
-          "possession": "91%",
+          "possession": "60%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -19646,7 +19692,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "6'",
-        "lastApiSync": "2026-06-18T16:05:36.246220+00:00",
+        "lastApiSync": "2026-06-18T16:06:05.843779+00:00",
         "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -19655,28 +19701,71 @@
       "manualClockText": "6'",
       "matchDetails": {
         "apiFootballFixtureId": 1539004,
-        "awayCorners": null,
-        "awayFouls": 0,
+        "awayCorners": 0,
+        "awayFouls": 1,
         "awayOffsides": null,
-        "awayPossession": "9%",
+        "awayPossession": "40%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
-        "events": [],
-        "goalEvents": [],
-        "goalEventsSource": null,
-        "homeCorners": null,
+        "events": [
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "6'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 6,
+            "player": "M. Sadilek",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Czechia",
+            "timer": "6:00",
+            "timerSeconds": 360,
+            "type": "Goal"
+          }
+        ],
+        "goalEvents": [
+          {
+            "assist": null,
+            "awayTeam": "South Africa",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "6'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Czechia",
+            "isDisallowed": false,
+            "matchId": 537329,
+            "matchUtcDate": "2026-06-18T16:00:00Z",
+            "minute": 6,
+            "player": "M. Sadilek",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Czechia",
+            "timer": "6:00",
+            "timerSeconds": 360,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": "api_football_live",
+        "homeCorners": 1,
         "homeFouls": 0,
         "homeOffsides": null,
-        "homePossession": "91%",
+        "homePossession": "60%",
         "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
-            "corners": null,
-            "fouls": 0,
+            "corners": 0,
+            "fouls": 1,
             "offsides": null,
-            "possession": "9%",
+            "possession": "40%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 0,
@@ -19684,10 +19773,10 @@
             "yellowCards": null
           },
           "home": {
-            "corners": null,
+            "corners": 1,
             "fouls": 0,
             "offsides": null,
-            "possession": "91%",
+            "possession": "60%",
             "redCards": null,
             "shotsOffGoal": 1,
             "shotsOnGoal": 0,
@@ -19796,13 +19885,13 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
-        "winner": "DRAW"
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -39422,10 +39511,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
-      "awayFouls": 0,
+      "awayCorners": 0,
+      "awayFouls": 1,
       "awayOffsides": null,
-      "awayPossession": "9%",
+      "awayPossession": "40%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -39445,14 +39534,60 @@
         "type": "CUP"
       },
       "displayMinute": "6'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "6'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 6,
+          "player": "M. Sadilek",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "6:00",
+          "timerSeconds": 360,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 360,
       "fallbackClockText": "6'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "South Africa",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "6'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Czechia",
+          "isDisallowed": false,
+          "matchId": 537329,
+          "matchUtcDate": "2026-06-18T16:00:00Z",
+          "minute": 6,
+          "player": "M. Sadilek",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "6:00",
+          "timerSeconds": 360,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_A",
-      "homeCorners": null,
+      "homeCorners": 1,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "91%",
-      "homeScore": 0,
+      "homePossession": "60%",
+      "homeScore": 1,
       "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/798.svg",
@@ -39462,15 +39597,15 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T16:05:36.246220+00:00",
-      "lastUpdated": "2026-06-18T18:05:34Z",
+      "lastApiSync": "2026-06-18T16:06:05.843779+00:00",
+      "lastUpdated": "2026-06-18T18:05:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
-          "fouls": 0,
+          "corners": 0,
+          "fouls": 1,
           "offsides": null,
-          "possession": "9%",
+          "possession": "40%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -39478,10 +39613,10 @@
           "yellowCards": null
         },
         "home": {
-          "corners": null,
+          "corners": 1,
           "fouls": 0,
           "offsides": null,
-          "possession": "91%",
+          "possession": "60%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -39492,7 +39627,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "6'",
-        "lastApiSync": "2026-06-18T16:05:36.246220+00:00",
+        "lastApiSync": "2026-06-18T16:06:05.843779+00:00",
         "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -39501,28 +39636,71 @@
       "manualClockText": "6'",
       "matchDetails": {
         "apiFootballFixtureId": 1539004,
-        "awayCorners": null,
-        "awayFouls": 0,
+        "awayCorners": 0,
+        "awayFouls": 1,
         "awayOffsides": null,
-        "awayPossession": "9%",
+        "awayPossession": "40%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
-        "events": [],
-        "goalEvents": [],
-        "goalEventsSource": null,
-        "homeCorners": null,
+        "events": [
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "6'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 6,
+            "player": "M. Sadilek",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Czechia",
+            "timer": "6:00",
+            "timerSeconds": 360,
+            "type": "Goal"
+          }
+        ],
+        "goalEvents": [
+          {
+            "assist": null,
+            "awayTeam": "South Africa",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "6'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Czechia",
+            "isDisallowed": false,
+            "matchId": 537329,
+            "matchUtcDate": "2026-06-18T16:00:00Z",
+            "minute": 6,
+            "player": "M. Sadilek",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Czechia",
+            "timer": "6:00",
+            "timerSeconds": 360,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": "api_football_live",
+        "homeCorners": 1,
         "homeFouls": 0,
         "homeOffsides": null,
-        "homePossession": "91%",
+        "homePossession": "60%",
         "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
-            "corners": null,
-            "fouls": 0,
+            "corners": 0,
+            "fouls": 1,
             "offsides": null,
-            "possession": "9%",
+            "possession": "40%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 0,
@@ -39530,10 +39708,10 @@
             "yellowCards": null
           },
           "home": {
-            "corners": null,
+            "corners": 1,
             "fouls": 0,
             "offsides": null,
-            "possession": "91%",
+            "possession": "60%",
             "redCards": null,
             "shotsOffGoal": 1,
             "shotsOnGoal": 0,
@@ -39642,13 +39820,13 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
-        "winner": "DRAW"
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
