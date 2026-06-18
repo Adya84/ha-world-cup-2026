@@ -9453,8 +9453,8 @@
         "tla": "GHA"
       },
       "id": 537410,
-      "lastApiSync": "2026-06-17T23:59:52.978948+00:00",
-      "lastUpdated": "2026-06-18T01:59:49Z",
+      "lastApiSync": "2026-06-18T00:00:32.553031+00:00",
+      "lastUpdated": "2026-06-18T02:00:16Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -9483,7 +9483,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-17T23:59:52.978948+00:00",
+        "lastApiSync": "2026-06-18T00:00:32.553031+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -9622,12 +9622,19 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastUpdated": "2026-06-17T15:20:15Z",
+      "lastUpdated": "2026-06-18T02:00:01Z",
       "matchday": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 11580,
+          "name": "Anthony Taylor",
+          "nationality": "England",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
