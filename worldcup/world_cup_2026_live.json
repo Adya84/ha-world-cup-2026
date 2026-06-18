@@ -79,7 +79,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4680,
+      "clockSeconds": 4740,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -88,7 +88,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "78'",
+      "displayMinute": "79'",
       "events": [
         {
           "assist": "A. Sojka",
@@ -163,16 +163,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "J. Zeleny",
+          "assist": "P. Sulc",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "55'",
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": "A. Sojka",
-          "playerOff": "A. Sojka",
-          "playerOn": "J. Zeleny",
+          "player": "V. Darida",
+          "playerOff": "V. Darida",
+          "playerOn": "P. Sulc",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -181,16 +181,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "P. Sulc",
+          "assist": "J. Zeleny",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "55'",
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": "V. Darida",
-          "playerOff": "V. Darida",
-          "playerOn": "P. Sulc",
+          "player": "A. Sojka",
+          "playerOff": "A. Sojka",
+          "playerOn": "J. Zeleny",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -269,10 +269,28 @@
           "timer": "75:00",
           "timerSeconds": 4500,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "D. Zima",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "78'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 78,
+          "player": "L. Cerv",
+          "playerOff": "L. Cerv",
+          "playerOn": "D. Zima",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "78:00",
+          "timerSeconds": 4680,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4680,
-      "fallbackClockText": "78'",
+      "fallbackClock": 4740,
+      "fallbackClockText": "79'",
       "goalEvents": [
         {
           "assist": "A. Sojka",
@@ -314,8 +332,8 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T17:39:32.218714+00:00",
-      "lastUpdated": "2026-06-18T19:39:28Z",
+      "lastApiSync": "2026-06-18T17:39:57.317179+00:00",
+      "lastUpdated": "2026-06-18T19:39:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -343,14 +361,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "78'",
-        "lastApiSync": "2026-06-18T17:39:32.218714+00:00",
-        "seconds": 4680,
+        "displayMinute": "79'",
+        "lastApiSync": "2026-06-18T17:39:57.317179+00:00",
+        "seconds": 4740,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "78'"
+        "timer": "79'"
       },
-      "manualClockText": "78'",
+      "manualClockText": "79'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -375,7 +393,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 78,
+      "minute": 79,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -443,16 +461,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "J. Zeleny",
+          "assist": "P. Sulc",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "55'",
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": "A. Sojka",
-          "playerOff": "A. Sojka",
-          "playerOn": "J. Zeleny",
+          "player": "V. Darida",
+          "playerOff": "V. Darida",
+          "playerOn": "P. Sulc",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -461,16 +479,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "P. Sulc",
+          "assist": "J. Zeleny",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "55'",
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": "V. Darida",
-          "playerOff": "V. Darida",
-          "playerOn": "P. Sulc",
+          "player": "A. Sojka",
+          "playerOff": "A. Sojka",
+          "playerOn": "J. Zeleny",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -530,6 +548,24 @@
           "team": "Czechia",
           "timer": "67:00",
           "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Zima",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "78'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 78,
+          "player": "L. Cerv",
+          "playerOff": "L. Cerv",
+          "playerOn": "D. Zima",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "78:00",
+          "timerSeconds": 4680,
           "type": "Substitution"
         }
       ],
@@ -644,7 +680,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4680,
+      "clockSeconds": 4740,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -653,7 +689,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "78'",
+      "displayMinute": "79'",
       "events": [
         {
           "assist": "A. Sojka",
@@ -728,16 +764,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "J. Zeleny",
+          "assist": "P. Sulc",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "55'",
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": "A. Sojka",
-          "playerOff": "A. Sojka",
-          "playerOn": "J. Zeleny",
+          "player": "V. Darida",
+          "playerOff": "V. Darida",
+          "playerOn": "P. Sulc",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -746,16 +782,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "P. Sulc",
+          "assist": "J. Zeleny",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "55'",
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": "V. Darida",
-          "playerOff": "V. Darida",
-          "playerOn": "P. Sulc",
+          "player": "A. Sojka",
+          "playerOff": "A. Sojka",
+          "playerOn": "J. Zeleny",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -834,10 +870,28 @@
           "timer": "75:00",
           "timerSeconds": 4500,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "D. Zima",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "78'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 78,
+          "player": "L. Cerv",
+          "playerOff": "L. Cerv",
+          "playerOn": "D. Zima",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "78:00",
+          "timerSeconds": 4680,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4680,
-      "fallbackClockText": "78'",
+      "fallbackClock": 4740,
+      "fallbackClockText": "79'",
       "goalEvents": [
         {
           "assist": "A. Sojka",
@@ -879,8 +933,8 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T17:39:32.218714+00:00",
-      "lastUpdated": "2026-06-18T19:39:28Z",
+      "lastApiSync": "2026-06-18T17:39:57.317179+00:00",
+      "lastUpdated": "2026-06-18T19:39:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -908,14 +962,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "78'",
-        "lastApiSync": "2026-06-18T17:39:32.218714+00:00",
-        "seconds": 4680,
+        "displayMinute": "79'",
+        "lastApiSync": "2026-06-18T17:39:57.317179+00:00",
+        "seconds": 4740,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "78'"
+        "timer": "79'"
       },
-      "manualClockText": "78'",
+      "manualClockText": "79'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -940,7 +994,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 78,
+      "minute": 79,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1008,16 +1062,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "J. Zeleny",
+          "assist": "P. Sulc",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "55'",
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": "A. Sojka",
-          "playerOff": "A. Sojka",
-          "playerOn": "J. Zeleny",
+          "player": "V. Darida",
+          "playerOff": "V. Darida",
+          "playerOn": "P. Sulc",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -1026,16 +1080,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "P. Sulc",
+          "assist": "J. Zeleny",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "55'",
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": "V. Darida",
-          "playerOff": "V. Darida",
-          "playerOn": "P. Sulc",
+          "player": "A. Sojka",
+          "playerOff": "A. Sojka",
+          "playerOn": "J. Zeleny",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -1095,6 +1149,24 @@
           "team": "Czechia",
           "timer": "67:00",
           "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Zima",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "78'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 78,
+          "player": "L. Cerv",
+          "playerOff": "L. Cerv",
+          "playerOn": "D. Zima",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "78:00",
+          "timerSeconds": 4680,
           "type": "Substitution"
         }
       ],
