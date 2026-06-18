@@ -9373,8 +9373,8 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
-      "awayFouls": 8,
+      "awayCorners": null,
+      "awayFouls": 6,
       "awayOffsides": 1,
       "awayPossession": "64%",
       "awayScore": 0,
@@ -9406,7 +9406,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3480,
+      "clockSeconds": 3540,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -9415,7 +9415,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "58'",
+      "displayMinute": "59'",
       "events": [
         {
           "assist": null,
@@ -9452,17 +9452,35 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "I. Fatawu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "E. Nuamah",
+          "playerOff": "E. Nuamah",
+          "playerOn": "I. Fatawu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3480,
-      "fallbackClockText": "58'",
+      "fallbackClock": 3540,
+      "fallbackClockText": "59'",
       "group": "GROUP_L",
-      "homeCorners": 0,
-      "homeFouls": 4,
+      "homeCorners": null,
+      "homeFouls": 3,
       "homeOffsides": 3,
       "homePossession": "36%",
       "homeScore": 0,
-      "homeShotsOnGoal": 1,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/ghana.svg",
         "id": 763,
@@ -9471,43 +9489,43 @@
         "tla": "GHA"
       },
       "id": 537410,
-      "lastApiSync": "2026-06-18T00:19:23.271494+00:00",
-      "lastUpdated": "2026-06-18T02:19:19Z",
+      "lastApiSync": "2026-06-18T00:19:47.448629+00:00",
+      "lastUpdated": "2026-06-18T02:19:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
-          "fouls": 8,
+          "corners": null,
+          "fouls": 6,
           "offsides": 1,
           "possession": "64%",
-          "redCards": 0,
+          "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
-          "totalShots": 4,
+          "totalShots": 3,
           "yellowCards": 0
         },
         "home": {
-          "corners": 0,
-          "fouls": 4,
+          "corners": null,
+          "fouls": 3,
           "offsides": 3,
           "possession": "36%",
-          "redCards": 0,
+          "redCards": null,
           "shotsOffGoal": 1,
-          "shotsOnGoal": 1,
-          "totalShots": 2,
+          "shotsOnGoal": 0,
+          "totalShots": 1,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "58'",
-        "lastApiSync": "2026-06-18T00:19:23.271494+00:00",
-        "seconds": 3480,
+        "displayMinute": "59'",
+        "lastApiSync": "2026-06-18T00:19:47.448629+00:00",
+        "seconds": 3540,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "58'"
+        "timer": "59'"
       },
-      "manualClockText": "58'",
+      "manualClockText": "59'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -9515,7 +9533,7 @@
         "condition": "cloudy",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-18T00:09:44.265355+00:00",
+        "fetchedAt": "2026-06-18T00:19:47.197651+00:00",
         "humidity": 73.8,
         "latitude": 43.6332,
         "longitude": -79.4186,
@@ -9532,7 +9550,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": 58,
+      "minute": 59,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -9598,6 +9616,24 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "I. Fatawu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "E. Nuamah",
+          "playerOff": "E. Nuamah",
+          "playerOn": "I. Fatawu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-17T23:00:00Z",
@@ -9613,7 +9649,7 @@
         "condition": "cloudy",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-18T00:09:44.265355+00:00",
+        "fetchedAt": "2026-06-18T00:19:47.197651+00:00",
         "humidity": 73.8,
         "latitude": 43.6332,
         "longitude": -79.4186,
