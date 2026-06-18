@@ -18659,7 +18659,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": null,
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/818.svg",
         "id": 818,
@@ -18667,7 +18672,7 @@
         "shortName": "Colombia",
         "tla": "COL"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -18676,11 +18681,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_K",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": null,
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8070.png",
         "id": 8070,
@@ -18689,38 +18699,85 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastApiSync": "2026-06-18T02:01:13.229136+00:00",
-      "lastUpdated": "2026-06-18T04:01:10Z",
+      "lastApiSync": "2026-06-18T02:01:36.011448+00:00",
+      "lastUpdated": "2026-06-18T04:01:34Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-18T02:01:13.229136+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-18T02:01:36.011448+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchDetails": {
         "apiFootballFixtureId": 1489386,
         "awayCorners": null,
-        "awayFouls": null,
+        "awayFouls": 0,
         "awayOffsides": null,
         "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayShotsOnGoal": 0,
         "cardEvents": [],
         "events": [],
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": null,
-        "homeFouls": null,
+        "homeFouls": 0,
         "homeOffsides": null,
         "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": null,
+            "fouls": 0,
+            "offsides": null,
+            "possession": null,
+            "redCards": null,
+            "shotsOffGoal": 0,
+            "shotsOnGoal": 0,
+            "totalShots": 0,
+            "yellowCards": null
+          },
+          "home": {
+            "corners": null,
+            "fouls": 0,
+            "offsides": null,
+            "possession": null,
+            "redCards": null,
+            "shotsOffGoal": 0,
+            "shotsOnGoal": 0,
+            "totalShots": 0,
+            "yellowCards": null
+          }
+        },
         "officials": [
           {
             "name": "Anthony Taylor",
@@ -18792,7 +18849,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -37531,7 +37588,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": null,
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/818.svg",
         "id": 818,
@@ -37539,7 +37601,7 @@
         "shortName": "Colombia",
         "tla": "COL"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -37548,11 +37610,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_K",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": null,
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8070.png",
         "id": 8070,
@@ -37561,38 +37628,85 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastApiSync": "2026-06-18T02:01:13.229136+00:00",
-      "lastUpdated": "2026-06-18T04:01:10Z",
+      "lastApiSync": "2026-06-18T02:01:36.011448+00:00",
+      "lastUpdated": "2026-06-18T04:01:34Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-18T02:01:13.229136+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-18T02:01:36.011448+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchDetails": {
         "apiFootballFixtureId": 1489386,
         "awayCorners": null,
-        "awayFouls": null,
+        "awayFouls": 0,
         "awayOffsides": null,
         "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayShotsOnGoal": 0,
         "cardEvents": [],
         "events": [],
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": null,
-        "homeFouls": null,
+        "homeFouls": 0,
         "homeOffsides": null,
         "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": null,
+            "fouls": 0,
+            "offsides": null,
+            "possession": null,
+            "redCards": null,
+            "shotsOffGoal": 0,
+            "shotsOnGoal": 0,
+            "totalShots": 0,
+            "yellowCards": null
+          },
+          "home": {
+            "corners": null,
+            "fouls": 0,
+            "offsides": null,
+            "possession": null,
+            "redCards": null,
+            "shotsOffGoal": 0,
+            "shotsOnGoal": 0,
+            "totalShots": 0,
+            "yellowCards": null
+          }
+        },
         "officials": [
           {
             "name": "Anthony Taylor",
@@ -37664,7 +37778,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
