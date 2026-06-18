@@ -1,13 +1,16 @@
 {
   "live": [
     {
+      "apiFootballFixtureId": 1489386,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/818.svg",
         "id": 818,
@@ -15,8 +18,8 @@
         "shortName": "Colombia",
         "tla": "COL"
       },
-      "clockSeconds": 0,
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -24,8 +27,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_K",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8070.png",
         "id": 8070,
@@ -34,19 +40,19 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastApiSync": null,
+      "lastApiSync": "2026-06-18T02:00:50.037509+00:00",
       "lastUpdated": "2026-06-18T03:03:13Z",
-      "liveSource": "pre_kickoff_window",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "LIVE",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-18T02:00:50.037509+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -71,30 +77,45 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": null,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 11580,
           "name": "Anthony Taylor",
           "nationality": "England",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Anthony Taylor, England",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Anthony Taylor",
+          "nationality": "England",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Anthony Taylor, England",
           "type": "REFEREE"
         }
       ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": null
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -103,8 +124,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "1H",
       "utcDate": "2026-06-18T02:00:00Z",
+      "venue": {
+        "city": "Mexico City",
+        "id": 1069,
+        "name": "Estadio Azteca"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -132,13 +158,16 @@
   ],
   "matches": [
     {
+      "apiFootballFixtureId": 1489386,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/818.svg",
         "id": 818,
@@ -146,8 +175,8 @@
         "shortName": "Colombia",
         "tla": "COL"
       },
-      "clockSeconds": 0,
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -155,8 +184,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_K",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8070.png",
         "id": 8070,
@@ -165,19 +197,19 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastApiSync": null,
+      "lastApiSync": "2026-06-18T02:00:50.037509+00:00",
       "lastUpdated": "2026-06-18T03:03:13Z",
-      "liveSource": "pre_kickoff_window",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "LIVE",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-18T02:00:50.037509+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -202,30 +234,45 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": null,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 11580,
           "name": "Anthony Taylor",
           "nationality": "England",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Anthony Taylor, England",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Anthony Taylor",
+          "nationality": "England",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Anthony Taylor, England",
           "type": "REFEREE"
         }
       ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": null
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -234,8 +281,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "1H",
       "utcDate": "2026-06-18T02:00:00Z",
+      "venue": {
+        "city": "Mexico City",
+        "id": 1069,
+        "name": "Estadio Azteca"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
