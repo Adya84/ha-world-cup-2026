@@ -19565,6 +19565,192 @@
         }
       ],
       "utcDate": "2026-06-18T02:00:00Z"
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/9396.svg",
+        "id": 774,
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA"
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_A",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/798.svg",
+        "id": 798,
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE"
+      },
+      "id": 537329,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-18T18:00:20Z",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchDetails": {
+        "apiFootballFixtureId": null,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 212450,
+            "name": "Tori Penso",
+            "nationality": "USA",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 212450,
+            "name": "Tori Penso",
+            "nationality": "USA",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Atlanta",
+          "cloudCoverage": 100.0,
+          "condition": "heavyrain",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-18T15:55:08.121303+00:00",
+          "humidity": 75.5,
+          "latitude": 33.7554,
+          "longitude": -84.4008,
+          "name": "Mercedes-Benz Stadium weather",
+          "observedAt": "2026-06-18T15:00:00Z",
+          "pressure": 1013.8,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Mercedes-Benz Stadium",
+          "temperature": 27.3,
+          "temperatureUnit": "C",
+          "windBearing": 215.1,
+          "windSpeed": 4.7,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 100.0,
+        "condition": "heavyrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-18T15:55:08.121303+00:00",
+        "humidity": 75.5,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-18T15:00:00Z",
+        "pressure": 1013.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 27.3,
+        "temperatureUnit": "C",
+        "windBearing": 215.1,
+        "windSpeed": 4.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 212450,
+          "name": "Tori Penso",
+          "nationality": "USA",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": "DRAW"
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "IN_PLAY",
+      "utcDate": "2026-06-18T16:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 100.0,
+        "condition": "heavyrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-18T15:55:08.121303+00:00",
+        "humidity": 75.5,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-18T15:00:00Z",
+        "pressure": 1013.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 27.3,
+        "temperatureUnit": "C",
+        "windBearing": 215.1,
+        "windSpeed": 4.7,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -39133,6 +39319,192 @@
         }
       ],
       "utcDate": "2026-06-18T02:00:00Z"
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/9396.svg",
+        "id": 774,
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA"
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_A",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/798.svg",
+        "id": 798,
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE"
+      },
+      "id": 537329,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-18T18:00:20Z",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchDetails": {
+        "apiFootballFixtureId": null,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 212450,
+            "name": "Tori Penso",
+            "nationality": "USA",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 212450,
+            "name": "Tori Penso",
+            "nationality": "USA",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Atlanta",
+          "cloudCoverage": 100.0,
+          "condition": "heavyrain",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-18T15:55:08.121303+00:00",
+          "humidity": 75.5,
+          "latitude": 33.7554,
+          "longitude": -84.4008,
+          "name": "Mercedes-Benz Stadium weather",
+          "observedAt": "2026-06-18T15:00:00Z",
+          "pressure": 1013.8,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Mercedes-Benz Stadium",
+          "temperature": 27.3,
+          "temperatureUnit": "C",
+          "windBearing": 215.1,
+          "windSpeed": 4.7,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 100.0,
+        "condition": "heavyrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-18T15:55:08.121303+00:00",
+        "humidity": 75.5,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-18T15:00:00Z",
+        "pressure": 1013.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 27.3,
+        "temperatureUnit": "C",
+        "windBearing": 215.1,
+        "windSpeed": 4.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 212450,
+          "name": "Tori Penso",
+          "nationality": "USA",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": "DRAW"
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "IN_PLAY",
+      "utcDate": "2026-06-18T16:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 100.0,
+        "condition": "heavyrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-18T15:55:08.121303+00:00",
+        "humidity": 75.5,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-18T15:00:00Z",
+        "pressure": 1013.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 27.3,
+        "temperatureUnit": "C",
+        "windBearing": 215.1,
+        "windSpeed": 4.7,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
