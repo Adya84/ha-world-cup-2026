@@ -10649,7 +10649,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 720,
+      "clockSeconds": 780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -10658,7 +10658,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "12'",
+      "displayMinute": "13'",
       "events": [
         {
           "assist": null,
@@ -10679,8 +10679,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 720,
-      "fallbackClockText": "12'",
+      "fallbackClock": 780,
+      "fallbackClockText": "13'",
       "group": "GROUP_B",
       "homeCorners": 1,
       "homeFouls": 1,
@@ -10696,8 +10696,8 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T22:12:37.605017+00:00",
-      "lastUpdated": "2026-06-19T00:12:34Z",
+      "lastApiSync": "2026-06-18T22:13:08.193775+00:00",
+      "lastUpdated": "2026-06-19T00:12:59Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -10709,7 +10709,7 @@
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
           "totalShots": 1,
-          "yellowCards": null
+          "yellowCards": 0
         },
         "home": {
           "corners": 1,
@@ -10720,19 +10720,19 @@
           "shotsOffGoal": 0,
           "shotsOnGoal": 1,
           "totalShots": 1,
-          "yellowCards": null
+          "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "12'",
-        "lastApiSync": "2026-06-18T22:12:37.605017+00:00",
-        "seconds": 720,
+        "displayMinute": "13'",
+        "lastApiSync": "2026-06-18T22:13:08.193775+00:00",
+        "seconds": 780,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "12'"
+        "timer": "13'"
       },
-      "manualClockText": "12'",
+      "manualClockText": "13'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -10757,7 +10757,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 12,
+      "minute": 13,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
