@@ -8673,7 +8673,7 @@
   },
   "537404": {
     "apiFootballFixtureId": 1489386,
-    "awayScore": 1,
+    "awayScore": 2,
     "awayTeam": "Colombia",
     "base_seconds": 3960,
     "cardEvents": [
@@ -8825,6 +8825,24 @@
         "timer": "60:00",
         "timerSeconds": 3600,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "65'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 65,
+        "player": "L. Diaz",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -8873,13 +8891,36 @@
         "timer": "60:00",
         "timerSeconds": 3600,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Colombia",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "65'",
+        "extra": null,
+        "goalNumber": 3,
+        "homeTeam": "Uzbekistan",
+        "isDisallowed": false,
+        "matchId": 537404,
+        "matchUtcDate": "2026-06-18T02:00:00Z",
+        "minute": 65,
+        "player": "L. Diaz",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "Uzbekistan",
-    "lastApiSync": "2026-06-18T03:26:07.813962+00:00",
+    "lastApiSync": "2026-06-18T03:26:30.805163+00:00",
     "manualClockText": "66'",
-    "phase_start": "2026-06-18T03:26:07.813962+00:00",
+    "phase_start": "2026-06-18T03:26:30.805163+00:00",
     "referees": [
       {
         "name": "Anthony Taylor",
