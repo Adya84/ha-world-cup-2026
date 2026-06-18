@@ -10617,9 +10617,9 @@
         "name": "World"
       },
       "awayCorners": 1,
-      "awayFouls": 3,
+      "awayFouls": 4,
       "awayOffsides": null,
-      "awayPossession": "31%",
+      "awayPossession": "35%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -10632,13 +10632,13 @@
       "cardEvents": [
         {
           "assist": null,
-          "comments": "Foul",
+          "comments": "Tripping",
           "detail": "Yellow Card",
           "displayMinute": "9'",
           "extra": null,
           "isDisallowed": false,
           "minute": 9,
-          "player": "Derek Cornelius",
+          "player": "D. Cornelius",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -10649,7 +10649,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1800,
+      "clockSeconds": 1860,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -10658,17 +10658,17 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "30'",
+      "displayMinute": "31'",
       "events": [
         {
           "assist": null,
-          "comments": "Foul",
+          "comments": "Tripping",
           "detail": "Yellow Card",
           "displayMinute": "9'",
           "extra": null,
           "isDisallowed": false,
           "minute": 9,
-          "player": "Derek Cornelius",
+          "player": "D. Cornelius",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
@@ -10686,7 +10686,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 16,
-          "player": "Cyle Larin",
+          "player": "C. Larin",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -10704,7 +10704,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 29,
-          "player": "Jonathan David",
+          "player": "J. David",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -10715,8 +10715,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1800,
-      "fallbackClockText": "30'",
+      "fallbackClock": 1860,
+      "fallbackClockText": "31'",
       "goalEvents": [
         {
           "assist": null,
@@ -10731,7 +10731,7 @@
           "matchId": 537336,
           "matchUtcDate": "2026-06-18T22:00:00Z",
           "minute": 16,
-          "player": "Cyle Larin",
+          "player": "C. Larin",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -10754,7 +10754,7 @@
           "matchId": 537336,
           "matchUtcDate": "2026-06-18T22:00:00Z",
           "minute": 29,
-          "player": "Jonathan David",
+          "player": "J. David",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -10770,9 +10770,9 @@
       "homeCorners": 3,
       "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "69%",
+      "homePossession": "65%",
       "homeScore": 2,
-      "homeShotsOnGoal": 3,
+      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
         "id": 828,
@@ -10781,16 +10781,16 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T22:30:55.444356+00:00",
-      "lastUpdated": "2026-06-19T00:30:51Z",
+      "lastApiSync": "2026-06-18T22:31:19.045889+00:00",
+      "lastUpdated": "2026-06-19T00:31:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
-          "fouls": 3,
+          "fouls": 4,
           "offsides": null,
-          "possession": "31%",
-          "redCards": null,
+          "possession": "35%",
+          "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
           "totalShots": 2,
@@ -10800,24 +10800,24 @@
           "corners": 3,
           "fouls": 1,
           "offsides": null,
-          "possession": "69%",
-          "redCards": null,
+          "possession": "65%",
+          "redCards": 0,
           "shotsOffGoal": 1,
-          "shotsOnGoal": 3,
-          "totalShots": 5,
+          "shotsOnGoal": 4,
+          "totalShots": 7,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "30'",
-        "lastApiSync": "2026-06-18T22:30:55.444356+00:00",
-        "seconds": 1800,
+        "displayMinute": "31'",
+        "lastApiSync": "2026-06-18T22:31:19.045889+00:00",
+        "seconds": 1860,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "30'"
+        "timer": "31'"
       },
-      "manualClockText": "30'",
+      "manualClockText": "31'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -10842,7 +10842,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 30,
+      "minute": 31,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
