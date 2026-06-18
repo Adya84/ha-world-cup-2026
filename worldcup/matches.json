@@ -10189,7 +10189,7 @@
       "awayFouls": 9,
       "awayOffsides": 3,
       "awayPossession": "62%",
-      "awayScore": 1,
+      "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/9396.svg",
@@ -10254,7 +10254,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5040,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -10263,7 +10263,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "84'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": "A. Sojka",
@@ -10462,28 +10462,10 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Penalty",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "T. Mokoena",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "South Africa",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Penalty"
         }
       ],
-      "fallbackClock": 5040,
-      "fallbackClockText": "84'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": "A. Sojka",
@@ -10507,29 +10489,6 @@
           "timer": "6:00",
           "timerSeconds": 360,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "awayTeam": "South Africa",
-          "comments": null,
-          "detail": "Penalty",
-          "displayMinute": "83'",
-          "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Czechia",
-          "isDisallowed": false,
-          "matchId": 537329,
-          "matchUtcDate": "2026-06-18T16:00:00Z",
-          "minute": 83,
-          "player": "T. Mokoena",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "South Africa",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -10548,7 +10507,7 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T17:45:20.492511+00:00",
+      "lastApiSync": "2026-06-18T17:45:49.726781+00:00",
       "lastUpdated": "2026-06-18T19:44:18Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -10577,14 +10536,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "84'",
-        "lastApiSync": "2026-06-18T17:45:20.492511+00:00",
-        "seconds": 5040,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-18T17:45:49.726781+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "84'"
+        "timer": "82'"
       },
-      "manualClockText": "84'",
+      "manualClockText": "82'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -10609,7 +10568,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 84,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -10638,7 +10597,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 0,
           "home": 1
         },
         "halfTime": {
