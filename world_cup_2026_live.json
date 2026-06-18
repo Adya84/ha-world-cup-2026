@@ -1,13 +1,16 @@
 {
   "live": [
     {
+      "apiFootballFixtureId": 1539004,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/9396.svg",
         "id": 774,
@@ -15,7 +18,8 @@
         "shortName": "South Africa",
         "tla": "RSA"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 120,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -23,8 +27,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_A",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/798.svg",
         "id": 798,
@@ -33,18 +40,19 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-18T18:01:16Z",
+      "lastApiSync": "2026-06-18T16:01:40.111076+00:00",
+      "lastUpdated": "2026-06-18T18:01:37Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-18T16:01:40.111076+00:00",
+        "seconds": 120,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "2'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -69,14 +77,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 212450,
           "name": "Tori Penso",
           "nationality": "USA",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Tori Penso, USA",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Tori Penso",
+          "nationality": "USA",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Tori Penso, USA",
           "type": "REFEREE"
         }
       ],
@@ -87,11 +110,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -100,8 +124,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-18T16:00:00Z",
+      "venue": {
+        "city": "Atlanta",
+        "id": 1898,
+        "name": "Mercedes-Benz Stadium"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -129,13 +158,16 @@
   ],
   "matches": [
     {
+      "apiFootballFixtureId": 1539004,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/9396.svg",
         "id": 774,
@@ -143,7 +175,8 @@
         "shortName": "South Africa",
         "tla": "RSA"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 120,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -151,8 +184,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_A",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/798.svg",
         "id": 798,
@@ -161,18 +197,19 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-18T18:01:16Z",
+      "lastApiSync": "2026-06-18T16:01:40.111076+00:00",
+      "lastUpdated": "2026-06-18T18:01:37Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-18T16:01:40.111076+00:00",
+        "seconds": 120,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "2'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -197,14 +234,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 212450,
           "name": "Tori Penso",
           "nationality": "USA",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Tori Penso, USA",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Tori Penso",
+          "nationality": "USA",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Tori Penso, USA",
           "type": "REFEREE"
         }
       ],
@@ -215,11 +267,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -228,8 +281,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-18T16:00:00Z",
+      "venue": {
+        "city": "Atlanta",
+        "id": 1898,
+        "name": "Mercedes-Benz Stadium"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
