@@ -10876,8 +10876,8 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T22:59:43.048360+00:00",
-      "lastUpdated": "2026-06-19T00:59:38Z",
+      "lastApiSync": "2026-06-18T23:00:09.715385+00:00",
+      "lastUpdated": "2026-06-19T01:00:04Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -10906,7 +10906,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-18T22:59:43.048360+00:00",
+        "lastApiSync": "2026-06-18T23:00:09.715385+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -11065,12 +11065,19 @@
         "tla": "MEX"
       },
       "id": 537330,
-      "lastUpdated": "2026-06-18T15:20:16Z",
+      "lastUpdated": "2026-06-19T01:00:04Z",
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 260120,
+          "name": "Gustavo Tejera",
+          "nationality": "Uruguay",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
