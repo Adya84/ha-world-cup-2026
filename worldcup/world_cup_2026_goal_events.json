@@ -1768,7 +1768,7 @@
     "apiFootballFixtureId": 1489387,
     "awayScore": 0,
     "awayTeam": "Qatar",
-    "base_seconds": 4980,
+    "base_seconds": 5040,
     "cardEvents": [
       {
         "assist": null,
@@ -1844,8 +1844,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4980,
-    "displayMinute": "83'",
+    "clock_seconds": 5040,
+    "displayMinute": "84'",
     "events": [
       {
         "assist": null,
@@ -2152,6 +2152,24 @@
         "timer": "75:00",
         "timerSeconds": 4500,
         "type": "Own Goal"
+      },
+      {
+        "assist": "N. Sigur",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "83'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 83,
+        "player": "T. Buchanan",
+        "playerOff": "T. Buchanan",
+        "playerOn": "N. Sigur",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Canada",
+        "timer": "83:00",
+        "timerSeconds": 4980,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -2273,9 +2291,9 @@
     ],
     "homeScore": 5,
     "homeTeam": "Canada",
-    "lastApiSync": "2026-06-18T23:45:22.428836+00:00",
-    "manualClockText": "83'",
-    "phase_start": "2026-06-18T23:45:22.428836+00:00",
+    "lastApiSync": "2026-06-18T23:45:46.049287+00:00",
+    "manualClockText": "84'",
+    "phase_start": "2026-06-18T23:45:46.049287+00:00",
     "referees": [
       {
         "name": "Cristi\u00e1n Garay",
@@ -2432,6 +2450,24 @@
         "team": "Canada",
         "timer": "71:00",
         "timerSeconds": 4260,
+        "type": "Substitution"
+      },
+      {
+        "assist": "N. Sigur",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "83'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 83,
+        "player": "T. Buchanan",
+        "playerOff": "T. Buchanan",
+        "playerOn": "N. Sigur",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Canada",
+        "timer": "83:00",
+        "timerSeconds": 4980,
         "type": "Substitution"
       }
     ],
