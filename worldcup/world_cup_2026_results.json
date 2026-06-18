@@ -20464,7 +20464,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -20473,7 +20473,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": null,
@@ -20708,10 +20708,28 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "N. Saliba",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": null,
@@ -20781,6 +20799,29 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Qatar",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "64'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Canada",
+          "isDisallowed": false,
+          "matchId": 537336,
+          "matchUtcDate": "2026-06-18T22:00:00Z",
+          "minute": 64,
+          "player": "N. Saliba",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -20789,7 +20830,7 @@
       "homeFouls": 4,
       "homeOffsides": 1,
       "homePossession": "72%",
-      "homeScore": 3,
+      "homeScore": 4,
       "homeShotsOnGoal": 8,
       "homeTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
@@ -20799,8 +20840,8 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T23:25:31.273980+00:00",
-      "lastUpdated": "2026-06-19T01:25:26Z",
+      "lastApiSync": "2026-06-18T23:25:54.875187+00:00",
+      "lastUpdated": "2026-06-19T01:25:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -20828,14 +20869,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-18T23:25:31.273980+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-18T23:25:54.875187+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchDetails": {
         "apiFootballFixtureId": 1489387,
         "awayCorners": 1,
@@ -21151,6 +21192,24 @@
             "timer": "62:00",
             "timerSeconds": 3720,
             "type": "Yellow Card"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "64'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 64,
+            "player": "N. Saliba",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Canada",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -21221,6 +21280,29 @@
             "team": "Canada",
             "timer": "48:00",
             "timerSeconds": 2880,
+            "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Qatar",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "64'",
+            "extra": null,
+            "goalNumber": 4,
+            "homeTeam": "Canada",
+            "isDisallowed": false,
+            "matchId": 537336,
+            "matchUtcDate": "2026-06-18T22:00:00Z",
+            "minute": 64,
+            "player": "N. Saliba",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Canada",
+            "timer": "64:00",
+            "timerSeconds": 3840,
             "type": "Goal"
           }
         ],
@@ -21436,7 +21518,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -21466,7 +21548,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 3
+          "home": 4
         },
         "halfTime": {
           "away": 0,
@@ -42090,7 +42172,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -42099,7 +42181,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": null,
@@ -42334,10 +42416,28 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "N. Saliba",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": null,
@@ -42407,6 +42507,29 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Qatar",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "64'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Canada",
+          "isDisallowed": false,
+          "matchId": 537336,
+          "matchUtcDate": "2026-06-18T22:00:00Z",
+          "minute": 64,
+          "player": "N. Saliba",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -42415,7 +42538,7 @@
       "homeFouls": 4,
       "homeOffsides": 1,
       "homePossession": "72%",
-      "homeScore": 3,
+      "homeScore": 4,
       "homeShotsOnGoal": 8,
       "homeTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
@@ -42425,8 +42548,8 @@
         "tla": "CAN"
       },
       "id": 537336,
-      "lastApiSync": "2026-06-18T23:25:31.273980+00:00",
-      "lastUpdated": "2026-06-19T01:25:26Z",
+      "lastApiSync": "2026-06-18T23:25:54.875187+00:00",
+      "lastUpdated": "2026-06-19T01:25:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -42454,14 +42577,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-18T23:25:31.273980+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-18T23:25:54.875187+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchDetails": {
         "apiFootballFixtureId": 1489387,
         "awayCorners": 1,
@@ -42777,6 +42900,24 @@
             "timer": "62:00",
             "timerSeconds": 3720,
             "type": "Yellow Card"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "64'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 64,
+            "player": "N. Saliba",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Canada",
+            "timer": "64:00",
+            "timerSeconds": 3840,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -42847,6 +42988,29 @@
             "team": "Canada",
             "timer": "48:00",
             "timerSeconds": 2880,
+            "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Qatar",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "64'",
+            "extra": null,
+            "goalNumber": 4,
+            "homeTeam": "Canada",
+            "isDisallowed": false,
+            "matchId": 537336,
+            "matchUtcDate": "2026-06-18T22:00:00Z",
+            "minute": 64,
+            "player": "N. Saliba",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Canada",
+            "timer": "64:00",
+            "timerSeconds": 3840,
             "type": "Goal"
           }
         ],
@@ -43062,7 +43226,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -43092,7 +43256,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 3
+          "home": 4
         },
         "halfTime": {
           "away": 0,
