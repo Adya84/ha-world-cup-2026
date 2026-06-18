@@ -19627,7 +19627,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4440,
+      "clockSeconds": 4500,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -19636,7 +19636,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "74'",
+      "displayMinute": "75'",
       "events": [
         {
           "assist": "A. Sojka",
@@ -19765,27 +19765,9 @@
           "type": "Substitution"
         },
         {
-          "assist": "L. Provod",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "67'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 67,
-          "player": "A. Hlozek",
-          "playerOff": "A. Hlozek",
-          "playerOn": "L. Provod",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Czechia",
-          "timer": "67:00",
-          "timerSeconds": 4020,
-          "type": "Substitution"
-        },
-        {
           "assist": "T. Soucek",
           "comments": null,
-          "detail": "Substitution 4",
+          "detail": "Substitution 3",
           "displayMinute": "67'",
           "extra": null,
           "isDisallowed": false,
@@ -19799,10 +19781,28 @@
           "timer": "67:00",
           "timerSeconds": 4020,
           "type": "Substitution"
+        },
+        {
+          "assist": "L. Provod",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "A. Hlozek",
+          "playerOff": "A. Hlozek",
+          "playerOn": "L. Provod",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4440,
-      "fallbackClockText": "74'",
+      "fallbackClock": 4500,
+      "fallbackClockText": "75'",
       "goalEvents": [
         {
           "assist": "A. Sojka",
@@ -19844,8 +19844,8 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T17:35:32.210283+00:00",
-      "lastUpdated": "2026-06-18T19:35:28Z",
+      "lastApiSync": "2026-06-18T17:35:57.311106+00:00",
+      "lastUpdated": "2026-06-18T19:35:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -19873,14 +19873,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "74'",
-        "lastApiSync": "2026-06-18T17:35:32.210283+00:00",
-        "seconds": 4440,
+        "displayMinute": "75'",
+        "lastApiSync": "2026-06-18T17:35:57.311106+00:00",
+        "seconds": 4500,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "74'"
+        "timer": "75'"
       },
-      "manualClockText": "74'",
+      "manualClockText": "75'",
       "matchDetails": {
         "apiFootballFixtureId": 1539004,
         "awayCorners": 4,
@@ -20054,16 +20054,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "L. Provod",
+            "assist": "T. Soucek",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "67'",
             "extra": null,
             "isDisallowed": false,
             "minute": 67,
-            "player": "A. Hlozek",
-            "playerOff": "A. Hlozek",
-            "playerOn": "L. Provod",
+            "player": "M. Sadilek",
+            "playerOff": "M. Sadilek",
+            "playerOn": "T. Soucek",
             "rawType": "subst",
             "source": "api_football",
             "team": "Czechia",
@@ -20072,16 +20072,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "T. Soucek",
+            "assist": "L. Provod",
             "comments": null,
             "detail": "Substitution 4",
             "displayMinute": "67'",
             "extra": null,
             "isDisallowed": false,
             "minute": 67,
-            "player": "M. Sadilek",
-            "playerOff": "M. Sadilek",
-            "playerOn": "T. Soucek",
+            "player": "A. Hlozek",
+            "playerOff": "A. Hlozek",
+            "playerOn": "L. Provod",
             "rawType": "subst",
             "source": "api_football",
             "team": "Czechia",
@@ -20243,16 +20243,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "L. Provod",
+            "assist": "T. Soucek",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "67'",
             "extra": null,
             "isDisallowed": false,
             "minute": 67,
-            "player": "A. Hlozek",
-            "playerOff": "A. Hlozek",
-            "playerOn": "L. Provod",
+            "player": "M. Sadilek",
+            "playerOff": "M. Sadilek",
+            "playerOn": "T. Soucek",
             "rawType": "subst",
             "source": "api_football",
             "team": "Czechia",
@@ -20261,16 +20261,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "T. Soucek",
+            "assist": "L. Provod",
             "comments": null,
             "detail": "Substitution 4",
             "displayMinute": "67'",
             "extra": null,
             "isDisallowed": false,
             "minute": 67,
-            "player": "M. Sadilek",
-            "playerOff": "M. Sadilek",
-            "playerOn": "T. Soucek",
+            "player": "A. Hlozek",
+            "playerOff": "A. Hlozek",
+            "playerOn": "L. Provod",
             "rawType": "subst",
             "source": "api_football",
             "team": "Czechia",
@@ -20327,7 +20327,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 74,
+      "minute": 75,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -20449,16 +20449,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "L. Provod",
+          "assist": "T. Soucek",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "67'",
           "extra": null,
           "isDisallowed": false,
           "minute": 67,
-          "player": "A. Hlozek",
-          "playerOff": "A. Hlozek",
-          "playerOn": "L. Provod",
+          "player": "M. Sadilek",
+          "playerOff": "M. Sadilek",
+          "playerOn": "T. Soucek",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -20467,16 +20467,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "T. Soucek",
+          "assist": "L. Provod",
           "comments": null,
           "detail": "Substitution 4",
           "displayMinute": "67'",
           "extra": null,
           "isDisallowed": false,
           "minute": 67,
-          "player": "M. Sadilek",
-          "playerOff": "M. Sadilek",
-          "playerOn": "T. Soucek",
+          "player": "A. Hlozek",
+          "playerOff": "A. Hlozek",
+          "playerOn": "L. Provod",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -40144,7 +40144,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4440,
+      "clockSeconds": 4500,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -40153,7 +40153,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "74'",
+      "displayMinute": "75'",
       "events": [
         {
           "assist": "A. Sojka",
@@ -40282,27 +40282,9 @@
           "type": "Substitution"
         },
         {
-          "assist": "L. Provod",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "67'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 67,
-          "player": "A. Hlozek",
-          "playerOff": "A. Hlozek",
-          "playerOn": "L. Provod",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Czechia",
-          "timer": "67:00",
-          "timerSeconds": 4020,
-          "type": "Substitution"
-        },
-        {
           "assist": "T. Soucek",
           "comments": null,
-          "detail": "Substitution 4",
+          "detail": "Substitution 3",
           "displayMinute": "67'",
           "extra": null,
           "isDisallowed": false,
@@ -40316,10 +40298,28 @@
           "timer": "67:00",
           "timerSeconds": 4020,
           "type": "Substitution"
+        },
+        {
+          "assist": "L. Provod",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "A. Hlozek",
+          "playerOff": "A. Hlozek",
+          "playerOn": "L. Provod",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4440,
-      "fallbackClockText": "74'",
+      "fallbackClock": 4500,
+      "fallbackClockText": "75'",
       "goalEvents": [
         {
           "assist": "A. Sojka",
@@ -40361,8 +40361,8 @@
         "tla": "CZE"
       },
       "id": 537329,
-      "lastApiSync": "2026-06-18T17:35:32.210283+00:00",
-      "lastUpdated": "2026-06-18T19:35:28Z",
+      "lastApiSync": "2026-06-18T17:35:57.311106+00:00",
+      "lastUpdated": "2026-06-18T19:35:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -40390,14 +40390,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "74'",
-        "lastApiSync": "2026-06-18T17:35:32.210283+00:00",
-        "seconds": 4440,
+        "displayMinute": "75'",
+        "lastApiSync": "2026-06-18T17:35:57.311106+00:00",
+        "seconds": 4500,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "74'"
+        "timer": "75'"
       },
-      "manualClockText": "74'",
+      "manualClockText": "75'",
       "matchDetails": {
         "apiFootballFixtureId": 1539004,
         "awayCorners": 4,
@@ -40571,16 +40571,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "L. Provod",
+            "assist": "T. Soucek",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "67'",
             "extra": null,
             "isDisallowed": false,
             "minute": 67,
-            "player": "A. Hlozek",
-            "playerOff": "A. Hlozek",
-            "playerOn": "L. Provod",
+            "player": "M. Sadilek",
+            "playerOff": "M. Sadilek",
+            "playerOn": "T. Soucek",
             "rawType": "subst",
             "source": "api_football",
             "team": "Czechia",
@@ -40589,16 +40589,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "T. Soucek",
+            "assist": "L. Provod",
             "comments": null,
             "detail": "Substitution 4",
             "displayMinute": "67'",
             "extra": null,
             "isDisallowed": false,
             "minute": 67,
-            "player": "M. Sadilek",
-            "playerOff": "M. Sadilek",
-            "playerOn": "T. Soucek",
+            "player": "A. Hlozek",
+            "playerOff": "A. Hlozek",
+            "playerOn": "L. Provod",
             "rawType": "subst",
             "source": "api_football",
             "team": "Czechia",
@@ -40760,16 +40760,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "L. Provod",
+            "assist": "T. Soucek",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "67'",
             "extra": null,
             "isDisallowed": false,
             "minute": 67,
-            "player": "A. Hlozek",
-            "playerOff": "A. Hlozek",
-            "playerOn": "L. Provod",
+            "player": "M. Sadilek",
+            "playerOff": "M. Sadilek",
+            "playerOn": "T. Soucek",
             "rawType": "subst",
             "source": "api_football",
             "team": "Czechia",
@@ -40778,16 +40778,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "T. Soucek",
+            "assist": "L. Provod",
             "comments": null,
             "detail": "Substitution 4",
             "displayMinute": "67'",
             "extra": null,
             "isDisallowed": false,
             "minute": 67,
-            "player": "M. Sadilek",
-            "playerOff": "M. Sadilek",
-            "playerOn": "T. Soucek",
+            "player": "A. Hlozek",
+            "playerOff": "A. Hlozek",
+            "playerOn": "L. Provod",
             "rawType": "subst",
             "source": "api_football",
             "team": "Czechia",
@@ -40844,7 +40844,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 74,
+      "minute": 75,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -40966,16 +40966,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "L. Provod",
+          "assist": "T. Soucek",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "67'",
           "extra": null,
           "isDisallowed": false,
           "minute": 67,
-          "player": "A. Hlozek",
-          "playerOff": "A. Hlozek",
-          "playerOn": "L. Provod",
+          "player": "M. Sadilek",
+          "playerOff": "M. Sadilek",
+          "playerOn": "T. Soucek",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
@@ -40984,16 +40984,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "T. Soucek",
+          "assist": "L. Provod",
           "comments": null,
           "detail": "Substitution 4",
           "displayMinute": "67'",
           "extra": null,
           "isDisallowed": false,
           "minute": 67,
-          "player": "M. Sadilek",
-          "playerOff": "M. Sadilek",
-          "playerOn": "T. Soucek",
+          "player": "A. Hlozek",
+          "playerOff": "A. Hlozek",
+          "playerOn": "L. Provod",
           "rawType": "subst",
           "source": "api_football",
           "team": "Czechia",
