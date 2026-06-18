@@ -9365,20 +9365,13 @@
     },
     {
       "apiFootballFixtureId": 1489385,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
-      "awayFouls": 6,
-      "awayOffsides": 1,
-      "awayPossession": "64%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -9442,8 +9435,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -9451,213 +9443,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "16'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 16,
-          "player": "C. Yirenkyi",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Ghana",
-          "timer": "16:00",
-          "timerSeconds": 960,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "B. Asare",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "L. Ati Zigi",
-          "playerOff": "L. Ati Zigi",
-          "playerOn": "B. Asare",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Ghana",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "I. Fatawu",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "E. Nuamah",
-          "playerOff": "E. Nuamah",
-          "playerOn": "I. Fatawu",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Ghana",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
           "assist": "B. Thomas-Asante",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "K. Sulemana",
-          "playerOff": "K. Sulemana",
-          "playerOn": "B. Thomas-Asante",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Ghana",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Fajardo",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "63'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 63,
-          "player": "C. Waterman",
-          "playerOff": "C. Waterman",
-          "playerOn": "J. Fajardo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Panama",
-          "timer": "63:00",
-          "timerSeconds": 3780,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Londono",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "63'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 63,
-          "player": "C. Martinez",
-          "playerOff": "C. Martinez",
-          "playerOn": "A. Londono",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Panama",
-          "timer": "63:00",
-          "timerSeconds": 3780,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "73'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 73,
-          "player": "C. Blackman",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Panama",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "I. Diaz",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "74'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 74,
-          "player": "J. Rodriguez",
-          "playerOff": "J. Rodriguez",
-          "playerOn": "I. Diaz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Panama",
-          "timer": "74:00",
-          "timerSeconds": 4440,
-          "type": "Substitution"
-        },
-        {
-          "assist": "K. Sibo",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "78'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 78,
-          "player": "E. Owusu",
-          "playerOff": "E. Owusu",
-          "playerOn": "K. Sibo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Ghana",
-          "timer": "78:00",
-          "timerSeconds": 4680,
-          "type": "Substitution"
-        },
-        {
-          "assist": "P. Adu",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "87'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 87,
-          "player": "J. Ayew",
-          "playerOff": "J. Ayew",
-          "playerOn": "P. Adu",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Ghana",
-          "timer": "87:00",
-          "timerSeconds": 5220,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Godoy",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "90'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "C. Blackman",
-          "playerOff": "C. Blackman",
-          "playerOn": "A. Godoy",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Panama",
-          "timer": "90:00",
-          "timerSeconds": 5400,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Thomas-Asante",
+          "awayTeam": "Panama",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90+5'",
           "extra": 5,
+          "goalNumber": 1,
+          "homeTeam": "Ghana",
           "isDisallowed": false,
+          "matchId": 537410,
+          "matchUtcDate": "2026-06-17T23:00:00Z",
           "minute": 90,
           "player": "C. Yirenkyi",
           "playerOff": null,
@@ -9668,28 +9467,8 @@
           "timer": "95:00",
           "timerSeconds": 5700,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Roughing",
-          "detail": "Yellow Card",
-          "displayMinute": "90+10'",
-          "extra": 10,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "C. Harvey",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Panama",
-          "timer": "100:00",
-          "timerSeconds": 6000,
-          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "B. Thomas-Asante",
@@ -9715,14 +9494,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_L",
-      "homeCorners": null,
-      "homeFouls": 3,
-      "homeOffsides": 3,
-      "homePossession": "36%",
-      "homeScore": 1,
-      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/ghana.svg",
         "id": 763,
@@ -9732,42 +9504,17 @@
       },
       "id": 537410,
       "lastApiSync": "2026-06-18T01:03:11.252630+00:00",
-      "lastUpdated": "2026-06-18T03:03:10Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": null,
-          "fouls": 6,
-          "offsides": 1,
-          "possession": "64%",
-          "redCards": null,
-          "shotsOffGoal": 1,
-          "shotsOnGoal": 1,
-          "totalShots": 3,
-          "yellowCards": 0
-        },
-        "home": {
-          "corners": null,
-          "fouls": 3,
-          "offsides": 3,
-          "possession": "36%",
-          "redCards": null,
-          "shotsOffGoal": 1,
-          "shotsOnGoal": 0,
-          "totalShots": 1,
-          "yellowCards": 1
-        }
-      },
+      "lastUpdated": "2026-06-18T03:03:37Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-18T01:03:11.252630+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -9792,29 +9539,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 1,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Glenn Nyberg",
-          "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Glenn Nyberg, Sweden",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 30960,
           "name": "Glenn Nyberg",
           "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Glenn Nyberg, Sweden",
           "type": "REFEREE"
         }
       ],
@@ -9830,7 +9562,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -9839,7 +9570,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "B. Asare",
@@ -10005,11 +9736,6 @@
         }
       ],
       "utcDate": "2026-06-17T23:00:00Z",
-      "venue": {
-        "city": "Toronto",
-        "id": 312,
-        "name": "BMO Field"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -10064,7 +9790,7 @@
         "tla": "UZB"
       },
       "id": 537404,
-      "lastUpdated": "2026-06-18T02:00:01Z",
+      "lastUpdated": "2026-06-18T03:03:13Z",
       "matchday": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
