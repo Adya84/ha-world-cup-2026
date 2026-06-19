@@ -11232,7 +11232,27 @@
         "shortName": "Korea Republic",
         "tla": "KOR"
       },
-      "clockSeconds": 240,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "4'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 4,
+          "player": "Lee Kang-In",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "4:00",
+          "timerSeconds": 240,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 300,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -11241,9 +11261,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "4'",
-      "fallbackClock": 240,
-      "fallbackClockText": "4'",
+      "displayMinute": "5'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "4'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 4,
+          "player": "Lee Kang-In",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "4:00",
+          "timerSeconds": 240,
+          "type": "Yellow Card"
+        }
+      ],
+      "fallbackClock": 300,
+      "fallbackClockText": "5'",
       "group": "GROUP_A",
       "homeCorners": null,
       "homeFouls": 0,
@@ -11259,8 +11299,8 @@
         "tla": "MEX"
       },
       "id": 537330,
-      "lastApiSync": "2026-06-19T01:04:33.309620+00:00",
-      "lastUpdated": "2026-06-19T03:04:29Z",
+      "lastApiSync": "2026-06-19T01:04:57.033889+00:00",
+      "lastUpdated": "2026-06-19T03:04:53Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -11288,14 +11328,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "4'",
-        "lastApiSync": "2026-06-19T01:04:33.309620+00:00",
-        "seconds": 240,
+        "displayMinute": "5'",
+        "lastApiSync": "2026-06-19T01:04:57.033889+00:00",
+        "seconds": 300,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "4'"
+        "timer": "5'"
       },
-      "manualClockText": "4'",
+      "manualClockText": "5'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Guadalajara",
@@ -11320,7 +11360,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 4,
+      "minute": 5,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
