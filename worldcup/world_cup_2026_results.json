@@ -23107,7 +23107,7 @@
       "awayCorners": 5,
       "awayFouls": 5,
       "awayOffsides": 0,
-      "awayPossession": "58%",
+      "awayPossession": "60%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -23183,6 +23183,24 @@
           "timer": "23:00",
           "timerSeconds": 1380,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "B. Gannon-Doak",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "K. Tierney",
+          "playerOff": "K. Tierney",
+          "playerOn": "B. Gannon-Doak",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Scotland",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3600,
@@ -23217,7 +23235,7 @@
       "homeCorners": 0,
       "homeFouls": 6,
       "homeOffsides": 1,
-      "homePossession": "42%",
+      "homePossession": "40%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -23228,15 +23246,15 @@
         "tla": "SCO"
       },
       "id": 537342,
-      "lastApiSync": "2026-06-19T23:22:06.307984+00:00",
-      "lastUpdated": "2026-06-20T01:22:04Z",
+      "lastApiSync": "2026-06-19T23:22:41.330054+00:00",
+      "lastUpdated": "2026-06-20T01:22:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 5,
           "fouls": 5,
           "offsides": 0,
-          "possession": "58%",
+          "possession": "60%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 2,
@@ -23247,7 +23265,7 @@
           "corners": 0,
           "fouls": 6,
           "offsides": 1,
-          "possession": "42%",
+          "possession": "40%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -23258,7 +23276,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "60'",
-        "lastApiSync": "2026-06-19T23:22:06.307984+00:00",
+        "lastApiSync": "2026-06-19T23:22:41.330054+00:00",
         "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -23270,7 +23288,7 @@
         "awayCorners": 5,
         "awayFouls": 5,
         "awayOffsides": 0,
-        "awayPossession": "58%",
+        "awayPossession": "60%",
         "awayShotsOnGoal": 2,
         "cardEvents": [
           {
@@ -23328,6 +23346,24 @@
             "timer": "23:00",
             "timerSeconds": 1380,
             "type": "Yellow Card"
+          },
+          {
+            "assist": "B. Gannon-Doak",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "60'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 60,
+            "player": "K. Tierney",
+            "playerOff": "K. Tierney",
+            "playerOn": "B. Gannon-Doak",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Scotland",
+            "timer": "60:00",
+            "timerSeconds": 3600,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -23359,7 +23395,7 @@
         "homeCorners": 0,
         "homeFouls": 6,
         "homeOffsides": 1,
-        "homePossession": "42%",
+        "homePossession": "40%",
         "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
@@ -23368,7 +23404,7 @@
             "corners": 5,
             "fouls": 5,
             "offsides": 0,
-            "possession": "58%",
+            "possession": "60%",
             "redCards": null,
             "shotsOffGoal": 3,
             "shotsOnGoal": 2,
@@ -23379,7 +23415,7 @@
             "corners": 0,
             "fouls": 6,
             "offsides": 1,
-            "possession": "42%",
+            "possession": "40%",
             "redCards": null,
             "shotsOffGoal": 1,
             "shotsOnGoal": 0,
@@ -23409,7 +23445,26 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "B. Gannon-Doak",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "60'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 60,
+            "player": "K. Tierney",
+            "playerOff": "K. Tierney",
+            "playerOn": "B. Gannon-Doak",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Scotland",
+            "timer": "60:00",
+            "timerSeconds": 3600,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "Boston",
@@ -23506,6 +23561,26 @@
       },
       "stage": "GROUP_STAGE",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "B. Gannon-Doak",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "K. Tierney",
+          "playerOff": "K. Tierney",
+          "playerOn": "B. Gannon-Doak",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Scotland",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-19T22:00:00Z",
       "venue": {
         "city": "Boston",
@@ -46645,7 +46720,7 @@
       "awayCorners": 5,
       "awayFouls": 5,
       "awayOffsides": 0,
-      "awayPossession": "58%",
+      "awayPossession": "60%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -46721,6 +46796,24 @@
           "timer": "23:00",
           "timerSeconds": 1380,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "B. Gannon-Doak",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "K. Tierney",
+          "playerOff": "K. Tierney",
+          "playerOn": "B. Gannon-Doak",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Scotland",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3600,
@@ -46755,7 +46848,7 @@
       "homeCorners": 0,
       "homeFouls": 6,
       "homeOffsides": 1,
-      "homePossession": "42%",
+      "homePossession": "40%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -46766,15 +46859,15 @@
         "tla": "SCO"
       },
       "id": 537342,
-      "lastApiSync": "2026-06-19T23:22:06.307984+00:00",
-      "lastUpdated": "2026-06-20T01:22:04Z",
+      "lastApiSync": "2026-06-19T23:22:41.330054+00:00",
+      "lastUpdated": "2026-06-20T01:22:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 5,
           "fouls": 5,
           "offsides": 0,
-          "possession": "58%",
+          "possession": "60%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 2,
@@ -46785,7 +46878,7 @@
           "corners": 0,
           "fouls": 6,
           "offsides": 1,
-          "possession": "42%",
+          "possession": "40%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -46796,7 +46889,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "60'",
-        "lastApiSync": "2026-06-19T23:22:06.307984+00:00",
+        "lastApiSync": "2026-06-19T23:22:41.330054+00:00",
         "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -46808,7 +46901,7 @@
         "awayCorners": 5,
         "awayFouls": 5,
         "awayOffsides": 0,
-        "awayPossession": "58%",
+        "awayPossession": "60%",
         "awayShotsOnGoal": 2,
         "cardEvents": [
           {
@@ -46866,6 +46959,24 @@
             "timer": "23:00",
             "timerSeconds": 1380,
             "type": "Yellow Card"
+          },
+          {
+            "assist": "B. Gannon-Doak",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "60'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 60,
+            "player": "K. Tierney",
+            "playerOff": "K. Tierney",
+            "playerOn": "B. Gannon-Doak",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Scotland",
+            "timer": "60:00",
+            "timerSeconds": 3600,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -46897,7 +47008,7 @@
         "homeCorners": 0,
         "homeFouls": 6,
         "homeOffsides": 1,
-        "homePossession": "42%",
+        "homePossession": "40%",
         "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
@@ -46906,7 +47017,7 @@
             "corners": 5,
             "fouls": 5,
             "offsides": 0,
-            "possession": "58%",
+            "possession": "60%",
             "redCards": null,
             "shotsOffGoal": 3,
             "shotsOnGoal": 2,
@@ -46917,7 +47028,7 @@
             "corners": 0,
             "fouls": 6,
             "offsides": 1,
-            "possession": "42%",
+            "possession": "40%",
             "redCards": null,
             "shotsOffGoal": 1,
             "shotsOnGoal": 0,
@@ -46947,7 +47058,26 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "B. Gannon-Doak",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "60'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 60,
+            "player": "K. Tierney",
+            "playerOff": "K. Tierney",
+            "playerOn": "B. Gannon-Doak",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Scotland",
+            "timer": "60:00",
+            "timerSeconds": 3600,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "Boston",
@@ -47044,6 +47174,26 @@
       },
       "stage": "GROUP_STAGE",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "B. Gannon-Doak",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "K. Tierney",
+          "playerOff": "K. Tierney",
+          "playerOn": "B. Gannon-Doak",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Scotland",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-19T22:00:00Z",
       "venue": {
         "city": "Boston",
