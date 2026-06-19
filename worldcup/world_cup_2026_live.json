@@ -79,7 +79,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5280,
+      "clockSeconds": 5340,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -88,7 +88,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "88'",
+      "displayMinute": "89'",
       "events": [
         {
           "assist": null,
@@ -163,9 +163,27 @@
           "type": "Goal"
         },
         {
-          "assist": "C. Metcalfe",
+          "assist": "N. Irankunda",
           "comments": null,
           "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Toure",
+          "playerOff": "M. Toure",
+          "playerOn": "N. Irankunda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Metcalfe",
+          "comments": null,
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -183,7 +201,7 @@
         {
           "assist": "J. Geria",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 3",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -191,24 +209,6 @@
           "player": "C. Burgess",
           "playerOff": "C. Burgess",
           "playerOn": "J. Geria",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Australia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Irankunda",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "N. Irankunda",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -325,8 +325,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5280,
-      "fallbackClockText": "88'",
+      "fallbackClock": 5340,
+      "fallbackClockText": "89'",
       "goalEvents": [
         {
           "assist": null,
@@ -391,8 +391,8 @@
         "tla": "USA"
       },
       "id": 537348,
-      "lastApiSync": "2026-06-19T20:53:33.465356+00:00",
-      "lastUpdated": "2026-06-19T22:53:31Z",
+      "lastApiSync": "2026-06-19T20:53:58.006140+00:00",
+      "lastUpdated": "2026-06-19T22:53:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -420,14 +420,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "88'",
-        "lastApiSync": "2026-06-19T20:53:33.465356+00:00",
-        "seconds": 5280,
+        "displayMinute": "89'",
+        "lastApiSync": "2026-06-19T20:53:58.006140+00:00",
+        "seconds": 5340,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "88'"
+        "timer": "89'"
       },
-      "manualClockText": "88'",
+      "manualClockText": "89'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -452,7 +452,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 88,
+      "minute": 89,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -502,9 +502,27 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "C. Metcalfe",
+          "assist": "N. Irankunda",
           "comments": null,
           "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Toure",
+          "playerOff": "M. Toure",
+          "playerOn": "N. Irankunda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Metcalfe",
+          "comments": null,
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -522,7 +540,7 @@
         {
           "assist": "J. Geria",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 3",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -530,24 +548,6 @@
           "player": "C. Burgess",
           "playerOff": "C. Burgess",
           "playerOn": "J. Geria",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Australia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Irankunda",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "N. Irankunda",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -757,7 +757,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5280,
+      "clockSeconds": 5340,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -766,7 +766,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "88'",
+      "displayMinute": "89'",
       "events": [
         {
           "assist": null,
@@ -841,9 +841,27 @@
           "type": "Goal"
         },
         {
-          "assist": "C. Metcalfe",
+          "assist": "N. Irankunda",
           "comments": null,
           "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Toure",
+          "playerOff": "M. Toure",
+          "playerOn": "N. Irankunda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Metcalfe",
+          "comments": null,
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -861,7 +879,7 @@
         {
           "assist": "J. Geria",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 3",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -869,24 +887,6 @@
           "player": "C. Burgess",
           "playerOff": "C. Burgess",
           "playerOn": "J. Geria",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Australia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Irankunda",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "N. Irankunda",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -1003,8 +1003,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5280,
-      "fallbackClockText": "88'",
+      "fallbackClock": 5340,
+      "fallbackClockText": "89'",
       "goalEvents": [
         {
           "assist": null,
@@ -1069,8 +1069,8 @@
         "tla": "USA"
       },
       "id": 537348,
-      "lastApiSync": "2026-06-19T20:53:33.465356+00:00",
-      "lastUpdated": "2026-06-19T22:53:31Z",
+      "lastApiSync": "2026-06-19T20:53:58.006140+00:00",
+      "lastUpdated": "2026-06-19T22:53:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1098,14 +1098,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "88'",
-        "lastApiSync": "2026-06-19T20:53:33.465356+00:00",
-        "seconds": 5280,
+        "displayMinute": "89'",
+        "lastApiSync": "2026-06-19T20:53:58.006140+00:00",
+        "seconds": 5340,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "88'"
+        "timer": "89'"
       },
-      "manualClockText": "88'",
+      "manualClockText": "89'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -1130,7 +1130,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 88,
+      "minute": 89,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1180,9 +1180,27 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "C. Metcalfe",
+          "assist": "N. Irankunda",
           "comments": null,
           "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Toure",
+          "playerOff": "M. Toure",
+          "playerOn": "N. Irankunda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Metcalfe",
+          "comments": null,
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -1200,7 +1218,7 @@
         {
           "assist": "J. Geria",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 3",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -1208,24 +1226,6 @@
           "player": "C. Burgess",
           "playerOff": "C. Burgess",
           "playerOn": "J. Geria",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Australia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Irankunda",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "N. Irankunda",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
