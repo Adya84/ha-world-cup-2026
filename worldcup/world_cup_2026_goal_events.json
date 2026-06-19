@@ -1261,7 +1261,7 @@
     "apiFootballFixtureId": 1489388,
     "awayScore": 0,
     "awayTeam": "Korea Republic",
-    "base_seconds": 3000,
+    "base_seconds": 3060,
     "cardEvents": [
       {
         "assist": null,
@@ -1283,8 +1283,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3000,
-    "displayMinute": "50'",
+    "clock_seconds": 3060,
+    "displayMinute": "51'",
     "events": [
       {
         "assist": null,
@@ -1303,14 +1303,56 @@
         "timer": "4:00",
         "timerSeconds": 240,
         "type": "Yellow Card"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "50'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 50,
+        "player": "L. Romo",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Mexico",
+        "timer": "50:00",
+        "timerSeconds": 3000,
+        "type": "Goal"
       }
     ],
-    "goalEvents": [],
-    "homeScore": 0,
+    "goalEvents": [
+      {
+        "assist": null,
+        "awayTeam": "Korea Republic",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "50'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Mexico",
+        "isDisallowed": false,
+        "matchId": 537330,
+        "matchUtcDate": "2026-06-19T01:00:00Z",
+        "minute": 50,
+        "player": "L. Romo",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Mexico",
+        "timer": "50:00",
+        "timerSeconds": 3000,
+        "type": "Goal"
+      }
+    ],
+    "homeScore": 1,
     "homeTeam": "Mexico",
-    "lastApiSync": "2026-06-19T02:09:59.165330+00:00",
-    "manualClockText": "50'",
-    "phase_start": "2026-06-19T02:09:59.165330+00:00",
+    "lastApiSync": "2026-06-19T02:10:22.971193+00:00",
+    "manualClockText": "51'",
+    "phase_start": "2026-06-19T02:10:22.971193+00:00",
     "referees": [
       {
         "name": "Gustavo Tejera",
