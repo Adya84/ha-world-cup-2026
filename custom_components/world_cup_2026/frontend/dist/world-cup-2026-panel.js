@@ -7813,7 +7813,11 @@ class WorldCup2026Panel extends HTMLElement {
           align-items: center;
           gap: 12px;
           white-space: nowrap;
-          animation: wc-premium-supporter-scroll 69s linear infinite;
+          animation-name: wc-premium-supporter-scroll;
+          animation-duration: var(--premium-scroll-seconds, 140s);
+          animation-timing-function: linear;
+          animation-iteration-count: infinite;
+          animation-delay: var(--premium-scroll-delay, 0s);
           will-change: transform;
         }
 
@@ -7903,7 +7907,7 @@ class WorldCup2026Panel extends HTMLElement {
           }
 
           .overview-premium-track {
-            animation-duration: 112s;
+            animation-duration: var(--premium-scroll-seconds, 140s);
           }
 
           .premium-ticker-card {
@@ -17126,6 +17130,118 @@ class WorldCup2026Panel extends HTMLElement {
         height: auto !important;
       }
 
+      /* Mobile banner fix: stop clipping without turning the ticker into a tall list. */
+      .wc-app.wc-view-mobile .overview-premium-strip,
+      .wc-app.wc-view-mobile .overview-supporters-card,
+      .wc-app.wc-view-mobile .wc-support-donate-card,
+      .wc-app.wc-view-mobile .wc-premium-support-info,
+      .wc-app.wc-view-mobile .supporters-summary-card {
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-premium-strip {
+        grid-template-columns: 1fr !important;
+        gap: 0 !important;
+        min-height: 48px !important;
+        padding: 6px 8px !important;
+        overflow: hidden !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-premium-marquee {
+        width: 100% !important;
+        overflow: hidden !important;
+        -webkit-overflow-scrolling: touch !important;
+        mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent) !important;
+        -webkit-mask-image: linear-gradient(to right, transparent, #000 7%, #000 93%, transparent) !important;
+        scrollbar-width: none !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-premium-marquee::-webkit-scrollbar {
+        display: none !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-premium-track {
+        animation-name: wc-premium-supporter-scroll !important;
+        animation-duration: var(--premium-scroll-seconds, 140s) !important;
+        animation-timing-function: linear !important;
+        animation-iteration-count: infinite !important;
+        animation-delay: var(--premium-scroll-delay, 0s) !important;
+        display: inline-flex !important;
+        flex-wrap: nowrap !important;
+        width: max-content !important;
+        min-width: 100% !important;
+        white-space: nowrap !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-premium-strip:hover .overview-premium-track,
+      .wc-app.wc-view-mobile .overview-premium-strip:active .overview-premium-track {
+        animation-play-state: paused !important;
+      }
+
+      .wc-app.wc-view-mobile .premium-ticker-card {
+        width: auto !important;
+        min-width: 0 !important;
+        max-width: none !important;
+        justify-content: flex-start !important;
+        white-space: nowrap !important;
+        height: auto !important;
+        min-height: 32px !important;
+        border-radius: 999px !important;
+        flex: 0 0 auto !important;
+      }
+
+      .wc-app.wc-view-mobile .premium-ticker-card small {
+        display: inline !important;
+        white-space: nowrap !important;
+        overflow-wrap: normal !important;
+      }
+
+      .wc-app.wc-view-mobile .premium-ticker-name {
+        max-width: none !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        white-space: nowrap !important;
+        overflow-wrap: normal !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-supporter-pill strong,
+      .wc-app.wc-view-mobile .overview-supporter-pill span,
+      .wc-app.wc-view-mobile .supporter-card-name span {
+        max-width: 100% !important;
+        overflow: visible !important;
+        text-overflow: clip !important;
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-supporters-list,
+      .wc-app.wc-view-mobile .supporters-feature-grid,
+      .wc-app.wc-view-mobile .supporters-summary-grid {
+        grid-template-columns: 1fr !important;
+        height: auto !important;
+        max-height: none !important;
+        overflow: visible !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-supporter-pill {
+        align-items: flex-start !important;
+        border-radius: 12px !important;
+        height: auto !important;
+        min-height: 0 !important;
+      }
+
+      .wc-app.wc-view-mobile .supporter-country-grid span,
+      .wc-app.wc-view-mobile .overview-country-strip span {
+        white-space: normal !important;
+        overflow-wrap: anywhere !important;
+      }
+
+      .wc-app.wc-view-mobile .overview-premium-cta {
+        display: none !important;
+      }
+
       @media (max-width: 420px) {
         .wc-app.wc-view-mobile {
           padding: 6px !important;
@@ -17742,7 +17858,7 @@ class WorldCup2026Panel extends HTMLElement {
           </span>
         </div>
         <div class="overview-premium-marquee">
-          <div class="overview-premium-track" style="animation-delay: ${animationOffset}s;">
+          <div class="overview-premium-track" style="--premium-scroll-seconds: ${animationSeconds}s; --premium-scroll-delay: ${animationOffset}s;">
             ${repeatedItems}
           </div>
         </div>
