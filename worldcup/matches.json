@@ -11625,7 +11625,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4440,
+      "clockSeconds": 4500,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -11634,7 +11634,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "74'",
+      "displayMinute": "75'",
       "events": [
         {
           "assist": null,
@@ -11709,27 +11709,9 @@
           "type": "Goal"
         },
         {
-          "assist": "C. Metcalfe",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "N. Velupillay",
-          "playerOff": "N. Velupillay",
-          "playerOn": "C. Metcalfe",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Australia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "N. Irankunda",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -11747,7 +11729,7 @@
         {
           "assist": "J. Geria",
           "comments": null,
-          "detail": "Substitution 3",
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -11755,6 +11737,24 @@
           "player": "C. Burgess",
           "playerOff": "C. Burgess",
           "playerOn": "J. Geria",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Metcalfe",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "N. Velupillay",
+          "playerOff": "N. Velupillay",
+          "playerOn": "C. Metcalfe",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -11797,10 +11797,28 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. Berhalter",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "74'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 74,
+          "player": "R. Pepi",
+          "playerOff": "R. Pepi",
+          "playerOn": "S. Berhalter",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4440,
-      "fallbackClockText": "74'",
+      "fallbackClock": 4500,
+      "fallbackClockText": "75'",
       "goalEvents": [
         {
           "assist": null,
@@ -11852,7 +11870,7 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
       "homeCorners": 6,
-      "homeFouls": 9,
+      "homeFouls": 10,
       "homeOffsides": null,
       "homePossession": "68%",
       "homeScore": 2,
@@ -11865,8 +11883,8 @@
         "tla": "USA"
       },
       "id": 537348,
-      "lastApiSync": "2026-06-19T20:39:33.475979+00:00",
-      "lastUpdated": "2026-06-19T22:39:31Z",
+      "lastApiSync": "2026-06-19T20:39:56.332103+00:00",
+      "lastUpdated": "2026-06-19T22:39:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -11882,7 +11900,7 @@
         },
         "home": {
           "corners": 6,
-          "fouls": 9,
+          "fouls": 10,
           "offsides": null,
           "possession": "68%",
           "redCards": null,
@@ -11894,14 +11912,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "74'",
-        "lastApiSync": "2026-06-19T20:39:33.475979+00:00",
-        "seconds": 4440,
+        "displayMinute": "75'",
+        "lastApiSync": "2026-06-19T20:39:56.332103+00:00",
+        "seconds": 4500,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "74'"
+        "timer": "75'"
       },
-      "manualClockText": "74'",
+      "manualClockText": "75'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -11926,7 +11944,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 74,
+      "minute": 75,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -11976,27 +11994,9 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "C. Metcalfe",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "N. Velupillay",
-          "playerOff": "N. Velupillay",
-          "playerOn": "C. Metcalfe",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Australia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "N. Irankunda",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -12014,7 +12014,7 @@
         {
           "assist": "J. Geria",
           "comments": null,
-          "detail": "Substitution 3",
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -12022,6 +12022,24 @@
           "player": "C. Burgess",
           "playerOff": "C. Burgess",
           "playerOn": "J. Geria",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Metcalfe",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "N. Velupillay",
+          "playerOff": "N. Velupillay",
+          "playerOn": "C. Metcalfe",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -12045,6 +12063,24 @@
           "team": "Australia",
           "timer": "61:00",
           "timerSeconds": 3660,
+          "type": "Substitution"
+        },
+        {
+          "assist": "S. Berhalter",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "74'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 74,
+          "player": "R. Pepi",
+          "playerOff": "R. Pepi",
+          "playerOn": "S. Berhalter",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "74:00",
+          "timerSeconds": 4440,
           "type": "Substitution"
         }
       ],
