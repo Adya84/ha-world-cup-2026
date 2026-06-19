@@ -11675,7 +11675,7 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Goal Under Review - offside",
+          "detail": "Normal Goal",
           "displayMinute": "45'",
           "extra": null,
           "isDisallowed": false,
@@ -11683,12 +11683,12 @@
           "player": "A. Freeman",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Var",
+          "rawType": "Goal",
           "source": "api_football",
           "team": "USA",
           "timer": "45:00",
           "timerSeconds": 2700,
-          "type": "VAR"
+          "type": "Goal"
         }
       ],
       "fallbackClock": 2700,
@@ -11716,6 +11716,29 @@
           "timer": "11:00",
           "timerSeconds": 660,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Australia",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "45'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "USA",
+          "isDisallowed": false,
+          "matchId": 537348,
+          "matchUtcDate": "2026-06-19T19:00:00Z",
+          "minute": 45,
+          "player": "A. Freeman",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -11724,7 +11747,7 @@
       "homeFouls": 5,
       "homeOffsides": null,
       "homePossession": "71%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/usa.svg",
@@ -11734,8 +11757,8 @@
         "tla": "USA"
       },
       "id": 537348,
-      "lastApiSync": "2026-06-19T19:45:30.632326+00:00",
-      "lastUpdated": "2026-06-19T21:45:28Z",
+      "lastApiSync": "2026-06-19T19:45:54.767457+00:00",
+      "lastUpdated": "2026-06-19T21:45:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -11764,7 +11787,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-19T19:45:30.632326+00:00",
+        "lastApiSync": "2026-06-19T19:45:54.767457+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -11825,11 +11848,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "winner": "HOME_TEAM"
       },
