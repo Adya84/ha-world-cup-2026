@@ -4255,7 +4255,7 @@
       {
         "assist": null,
         "comments": null,
-        "detail": "Goal Under Review - offside",
+        "detail": "Normal Goal",
         "displayMinute": "45'",
         "extra": null,
         "isDisallowed": false,
@@ -4263,12 +4263,12 @@
         "player": "A. Freeman",
         "playerOff": null,
         "playerOn": null,
-        "rawType": "Var",
+        "rawType": "Goal",
         "source": "api_football",
         "team": "USA",
         "timer": "45:00",
         "timerSeconds": 2700,
-        "type": "VAR"
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -4294,13 +4294,36 @@
         "timer": "11:00",
         "timerSeconds": 660,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Australia",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "45'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "USA",
+        "isDisallowed": false,
+        "matchId": 537348,
+        "matchUtcDate": "2026-06-19T19:00:00Z",
+        "minute": 45,
+        "player": "A. Freeman",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "USA",
+        "timer": "45:00",
+        "timerSeconds": 2700,
+        "type": "Goal"
       }
     ],
-    "homeScore": 1,
+    "homeScore": 2,
     "homeTeam": "USA",
-    "lastApiSync": "2026-06-19T19:45:30.632326+00:00",
+    "lastApiSync": "2026-06-19T19:45:54.767457+00:00",
     "manualClockText": "45'",
-    "phase_start": "2026-06-19T19:45:30.632326+00:00",
+    "phase_start": "2026-06-19T19:45:54.767457+00:00",
     "referees": [
       {
         "name": "Felix Zwayer",
