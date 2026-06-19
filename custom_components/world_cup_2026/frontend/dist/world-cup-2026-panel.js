@@ -14,6 +14,9 @@ class WorldCup2026Panel extends HTMLElement {
     this._visibilityHandler = null;
     this._supportersLoadedAt = 0;
     this._premiumSupportersLoadedAt = 0;
+    this._jsonFetchCache = new Map();
+    this._matchesByIdCache = null;
+    this._matchesByIdCacheAt = 0;
     this._sidebarObserver = null;
     this._sidebarStyleRoots = new Set();
     this._sidebarObservers = [];
@@ -5529,6 +5532,24 @@ class WorldCup2026Panel extends HTMLElement {
     }
   }
 
+  async fetchJsonCached(cacheKey, url, ttlMs = 60 * 1000) {
+    const now = Date.now();
+    const cached = this._jsonFetchCache?.get(cacheKey);
+    if (cached && now - cached.time < ttlMs) return cached.data;
+
+    const separator = url.includes("?") ? "&" : "?";
+    try {
+      const response = await fetch(`${url}${separator}t=${Math.floor(now / Math.max(1000, ttlMs))}`, { cache: "no-store" });
+      if (!response.ok) throw new Error(`HTTP ${response.status}`);
+      const data = await response.json();
+      this._jsonFetchCache.set(cacheKey, { time: now, data });
+      return data;
+    } catch (err) {
+      if (cached) return cached.data;
+      throw err;
+    }
+  }
+
   async loadSupporters() {
     const sortSupporters = (supporters) => {
       return [...supporters].sort((a, b) => {
@@ -5616,16 +5637,15 @@ class WorldCup2026Panel extends HTMLElement {
 
 
   async loadPublicGoalEvents() {
+    const ttlMs = (Array.isArray(this._data?.live) && this._data.live.length) ? 10 * 1000 : 60 * 1000;
     const urls = [
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_goal_events.json?t=" + Date.now(),
-      "/local/worldcup/world_cup_2026_goal_events.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_goal_events.json",
+      "/local/worldcup/world_cup_2026_goal_events.json",
     ];
 
     for (const url of urls) {
       try {
-        const response = await fetch(url, { cache: "no-store" });
-        if (!response.ok) continue;
-        const data = await response.json();
+        const data = await this.fetchJsonCached(`goal-events:${url}`, url, ttlMs);
         if (data && typeof data === "object" && !Array.isArray(data)) return data;
       } catch (err) {
         // Try the next goal-events path.
@@ -5638,16 +5658,14 @@ class WorldCup2026Panel extends HTMLElement {
 
   async loadPublicGithubLive() {
     const urls = [
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/world_cup_2026_live.json?t=" + Date.now(),
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_live.json?t=" + Date.now(),
-      "/local/worldcup/world_cup_2026_live.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/world_cup_2026_live.json",
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_live.json",
+      "/local/worldcup/world_cup_2026_live.json",
     ];
 
     for (const url of urls) {
       try {
-        const response = await fetch(url, { cache: "no-store" });
-        if (!response.ok) continue;
-        const data = await response.json();
+        const data = await this.fetchJsonCached(`github-live:${url}`, url, 10 * 1000);
         const matches = Array.isArray(data)
           ? data
           : (Array.isArray(data?.live) ? data.live : (Array.isArray(data?.matches) ? data.matches : []));
@@ -5663,16 +5681,14 @@ class WorldCup2026Panel extends HTMLElement {
 
   async loadPublicGithubMatches() {
     const urls = [
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/matches.json?v=2&t=" + Date.now(),
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/matches.json?t=" + Date.now(),
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/www/worldcup/matches.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/matches.json?v=2",
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/matches.json",
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/www/worldcup/matches.json",
     ];
 
     for (const url of urls) {
       try {
-        const response = await fetch(url, { cache: "no-store" });
-        if (!response.ok) continue;
-        const data = await response.json();
+        const data = await this.fetchJsonCached(`github-matches:${url}`, url, 5 * 60 * 1000);
         const matches = Array.isArray(data) ? data : (Array.isArray(data?.matches) ? data.matches : []);
         if (matches.length) return matches;
       } catch (err) {
@@ -5686,16 +5702,14 @@ class WorldCup2026Panel extends HTMLElement {
 
   async loadPublicGithubResults() {
     const urls = [
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/world_cup_2026_results.json?t=" + Date.now(),
-      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_results.json?t=" + Date.now(),
-      "/local/worldcup/world_cup_2026_results.json?t=" + Date.now(),
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/worldcup/world_cup_2026_results.json",
+      "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_results.json",
+      "/local/worldcup/world_cup_2026_results.json",
     ];
 
     for (const url of urls) {
       try {
-        const response = await fetch(url, { cache: "no-store" });
-        if (!response.ok) continue;
-        const data = await response.json();
+        const data = await this.fetchJsonCached(`github-results:${url}`, url, 60 * 1000);
         const results = Array.isArray(data)
           ? data
           : (Array.isArray(data?.results) ? data.results : (Array.isArray(data?.matches) ? data.matches : []));
@@ -6035,7 +6049,7 @@ class WorldCup2026Panel extends HTMLElement {
   refreshDelayMs() {
     const matches = this.allKnownMatches ? this.allKnownMatches() : [];
     const hasLive = matches.some((match) => this.isLiveMatch(match));
-    if (hasLive) return 10 * 1000;
+    if (hasLive) return this._page === "live" || this._page === "overview" ? 10 * 1000 : 20 * 1000;
 
     const next = this.nextKickoffMs(matches);
     if (next !== null) {
@@ -6158,13 +6172,18 @@ class WorldCup2026Panel extends HTMLElement {
         (Array.isArray(apiLive) ? apiLive : []).filter((match) => this.isLiveMatch(match)),
         publicGoalEvents
       );
+      const fixtureLiveWithStore = this.mergePublicGoalEventStore(
+        (Array.isArray(fixturesWithStore) ? fixturesWithStore : []).filter((match) => this.isLiveMatch(match)),
+        publicGoalEvents
+      );
       const publicLiveWithStore = this.liveMatchesFromGithub(publicMatchesWithStore);
-      const mergedLiveFromGithub = this.mergeGithubMatchData(apiLiveWithStore, publicLiveWithStore).filter((match) => this.isLiveMatch(match));
+      const localLiveWithFixtures = this.mergeUniqueMatches(apiLiveWithStore, fixtureLiveWithStore);
+      const mergedLiveFromGithub = this.mergeGithubMatchData(localLiveWithFixtures, publicLiveWithStore).filter((match) => this.isLiveMatch(match));
       // Main/provider dashboards keep their API clock. Viewer dashboards can have
       // a local live row with "Awaiting live API data"; merge the GitHub master
       // live feed so those devices get your exported minute/events every refresh.
-      this._data.live = this.backendHasMasterLiveClock(apiLiveWithStore)
-        ? this.mergeGithubMatchData(apiLiveWithStore, publicLiveWithStore).filter((match) => this.isLiveMatch(match))
+      this._data.live = this.backendHasMasterLiveClock(localLiveWithFixtures)
+        ? this.mergeGithubMatchData(localLiveWithFixtures, publicLiveWithStore).filter((match) => this.isLiveMatch(match))
         : mergedLiveFromGithub;
       this._data.fixtures = this.mergeUniqueMatches(
         this.mergeGithubMatchData(fixturesWithStore, publicMatchesWithStore),
@@ -6202,6 +6221,8 @@ class WorldCup2026Panel extends HTMLElement {
         this._data.premiumSupporters = await this.safeAsync(() => this.loadPremiumSupporters(), this._data.premiumSupporters || []);
         this._premiumSupportersLoadedAt = now;
       }
+      this._matchesByIdCache = null;
+      this._matchesByIdCacheAt = 0;
       this.processMatchClockState();
       this.render();
     } catch (err) {
@@ -6544,6 +6565,24 @@ class WorldCup2026Panel extends HTMLElement {
     return matches;
   }
 
+  matchesById() {
+    const now = Date.now();
+    if (this._matchesByIdCache && now - this._matchesByIdCacheAt < 5 * 1000) {
+      return this._matchesByIdCache;
+    }
+    this._matchesByIdCache = new Map(this.allKnownMatches().map((match) => [this.matchStorageId(match), match]));
+    this._matchesByIdCacheAt = now;
+    return this._matchesByIdCache;
+  }
+
+  isElementInViewport(el) {
+    if (!el || !el.getBoundingClientRect) return false;
+    const rect = el.getBoundingClientRect();
+    const height = window.innerHeight || document.documentElement.clientHeight || 0;
+    const width = window.innerWidth || document.documentElement.clientWidth || 0;
+    return rect.bottom >= 0 && rect.right >= 0 && rect.top <= height && rect.left <= width;
+  }
+
   processMatchClockState() {
     const now = Date.now();
     const states = this.loadJsonStorage(this._matchClockStorageKey, {});
@@ -6760,12 +6799,14 @@ class WorldCup2026Panel extends HTMLElement {
     const manualClocks = this.querySelectorAll(".wc-football-match-clock[data-match-id]");
     if (!manualClocks.length) return;
 
-    const matchesById = new Map(this.allKnownMatches().map((match) => [this.matchStorageId(match), match]));
+    const matchesById = this.matchesById();
     manualClocks.forEach((clock) => {
+      if (!this.isElementInViewport(clock)) return;
       const id = clock.getAttribute("data-match-id");
       const match = matchesById.get(id);
       if (!match) return;
-      clock.textContent = this.liveClockText(match);
+      const nextText = this.liveClockText(match);
+      if (clock.textContent !== nextText) clock.textContent = nextText;
     });
   }
 
@@ -7223,7 +7264,37 @@ class WorldCup2026Panel extends HTMLElement {
       zimbabwe: "zw",
     };
 
-    return codes[name] || "";
+    if (codes[name]) return codes[name];
+
+    try {
+      const locales = [
+        this._language || "en",
+        "en", "fr", "de", "es", "it", "nl", "pt", "pl", "ja",
+        "sv", "no", "hu", "tr", "cs", "da", "fi", "el", "ro",
+        "sk", "sl", "hr", "sr", "bg", "uk", "is",
+      ];
+      const uniqueIsoCodes = [...new Set(Object.values(codes).filter((code) => /^[a-z]{2}$/.test(code)))];
+      for (const locale of [...new Set(locales)]) {
+        const displayNames = new Intl.DisplayNames([locale], { type: "region" });
+        for (const code of uniqueIsoCodes) {
+          const localizedName = displayNames.of(code.toUpperCase());
+          const localizedKey = String(localizedName || "")
+            .trim()
+            .toLowerCase()
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .replace(/&/g, " and ")
+            .replace(/[^a-z0-9]+/g, " ")
+            .replace(/\s+/g, " ")
+            .trim();
+          if (localizedKey && localizedKey === name) return code;
+        }
+      }
+    } catch (err) {
+      // Manual football aliases above remain the source of truth if Intl is unavailable.
+    }
+
+    return "";
   }
 
   flag(team, small = false) {
