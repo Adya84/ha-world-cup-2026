@@ -12080,7 +12080,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5040,
+      "clockSeconds": 5100,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -12089,7 +12089,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "84'",
+      "displayMinute": "85'",
       "events": [
         {
           "assist": "B. Diaz",
@@ -12216,10 +12216,46 @@
           "timer": "84:00",
           "timerSeconds": 5040,
           "type": "Substitution"
+        },
+        {
+          "assist": "C. Talbi",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "B. El Khannouss",
+          "playerOff": "B. El Khannouss",
+          "playerOn": "C. Talbi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Amaimouni",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "B. Diaz",
+          "playerOff": "B. Diaz",
+          "playerOn": "A. Amaimouni",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5040,
-      "fallbackClockText": "84'",
+      "fallbackClock": 5100,
+      "fallbackClockText": "85'",
       "goalEvents": [
         {
           "assist": "B. Diaz",
@@ -12261,8 +12297,8 @@
         "tla": "SCO"
       },
       "id": 537342,
-      "lastApiSync": "2026-06-19T23:46:18.244589+00:00",
-      "lastUpdated": "2026-06-20T01:46:16Z",
+      "lastApiSync": "2026-06-19T23:46:50.935556+00:00",
+      "lastUpdated": "2026-06-20T01:46:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -12290,14 +12326,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "84'",
-        "lastApiSync": "2026-06-19T23:46:18.244589+00:00",
-        "seconds": 5040,
+        "displayMinute": "85'",
+        "lastApiSync": "2026-06-19T23:46:50.935556+00:00",
+        "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "84'"
+        "timer": "85'"
       },
-      "manualClockText": "84'",
+      "manualClockText": "85'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -12305,7 +12341,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-19T23:36:22.396449+00:00",
+        "fetchedAt": "2026-06-19T23:46:50.712577+00:00",
         "humidity": 43.7,
         "latitude": 42.0909,
         "longitude": -71.2643,
@@ -12322,7 +12358,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 84,
+      "minute": 85,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -12442,6 +12478,42 @@
           "timer": "84:00",
           "timerSeconds": 5040,
           "type": "Substitution"
+        },
+        {
+          "assist": "C. Talbi",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "B. El Khannouss",
+          "playerOff": "B. El Khannouss",
+          "playerOn": "C. Talbi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Amaimouni",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "B. Diaz",
+          "playerOff": "B. Diaz",
+          "playerOn": "A. Amaimouni",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-19T22:00:00Z",
@@ -12457,7 +12529,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-19T23:36:22.396449+00:00",
+        "fetchedAt": "2026-06-19T23:46:50.712577+00:00",
         "humidity": 43.7,
         "latitude": 42.0909,
         "longitude": -71.2643,
