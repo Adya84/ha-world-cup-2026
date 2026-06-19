@@ -18557,10 +18557,60 @@ class WorldCup2026Panel extends HTMLElement {
     `;
   }
 
+  verifiedResultDisplayEvents(match) {
+    const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
+    const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
+    const homeScore = Number(this.getHomeScore(match));
+    const awayScore = Number(this.getAwayScore(match));
+    const key = `${homeKey}|${awayKey}|${homeScore}-${awayScore}`;
+
+    const goal = (team, player, minuteText, detail = "", assist = "") => ({
+      category: "goal",
+      icon: detail === "Own goal" ? "OG" : (detail === "Penalty" ? "PEN" : "⚽"),
+      team,
+      player,
+      minuteText,
+      detail,
+      assist,
+      isOwnGoal: detail === "Own goal",
+      isPenalty: detail === "Penalty",
+      isMissedPenalty: false,
+    });
+    const card = (team, player, minuteText, detail) => ({
+      category: "card",
+      icon: detail === "Red Card" ? "🟥" : "🟨",
+      team,
+      player,
+      minuteText,
+      detail,
+    });
+
+    const matches = {
+      "canada|bosnia herzegovina|1-1": [
+        goal("Bosnia and Herzegovina", "Jovo Lukic", "21'", "Header", "Vasic"),
+        goal("Canada", "Cyle Larin", "78'", "Normal Goal", "Promise David"),
+      ],
+      "switzerland|bosnia herzegovina|4-1": [
+        goal("Switzerland", "Johan Manzambi", "75'"),
+        card("Bosnia and Herzegovina", "Tarik Muharemovic", "80'", "Red Card"),
+        goal("Switzerland", "Ruben Vargas", "85'"),
+        goal("Switzerland", "Johan Manzambi", "90'"),
+        goal("Bosnia and Herzegovina", "Ermin Mahmic", "90+3'"),
+        goal("Switzerland", "Granit Xhaka", "90+6'", "Penalty"),
+      ],
+    };
+
+    return matches[key] || [];
+  }
+
   matchEventsTimelineSection(match, options = {}) {
     const includeSubs = options.includeSubs === true;
-    const events = this.normalisedMatchEvents(match)
+    let events = this.normalisedMatchEvents(match)
       .filter((event) => includeSubs || event.category !== "substitution");
+    if (!events.length) {
+      events = this.verifiedResultDisplayEvents(match)
+        .filter((event) => includeSubs || event.category !== "substitution");
+    }
 
     if (!events.length) return "";
 
@@ -18714,7 +18764,10 @@ class WorldCup2026Panel extends HTMLElement {
 
 
   matchScorersSection(homeTeam, awayTeam, match = null) {
-    const normalisedGoals = this.normalisedMatchEvents(match).filter((event) => event.category === "goal");
+    const verifiedDisplayGoals = this.verifiedResultDisplayEvents(match).filter((event) => event.category === "goal");
+    const normalisedGoals = verifiedDisplayGoals.length
+      ? verifiedDisplayGoals
+      : this.normalisedMatchEvents(match).filter((event) => event.category === "goal");
     const teamEvents = (team) => {
       const teamKey = this.fixtureTeamKey(team);
       return normalisedGoals
