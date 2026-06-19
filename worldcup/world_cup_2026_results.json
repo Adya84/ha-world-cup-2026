@@ -23104,7 +23104,7 @@
         "id": 2267,
         "name": "World"
       },
-      "awayScore": 0,
+      "awayScore": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -23122,8 +23122,54 @@
         "type": "CUP"
       },
       "displayMinute": "2'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 2,
+          "player": "I. Saibari",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 120,
       "fallbackClockText": "2'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Morocco",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Scotland",
+          "isDisallowed": false,
+          "matchId": 537342,
+          "matchUtcDate": "2026-06-19T22:00:00Z",
+          "minute": 2,
+          "player": "I. Saibari",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeScore": 0,
       "homeTeam": {
@@ -23134,13 +23180,13 @@
         "tla": "SCO"
       },
       "id": 537342,
-      "lastApiSync": "2026-06-19T22:01:38.671672+00:00",
-      "lastUpdated": "2026-06-20T00:01:37Z",
+      "lastApiSync": "2026-06-19T22:02:07.043747+00:00",
+      "lastUpdated": "2026-06-20T00:02:01Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
         "displayMinute": "2'",
-        "lastApiSync": "2026-06-19T22:01:38.671672+00:00",
+        "lastApiSync": "2026-06-19T22:02:07.043747+00:00",
         "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -23155,9 +23201,52 @@
         "awayPossession": null,
         "awayShotsOnGoal": null,
         "cardEvents": [],
-        "events": [],
-        "goalEvents": [],
-        "goalEventsSource": null,
+        "events": [
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "2'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 2,
+            "player": "I. Saibari",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Morocco",
+            "timer": "2:00",
+            "timerSeconds": 120,
+            "type": "Goal"
+          }
+        ],
+        "goalEvents": [
+          {
+            "assist": null,
+            "awayTeam": "Morocco",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "2'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Scotland",
+            "isDisallowed": false,
+            "matchId": 537342,
+            "matchUtcDate": "2026-06-19T22:00:00Z",
+            "minute": 2,
+            "player": "I. Saibari",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Morocco",
+            "timer": "2:00",
+            "timerSeconds": 120,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": "api_football_live",
         "homeCorners": null,
         "homeFouls": null,
         "homeOffsides": null,
@@ -23266,11 +23355,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -46421,7 +46510,7 @@
         "id": 2267,
         "name": "World"
       },
-      "awayScore": 0,
+      "awayScore": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -46439,8 +46528,54 @@
         "type": "CUP"
       },
       "displayMinute": "2'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 2,
+          "player": "I. Saibari",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 120,
       "fallbackClockText": "2'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Morocco",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Scotland",
+          "isDisallowed": false,
+          "matchId": 537342,
+          "matchUtcDate": "2026-06-19T22:00:00Z",
+          "minute": 2,
+          "player": "I. Saibari",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeScore": 0,
       "homeTeam": {
@@ -46451,13 +46586,13 @@
         "tla": "SCO"
       },
       "id": 537342,
-      "lastApiSync": "2026-06-19T22:01:38.671672+00:00",
-      "lastUpdated": "2026-06-20T00:01:37Z",
+      "lastApiSync": "2026-06-19T22:02:07.043747+00:00",
+      "lastUpdated": "2026-06-20T00:02:01Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
         "displayMinute": "2'",
-        "lastApiSync": "2026-06-19T22:01:38.671672+00:00",
+        "lastApiSync": "2026-06-19T22:02:07.043747+00:00",
         "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -46472,9 +46607,52 @@
         "awayPossession": null,
         "awayShotsOnGoal": null,
         "cardEvents": [],
-        "events": [],
-        "goalEvents": [],
-        "goalEventsSource": null,
+        "events": [
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "2'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 2,
+            "player": "I. Saibari",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Morocco",
+            "timer": "2:00",
+            "timerSeconds": 120,
+            "type": "Goal"
+          }
+        ],
+        "goalEvents": [
+          {
+            "assist": null,
+            "awayTeam": "Morocco",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "2'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Scotland",
+            "isDisallowed": false,
+            "matchId": 537342,
+            "matchUtcDate": "2026-06-19T22:00:00Z",
+            "minute": 2,
+            "player": "I. Saibari",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Morocco",
+            "timer": "2:00",
+            "timerSeconds": 120,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": "api_football_live",
         "homeCorners": null,
         "homeFouls": null,
         "homeOffsides": null,
@@ -46583,11 +46761,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
