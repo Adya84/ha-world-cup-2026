@@ -12021,20 +12021,13 @@
     },
     {
       "apiFootballFixtureId": 1489390,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 5,
-      "awayFouls": 8,
-      "awayOffsides": 0,
-      "awayPossession": "60%",
-      "awayScore": 1,
-      "awayShotsOnGoal": 2,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -12080,8 +12073,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -12089,15 +12081,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "B. Diaz",
+          "awayTeam": "Morocco",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "2'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Scotland",
           "isDisallowed": false,
+          "matchId": 537342,
+          "matchUtcDate": "2026-06-19T22:00:00Z",
           "minute": 2,
           "player": "I. Saibari",
           "playerOff": null,
@@ -12108,208 +12105,8 @@
           "timer": "2:00",
           "timerSeconds": 120,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "23'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 23,
-          "player": "I. Diop",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "23:00",
-          "timerSeconds": 1380,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "B. Gannon-Doak",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "K. Tierney",
-          "playerOff": "K. Tierney",
-          "playerOn": "B. Gannon-Doak",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Scotland",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "65'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 65,
-          "player": "A. Robertson",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Scotland",
-          "timer": "65:00",
-          "timerSeconds": 3900,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "L. Dykes",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "C. Adams",
-          "playerOff": "C. Adams",
-          "playerOn": "L. Dykes",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Scotland",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "K. McLean",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "R. Christie",
-          "playerOff": "R. Christie",
-          "playerOn": "K. McLean",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Scotland",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Rahimi",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "I. Saibari",
-          "playerOff": "I. Saibari",
-          "playerOn": "S. Rahimi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Talbi",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "B. El Khannouss",
-          "playerOff": "B. El Khannouss",
-          "playerOn": "C. Talbi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Amaimouni",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "B. Diaz",
-          "playerOff": "B. Diaz",
-          "playerOn": "A. Amaimouni",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Ralston",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "89'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 89,
-          "player": "N. Patterson",
-          "playerOff": "N. Patterson",
-          "playerOn": "A. Ralston",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Scotland",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "type": "Substitution"
-        },
-        {
-          "assist": "R. Stewart",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "89'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 89,
-          "player": "J. McGinn",
-          "playerOff": "J. McGinn",
-          "playerOn": "R. Stewart",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Scotland",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. El Mourabet",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "90'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "A. Ounahi",
-          "playerOff": "A. Ounahi",
-          "playerOn": "S. El Mourabet",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "90:00",
-          "timerSeconds": 5400,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "B. Diaz",
@@ -12335,14 +12132,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 1,
-      "homeFouls": 10,
-      "homeOffsides": 1,
-      "homePossession": "40%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/814.svg",
         "id": 8873,
@@ -12352,42 +12142,17 @@
       },
       "id": 537342,
       "lastApiSync": "2026-06-19T23:58:58.144694+00:00",
-      "lastUpdated": "2026-06-20T01:58:55Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 5,
-          "fouls": 8,
-          "offsides": 0,
-          "possession": "60%",
-          "redCards": null,
-          "shotsOffGoal": 5,
-          "shotsOnGoal": 2,
-          "totalShots": 11,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 1,
-          "fouls": 10,
-          "offsides": 1,
-          "possession": "40%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 0,
-          "totalShots": 6,
-          "yellowCards": 1
-        }
-      },
+      "lastUpdated": "2026-06-20T01:59:28Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-19T23:58:58.144694+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -12412,29 +12177,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Il'giz Tantashev",
-          "nationality": "Uzbekistan",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Ilgiz Tantashev, Uzbekistan",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 236055,
           "name": "Il'giz Tantashev",
           "nationality": "Uzbekistan",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Ilgiz Tantashev, Uzbekistan",
           "type": "REFEREE"
         }
       ],
@@ -12450,7 +12200,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -12459,7 +12208,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "B. Gannon-Doak",
@@ -12625,11 +12374,6 @@
         }
       ],
       "utcDate": "2026-06-19T22:00:00Z",
-      "venue": {
-        "city": "Boston",
-        "id": 1618,
-        "name": "Gillette Stadium"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
