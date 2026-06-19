@@ -10,7 +10,7 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
+      "awayCorners": 0,
       "awayFouls": 1,
       "awayOffsides": null,
       "awayPossession": "25%",
@@ -23,7 +23,27 @@
         "shortName": "Australia",
         "tla": "AUS"
       },
-      "clockSeconds": 960,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "16'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 16,
+          "player": "J. Bos",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "16:00",
+          "timerSeconds": 960,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 1020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "16'",
+      "displayMinute": "17'",
       "events": [
         {
           "assist": null,
@@ -51,10 +71,28 @@
           "timer": "11:00",
           "timerSeconds": 660,
           "type": "Own Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "16'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 16,
+          "player": "J. Bos",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "16:00",
+          "timerSeconds": 960,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 960,
-      "fallbackClockText": "16'",
+      "fallbackClock": 1020,
+      "fallbackClockText": "17'",
       "goalEvents": [
         {
           "assist": null,
@@ -82,8 +120,8 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
-      "homeCorners": null,
-      "homeFouls": 2,
+      "homeCorners": 1,
+      "homeFouls": 3,
       "homeOffsides": null,
       "homePossession": "75%",
       "homeScore": 1,
@@ -96,12 +134,12 @@
         "tla": "USA"
       },
       "id": 537348,
-      "lastApiSync": "2026-06-19T19:16:27.372416+00:00",
-      "lastUpdated": "2026-06-19T21:16:25Z",
+      "lastApiSync": "2026-06-19T19:16:51.951193+00:00",
+      "lastUpdated": "2026-06-19T21:16:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
+          "corners": 0,
           "fouls": 1,
           "offsides": null,
           "possession": "25%",
@@ -112,27 +150,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": null,
-          "fouls": 2,
+          "corners": 1,
+          "fouls": 3,
           "offsides": null,
           "possession": "75%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
-          "totalShots": 1,
+          "totalShots": 3,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "16'",
-        "lastApiSync": "2026-06-19T19:16:27.372416+00:00",
-        "seconds": 960,
+        "displayMinute": "17'",
+        "lastApiSync": "2026-06-19T19:16:51.951193+00:00",
+        "seconds": 1020,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "16'"
+        "timer": "17'"
       },
-      "manualClockText": "16'",
+      "manualClockText": "17'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -157,7 +195,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 16,
+      "minute": 17,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -247,7 +285,7 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
+      "awayCorners": 0,
       "awayFouls": 1,
       "awayOffsides": null,
       "awayPossession": "25%",
@@ -260,7 +298,27 @@
         "shortName": "Australia",
         "tla": "AUS"
       },
-      "clockSeconds": 960,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "16'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 16,
+          "player": "J. Bos",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "16:00",
+          "timerSeconds": 960,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 1020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -269,7 +327,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "16'",
+      "displayMinute": "17'",
       "events": [
         {
           "assist": null,
@@ -288,10 +346,28 @@
           "timer": "11:00",
           "timerSeconds": 660,
           "type": "Own Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "16'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 16,
+          "player": "J. Bos",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "16:00",
+          "timerSeconds": 960,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 960,
-      "fallbackClockText": "16'",
+      "fallbackClock": 1020,
+      "fallbackClockText": "17'",
       "goalEvents": [
         {
           "assist": null,
@@ -319,8 +395,8 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
-      "homeCorners": null,
-      "homeFouls": 2,
+      "homeCorners": 1,
+      "homeFouls": 3,
       "homeOffsides": null,
       "homePossession": "75%",
       "homeScore": 1,
@@ -333,12 +409,12 @@
         "tla": "USA"
       },
       "id": 537348,
-      "lastApiSync": "2026-06-19T19:16:27.372416+00:00",
-      "lastUpdated": "2026-06-19T21:16:25Z",
+      "lastApiSync": "2026-06-19T19:16:51.951193+00:00",
+      "lastUpdated": "2026-06-19T21:16:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
+          "corners": 0,
           "fouls": 1,
           "offsides": null,
           "possession": "25%",
@@ -349,27 +425,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": null,
-          "fouls": 2,
+          "corners": 1,
+          "fouls": 3,
           "offsides": null,
           "possession": "75%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
-          "totalShots": 1,
+          "totalShots": 3,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "16'",
-        "lastApiSync": "2026-06-19T19:16:27.372416+00:00",
-        "seconds": 960,
+        "displayMinute": "17'",
+        "lastApiSync": "2026-06-19T19:16:51.951193+00:00",
+        "seconds": 1020,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "16'"
+        "timer": "17'"
       },
-      "manualClockText": "16'",
+      "manualClockText": "17'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -394,7 +470,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 16,
+      "minute": 17,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
