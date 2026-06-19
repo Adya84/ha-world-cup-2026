@@ -1,4 +1,264 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/779.svg",
+        "id": 779,
+        "name": "Australia",
+        "shortName": "Australia",
+        "tla": "AUS"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_D",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/usa.svg",
+        "id": 771,
+        "name": "United States",
+        "shortName": "USA",
+        "tla": "USA"
+      },
+      "id": 537348,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-19T20:40:01Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Seattle",
+        "cloudCoverage": 64.1,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-19T18:55:06.475330+00:00",
+        "humidity": 51.4,
+        "latitude": 47.5952,
+        "longitude": -122.3316,
+        "name": "Lumen Field weather",
+        "observedAt": "2026-06-19T18:00:00Z",
+        "pressure": 1011.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lumen Field",
+        "temperature": 22.2,
+        "temperatureUnit": "C",
+        "windBearing": 343.8,
+        "windSpeed": 4.0,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 43878,
+          "name": "Felix Zwayer",
+          "nationality": "Germany",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-19T19:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Seattle",
+        "cloudCoverage": 64.1,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-19T18:55:06.475330+00:00",
+        "humidity": 51.4,
+        "latitude": 47.5952,
+        "longitude": -122.3316,
+        "name": "Lumen Field weather",
+        "observedAt": "2026-06-19T18:00:00Z",
+        "pressure": 1011.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lumen Field",
+        "temperature": 22.2,
+        "temperatureUnit": "C",
+        "windBearing": 343.8,
+        "windSpeed": 4.0,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/779.svg",
+        "id": 779,
+        "name": "Australia",
+        "shortName": "Australia",
+        "tla": "AUS"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_D",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/usa.svg",
+        "id": 771,
+        "name": "United States",
+        "shortName": "USA",
+        "tla": "USA"
+      },
+      "id": 537348,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-19T20:40:01Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Seattle",
+        "cloudCoverage": 64.1,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-19T18:55:06.475330+00:00",
+        "humidity": 51.4,
+        "latitude": 47.5952,
+        "longitude": -122.3316,
+        "name": "Lumen Field weather",
+        "observedAt": "2026-06-19T18:00:00Z",
+        "pressure": 1011.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lumen Field",
+        "temperature": 22.2,
+        "temperatureUnit": "C",
+        "windBearing": 343.8,
+        "windSpeed": 4.0,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 43878,
+          "name": "Felix Zwayer",
+          "nationality": "Germany",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-19T19:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Seattle",
+        "cloudCoverage": 64.1,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-19T18:55:06.475330+00:00",
+        "humidity": 51.4,
+        "latitude": 47.5952,
+        "longitude": -122.3316,
+        "name": "Lumen Field weather",
+        "observedAt": "2026-06-19T18:00:00Z",
+        "pressure": 1011.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lumen Field",
+        "temperature": 22.2,
+        "temperatureUnit": "C",
+        "windBearing": 343.8,
+        "windSpeed": 4.0,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
