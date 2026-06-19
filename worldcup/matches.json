@@ -11252,7 +11252,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3420,
+      "clockSeconds": 3480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -11261,7 +11261,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "57'",
+      "displayMinute": "58'",
       "events": [
         {
           "assist": null,
@@ -11316,10 +11316,28 @@
           "timer": "57:00",
           "timerSeconds": 3420,
           "type": "Substitution"
+        },
+        {
+          "assist": "Oh Hyeon-Gyu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "Son Heung-Min",
+          "playerOff": "Son Heung-Min",
+          "playerOn": "Oh Hyeon-Gyu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "57:00",
+          "timerSeconds": 3420,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3420,
-      "fallbackClockText": "57'",
+      "fallbackClock": 3480,
+      "fallbackClockText": "58'",
       "goalEvents": [
         {
           "assist": null,
@@ -11361,8 +11379,8 @@
         "tla": "MEX"
       },
       "id": 537330,
-      "lastApiSync": "2026-06-19T02:17:26.744801+00:00",
-      "lastUpdated": "2026-06-19T04:17:23Z",
+      "lastApiSync": "2026-06-19T02:17:50.402024+00:00",
+      "lastUpdated": "2026-06-19T04:17:47Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -11390,14 +11408,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "57'",
-        "lastApiSync": "2026-06-19T02:17:26.744801+00:00",
-        "seconds": 3420,
+        "displayMinute": "58'",
+        "lastApiSync": "2026-06-19T02:17:50.402024+00:00",
+        "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "57'"
+        "timer": "58'"
       },
-      "manualClockText": "57'",
+      "manualClockText": "58'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Guadalajara",
@@ -11422,7 +11440,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 57,
+      "minute": 58,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -11482,6 +11500,24 @@
           "player": "Lee Jae-Sung",
           "playerOff": "Lee Jae-Sung",
           "playerOn": "Hwang Hee-Chan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "57:00",
+          "timerSeconds": 3420,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Oh Hyeon-Gyu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "Son Heung-Min",
+          "playerOff": "Son Heung-Min",
+          "playerOn": "Oh Hyeon-Gyu",
           "rawType": "subst",
           "source": "api_football",
           "team": "South Korea",
