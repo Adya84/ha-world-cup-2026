@@ -23093,6 +23093,227 @@
         }
       ],
       "utcDate": "2026-06-19T19:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489390,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/morocco.svg",
+        "id": 815,
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_C",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/814.svg",
+        "id": 8873,
+        "name": "Scotland",
+        "shortName": "Scotland",
+        "tla": "SCO"
+      },
+      "id": 537342,
+      "lastApiSync": "2026-06-19T22:00:51.815194+00:00",
+      "lastUpdated": "2026-06-20T00:00:49Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-19T22:00:51.815194+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489390,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Il'giz Tantashev",
+            "nationality": "Uzbekistan",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ilgiz Tantashev, Uzbekistan",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Il'giz Tantashev",
+            "nationality": "Uzbekistan",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ilgiz Tantashev, Uzbekistan",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Boston",
+          "cloudCoverage": 55.5,
+          "condition": "partlycloudy_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-19T21:55:00.530870+00:00",
+          "humidity": 40.1,
+          "latitude": 42.0909,
+          "longitude": -71.2643,
+          "name": "Gillette Stadium weather",
+          "observedAt": "2026-06-19T21:00:00Z",
+          "pressure": 1001.3,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Gillette Stadium",
+          "temperature": 25.1,
+          "temperatureUnit": "C",
+          "windBearing": 268.2,
+          "windSpeed": 6.6,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Boston",
+        "cloudCoverage": 55.5,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-19T21:55:00.530870+00:00",
+        "humidity": 40.1,
+        "latitude": 42.0909,
+        "longitude": -71.2643,
+        "name": "Gillette Stadium weather",
+        "observedAt": "2026-06-19T21:00:00Z",
+        "pressure": 1001.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Gillette Stadium",
+        "temperature": 25.1,
+        "temperatureUnit": "C",
+        "windBearing": 268.2,
+        "windSpeed": 6.6,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Il'giz Tantashev",
+          "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ilgiz Tantashev, Uzbekistan",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Il'giz Tantashev",
+          "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ilgiz Tantashev, Uzbekistan",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-19T22:00:00Z",
+      "venue": {
+        "city": "Boston",
+        "id": 1618,
+        "name": "Gillette Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Boston",
+        "cloudCoverage": 55.5,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-19T21:55:00.530870+00:00",
+        "humidity": 40.1,
+        "latitude": 42.0909,
+        "longitude": -71.2643,
+        "name": "Gillette Stadium weather",
+        "observedAt": "2026-06-19T21:00:00Z",
+        "pressure": 1001.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Gillette Stadium",
+        "temperature": 25.1,
+        "temperatureUnit": "C",
+        "windBearing": 268.2,
+        "windSpeed": 6.6,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -46189,6 +46410,227 @@
         }
       ],
       "utcDate": "2026-06-19T19:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489390,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/morocco.svg",
+        "id": 815,
+        "name": "Morocco",
+        "shortName": "Morocco",
+        "tla": "MAR"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_C",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/814.svg",
+        "id": 8873,
+        "name": "Scotland",
+        "shortName": "Scotland",
+        "tla": "SCO"
+      },
+      "id": 537342,
+      "lastApiSync": "2026-06-19T22:00:51.815194+00:00",
+      "lastUpdated": "2026-06-20T00:00:49Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-19T22:00:51.815194+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489390,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Il'giz Tantashev",
+            "nationality": "Uzbekistan",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ilgiz Tantashev, Uzbekistan",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Il'giz Tantashev",
+            "nationality": "Uzbekistan",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ilgiz Tantashev, Uzbekistan",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Boston",
+          "cloudCoverage": 55.5,
+          "condition": "partlycloudy_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-19T21:55:00.530870+00:00",
+          "humidity": 40.1,
+          "latitude": 42.0909,
+          "longitude": -71.2643,
+          "name": "Gillette Stadium weather",
+          "observedAt": "2026-06-19T21:00:00Z",
+          "pressure": 1001.3,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Gillette Stadium",
+          "temperature": 25.1,
+          "temperatureUnit": "C",
+          "windBearing": 268.2,
+          "windSpeed": 6.6,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Boston",
+        "cloudCoverage": 55.5,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-19T21:55:00.530870+00:00",
+        "humidity": 40.1,
+        "latitude": 42.0909,
+        "longitude": -71.2643,
+        "name": "Gillette Stadium weather",
+        "observedAt": "2026-06-19T21:00:00Z",
+        "pressure": 1001.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Gillette Stadium",
+        "temperature": 25.1,
+        "temperatureUnit": "C",
+        "windBearing": 268.2,
+        "windSpeed": 6.6,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Il'giz Tantashev",
+          "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ilgiz Tantashev, Uzbekistan",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Il'giz Tantashev",
+          "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ilgiz Tantashev, Uzbekistan",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-19T22:00:00Z",
+      "venue": {
+        "city": "Boston",
+        "id": 1618,
+        "name": "Gillette Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Boston",
+        "cloudCoverage": 55.5,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-19T21:55:00.530870+00:00",
+        "humidity": 40.1,
+        "latitude": 42.0909,
+        "longitude": -71.2643,
+        "name": "Gillette Stadium weather",
+        "observedAt": "2026-06-19T21:00:00Z",
+        "pressure": 1001.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Gillette Stadium",
+        "temperature": 25.1,
+        "temperatureUnit": "C",
+        "windBearing": 268.2,
+        "windSpeed": 6.6,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
