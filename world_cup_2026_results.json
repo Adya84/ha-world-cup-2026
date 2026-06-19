@@ -22260,7 +22260,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4800,
+      "clockSeconds": 4860,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -22269,7 +22269,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "80'",
+      "displayMinute": "81'",
       "events": [
         {
           "assist": null,
@@ -22344,16 +22344,16 @@
           "type": "Goal"
         },
         {
-          "assist": "J. Geria",
+          "assist": "N. Irankunda",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "C. Burgess",
-          "playerOff": "C. Burgess",
-          "playerOn": "J. Geria",
+          "player": "M. Toure",
+          "playerOff": "M. Toure",
+          "playerOn": "N. Irankunda",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -22380,16 +22380,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Irankunda",
+          "assist": "J. Geria",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "N. Irankunda",
+          "player": "C. Burgess",
+          "playerOff": "C. Burgess",
+          "playerOn": "J. Geria",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -22468,10 +22468,28 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Scally",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "S. Dest",
+          "playerOff": "S. Dest",
+          "playerOn": "J. Scally",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4800,
-      "fallbackClockText": "80'",
+      "fallbackClock": 4860,
+      "fallbackClockText": "81'",
       "goalEvents": [
         {
           "assist": null,
@@ -22536,8 +22554,8 @@
         "tla": "USA"
       },
       "id": 537348,
-      "lastApiSync": "2026-06-19T20:45:45.333994+00:00",
-      "lastUpdated": "2026-06-19T22:45:43Z",
+      "lastApiSync": "2026-06-19T20:46:11.484668+00:00",
+      "lastUpdated": "2026-06-19T22:46:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -22565,14 +22583,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "80'",
-        "lastApiSync": "2026-06-19T20:45:45.333994+00:00",
-        "seconds": 4800,
+        "displayMinute": "81'",
+        "lastApiSync": "2026-06-19T20:46:11.484668+00:00",
+        "seconds": 4860,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "80'"
+        "timer": "81'"
       },
-      "manualClockText": "80'",
+      "manualClockText": "81'",
       "matchDetails": {
         "apiFootballFixtureId": 1489391,
         "awayCorners": 2,
@@ -22710,16 +22728,16 @@
             "type": "Goal"
           },
           {
-            "assist": "J. Geria",
+            "assist": "N. Irankunda",
             "comments": null,
             "detail": "Substitution 1",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
             "minute": 46,
-            "player": "C. Burgess",
-            "playerOff": "C. Burgess",
-            "playerOn": "J. Geria",
+            "player": "M. Toure",
+            "playerOff": "M. Toure",
+            "playerOn": "N. Irankunda",
             "rawType": "subst",
             "source": "api_football",
             "team": "Australia",
@@ -22746,16 +22764,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "N. Irankunda",
+            "assist": "J. Geria",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
             "minute": 46,
-            "player": "M. Toure",
-            "playerOff": "M. Toure",
-            "playerOn": "N. Irankunda",
+            "player": "C. Burgess",
+            "playerOff": "C. Burgess",
+            "playerOn": "J. Geria",
             "rawType": "subst",
             "source": "api_football",
             "team": "Australia",
@@ -22833,6 +22851,24 @@
             "team": "Australia",
             "timer": "78:00",
             "timerSeconds": 4680,
+            "type": "Substitution"
+          },
+          {
+            "assist": "J. Scally",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "81'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 81,
+            "player": "S. Dest",
+            "playerOff": "S. Dest",
+            "playerOn": "J. Scally",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "USA",
+            "timer": "81:00",
+            "timerSeconds": 4860,
             "type": "Substitution"
           }
         ],
@@ -22940,16 +22976,16 @@
         ],
         "substitutionEvents": [
           {
-            "assist": "J. Geria",
+            "assist": "N. Irankunda",
             "comments": null,
             "detail": "Substitution 1",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
             "minute": 46,
-            "player": "C. Burgess",
-            "playerOff": "C. Burgess",
-            "playerOn": "J. Geria",
+            "player": "M. Toure",
+            "playerOff": "M. Toure",
+            "playerOn": "N. Irankunda",
             "rawType": "subst",
             "source": "api_football",
             "team": "Australia",
@@ -22976,16 +23012,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "N. Irankunda",
+            "assist": "J. Geria",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
             "minute": 46,
-            "player": "M. Toure",
-            "playerOff": "M. Toure",
-            "playerOn": "N. Irankunda",
+            "player": "C. Burgess",
+            "playerOff": "C. Burgess",
+            "playerOn": "J. Geria",
             "rawType": "subst",
             "source": "api_football",
             "team": "Australia",
@@ -23046,6 +23082,24 @@
             "timer": "78:00",
             "timerSeconds": 4680,
             "type": "Substitution"
+          },
+          {
+            "assist": "J. Scally",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "81'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 81,
+            "player": "S. Dest",
+            "playerOff": "S. Dest",
+            "playerOn": "J. Scally",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "USA",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -23096,7 +23150,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 80,
+      "minute": 81,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -23146,16 +23200,16 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "J. Geria",
+          "assist": "N. Irankunda",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "C. Burgess",
-          "playerOff": "C. Burgess",
-          "playerOn": "J. Geria",
+          "player": "M. Toure",
+          "playerOff": "M. Toure",
+          "playerOn": "N. Irankunda",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -23182,16 +23236,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Irankunda",
+          "assist": "J. Geria",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "N. Irankunda",
+          "player": "C. Burgess",
+          "playerOff": "C. Burgess",
+          "playerOn": "J. Geria",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -23251,6 +23305,24 @@
           "team": "Australia",
           "timer": "78:00",
           "timerSeconds": 4680,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Scally",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "S. Dest",
+          "playerOff": "S. Dest",
+          "playerOn": "J. Scally",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "81:00",
+          "timerSeconds": 4860,
           "type": "Substitution"
         }
       ],
@@ -45546,7 +45618,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4800,
+      "clockSeconds": 4860,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45555,7 +45627,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "80'",
+      "displayMinute": "81'",
       "events": [
         {
           "assist": null,
@@ -45630,16 +45702,16 @@
           "type": "Goal"
         },
         {
-          "assist": "J. Geria",
+          "assist": "N. Irankunda",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "C. Burgess",
-          "playerOff": "C. Burgess",
-          "playerOn": "J. Geria",
+          "player": "M. Toure",
+          "playerOff": "M. Toure",
+          "playerOn": "N. Irankunda",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -45666,16 +45738,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Irankunda",
+          "assist": "J. Geria",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "N. Irankunda",
+          "player": "C. Burgess",
+          "playerOff": "C. Burgess",
+          "playerOn": "J. Geria",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -45754,10 +45826,28 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Scally",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "S. Dest",
+          "playerOff": "S. Dest",
+          "playerOn": "J. Scally",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4800,
-      "fallbackClockText": "80'",
+      "fallbackClock": 4860,
+      "fallbackClockText": "81'",
       "goalEvents": [
         {
           "assist": null,
@@ -45822,8 +45912,8 @@
         "tla": "USA"
       },
       "id": 537348,
-      "lastApiSync": "2026-06-19T20:45:45.333994+00:00",
-      "lastUpdated": "2026-06-19T22:45:43Z",
+      "lastApiSync": "2026-06-19T20:46:11.484668+00:00",
+      "lastUpdated": "2026-06-19T22:46:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45851,14 +45941,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "80'",
-        "lastApiSync": "2026-06-19T20:45:45.333994+00:00",
-        "seconds": 4800,
+        "displayMinute": "81'",
+        "lastApiSync": "2026-06-19T20:46:11.484668+00:00",
+        "seconds": 4860,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "80'"
+        "timer": "81'"
       },
-      "manualClockText": "80'",
+      "manualClockText": "81'",
       "matchDetails": {
         "apiFootballFixtureId": 1489391,
         "awayCorners": 2,
@@ -45996,16 +46086,16 @@
             "type": "Goal"
           },
           {
-            "assist": "J. Geria",
+            "assist": "N. Irankunda",
             "comments": null,
             "detail": "Substitution 1",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
             "minute": 46,
-            "player": "C. Burgess",
-            "playerOff": "C. Burgess",
-            "playerOn": "J. Geria",
+            "player": "M. Toure",
+            "playerOff": "M. Toure",
+            "playerOn": "N. Irankunda",
             "rawType": "subst",
             "source": "api_football",
             "team": "Australia",
@@ -46032,16 +46122,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "N. Irankunda",
+            "assist": "J. Geria",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
             "minute": 46,
-            "player": "M. Toure",
-            "playerOff": "M. Toure",
-            "playerOn": "N. Irankunda",
+            "player": "C. Burgess",
+            "playerOff": "C. Burgess",
+            "playerOn": "J. Geria",
             "rawType": "subst",
             "source": "api_football",
             "team": "Australia",
@@ -46119,6 +46209,24 @@
             "team": "Australia",
             "timer": "78:00",
             "timerSeconds": 4680,
+            "type": "Substitution"
+          },
+          {
+            "assist": "J. Scally",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "81'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 81,
+            "player": "S. Dest",
+            "playerOff": "S. Dest",
+            "playerOn": "J. Scally",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "USA",
+            "timer": "81:00",
+            "timerSeconds": 4860,
             "type": "Substitution"
           }
         ],
@@ -46226,16 +46334,16 @@
         ],
         "substitutionEvents": [
           {
-            "assist": "J. Geria",
+            "assist": "N. Irankunda",
             "comments": null,
             "detail": "Substitution 1",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
             "minute": 46,
-            "player": "C. Burgess",
-            "playerOff": "C. Burgess",
-            "playerOn": "J. Geria",
+            "player": "M. Toure",
+            "playerOff": "M. Toure",
+            "playerOn": "N. Irankunda",
             "rawType": "subst",
             "source": "api_football",
             "team": "Australia",
@@ -46262,16 +46370,16 @@
             "type": "Substitution"
           },
           {
-            "assist": "N. Irankunda",
+            "assist": "J. Geria",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
             "minute": 46,
-            "player": "M. Toure",
-            "playerOff": "M. Toure",
-            "playerOn": "N. Irankunda",
+            "player": "C. Burgess",
+            "playerOff": "C. Burgess",
+            "playerOn": "J. Geria",
             "rawType": "subst",
             "source": "api_football",
             "team": "Australia",
@@ -46332,6 +46440,24 @@
             "timer": "78:00",
             "timerSeconds": 4680,
             "type": "Substitution"
+          },
+          {
+            "assist": "J. Scally",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "81'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 81,
+            "player": "S. Dest",
+            "playerOff": "S. Dest",
+            "playerOn": "J. Scally",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "USA",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -46382,7 +46508,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 80,
+      "minute": 81,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -46432,16 +46558,16 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "J. Geria",
+          "assist": "N. Irankunda",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "C. Burgess",
-          "playerOff": "C. Burgess",
-          "playerOn": "J. Geria",
+          "player": "M. Toure",
+          "playerOff": "M. Toure",
+          "playerOn": "N. Irankunda",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -46468,16 +46594,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Irankunda",
+          "assist": "J. Geria",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "N. Irankunda",
+          "player": "C. Burgess",
+          "playerOff": "C. Burgess",
+          "playerOn": "J. Geria",
           "rawType": "subst",
           "source": "api_football",
           "team": "Australia",
@@ -46537,6 +46663,24 @@
           "team": "Australia",
           "timer": "78:00",
           "timerSeconds": 4680,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Scally",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "S. Dest",
+          "playerOff": "S. Dest",
+          "playerOn": "J. Scally",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "81:00",
+          "timerSeconds": 4860,
           "type": "Substitution"
         }
       ],
