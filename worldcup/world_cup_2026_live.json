@@ -79,7 +79,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4080,
+      "clockSeconds": 4140,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -88,7 +88,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "68'",
+      "displayMinute": "69'",
       "events": [
         {
           "assist": null,
@@ -163,24 +163,6 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
-          "comments": "Elbowing",
-          "detail": "Yellow Card",
-          "displayMinute": "45+4'",
-          "extra": 4,
-          "isDisallowed": false,
-          "minute": 45,
-          "player": "F. Pierrot",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Haiti",
-          "timer": "49:00",
-          "timerSeconds": 2940,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "Lucas Paqueta",
           "comments": null,
           "detail": "Normal Goal",
@@ -199,16 +181,34 @@
           "type": "Goal"
         },
         {
-          "assist": "W. Isidor",
+          "assist": null,
+          "comments": "Elbowing",
+          "detail": "Yellow Card",
+          "displayMinute": "45+4'",
+          "extra": 4,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "F. Pierrot",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "49:00",
+          "timerSeconds": 2940,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": "D. Simon",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "F. Pierrot",
-          "playerOff": "F. Pierrot",
-          "playerOn": "W. Isidor",
+          "player": "C. Arcus",
+          "playerOff": "C. Arcus",
+          "playerOn": "D. Simon",
           "rawType": "subst",
           "source": "api_football",
           "team": "Haiti",
@@ -217,16 +217,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "D. Simon",
+          "assist": "W. Isidor",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "C. Arcus",
-          "playerOff": "C. Arcus",
-          "playerOn": "D. Simon",
+          "player": "F. Pierrot",
+          "playerOff": "F. Pierrot",
+          "playerOn": "W. Isidor",
           "rawType": "subst",
           "source": "api_football",
           "team": "Haiti",
@@ -307,8 +307,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 4080,
-      "fallbackClockText": "68'",
+      "fallbackClock": 4140,
+      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": null,
@@ -396,8 +396,8 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T02:03:44.504346+00:00",
-      "lastUpdated": "2026-06-20T04:03:43Z",
+      "lastApiSync": "2026-06-20T02:04:18.242274+00:00",
+      "lastUpdated": "2026-06-20T04:04:16Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -425,14 +425,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "68'",
-        "lastApiSync": "2026-06-20T02:03:44.504346+00:00",
-        "seconds": 4080,
+        "displayMinute": "69'",
+        "lastApiSync": "2026-06-20T02:04:18.242274+00:00",
+        "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "68'"
+        "timer": "69'"
       },
-      "manualClockText": "68'",
+      "manualClockText": "69'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -457,7 +457,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 68,
+      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -525,16 +525,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "W. Isidor",
+          "assist": "D. Simon",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "F. Pierrot",
-          "playerOff": "F. Pierrot",
-          "playerOn": "W. Isidor",
+          "player": "C. Arcus",
+          "playerOff": "C. Arcus",
+          "playerOn": "D. Simon",
           "rawType": "subst",
           "source": "api_football",
           "team": "Haiti",
@@ -543,16 +543,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "D. Simon",
+          "assist": "W. Isidor",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "C. Arcus",
-          "playerOff": "C. Arcus",
-          "playerOn": "D. Simon",
+          "player": "F. Pierrot",
+          "playerOff": "F. Pierrot",
+          "playerOn": "W. Isidor",
           "rawType": "subst",
           "source": "api_football",
           "team": "Haiti",
@@ -726,7 +726,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4080,
+      "clockSeconds": 4140,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -735,7 +735,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "68'",
+      "displayMinute": "69'",
       "events": [
         {
           "assist": null,
@@ -810,24 +810,6 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
-          "comments": "Elbowing",
-          "detail": "Yellow Card",
-          "displayMinute": "45+4'",
-          "extra": 4,
-          "isDisallowed": false,
-          "minute": 45,
-          "player": "F. Pierrot",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Haiti",
-          "timer": "49:00",
-          "timerSeconds": 2940,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "Lucas Paqueta",
           "comments": null,
           "detail": "Normal Goal",
@@ -846,16 +828,34 @@
           "type": "Goal"
         },
         {
-          "assist": "W. Isidor",
+          "assist": null,
+          "comments": "Elbowing",
+          "detail": "Yellow Card",
+          "displayMinute": "45+4'",
+          "extra": 4,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "F. Pierrot",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "49:00",
+          "timerSeconds": 2940,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": "D. Simon",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "F. Pierrot",
-          "playerOff": "F. Pierrot",
-          "playerOn": "W. Isidor",
+          "player": "C. Arcus",
+          "playerOff": "C. Arcus",
+          "playerOn": "D. Simon",
           "rawType": "subst",
           "source": "api_football",
           "team": "Haiti",
@@ -864,16 +864,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "D. Simon",
+          "assist": "W. Isidor",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "C. Arcus",
-          "playerOff": "C. Arcus",
-          "playerOn": "D. Simon",
+          "player": "F. Pierrot",
+          "playerOff": "F. Pierrot",
+          "playerOn": "W. Isidor",
           "rawType": "subst",
           "source": "api_football",
           "team": "Haiti",
@@ -954,8 +954,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 4080,
-      "fallbackClockText": "68'",
+      "fallbackClock": 4140,
+      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": null,
@@ -1043,8 +1043,8 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T02:03:44.504346+00:00",
-      "lastUpdated": "2026-06-20T04:03:43Z",
+      "lastApiSync": "2026-06-20T02:04:18.242274+00:00",
+      "lastUpdated": "2026-06-20T04:04:16Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1072,14 +1072,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "68'",
-        "lastApiSync": "2026-06-20T02:03:44.504346+00:00",
-        "seconds": 4080,
+        "displayMinute": "69'",
+        "lastApiSync": "2026-06-20T02:04:18.242274+00:00",
+        "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "68'"
+        "timer": "69'"
       },
-      "manualClockText": "68'",
+      "manualClockText": "69'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -1104,7 +1104,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 68,
+      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1172,16 +1172,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "W. Isidor",
+          "assist": "D. Simon",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "F. Pierrot",
-          "playerOff": "F. Pierrot",
-          "playerOn": "W. Isidor",
+          "player": "C. Arcus",
+          "playerOff": "C. Arcus",
+          "playerOn": "D. Simon",
           "rawType": "subst",
           "source": "api_football",
           "team": "Haiti",
@@ -1190,16 +1190,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "D. Simon",
+          "assist": "W. Isidor",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "C. Arcus",
-          "playerOff": "C. Arcus",
-          "playerOn": "D. Simon",
+          "player": "F. Pierrot",
+          "playerOff": "F. Pierrot",
+          "playerOn": "W. Isidor",
           "rawType": "subst",
           "source": "api_football",
           "team": "Haiti",
