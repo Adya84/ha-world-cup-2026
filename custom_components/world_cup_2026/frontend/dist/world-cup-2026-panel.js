@@ -5060,6 +5060,7 @@ class WorldCup2026Panel extends HTMLElement {
       teamCommandCentre: "Team Command Centre",
       teamCommandIntro: "Compact team hub with fixtures, results, cards, players, group table and tournament journey.",
       countryProfile: "Country Profile",
+      upcomingMatches: "Upcoming Matches",
       countryPlayers: "Country Players",
       playerCardsBuilt: "Player cards are built from loaded goals, assists and event data.",
       playerSpotlight: "Player Spotlight",
@@ -21986,7 +21987,7 @@ class WorldCup2026Panel extends HTMLElement {
         <div style="position:relative;font-size:.74rem;font-weight:1000;text-transform:uppercase;letter-spacing:.14em;color:#93c5fd;">🌍 ${this.esc(this.staticText("countryProfile"))}</div>
         <div style="position:relative;margin-top:9px;font-size:1.45rem;font-weight:1000;">${this.flag(teamName, true)} ${this.esc(teamName)}</div>
         <div style="position:relative;margin-top:14px;display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;">
-          ${statCard(this.staticText("matchesPlayed"), matches.length, this.staticText("loadedForTeam"), "#93c5fd")}
+          ${statCard(this.staticText("upcomingMatches"), upcoming.length, this.staticText("loadedForTeam"), "#93c5fd")}
           ${statCard(this.staticText("groupPosition"), groupRow?.pos || groupRows.find((row) => row.key === teamKey)?.pos || "-", this.staticText("currentSnapshot"), "#fde68a")}
           ${statCard(this.staticText("points"), groupRow?.points ?? groupRows.find((row) => row.key === teamKey)?.points ?? "-", this.staticText("groupTable"), "#86efac")}
         </div>
@@ -22039,7 +22040,7 @@ class WorldCup2026Panel extends HTMLElement {
       </div>
 
       <div style="display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:12px;align-items:stretch;">
-        <div style="grid-column:span 3;">${statCard(this.staticText("matchesPlayed"), matches.length, `${live.length} ${this.t("liveStatus")} / ${upcoming.length} ${this.staticText("upcoming")}`, "#93c5fd")}</div>
+        <div style="grid-column:span 3;">${statCard(this.staticText("upcomingMatches"), upcoming.length, `${live.length} ${this.t("liveStatus")} / ${finished.length} ${this.t("played")}`, "#93c5fd")}</div>
         <div style="grid-column:span 3;">${statCard(this.staticText("record"), `${teamStats.wins || 0}-${teamStats.draws || 0}-${teamStats.losses || 0}`, `${teamStats.played || finished.length} ${this.t("played")}`, "#86efac")}</div>
         <div style="grid-column:span 3;">${statCard(this.staticText("goals"), `${teamStats.gf ?? goals}-${teamStats.ga ?? 0}`, `GD ${Number(teamStats.gd || 0) > 0 ? "+" : ""}${teamStats.gd || 0}`, "#fde68a")}</div>
         <div style="grid-column:span 3;">${statCard(this.staticText("cards"), `${teamYellowCards}Y ${teamRedCards}R`, `${subs} ${this.staticText("subs")} / ${vars} VAR`, "#fca5a5")}</div>
