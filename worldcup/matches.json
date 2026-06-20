@@ -13680,6 +13680,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/curacao.svg",
         "id": 9460,
@@ -13687,6 +13688,8 @@
         "shortName": "Cura\u00e7ao",
         "tla": "CUW"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -13694,6 +13697,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_E",
       "homeTeam": {
         "crest": "https://crests.football-data.org/791.svg",
@@ -13703,8 +13707,21 @@
         "tla": "ECU"
       },
       "id": 537354,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-21T01:27:16Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": 2,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -13736,7 +13753,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
+      "status": "LIVE",
       "utcDate": "2026-06-21T00:00:00Z"
     },
     {
