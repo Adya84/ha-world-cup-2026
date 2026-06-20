@@ -7454,9 +7454,9 @@
   },
   "537359": {
     "apiFootballFixtureId": 1539007,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Sweden",
-    "base_seconds": 3480,
+    "base_seconds": 3600,
     "cardEvents": [
       {
         "assist": null,
@@ -7478,8 +7478,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3480,
-    "displayMinute": "58'",
+    "clock_seconds": 3600,
+    "displayMinute": "60'",
     "events": [
       {
         "assist": "C. Gakpo",
@@ -7642,6 +7642,24 @@
         "timer": "56:00",
         "timerSeconds": 3360,
         "type": "Substitution"
+      },
+      {
+        "assist": "A. Isak",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "59'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 59,
+        "player": "A. Elanga",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Sweden",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -7736,13 +7754,36 @@
         "timer": "54:00",
         "timerSeconds": 3240,
         "type": "Goal"
+      },
+      {
+        "assist": "A. Isak",
+        "awayTeam": "Sweden",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "59'",
+        "extra": null,
+        "goalNumber": 5,
+        "homeTeam": "Netherlands",
+        "isDisallowed": false,
+        "matchId": 537359,
+        "matchUtcDate": "2026-06-20T17:00:00Z",
+        "minute": 59,
+        "player": "A. Elanga",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Sweden",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "type": "Goal"
       }
     ],
     "homeScore": 4,
     "homeTeam": "Netherlands",
-    "lastApiSync": "2026-06-20T18:19:40.418647+00:00",
-    "manualClockText": "58'",
-    "phase_start": "2026-06-20T18:19:40.418647+00:00",
+    "lastApiSync": "2026-06-20T18:20:42.400226+00:00",
+    "manualClockText": "60'",
+    "phase_start": "2026-06-20T18:20:42.400226+00:00",
     "referees": [
       {
         "name": "Michael Oliver",
