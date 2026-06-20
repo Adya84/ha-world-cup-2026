@@ -12882,7 +12882,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -12891,7 +12891,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": "J. Enciso",
@@ -13036,10 +13036,28 @@
           "timer": "63:00",
           "timerSeconds": 3780,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "G. Velazquez",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "D. Gomez",
+          "playerOff": "D. Gomez",
+          "playerOn": "G. Velazquez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": "J. Enciso",
@@ -13081,8 +13099,8 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T04:33:29.581362+00:00",
-      "lastUpdated": "2026-06-20T06:33:28Z",
+      "lastApiSync": "2026-06-20T04:34:07.896654+00:00",
+      "lastUpdated": "2026-06-20T06:34:01Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -13110,14 +13128,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-06-20T04:33:29.581362+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-06-20T04:34:07.896654+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -13142,7 +13160,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -13259,6 +13277,24 @@
           "team": "T\u00fcrkiye",
           "timer": "60:00",
           "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Velazquez",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "D. Gomez",
+          "playerOff": "D. Gomez",
+          "playerOn": "G. Velazquez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "67:00",
+          "timerSeconds": 4020,
           "type": "Substitution"
         }
       ],
