@@ -7456,10 +7456,10 @@
     "apiFootballFixtureId": 1539007,
     "awayScore": 0,
     "awayTeam": "Sweden",
-    "base_seconds": 2820,
+    "base_seconds": 2880,
     "clock_active": false,
-    "clock_seconds": 2820,
-    "displayMinute": "47'",
+    "clock_seconds": 2880,
+    "displayMinute": "48'",
     "events": [
       {
         "assist": "C. Gakpo",
@@ -7514,6 +7514,24 @@
         "timer": "46:00",
         "timerSeconds": 2760,
         "type": "Substitution"
+      },
+      {
+        "assist": "D. Dumfries",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "48'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 48,
+        "player": "C. Gakpo",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Netherlands",
+        "timer": "48:00",
+        "timerSeconds": 2880,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -7562,13 +7580,36 @@
         "timer": "17:00",
         "timerSeconds": 1020,
         "type": "Goal"
+      },
+      {
+        "assist": "D. Dumfries",
+        "awayTeam": "Sweden",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "48'",
+        "extra": null,
+        "goalNumber": 3,
+        "homeTeam": "Netherlands",
+        "isDisallowed": false,
+        "matchId": 537359,
+        "matchUtcDate": "2026-06-20T17:00:00Z",
+        "minute": 48,
+        "player": "C. Gakpo",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Netherlands",
+        "timer": "48:00",
+        "timerSeconds": 2880,
+        "type": "Goal"
       }
     ],
-    "homeScore": 2,
+    "homeScore": 3,
     "homeTeam": "Netherlands",
-    "lastApiSync": "2026-06-20T18:08:12.355890+00:00",
-    "manualClockText": "47'",
-    "phase_start": "2026-06-20T18:08:12.355890+00:00",
+    "lastApiSync": "2026-06-20T18:08:52.435145+00:00",
+    "manualClockText": "48'",
+    "phase_start": "2026-06-20T18:08:52.435145+00:00",
     "referees": [
       {
         "name": "Michael Oliver",
