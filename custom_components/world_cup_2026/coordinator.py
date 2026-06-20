@@ -21,7 +21,7 @@ _LOGGER = logging.getLogger(__name__)
 SCAN_INTERVAL_IDLE = timedelta(minutes=30)
 SCAN_INTERVAL_NORMAL = timedelta(minutes=5)
 SCAN_INTERVAL_PRE_MATCH = timedelta(seconds=30)
-SCAN_INTERVAL_LIVE = timedelta(seconds=10)
+SCAN_INTERVAL_LIVE = timedelta(seconds=20)
 
 TOTAL_WORLD_CUP_MATCHES = 104
 LIVE_STATUSES = {"IN_PLAY", "PAUSED", "LIVE", "1H", "2H", "HT", "HALF_TIME", "ET", "BT", "P", "SUSP", "INT"}
@@ -362,7 +362,19 @@ def _api_football_item_matches_candidate(item, candidate):
 def _full_time_score(match):
     score = match.get("score") or {}
     full_time = score.get("fullTime") or {}
-    return full_time.get("home"), full_time.get("away")
+    home = full_time.get("home") if isinstance(full_time, dict) else None
+    away = full_time.get("away") if isinstance(full_time, dict) else None
+    if home is None:
+        home = match.get("homeScore") if match.get("homeScore") is not None else match.get("home_score")
+    if away is None:
+        away = match.get("awayScore") if match.get("awayScore") is not None else match.get("away_score")
+    if home is None or away is None:
+        direct_score = score if isinstance(score, dict) else {}
+        if home is None:
+            home = direct_score.get("home")
+        if away is None:
+            away = direct_score.get("away")
+    return home, away
 
 
 def _expected_goal_count_from_match(match):
@@ -2454,6 +2466,9 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                 live_items = payload.get("response", []) or []
                 if not live_items:
                     _LOGGER.debug("API-Football live lookup returned no live fixtures")
+                    if self._cached_live_api_active(now):
+                        self._live_api_football_last_fetch = now
+                        return self._live_api_football_cache
                 for item in live_items:
                     fixture = item.get("fixture") or {}
                     fixture_id = fixture.get("id")
@@ -2501,9 +2516,9 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                     )
                     if should_fetch_fixture_events and not self._api_football_is_rate_limited():
                         last_event_fetch = self._live_events_last_fetch_by_fixture.get(str(fixture_id))
-                        # Keep live events on the same rhythm as the match clock so
-                        # goals/cards/subs/VAR are not minutes behind the live feed.
-                        if last_event_fetch and now - last_event_fetch < timedelta(seconds=10):
+                        # Keep live events on the same rhythm as the match clock,
+                        # but avoid burning API-Football quota during busy periods.
+                        if last_event_fetch and now - last_event_fetch < timedelta(seconds=20):
                             should_fetch_fixture_events = False
 
                     if should_fetch_fixture_events and not self._api_football_is_rate_limited():
@@ -2534,7 +2549,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             (team_stats or {}).get("corners") is not None
                             for team_stats in live_statistics.values()
                         )
-                        if not has_corner_stats and (not last_stats_fetch or now - last_stats_fetch >= timedelta(seconds=10)):
+                        if not has_corner_stats and (not last_stats_fetch or now - last_stats_fetch >= timedelta(seconds=20)):
                             self._live_statistics_last_fetch_by_fixture[fixture_key] = now
                             live_statistics = await self._fetch_api_football_statistics_for_fixture(
                                 session,
@@ -2640,7 +2655,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             return {}
 
         now = datetime.now(timezone.utc)
-        if self._live_fixture_status_last_fetch and now - self._live_fixture_status_last_fetch < timedelta(seconds=60):
+        if self._live_fixture_status_last_fetch and now - self._live_fixture_status_last_fetch < timedelta(seconds=20):
             return {}
 
         active_matches = []
@@ -2730,7 +2745,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                                 (team_stats or {}).get("corners") is not None
                                 for team_stats in live_statistics.values()
                             )
-                            if not has_corner_stats and (not last_stats_fetch or now - last_stats_fetch >= timedelta(seconds=10)):
+                            if not has_corner_stats and (not last_stats_fetch or now - last_stats_fetch >= timedelta(seconds=20)):
                                 self._live_statistics_last_fetch_by_fixture[fixture_key] = now
                                 live_statistics = await self._fetch_api_football_statistics_for_fixture(
                                     session,
@@ -2834,6 +2849,11 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         candidates = [match for match in matches if self._needs_post_match_events(match, now)]
         if not candidates:
             return {}
+        candidates = sorted(
+            candidates,
+            key=lambda match: parse_datetime_utc(match.get("utcDate")) or datetime.min.replace(tzinfo=timezone.utc),
+            reverse=True,
+        )[:4]
 
         if (
             self._post_match_api_football_last_fetch
@@ -2924,6 +2944,19 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                                     goal_events = fixture_goal_events
                                 card_events = fixture_event_data.get("cardEvents", [])
                                 substitution_events = fixture_event_data.get("substitutionEvents", [])
+                            live_statistics = await self._fetch_api_football_statistics_for_fixture(
+                                session,
+                                fixture_id,
+                                headers,
+                                home,
+                                away,
+                            )
+                        else:
+                            live_statistics = self._build_api_football_live_statistics(
+                                item.get("statistics") or [],
+                                home,
+                                away,
+                            )
 
                         # Keep the fixture even if the provider returns no events yet,
                         # so matches.json can still receive apiFootballFixtureId/referee
@@ -2950,6 +2983,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                             "cardEvents": card_events,
                             "substitutionEvents": substitution_events,
                             "referees": referees,
+                            "liveStatistics": live_statistics,
                             "apiFootballFixtureId": fixture_id,
                             "apiFootballHome": home,
                             "apiFootballAway": away,
@@ -3045,6 +3079,21 @@ class WorldCupCoordinator(DataUpdateCoordinator):
                     data.get("referees"),
                 )
                 match["officials"] = match["referees"]
+            if data.get("liveStatistics"):
+                stats = data.get("liveStatistics") or {}
+                home_stats = stats.get("home") or {}
+                away_stats = stats.get("away") or {}
+                match["liveStatistics"] = stats
+                match["homeCorners"] = home_stats.get("corners")
+                match["awayCorners"] = away_stats.get("corners")
+                match["homeShotsOnGoal"] = home_stats.get("shotsOnGoal")
+                match["awayShotsOnGoal"] = away_stats.get("shotsOnGoal")
+                match["homePossession"] = home_stats.get("possession")
+                match["awayPossession"] = away_stats.get("possession")
+                match["homeFouls"] = home_stats.get("fouls")
+                match["awayFouls"] = away_stats.get("fouls")
+                match["homeOffsides"] = home_stats.get("offsides")
+                match["awayOffsides"] = away_stats.get("offsides")
             if data.get("apiFootballFixtureId"):
                 match["apiFootballFixtureId"] = data.get("apiFootballFixtureId")
 
@@ -3225,11 +3274,11 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         matches = self._promote_near_kickoff_matches_to_live(matches)
         matches = await self._add_stadium_weather_to_live_matches(matches)
 
-        # While any match is live/HT/ET, keep the coordinator focused on the
-        # lightweight live endpoint. Heavy post-match date/event lookups can hit
-        # rate limits and must not block the live clock/status polling.
-        if not any(str(m.get("status") or "").upper() in LIVE_STATUSES for m in matches or []):
-            matches = await self._add_post_match_api_football_events_to_matches(matches)
+        # Backfill finished-match events even while another game is live.
+        # This is throttled inside _fetch_post_match_events_from_api_football,
+        # so scores that move to Results can still gain scorers, cards and subs
+        # without putting post-match lookups on the live 10/20 second rhythm.
+        matches = await self._add_post_match_api_football_events_to_matches(matches)
 
         matches = await self._merge_persistent_goal_events_to_matches(matches)
         standings = standings_data.get("standings", [])
