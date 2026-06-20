@@ -6457,7 +6457,7 @@
     "awayTeam": "Ivory Coast",
     "base_seconds": 2700,
     "clock_active": false,
-    "clock_seconds": 2700,
+    "clock_seconds": 5400,
     "goalEvents": [],
     "homeScore": 2,
     "homeTeam": "Germany",
@@ -6471,7 +6471,7 @@
       }
     ],
     "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "status": "FINISHED",
     "utcDate": "2026-06-20T20:00:00Z"
   },
   "537354": {
@@ -6481,6 +6481,14 @@
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Ecuador",
+    "referees": [
+      {
+        "id": 176659,
+        "name": "Ning Ma",
+        "nationality": "China PR",
+        "type": "REFEREE"
+      }
+    ],
     "status": "TIMED",
     "utcDate": "2026-06-21T00:00:00Z"
   },
