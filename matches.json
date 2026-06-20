@@ -12815,8 +12815,8 @@
       },
       "awayCorners": 0,
       "awayFouls": 12,
-      "awayOffsides": 2,
-      "awayPossession": "21%",
+      "awayOffsides": 3,
+      "awayPossession": "20%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -13126,6 +13126,24 @@
           "timer": "81:00",
           "timerSeconds": 4860,
           "type": "Substitution"
+        },
+        {
+          "assist": "O. Kokcu",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "A. Bardakci",
+          "playerOff": "A. Bardakci",
+          "playerOn": "O. Kokcu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "T\u00fcrkiye",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 5160,
@@ -13158,9 +13176,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
       "homeCorners": 10,
-      "homeFouls": 9,
+      "homeFouls": 10,
       "homeOffsides": 2,
-      "homePossession": "79%",
+      "homePossession": "80%",
       "homeScore": 0,
       "homeShotsOnGoal": 4,
       "homeTeam": {
@@ -13171,15 +13189,15 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T04:52:11.157291+00:00",
-      "lastUpdated": "2026-06-20T06:52:10Z",
+      "lastApiSync": "2026-06-20T04:52:44.985998+00:00",
+      "lastUpdated": "2026-06-20T06:52:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 12,
-          "offsides": 2,
-          "possession": "21%",
+          "offsides": 3,
+          "possession": "20%",
           "redCards": 1,
           "shotsOffGoal": 3,
           "shotsOnGoal": 2,
@@ -13188,9 +13206,9 @@
         },
         "home": {
           "corners": 10,
-          "fouls": 9,
+          "fouls": 10,
           "offsides": 2,
-          "possession": "79%",
+          "possession": "80%",
           "redCards": 0,
           "shotsOffGoal": 12,
           "shotsOnGoal": 4,
@@ -13201,7 +13219,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "86'",
-        "lastApiSync": "2026-06-20T04:52:11.157291+00:00",
+        "lastApiSync": "2026-06-20T04:52:44.985998+00:00",
         "seconds": 5160,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -13403,6 +13421,24 @@
           "team": "Paraguay",
           "timer": "81:00",
           "timerSeconds": 4860,
+          "type": "Substitution"
+        },
+        {
+          "assist": "O. Kokcu",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "A. Bardakci",
+          "playerOff": "A. Bardakci",
+          "playerOn": "O. Kokcu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "T\u00fcrkiye",
+          "timer": "86:00",
+          "timerSeconds": 5160,
           "type": "Substitution"
         }
       ],
