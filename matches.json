@@ -12900,7 +12900,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -12909,7 +12909,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": "J. Enciso",
@@ -13108,10 +13108,28 @@
           "timer": "71:00",
           "timerSeconds": 4260,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "A. Maidana",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "J. Caceres",
+          "playerOff": "J. Caceres",
+          "playerOn": "A. Maidana",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": "J. Enciso",
@@ -13153,8 +13171,8 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T04:47:30.814781+00:00",
-      "lastUpdated": "2026-06-20T06:47:28Z",
+      "lastApiSync": "2026-06-20T04:48:11.364300+00:00",
+      "lastUpdated": "2026-06-20T06:48:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -13182,14 +13200,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-20T04:47:30.814781+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-20T04:48:11.364300+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -13214,7 +13232,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -13367,6 +13385,24 @@
           "team": "T\u00fcrkiye",
           "timer": "71:00",
           "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Maidana",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "J. Caceres",
+          "playerOff": "J. Caceres",
+          "playerOn": "A. Maidana",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "81:00",
+          "timerSeconds": 4860,
           "type": "Substitution"
         }
       ],
