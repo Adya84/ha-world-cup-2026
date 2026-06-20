@@ -12814,7 +12814,7 @@
         "name": "World"
       },
       "awayCorners": 0,
-      "awayFouls": 5,
+      "awayFouls": 6,
       "awayOffsides": 1,
       "awayPossession": "18%",
       "awayScore": 1,
@@ -12846,7 +12846,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1920,
+      "clockSeconds": 1980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -12855,7 +12855,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "32'",
+      "displayMinute": "33'",
       "events": [
         {
           "assist": "J. Enciso",
@@ -12894,8 +12894,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 1920,
-      "fallbackClockText": "32'",
+      "fallbackClock": 1980,
+      "fallbackClockText": "33'",
       "goalEvents": [
         {
           "assist": "J. Enciso",
@@ -12923,12 +12923,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
-      "homeCorners": 4,
+      "homeCorners": 5,
       "homeFouls": 1,
       "homeOffsides": 0,
       "homePossession": "82%",
       "homeScore": 0,
-      "homeShotsOnGoal": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/803.svg",
         "id": 803,
@@ -12937,13 +12937,13 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T03:32:16.312219+00:00",
-      "lastUpdated": "2026-06-20T05:32:13Z",
+      "lastApiSync": "2026-06-20T03:32:50.372627+00:00",
+      "lastUpdated": "2026-06-20T05:32:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
-          "fouls": 5,
+          "fouls": 6,
           "offsides": 1,
           "possession": "18%",
           "redCards": null,
@@ -12953,27 +12953,27 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 1,
           "offsides": 0,
           "possession": "82%",
           "redCards": null,
           "shotsOffGoal": 1,
-          "shotsOnGoal": 0,
-          "totalShots": 4,
+          "shotsOnGoal": 1,
+          "totalShots": 5,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "32'",
-        "lastApiSync": "2026-06-20T03:32:16.312219+00:00",
-        "seconds": 1920,
+        "displayMinute": "33'",
+        "lastApiSync": "2026-06-20T03:32:50.372627+00:00",
+        "seconds": 1980,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "32'"
+        "timer": "33'"
       },
-      "manualClockText": "32'",
+      "manualClockText": "33'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -12998,7 +12998,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 32,
+      "minute": 33,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
