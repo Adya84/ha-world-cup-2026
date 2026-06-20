@@ -7445,23 +7445,32 @@
     "utcDate": "2026-06-15T02:00:00Z"
   },
   "537359": {
+    "apiFootballFixtureId": 1539007,
     "awayScore": 0,
     "awayTeam": "Sweden",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Netherlands",
-    "phase_start": null,
+    "lastApiSync": "2026-06-20T17:00:29.000043+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-20T17:00:29.000043+00:00",
     "referees": [
       {
-        "id": 11605,
         "name": "Michael Oliver",
         "nationality": "England",
         "type": "REFEREE"
+      },
+      {
+        "name": "Michael Oliver, England",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-20T17:00:00Z"
   },
   "537360": {
