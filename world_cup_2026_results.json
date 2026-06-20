@@ -25320,9 +25320,9 @@
         "name": "World"
       },
       "awayCorners": 2,
-      "awayFouls": 5,
+      "awayFouls": 6,
       "awayOffsides": 3,
-      "awayPossession": "43%",
+      "awayPossession": "44%",
       "awayScore": 0,
       "awayShotsOnGoal": 4,
       "awayTeam": {
@@ -25352,7 +25352,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -25361,7 +25361,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": "C. Gakpo",
@@ -25470,10 +25470,28 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Goal"
+        },
+        {
+          "assist": "B. Zeneli",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "J. Karlstrom",
+          "playerOff": "J. Karlstrom",
+          "playerOn": "B. Zeneli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -25573,7 +25591,7 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": 1,
-      "homePossession": "57%",
+      "homePossession": "56%",
       "homeScore": 4,
       "homeShotsOnGoal": 5,
       "homeTeam": {
@@ -25584,49 +25602,49 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T18:16:35.227157+00:00",
+      "lastApiSync": "2026-06-20T18:17:12.982400+00:00",
       "lastUpdated": "2026-06-20T20:15:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
-          "fouls": 5,
+          "fouls": 6,
           "offsides": 3,
-          "possession": "43%",
+          "possession": "44%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 4,
-          "totalShots": 9,
-          "yellowCards": null
+          "totalShots": 10,
+          "yellowCards": 1
         },
         "home": {
           "corners": 1,
           "fouls": 5,
           "offsides": 1,
-          "possession": "57%",
+          "possession": "56%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 5,
           "totalShots": 7,
-          "yellowCards": null
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-06-20T18:16:35.227157+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-06-20T18:17:12.982400+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": 2,
-        "awayFouls": 5,
+        "awayFouls": 6,
         "awayOffsides": 3,
-        "awayPossession": "43%",
+        "awayPossession": "44%",
         "awayShotsOnGoal": 4,
         "cardEvents": [
           {
@@ -25756,6 +25774,24 @@
             "timer": "54:00",
             "timerSeconds": 3240,
             "type": "Goal"
+          },
+          {
+            "assist": "B. Zeneli",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "56'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 56,
+            "player": "J. Karlstrom",
+            "playerOff": "J. Karlstrom",
+            "playerOn": "B. Zeneli",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Sweden",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -25856,32 +25892,32 @@
         "homeCorners": 1,
         "homeFouls": 5,
         "homeOffsides": 1,
-        "homePossession": "57%",
+        "homePossession": "56%",
         "homeShotsOnGoal": 5,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
             "corners": 2,
-            "fouls": 5,
+            "fouls": 6,
             "offsides": 3,
-            "possession": "43%",
+            "possession": "44%",
             "redCards": null,
             "shotsOffGoal": 4,
             "shotsOnGoal": 4,
-            "totalShots": 9,
-            "yellowCards": null
+            "totalShots": 10,
+            "yellowCards": 1
           },
           "home": {
             "corners": 1,
             "fouls": 5,
             "offsides": 1,
-            "possession": "57%",
+            "possession": "56%",
             "redCards": null,
             "shotsOffGoal": 2,
             "shotsOnGoal": 5,
             "totalShots": 7,
-            "yellowCards": null
+            "yellowCards": 0
           }
         },
         "officials": [
@@ -25924,6 +25960,24 @@
             "timer": "46:00",
             "timerSeconds": 2760,
             "type": "Substitution"
+          },
+          {
+            "assist": "B. Zeneli",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "56'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 56,
+            "player": "J. Karlstrom",
+            "playerOff": "J. Karlstrom",
+            "playerOn": "B. Zeneli",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Sweden",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -25933,7 +25987,7 @@
           "condition": "lightrain",
           "country": "USA",
           "dewPoint": null,
-          "fetchedAt": "2026-06-20T18:06:46.532490+00:00",
+          "fetchedAt": "2026-06-20T18:17:12.809628+00:00",
           "humidity": 79.6,
           "latitude": 29.6847,
           "longitude": -95.4107,
@@ -25957,7 +26011,7 @@
         "condition": "lightrain",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-20T18:06:46.532490+00:00",
+        "fetchedAt": "2026-06-20T18:17:12.809628+00:00",
         "humidity": 79.6,
         "latitude": 29.6847,
         "longitude": -95.4107,
@@ -25974,7 +26028,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -26040,6 +26094,24 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "B. Zeneli",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "J. Karlstrom",
+          "playerOff": "J. Karlstrom",
+          "playerOn": "B. Zeneli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-20T17:00:00Z",
@@ -26055,7 +26127,7 @@
         "condition": "lightrain",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-20T18:06:46.532490+00:00",
+        "fetchedAt": "2026-06-20T18:17:12.809628+00:00",
         "humidity": 79.6,
         "latitude": 29.6847,
         "longitude": -95.4107,
@@ -51394,9 +51466,9 @@
         "name": "World"
       },
       "awayCorners": 2,
-      "awayFouls": 5,
+      "awayFouls": 6,
       "awayOffsides": 3,
-      "awayPossession": "43%",
+      "awayPossession": "44%",
       "awayScore": 0,
       "awayShotsOnGoal": 4,
       "awayTeam": {
@@ -51426,7 +51498,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -51435,7 +51507,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": "C. Gakpo",
@@ -51544,10 +51616,28 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Goal"
+        },
+        {
+          "assist": "B. Zeneli",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "J. Karlstrom",
+          "playerOff": "J. Karlstrom",
+          "playerOn": "B. Zeneli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -51647,7 +51737,7 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": 1,
-      "homePossession": "57%",
+      "homePossession": "56%",
       "homeScore": 4,
       "homeShotsOnGoal": 5,
       "homeTeam": {
@@ -51658,49 +51748,49 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T18:16:35.227157+00:00",
+      "lastApiSync": "2026-06-20T18:17:12.982400+00:00",
       "lastUpdated": "2026-06-20T20:15:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
-          "fouls": 5,
+          "fouls": 6,
           "offsides": 3,
-          "possession": "43%",
+          "possession": "44%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 4,
-          "totalShots": 9,
-          "yellowCards": null
+          "totalShots": 10,
+          "yellowCards": 1
         },
         "home": {
           "corners": 1,
           "fouls": 5,
           "offsides": 1,
-          "possession": "57%",
+          "possession": "56%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 5,
           "totalShots": 7,
-          "yellowCards": null
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-06-20T18:16:35.227157+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-06-20T18:17:12.982400+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": 2,
-        "awayFouls": 5,
+        "awayFouls": 6,
         "awayOffsides": 3,
-        "awayPossession": "43%",
+        "awayPossession": "44%",
         "awayShotsOnGoal": 4,
         "cardEvents": [
           {
@@ -51830,6 +51920,24 @@
             "timer": "54:00",
             "timerSeconds": 3240,
             "type": "Goal"
+          },
+          {
+            "assist": "B. Zeneli",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "56'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 56,
+            "player": "J. Karlstrom",
+            "playerOff": "J. Karlstrom",
+            "playerOn": "B. Zeneli",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Sweden",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -51930,32 +52038,32 @@
         "homeCorners": 1,
         "homeFouls": 5,
         "homeOffsides": 1,
-        "homePossession": "57%",
+        "homePossession": "56%",
         "homeShotsOnGoal": 5,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
             "corners": 2,
-            "fouls": 5,
+            "fouls": 6,
             "offsides": 3,
-            "possession": "43%",
+            "possession": "44%",
             "redCards": null,
             "shotsOffGoal": 4,
             "shotsOnGoal": 4,
-            "totalShots": 9,
-            "yellowCards": null
+            "totalShots": 10,
+            "yellowCards": 1
           },
           "home": {
             "corners": 1,
             "fouls": 5,
             "offsides": 1,
-            "possession": "57%",
+            "possession": "56%",
             "redCards": null,
             "shotsOffGoal": 2,
             "shotsOnGoal": 5,
             "totalShots": 7,
-            "yellowCards": null
+            "yellowCards": 0
           }
         },
         "officials": [
@@ -51998,6 +52106,24 @@
             "timer": "46:00",
             "timerSeconds": 2760,
             "type": "Substitution"
+          },
+          {
+            "assist": "B. Zeneli",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "56'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 56,
+            "player": "J. Karlstrom",
+            "playerOff": "J. Karlstrom",
+            "playerOn": "B. Zeneli",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Sweden",
+            "timer": "56:00",
+            "timerSeconds": 3360,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -52007,7 +52133,7 @@
           "condition": "lightrain",
           "country": "USA",
           "dewPoint": null,
-          "fetchedAt": "2026-06-20T18:06:46.532490+00:00",
+          "fetchedAt": "2026-06-20T18:17:12.809628+00:00",
           "humidity": 79.6,
           "latitude": 29.6847,
           "longitude": -95.4107,
@@ -52031,7 +52157,7 @@
         "condition": "lightrain",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-20T18:06:46.532490+00:00",
+        "fetchedAt": "2026-06-20T18:17:12.809628+00:00",
         "humidity": 79.6,
         "latitude": 29.6847,
         "longitude": -95.4107,
@@ -52048,7 +52174,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -52114,6 +52240,24 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "B. Zeneli",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "J. Karlstrom",
+          "playerOff": "J. Karlstrom",
+          "playerOn": "B. Zeneli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-20T17:00:00Z",
@@ -52129,7 +52273,7 @@
         "condition": "lightrain",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-20T18:06:46.532490+00:00",
+        "fetchedAt": "2026-06-20T18:17:12.809628+00:00",
         "humidity": 79.6,
         "latitude": 29.6847,
         "longitude": -95.4107,
