@@ -3252,13 +3252,19 @@
     "utcDate": "2026-06-14T01:00:00Z"
   },
   "537341": {
+    "apiFootballFixtureId": 1489389,
     "awayScore": 0,
     "awayTeam": "Haiti",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Brazil",
-    "phase_start": null,
+    "lastApiSync": "2026-06-20T00:33:24.757256+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-20T00:33:24.757256+00:00",
     "referees": [
       {
         "id": 206208,
@@ -3267,8 +3273,8 @@
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-20T00:30:00Z"
   },
   "537342": {
