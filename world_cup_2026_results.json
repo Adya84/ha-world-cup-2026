@@ -25319,7 +25319,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": null,
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
         "id": 792,
@@ -25327,7 +25332,7 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -25336,11 +25341,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_F",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": null,
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
         "id": 8601,
@@ -25349,38 +25359,85 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T17:01:06.956290+00:00",
+      "lastApiSync": "2026-06-20T17:01:43.194377+00:00",
       "lastUpdated": "2026-06-20T19:00:17Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-20T17:01:06.956290+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-20T17:01:43.194377+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": null,
-        "awayFouls": null,
+        "awayFouls": 0,
         "awayOffsides": null,
         "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayShotsOnGoal": 0,
         "cardEvents": [],
         "events": [],
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": null,
-        "homeFouls": null,
+        "homeFouls": 0,
         "homeOffsides": null,
         "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": null,
+            "fouls": 0,
+            "offsides": null,
+            "possession": null,
+            "redCards": null,
+            "shotsOffGoal": 0,
+            "shotsOnGoal": 0,
+            "totalShots": 0,
+            "yellowCards": null
+          },
+          "home": {
+            "corners": null,
+            "fouls": 0,
+            "offsides": null,
+            "possession": null,
+            "redCards": null,
+            "shotsOffGoal": 0,
+            "shotsOnGoal": 0,
+            "totalShots": 0,
+            "yellowCards": null
+          }
+        },
         "officials": [
           {
             "name": "Michael Oliver",
@@ -25452,7 +25509,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -50851,7 +50908,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": null,
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
         "id": 792,
@@ -50859,7 +50921,7 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -50868,11 +50930,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_F",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": null,
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
         "id": 8601,
@@ -50881,38 +50948,85 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T17:01:06.956290+00:00",
+      "lastApiSync": "2026-06-20T17:01:43.194377+00:00",
       "lastUpdated": "2026-06-20T19:00:17Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-20T17:01:06.956290+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-20T17:01:43.194377+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": null,
-        "awayFouls": null,
+        "awayFouls": 0,
         "awayOffsides": null,
         "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayShotsOnGoal": 0,
         "cardEvents": [],
         "events": [],
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": null,
-        "homeFouls": null,
+        "homeFouls": 0,
         "homeOffsides": null,
         "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": null,
+            "fouls": 0,
+            "offsides": null,
+            "possession": null,
+            "redCards": null,
+            "shotsOffGoal": 0,
+            "shotsOnGoal": 0,
+            "totalShots": 0,
+            "yellowCards": null
+          },
+          "home": {
+            "corners": null,
+            "fouls": 0,
+            "offsides": null,
+            "possession": null,
+            "redCards": null,
+            "shotsOffGoal": 0,
+            "shotsOnGoal": 0,
+            "totalShots": 0,
+            "yellowCards": null
+          }
+        },
         "officials": [
           {
             "name": "Michael Oliver",
@@ -50984,7 +51098,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
