@@ -3255,7 +3255,7 @@
     "apiFootballFixtureId": 1489389,
     "awayScore": 0,
     "awayTeam": "Haiti",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "cardEvents": [
       {
         "assist": null,
@@ -3295,8 +3295,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": null,
@@ -3405,6 +3405,24 @@
         "timer": "49:00",
         "timerSeconds": 2940,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "D. Simon",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "C. Arcus",
+        "playerOff": "C. Arcus",
+        "playerOn": "D. Simon",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Haiti",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -3480,9 +3498,9 @@
     ],
     "homeScore": 3,
     "homeTeam": "Brazil",
-    "lastApiSync": "2026-06-20T01:40:26.123277+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-06-20T01:40:26.123277+00:00",
+    "lastApiSync": "2026-06-20T01:40:58.829856+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-06-20T01:40:58.829856+00:00",
     "referees": [
       {
         "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
@@ -3495,7 +3513,7 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
     "substitutionEvents": [
       {
         "assist": "Rayan",
@@ -3513,6 +3531,24 @@
         "team": "Brazil",
         "timer": "40:00",
         "timerSeconds": 2400,
+        "type": "Substitution"
+      },
+      {
+        "assist": "D. Simon",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "C. Arcus",
+        "playerOff": "C. Arcus",
+        "playerOn": "D. Simon",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Haiti",
+        "timer": "46:00",
+        "timerSeconds": 2760,
         "type": "Substitution"
       }
     ],
