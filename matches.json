@@ -13227,6 +13227,24 @@
           "timer": "5:00",
           "timerSeconds": 300,
           "type": "Goal"
+        },
+        {
+          "assist": "D. Dumfries",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "17'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 17,
+          "player": "B. Brobbey",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "17:00",
+          "timerSeconds": 1020,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 1020,
@@ -13254,6 +13272,29 @@
           "timer": "5:00",
           "timerSeconds": 300,
           "type": "Goal"
+        },
+        {
+          "assist": "D. Dumfries",
+          "awayTeam": "Sweden",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "17'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Netherlands",
+          "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
+          "minute": 17,
+          "player": "B. Brobbey",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "17:00",
+          "timerSeconds": 1020,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -13262,7 +13303,7 @@
       "homeFouls": 1,
       "homeOffsides": 1,
       "homePossession": "63%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
@@ -13272,8 +13313,8 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T17:16:29.480168+00:00",
-      "lastUpdated": "2026-06-20T19:16:25Z",
+      "lastApiSync": "2026-06-20T17:17:04.942621+00:00",
+      "lastUpdated": "2026-06-20T19:17:01Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -13302,7 +13343,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "17'",
-        "lastApiSync": "2026-06-20T17:16:29.480168+00:00",
+        "lastApiSync": "2026-06-20T17:17:04.942621+00:00",
         "seconds": 1020,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -13363,11 +13404,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "winner": "HOME_TEAM"
       },
