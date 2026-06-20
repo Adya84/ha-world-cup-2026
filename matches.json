@@ -12435,7 +12435,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -12444,7 +12444,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": null,
@@ -12733,10 +12733,28 @@
           "timer": "81:00",
           "timerSeconds": 4860,
           "type": "Substitution"
+        },
+        {
+          "assist": "D. Etienne",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "J. Bellegarde",
+          "playerOff": "J. Bellegarde",
+          "playerOn": "D. Etienne",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": null,
@@ -12824,8 +12842,8 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T02:16:25.403786+00:00",
-      "lastUpdated": "2026-06-20T04:16:22Z",
+      "lastApiSync": "2026-06-20T02:17:00.456446+00:00",
+      "lastUpdated": "2026-06-20T04:16:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -12853,14 +12871,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-20T02:16:25.403786+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-20T02:17:00.456446+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -12885,7 +12903,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -13094,6 +13112,24 @@
           "team": "Brazil",
           "timer": "81:00",
           "timerSeconds": 4860,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Etienne",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "J. Bellegarde",
+          "playerOff": "J. Bellegarde",
+          "playerOn": "D. Etienne",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "82:00",
+          "timerSeconds": 4920,
           "type": "Substitution"
         }
       ],
