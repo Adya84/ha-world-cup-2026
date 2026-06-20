@@ -2,20 +2,13 @@
   "live": [
     {
       "apiFootballFixtureId": 1539006,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 0,
-      "awayFouls": 14,
-      "awayOffsides": 3,
-      "awayPossession": "21%",
-      "awayScore": 1,
-      "awayShotsOnGoal": 2,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/761.svg",
         "id": 761,
@@ -97,8 +90,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -106,15 +98,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "J. Enciso",
+          "awayTeam": "Paraguay",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "2'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537347,
+          "matchUtcDate": "2026-06-20T03:00:00Z",
           "minute": 2,
           "player": "M. Galarza",
           "playerOff": null,
@@ -125,262 +122,8 @@
           "timer": "2:00",
           "timerSeconds": 120,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "4'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 4,
-          "player": "M. Galarza",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "4:00",
-          "timerSeconds": 240,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Unsportsmanlike conduct",
-          "detail": "Red Card",
-          "displayMinute": "45+3'",
-          "extra": 3,
-          "isDisallowed": false,
-          "minute": 45,
-          "player": "M. Almiron",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "48:00",
-          "timerSeconds": 2880,
-          "type": "Red Card"
-        },
-        {
-          "assist": "D. Bobadilla",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "I. Pitta",
-          "playerOff": "I. Pitta",
-          "playerOn": "D. Bobadilla",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Yilmaz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "K. Akturkoglu",
-          "playerOff": "K. Akturkoglu",
-          "playerOn": "B. Yilmaz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Uzun",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "I. Yuksek",
-          "playerOff": "I. Yuksek",
-          "playerOn": "C. Uzun",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Gul",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "Y. Akgun",
-          "playerOff": "Y. Akgun",
-          "playerOn": "D. Gul",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Yellow Card",
-          "displayMinute": "63'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 63,
-          "player": "V. Montella",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "63:00",
-          "timerSeconds": 3780,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "G. Velazquez",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "67'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 67,
-          "player": "D. Gomez",
-          "playerOff": "D. Gomez",
-          "playerOn": "G. Velazquez",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "67:00",
-          "timerSeconds": 4020,
-          "type": "Substitution"
-        },
-        {
-          "assist": "E. Elmali",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "70'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 70,
-          "player": "F. Kadioglu",
-          "playerOff": "F. Kadioglu",
-          "playerOn": "E. Elmali",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "70:00",
-          "timerSeconds": 4200,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Roughing",
-          "detail": "Yellow Card",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "E. Elmali",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "A. Maidana",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "81'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 81,
-          "player": "J. Caceres",
-          "playerOff": "J. Caceres",
-          "playerOn": "A. Maidana",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "type": "Substitution"
-        },
-        {
-          "assist": "O. Kokcu",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "86'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 86,
-          "player": "A. Bardakci",
-          "playerOff": "A. Bardakci",
-          "playerOn": "O. Kokcu",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "86:00",
-          "timerSeconds": 5160,
-          "type": "Substitution"
-        },
-        {
-          "assist": "G. Avalos",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "J. Enciso",
-          "playerOff": "J. Enciso",
-          "playerOn": "G. Avalos",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Canale",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "M. Galarza",
-          "playerOff": "M. Galarza",
-          "playerOn": "J. Canale",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "J. Enciso",
@@ -406,14 +149,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
-      "homeCorners": 11,
-      "homeFouls": 14,
-      "homeOffsides": 2,
-      "homePossession": "79%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/803.svg",
         "id": 803,
@@ -423,42 +159,17 @@
       },
       "id": 537347,
       "lastApiSync": "2026-06-20T05:05:32.348704+00:00",
-      "lastUpdated": "2026-06-20T07:05:28Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 0,
-          "fouls": 14,
-          "offsides": 3,
-          "possession": "21%",
-          "redCards": 1,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 2,
-          "totalShots": 7,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 11,
-          "fouls": 14,
-          "offsides": 2,
-          "possession": "79%",
-          "redCards": 0,
-          "shotsOffGoal": 14,
-          "shotsOnGoal": 5,
-          "totalShots": 31,
-          "yellowCards": 1
-        }
-      },
+      "lastUpdated": "2026-06-20T07:06:07Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-20T05:05:32.348704+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -483,27 +194,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Ivan Barton",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Iv\u00e1n Barton, El Salvador",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 190010,
           "name": "Ivan Barton",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Iv\u00e1n Barton, El Salvador",
+          "nationality": null,
           "type": "REFEREE"
         }
       ],
@@ -519,7 +217,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -528,7 +225,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "D. Bobadilla",
@@ -712,11 +409,6 @@
         }
       ],
       "utcDate": "2026-06-20T03:00:00Z",
-      "venue": {
-        "city": "Santa Clara",
-        "id": null,
-        "name": "Levi's Stadium"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -745,20 +437,13 @@
   "matches": [
     {
       "apiFootballFixtureId": 1539006,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 0,
-      "awayFouls": 14,
-      "awayOffsides": 3,
-      "awayPossession": "21%",
-      "awayScore": 1,
-      "awayShotsOnGoal": 2,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/761.svg",
         "id": 761,
@@ -840,8 +525,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -849,15 +533,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "J. Enciso",
+          "awayTeam": "Paraguay",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "2'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537347,
+          "matchUtcDate": "2026-06-20T03:00:00Z",
           "minute": 2,
           "player": "M. Galarza",
           "playerOff": null,
@@ -868,262 +557,8 @@
           "timer": "2:00",
           "timerSeconds": 120,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "4'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 4,
-          "player": "M. Galarza",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "4:00",
-          "timerSeconds": 240,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Unsportsmanlike conduct",
-          "detail": "Red Card",
-          "displayMinute": "45+3'",
-          "extra": 3,
-          "isDisallowed": false,
-          "minute": 45,
-          "player": "M. Almiron",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "48:00",
-          "timerSeconds": 2880,
-          "type": "Red Card"
-        },
-        {
-          "assist": "D. Bobadilla",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "I. Pitta",
-          "playerOff": "I. Pitta",
-          "playerOn": "D. Bobadilla",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Yilmaz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "K. Akturkoglu",
-          "playerOff": "K. Akturkoglu",
-          "playerOn": "B. Yilmaz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Uzun",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "I. Yuksek",
-          "playerOff": "I. Yuksek",
-          "playerOn": "C. Uzun",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Gul",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "Y. Akgun",
-          "playerOff": "Y. Akgun",
-          "playerOn": "D. Gul",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Yellow Card",
-          "displayMinute": "63'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 63,
-          "player": "V. Montella",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "63:00",
-          "timerSeconds": 3780,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "G. Velazquez",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "67'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 67,
-          "player": "D. Gomez",
-          "playerOff": "D. Gomez",
-          "playerOn": "G. Velazquez",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "67:00",
-          "timerSeconds": 4020,
-          "type": "Substitution"
-        },
-        {
-          "assist": "E. Elmali",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "70'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 70,
-          "player": "F. Kadioglu",
-          "playerOff": "F. Kadioglu",
-          "playerOn": "E. Elmali",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "70:00",
-          "timerSeconds": 4200,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Roughing",
-          "detail": "Yellow Card",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "E. Elmali",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "A. Maidana",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "81'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 81,
-          "player": "J. Caceres",
-          "playerOff": "J. Caceres",
-          "playerOn": "A. Maidana",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "type": "Substitution"
-        },
-        {
-          "assist": "O. Kokcu",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "86'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 86,
-          "player": "A. Bardakci",
-          "playerOff": "A. Bardakci",
-          "playerOn": "O. Kokcu",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "T\u00fcrkiye",
-          "timer": "86:00",
-          "timerSeconds": 5160,
-          "type": "Substitution"
-        },
-        {
-          "assist": "G. Avalos",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "J. Enciso",
-          "playerOff": "J. Enciso",
-          "playerOn": "G. Avalos",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Canale",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "M. Galarza",
-          "playerOff": "M. Galarza",
-          "playerOn": "J. Canale",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "J. Enciso",
@@ -1149,14 +584,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
-      "homeCorners": 11,
-      "homeFouls": 14,
-      "homeOffsides": 2,
-      "homePossession": "79%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/803.svg",
         "id": 803,
@@ -1166,42 +594,17 @@
       },
       "id": 537347,
       "lastApiSync": "2026-06-20T05:05:32.348704+00:00",
-      "lastUpdated": "2026-06-20T07:05:28Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 0,
-          "fouls": 14,
-          "offsides": 3,
-          "possession": "21%",
-          "redCards": 1,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 2,
-          "totalShots": 7,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 11,
-          "fouls": 14,
-          "offsides": 2,
-          "possession": "79%",
-          "redCards": 0,
-          "shotsOffGoal": 14,
-          "shotsOnGoal": 5,
-          "totalShots": 31,
-          "yellowCards": 1
-        }
-      },
+      "lastUpdated": "2026-06-20T07:06:07Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-20T05:05:32.348704+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -1226,27 +629,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Ivan Barton",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Iv\u00e1n Barton, El Salvador",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 190010,
           "name": "Ivan Barton",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Iv\u00e1n Barton, El Salvador",
+          "nationality": null,
           "type": "REFEREE"
         }
       ],
@@ -1262,7 +652,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -1271,7 +660,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "D. Bobadilla",
@@ -1455,11 +844,6 @@
         }
       ],
       "utcDate": "2026-06-20T03:00:00Z",
-      "venue": {
-        "city": "Santa Clara",
-        "id": null,
-        "name": "Levi's Stadium"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
