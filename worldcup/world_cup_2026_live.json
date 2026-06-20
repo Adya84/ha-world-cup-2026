@@ -13,7 +13,7 @@
       "awayCorners": 0,
       "awayFouls": 2,
       "awayOffsides": 1,
-      "awayPossession": "34%",
+      "awayPossession": "37%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1500,
+      "clockSeconds": 1560,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "25'",
+      "displayMinute": "26'",
       "events": [
         {
           "assist": null,
@@ -75,24 +75,24 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - offside",
           "displayMinute": "24'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 24,
           "player": "M. Cunha",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Brazil",
           "timer": "24:00",
           "timerSeconds": 1440,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
-      "fallbackClock": 1500,
-      "fallbackClockText": "25'",
+      "fallbackClock": 1560,
+      "fallbackClockText": "26'",
       "goalEvents": [
         {
           "assist": null,
@@ -118,14 +118,13 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeCorners": 4,
       "homeFouls": 3,
       "homeOffsides": 4,
-      "homePossession": "66%",
-      "homeScore": 1,
-      "homeShotsOnGoal": 0,
+      "homePossession": "63%",
+      "homeScore": 0,
+      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
         "id": 764,
@@ -134,15 +133,15 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T00:57:51.567427+00:00",
-      "lastUpdated": "2026-06-20T02:57:49Z",
+      "lastApiSync": "2026-06-20T00:58:26.424110+00:00",
+      "lastUpdated": "2026-06-20T02:58:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 2,
           "offsides": 1,
-          "possession": "34%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -153,24 +152,24 @@
           "corners": 4,
           "fouls": 3,
           "offsides": 4,
-          "possession": "66%",
+          "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 2,
+          "shotsOnGoal": 2,
+          "totalShots": 4,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "25'",
-        "lastApiSync": "2026-06-20T00:57:51.567427+00:00",
-        "seconds": 1500,
+        "displayMinute": "26'",
+        "lastApiSync": "2026-06-20T00:58:26.424110+00:00",
+        "seconds": 1560,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "25'"
+        "timer": "26'"
       },
-      "manualClockText": "25'",
+      "manualClockText": "26'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -195,7 +194,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 25,
+      "minute": 26,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -211,11 +210,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 1
+          "home": 0
         },
         "halfTime": {
           "away": 0,
-          "home": 1
+          "home": 0
         },
         "winner": "HOME_TEAM"
       },
@@ -274,7 +273,7 @@
       "awayCorners": 0,
       "awayFouls": 2,
       "awayOffsides": 1,
-      "awayPossession": "34%",
+      "awayPossession": "37%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -304,7 +303,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1500,
+      "clockSeconds": 1560,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -313,7 +312,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "25'",
+      "displayMinute": "26'",
       "events": [
         {
           "assist": null,
@@ -336,24 +335,24 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - offside",
           "displayMinute": "24'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 24,
           "player": "M. Cunha",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Brazil",
           "timer": "24:00",
           "timerSeconds": 1440,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
-      "fallbackClock": 1500,
-      "fallbackClockText": "25'",
+      "fallbackClock": 1560,
+      "fallbackClockText": "26'",
       "goalEvents": [
         {
           "assist": null,
@@ -379,14 +378,13 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeCorners": 4,
       "homeFouls": 3,
       "homeOffsides": 4,
-      "homePossession": "66%",
-      "homeScore": 1,
-      "homeShotsOnGoal": 0,
+      "homePossession": "63%",
+      "homeScore": 0,
+      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
         "id": 764,
@@ -395,15 +393,15 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T00:57:51.567427+00:00",
-      "lastUpdated": "2026-06-20T02:57:49Z",
+      "lastApiSync": "2026-06-20T00:58:26.424110+00:00",
+      "lastUpdated": "2026-06-20T02:58:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 2,
           "offsides": 1,
-          "possession": "34%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -414,24 +412,24 @@
           "corners": 4,
           "fouls": 3,
           "offsides": 4,
-          "possession": "66%",
+          "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 2,
+          "shotsOnGoal": 2,
+          "totalShots": 4,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "25'",
-        "lastApiSync": "2026-06-20T00:57:51.567427+00:00",
-        "seconds": 1500,
+        "displayMinute": "26'",
+        "lastApiSync": "2026-06-20T00:58:26.424110+00:00",
+        "seconds": 1560,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "25'"
+        "timer": "26'"
       },
-      "manualClockText": "25'",
+      "manualClockText": "26'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -456,7 +454,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 25,
+      "minute": 26,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -472,11 +470,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 1
+          "home": 0
         },
         "halfTime": {
           "away": 0,
-          "home": 1
+          "home": 0
         },
         "winner": "HOME_TEAM"
       },
