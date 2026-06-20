@@ -23712,7 +23712,7 @@
       "awayCorners": 1,
       "awayFouls": 3,
       "awayOffsides": 2,
-      "awayPossession": "38%",
+      "awayPossession": "37%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -23824,6 +23824,24 @@
           "timer": "40:00",
           "timerSeconds": 2400,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "45+3'",
+          "extra": 3,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Vinicius Junior",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "48:00",
+          "timerSeconds": 2880,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 2700,
@@ -23874,15 +23892,38 @@
           "timer": "36:00",
           "timerSeconds": 2160,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Haiti",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "45+3'",
+          "extra": 3,
+          "goalNumber": 3,
+          "homeTeam": "Brazil",
+          "isDisallowed": false,
+          "matchId": 537341,
+          "matchUtcDate": "2026-06-20T00:30:00Z",
+          "minute": 45,
+          "player": "Vinicius Junior",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "48:00",
+          "timerSeconds": 2880,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeCorners": 4,
-      "homeFouls": 5,
+      "homeFouls": 6,
       "homeOffsides": 5,
-      "homePossession": "62%",
-      "homeScore": 2,
+      "homePossession": "63%",
+      "homeScore": 3,
       "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
@@ -23892,15 +23933,15 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T01:19:47.804772+00:00",
-      "lastUpdated": "2026-06-20T03:19:46Z",
+      "lastApiSync": "2026-06-20T01:20:22.367870+00:00",
+      "lastUpdated": "2026-06-20T03:20:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 3,
           "offsides": 2,
-          "possession": "38%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -23909,9 +23950,9 @@
         },
         "home": {
           "corners": 4,
-          "fouls": 5,
+          "fouls": 6,
           "offsides": 5,
-          "possession": "62%",
+          "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 4,
@@ -23922,7 +23963,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-20T01:19:47.804772+00:00",
+        "lastApiSync": "2026-06-20T01:20:22.367870+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -23934,7 +23975,7 @@
         "awayCorners": 1,
         "awayFouls": 3,
         "awayOffsides": 2,
-        "awayPossession": "38%",
+        "awayPossession": "37%",
         "awayShotsOnGoal": 0,
         "cardEvents": [
           {
@@ -24028,6 +24069,24 @@
             "timer": "40:00",
             "timerSeconds": 2400,
             "type": "Substitution"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "45+3'",
+            "extra": 3,
+            "isDisallowed": false,
+            "minute": 45,
+            "player": "Vinicius Junior",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "48:00",
+            "timerSeconds": 2880,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -24076,13 +24135,36 @@
             "timer": "36:00",
             "timerSeconds": 2160,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Haiti",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "45+3'",
+            "extra": 3,
+            "goalNumber": 3,
+            "homeTeam": "Brazil",
+            "isDisallowed": false,
+            "matchId": 537341,
+            "matchUtcDate": "2026-06-20T00:30:00Z",
+            "minute": 45,
+            "player": "Vinicius Junior",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "48:00",
+            "timerSeconds": 2880,
+            "type": "Goal"
           }
         ],
         "goalEventsSource": "api_football_live",
         "homeCorners": 4,
-        "homeFouls": 5,
+        "homeFouls": 6,
         "homeOffsides": 5,
-        "homePossession": "62%",
+        "homePossession": "63%",
         "homeShotsOnGoal": 4,
         "lineups": [],
         "lineupsData": [],
@@ -24091,7 +24173,7 @@
             "corners": 1,
             "fouls": 3,
             "offsides": 2,
-            "possession": "38%",
+            "possession": "37%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 0,
@@ -24100,9 +24182,9 @@
           },
           "home": {
             "corners": 4,
-            "fouls": 5,
+            "fouls": 6,
             "offsides": 5,
-            "possession": "62%",
+            "possession": "63%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 4,
@@ -24210,11 +24292,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 2
+          "home": 3
         },
         "halfTime": {
           "away": 0,
-          "home": 2
+          "home": 3
         },
         "winner": "HOME_TEAM"
       },
@@ -47992,7 +48074,7 @@
       "awayCorners": 1,
       "awayFouls": 3,
       "awayOffsides": 2,
-      "awayPossession": "38%",
+      "awayPossession": "37%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -48104,6 +48186,24 @@
           "timer": "40:00",
           "timerSeconds": 2400,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "45+3'",
+          "extra": 3,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Vinicius Junior",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "48:00",
+          "timerSeconds": 2880,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 2700,
@@ -48154,15 +48254,38 @@
           "timer": "36:00",
           "timerSeconds": 2160,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Haiti",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "45+3'",
+          "extra": 3,
+          "goalNumber": 3,
+          "homeTeam": "Brazil",
+          "isDisallowed": false,
+          "matchId": 537341,
+          "matchUtcDate": "2026-06-20T00:30:00Z",
+          "minute": 45,
+          "player": "Vinicius Junior",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "48:00",
+          "timerSeconds": 2880,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeCorners": 4,
-      "homeFouls": 5,
+      "homeFouls": 6,
       "homeOffsides": 5,
-      "homePossession": "62%",
-      "homeScore": 2,
+      "homePossession": "63%",
+      "homeScore": 3,
       "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
@@ -48172,15 +48295,15 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T01:19:47.804772+00:00",
-      "lastUpdated": "2026-06-20T03:19:46Z",
+      "lastApiSync": "2026-06-20T01:20:22.367870+00:00",
+      "lastUpdated": "2026-06-20T03:20:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 3,
           "offsides": 2,
-          "possession": "38%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -48189,9 +48312,9 @@
         },
         "home": {
           "corners": 4,
-          "fouls": 5,
+          "fouls": 6,
           "offsides": 5,
-          "possession": "62%",
+          "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 4,
@@ -48202,7 +48325,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-20T01:19:47.804772+00:00",
+        "lastApiSync": "2026-06-20T01:20:22.367870+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -48214,7 +48337,7 @@
         "awayCorners": 1,
         "awayFouls": 3,
         "awayOffsides": 2,
-        "awayPossession": "38%",
+        "awayPossession": "37%",
         "awayShotsOnGoal": 0,
         "cardEvents": [
           {
@@ -48308,6 +48431,24 @@
             "timer": "40:00",
             "timerSeconds": 2400,
             "type": "Substitution"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "45+3'",
+            "extra": 3,
+            "isDisallowed": false,
+            "minute": 45,
+            "player": "Vinicius Junior",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "48:00",
+            "timerSeconds": 2880,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -48356,13 +48497,36 @@
             "timer": "36:00",
             "timerSeconds": 2160,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Haiti",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "45+3'",
+            "extra": 3,
+            "goalNumber": 3,
+            "homeTeam": "Brazil",
+            "isDisallowed": false,
+            "matchId": 537341,
+            "matchUtcDate": "2026-06-20T00:30:00Z",
+            "minute": 45,
+            "player": "Vinicius Junior",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "48:00",
+            "timerSeconds": 2880,
+            "type": "Goal"
           }
         ],
         "goalEventsSource": "api_football_live",
         "homeCorners": 4,
-        "homeFouls": 5,
+        "homeFouls": 6,
         "homeOffsides": 5,
-        "homePossession": "62%",
+        "homePossession": "63%",
         "homeShotsOnGoal": 4,
         "lineups": [],
         "lineupsData": [],
@@ -48371,7 +48535,7 @@
             "corners": 1,
             "fouls": 3,
             "offsides": 2,
-            "possession": "38%",
+            "possession": "37%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 0,
@@ -48380,9 +48544,9 @@
           },
           "home": {
             "corners": 4,
-            "fouls": 5,
+            "fouls": 6,
             "offsides": 5,
-            "possession": "62%",
+            "possession": "63%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 4,
@@ -48490,11 +48654,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 2
+          "home": 3
         },
         "halfTime": {
           "away": 0,
-          "home": 2
+          "home": 3
         },
         "winner": "HOME_TEAM"
       },
