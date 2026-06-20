@@ -25322,7 +25322,7 @@
       "awayCorners": 2,
       "awayFouls": 5,
       "awayOffsides": 3,
-      "awayPossession": "41%",
+      "awayPossession": "43%",
       "awayScore": 0,
       "awayShotsOnGoal": 4,
       "awayTeam": {
@@ -25352,7 +25352,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3180,
+      "clockSeconds": 3300,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -25361,7 +25361,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "53'",
+      "displayMinute": "55'",
       "events": [
         {
           "assist": "C. Gakpo",
@@ -25452,10 +25452,28 @@
           "timer": "53:00",
           "timerSeconds": 3180,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "C. Summerville",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "54'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 54,
+          "player": "C. Gakpo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3180,
-      "fallbackClockText": "53'",
+      "fallbackClock": 3300,
+      "fallbackClockText": "55'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -25525,6 +25543,29 @@
           "timer": "47:00",
           "timerSeconds": 2820,
           "type": "Goal"
+        },
+        {
+          "assist": "C. Summerville",
+          "awayTeam": "Sweden",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "54'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Netherlands",
+          "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
+          "minute": 54,
+          "player": "C. Gakpo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -25532,8 +25573,8 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": 1,
-      "homePossession": "59%",
-      "homeScore": 3,
+      "homePossession": "57%",
+      "homeScore": 4,
       "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
@@ -25543,15 +25584,15 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T18:14:35.151929+00:00",
-      "lastUpdated": "2026-06-20T20:14:28Z",
+      "lastApiSync": "2026-06-20T18:15:38.130102+00:00",
+      "lastUpdated": "2026-06-20T20:15:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
           "fouls": 5,
           "offsides": 3,
-          "possession": "41%",
+          "possession": "43%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 4,
@@ -25562,30 +25603,30 @@
           "corners": 1,
           "fouls": 5,
           "offsides": 1,
-          "possession": "59%",
+          "possession": "57%",
           "redCards": null,
-          "shotsOffGoal": 1,
+          "shotsOffGoal": 2,
           "shotsOnGoal": 5,
-          "totalShots": 6,
+          "totalShots": 7,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "53'",
-        "lastApiSync": "2026-06-20T18:14:35.151929+00:00",
-        "seconds": 3180,
+        "displayMinute": "55'",
+        "lastApiSync": "2026-06-20T18:15:38.130102+00:00",
+        "seconds": 3300,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "53'"
+        "timer": "55'"
       },
-      "manualClockText": "53'",
+      "manualClockText": "55'",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": 2,
         "awayFouls": 5,
         "awayOffsides": 3,
-        "awayPossession": "41%",
+        "awayPossession": "43%",
         "awayShotsOnGoal": 4,
         "cardEvents": [
           {
@@ -25697,6 +25738,24 @@
             "timer": "53:00",
             "timerSeconds": 3180,
             "type": "Yellow Card"
+          },
+          {
+            "assist": "C. Summerville",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "54'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 54,
+            "player": "C. Gakpo",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Netherlands",
+            "timer": "54:00",
+            "timerSeconds": 3240,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -25768,13 +25827,36 @@
             "timer": "47:00",
             "timerSeconds": 2820,
             "type": "Goal"
+          },
+          {
+            "assist": "C. Summerville",
+            "awayTeam": "Sweden",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "54'",
+            "extra": null,
+            "goalNumber": 4,
+            "homeTeam": "Netherlands",
+            "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
+            "minute": 54,
+            "player": "C. Gakpo",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Netherlands",
+            "timer": "54:00",
+            "timerSeconds": 3240,
+            "type": "Goal"
           }
         ],
         "goalEventsSource": "api_football_live",
         "homeCorners": 1,
         "homeFouls": 5,
         "homeOffsides": 1,
-        "homePossession": "59%",
+        "homePossession": "57%",
         "homeShotsOnGoal": 5,
         "lineups": [],
         "lineupsData": [],
@@ -25783,7 +25865,7 @@
             "corners": 2,
             "fouls": 5,
             "offsides": 3,
-            "possession": "41%",
+            "possession": "43%",
             "redCards": null,
             "shotsOffGoal": 4,
             "shotsOnGoal": 4,
@@ -25794,11 +25876,11 @@
             "corners": 1,
             "fouls": 5,
             "offsides": 1,
-            "possession": "59%",
+            "possession": "57%",
             "redCards": null,
-            "shotsOffGoal": 1,
+            "shotsOffGoal": 2,
             "shotsOnGoal": 5,
-            "totalShots": 6,
+            "totalShots": 7,
             "yellowCards": null
           }
         },
@@ -25892,7 +25974,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 53,
+      "minute": 55,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -25922,7 +26004,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 3
+          "home": 4
         },
         "halfTime": {
           "away": 0,
@@ -51314,7 +51396,7 @@
       "awayCorners": 2,
       "awayFouls": 5,
       "awayOffsides": 3,
-      "awayPossession": "41%",
+      "awayPossession": "43%",
       "awayScore": 0,
       "awayShotsOnGoal": 4,
       "awayTeam": {
@@ -51344,7 +51426,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3180,
+      "clockSeconds": 3300,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -51353,7 +51435,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "53'",
+      "displayMinute": "55'",
       "events": [
         {
           "assist": "C. Gakpo",
@@ -51444,10 +51526,28 @@
           "timer": "53:00",
           "timerSeconds": 3180,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "C. Summerville",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "54'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 54,
+          "player": "C. Gakpo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3180,
-      "fallbackClockText": "53'",
+      "fallbackClock": 3300,
+      "fallbackClockText": "55'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -51517,6 +51617,29 @@
           "timer": "47:00",
           "timerSeconds": 2820,
           "type": "Goal"
+        },
+        {
+          "assist": "C. Summerville",
+          "awayTeam": "Sweden",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "54'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Netherlands",
+          "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
+          "minute": 54,
+          "player": "C. Gakpo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -51524,8 +51647,8 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": 1,
-      "homePossession": "59%",
-      "homeScore": 3,
+      "homePossession": "57%",
+      "homeScore": 4,
       "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
@@ -51535,15 +51658,15 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T18:14:35.151929+00:00",
-      "lastUpdated": "2026-06-20T20:14:28Z",
+      "lastApiSync": "2026-06-20T18:15:38.130102+00:00",
+      "lastUpdated": "2026-06-20T20:15:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
           "fouls": 5,
           "offsides": 3,
-          "possession": "41%",
+          "possession": "43%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 4,
@@ -51554,30 +51677,30 @@
           "corners": 1,
           "fouls": 5,
           "offsides": 1,
-          "possession": "59%",
+          "possession": "57%",
           "redCards": null,
-          "shotsOffGoal": 1,
+          "shotsOffGoal": 2,
           "shotsOnGoal": 5,
-          "totalShots": 6,
+          "totalShots": 7,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "53'",
-        "lastApiSync": "2026-06-20T18:14:35.151929+00:00",
-        "seconds": 3180,
+        "displayMinute": "55'",
+        "lastApiSync": "2026-06-20T18:15:38.130102+00:00",
+        "seconds": 3300,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "53'"
+        "timer": "55'"
       },
-      "manualClockText": "53'",
+      "manualClockText": "55'",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": 2,
         "awayFouls": 5,
         "awayOffsides": 3,
-        "awayPossession": "41%",
+        "awayPossession": "43%",
         "awayShotsOnGoal": 4,
         "cardEvents": [
           {
@@ -51689,6 +51812,24 @@
             "timer": "53:00",
             "timerSeconds": 3180,
             "type": "Yellow Card"
+          },
+          {
+            "assist": "C. Summerville",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "54'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 54,
+            "player": "C. Gakpo",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Netherlands",
+            "timer": "54:00",
+            "timerSeconds": 3240,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -51760,13 +51901,36 @@
             "timer": "47:00",
             "timerSeconds": 2820,
             "type": "Goal"
+          },
+          {
+            "assist": "C. Summerville",
+            "awayTeam": "Sweden",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "54'",
+            "extra": null,
+            "goalNumber": 4,
+            "homeTeam": "Netherlands",
+            "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
+            "minute": 54,
+            "player": "C. Gakpo",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Netherlands",
+            "timer": "54:00",
+            "timerSeconds": 3240,
+            "type": "Goal"
           }
         ],
         "goalEventsSource": "api_football_live",
         "homeCorners": 1,
         "homeFouls": 5,
         "homeOffsides": 1,
-        "homePossession": "59%",
+        "homePossession": "57%",
         "homeShotsOnGoal": 5,
         "lineups": [],
         "lineupsData": [],
@@ -51775,7 +51939,7 @@
             "corners": 2,
             "fouls": 5,
             "offsides": 3,
-            "possession": "41%",
+            "possession": "43%",
             "redCards": null,
             "shotsOffGoal": 4,
             "shotsOnGoal": 4,
@@ -51786,11 +51950,11 @@
             "corners": 1,
             "fouls": 5,
             "offsides": 1,
-            "possession": "59%",
+            "possession": "57%",
             "redCards": null,
-            "shotsOffGoal": 1,
+            "shotsOffGoal": 2,
             "shotsOnGoal": 5,
-            "totalShots": 6,
+            "totalShots": 7,
             "yellowCards": null
           }
         },
@@ -51884,7 +52048,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 53,
+      "minute": 55,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -51914,7 +52078,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 3
+          "home": 4
         },
         "halfTime": {
           "away": 0,
