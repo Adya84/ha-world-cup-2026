@@ -25311,15 +25311,13 @@
     },
     {
       "apiFootballFixtureId": 1539007,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayScore": 1,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
         "id": 792,
@@ -25347,8 +25345,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4140,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -25356,15 +25353,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "69'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "C. Gakpo",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "5'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 5,
           "player": "B. Brobbey",
           "playerOff": null,
@@ -25378,11 +25380,16 @@
         },
         {
           "assist": "D. Dumfries",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "17'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 17,
           "player": "B. Brobbey",
           "playerOff": null,
@@ -25395,30 +25402,17 @@
           "type": "Goal"
         },
         {
-          "assist": "C. Summerville",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "D. Malen",
-          "playerOff": "D. Malen",
-          "playerOn": "C. Summerville",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Netherlands",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "D. Dumfries",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "47'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 47,
           "player": "C. Gakpo",
           "playerOff": null,
@@ -25431,30 +25425,17 @@
           "type": "Goal"
         },
         {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "53'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 53,
-          "player": "G. Gudmundsson",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Sweden",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "C. Summerville",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "54'",
           "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 54,
           "player": "C. Gakpo",
           "playerOff": null,
@@ -25467,66 +25448,17 @@
           "type": "Goal"
         },
         {
-          "assist": "A. Elanga",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "55'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 55,
-          "player": "A. Bernhardsson",
-          "playerOff": "A. Bernhardsson",
-          "playerOn": "A. Elanga",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Sweden",
-          "timer": "55:00",
-          "timerSeconds": 3300,
-          "type": "Substitution"
-        },
-        {
-          "assist": "L. Bergvall",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "56'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 56,
-          "player": "B. Nygren",
-          "playerOff": "B. Nygren",
-          "playerOn": "L. Bergvall",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Sweden",
-          "timer": "56:00",
-          "timerSeconds": 3360,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Zeneli",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "56'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 56,
-          "player": "J. Karlstrom",
-          "playerOff": "J. Karlstrom",
-          "playerOn": "B. Zeneli",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Sweden",
-          "timer": "56:00",
-          "timerSeconds": 3360,
-          "type": "Substitution"
-        },
-        {
           "assist": "A. Isak",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "59'",
           "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 59,
           "player": "A. Elanga",
           "playerOff": null,
@@ -25537,46 +25469,8 @@
           "timer": "59:00",
           "timerSeconds": 3540,
           "type": "Goal"
-        },
-        {
-          "assist": "G. Til",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "59'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 59,
-          "player": "T. Reijnders",
-          "playerOff": "T. Reijnders",
-          "playerOn": "G. Til",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Netherlands",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "type": "Substitution"
-        },
-        {
-          "assist": "T. Koopmeiners",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "59'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 59,
-          "player": "F. de Jong",
-          "playerOff": "F. de Jong",
-          "playerOn": "T. Koopmeiners",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Netherlands",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4140,
-      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -25694,9 +25588,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
-      "homeScore": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
         "id": 8601,
@@ -25706,18 +25598,17 @@
       },
       "id": 537359,
       "lastApiSync": "2026-06-20T18:34:46.740948+00:00",
-      "lastUpdated": "2026-06-20T20:34:43Z",
-      "liveSource": "api_football",
+      "lastUpdated": "2026-06-20T20:35:19Z",
       "manualClock": {
         "active": false,
         "displayMinute": "69'",
         "lastApiSync": "2026-06-20T18:34:46.740948+00:00",
         "seconds": 4140,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "69'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "69:00"
       },
-      "manualClockText": "69'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": null,
@@ -25748,11 +25639,16 @@
         "events": [
           {
             "assist": "C. Gakpo",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "5'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 5,
             "player": "B. Brobbey",
             "playerOff": null,
@@ -25766,11 +25662,16 @@
           },
           {
             "assist": "D. Dumfries",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "17'",
             "extra": null,
+            "goalNumber": 2,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 17,
             "player": "B. Brobbey",
             "playerOff": null,
@@ -25783,30 +25684,17 @@
             "type": "Goal"
           },
           {
-            "assist": "C. Summerville",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "D. Malen",
-            "playerOff": "D. Malen",
-            "playerOn": "C. Summerville",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Netherlands",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
             "assist": "D. Dumfries",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "47'",
             "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 47,
             "player": "C. Gakpo",
             "playerOff": null,
@@ -25819,30 +25707,17 @@
             "type": "Goal"
           },
           {
-            "assist": null,
-            "comments": "Tripping",
-            "detail": "Yellow Card",
-            "displayMinute": "53'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 53,
-            "player": "G. Gudmundsson",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Sweden",
-            "timer": "53:00",
-            "timerSeconds": 3180,
-            "type": "Yellow Card"
-          },
-          {
             "assist": "C. Summerville",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "54'",
             "extra": null,
+            "goalNumber": 4,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 54,
             "player": "C. Gakpo",
             "playerOff": null,
@@ -25855,66 +25730,17 @@
             "type": "Goal"
           },
           {
-            "assist": "A. Elanga",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "55'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 55,
-            "player": "A. Bernhardsson",
-            "playerOff": "A. Bernhardsson",
-            "playerOn": "A. Elanga",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Sweden",
-            "timer": "55:00",
-            "timerSeconds": 3300,
-            "type": "Substitution"
-          },
-          {
-            "assist": "L. Bergvall",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "56'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 56,
-            "player": "B. Nygren",
-            "playerOff": "B. Nygren",
-            "playerOn": "L. Bergvall",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Sweden",
-            "timer": "56:00",
-            "timerSeconds": 3360,
-            "type": "Substitution"
-          },
-          {
-            "assist": "B. Zeneli",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "56'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 56,
-            "player": "J. Karlstrom",
-            "playerOff": "J. Karlstrom",
-            "playerOn": "B. Zeneli",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Sweden",
-            "timer": "56:00",
-            "timerSeconds": 3360,
-            "type": "Substitution"
-          },
-          {
             "assist": "A. Isak",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "59'",
             "extra": null,
+            "goalNumber": 5,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 59,
             "player": "A. Elanga",
             "playerOff": null,
@@ -25925,42 +25751,6 @@
             "timer": "59:00",
             "timerSeconds": 3540,
             "type": "Goal"
-          },
-          {
-            "assist": "G. Til",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "59'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 59,
-            "player": "T. Reijnders",
-            "playerOff": "T. Reijnders",
-            "playerOn": "G. Til",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Netherlands",
-            "timer": "59:00",
-            "timerSeconds": 3540,
-            "type": "Substitution"
-          },
-          {
-            "assist": "T. Koopmeiners",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "59'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 59,
-            "player": "F. de Jong",
-            "playerOff": "F. de Jong",
-            "playerOn": "T. Koopmeiners",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Netherlands",
-            "timer": "59:00",
-            "timerSeconds": 3540,
-            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -26080,7 +25870,7 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": "api_football_live",
+        "goalEventsSource": null,
         "homeCorners": null,
         "homeFouls": null,
         "homeOffsides": null,
@@ -26091,23 +25881,17 @@
         "liveStatistics": {},
         "officials": [
           {
+            "id": 11605,
             "name": "Michael Oliver",
             "nationality": "England",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Michael Oliver, England",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 11605,
             "name": "Michael Oliver",
             "nationality": "England",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Michael Oliver, England",
             "type": "REFEREE"
           }
         ],
@@ -26269,29 +26053,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Michael Oliver",
-          "nationality": "England",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Michael Oliver, England",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 11605,
           "name": "Michael Oliver",
           "nationality": "England",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Michael Oliver, England",
           "type": "REFEREE"
         }
       ],
@@ -26307,7 +26076,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -26316,7 +26084,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "C. Summerville",
@@ -26428,11 +26196,6 @@
         }
       ],
       "utcDate": "2026-06-20T17:00:00Z",
-      "venue": {
-        "city": "Houston",
-        "id": null,
-        "name": "NRG Stadium"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -51770,15 +51533,13 @@
     },
     {
       "apiFootballFixtureId": 1539007,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayScore": 1,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
         "id": 792,
@@ -51806,8 +51567,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4140,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -51815,15 +51575,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "69'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "C. Gakpo",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "5'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 5,
           "player": "B. Brobbey",
           "playerOff": null,
@@ -51837,11 +51602,16 @@
         },
         {
           "assist": "D. Dumfries",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "17'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 17,
           "player": "B. Brobbey",
           "playerOff": null,
@@ -51854,30 +51624,17 @@
           "type": "Goal"
         },
         {
-          "assist": "C. Summerville",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "D. Malen",
-          "playerOff": "D. Malen",
-          "playerOn": "C. Summerville",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Netherlands",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "D. Dumfries",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "47'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 47,
           "player": "C. Gakpo",
           "playerOff": null,
@@ -51890,30 +51647,17 @@
           "type": "Goal"
         },
         {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "53'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 53,
-          "player": "G. Gudmundsson",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Sweden",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "C. Summerville",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "54'",
           "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 54,
           "player": "C. Gakpo",
           "playerOff": null,
@@ -51926,66 +51670,17 @@
           "type": "Goal"
         },
         {
-          "assist": "A. Elanga",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "55'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 55,
-          "player": "A. Bernhardsson",
-          "playerOff": "A. Bernhardsson",
-          "playerOn": "A. Elanga",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Sweden",
-          "timer": "55:00",
-          "timerSeconds": 3300,
-          "type": "Substitution"
-        },
-        {
-          "assist": "L. Bergvall",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "56'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 56,
-          "player": "B. Nygren",
-          "playerOff": "B. Nygren",
-          "playerOn": "L. Bergvall",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Sweden",
-          "timer": "56:00",
-          "timerSeconds": 3360,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Zeneli",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "56'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 56,
-          "player": "J. Karlstrom",
-          "playerOff": "J. Karlstrom",
-          "playerOn": "B. Zeneli",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Sweden",
-          "timer": "56:00",
-          "timerSeconds": 3360,
-          "type": "Substitution"
-        },
-        {
           "assist": "A. Isak",
+          "awayTeam": "Sweden",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "59'",
           "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Netherlands",
           "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
           "minute": 59,
           "player": "A. Elanga",
           "playerOff": null,
@@ -51996,46 +51691,8 @@
           "timer": "59:00",
           "timerSeconds": 3540,
           "type": "Goal"
-        },
-        {
-          "assist": "G. Til",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "59'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 59,
-          "player": "T. Reijnders",
-          "playerOff": "T. Reijnders",
-          "playerOn": "G. Til",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Netherlands",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "type": "Substitution"
-        },
-        {
-          "assist": "T. Koopmeiners",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "59'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 59,
-          "player": "F. de Jong",
-          "playerOff": "F. de Jong",
-          "playerOn": "T. Koopmeiners",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Netherlands",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4140,
-      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -52153,9 +51810,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
-      "homeScore": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
         "id": 8601,
@@ -52165,18 +51820,17 @@
       },
       "id": 537359,
       "lastApiSync": "2026-06-20T18:34:46.740948+00:00",
-      "lastUpdated": "2026-06-20T20:34:43Z",
-      "liveSource": "api_football",
+      "lastUpdated": "2026-06-20T20:35:19Z",
       "manualClock": {
         "active": false,
         "displayMinute": "69'",
         "lastApiSync": "2026-06-20T18:34:46.740948+00:00",
         "seconds": 4140,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "69'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "69:00"
       },
-      "manualClockText": "69'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": null,
@@ -52207,11 +51861,16 @@
         "events": [
           {
             "assist": "C. Gakpo",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "5'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 5,
             "player": "B. Brobbey",
             "playerOff": null,
@@ -52225,11 +51884,16 @@
           },
           {
             "assist": "D. Dumfries",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "17'",
             "extra": null,
+            "goalNumber": 2,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 17,
             "player": "B. Brobbey",
             "playerOff": null,
@@ -52242,30 +51906,17 @@
             "type": "Goal"
           },
           {
-            "assist": "C. Summerville",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "D. Malen",
-            "playerOff": "D. Malen",
-            "playerOn": "C. Summerville",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Netherlands",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
             "assist": "D. Dumfries",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "47'",
             "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 47,
             "player": "C. Gakpo",
             "playerOff": null,
@@ -52278,30 +51929,17 @@
             "type": "Goal"
           },
           {
-            "assist": null,
-            "comments": "Tripping",
-            "detail": "Yellow Card",
-            "displayMinute": "53'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 53,
-            "player": "G. Gudmundsson",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Sweden",
-            "timer": "53:00",
-            "timerSeconds": 3180,
-            "type": "Yellow Card"
-          },
-          {
             "assist": "C. Summerville",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "54'",
             "extra": null,
+            "goalNumber": 4,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 54,
             "player": "C. Gakpo",
             "playerOff": null,
@@ -52314,66 +51952,17 @@
             "type": "Goal"
           },
           {
-            "assist": "A. Elanga",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "55'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 55,
-            "player": "A. Bernhardsson",
-            "playerOff": "A. Bernhardsson",
-            "playerOn": "A. Elanga",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Sweden",
-            "timer": "55:00",
-            "timerSeconds": 3300,
-            "type": "Substitution"
-          },
-          {
-            "assist": "L. Bergvall",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "56'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 56,
-            "player": "B. Nygren",
-            "playerOff": "B. Nygren",
-            "playerOn": "L. Bergvall",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Sweden",
-            "timer": "56:00",
-            "timerSeconds": 3360,
-            "type": "Substitution"
-          },
-          {
-            "assist": "B. Zeneli",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "56'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 56,
-            "player": "J. Karlstrom",
-            "playerOff": "J. Karlstrom",
-            "playerOn": "B. Zeneli",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Sweden",
-            "timer": "56:00",
-            "timerSeconds": 3360,
-            "type": "Substitution"
-          },
-          {
             "assist": "A. Isak",
+            "awayTeam": "Sweden",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "59'",
             "extra": null,
+            "goalNumber": 5,
+            "homeTeam": "Netherlands",
             "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
             "minute": 59,
             "player": "A. Elanga",
             "playerOff": null,
@@ -52384,42 +51973,6 @@
             "timer": "59:00",
             "timerSeconds": 3540,
             "type": "Goal"
-          },
-          {
-            "assist": "G. Til",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "59'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 59,
-            "player": "T. Reijnders",
-            "playerOff": "T. Reijnders",
-            "playerOn": "G. Til",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Netherlands",
-            "timer": "59:00",
-            "timerSeconds": 3540,
-            "type": "Substitution"
-          },
-          {
-            "assist": "T. Koopmeiners",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "59'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 59,
-            "player": "F. de Jong",
-            "playerOff": "F. de Jong",
-            "playerOn": "T. Koopmeiners",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Netherlands",
-            "timer": "59:00",
-            "timerSeconds": 3540,
-            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -52539,7 +52092,7 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": "api_football_live",
+        "goalEventsSource": null,
         "homeCorners": null,
         "homeFouls": null,
         "homeOffsides": null,
@@ -52550,23 +52103,17 @@
         "liveStatistics": {},
         "officials": [
           {
+            "id": 11605,
             "name": "Michael Oliver",
             "nationality": "England",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Michael Oliver, England",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 11605,
             "name": "Michael Oliver",
             "nationality": "England",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Michael Oliver, England",
             "type": "REFEREE"
           }
         ],
@@ -52728,29 +52275,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Michael Oliver",
-          "nationality": "England",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Michael Oliver, England",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 11605,
           "name": "Michael Oliver",
           "nationality": "England",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Michael Oliver, England",
           "type": "REFEREE"
         }
       ],
@@ -52766,7 +52298,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -52775,7 +52306,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "C. Summerville",
@@ -52887,11 +52418,6 @@
         }
       ],
       "utcDate": "2026-06-20T17:00:00Z",
-      "venue": {
-        "city": "Houston",
-        "id": null,
-        "name": "NRG Stadium"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
