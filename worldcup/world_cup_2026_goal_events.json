@@ -4825,7 +4825,7 @@
     "apiFootballFixtureId": 1539006,
     "awayScore": 1,
     "awayTeam": "Paraguay",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "cardEvents": [
       {
         "assist": null,
@@ -4865,8 +4865,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": "J. Enciso",
@@ -4921,6 +4921,42 @@
         "timer": "48:00",
         "timerSeconds": 2880,
         "type": "Red Card"
+      },
+      {
+        "assist": "D. Bobadilla",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "I. Pitta",
+        "playerOff": "I. Pitta",
+        "playerOn": "D. Bobadilla",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Paraguay",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      },
+      {
+        "assist": "B. Yilmaz",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "K. Akturkoglu",
+        "playerOff": "K. Akturkoglu",
+        "playerOn": "B. Yilmaz",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "T\u00fcrkiye",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -4950,9 +4986,9 @@
     ],
     "homeScore": 0,
     "homeTeam": "Turkey",
-    "lastApiSync": "2026-06-20T04:11:57.003543+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-06-20T04:11:57.003543+00:00",
+    "lastApiSync": "2026-06-20T04:12:30.848749+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-06-20T04:12:30.848749+00:00",
     "referees": [
       {
         "name": "Ivan Barton",
@@ -4964,7 +5000,45 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "D. Bobadilla",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "I. Pitta",
+        "playerOff": "I. Pitta",
+        "playerOn": "D. Bobadilla",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Paraguay",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      },
+      {
+        "assist": "B. Yilmaz",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "K. Akturkoglu",
+        "playerOff": "K. Akturkoglu",
+        "playerOn": "B. Yilmaz",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "T\u00fcrkiye",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-20T03:00:00Z"
   },
   "537348": {
