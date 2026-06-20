@@ -23742,7 +23742,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2160,
+      "clockSeconds": 2220,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -23751,7 +23751,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "36'",
+      "displayMinute": "37'",
       "events": [
         {
           "assist": null,
@@ -23788,10 +23788,28 @@
           "timer": "23:00",
           "timerSeconds": 1380,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 36,
+          "player": "M. Cunha",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 2160,
-      "fallbackClockText": "36'",
+      "fallbackClock": 2220,
+      "fallbackClockText": "37'",
       "goalEvents": [
         {
           "assist": null,
@@ -23815,6 +23833,29 @@
           "timer": "23:00",
           "timerSeconds": 1380,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Haiti",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Brazil",
+          "isDisallowed": false,
+          "matchId": 537341,
+          "matchUtcDate": "2026-06-20T00:30:00Z",
+          "minute": 36,
+          "player": "M. Cunha",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -23823,7 +23864,7 @@
       "homeFouls": 4,
       "homeOffsides": 5,
       "homePossession": "63%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
@@ -23833,8 +23874,8 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T01:08:23.781768+00:00",
-      "lastUpdated": "2026-06-20T03:08:22Z",
+      "lastApiSync": "2026-06-20T01:08:58.527984+00:00",
+      "lastUpdated": "2026-06-20T03:08:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -23862,14 +23903,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "36'",
-        "lastApiSync": "2026-06-20T01:08:23.781768+00:00",
-        "seconds": 2160,
+        "displayMinute": "37'",
+        "lastApiSync": "2026-06-20T01:08:58.527984+00:00",
+        "seconds": 2220,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "36'"
+        "timer": "37'"
       },
-      "manualClockText": "36'",
+      "manualClockText": "37'",
       "matchDetails": {
         "apiFootballFixtureId": 1489389,
         "awayCorners": 0,
@@ -23933,6 +23974,24 @@
             "timer": "23:00",
             "timerSeconds": 1380,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "36'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 36,
+            "player": "M. Cunha",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "36:00",
+            "timerSeconds": 2160,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -23957,6 +24016,29 @@
             "team": "Brazil",
             "timer": "23:00",
             "timerSeconds": 1380,
+            "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Haiti",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "36'",
+            "extra": null,
+            "goalNumber": 2,
+            "homeTeam": "Brazil",
+            "isDisallowed": false,
+            "matchId": 537341,
+            "matchUtcDate": "2026-06-20T00:30:00Z",
+            "minute": 36,
+            "player": "M. Cunha",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "36:00",
+            "timerSeconds": 2160,
             "type": "Goal"
           }
         ],
@@ -24057,7 +24139,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 36,
+      "minute": 37,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -24073,11 +24155,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "winner": "HOME_TEAM"
       },
@@ -47865,7 +47947,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2160,
+      "clockSeconds": 2220,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -47874,7 +47956,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "36'",
+      "displayMinute": "37'",
       "events": [
         {
           "assist": null,
@@ -47911,10 +47993,28 @@
           "timer": "23:00",
           "timerSeconds": 1380,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 36,
+          "player": "M. Cunha",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 2160,
-      "fallbackClockText": "36'",
+      "fallbackClock": 2220,
+      "fallbackClockText": "37'",
       "goalEvents": [
         {
           "assist": null,
@@ -47938,6 +48038,29 @@
           "timer": "23:00",
           "timerSeconds": 1380,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Haiti",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Brazil",
+          "isDisallowed": false,
+          "matchId": 537341,
+          "matchUtcDate": "2026-06-20T00:30:00Z",
+          "minute": 36,
+          "player": "M. Cunha",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -47946,7 +48069,7 @@
       "homeFouls": 4,
       "homeOffsides": 5,
       "homePossession": "63%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
@@ -47956,8 +48079,8 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T01:08:23.781768+00:00",
-      "lastUpdated": "2026-06-20T03:08:22Z",
+      "lastApiSync": "2026-06-20T01:08:58.527984+00:00",
+      "lastUpdated": "2026-06-20T03:08:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -47985,14 +48108,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "36'",
-        "lastApiSync": "2026-06-20T01:08:23.781768+00:00",
-        "seconds": 2160,
+        "displayMinute": "37'",
+        "lastApiSync": "2026-06-20T01:08:58.527984+00:00",
+        "seconds": 2220,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "36'"
+        "timer": "37'"
       },
-      "manualClockText": "36'",
+      "manualClockText": "37'",
       "matchDetails": {
         "apiFootballFixtureId": 1489389,
         "awayCorners": 0,
@@ -48056,6 +48179,24 @@
             "timer": "23:00",
             "timerSeconds": 1380,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "36'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 36,
+            "player": "M. Cunha",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "36:00",
+            "timerSeconds": 2160,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -48080,6 +48221,29 @@
             "team": "Brazil",
             "timer": "23:00",
             "timerSeconds": 1380,
+            "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Haiti",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "36'",
+            "extra": null,
+            "goalNumber": 2,
+            "homeTeam": "Brazil",
+            "isDisallowed": false,
+            "matchId": 537341,
+            "matchUtcDate": "2026-06-20T00:30:00Z",
+            "minute": 36,
+            "player": "M. Cunha",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "36:00",
+            "timerSeconds": 2160,
             "type": "Goal"
           }
         ],
@@ -48180,7 +48344,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 36,
+      "minute": 37,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48196,11 +48360,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "winner": "HOME_TEAM"
       },
