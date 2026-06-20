@@ -12816,7 +12816,7 @@
       "awayCorners": 0,
       "awayFouls": 6,
       "awayOffsides": 1,
-      "awayPossession": "18%",
+      "awayPossession": "19%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -12925,8 +12925,8 @@
       "group": "GROUP_D",
       "homeCorners": 5,
       "homeFouls": 1,
-      "homeOffsides": 0,
-      "homePossession": "82%",
+      "homeOffsides": 1,
+      "homePossession": "81%",
       "homeScore": 0,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -12937,15 +12937,15 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T03:33:57.987555+00:00",
-      "lastUpdated": "2026-06-20T05:33:55Z",
+      "lastApiSync": "2026-06-20T03:34:30.797735+00:00",
+      "lastUpdated": "2026-06-20T05:34:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 6,
           "offsides": 1,
-          "possession": "18%",
+          "possession": "19%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -12955,8 +12955,8 @@
         "home": {
           "corners": 5,
           "fouls": 1,
-          "offsides": 0,
-          "possession": "82%",
+          "offsides": 1,
+          "possession": "81%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -12967,7 +12967,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "34'",
-        "lastApiSync": "2026-06-20T03:33:57.987555+00:00",
+        "lastApiSync": "2026-06-20T03:34:30.797735+00:00",
         "seconds": 2040,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -13002,11 +13002,23 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
+      "officials": [
+        {
+          "name": "Ivan Barton",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Iv\u00e1n Barton, El Salvador",
+          "type": "REFEREE"
+        }
+      ],
       "referees": [
         {
-          "id": 190010,
           "name": "Ivan Barton",
-          "nationality": null,
+          "type": "REFEREE"
+        },
+        {
+          "name": "Iv\u00e1n Barton, El Salvador",
           "type": "REFEREE"
         }
       ],
@@ -13034,7 +13046,7 @@
       "status": "1H",
       "utcDate": "2026-06-20T03:00:00Z",
       "venue": {
-        "city": "San Francisco Bay Area",
+        "city": "Santa Clara",
         "id": null,
         "name": "Levi's Stadium"
       },
