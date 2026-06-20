@@ -5441,7 +5441,7 @@ class WorldCup2026Panel extends HTMLElement {
       if (!document.hidden) {
         this.updateCountdownDisplay();
         this.updateLiveClockDisplays();
-        this.scheduleNextRefresh(10 * 1000);
+        this.scheduleNextRefresh(20 * 1000);
       }
     };
     document.addEventListener("visibilitychange", this._visibilityHandler);
@@ -5638,7 +5638,7 @@ class WorldCup2026Panel extends HTMLElement {
 
 
   async loadPublicGoalEvents() {
-    const ttlMs = (Array.isArray(this._data?.live) && this._data.live.length) ? 10 * 1000 : 60 * 1000;
+    const ttlMs = (Array.isArray(this._data?.live) && this._data.live.length) ? 20 * 1000 : 60 * 1000;
     const urls = [
       "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/world_cup_2026_goal_events.json",
       "/local/worldcup/world_cup_2026_goal_events.json",
@@ -5666,7 +5666,7 @@ class WorldCup2026Panel extends HTMLElement {
 
     for (const url of urls) {
       try {
-        const data = await this.fetchJsonCached(`github-live:${url}`, url, 10 * 1000);
+        const data = await this.fetchJsonCached(`github-live:${url}`, url, 20 * 1000);
         const matches = Array.isArray(data)
           ? data
           : (Array.isArray(data?.live) ? data.live : (Array.isArray(data?.matches) ? data.matches : []));
@@ -6050,7 +6050,7 @@ class WorldCup2026Panel extends HTMLElement {
   refreshDelayMs() {
     const matches = this.allKnownMatches ? this.allKnownMatches() : [];
     const hasLive = matches.some((match) => this.isLiveMatch(match));
-    if (hasLive) return this._page === "live" || this._page === "overview" ? 10 * 1000 : 20 * 1000;
+    if (hasLive) return 20 * 1000;
 
     const next = this.nextKickoffMs(matches);
     if (next !== null) {
@@ -6073,7 +6073,7 @@ class WorldCup2026Panel extends HTMLElement {
     this._refreshInterval = setTimeout(() => {
       this._refreshInterval = null;
       this.loadAll();
-    }, Math.max(10 * 1000, hiddenDelay));
+    }, Math.max(20 * 1000, hiddenDelay));
   }
 
   hasUsableMasterClock(match) {
