@@ -20317,6 +20317,15 @@ class WorldCup2026Panel extends HTMLElement {
       "jonathan david|can": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/jonathan-david.jpg",
       "j david": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/jonathan-david.jpg",
       "j david|canada": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/jonathan-david.jpg",
+      "vinicius junior": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "vinicius junior|brazil": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "vinicius junior|bra": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "v junior": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "v junior|brazil": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "vinicius jr": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "vinicius jr|brazil": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "vinicius jose paixao de oliveira junior": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "vinicius jose paixao de oliveira junior|brazil": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
     };
     const cleanPlayerKey = (value) => String(value || "")
       .normalize("NFD")
