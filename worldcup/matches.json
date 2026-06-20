@@ -12813,7 +12813,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": "25%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/761.svg",
         "id": 761,
@@ -12831,10 +12836,61 @@
         "type": "CUP"
       },
       "displayMinute": "1'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 2,
+          "player": "M. Galarza",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 60,
       "fallbackClockText": "1'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Paraguay",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Turkey",
+          "isDisallowed": false,
+          "matchId": 537347,
+          "matchUtcDate": "2026-06-20T03:00:00Z",
+          "minute": 2,
+          "player": "M. Galarza",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": "75%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/803.svg",
         "id": 803,
@@ -12843,13 +12899,37 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T03:01:06.889235+00:00",
-      "lastUpdated": "2026-06-20T05:01:04Z",
+      "lastApiSync": "2026-06-20T03:01:40.315834+00:00",
+      "lastUpdated": "2026-06-20T05:01:37Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "25%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "75%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "1'",
-        "lastApiSync": "2026-06-20T03:01:06.889235+00:00",
+        "lastApiSync": "2026-06-20T03:01:40.315834+00:00",
         "seconds": 60,
         "source": "api_football_live_minute",
         "status": "1H",
