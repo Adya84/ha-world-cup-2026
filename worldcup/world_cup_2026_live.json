@@ -1,4 +1,264 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/haiti.svg",
+        "id": 836,
+        "name": "Haiti",
+        "shortName": "Haiti",
+        "tla": "HAI"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_C",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/764.svg",
+        "id": 764,
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA"
+      },
+      "id": 537341,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-20T02:18:52Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 3.9,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T00:25:09.310477+00:00",
+        "humidity": 29.9,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-20T00:00:00Z",
+        "pressure": 1006.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 26.8,
+        "temperatureUnit": "C",
+        "windBearing": 313.2,
+        "windSpeed": 5.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 206208,
+          "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
+          "nationality": "Spain",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-20T00:30:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 3.9,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T00:25:09.310477+00:00",
+        "humidity": 29.9,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-20T00:00:00Z",
+        "pressure": 1006.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 26.8,
+        "temperatureUnit": "C",
+        "windBearing": 313.2,
+        "windSpeed": 5.7,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/haiti.svg",
+        "id": 836,
+        "name": "Haiti",
+        "shortName": "Haiti",
+        "tla": "HAI"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_C",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/764.svg",
+        "id": 764,
+        "name": "Brazil",
+        "shortName": "Brazil",
+        "tla": "BRA"
+      },
+      "id": 537341,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-20T02:18:52Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 3.9,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T00:25:09.310477+00:00",
+        "humidity": 29.9,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-20T00:00:00Z",
+        "pressure": 1006.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 26.8,
+        "temperatureUnit": "C",
+        "windBearing": 313.2,
+        "windSpeed": 5.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 206208,
+          "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
+          "nationality": "Spain",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-20T00:30:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 3.9,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T00:25:09.310477+00:00",
+        "humidity": 29.9,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-20T00:00:00Z",
+        "pressure": 1006.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 26.8,
+        "temperatureUnit": "C",
+        "windBearing": 313.2,
+        "windSpeed": 5.7,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
