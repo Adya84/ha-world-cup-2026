@@ -24595,6 +24595,207 @@
         }
       ],
       "utcDate": "2026-06-20T00:30:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1539006,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/761.svg",
+        "id": 761,
+        "name": "Paraguay",
+        "shortName": "Paraguay",
+        "tla": "PAR"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_D",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/803.svg",
+        "id": 803,
+        "name": "Turkey",
+        "shortName": "Turkey",
+        "tla": "TUR"
+      },
+      "id": 537347,
+      "lastApiSync": "2026-06-20T03:01:06.889235+00:00",
+      "lastUpdated": "2026-06-20T05:01:04Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-20T03:01:06.889235+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1539006,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 190010,
+            "name": "Ivan Barton",
+            "nationality": null,
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 190010,
+            "name": "Ivan Barton",
+            "nationality": null,
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "San Francisco Bay Area",
+          "cloudCoverage": 0.8,
+          "condition": "clearsky_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-20T02:55:20.769402+00:00",
+          "humidity": 42.3,
+          "latitude": 37.403,
+          "longitude": -121.97,
+          "name": "Levi's Stadium weather",
+          "observedAt": "2026-06-20T02:00:00Z",
+          "pressure": 1013.8,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Levi's Stadium",
+          "temperature": 22.9,
+          "temperatureUnit": "C",
+          "windBearing": 291.3,
+          "windSpeed": 4.3,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "San Francisco Bay Area",
+        "cloudCoverage": 0.8,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T02:55:20.769402+00:00",
+        "humidity": 42.3,
+        "latitude": 37.403,
+        "longitude": -121.97,
+        "name": "Levi's Stadium weather",
+        "observedAt": "2026-06-20T02:00:00Z",
+        "pressure": 1013.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Levi's Stadium",
+        "temperature": 22.9,
+        "temperatureUnit": "C",
+        "windBearing": 291.3,
+        "windSpeed": 4.3,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 190010,
+          "name": "Ivan Barton",
+          "nationality": null,
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-20T03:00:00Z",
+      "venue": {
+        "city": "San Francisco Bay Area",
+        "id": null,
+        "name": "Levi's Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "San Francisco Bay Area",
+        "cloudCoverage": 0.8,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T02:55:20.769402+00:00",
+        "humidity": 42.3,
+        "latitude": 37.403,
+        "longitude": -121.97,
+        "name": "Levi's Stadium weather",
+        "observedAt": "2026-06-20T02:00:00Z",
+        "pressure": 1013.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Levi's Stadium",
+        "temperature": 22.9,
+        "temperatureUnit": "C",
+        "windBearing": 291.3,
+        "windSpeed": 4.3,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -49193,6 +49394,207 @@
         }
       ],
       "utcDate": "2026-06-20T00:30:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1539006,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/761.svg",
+        "id": 761,
+        "name": "Paraguay",
+        "shortName": "Paraguay",
+        "tla": "PAR"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_D",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/803.svg",
+        "id": 803,
+        "name": "Turkey",
+        "shortName": "Turkey",
+        "tla": "TUR"
+      },
+      "id": 537347,
+      "lastApiSync": "2026-06-20T03:01:06.889235+00:00",
+      "lastUpdated": "2026-06-20T05:01:04Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-20T03:01:06.889235+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1539006,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 190010,
+            "name": "Ivan Barton",
+            "nationality": null,
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 190010,
+            "name": "Ivan Barton",
+            "nationality": null,
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "San Francisco Bay Area",
+          "cloudCoverage": 0.8,
+          "condition": "clearsky_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-20T02:55:20.769402+00:00",
+          "humidity": 42.3,
+          "latitude": 37.403,
+          "longitude": -121.97,
+          "name": "Levi's Stadium weather",
+          "observedAt": "2026-06-20T02:00:00Z",
+          "pressure": 1013.8,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Levi's Stadium",
+          "temperature": 22.9,
+          "temperatureUnit": "C",
+          "windBearing": 291.3,
+          "windSpeed": 4.3,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "San Francisco Bay Area",
+        "cloudCoverage": 0.8,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T02:55:20.769402+00:00",
+        "humidity": 42.3,
+        "latitude": 37.403,
+        "longitude": -121.97,
+        "name": "Levi's Stadium weather",
+        "observedAt": "2026-06-20T02:00:00Z",
+        "pressure": 1013.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Levi's Stadium",
+        "temperature": 22.9,
+        "temperatureUnit": "C",
+        "windBearing": 291.3,
+        "windSpeed": 4.3,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 190010,
+          "name": "Ivan Barton",
+          "nationality": null,
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-20T03:00:00Z",
+      "venue": {
+        "city": "San Francisco Bay Area",
+        "id": null,
+        "name": "Levi's Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "San Francisco Bay Area",
+        "cloudCoverage": 0.8,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T02:55:20.769402+00:00",
+        "humidity": 42.3,
+        "latitude": 37.403,
+        "longitude": -121.97,
+        "name": "Levi's Stadium weather",
+        "observedAt": "2026-06-20T02:00:00Z",
+        "pressure": 1013.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Levi's Stadium",
+        "temperature": 22.9,
+        "temperatureUnit": "C",
+        "windBearing": 291.3,
+        "windSpeed": 4.3,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
