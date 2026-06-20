@@ -25308,6 +25308,227 @@
         }
       ],
       "utcDate": "2026-06-20T03:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1539007,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/792.svg",
+        "id": 792,
+        "name": "Sweden",
+        "shortName": "Sweden",
+        "tla": "SWE"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_F",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/8601.svg",
+        "id": 8601,
+        "name": "Netherlands",
+        "shortName": "Netherlands",
+        "tla": "NED"
+      },
+      "id": 537359,
+      "lastApiSync": "2026-06-20T17:00:29.000043+00:00",
+      "lastUpdated": "2026-06-20T18:38:10Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-20T17:00:29.000043+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1539007,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Michael Oliver",
+            "nationality": "England",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Michael Oliver, England",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Michael Oliver",
+            "nationality": "England",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Michael Oliver, England",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Houston",
+          "cloudCoverage": 100.0,
+          "condition": "cloudy",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-20T16:55:09.649894+00:00",
+          "humidity": 84.1,
+          "latitude": 29.6847,
+          "longitude": -95.4107,
+          "name": "NRG Stadium weather",
+          "observedAt": "2026-06-20T16:00:00Z",
+          "pressure": 1014.1,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "NRG Stadium",
+          "temperature": 26.7,
+          "temperatureUnit": "C",
+          "windBearing": 121.3,
+          "windSpeed": 1.6,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 100.0,
+        "condition": "cloudy",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T16:55:09.649894+00:00",
+        "humidity": 84.1,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-20T16:00:00Z",
+        "pressure": 1014.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 26.7,
+        "temperatureUnit": "C",
+        "windBearing": 121.3,
+        "windSpeed": 1.6,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Michael Oliver",
+          "nationality": "England",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Michael Oliver, England",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Michael Oliver",
+          "nationality": "England",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Michael Oliver, England",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-20T17:00:00Z",
+      "venue": {
+        "city": "Houston",
+        "id": null,
+        "name": "NRG Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 100.0,
+        "condition": "cloudy",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T16:55:09.649894+00:00",
+        "humidity": 84.1,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-20T16:00:00Z",
+        "pressure": 1014.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 26.7,
+        "temperatureUnit": "C",
+        "windBearing": 121.3,
+        "windSpeed": 1.6,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -50619,6 +50840,227 @@
         }
       ],
       "utcDate": "2026-06-20T03:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1539007,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/792.svg",
+        "id": 792,
+        "name": "Sweden",
+        "shortName": "Sweden",
+        "tla": "SWE"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_F",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/8601.svg",
+        "id": 8601,
+        "name": "Netherlands",
+        "shortName": "Netherlands",
+        "tla": "NED"
+      },
+      "id": 537359,
+      "lastApiSync": "2026-06-20T17:00:29.000043+00:00",
+      "lastUpdated": "2026-06-20T18:38:10Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-20T17:00:29.000043+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1539007,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Michael Oliver",
+            "nationality": "England",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Michael Oliver, England",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Michael Oliver",
+            "nationality": "England",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Michael Oliver, England",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Houston",
+          "cloudCoverage": 100.0,
+          "condition": "cloudy",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-20T16:55:09.649894+00:00",
+          "humidity": 84.1,
+          "latitude": 29.6847,
+          "longitude": -95.4107,
+          "name": "NRG Stadium weather",
+          "observedAt": "2026-06-20T16:00:00Z",
+          "pressure": 1014.1,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "NRG Stadium",
+          "temperature": 26.7,
+          "temperatureUnit": "C",
+          "windBearing": 121.3,
+          "windSpeed": 1.6,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 100.0,
+        "condition": "cloudy",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T16:55:09.649894+00:00",
+        "humidity": 84.1,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-20T16:00:00Z",
+        "pressure": 1014.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 26.7,
+        "temperatureUnit": "C",
+        "windBearing": 121.3,
+        "windSpeed": 1.6,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Michael Oliver",
+          "nationality": "England",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Michael Oliver, England",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Michael Oliver",
+          "nationality": "England",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Michael Oliver, England",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-20T17:00:00Z",
+      "venue": {
+        "city": "Houston",
+        "id": null,
+        "name": "NRG Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 100.0,
+        "condition": "cloudy",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-20T16:55:09.649894+00:00",
+        "humidity": 84.1,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-20T16:00:00Z",
+        "pressure": 1014.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 26.7,
+        "temperatureUnit": "C",
+        "windBearing": 121.3,
+        "windSpeed": 1.6,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
