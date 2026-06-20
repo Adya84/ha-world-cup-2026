@@ -13178,20 +13178,20 @@
     },
     {
       "apiFootballFixtureId": 1539007,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
+      "awayCorners": 2,
       "awayFouls": 4,
       "awayOffsides": 3,
-      "awayPossession": "40%",
+      "awayPossession": "41%",
       "awayScore": 0,
-      "awayShotsOnGoal": 2,
+      "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
         "id": 792,
@@ -13199,7 +13199,7 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -13208,7 +13208,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "C. Gakpo",
@@ -13245,10 +13245,28 @@
           "timer": "17:00",
           "timerSeconds": 1020,
           "type": "Goal"
+        },
+        {
+          "assist": "C. Summerville",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Malen",
+          "playerOff": "D. Malen",
+          "playerOn": "C. Summerville",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -13300,9 +13318,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeCorners": 1,
-      "homeFouls": 4,
+      "homeFouls": 5,
       "homeOffsides": 1,
-      "homePossession": "60%",
+      "homePossession": "59%",
       "homeScore": 2,
       "homeShotsOnGoal": 4,
       "homeTeam": {
@@ -13313,26 +13331,26 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T18:06:46.709792+00:00",
-      "lastUpdated": "2026-06-20T20:06:40Z",
+      "lastApiSync": "2026-06-20T18:07:27.097759+00:00",
+      "lastUpdated": "2026-06-20T20:07:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
+          "corners": 2,
           "fouls": 4,
           "offsides": 3,
-          "possession": "40%",
+          "possession": "41%",
           "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 2,
-          "totalShots": 6,
+          "shotsOffGoal": 4,
+          "shotsOnGoal": 4,
+          "totalShots": 9,
           "yellowCards": null
         },
         "home": {
           "corners": 1,
-          "fouls": 4,
+          "fouls": 5,
           "offsides": 1,
-          "possession": "60%",
+          "possession": "59%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 4,
@@ -13342,14 +13360,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-20T18:06:46.709792+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-20T18:07:27.097759+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -13374,7 +13392,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -13421,7 +13439,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "C. Summerville",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Malen",
+          "playerOff": "D. Malen",
+          "playerOn": "C. Summerville",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-20T17:00:00Z",
       "venue": {
         "city": "Houston",
