@@ -7456,10 +7456,10 @@
     "apiFootballFixtureId": 1539007,
     "awayScore": 0,
     "awayTeam": "Sweden",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": "C. Gakpo",
@@ -7496,6 +7496,24 @@
         "timer": "17:00",
         "timerSeconds": 1020,
         "type": "Goal"
+      },
+      {
+        "assist": "C. Summerville",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "D. Malen",
+        "playerOff": "D. Malen",
+        "playerOn": "C. Summerville",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Netherlands",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -7548,9 +7566,9 @@
     ],
     "homeScore": 2,
     "homeTeam": "Netherlands",
-    "lastApiSync": "2026-06-20T18:06:46.709792+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-06-20T18:06:46.709792+00:00",
+    "lastApiSync": "2026-06-20T18:07:27.097759+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-06-20T18:07:27.097759+00:00",
     "referees": [
       {
         "name": "Michael Oliver",
@@ -7563,7 +7581,27 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "C. Summerville",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "D. Malen",
+        "playerOff": "D. Malen",
+        "playerOn": "C. Summerville",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Netherlands",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-20T17:00:00Z"
   },
   "537360": {
