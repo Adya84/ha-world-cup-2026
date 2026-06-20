@@ -12817,7 +12817,7 @@
       "awayFouls": 0,
       "awayOffsides": null,
       "awayPossession": "25%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/761.svg",
@@ -12826,7 +12826,7 @@
         "shortName": "Paraguay",
         "tla": "PAR"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -12835,10 +12835,10 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
+      "displayMinute": "2'",
       "events": [
         {
-          "assist": null,
+          "assist": "I. Pitta",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "2'",
@@ -12856,11 +12856,11 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "goalEvents": [
         {
-          "assist": null,
+          "assist": "I. Pitta",
           "awayTeam": "Paraguay",
           "comments": null,
           "detail": "Normal Goal",
@@ -12899,8 +12899,8 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T03:01:40.315834+00:00",
-      "lastUpdated": "2026-06-20T05:01:37Z",
+      "lastApiSync": "2026-06-20T03:02:14.054019+00:00",
+      "lastUpdated": "2026-06-20T05:02:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -12928,14 +12928,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-20T03:01:40.315834+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-20T03:02:14.054019+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -12960,7 +12960,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -12975,11 +12975,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
