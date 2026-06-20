@@ -25323,7 +25323,7 @@
       "awayFouls": 6,
       "awayOffsides": 3,
       "awayPossession": "44%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
@@ -25352,7 +25352,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3480,
+      "clockSeconds": 3600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -25361,7 +25361,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "58'",
+      "displayMinute": "60'",
       "events": [
         {
           "assist": "C. Gakpo",
@@ -25524,10 +25524,28 @@
           "timer": "56:00",
           "timerSeconds": 3360,
           "type": "Substitution"
+        },
+        {
+          "assist": "A. Isak",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "A. Elanga",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3480,
-      "fallbackClockText": "58'",
+      "fallbackClock": 3600,
+      "fallbackClockText": "60'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -25620,6 +25638,29 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Goal"
+        },
+        {
+          "assist": "A. Isak",
+          "awayTeam": "Sweden",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "59'",
+          "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Netherlands",
+          "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
+          "minute": 59,
+          "player": "A. Elanga",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -25638,8 +25679,8 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T18:19:40.418647+00:00",
-      "lastUpdated": "2026-06-20T20:19:34Z",
+      "lastApiSync": "2026-06-20T18:20:42.400226+00:00",
+      "lastUpdated": "2026-06-20T20:19:45Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -25667,14 +25708,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "58'",
-        "lastApiSync": "2026-06-20T18:19:40.418647+00:00",
-        "seconds": 3480,
+        "displayMinute": "60'",
+        "lastApiSync": "2026-06-20T18:20:42.400226+00:00",
+        "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "58'"
+        "timer": "60'"
       },
-      "manualClockText": "58'",
+      "manualClockText": "60'",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": 2,
@@ -25864,6 +25905,24 @@
             "timer": "56:00",
             "timerSeconds": 3360,
             "type": "Substitution"
+          },
+          {
+            "assist": "A. Isak",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "59'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 59,
+            "player": "A. Elanga",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Sweden",
+            "timer": "59:00",
+            "timerSeconds": 3540,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -25957,6 +26016,29 @@
             "team": "Netherlands",
             "timer": "54:00",
             "timerSeconds": 3240,
+            "type": "Goal"
+          },
+          {
+            "assist": "A. Isak",
+            "awayTeam": "Sweden",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "59'",
+            "extra": null,
+            "goalNumber": 5,
+            "homeTeam": "Netherlands",
+            "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
+            "minute": 59,
+            "player": "A. Elanga",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Sweden",
+            "timer": "59:00",
+            "timerSeconds": 3540,
             "type": "Goal"
           }
         ],
@@ -26136,7 +26218,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 58,
+      "minute": 60,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -26165,7 +26247,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 4
         },
         "halfTime": {
@@ -51613,7 +51695,7 @@
       "awayFouls": 6,
       "awayOffsides": 3,
       "awayPossession": "44%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
@@ -51642,7 +51724,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3480,
+      "clockSeconds": 3600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -51651,7 +51733,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "58'",
+      "displayMinute": "60'",
       "events": [
         {
           "assist": "C. Gakpo",
@@ -51814,10 +51896,28 @@
           "timer": "56:00",
           "timerSeconds": 3360,
           "type": "Substitution"
+        },
+        {
+          "assist": "A. Isak",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "A. Elanga",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3480,
-      "fallbackClockText": "58'",
+      "fallbackClock": 3600,
+      "fallbackClockText": "60'",
       "goalEvents": [
         {
           "assist": "C. Gakpo",
@@ -51910,6 +52010,29 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Goal"
+        },
+        {
+          "assist": "A. Isak",
+          "awayTeam": "Sweden",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "59'",
+          "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Netherlands",
+          "isDisallowed": false,
+          "matchId": 537359,
+          "matchUtcDate": "2026-06-20T17:00:00Z",
+          "minute": 59,
+          "player": "A. Elanga",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -51928,8 +52051,8 @@
         "tla": "NED"
       },
       "id": 537359,
-      "lastApiSync": "2026-06-20T18:19:40.418647+00:00",
-      "lastUpdated": "2026-06-20T20:19:34Z",
+      "lastApiSync": "2026-06-20T18:20:42.400226+00:00",
+      "lastUpdated": "2026-06-20T20:19:45Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -51957,14 +52080,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "58'",
-        "lastApiSync": "2026-06-20T18:19:40.418647+00:00",
-        "seconds": 3480,
+        "displayMinute": "60'",
+        "lastApiSync": "2026-06-20T18:20:42.400226+00:00",
+        "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "58'"
+        "timer": "60'"
       },
-      "manualClockText": "58'",
+      "manualClockText": "60'",
       "matchDetails": {
         "apiFootballFixtureId": 1539007,
         "awayCorners": 2,
@@ -52154,6 +52277,24 @@
             "timer": "56:00",
             "timerSeconds": 3360,
             "type": "Substitution"
+          },
+          {
+            "assist": "A. Isak",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "59'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 59,
+            "player": "A. Elanga",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Sweden",
+            "timer": "59:00",
+            "timerSeconds": 3540,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -52247,6 +52388,29 @@
             "team": "Netherlands",
             "timer": "54:00",
             "timerSeconds": 3240,
+            "type": "Goal"
+          },
+          {
+            "assist": "A. Isak",
+            "awayTeam": "Sweden",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "59'",
+            "extra": null,
+            "goalNumber": 5,
+            "homeTeam": "Netherlands",
+            "isDisallowed": false,
+            "matchId": 537359,
+            "matchUtcDate": "2026-06-20T17:00:00Z",
+            "minute": 59,
+            "player": "A. Elanga",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Sweden",
+            "timer": "59:00",
+            "timerSeconds": 3540,
             "type": "Goal"
           }
         ],
@@ -52426,7 +52590,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 58,
+      "minute": 60,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -52455,7 +52619,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 4
         },
         "halfTime": {
