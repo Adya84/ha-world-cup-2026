@@ -23701,20 +23701,12 @@
     },
     {
       "apiFootballFixtureId": 1489389,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
-      "awayFouls": 15,
-      "awayOffsides": 4,
-      "awayPossession": "43%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/haiti.svg",
         "id": 836,
@@ -23796,8 +23788,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -23805,7 +23795,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -23949,12 +23938,6 @@
         }
       ],
       "group": "GROUP_C",
-      "homeCorners": 4,
-      "homeFouls": 13,
-      "homeOffsides": 8,
-      "homePossession": "57%",
-      "homeScore": 3,
-      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
         "id": 764,
@@ -23963,50 +23946,14 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T02:58:32.296838+00:00",
       "lastUpdated": "2026-06-20T04:32:13Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 4,
-          "fouls": 15,
-          "offsides": 4,
-          "possession": "43%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 3,
-          "totalShots": 8,
-          "yellowCards": 3
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 13,
-          "offsides": 8,
-          "possession": "57%",
-          "redCards": null,
-          "shotsOffGoal": 2,
-          "shotsOnGoal": 5,
-          "totalShots": 8,
-          "yellowCards": 1
-        }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-20T02:58:32.296838+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "FINISHED",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
       "matchDetails": {
         "apiFootballFixtureId": 1489389,
-        "awayCorners": 4,
-        "awayFouls": 15,
-        "awayOffsides": 4,
-        "awayPossession": "43%",
-        "awayShotsOnGoal": 3,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -24224,56 +24171,27 @@
           }
         ],
         "goalEventsSource": null,
-        "homeCorners": 4,
-        "homeFouls": 13,
-        "homeOffsides": 8,
-        "homePossession": "57%",
-        "homeShotsOnGoal": 5,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 4,
-            "fouls": 15,
-            "offsides": 4,
-            "possession": "43%",
-            "redCards": null,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 3,
-            "totalShots": 8,
-            "yellowCards": 3
-          },
-          "home": {
-            "corners": 4,
-            "fouls": 13,
-            "offsides": 8,
-            "possession": "57%",
-            "redCards": null,
-            "shotsOffGoal": 2,
-            "shotsOnGoal": 5,
-            "totalShots": 8,
-            "yellowCards": 1
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 206208,
             "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
             "nationality": "Spain",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Alejandro Hernandez, Spain",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 206208,
             "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
             "nationality": "Spain",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Alejandro Hernandez, Spain",
             "type": "REFEREE"
           }
         ],
@@ -24462,29 +24380,14 @@
         "weather": {}
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
-          "nationality": "Spain",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Alejandro Hernandez, Spain",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 206208,
           "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
           "nationality": "Spain",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Alejandro Hernandez, Spain",
           "type": "REFEREE"
         }
       ],
@@ -24500,7 +24403,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -24692,12 +24594,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-20T00:30:00Z",
-      "venue": {
-        "city": "Philadelphia",
-        "id": null,
-        "name": "Lincoln Financial Field"
-      }
+      "utcDate": "2026-06-20T00:30:00Z"
     }
   ],
   "results": [
@@ -48402,20 +48299,12 @@
     },
     {
       "apiFootballFixtureId": 1489389,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
-      "awayFouls": 15,
-      "awayOffsides": 4,
-      "awayPossession": "43%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/haiti.svg",
         "id": 836,
@@ -48497,8 +48386,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48506,7 +48393,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -48650,12 +48536,6 @@
         }
       ],
       "group": "GROUP_C",
-      "homeCorners": 4,
-      "homeFouls": 13,
-      "homeOffsides": 8,
-      "homePossession": "57%",
-      "homeScore": 3,
-      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
         "id": 764,
@@ -48664,50 +48544,14 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T02:58:32.296838+00:00",
       "lastUpdated": "2026-06-20T04:32:13Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 4,
-          "fouls": 15,
-          "offsides": 4,
-          "possession": "43%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 3,
-          "totalShots": 8,
-          "yellowCards": 3
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 13,
-          "offsides": 8,
-          "possession": "57%",
-          "redCards": null,
-          "shotsOffGoal": 2,
-          "shotsOnGoal": 5,
-          "totalShots": 8,
-          "yellowCards": 1
-        }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-20T02:58:32.296838+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "FINISHED",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
       "matchDetails": {
         "apiFootballFixtureId": 1489389,
-        "awayCorners": 4,
-        "awayFouls": 15,
-        "awayOffsides": 4,
-        "awayPossession": "43%",
-        "awayShotsOnGoal": 3,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -48925,56 +48769,27 @@
           }
         ],
         "goalEventsSource": null,
-        "homeCorners": 4,
-        "homeFouls": 13,
-        "homeOffsides": 8,
-        "homePossession": "57%",
-        "homeShotsOnGoal": 5,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 4,
-            "fouls": 15,
-            "offsides": 4,
-            "possession": "43%",
-            "redCards": null,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 3,
-            "totalShots": 8,
-            "yellowCards": 3
-          },
-          "home": {
-            "corners": 4,
-            "fouls": 13,
-            "offsides": 8,
-            "possession": "57%",
-            "redCards": null,
-            "shotsOffGoal": 2,
-            "shotsOnGoal": 5,
-            "totalShots": 8,
-            "yellowCards": 1
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 206208,
             "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
             "nationality": "Spain",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Alejandro Hernandez, Spain",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 206208,
             "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
             "nationality": "Spain",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Alejandro Hernandez, Spain",
             "type": "REFEREE"
           }
         ],
@@ -49163,29 +48978,14 @@
         "weather": {}
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
-          "nationality": "Spain",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Alejandro Hernandez, Spain",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 206208,
           "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
           "nationality": "Spain",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Alejandro Hernandez, Spain",
           "type": "REFEREE"
         }
       ],
@@ -49201,7 +49001,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -49393,12 +49192,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-20T00:30:00Z",
-      "venue": {
-        "city": "Philadelphia",
-        "id": null,
-        "name": "Lincoln Financial Field"
-      }
+      "utcDate": "2026-06-20T00:30:00Z"
     }
   ]
 }
