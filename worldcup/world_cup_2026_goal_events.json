@@ -3255,7 +3255,7 @@
     "apiFootballFixtureId": 1489389,
     "awayScore": 0,
     "awayTeam": "Haiti",
-    "base_seconds": 1380,
+    "base_seconds": 1440,
     "cardEvents": [
       {
         "assist": null,
@@ -3277,8 +3277,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 1380,
-    "displayMinute": "23'",
+    "clock_seconds": 1440,
+    "displayMinute": "24'",
     "events": [
       {
         "assist": null,
@@ -3297,14 +3297,56 @@
         "timer": "4:00",
         "timerSeconds": 240,
         "type": "Yellow Card"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Own Goal",
+        "displayMinute": "24'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 24,
+        "player": "H. Delcroix",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Brazil",
+        "timer": "24:00",
+        "timerSeconds": 1440,
+        "type": "Own Goal"
       }
     ],
-    "goalEvents": [],
-    "homeScore": 0,
+    "goalEvents": [
+      {
+        "assist": null,
+        "awayTeam": "Haiti",
+        "comments": null,
+        "detail": "Own Goal",
+        "displayMinute": "24'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Brazil",
+        "isDisallowed": false,
+        "matchId": 537341,
+        "matchUtcDate": "2026-06-20T00:30:00Z",
+        "minute": 24,
+        "player": "H. Delcroix",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Brazil",
+        "timer": "24:00",
+        "timerSeconds": 1440,
+        "type": "Goal"
+      }
+    ],
+    "homeScore": 1,
     "homeTeam": "Brazil",
-    "lastApiSync": "2026-06-20T00:55:33.336757+00:00",
-    "manualClockText": "23'",
-    "phase_start": "2026-06-20T00:55:33.336757+00:00",
+    "lastApiSync": "2026-06-20T00:56:08.261455+00:00",
+    "manualClockText": "24'",
+    "phase_start": "2026-06-20T00:56:08.261455+00:00",
     "referees": [
       {
         "id": 206208,
