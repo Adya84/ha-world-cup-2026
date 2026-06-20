@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3660,
+      "clockSeconds": 3900,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "61'",
+      "displayMinute": "65'",
       "events": [
         {
           "assist": null,
@@ -215,10 +215,64 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "L. Deedson",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "J. Casimir",
+          "playerOff": "J. Casimir",
+          "playerOn": "L. Deedson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Martinelli",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "Lucas Paqueta",
+          "playerOff": "Lucas Paqueta",
+          "playerOn": "G. Martinelli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "M. Cunha",
+          "playerOff": "M. Cunha",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3660,
-      "fallbackClockText": "61'",
+      "fallbackClock": 3900,
+      "fallbackClockText": "65'",
       "goalEvents": [
         {
           "assist": null,
@@ -306,8 +360,8 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T01:59:27.645401+00:00",
-      "lastUpdated": "2026-06-20T03:59:25Z",
+      "lastApiSync": "2026-06-20T02:00:24.334611+00:00",
+      "lastUpdated": "2026-06-20T03:59:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -335,14 +389,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "61'",
-        "lastApiSync": "2026-06-20T01:59:27.645401+00:00",
-        "seconds": 3660,
+        "displayMinute": "65'",
+        "lastApiSync": "2026-06-20T02:00:24.334611+00:00",
+        "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "61'"
+        "timer": "65'"
       },
-      "manualClockText": "61'",
+      "manualClockText": "65'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -367,7 +421,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 61,
+      "minute": 65,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -468,6 +522,60 @@
           "team": "Haiti",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Deedson",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "J. Casimir",
+          "playerOff": "J. Casimir",
+          "playerOn": "L. Deedson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Martinelli",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "Lucas Paqueta",
+          "playerOff": "Lucas Paqueta",
+          "playerOn": "G. Martinelli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "M. Cunha",
+          "playerOff": "M. Cunha",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "64:00",
+          "timerSeconds": 3840,
           "type": "Substitution"
         }
       ],
@@ -564,7 +672,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3660,
+      "clockSeconds": 3900,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -573,7 +681,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "61'",
+      "displayMinute": "65'",
       "events": [
         {
           "assist": null,
@@ -718,10 +826,64 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "L. Deedson",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "J. Casimir",
+          "playerOff": "J. Casimir",
+          "playerOn": "L. Deedson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Martinelli",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "Lucas Paqueta",
+          "playerOff": "Lucas Paqueta",
+          "playerOn": "G. Martinelli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "M. Cunha",
+          "playerOff": "M. Cunha",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3660,
-      "fallbackClockText": "61'",
+      "fallbackClock": 3900,
+      "fallbackClockText": "65'",
       "goalEvents": [
         {
           "assist": null,
@@ -809,8 +971,8 @@
         "tla": "BRA"
       },
       "id": 537341,
-      "lastApiSync": "2026-06-20T01:59:27.645401+00:00",
-      "lastUpdated": "2026-06-20T03:59:25Z",
+      "lastApiSync": "2026-06-20T02:00:24.334611+00:00",
+      "lastUpdated": "2026-06-20T03:59:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -838,14 +1000,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "61'",
-        "lastApiSync": "2026-06-20T01:59:27.645401+00:00",
-        "seconds": 3660,
+        "displayMinute": "65'",
+        "lastApiSync": "2026-06-20T02:00:24.334611+00:00",
+        "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "61'"
+        "timer": "65'"
       },
-      "manualClockText": "61'",
+      "manualClockText": "65'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -870,7 +1032,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 61,
+      "minute": 65,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -971,6 +1133,60 @@
           "team": "Haiti",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Deedson",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "J. Casimir",
+          "playerOff": "J. Casimir",
+          "playerOn": "L. Deedson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Martinelli",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "Lucas Paqueta",
+          "playerOff": "Lucas Paqueta",
+          "playerOn": "G. Martinelli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "M. Cunha",
+          "playerOff": "M. Cunha",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "64:00",
+          "timerSeconds": 3840,
           "type": "Substitution"
         }
       ],
