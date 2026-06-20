@@ -3255,7 +3255,7 @@
     "apiFootballFixtureId": 1489389,
     "awayScore": 0,
     "awayTeam": "Haiti",
-    "base_seconds": 4260,
+    "base_seconds": 4320,
     "cardEvents": [
       {
         "assist": null,
@@ -3313,8 +3313,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4260,
-    "displayMinute": "71'",
+    "clock_seconds": 4320,
+    "displayMinute": "72'",
     "events": [
       {
         "assist": null,
@@ -3531,6 +3531,24 @@
         "timer": "65:00",
         "timerSeconds": 3900,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "L. Joseph",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "71'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 71,
+        "player": "R. Providence",
+        "playerOff": "R. Providence",
+        "playerOn": "L. Joseph",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Haiti",
+        "timer": "71:00",
+        "timerSeconds": 4260,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -3606,9 +3624,9 @@
     ],
     "homeScore": 3,
     "homeTeam": "Brazil",
-    "lastApiSync": "2026-06-20T02:06:36.176999+00:00",
-    "manualClockText": "71'",
-    "phase_start": "2026-06-20T02:06:36.176999+00:00",
+    "lastApiSync": "2026-06-20T02:07:09.877145+00:00",
+    "manualClockText": "72'",
+    "phase_start": "2026-06-20T02:07:09.877145+00:00",
     "referees": [
       {
         "name": "Alejandro Hern\u00e1ndez Hern\u00e1ndez",
@@ -3729,6 +3747,24 @@
         "team": "Brazil",
         "timer": "64:00",
         "timerSeconds": 3840,
+        "type": "Substitution"
+      },
+      {
+        "assist": "L. Joseph",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "71'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 71,
+        "player": "R. Providence",
+        "playerOff": "R. Providence",
+        "playerOn": "L. Joseph",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Haiti",
+        "timer": "71:00",
+        "timerSeconds": 4260,
         "type": "Substitution"
       }
     ],
