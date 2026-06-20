@@ -2,8 +2,8 @@
   "live": [
     {
       "apiFootballFixtureId": 1539006,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -61,7 +61,7 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "J. Enciso",
@@ -125,10 +125,46 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Red Card"
+        },
+        {
+          "assist": "D. Bobadilla",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "I. Pitta",
+          "playerOff": "I. Pitta",
+          "playerOn": "D. Bobadilla",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Yilmaz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "K. Akturkoglu",
+          "playerOff": "K. Akturkoglu",
+          "playerOn": "B. Yilmaz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "T\u00fcrkiye",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "J. Enciso",
@@ -170,8 +206,8 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T04:11:57.003543+00:00",
-      "lastUpdated": "2026-06-20T06:11:55Z",
+      "lastApiSync": "2026-06-20T04:12:30.848749+00:00",
+      "lastUpdated": "2026-06-20T06:12:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -199,14 +235,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-20T04:11:57.003543+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-20T04:12:30.848749+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -231,7 +267,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -276,7 +312,45 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "D. Bobadilla",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "I. Pitta",
+          "playerOff": "I. Pitta",
+          "playerOn": "D. Bobadilla",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Yilmaz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "K. Akturkoglu",
+          "playerOff": "K. Akturkoglu",
+          "playerOn": "B. Yilmaz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "T\u00fcrkiye",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-20T03:00:00Z",
       "venue": {
         "city": "Santa Clara",
@@ -311,8 +385,8 @@
   "matches": [
     {
       "apiFootballFixtureId": 1539006,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -370,7 +444,7 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -379,7 +453,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "J. Enciso",
@@ -434,10 +508,46 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Red Card"
+        },
+        {
+          "assist": "D. Bobadilla",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "I. Pitta",
+          "playerOff": "I. Pitta",
+          "playerOn": "D. Bobadilla",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Yilmaz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "K. Akturkoglu",
+          "playerOff": "K. Akturkoglu",
+          "playerOn": "B. Yilmaz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "T\u00fcrkiye",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "J. Enciso",
@@ -479,8 +589,8 @@
         "tla": "TUR"
       },
       "id": 537347,
-      "lastApiSync": "2026-06-20T04:11:57.003543+00:00",
-      "lastUpdated": "2026-06-20T06:11:55Z",
+      "lastApiSync": "2026-06-20T04:12:30.848749+00:00",
+      "lastUpdated": "2026-06-20T06:12:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -508,14 +618,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-20T04:11:57.003543+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-20T04:12:30.848749+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -540,7 +650,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -585,7 +695,45 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "D. Bobadilla",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "I. Pitta",
+          "playerOff": "I. Pitta",
+          "playerOn": "D. Bobadilla",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Yilmaz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "K. Akturkoglu",
+          "playerOff": "K. Akturkoglu",
+          "playerOn": "B. Yilmaz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "T\u00fcrkiye",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-20T03:00:00Z",
       "venue": {
         "city": "Santa Clara",
