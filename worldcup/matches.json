@@ -21601,7 +21601,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4200,
+      "clockSeconds": 4260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -21610,7 +21610,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "70'",
+      "displayMinute": "71'",
       "events": [
         {
           "assist": null,
@@ -21795,10 +21795,10 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Goal Under Review - offside",
+          "detail": "Goal Disallowed - offside",
           "displayMinute": "69'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 69,
           "player": null,
           "playerOff": null,
@@ -21808,11 +21808,47 @@
           "team": "Uruguay",
           "timer": "69:00",
           "timerSeconds": 4140,
-          "type": "VAR"
+          "type": "Disallowed Goal"
+        },
+        {
+          "assist": "N. de la Cruz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "M. Ugarte",
+          "playerOff": "M. Ugarte",
+          "playerOn": "N. de la Cruz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Nunez",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "F. Vinas",
+          "playerOff": "F. Vinas",
+          "playerOn": "D. Nunez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4200,
-      "fallbackClockText": "70'",
+      "fallbackClock": 4260,
+      "fallbackClockText": "71'",
       "goalEvents": [
         {
           "assist": null,
@@ -21923,8 +21959,8 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T23:35:33.403602+00:00",
-      "lastUpdated": "2026-06-22T01:35:31Z",
+      "lastApiSync": "2026-06-21T23:36:18.134301+00:00",
+      "lastUpdated": "2026-06-22T01:36:16Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -21952,14 +21988,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "70'",
-        "lastApiSync": "2026-06-21T23:35:33.403602+00:00",
-        "seconds": 4200,
+        "displayMinute": "71'",
+        "lastApiSync": "2026-06-21T23:36:18.134301+00:00",
+        "seconds": 4260,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "70'"
+        "timer": "71'"
       },
-      "manualClockText": "70'",
+      "manualClockText": "71'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -21984,7 +22020,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 70,
+      "minute": 71,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -22085,6 +22121,42 @@
           "team": "Cape Verde Islands",
           "timer": "58:00",
           "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. de la Cruz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "M. Ugarte",
+          "playerOff": "M. Ugarte",
+          "playerOn": "N. de la Cruz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Nunez",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "F. Vinas",
+          "playerOff": "F. Vinas",
+          "playerOn": "D. Nunez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "70:00",
+          "timerSeconds": 4200,
           "type": "Substitution"
         }
       ],
