@@ -11098,7 +11098,7 @@
   },
   "537360": {
     "apiFootballFixtureId": 1489394,
-    "awayScore": 1,
+    "awayScore": 2,
     "awayTeam": "Japan",
     "base_seconds": 1860,
     "clock_active": false,
@@ -11121,6 +11121,24 @@
         "team": "Japan",
         "timer": "4:00",
         "timerSeconds": 240,
+        "type": "Goal"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "31'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 31,
+        "player": "A. Ueda",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Japan",
+        "timer": "31:00",
+        "timerSeconds": 1860,
         "type": "Goal"
       }
     ],
@@ -11147,13 +11165,36 @@
         "timer": "4:00",
         "timerSeconds": 240,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Japan",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "31'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "Tunisia",
+        "isDisallowed": false,
+        "matchId": 537360,
+        "matchUtcDate": "2026-06-21T04:00:00Z",
+        "minute": 31,
+        "player": "A. Ueda",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Japan",
+        "timer": "31:00",
+        "timerSeconds": 1860,
+        "type": "Goal"
       }
     ],
     "homeScore": 0,
     "homeTeam": "Tunisia",
-    "lastApiSync": "2026-06-21T04:31:00.022144+00:00",
+    "lastApiSync": "2026-06-21T04:31:34.557949+00:00",
     "manualClockText": "31'",
-    "phase_start": "2026-06-21T04:31:00.022144+00:00",
+    "phase_start": "2026-06-21T04:31:34.557949+00:00",
     "referees": [
       {
         "name": "Istv\u00e1n Kov\u00e1cs",
