@@ -21556,7 +21556,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
         "id": 840,
@@ -21620,7 +21619,6 @@
           "type": "Red Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -21628,7 +21626,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "E. Hajsafi",
@@ -21688,41 +21685,7 @@
         "tla": "BEL"
       },
       "id": 537365,
-      "lastApiSync": "2026-06-21T21:00:36.831290+00:00",
-      "lastUpdated": "2026-06-21T23:01:22Z",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-21T21:00:36.831290+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "90:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Los Angeles",
-        "cloudCoverage": 11.7,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-21T21:00:36.597958+00:00",
-        "humidity": 54.5,
-        "latitude": 33.9535,
-        "longitude": -118.3392,
-        "name": "SoFi Stadium weather",
-        "observedAt": "2026-06-21T20:00:00Z",
-        "pressure": 1012.6,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "SoFi Stadium",
-        "temperature": 22.7,
-        "temperatureUnit": "C",
-        "windBearing": 218.8,
-        "windSpeed": 3.5,
-        "windSpeedUnit": "m/s"
-      },
+      "lastUpdated": "2026-06-21T23:01:37Z",
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
@@ -21755,7 +21718,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "A. Jahanbakhsh",
@@ -21938,30 +21901,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-21T19:00:00Z",
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Los Angeles",
-        "cloudCoverage": 11.7,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-21T21:00:36.597958+00:00",
-        "humidity": 54.5,
-        "latitude": 33.9535,
-        "longitude": -118.3392,
-        "name": "SoFi Stadium weather",
-        "observedAt": "2026-06-21T20:00:00Z",
-        "pressure": 1012.6,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "SoFi Stadium",
-        "temperature": 22.7,
-        "temperatureUnit": "C",
-        "windBearing": 218.8,
-        "windSpeed": 3.5,
-        "windSpeedUnit": "m/s"
-      }
+      "utcDate": "2026-06-21T19:00:00Z"
     },
     {
       "area": {
