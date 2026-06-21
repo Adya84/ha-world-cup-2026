@@ -6475,13 +6475,19 @@
     "utcDate": "2026-06-20T20:00:00Z"
   },
   "537354": {
+    "apiFootballFixtureId": 1489392,
     "awayScore": 0,
     "awayTeam": "Cura\u00e7ao",
+    "base_seconds": 120,
     "clock_active": false,
+    "clock_seconds": 120,
+    "displayMinute": "2'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Ecuador",
-    "phase_start": null,
+    "lastApiSync": "2026-06-21T00:02:08.380907+00:00",
+    "manualClockText": "2'",
+    "phase_start": "2026-06-21T00:02:08.380907+00:00",
     "referees": [
       {
         "id": 176659,
@@ -6490,8 +6496,8 @@
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-21T00:00:00Z"
   },
   "537355": {
