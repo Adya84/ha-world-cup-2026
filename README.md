@@ -37,7 +37,7 @@ Current sections include:
 
 ---
 
-# 🚀 Latest Release - v4.1.8
+# 🚀 Latest Release - v4.2.6
 
 The biggest update yet for the World Cup 2026 integration, introducing a dedicated Tablet Mode, improved navigation, enhanced language support and major interface improvements throughout the application.
 
