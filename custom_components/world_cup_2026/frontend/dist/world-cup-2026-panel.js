@@ -5819,6 +5819,58 @@ class WorldCup2026Panel extends HTMLElement {
   mergeUniqueMatches(primary = [], extras = []) {
     const merged = [];
     const seen = new Set();
+    const indexByKey = new Map();
+
+    const mergeRichMatchDetails = (base, extra) => {
+      if (!base || !extra) return base || extra;
+      const mergedMatch = { ...base };
+      [
+        "events",
+        "goalEvents",
+        "cardEvents",
+        "substitutionEvents",
+        "varEvents",
+        "referees",
+        "officials",
+        "lineups",
+        "lineupsData",
+        "apiFootballLineups",
+      ].forEach((key) => {
+        const baseList = Array.isArray(mergedMatch[key]) ? mergedMatch[key] : [];
+        const extraList = Array.isArray(extra[key]) ? extra[key] : [];
+        if (extraList.length > baseList.length) mergedMatch[key] = extraList;
+      });
+      [
+        "apiFootballFixtureId",
+        "goalEventsSource",
+        "liveStatistics",
+        "homeCorners",
+        "awayCorners",
+        "homeShotsOnGoal",
+        "awayShotsOnGoal",
+        "homePossession",
+        "awayPossession",
+        "homeFouls",
+        "awayFouls",
+        "homeOffsides",
+        "awayOffsides",
+        "referee",
+        "venue",
+        "stadium",
+        "matchWeather",
+        "weather",
+      ].forEach((key) => {
+        if (
+          (mergedMatch[key] === undefined || mergedMatch[key] === null || mergedMatch[key] === "" || (Array.isArray(mergedMatch[key]) && !mergedMatch[key].length))
+          && extra[key] !== undefined
+          && extra[key] !== null
+          && extra[key] !== ""
+        ) {
+          mergedMatch[key] = extra[key];
+        }
+      });
+      return mergedMatch;
+    };
 
     const add = (match) => {
       if (!match) return;
@@ -5830,8 +5882,13 @@ class WorldCup2026Panel extends HTMLElement {
         this.fixtureTeamKey(this.getHomeTeam(match)),
         this.fixtureTeamKey(this.getAwayTeam(match)),
       ]);
-      if (seen.has(key)) return;
+      if (seen.has(key)) {
+        const index = indexByKey.get(key);
+        if (index !== undefined) merged[index] = mergeRichMatchDetails(merged[index], match);
+        return;
+      }
       seen.add(key);
+      indexByKey.set(key, merged.length);
       merged.push(match);
     };
 
@@ -18640,7 +18697,47 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   matchOfficialsSection(match) {
-    const refs = this.matchReferees(match).filter((ref) => {
+    const cleanRefText = (value) => String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/\b(referee|ref|official|main|assistant|var|video|match)\b/g, " ")
+      .replace(/[^a-z0-9 ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    const stripCountryFromRefName = (name, nationality = "") => {
+      let cleaned = String(name || "").trim();
+      const nat = String(nationality || "").trim();
+      if (nat) {
+        cleaned = cleaned.replace(new RegExp(`\\s*,?\\s*${nat.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`, "i"), "").trim();
+      }
+      const countryWords = new Set([
+        "sweden", "swedish", "england", "english", "france", "french", "germany", "german", "spain", "spanish",
+        "italy", "italian", "netherlands", "dutch", "portugal", "portuguese", "poland", "polish", "norway",
+        "norwegian", "usa", "united states", "american", "canada", "canadian", "mexico", "mexican",
+        "argentina", "argentinian", "brazil", "brazilian", "uruguay", "uruguayan", "japan", "japanese",
+        "korea", "korean", "australia", "australian", "turkey", "turkish", "qatar", "morocco", "ghana",
+        "panama", "croatia", "austria", "belgium", "egypt", "iran", "iraq", "senegal", "switzerland",
+      ]);
+      const parts = cleaned.split(/\s+/).filter(Boolean);
+      while (parts.length > 1 && countryWords.has(cleanRefText(parts[parts.length - 1]))) {
+        parts.pop();
+      }
+      return parts.join(" ").replace(/\s+,/g, ",").trim();
+    };
+    const displayRefs = [];
+    const seenRefs = new Set();
+    this.matchReferees(match).forEach((ref) => {
+      const cleanName = stripCountryFromRefName(ref?.name, ref?.nationality);
+      const normalisedName = cleanRefText(cleanName);
+      if (!normalisedName || ["referee", "ref", "official", "main referee", "match official"].includes(normalisedName)) return;
+      const parts = normalisedName.split(" ").filter(Boolean);
+      const key = parts.length > 1 ? `${parts[0]}|${parts[parts.length - 1]}` : normalisedName;
+      if (seenRefs.has(key)) return;
+      seenRefs.add(key);
+      displayRefs.push({ ...ref, name: cleanName });
+    });
+    const refs = displayRefs.filter((ref) => {
       const name = String(ref?.name || "")
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
@@ -20327,6 +20424,24 @@ class WorldCup2026Panel extends HTMLElement {
       "vinicius jr|brazil": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
       "vinicius jose paixao de oliveira junior": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
       "vinicius jose paixao de oliveira junior|brazil": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/vinicius-junior.jpg",
+      "deniz undav": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/deniz-undav.jpg",
+      "deniz undav|germany": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/deniz-undav.jpg",
+      "deniz undav|ger": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/deniz-undav.jpg",
+      "deniz undav|deu": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/deniz-undav.jpg",
+      "d undav": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/deniz-undav.jpg",
+      "d undav|germany": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/deniz-undav.jpg",
+      "cody gakpo": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/cody-gakpo.jpg",
+      "cody gakpo|netherlands": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/cody-gakpo.jpg",
+      "cody gakpo|nederland": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/cody-gakpo.jpg",
+      "cody gakpo|ned": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/cody-gakpo.jpg",
+      "c gakpo": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/cody-gakpo.jpg",
+      "c gakpo|netherlands": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/cody-gakpo.jpg",
+      "brian brobbey": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
+      "brian brobbey|netherlands": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
+      "brian brobbey|nederland": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
+      "brian brobbey|ned": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
+      "b brobbey": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
+      "b brobbey|netherlands": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
     };
     const cleanPlayerKey = (value) => String(value || "")
       .normalize("NFD")
