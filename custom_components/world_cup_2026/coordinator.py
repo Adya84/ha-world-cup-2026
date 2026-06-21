@@ -2849,11 +2849,36 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         candidates = [match for match in matches if self._needs_post_match_events(match, now)]
         if not candidates:
             return {}
+
+        def _post_match_priority(match):
+            events = match.get("events") or []
+            goal_events = match.get("goalEvents") or []
+            substitution_events = match.get("substitutionEvents") or []
+            expected_goals = _expected_goal_count_from_match(match) or 0
+            existing_goal_count = _count_goal_events(goal_events or events)
+            missing_goals = max(expected_goals - existing_goal_count, 0)
+            kickoff = parse_datetime_utc(match.get("utcDate")) or datetime.min.replace(tzinfo=timezone.utc)
+
+            # First repair matches where the score proves scorers are missing.
+            # Then fill empty timelines/subs/fixture ids, newest first inside
+            # each priority bucket.
+            if missing_goals:
+                bucket = 0
+            elif not events:
+                bucket = 1
+            elif not substitution_events:
+                bucket = 2
+            elif not match.get("apiFootballFixtureId"):
+                bucket = 3
+            else:
+                bucket = 4
+
+            return (bucket, -missing_goals, -kickoff.timestamp())
+
         candidates = sorted(
             candidates,
-            key=lambda match: parse_datetime_utc(match.get("utcDate")) or datetime.min.replace(tzinfo=timezone.utc),
-            reverse=True,
-        )[:4]
+            key=_post_match_priority,
+        )
 
         if (
             self._post_match_api_football_last_fetch
@@ -2878,6 +2903,63 @@ class WorldCupCoordinator(DataUpdateCoordinator):
 
         try:
             async with aiohttp.ClientSession(timeout=timeout) as session:
+                # If a finished result already has the API-Football fixture id,
+                # fetch its events directly. This avoids date/team-name matching
+                # failures and is the fastest way to repair Results scorers,
+                # cards and substitutions after full time.
+                for match in candidates:
+                    if self._api_football_is_rate_limited():
+                        break
+                    fixture_id = match.get("apiFootballFixtureId")
+                    if not fixture_id:
+                        continue
+
+                    home = _team_name(match.get("homeTeam", {}))
+                    away = _team_name(match.get("awayTeam", {}))
+                    fixture_event_data = await self._fetch_api_football_events_for_fixture(
+                        session,
+                        fixture_id,
+                        headers,
+                    )
+                    all_events = fixture_event_data.get("events", []) or []
+                    goal_events = fixture_event_data.get("goalEvents", []) or []
+                    card_events = fixture_event_data.get("cardEvents", []) or []
+                    substitution_events = fixture_event_data.get("substitutionEvents", []) or []
+
+                    for event in all_events:
+                        event["source"] = "api_football_post_match_direct"
+                    for event in goal_events:
+                        event["source"] = "api_football_post_match_direct"
+                    for event in card_events:
+                        event["source"] = "api_football_post_match_direct"
+                    for event in substitution_events:
+                        event["source"] = "api_football_post_match_direct"
+
+                    if all_events or goal_events or card_events or substitution_events:
+                        item_data = {
+                            "events": all_events,
+                            "goalEvents": goal_events,
+                            "cardEvents": card_events,
+                            "substitutionEvents": substitution_events,
+                            "referees": match.get("referees") or match.get("officials") or [],
+                            "liveStatistics": match.get("liveStatistics") or {},
+                            "apiFootballFixtureId": fixture_id,
+                            "apiFootballHome": home,
+                            "apiFootballAway": away,
+                            "apiFootballDate": (parse_datetime_utc(match.get("utcDate")) or now).date().isoformat(),
+                        }
+                        post_match_data[_match_key_from_names(home, away)] = item_data
+                        post_match_data[_match_key_from_names(away, home)] = item_data
+                        _LOGGER.debug(
+                            "API-Football post-match direct fixture recovery matched %s v %s fixture=%s goals=%s cards=%s subs=%s",
+                            home,
+                            away,
+                            fixture_id,
+                            len(goal_events),
+                            len(card_events),
+                            len(substitution_events),
+                        )
+
                 for match_date in dates:
                     if self._api_football_is_rate_limited():
                         break
