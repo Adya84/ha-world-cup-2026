@@ -9795,7 +9795,7 @@
     "apiFootballFixtureId": 1489392,
     "awayScore": 0,
     "awayTeam": "Cura\u00e7ao",
-    "base_seconds": 4200,
+    "base_seconds": 4260,
     "cardEvents": [
       {
         "assist": null,
@@ -9871,8 +9871,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4200,
-    "displayMinute": "70'",
+    "clock_seconds": 4260,
+    "displayMinute": "71'",
     "events": [
       {
         "assist": null,
@@ -9963,14 +9963,32 @@
         "timer": "56:00",
         "timerSeconds": 3360,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "N. Angulo",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "71'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 71,
+        "player": "P. Estupinan",
+        "playerOff": "P. Estupinan",
+        "playerOn": "N. Angulo",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Ecuador",
+        "timer": "71:00",
+        "timerSeconds": 4260,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Ecuador",
-    "lastApiSync": "2026-06-21T01:30:19.925613+00:00",
-    "manualClockText": "70'",
-    "phase_start": "2026-06-21T01:30:19.925613+00:00",
+    "lastApiSync": "2026-06-21T01:30:54.956678+00:00",
+    "manualClockText": "71'",
+    "phase_start": "2026-06-21T01:30:54.956678+00:00",
     "referees": [
       {
         "name": "Ning Ma",
@@ -10001,6 +10019,24 @@
         "team": "Ecuador",
         "timer": "46:00",
         "timerSeconds": 2760,
+        "type": "Substitution"
+      },
+      {
+        "assist": "N. Angulo",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "71'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 71,
+        "player": "P. Estupinan",
+        "playerOff": "P. Estupinan",
+        "playerOn": "N. Angulo",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Ecuador",
+        "timer": "71:00",
+        "timerSeconds": 4260,
         "type": "Substitution"
       }
     ],
