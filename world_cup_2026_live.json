@@ -13,7 +13,7 @@
       "awayCorners": 3,
       "awayFouls": 10,
       "awayOffsides": null,
-      "awayPossession": "62%",
+      "awayPossession": "63%",
       "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -23,7 +23,7 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
-      "clockSeconds": 3840,
+      "clockSeconds": 3900,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "64'",
+      "displayMinute": "65'",
       "events": [
         {
           "assist": "K. Nakamura",
@@ -105,10 +105,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "F. Chaouat",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "65'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 65,
+          "player": "S. Tounekti",
+          "playerOff": "S. Tounekti",
+          "playerOn": "F. Chaouat",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3840,
-      "fallbackClockText": "64'",
+      "fallbackClock": 3900,
+      "fallbackClockText": "65'",
       "goalEvents": [
         {
           "assist": "K. Nakamura",
@@ -160,9 +178,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeCorners": 1,
-      "homeFouls": 6,
+      "homeFouls": 7,
       "homeOffsides": null,
-      "homePossession": "38%",
+      "homePossession": "37%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -173,26 +191,26 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": "2026-06-21T05:24:27.748925+00:00",
-      "lastUpdated": "2026-06-21T07:24:25Z",
+      "lastApiSync": "2026-06-21T05:25:18.640201+00:00",
+      "lastUpdated": "2026-06-21T07:25:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
           "fouls": 10,
           "offsides": null,
-          "possession": "62%",
+          "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 3,
-          "totalShots": 6,
+          "totalShots": 7,
           "yellowCards": null
         },
         "home": {
           "corners": 1,
-          "fouls": 6,
+          "fouls": 7,
           "offsides": null,
-          "possession": "38%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 0,
@@ -202,14 +220,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "64'",
-        "lastApiSync": "2026-06-21T05:24:27.748925+00:00",
-        "seconds": 3840,
+        "displayMinute": "65'",
+        "lastApiSync": "2026-06-21T05:25:18.640201+00:00",
+        "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "64'"
+        "timer": "65'"
       },
-      "manualClockText": "64'",
+      "manualClockText": "65'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -217,7 +235,7 @@
         "condition": "partlycloudy_night",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T05:14:55.872466+00:00",
+        "fetchedAt": "2026-06-21T05:25:15.048407+00:00",
         "humidity": 95.1,
         "latitude": 25.6682,
         "longitude": -100.2446,
@@ -234,7 +252,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 64,
+      "minute": 65,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -318,6 +336,24 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "F. Chaouat",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "65'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 65,
+          "player": "S. Tounekti",
+          "playerOff": "S. Tounekti",
+          "playerOn": "F. Chaouat",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-21T04:00:00Z",
@@ -333,7 +369,7 @@
         "condition": "partlycloudy_night",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T05:14:55.872466+00:00",
+        "fetchedAt": "2026-06-21T05:25:15.048407+00:00",
         "humidity": 95.1,
         "latitude": 25.6682,
         "longitude": -100.2446,
@@ -365,7 +401,7 @@
       "awayCorners": 3,
       "awayFouls": 10,
       "awayOffsides": null,
-      "awayPossession": "62%",
+      "awayPossession": "63%",
       "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -375,7 +411,7 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
-      "clockSeconds": 3840,
+      "clockSeconds": 3900,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -384,7 +420,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "64'",
+      "displayMinute": "65'",
       "events": [
         {
           "assist": "K. Nakamura",
@@ -457,10 +493,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "F. Chaouat",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "65'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 65,
+          "player": "S. Tounekti",
+          "playerOff": "S. Tounekti",
+          "playerOn": "F. Chaouat",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3840,
-      "fallbackClockText": "64'",
+      "fallbackClock": 3900,
+      "fallbackClockText": "65'",
       "goalEvents": [
         {
           "assist": "K. Nakamura",
@@ -512,9 +566,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeCorners": 1,
-      "homeFouls": 6,
+      "homeFouls": 7,
       "homeOffsides": null,
-      "homePossession": "38%",
+      "homePossession": "37%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -525,26 +579,26 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": "2026-06-21T05:24:27.748925+00:00",
-      "lastUpdated": "2026-06-21T07:24:25Z",
+      "lastApiSync": "2026-06-21T05:25:18.640201+00:00",
+      "lastUpdated": "2026-06-21T07:25:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
           "fouls": 10,
           "offsides": null,
-          "possession": "62%",
+          "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 3,
-          "totalShots": 6,
+          "totalShots": 7,
           "yellowCards": null
         },
         "home": {
           "corners": 1,
-          "fouls": 6,
+          "fouls": 7,
           "offsides": null,
-          "possession": "38%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 0,
@@ -554,14 +608,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "64'",
-        "lastApiSync": "2026-06-21T05:24:27.748925+00:00",
-        "seconds": 3840,
+        "displayMinute": "65'",
+        "lastApiSync": "2026-06-21T05:25:18.640201+00:00",
+        "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "64'"
+        "timer": "65'"
       },
-      "manualClockText": "64'",
+      "manualClockText": "65'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -569,7 +623,7 @@
         "condition": "partlycloudy_night",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T05:14:55.872466+00:00",
+        "fetchedAt": "2026-06-21T05:25:15.048407+00:00",
         "humidity": 95.1,
         "latitude": 25.6682,
         "longitude": -100.2446,
@@ -586,7 +640,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 64,
+      "minute": 65,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -670,6 +724,24 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "F. Chaouat",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "65'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 65,
+          "player": "S. Tounekti",
+          "playerOff": "S. Tounekti",
+          "playerOn": "F. Chaouat",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-21T04:00:00Z",
@@ -685,7 +757,7 @@
         "condition": "partlycloudy_night",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T05:14:55.872466+00:00",
+        "fetchedAt": "2026-06-21T05:25:15.048407+00:00",
         "humidity": 95.1,
         "latitude": 25.6682,
         "longitude": -100.2446,
