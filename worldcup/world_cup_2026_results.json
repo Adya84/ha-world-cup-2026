@@ -40338,7 +40338,11 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayCorners": 1,
+      "awayFouls": 1,
+      "awayOffsides": 3,
+      "awayPossession": "29%",
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/saudi_arabia.svg",
         "id": 801,
@@ -40384,7 +40388,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -40392,7 +40395,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "M. Oyarzabal",
@@ -40582,6 +40584,11 @@
         }
       ],
       "group": "GROUP_H",
+      "homeCorners": 4,
+      "homeFouls": 3,
+      "homeOffsides": 0,
+      "homePossession": "71%",
+      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -40590,25 +40597,38 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T18:01:31.688414+00:00",
-      "lastUpdated": "2026-06-21T20:02:13Z",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-21T18:01:31.688414+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "90:00"
+      "lastUpdated": "2026-06-21T20:02:46Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 1,
+          "fouls": 1,
+          "offsides": 3,
+          "possession": "29%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 4,
+          "fouls": 3,
+          "offsides": 0,
+          "possession": "71%",
+          "redCards": null,
+          "shotsOffGoal": 11,
+          "shotsOnGoal": 5,
+          "totalShots": 17,
+          "yellowCards": 0
+        }
       },
-      "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1489397,
-        "awayCorners": null,
-        "awayFouls": null,
-        "awayOffsides": null,
-        "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayCorners": 1,
+        "awayFouls": 1,
+        "awayOffsides": 3,
+        "awayPossession": "29%",
+        "awayShotsOnGoal": 0,
         "cardEvents": [
           {
             "assist": null,
@@ -40836,27 +40856,56 @@
           }
         ],
         "goalEventsSource": null,
-        "homeCorners": null,
-        "homeFouls": null,
-        "homeOffsides": null,
-        "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homeCorners": 4,
+        "homeFouls": 3,
+        "homeOffsides": 0,
+        "homePossession": "71%",
+        "homeShotsOnGoal": 5,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": 1,
+            "fouls": 1,
+            "offsides": 3,
+            "possession": "29%",
+            "redCards": null,
+            "shotsOffGoal": 1,
+            "shotsOnGoal": 0,
+            "totalShots": 2,
+            "yellowCards": 1
+          },
+          "home": {
+            "corners": 4,
+            "fouls": 3,
+            "offsides": 0,
+            "possession": "71%",
+            "redCards": null,
+            "shotsOffGoal": 11,
+            "shotsOnGoal": 5,
+            "totalShots": 17,
+            "yellowCards": 0
+          }
+        },
         "officials": [
           {
-            "id": 11260,
             "name": "Raphael Claus",
             "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Raphael Claus, Brazil",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 11260,
             "name": "Raphael Claus",
             "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Raphael Claus, Brazil",
             "type": "REFEREE"
           }
         ],
@@ -41042,62 +41091,31 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Atlanta",
-          "cloudCoverage": 88.3,
-          "condition": "lightrain",
-          "country": "USA",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-21T17:54:04.813121+00:00",
-          "humidity": 62.3,
-          "latitude": 33.7554,
-          "longitude": -84.4008,
-          "name": "Mercedes-Benz Stadium weather",
-          "observedAt": "2026-06-21T17:00:00Z",
-          "pressure": 1014.9,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "Mercedes-Benz Stadium",
-          "temperature": 27.9,
-          "temperatureUnit": "C",
-          "windBearing": 237.7,
-          "windSpeed": 1.9,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 88.3,
-        "condition": "lightrain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-21T17:54:04.813121+00:00",
-        "humidity": 62.3,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-21T17:00:00Z",
-        "pressure": 1014.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.9,
-        "temperatureUnit": "C",
-        "windBearing": 237.7,
-        "windSpeed": 1.9,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 11260,
           "name": "Raphael Claus",
           "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Raphael Claus, Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Raphael Claus",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Raphael Claus, Brazil",
           "type": "REFEREE"
         }
       ],
@@ -41121,7 +41139,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Y. Pino",
@@ -41304,30 +41322,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-21T16:00:00Z",
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 88.3,
-        "condition": "lightrain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-21T17:54:04.813121+00:00",
-        "humidity": 62.3,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-21T17:00:00Z",
-        "pressure": 1014.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.9,
-        "temperatureUnit": "C",
-        "windBearing": 237.7,
-        "windSpeed": 1.9,
-        "windSpeedUnit": "m/s"
-      }
+      "utcDate": "2026-06-21T16:00:00Z"
     }
   ],
   "results": [
@@ -81669,7 +81664,11 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayCorners": 1,
+      "awayFouls": 1,
+      "awayOffsides": 3,
+      "awayPossession": "29%",
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/saudi_arabia.svg",
         "id": 801,
@@ -81715,7 +81714,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -81723,7 +81721,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "M. Oyarzabal",
@@ -81913,6 +81910,11 @@
         }
       ],
       "group": "GROUP_H",
+      "homeCorners": 4,
+      "homeFouls": 3,
+      "homeOffsides": 0,
+      "homePossession": "71%",
+      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -81921,25 +81923,38 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T18:01:31.688414+00:00",
-      "lastUpdated": "2026-06-21T20:02:13Z",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-21T18:01:31.688414+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "90:00"
+      "lastUpdated": "2026-06-21T20:02:46Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 1,
+          "fouls": 1,
+          "offsides": 3,
+          "possession": "29%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 4,
+          "fouls": 3,
+          "offsides": 0,
+          "possession": "71%",
+          "redCards": null,
+          "shotsOffGoal": 11,
+          "shotsOnGoal": 5,
+          "totalShots": 17,
+          "yellowCards": 0
+        }
       },
-      "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1489397,
-        "awayCorners": null,
-        "awayFouls": null,
-        "awayOffsides": null,
-        "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayCorners": 1,
+        "awayFouls": 1,
+        "awayOffsides": 3,
+        "awayPossession": "29%",
+        "awayShotsOnGoal": 0,
         "cardEvents": [
           {
             "assist": null,
@@ -82167,27 +82182,56 @@
           }
         ],
         "goalEventsSource": null,
-        "homeCorners": null,
-        "homeFouls": null,
-        "homeOffsides": null,
-        "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homeCorners": 4,
+        "homeFouls": 3,
+        "homeOffsides": 0,
+        "homePossession": "71%",
+        "homeShotsOnGoal": 5,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": 1,
+            "fouls": 1,
+            "offsides": 3,
+            "possession": "29%",
+            "redCards": null,
+            "shotsOffGoal": 1,
+            "shotsOnGoal": 0,
+            "totalShots": 2,
+            "yellowCards": 1
+          },
+          "home": {
+            "corners": 4,
+            "fouls": 3,
+            "offsides": 0,
+            "possession": "71%",
+            "redCards": null,
+            "shotsOffGoal": 11,
+            "shotsOnGoal": 5,
+            "totalShots": 17,
+            "yellowCards": 0
+          }
+        },
         "officials": [
           {
-            "id": 11260,
             "name": "Raphael Claus",
             "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Raphael Claus, Brazil",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 11260,
             "name": "Raphael Claus",
             "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Raphael Claus, Brazil",
             "type": "REFEREE"
           }
         ],
@@ -82373,62 +82417,31 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Atlanta",
-          "cloudCoverage": 88.3,
-          "condition": "lightrain",
-          "country": "USA",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-21T17:54:04.813121+00:00",
-          "humidity": 62.3,
-          "latitude": 33.7554,
-          "longitude": -84.4008,
-          "name": "Mercedes-Benz Stadium weather",
-          "observedAt": "2026-06-21T17:00:00Z",
-          "pressure": 1014.9,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "Mercedes-Benz Stadium",
-          "temperature": 27.9,
-          "temperatureUnit": "C",
-          "windBearing": 237.7,
-          "windSpeed": 1.9,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 88.3,
-        "condition": "lightrain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-21T17:54:04.813121+00:00",
-        "humidity": 62.3,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-21T17:00:00Z",
-        "pressure": 1014.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.9,
-        "temperatureUnit": "C",
-        "windBearing": 237.7,
-        "windSpeed": 1.9,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 11260,
           "name": "Raphael Claus",
           "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Raphael Claus, Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Raphael Claus",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Raphael Claus, Brazil",
           "type": "REFEREE"
         }
       ],
@@ -82452,7 +82465,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Y. Pino",
@@ -82635,30 +82648,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-21T16:00:00Z",
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 88.3,
-        "condition": "lightrain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-21T17:54:04.813121+00:00",
-        "humidity": 62.3,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-21T17:00:00Z",
-        "pressure": 1014.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.9,
-        "temperatureUnit": "C",
-        "windBearing": 237.7,
-        "windSpeed": 1.9,
-        "windSpeedUnit": "m/s"
-      }
+      "utcDate": "2026-06-21T16:00:00Z"
     }
   ]
 }
