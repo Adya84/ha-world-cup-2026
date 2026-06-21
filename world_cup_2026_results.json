@@ -42014,7 +42014,7 @@
       "awayCorners": 0,
       "awayFouls": 2,
       "awayOffsides": 0,
-      "awayPossession": "33%",
+      "awayPossession": "37%",
       "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -42062,7 +42062,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1260,
+      "clockSeconds": 1320,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -42071,7 +42071,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "21'",
+      "displayMinute": "22'",
       "events": [
         {
           "assist": null,
@@ -42117,7 +42117,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 21,
-          "player": null,
+          "player": "K. Lenini",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -42128,18 +42128,23 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1260,
-      "fallbackClockText": "21'",
+      "fallbackClock": 1320,
+      "fallbackClockText": "22'",
       "goalEvents": [
         {
           "assist": null,
+          "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "21'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Uruguay",
           "isDisallowed": false,
+          "matchId": 537372,
+          "matchUtcDate": "2026-06-21T22:00:00Z",
           "minute": 21,
-          "player": null,
+          "player": "K. Lenini",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -42152,10 +42157,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
-      "homeCorners": 2,
-      "homeFouls": 2,
+      "homeCorners": 3,
+      "homeFouls": 4,
       "homeOffsides": 2,
-      "homePossession": "67%",
+      "homePossession": "63%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -42166,15 +42171,15 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T22:21:37.415256+00:00",
-      "lastUpdated": "2026-06-22T00:21:34Z",
+      "lastApiSync": "2026-06-21T22:22:23.086027+00:00",
+      "lastUpdated": "2026-06-22T00:22:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 2,
           "offsides": 0,
-          "possession": "33%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -42182,33 +42187,33 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 2,
-          "fouls": 2,
+          "corners": 3,
+          "fouls": 4,
           "offsides": 2,
-          "possession": "67%",
+          "possession": "63%",
           "redCards": null,
-          "shotsOffGoal": 0,
+          "shotsOffGoal": 1,
           "shotsOnGoal": 0,
-          "totalShots": 1,
+          "totalShots": 2,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "21'",
-        "lastApiSync": "2026-06-21T22:21:37.415256+00:00",
-        "seconds": 1260,
+        "displayMinute": "22'",
+        "lastApiSync": "2026-06-21T22:22:23.086027+00:00",
+        "seconds": 1320,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "21'"
+        "timer": "22'"
       },
-      "manualClockText": "21'",
+      "manualClockText": "22'",
       "matchDetails": {
         "apiFootballFixtureId": 1489398,
         "awayCorners": 0,
         "awayFouls": 2,
         "awayOffsides": 0,
-        "awayPossession": "33%",
+        "awayPossession": "37%",
         "awayShotsOnGoal": 0,
         "cardEvents": [
           {
@@ -42293,7 +42298,7 @@
             "extra": null,
             "isDisallowed": false,
             "minute": 21,
-            "player": null,
+            "player": "K. Lenini",
             "playerOff": null,
             "playerOn": null,
             "rawType": "Goal",
@@ -42307,13 +42312,18 @@
         "goalEvents": [
           {
             "assist": null,
+            "awayTeam": "Cape Verde",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "21'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Uruguay",
             "isDisallowed": false,
+            "matchId": 537372,
+            "matchUtcDate": "2026-06-21T22:00:00Z",
             "minute": 21,
-            "player": null,
+            "player": "K. Lenini",
             "playerOff": null,
             "playerOn": null,
             "rawType": "Goal",
@@ -42325,10 +42335,10 @@
           }
         ],
         "goalEventsSource": "api_football_live",
-        "homeCorners": 2,
-        "homeFouls": 2,
+        "homeCorners": 3,
+        "homeFouls": 4,
         "homeOffsides": 2,
-        "homePossession": "67%",
+        "homePossession": "63%",
         "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
@@ -42337,7 +42347,7 @@
             "corners": 0,
             "fouls": 2,
             "offsides": 0,
-            "possession": "33%",
+            "possession": "37%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 0,
@@ -42345,14 +42355,14 @@
             "yellowCards": 1
           },
           "home": {
-            "corners": 2,
-            "fouls": 2,
+            "corners": 3,
+            "fouls": 4,
             "offsides": 2,
-            "possession": "67%",
+            "possession": "63%",
             "redCards": null,
-            "shotsOffGoal": 0,
+            "shotsOffGoal": 1,
             "shotsOnGoal": 0,
-            "totalShots": 1,
+            "totalShots": 2,
             "yellowCards": 0
           }
         },
@@ -42427,7 +42437,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 21,
+      "minute": 22,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -84521,7 +84531,7 @@
       "awayCorners": 0,
       "awayFouls": 2,
       "awayOffsides": 0,
-      "awayPossession": "33%",
+      "awayPossession": "37%",
       "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -84569,7 +84579,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1260,
+      "clockSeconds": 1320,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -84578,7 +84588,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "21'",
+      "displayMinute": "22'",
       "events": [
         {
           "assist": null,
@@ -84624,7 +84634,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 21,
-          "player": null,
+          "player": "K. Lenini",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -84635,18 +84645,23 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1260,
-      "fallbackClockText": "21'",
+      "fallbackClock": 1320,
+      "fallbackClockText": "22'",
       "goalEvents": [
         {
           "assist": null,
+          "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "21'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Uruguay",
           "isDisallowed": false,
+          "matchId": 537372,
+          "matchUtcDate": "2026-06-21T22:00:00Z",
           "minute": 21,
-          "player": null,
+          "player": "K. Lenini",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -84659,10 +84674,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
-      "homeCorners": 2,
-      "homeFouls": 2,
+      "homeCorners": 3,
+      "homeFouls": 4,
       "homeOffsides": 2,
-      "homePossession": "67%",
+      "homePossession": "63%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -84673,15 +84688,15 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T22:21:37.415256+00:00",
-      "lastUpdated": "2026-06-22T00:21:34Z",
+      "lastApiSync": "2026-06-21T22:22:23.086027+00:00",
+      "lastUpdated": "2026-06-22T00:22:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 2,
           "offsides": 0,
-          "possession": "33%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -84689,33 +84704,33 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 2,
-          "fouls": 2,
+          "corners": 3,
+          "fouls": 4,
           "offsides": 2,
-          "possession": "67%",
+          "possession": "63%",
           "redCards": null,
-          "shotsOffGoal": 0,
+          "shotsOffGoal": 1,
           "shotsOnGoal": 0,
-          "totalShots": 1,
+          "totalShots": 2,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "21'",
-        "lastApiSync": "2026-06-21T22:21:37.415256+00:00",
-        "seconds": 1260,
+        "displayMinute": "22'",
+        "lastApiSync": "2026-06-21T22:22:23.086027+00:00",
+        "seconds": 1320,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "21'"
+        "timer": "22'"
       },
-      "manualClockText": "21'",
+      "manualClockText": "22'",
       "matchDetails": {
         "apiFootballFixtureId": 1489398,
         "awayCorners": 0,
         "awayFouls": 2,
         "awayOffsides": 0,
-        "awayPossession": "33%",
+        "awayPossession": "37%",
         "awayShotsOnGoal": 0,
         "cardEvents": [
           {
@@ -84800,7 +84815,7 @@
             "extra": null,
             "isDisallowed": false,
             "minute": 21,
-            "player": null,
+            "player": "K. Lenini",
             "playerOff": null,
             "playerOn": null,
             "rawType": "Goal",
@@ -84814,13 +84829,18 @@
         "goalEvents": [
           {
             "assist": null,
+            "awayTeam": "Cape Verde",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "21'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Uruguay",
             "isDisallowed": false,
+            "matchId": 537372,
+            "matchUtcDate": "2026-06-21T22:00:00Z",
             "minute": 21,
-            "player": null,
+            "player": "K. Lenini",
             "playerOff": null,
             "playerOn": null,
             "rawType": "Goal",
@@ -84832,10 +84852,10 @@
           }
         ],
         "goalEventsSource": "api_football_live",
-        "homeCorners": 2,
-        "homeFouls": 2,
+        "homeCorners": 3,
+        "homeFouls": 4,
         "homeOffsides": 2,
-        "homePossession": "67%",
+        "homePossession": "63%",
         "homeShotsOnGoal": 0,
         "lineups": [],
         "lineupsData": [],
@@ -84844,7 +84864,7 @@
             "corners": 0,
             "fouls": 2,
             "offsides": 0,
-            "possession": "33%",
+            "possession": "37%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 0,
@@ -84852,14 +84872,14 @@
             "yellowCards": 1
           },
           "home": {
-            "corners": 2,
-            "fouls": 2,
+            "corners": 3,
+            "fouls": 4,
             "offsides": 2,
-            "possession": "67%",
+            "possession": "63%",
             "redCards": null,
-            "shotsOffGoal": 0,
+            "shotsOffGoal": 1,
             "shotsOnGoal": 0,
-            "totalShots": 1,
+            "totalShots": 2,
             "yellowCards": 0
           }
         },
@@ -84934,7 +84954,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 21,
+      "minute": 22,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
