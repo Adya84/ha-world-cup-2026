@@ -20805,7 +20805,7 @@
       "awayFouls": 13,
       "awayOffsides": 1,
       "awayPossession": "62%",
-      "awayScore": 3,
+      "awayScore": 4,
       "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/766.svg",
@@ -20814,7 +20814,7 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
-      "clockSeconds": 4920,
+      "clockSeconds": 5400,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -20823,7 +20823,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "82'",
+      "displayMinute": "90'",
       "events": [
         {
           "assist": "K. Nakamura",
@@ -21004,10 +21004,82 @@
           "timer": "79:00",
           "timerSeconds": 4740,
           "type": "Substitution"
+        },
+        {
+          "assist": "K. Sano",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "A. Ueda",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Goal"
+        },
+        {
+          "assist": "K. Goto",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "A. Ueda",
+          "playerOff": "A. Ueda",
+          "playerOn": "K. Goto",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Achouri",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "A. Abdi",
+          "playerOff": "A. Abdi",
+          "playerOn": "E. Achouri",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Khedira",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "90+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "E. Skhiri",
+          "playerOff": "E. Skhiri",
+          "playerOn": "R. Khedira",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4920,
-      "fallbackClockText": "82'",
+      "fallbackClock": 5400,
+      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "K. Nakamura",
@@ -21077,6 +21149,29 @@
           "timer": "69:00",
           "timerSeconds": 4140,
           "type": "Goal"
+        },
+        {
+          "assist": "K. Sano",
+          "awayTeam": "Japan",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "83'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Tunisia",
+          "isDisallowed": false,
+          "matchId": 537360,
+          "matchUtcDate": "2026-06-21T04:00:00Z",
+          "minute": 83,
+          "player": "A. Ueda",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -21095,8 +21190,8 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": "2026-06-21T05:52:42.114624+00:00",
-      "lastUpdated": "2026-06-21T07:52:40Z",
+      "lastApiSync": "2026-06-21T05:53:16.289718+00:00",
+      "lastUpdated": "2026-06-21T07:53:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -21124,14 +21219,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "82'",
-        "lastApiSync": "2026-06-21T05:52:42.114624+00:00",
-        "seconds": 4920,
+        "displayMinute": "90'",
+        "lastApiSync": "2026-06-21T05:53:16.289718+00:00",
+        "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "82'"
+        "timer": "90'"
       },
-      "manualClockText": "82'",
+      "manualClockText": "90'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -21156,7 +21251,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 82,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -21185,7 +21280,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 3,
+          "away": 4,
           "home": 0
         },
         "halfTime": {
@@ -21329,6 +21424,60 @@
           "team": "Japan",
           "timer": "79:00",
           "timerSeconds": 4740,
+          "type": "Substitution"
+        },
+        {
+          "assist": "K. Goto",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "A. Ueda",
+          "playerOff": "A. Ueda",
+          "playerOn": "K. Goto",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Achouri",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "A. Abdi",
+          "playerOff": "A. Abdi",
+          "playerOn": "E. Achouri",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Khedira",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "90+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "E. Skhiri",
+          "playerOff": "E. Skhiri",
+          "playerOn": "R. Khedira",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "91:00",
+          "timerSeconds": 5460,
           "type": "Substitution"
         }
       ],
