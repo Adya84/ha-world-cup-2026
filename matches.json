@@ -21558,7 +21558,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": "8%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
         "id": 840,
@@ -21619,7 +21624,12 @@
       "fallbackClock": 360,
       "fallbackClockText": "6'",
       "group": "GROUP_G",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": "92%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/805.svg",
         "id": 805,
@@ -21628,13 +21638,37 @@
         "tla": "BEL"
       },
       "id": 537365,
-      "lastApiSync": "2026-06-21T19:05:41.437202+00:00",
-      "lastUpdated": "2026-06-21T21:05:40Z",
+      "lastApiSync": "2026-06-21T19:06:25.972031+00:00",
+      "lastUpdated": "2026-06-21T21:06:25Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "8%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "92%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "6'",
-        "lastApiSync": "2026-06-21T19:05:41.437202+00:00",
+        "lastApiSync": "2026-06-21T19:06:25.972031+00:00",
         "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
