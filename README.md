@@ -1,7 +1,7 @@
 # ⚽ Home Assistant World Cup 2026
 
 [![License](https://img.shields.io/badge/license-Personal%20Use-red.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-v4.1.8-green)
+![Version](https://img.shields.io/badge/version-v4.2.6-green)
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.1%2B-blue)
 ![HACS](https://img.shields.io/badge/HACS-Custom-orange)
 ![Tablet Mode](https://img.shields.io/badge/Tablet%20Mode-Yes-success)
