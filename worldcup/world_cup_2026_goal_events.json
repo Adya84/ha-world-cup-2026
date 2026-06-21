@@ -15368,7 +15368,7 @@
     "apiFootballFixtureId": 1489398,
     "awayScore": 1,
     "awayTeam": "Cape Verde",
-    "base_seconds": 3540,
+    "base_seconds": 3600,
     "cardEvents": [
       {
         "assist": null,
@@ -15426,8 +15426,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3540,
-    "displayMinute": "59'",
+    "clock_seconds": 3600,
+    "displayMinute": "60'",
     "events": [
       {
         "assist": null,
@@ -15538,6 +15538,24 @@
         "type": "Substitution"
       },
       {
+        "assist": null,
+        "comments": "Holding",
+        "detail": "Yellow Card",
+        "displayMinute": "58'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 58,
+        "player": "M. Olivera",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Card",
+        "source": "api_football",
+        "team": "Uruguay",
+        "timer": "58:00",
+        "timerSeconds": 3480,
+        "type": "Yellow Card"
+      },
+      {
         "assist": "N. Da Costa",
         "comments": null,
         "detail": "Substitution 2",
@@ -15556,22 +15574,22 @@
         "type": "Substitution"
       },
       {
-        "assist": null,
-        "comments": "Holding",
-        "detail": "Yellow Card",
-        "displayMinute": "58'",
+        "assist": "H. Varela",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "59'",
         "extra": null,
         "isDisallowed": false,
-        "minute": 58,
-        "player": "M. Olivera",
-        "playerOff": null,
-        "playerOn": null,
-        "rawType": "Card",
+        "minute": 59,
+        "player": "G. Rodrigues",
+        "playerOff": "G. Rodrigues",
+        "playerOn": "H. Varela",
+        "rawType": "subst",
         "source": "api_football",
-        "team": "Uruguay",
-        "timer": "58:00",
-        "timerSeconds": 3480,
-        "type": "Yellow Card"
+        "team": "Cape Verde Islands",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -15647,9 +15665,9 @@
     ],
     "homeScore": 2,
     "homeTeam": "Uruguay",
-    "lastApiSync": "2026-06-21T23:24:10.086183+00:00",
-    "manualClockText": "59'",
-    "phase_start": "2026-06-21T23:24:10.086183+00:00",
+    "lastApiSync": "2026-06-21T23:24:55.265309+00:00",
+    "manualClockText": "60'",
+    "phase_start": "2026-06-21T23:24:55.265309+00:00",
     "referees": [
       {
         "name": "Espen Esk\u00e5s",
@@ -15698,6 +15716,24 @@
         "team": "Cape Verde Islands",
         "timer": "58:00",
         "timerSeconds": 3480,
+        "type": "Substitution"
+      },
+      {
+        "assist": "H. Varela",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "59'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 59,
+        "player": "G. Rodrigues",
+        "playerOff": "G. Rodrigues",
+        "playerOn": "H. Varela",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Cape Verde Islands",
+        "timer": "59:00",
+        "timerSeconds": 3540,
         "type": "Substitution"
       }
     ],
