@@ -14,7 +14,7 @@
       "awayFouls": 0,
       "awayOffsides": 1,
       "awayPossession": "27%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1500,
+      "clockSeconds": 1560,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "25'",
+      "displayMinute": "26'",
       "events": [
         {
           "assist": null,
@@ -71,10 +71,54 @@
           "timer": "3:00",
           "timerSeconds": 180,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "E. Hajsafi",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "25'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 25,
+          "player": "M. Taremi",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Iran",
+          "timer": "25:00",
+          "timerSeconds": 1500,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 1500,
-      "fallbackClockText": "25'",
+      "fallbackClock": 1560,
+      "fallbackClockText": "26'",
+      "goalEvents": [
+        {
+          "assist": "E. Hajsafi",
+          "awayTeam": "Iran",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "25'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Belgium",
+          "isDisallowed": false,
+          "matchId": 537365,
+          "matchUtcDate": "2026-06-21T19:00:00Z",
+          "minute": 25,
+          "player": "M. Taremi",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Iran",
+          "timer": "25:00",
+          "timerSeconds": 1500,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
       "homeCorners": 1,
       "homeFouls": 3,
@@ -90,8 +134,8 @@
         "tla": "BEL"
       },
       "id": 537365,
-      "lastApiSync": "2026-06-21T19:25:09.869666+00:00",
-      "lastUpdated": "2026-06-21T21:25:07Z",
+      "lastApiSync": "2026-06-21T19:25:55.137298+00:00",
+      "lastUpdated": "2026-06-21T21:25:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -119,14 +163,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "25'",
-        "lastApiSync": "2026-06-21T19:25:09.869666+00:00",
-        "seconds": 1500,
+        "displayMinute": "26'",
+        "lastApiSync": "2026-06-21T19:25:55.137298+00:00",
+        "seconds": 1560,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "25'"
+        "timer": "26'"
       },
-      "manualClockText": "25'",
+      "manualClockText": "26'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -151,7 +195,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 25,
+      "minute": 26,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -180,11 +224,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -245,7 +289,7 @@
       "awayFouls": 0,
       "awayOffsides": 1,
       "awayPossession": "27%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
@@ -274,7 +318,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1500,
+      "clockSeconds": 1560,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -283,7 +327,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "25'",
+      "displayMinute": "26'",
       "events": [
         {
           "assist": null,
@@ -302,10 +346,54 @@
           "timer": "3:00",
           "timerSeconds": 180,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "E. Hajsafi",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "25'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 25,
+          "player": "M. Taremi",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Iran",
+          "timer": "25:00",
+          "timerSeconds": 1500,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 1500,
-      "fallbackClockText": "25'",
+      "fallbackClock": 1560,
+      "fallbackClockText": "26'",
+      "goalEvents": [
+        {
+          "assist": "E. Hajsafi",
+          "awayTeam": "Iran",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "25'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Belgium",
+          "isDisallowed": false,
+          "matchId": 537365,
+          "matchUtcDate": "2026-06-21T19:00:00Z",
+          "minute": 25,
+          "player": "M. Taremi",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Iran",
+          "timer": "25:00",
+          "timerSeconds": 1500,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
       "homeCorners": 1,
       "homeFouls": 3,
@@ -321,8 +409,8 @@
         "tla": "BEL"
       },
       "id": 537365,
-      "lastApiSync": "2026-06-21T19:25:09.869666+00:00",
-      "lastUpdated": "2026-06-21T21:25:07Z",
+      "lastApiSync": "2026-06-21T19:25:55.137298+00:00",
+      "lastUpdated": "2026-06-21T21:25:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -350,14 +438,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "25'",
-        "lastApiSync": "2026-06-21T19:25:09.869666+00:00",
-        "seconds": 1500,
+        "displayMinute": "26'",
+        "lastApiSync": "2026-06-21T19:25:55.137298+00:00",
+        "seconds": 1560,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "25'"
+        "timer": "26'"
       },
-      "manualClockText": "25'",
+      "manualClockText": "26'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -382,7 +470,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 25,
+      "minute": 26,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -411,11 +499,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
