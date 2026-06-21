@@ -11,10 +11,10 @@
         "name": "World"
       },
       "awayCorners": 4,
-      "awayFouls": 10,
+      "awayFouls": 11,
       "awayOffsides": null,
       "awayPossession": "63%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/766.svg",
@@ -23,7 +23,7 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
-      "clockSeconds": 4020,
+      "clockSeconds": 4140,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "69'",
       "events": [
         {
           "assist": "K. Nakamura",
@@ -123,10 +123,28 @@
           "timer": "65:00",
           "timerSeconds": 3900,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "69'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 69,
+          "player": "J. Ito",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4140,
+      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": "K. Nakamura",
@@ -173,6 +191,29 @@
           "timer": "31:00",
           "timerSeconds": 1860,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Japan",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "69'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Tunisia",
+          "isDisallowed": false,
+          "matchId": 537360,
+          "matchUtcDate": "2026-06-21T04:00:00Z",
+          "minute": 69,
+          "player": "J. Ito",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -191,19 +232,19 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": "2026-06-21T05:26:39.494743+00:00",
-      "lastUpdated": "2026-06-21T07:26:37Z",
+      "lastApiSync": "2026-06-21T05:29:26.481854+00:00",
+      "lastUpdated": "2026-06-21T07:29:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 4,
-          "fouls": 10,
+          "fouls": 11,
           "offsides": null,
           "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 3,
-          "totalShots": 7,
+          "totalShots": 8,
           "yellowCards": null
         },
         "home": {
@@ -220,39 +261,39 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-06-21T05:26:39.494743+00:00",
-        "seconds": 4020,
+        "displayMinute": "69'",
+        "lastApiSync": "2026-06-21T05:29:26.481854+00:00",
+        "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "69'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "69'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
-        "cloudCoverage": 50.8,
-        "condition": "partlycloudy_night",
+        "cloudCoverage": 99.2,
+        "condition": "cloudy",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T05:25:15.048407+00:00",
-        "humidity": 95.1,
+        "fetchedAt": "2026-06-21T05:29:22.573664+00:00",
+        "humidity": 98.2,
         "latitude": 25.6682,
         "longitude": -100.2446,
         "name": "Estadio BBVA weather",
-        "observedAt": "2026-06-21T04:00:00Z",
+        "observedAt": "2026-06-21T05:00:00Z",
         "pressure": 1011.9,
         "pressureUnit": "hPa",
         "source": "met_no_stadium",
         "stadium": "Estadio BBVA",
-        "temperature": 23.8,
+        "temperature": 23.3,
         "temperatureUnit": "C",
-        "windBearing": 100.5,
-        "windSpeed": 3.1,
+        "windBearing": 96.3,
+        "windSpeed": 2.5,
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 67,
+      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -281,7 +322,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 0
         },
         "halfTime": {
@@ -365,24 +406,24 @@
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
-        "cloudCoverage": 50.8,
-        "condition": "partlycloudy_night",
+        "cloudCoverage": 99.2,
+        "condition": "cloudy",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T05:25:15.048407+00:00",
-        "humidity": 95.1,
+        "fetchedAt": "2026-06-21T05:29:22.573664+00:00",
+        "humidity": 98.2,
         "latitude": 25.6682,
         "longitude": -100.2446,
         "name": "Estadio BBVA weather",
-        "observedAt": "2026-06-21T04:00:00Z",
+        "observedAt": "2026-06-21T05:00:00Z",
         "pressure": 1011.9,
         "pressureUnit": "hPa",
         "source": "met_no_stadium",
         "stadium": "Estadio BBVA",
-        "temperature": 23.8,
+        "temperature": 23.3,
         "temperatureUnit": "C",
-        "windBearing": 100.5,
-        "windSpeed": 3.1,
+        "windBearing": 96.3,
+        "windSpeed": 2.5,
         "windSpeedUnit": "m/s"
       }
     }
@@ -399,10 +440,10 @@
         "name": "World"
       },
       "awayCorners": 4,
-      "awayFouls": 10,
+      "awayFouls": 11,
       "awayOffsides": null,
       "awayPossession": "63%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/766.svg",
@@ -411,7 +452,7 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
-      "clockSeconds": 4020,
+      "clockSeconds": 4140,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -420,7 +461,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "69'",
       "events": [
         {
           "assist": "K. Nakamura",
@@ -511,10 +552,28 @@
           "timer": "65:00",
           "timerSeconds": 3900,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "69'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 69,
+          "player": "J. Ito",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4140,
+      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": "K. Nakamura",
@@ -561,6 +620,29 @@
           "timer": "31:00",
           "timerSeconds": 1860,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Japan",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "69'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Tunisia",
+          "isDisallowed": false,
+          "matchId": 537360,
+          "matchUtcDate": "2026-06-21T04:00:00Z",
+          "minute": 69,
+          "player": "J. Ito",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -579,19 +661,19 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": "2026-06-21T05:26:39.494743+00:00",
-      "lastUpdated": "2026-06-21T07:26:37Z",
+      "lastApiSync": "2026-06-21T05:29:26.481854+00:00",
+      "lastUpdated": "2026-06-21T07:29:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 4,
-          "fouls": 10,
+          "fouls": 11,
           "offsides": null,
           "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 3,
-          "totalShots": 7,
+          "totalShots": 8,
           "yellowCards": null
         },
         "home": {
@@ -608,39 +690,39 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-06-21T05:26:39.494743+00:00",
-        "seconds": 4020,
+        "displayMinute": "69'",
+        "lastApiSync": "2026-06-21T05:29:26.481854+00:00",
+        "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "69'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "69'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
-        "cloudCoverage": 50.8,
-        "condition": "partlycloudy_night",
+        "cloudCoverage": 99.2,
+        "condition": "cloudy",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T05:25:15.048407+00:00",
-        "humidity": 95.1,
+        "fetchedAt": "2026-06-21T05:29:22.573664+00:00",
+        "humidity": 98.2,
         "latitude": 25.6682,
         "longitude": -100.2446,
         "name": "Estadio BBVA weather",
-        "observedAt": "2026-06-21T04:00:00Z",
+        "observedAt": "2026-06-21T05:00:00Z",
         "pressure": 1011.9,
         "pressureUnit": "hPa",
         "source": "met_no_stadium",
         "stadium": "Estadio BBVA",
-        "temperature": 23.8,
+        "temperature": 23.3,
         "temperatureUnit": "C",
-        "windBearing": 100.5,
-        "windSpeed": 3.1,
+        "windBearing": 96.3,
+        "windSpeed": 2.5,
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 67,
+      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -669,7 +751,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 0
         },
         "halfTime": {
@@ -753,24 +835,24 @@
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
-        "cloudCoverage": 50.8,
-        "condition": "partlycloudy_night",
+        "cloudCoverage": 99.2,
+        "condition": "cloudy",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T05:25:15.048407+00:00",
-        "humidity": 95.1,
+        "fetchedAt": "2026-06-21T05:29:22.573664+00:00",
+        "humidity": 98.2,
         "latitude": 25.6682,
         "longitude": -100.2446,
         "name": "Estadio BBVA weather",
-        "observedAt": "2026-06-21T04:00:00Z",
+        "observedAt": "2026-06-21T05:00:00Z",
         "pressure": 1011.9,
         "pressureUnit": "hPa",
         "source": "met_no_stadium",
         "stadium": "Estadio BBVA",
-        "temperature": 23.8,
+        "temperature": 23.3,
         "temperatureUnit": "C",
-        "windBearing": 100.5,
-        "windSpeed": 3.1,
+        "windBearing": 96.3,
+        "windSpeed": 2.5,
         "windSpeedUnit": "m/s"
       }
     }
