@@ -1,4 +1,264 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/saudi_arabia.svg",
+        "id": 801,
+        "name": "Saudi Arabia",
+        "shortName": "Saudi Arabia",
+        "tla": "KSA"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_H",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/760.svg",
+        "id": 760,
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP"
+      },
+      "id": 537371,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-21T17:04:52Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 99.2,
+        "condition": "lightrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T15:55:01.053796+00:00",
+        "humidity": 76.3,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-21T15:00:00Z",
+        "pressure": 1015.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 25.0,
+        "temperatureUnit": "C",
+        "windBearing": 270.8,
+        "windSpeed": 1.0,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 11260,
+          "name": "Raphael Claus",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-21T16:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 99.2,
+        "condition": "lightrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T15:55:01.053796+00:00",
+        "humidity": 76.3,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-21T15:00:00Z",
+        "pressure": 1015.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 25.0,
+        "temperatureUnit": "C",
+        "windBearing": 270.8,
+        "windSpeed": 1.0,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/saudi_arabia.svg",
+        "id": 801,
+        "name": "Saudi Arabia",
+        "shortName": "Saudi Arabia",
+        "tla": "KSA"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_H",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/760.svg",
+        "id": 760,
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP"
+      },
+      "id": 537371,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-21T17:04:52Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 99.2,
+        "condition": "lightrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T15:55:01.053796+00:00",
+        "humidity": 76.3,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-21T15:00:00Z",
+        "pressure": 1015.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 25.0,
+        "temperatureUnit": "C",
+        "windBearing": 270.8,
+        "windSpeed": 1.0,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 11260,
+          "name": "Raphael Claus",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-21T16:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 99.2,
+        "condition": "lightrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T15:55:01.053796+00:00",
+        "humidity": 76.3,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-21T15:00:00Z",
+        "pressure": 1015.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 25.0,
+        "temperatureUnit": "C",
+        "windBearing": 270.8,
+        "windSpeed": 1.0,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
