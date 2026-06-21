@@ -2,8 +2,8 @@
   "live": [
     {
       "apiFootballFixtureId": 1489395,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": null,
@@ -125,10 +125,28 @@
           "timer": "33:00",
           "timerSeconds": 1980,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "A. Jahanbakhsh",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Hardani",
+          "playerOff": "S. Hardani",
+          "playerOn": "A. Jahanbakhsh",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Iran",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "E. Hajsafi",
@@ -169,8 +187,8 @@
         "tla": "BEL"
       },
       "id": 537365,
-      "lastApiSync": "2026-06-21T20:10:49.561994+00:00",
-      "lastUpdated": "2026-06-21T22:10:46Z",
+      "lastApiSync": "2026-06-21T20:11:32.982801+00:00",
+      "lastUpdated": "2026-06-21T22:11:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -198,14 +216,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-21T20:10:49.561994+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-21T20:11:32.982801+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -230,7 +248,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -277,7 +295,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "A. Jahanbakhsh",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Hardani",
+          "playerOff": "S. Hardani",
+          "playerOn": "A. Jahanbakhsh",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Iran",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-21T19:00:00Z",
       "venue": {
         "city": "Inglewood",
@@ -312,8 +350,8 @@
   "matches": [
     {
       "apiFootballFixtureId": 1489395,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -371,7 +409,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -380,7 +418,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": null,
@@ -435,10 +473,28 @@
           "timer": "33:00",
           "timerSeconds": 1980,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "A. Jahanbakhsh",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Hardani",
+          "playerOff": "S. Hardani",
+          "playerOn": "A. Jahanbakhsh",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Iran",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "E. Hajsafi",
@@ -479,8 +535,8 @@
         "tla": "BEL"
       },
       "id": 537365,
-      "lastApiSync": "2026-06-21T20:10:49.561994+00:00",
-      "lastUpdated": "2026-06-21T22:10:46Z",
+      "lastApiSync": "2026-06-21T20:11:32.982801+00:00",
+      "lastUpdated": "2026-06-21T22:11:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -508,14 +564,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-21T20:10:49.561994+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-21T20:11:32.982801+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -540,7 +596,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -587,7 +643,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "A. Jahanbakhsh",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Hardani",
+          "playerOff": "S. Hardani",
+          "playerOn": "A. Jahanbakhsh",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Iran",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-21T19:00:00Z",
       "venue": {
         "city": "Inglewood",
