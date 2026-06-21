@@ -21086,7 +21086,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3840,
+      "clockSeconds": 3900,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -21095,7 +21095,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "64'",
+      "displayMinute": "65'",
       "events": [
         {
           "assist": "M. Oyarzabal",
@@ -21170,6 +21170,42 @@
           "type": "Yellow Card"
         },
         {
+          "assist": "F. Torres",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Oyarzabal",
+          "playerOff": "M. Oyarzabal",
+          "playerOn": "F. Torres",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Y. Pino",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Lamine Yamal",
+          "playerOff": "Lamine Yamal",
+          "playerOn": "Y. Pino",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "A. Al Hamdan",
           "comments": null,
           "detail": "Substitution 1",
@@ -21183,24 +21219,6 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Y. Pino",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "Y. Pino",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
@@ -21224,24 +21242,6 @@
           "type": "Substitution"
         },
         {
-          "assist": "F. Torres",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Oyarzabal",
-          "playerOff": "M. Oyarzabal",
-          "playerOn": "F. Torres",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": null,
           "comments": null,
           "detail": "Own Goal",
@@ -21260,24 +21260,6 @@
           "type": "Own Goal"
         },
         {
-          "assist": "A. Hejji",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "A. Al Amri",
-          "playerOff": "A. Al Amri",
-          "playerOn": "A. Hejji",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
           "assist": null,
           "comments": "Elbowing",
           "detail": "Yellow Card",
@@ -21294,6 +21276,42 @@
           "timer": "60:00",
           "timerSeconds": 3600,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "M. Abu Al Shamat",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "F. Al Buraikan",
+          "playerOff": "F. Al Buraikan",
+          "playerOn": "M. Abu Al Shamat",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Hejji",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "A. Al Amri",
+          "playerOff": "A. Al Amri",
+          "playerOn": "A. Hejji",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         },
         {
           "assist": "N. Williams",
@@ -21330,28 +21348,10 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Substitution"
-        },
-        {
-          "assist": "M. Abu Al Shamat",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "61'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 61,
-          "player": "F. Al Buraikan",
-          "playerOff": "F. Al Buraikan",
-          "playerOn": "M. Abu Al Shamat",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3840,
-      "fallbackClockText": "64'",
+      "fallbackClock": 3900,
+      "fallbackClockText": "65'",
       "goalEvents": [
         {
           "assist": "M. Oyarzabal",
@@ -21462,8 +21462,8 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T17:26:49.181946+00:00",
-      "lastUpdated": "2026-06-21T19:26:46Z",
+      "lastApiSync": "2026-06-21T17:27:33.137455+00:00",
+      "lastUpdated": "2026-06-21T19:27:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -21491,14 +21491,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "64'",
-        "lastApiSync": "2026-06-21T17:26:49.181946+00:00",
-        "seconds": 3840,
+        "displayMinute": "65'",
+        "lastApiSync": "2026-06-21T17:27:33.137455+00:00",
+        "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "64'"
+        "timer": "65'"
       },
-      "manualClockText": "64'",
+      "manualClockText": "65'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -21523,7 +21523,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 64,
+      "minute": 65,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -21573,6 +21573,42 @@
       "status": "2H",
       "substitutionEvents": [
         {
+          "assist": "F. Torres",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Oyarzabal",
+          "playerOff": "M. Oyarzabal",
+          "playerOn": "F. Torres",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Y. Pino",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Lamine Yamal",
+          "playerOff": "Lamine Yamal",
+          "playerOn": "Y. Pino",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "A. Al Hamdan",
           "comments": null,
           "detail": "Substitution 1",
@@ -21586,24 +21622,6 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Y. Pino",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "Y. Pino",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
@@ -21627,27 +21645,27 @@
           "type": "Substitution"
         },
         {
-          "assist": "F. Torres",
+          "assist": "M. Abu Al Shamat",
           "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
+          "detail": "Substitution 3",
+          "displayMinute": "60'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Oyarzabal",
-          "playerOff": "M. Oyarzabal",
-          "playerOn": "F. Torres",
+          "minute": 60,
+          "player": "F. Al Buraikan",
+          "playerOff": "F. Al Buraikan",
+          "playerOn": "M. Abu Al Shamat",
           "rawType": "subst",
           "source": "api_football",
-          "team": "Spain",
-          "timer": "46:00",
-          "timerSeconds": 2760,
+          "team": "Saudi Arabia",
+          "timer": "60:00",
+          "timerSeconds": 3600,
           "type": "Substitution"
         },
         {
           "assist": "A. Hejji",
           "comments": null,
-          "detail": "Substitution 3",
+          "detail": "Substitution 4",
           "displayMinute": "60'",
           "extra": null,
           "isDisallowed": false,
@@ -21694,24 +21712,6 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Abu Al Shamat",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "61'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 61,
-          "player": "F. Al Buraikan",
-          "playerOff": "F. Al Buraikan",
-          "playerOn": "M. Abu Al Shamat",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Substitution"
