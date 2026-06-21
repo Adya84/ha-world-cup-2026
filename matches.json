@@ -18769,13 +18769,21 @@
       "utcDate": "2026-06-21T00:00:00Z"
     },
     {
+      "apiFootballFixtureId": 1489394,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": "33%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/766.svg",
         "id": 766,
@@ -18783,7 +18791,8 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 120,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -18791,8 +18800,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_F",
+      "homeCorners": null,
+      "homeFouls": 1,
+      "homeOffsides": null,
+      "homePossession": "67%",
+      "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/tunisia.svg",
         "id": 802,
@@ -18801,18 +18818,43 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-21T06:01:07Z",
+      "lastApiSync": "2026-06-21T04:01:44.324112+00:00",
+      "lastUpdated": "2026-06-21T06:01:40Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "33%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 1,
+          "offsides": null,
+          "possession": "67%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-21T04:01:44.324112+00:00",
+        "seconds": 120,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "2'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -18837,14 +18879,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 37278,
           "name": "Istv\u00e1n Kov\u00e1cs",
           "nationality": "Romania",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Istvan Kovacs, Romania",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Istv\u00e1n Kov\u00e1cs",
+          "nationality": "Romania",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Istvan Kovacs, Romania",
           "type": "REFEREE"
         }
       ],
@@ -18855,11 +18912,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -18868,8 +18926,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-21T04:00:00Z",
+      "venue": {
+        "city": "Monterrey",
+        "id": 11905,
+        "name": "Estadio BBVA"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
