@@ -79,7 +79,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4380,
+      "clockSeconds": 4440,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -88,7 +88,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "73'",
+      "displayMinute": "74'",
       "events": [
         {
           "assist": null,
@@ -163,24 +163,6 @@
           "type": "Goal"
         },
         {
-          "assist": "D. Duarte",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "T. Arcanjo",
-          "playerOff": "T. Arcanjo",
-          "playerOn": "D. Duarte",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "M. Araujo",
           "comments": null,
           "detail": "Normal Goal",
@@ -199,6 +181,60 @@
           "type": "Goal"
         },
         {
+          "assist": "D. Duarte",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "T. Arcanjo",
+          "playerOff": "T. Arcanjo",
+          "playerOn": "D. Duarte",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "H. Varela",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "G. Rodrigues",
+          "playerOff": "G. Rodrigues",
+          "playerOn": "H. Varela",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Da Costa",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "Benchimol",
+          "playerOff": "Benchimol",
+          "playerOn": "N. Da Costa",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
           "assist": null,
           "comments": "Holding",
           "detail": "Yellow Card",
@@ -215,42 +251,6 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Yellow Card"
-        },
-        {
-          "assist": "N. Da Costa",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "Benchimol",
-          "playerOff": "Benchimol",
-          "playerOn": "N. Da Costa",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "H. Varela",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "G. Rodrigues",
-          "playerOff": "G. Rodrigues",
-          "playerOn": "H. Varela",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
         },
         {
           "assist": null,
@@ -289,27 +289,9 @@
           "type": "Disallowed Goal"
         },
         {
-          "assist": "N. de la Cruz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "70'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 70,
-          "player": "M. Ugarte",
-          "playerOff": "M. Ugarte",
-          "playerOn": "N. de la Cruz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "70:00",
-          "timerSeconds": 4200,
-          "type": "Substitution"
-        },
-        {
           "assist": "D. Nunez",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "70'",
           "extra": null,
           "isDisallowed": false,
@@ -323,10 +305,28 @@
           "timer": "70:00",
           "timerSeconds": 4200,
           "type": "Substitution"
+        },
+        {
+          "assist": "N. de la Cruz",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "M. Ugarte",
+          "playerOff": "M. Ugarte",
+          "playerOn": "N. de la Cruz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4380,
-      "fallbackClockText": "73'",
+      "fallbackClock": 4440,
+      "fallbackClockText": "74'",
       "goalEvents": [
         {
           "assist": null,
@@ -437,8 +437,8 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T23:38:35.222616+00:00",
-      "lastUpdated": "2026-06-22T01:38:34Z",
+      "lastApiSync": "2026-06-21T23:39:21.274475+00:00",
+      "lastUpdated": "2026-06-22T01:39:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -466,14 +466,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "73'",
-        "lastApiSync": "2026-06-21T23:38:35.222616+00:00",
-        "seconds": 4380,
+        "displayMinute": "74'",
+        "lastApiSync": "2026-06-21T23:39:21.274475+00:00",
+        "seconds": 4440,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "73'"
+        "timer": "74'"
       },
-      "manualClockText": "73'",
+      "manualClockText": "74'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -498,7 +498,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 73,
+      "minute": 74,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -566,27 +566,9 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Da Costa",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "Benchimol",
-          "playerOff": "Benchimol",
-          "playerOn": "N. Da Costa",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
           "assist": "H. Varela",
           "comments": null,
-          "detail": "Substitution 3",
+          "detail": "Substitution 2",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -602,16 +584,34 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. de la Cruz",
+          "assist": "N. Da Costa",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "Benchimol",
+          "playerOff": "Benchimol",
+          "playerOn": "N. Da Costa",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Nunez",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "70'",
           "extra": null,
           "isDisallowed": false,
           "minute": 70,
-          "player": "M. Ugarte",
-          "playerOff": "M. Ugarte",
-          "playerOn": "N. de la Cruz",
+          "player": "F. Vinas",
+          "playerOff": "F. Vinas",
+          "playerOn": "D. Nunez",
           "rawType": "subst",
           "source": "api_football",
           "team": "Uruguay",
@@ -620,16 +620,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "D. Nunez",
+          "assist": "N. de la Cruz",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "70'",
           "extra": null,
           "isDisallowed": false,
           "minute": 70,
-          "player": "F. Vinas",
-          "playerOff": "F. Vinas",
-          "playerOn": "D. Nunez",
+          "player": "M. Ugarte",
+          "playerOff": "M. Ugarte",
+          "playerOn": "N. de la Cruz",
           "rawType": "subst",
           "source": "api_football",
           "team": "Uruguay",
@@ -749,7 +749,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4380,
+      "clockSeconds": 4440,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -758,7 +758,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "73'",
+      "displayMinute": "74'",
       "events": [
         {
           "assist": null,
@@ -833,24 +833,6 @@
           "type": "Goal"
         },
         {
-          "assist": "D. Duarte",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "T. Arcanjo",
-          "playerOff": "T. Arcanjo",
-          "playerOn": "D. Duarte",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "M. Araujo",
           "comments": null,
           "detail": "Normal Goal",
@@ -869,6 +851,60 @@
           "type": "Goal"
         },
         {
+          "assist": "D. Duarte",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "T. Arcanjo",
+          "playerOff": "T. Arcanjo",
+          "playerOn": "D. Duarte",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "H. Varela",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "G. Rodrigues",
+          "playerOff": "G. Rodrigues",
+          "playerOn": "H. Varela",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Da Costa",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "Benchimol",
+          "playerOff": "Benchimol",
+          "playerOn": "N. Da Costa",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
           "assist": null,
           "comments": "Holding",
           "detail": "Yellow Card",
@@ -885,42 +921,6 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Yellow Card"
-        },
-        {
-          "assist": "N. Da Costa",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "Benchimol",
-          "playerOff": "Benchimol",
-          "playerOn": "N. Da Costa",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "H. Varela",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "G. Rodrigues",
-          "playerOff": "G. Rodrigues",
-          "playerOn": "H. Varela",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
         },
         {
           "assist": null,
@@ -959,27 +959,9 @@
           "type": "Disallowed Goal"
         },
         {
-          "assist": "N. de la Cruz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "70'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 70,
-          "player": "M. Ugarte",
-          "playerOff": "M. Ugarte",
-          "playerOn": "N. de la Cruz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "70:00",
-          "timerSeconds": 4200,
-          "type": "Substitution"
-        },
-        {
           "assist": "D. Nunez",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "70'",
           "extra": null,
           "isDisallowed": false,
@@ -993,10 +975,28 @@
           "timer": "70:00",
           "timerSeconds": 4200,
           "type": "Substitution"
+        },
+        {
+          "assist": "N. de la Cruz",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "M. Ugarte",
+          "playerOff": "M. Ugarte",
+          "playerOn": "N. de la Cruz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4380,
-      "fallbackClockText": "73'",
+      "fallbackClock": 4440,
+      "fallbackClockText": "74'",
       "goalEvents": [
         {
           "assist": null,
@@ -1107,8 +1107,8 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T23:38:35.222616+00:00",
-      "lastUpdated": "2026-06-22T01:38:34Z",
+      "lastApiSync": "2026-06-21T23:39:21.274475+00:00",
+      "lastUpdated": "2026-06-22T01:39:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1136,14 +1136,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "73'",
-        "lastApiSync": "2026-06-21T23:38:35.222616+00:00",
-        "seconds": 4380,
+        "displayMinute": "74'",
+        "lastApiSync": "2026-06-21T23:39:21.274475+00:00",
+        "seconds": 4440,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "73'"
+        "timer": "74'"
       },
-      "manualClockText": "73'",
+      "manualClockText": "74'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -1168,7 +1168,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 73,
+      "minute": 74,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1236,27 +1236,9 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Da Costa",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "Benchimol",
-          "playerOff": "Benchimol",
-          "playerOn": "N. Da Costa",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
           "assist": "H. Varela",
           "comments": null,
-          "detail": "Substitution 3",
+          "detail": "Substitution 2",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -1272,16 +1254,34 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. de la Cruz",
+          "assist": "N. Da Costa",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "Benchimol",
+          "playerOff": "Benchimol",
+          "playerOn": "N. Da Costa",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Nunez",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "70'",
           "extra": null,
           "isDisallowed": false,
           "minute": 70,
-          "player": "M. Ugarte",
-          "playerOff": "M. Ugarte",
-          "playerOn": "N. de la Cruz",
+          "player": "F. Vinas",
+          "playerOff": "F. Vinas",
+          "playerOn": "D. Nunez",
           "rawType": "subst",
           "source": "api_football",
           "team": "Uruguay",
@@ -1290,16 +1290,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "D. Nunez",
+          "assist": "N. de la Cruz",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "70'",
           "extra": null,
           "isDisallowed": false,
           "minute": 70,
-          "player": "F. Vinas",
-          "playerOff": "F. Vinas",
-          "playerOn": "D. Nunez",
+          "player": "M. Ugarte",
+          "playerOff": "M. Ugarte",
+          "playerOn": "N. de la Cruz",
           "rawType": "subst",
           "source": "api_football",
           "team": "Uruguay",
