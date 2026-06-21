@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3420,
+      "clockSeconds": 3480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "57'",
+      "displayMinute": "58'",
       "events": [
         {
           "assist": null,
@@ -143,10 +143,64 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Castagne",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "T. Meunier",
+          "playerOff": "T. Meunier",
+          "playerOn": "T. Castagne",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "H. Vanaken",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "N. Raskin",
+          "playerOff": "N. Raskin",
+          "playerOn": "H. Vanaken",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Lukebakio",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "A. Saelemaekers",
+          "playerOff": "A. Saelemaekers",
+          "playerOn": "D. Lukebakio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3420,
-      "fallbackClockText": "57'",
+      "fallbackClock": 3480,
+      "fallbackClockText": "58'",
       "goalEvents": [
         {
           "assist": "E. Hajsafi",
@@ -187,8 +241,8 @@
         "tla": "BEL"
       },
       "id": 537365,
-      "lastApiSync": "2026-06-21T20:22:41.309303+00:00",
-      "lastUpdated": "2026-06-21T22:22:40Z",
+      "lastApiSync": "2026-06-21T20:23:24.789414+00:00",
+      "lastUpdated": "2026-06-21T22:23:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -216,14 +270,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "57'",
-        "lastApiSync": "2026-06-21T20:22:41.309303+00:00",
-        "seconds": 3420,
+        "displayMinute": "58'",
+        "lastApiSync": "2026-06-21T20:23:24.789414+00:00",
+        "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "57'"
+        "timer": "58'"
       },
-      "manualClockText": "57'",
+      "manualClockText": "58'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -248,7 +302,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 57,
+      "minute": 58,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -313,6 +367,60 @@
           "team": "Iran",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Castagne",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "T. Meunier",
+          "playerOff": "T. Meunier",
+          "playerOn": "T. Castagne",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "H. Vanaken",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "N. Raskin",
+          "playerOff": "N. Raskin",
+          "playerOn": "H. Vanaken",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Lukebakio",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "A. Saelemaekers",
+          "playerOff": "A. Saelemaekers",
+          "playerOn": "D. Lukebakio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
           "type": "Substitution"
         }
       ],
@@ -409,7 +517,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3420,
+      "clockSeconds": 3480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -418,7 +526,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "57'",
+      "displayMinute": "58'",
       "events": [
         {
           "assist": null,
@@ -491,10 +599,64 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Castagne",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "T. Meunier",
+          "playerOff": "T. Meunier",
+          "playerOn": "T. Castagne",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "H. Vanaken",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "N. Raskin",
+          "playerOff": "N. Raskin",
+          "playerOn": "H. Vanaken",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Lukebakio",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "A. Saelemaekers",
+          "playerOff": "A. Saelemaekers",
+          "playerOn": "D. Lukebakio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3420,
-      "fallbackClockText": "57'",
+      "fallbackClock": 3480,
+      "fallbackClockText": "58'",
       "goalEvents": [
         {
           "assist": "E. Hajsafi",
@@ -535,8 +697,8 @@
         "tla": "BEL"
       },
       "id": 537365,
-      "lastApiSync": "2026-06-21T20:22:41.309303+00:00",
-      "lastUpdated": "2026-06-21T22:22:40Z",
+      "lastApiSync": "2026-06-21T20:23:24.789414+00:00",
+      "lastUpdated": "2026-06-21T22:23:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -564,14 +726,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "57'",
-        "lastApiSync": "2026-06-21T20:22:41.309303+00:00",
-        "seconds": 3420,
+        "displayMinute": "58'",
+        "lastApiSync": "2026-06-21T20:23:24.789414+00:00",
+        "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "57'"
+        "timer": "58'"
       },
-      "manualClockText": "57'",
+      "manualClockText": "58'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -596,7 +758,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 57,
+      "minute": 58,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -661,6 +823,60 @@
           "team": "Iran",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Castagne",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "T. Meunier",
+          "playerOff": "T. Meunier",
+          "playerOn": "T. Castagne",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "H. Vanaken",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "N. Raskin",
+          "playerOff": "N. Raskin",
+          "playerOn": "H. Vanaken",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Lukebakio",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "A. Saelemaekers",
+          "playerOff": "A. Saelemaekers",
+          "playerOn": "D. Lukebakio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "58:00",
+          "timerSeconds": 3480,
           "type": "Substitution"
         }
       ],
