@@ -14641,22 +14641,22 @@
         "type": "Substitution"
       },
       {
-        "assist": "P. Porro",
+        "assist": null,
         "comments": null,
-        "detail": "Normal Goal",
+        "detail": "Goal Disallowed - offside",
         "displayMinute": "90+2'",
         "extra": 2,
-        "isDisallowed": false,
+        "isDisallowed": true,
         "minute": 90,
         "player": "F. Torres",
         "playerOff": null,
         "playerOn": null,
-        "rawType": "Goal",
+        "rawType": "Var",
         "source": "api_football",
         "team": "Spain",
         "timer": "92:00",
         "timerSeconds": 5520,
-        "type": "Goal"
+        "type": "Disallowed Goal"
       },
       {
         "assist": "K. Al Ghannam",
@@ -14769,36 +14769,13 @@
         "timer": "49:00",
         "timerSeconds": 2940,
         "type": "Goal"
-      },
-      {
-        "assist": "P. Porro",
-        "awayTeam": "Saudi Arabia",
-        "comments": null,
-        "detail": "Normal Goal",
-        "displayMinute": "90+2'",
-        "extra": 2,
-        "goalNumber": 5,
-        "homeTeam": "Spain",
-        "isDisallowed": false,
-        "matchId": 537371,
-        "matchUtcDate": "2026-06-21T16:00:00Z",
-        "minute": 90,
-        "player": "F. Torres",
-        "playerOff": null,
-        "playerOn": null,
-        "rawType": "Goal",
-        "source": "api_football",
-        "team": "Spain",
-        "timer": "92:00",
-        "timerSeconds": 5520,
-        "type": "Goal"
       }
     ],
-    "homeScore": 5,
+    "homeScore": 4,
     "homeTeam": "Spain",
-    "lastApiSync": "2026-06-21T17:57:45.984906+00:00",
+    "lastApiSync": "2026-06-21T17:58:29.280827+00:00",
     "manualClockText": "90'",
-    "phase_start": "2026-06-21T17:57:45.984906+00:00",
+    "phase_start": "2026-06-21T17:58:29.280827+00:00",
     "referees": [
       {
         "name": "Raphael Claus",
