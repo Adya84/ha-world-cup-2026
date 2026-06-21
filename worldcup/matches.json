@@ -18948,7 +18948,7 @@
       "awayFouls": 5,
       "awayOffsides": null,
       "awayPossession": "68%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/766.svg",
@@ -18985,6 +18985,24 @@
           "timer": "4:00",
           "timerSeconds": 240,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "31'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 31,
+          "player": "A. Ueda",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 1860,
@@ -19012,6 +19030,29 @@
           "timer": "4:00",
           "timerSeconds": 240,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Japan",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "31'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Tunisia",
+          "isDisallowed": false,
+          "matchId": 537360,
+          "matchUtcDate": "2026-06-21T04:00:00Z",
+          "minute": 31,
+          "player": "A. Ueda",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -19030,8 +19071,8 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": "2026-06-21T04:31:00.022144+00:00",
-      "lastUpdated": "2026-06-21T06:30:58Z",
+      "lastApiSync": "2026-06-21T04:31:34.557949+00:00",
+      "lastUpdated": "2026-06-21T06:31:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -19060,7 +19101,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "31'",
-        "lastApiSync": "2026-06-21T04:31:00.022144+00:00",
+        "lastApiSync": "2026-06-21T04:31:34.557949+00:00",
         "seconds": 1860,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -19120,11 +19161,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "halfTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "winner": "AWAY_TEAM"
