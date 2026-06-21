@@ -18775,6 +18775,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/766.svg",
         "id": 766,
@@ -18782,6 +18783,8 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -18789,6 +18792,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_F",
       "homeTeam": {
         "crest": "https://crests.football-data.org/tunisia.svg",
@@ -18798,8 +18802,44 @@
         "tla": "TUN"
       },
       "id": 537360,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-21T05:14:04Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 28.1,
+        "condition": "fair_night",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T03:55:04.746524+00:00",
+        "humidity": 91.9,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-21T03:00:00Z",
+        "pressure": 1011.2,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 116.1,
+        "windSpeed": 4.6,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 2,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -18831,8 +18871,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-21T04:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-21T04:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 28.1,
+        "condition": "fair_night",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T03:55:04.746524+00:00",
+        "humidity": 91.9,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-21T03:00:00Z",
+        "pressure": 1011.2,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 116.1,
+        "windSpeed": 4.6,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
