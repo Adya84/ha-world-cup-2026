@@ -20942,7 +20942,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4200,
+      "clockSeconds": 4260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -20951,7 +20951,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "70'",
+      "displayMinute": "71'",
       "events": [
         {
           "assist": null,
@@ -21042,17 +21042,35 @@
           "timer": "56:00",
           "timerSeconds": 3360,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "N. Angulo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "P. Estupinan",
+          "playerOff": "P. Estupinan",
+          "playerOn": "N. Angulo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4200,
-      "fallbackClockText": "70'",
+      "fallbackClock": 4260,
+      "fallbackClockText": "71'",
       "group": "GROUP_E",
       "homeCorners": 4,
-      "homeFouls": 6,
+      "homeFouls": 7,
       "homeOffsides": 1,
       "homePossession": "74%",
       "homeScore": 0,
-      "homeShotsOnGoal": 11,
+      "homeShotsOnGoal": 12,
       "homeTeam": {
         "crest": "https://crests.football-data.org/791.svg",
         "id": 791,
@@ -21061,8 +21079,8 @@
         "tla": "ECU"
       },
       "id": 537354,
-      "lastApiSync": "2026-06-21T01:30:19.925613+00:00",
-      "lastUpdated": "2026-06-21T03:30:16Z",
+      "lastApiSync": "2026-06-21T01:30:54.956678+00:00",
+      "lastUpdated": "2026-06-21T03:30:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -21078,26 +21096,26 @@
         },
         "home": {
           "corners": 4,
-          "fouls": 6,
+          "fouls": 7,
           "offsides": 1,
           "possession": "74%",
           "redCards": null,
-          "shotsOffGoal": 7,
-          "shotsOnGoal": 11,
-          "totalShots": 19,
+          "shotsOffGoal": 8,
+          "shotsOnGoal": 12,
+          "totalShots": 21,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "70'",
-        "lastApiSync": "2026-06-21T01:30:19.925613+00:00",
-        "seconds": 4200,
+        "displayMinute": "71'",
+        "lastApiSync": "2026-06-21T01:30:54.956678+00:00",
+        "seconds": 4260,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "70'"
+        "timer": "71'"
       },
-      "manualClockText": "70'",
+      "manualClockText": "71'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -21122,7 +21140,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 70,
+      "minute": 71,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -21187,6 +21205,24 @@
           "team": "Ecuador",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Angulo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "P. Estupinan",
+          "playerOff": "P. Estupinan",
+          "playerOn": "N. Angulo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "71:00",
+          "timerSeconds": 4260,
           "type": "Substitution"
         }
       ],
