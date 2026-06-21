@@ -15055,23 +15055,32 @@
     "utcDate": "2026-06-21T16:00:00Z"
   },
   "537372": {
+    "apiFootballFixtureId": 1489398,
     "awayScore": 0,
     "awayTeam": "Cape Verde",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Uruguay",
-    "phase_start": null,
+    "lastApiSync": "2026-06-21T22:01:10.479837+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-21T22:01:10.479837+00:00",
     "referees": [
       {
-        "id": 215543,
         "name": "Espen Esk\u00e5s",
         "nationality": "Norway",
         "type": "REFEREE"
+      },
+      {
+        "name": "Espen Eskas, Norway",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-21T22:00:00Z"
   },
   "537373": {
