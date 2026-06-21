@@ -18792,6 +18792,24 @@
           "timer": "56:00",
           "timerSeconds": 3360,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "75'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 75,
+          "player": "J. Gaari",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Cura\u00e7ao",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "type": "Yellow Card"
         }
       ],
       "clockSeconds": 4500,
@@ -18912,17 +18930,35 @@
           "timer": "71:00",
           "timerSeconds": 4260,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "75'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 75,
+          "player": "J. Gaari",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Cura\u00e7ao",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "type": "Yellow Card"
         }
       ],
       "fallbackClock": 4500,
       "fallbackClockText": "75'",
       "group": "GROUP_E",
-      "homeCorners": 4,
+      "homeCorners": 5,
       "homeFouls": 7,
       "homeOffsides": 1,
       "homePossession": "74%",
       "homeScore": 0,
-      "homeShotsOnGoal": 12,
+      "homeShotsOnGoal": 13,
       "homeTeam": {
         "crest": "https://crests.football-data.org/791.svg",
         "id": 791,
@@ -18931,8 +18967,8 @@
         "tla": "ECU"
       },
       "id": 537354,
-      "lastApiSync": "2026-06-21T01:34:33.392087+00:00",
-      "lastUpdated": "2026-06-21T03:34:31Z",
+      "lastApiSync": "2026-06-21T01:35:08.267108+00:00",
+      "lastUpdated": "2026-06-21T03:35:04Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -18947,21 +18983,21 @@
           "yellowCards": 3
         },
         "home": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 7,
           "offsides": 1,
           "possession": "74%",
           "redCards": null,
-          "shotsOffGoal": 8,
-          "shotsOnGoal": 12,
-          "totalShots": 21,
+          "shotsOffGoal": 9,
+          "shotsOnGoal": 13,
+          "totalShots": 24,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "75'",
-        "lastApiSync": "2026-06-21T01:34:33.392087+00:00",
+        "lastApiSync": "2026-06-21T01:35:08.267108+00:00",
         "seconds": 4500,
         "source": "api_football_live_minute",
         "status": "2H",
