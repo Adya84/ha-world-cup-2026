@@ -41323,6 +41323,227 @@
         }
       ],
       "utcDate": "2026-06-21T16:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489395,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/iran.svg",
+        "id": 840,
+        "name": "Iran",
+        "shortName": "Iran",
+        "tla": "IRN"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_G",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/805.svg",
+        "id": 805,
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "tla": "BEL"
+      },
+      "id": 537365,
+      "lastApiSync": "2026-06-21T19:01:13.109816+00:00",
+      "lastUpdated": "2026-06-21T20:32:40Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-21T19:01:13.109816+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489395,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Dar\u00edo Herrera",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Dario Herrera, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Dar\u00edo Herrera",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Dario Herrera, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Los Angeles",
+          "cloudCoverage": 32.0,
+          "condition": "fair_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-21T18:55:19.254778+00:00",
+          "humidity": 55.4,
+          "latitude": 33.9535,
+          "longitude": -118.3392,
+          "name": "SoFi Stadium weather",
+          "observedAt": "2026-06-21T18:00:00Z",
+          "pressure": 1013.3,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "SoFi Stadium",
+          "temperature": 22.0,
+          "temperatureUnit": "C",
+          "windBearing": 201.9,
+          "windSpeed": 3.2,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Los Angeles",
+        "cloudCoverage": 32.0,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T18:55:19.254778+00:00",
+        "humidity": 55.4,
+        "latitude": 33.9535,
+        "longitude": -118.3392,
+        "name": "SoFi Stadium weather",
+        "observedAt": "2026-06-21T18:00:00Z",
+        "pressure": 1013.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "SoFi Stadium",
+        "temperature": 22.0,
+        "temperatureUnit": "C",
+        "windBearing": 201.9,
+        "windSpeed": 3.2,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Dar\u00edo Herrera",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Dario Herrera, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Dar\u00edo Herrera",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Dario Herrera, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-21T19:00:00Z",
+      "venue": {
+        "city": "Inglewood",
+        "id": null,
+        "name": "SoFi Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Los Angeles",
+        "cloudCoverage": 32.0,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T18:55:19.254778+00:00",
+        "humidity": 55.4,
+        "latitude": 33.9535,
+        "longitude": -118.3392,
+        "name": "SoFi Stadium weather",
+        "observedAt": "2026-06-21T18:00:00Z",
+        "pressure": 1013.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "SoFi Stadium",
+        "temperature": 22.0,
+        "temperatureUnit": "C",
+        "windBearing": 201.9,
+        "windSpeed": 3.2,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -82649,6 +82870,227 @@
         }
       ],
       "utcDate": "2026-06-21T16:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489395,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/iran.svg",
+        "id": 840,
+        "name": "Iran",
+        "shortName": "Iran",
+        "tla": "IRN"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_G",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/805.svg",
+        "id": 805,
+        "name": "Belgium",
+        "shortName": "Belgium",
+        "tla": "BEL"
+      },
+      "id": 537365,
+      "lastApiSync": "2026-06-21T19:01:13.109816+00:00",
+      "lastUpdated": "2026-06-21T20:32:40Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-21T19:01:13.109816+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489395,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Dar\u00edo Herrera",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Dario Herrera, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Dar\u00edo Herrera",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Dario Herrera, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Los Angeles",
+          "cloudCoverage": 32.0,
+          "condition": "fair_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-21T18:55:19.254778+00:00",
+          "humidity": 55.4,
+          "latitude": 33.9535,
+          "longitude": -118.3392,
+          "name": "SoFi Stadium weather",
+          "observedAt": "2026-06-21T18:00:00Z",
+          "pressure": 1013.3,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "SoFi Stadium",
+          "temperature": 22.0,
+          "temperatureUnit": "C",
+          "windBearing": 201.9,
+          "windSpeed": 3.2,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Los Angeles",
+        "cloudCoverage": 32.0,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T18:55:19.254778+00:00",
+        "humidity": 55.4,
+        "latitude": 33.9535,
+        "longitude": -118.3392,
+        "name": "SoFi Stadium weather",
+        "observedAt": "2026-06-21T18:00:00Z",
+        "pressure": 1013.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "SoFi Stadium",
+        "temperature": 22.0,
+        "temperatureUnit": "C",
+        "windBearing": 201.9,
+        "windSpeed": 3.2,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Dar\u00edo Herrera",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Dario Herrera, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Dar\u00edo Herrera",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Dario Herrera, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-21T19:00:00Z",
+      "venue": {
+        "city": "Inglewood",
+        "id": null,
+        "name": "SoFi Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Los Angeles",
+        "cloudCoverage": 32.0,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T18:55:19.254778+00:00",
+        "humidity": 55.4,
+        "latitude": 33.9535,
+        "longitude": -118.3392,
+        "name": "SoFi Stadium weather",
+        "observedAt": "2026-06-21T18:00:00Z",
+        "pressure": 1013.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "SoFi Stadium",
+        "temperature": 22.0,
+        "temperatureUnit": "C",
+        "windBearing": 201.9,
+        "windSpeed": 3.2,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
