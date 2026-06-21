@@ -13334,7 +13334,7 @@
     "apiFootballFixtureId": 1489395,
     "awayScore": 0,
     "awayTeam": "Iran",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "cardEvents": [
       {
         "assist": null,
@@ -13374,8 +13374,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": null,
@@ -13430,6 +13430,24 @@
         "timer": "33:00",
         "timerSeconds": 1980,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "A. Jahanbakhsh",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "S. Hardani",
+        "playerOff": "S. Hardani",
+        "playerOn": "A. Jahanbakhsh",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Iran",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -13459,9 +13477,9 @@
     ],
     "homeScore": 0,
     "homeTeam": "Belgium",
-    "lastApiSync": "2026-06-21T20:10:49.561994+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-06-21T20:10:49.561994+00:00",
+    "lastApiSync": "2026-06-21T20:11:32.982801+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-06-21T20:11:32.982801+00:00",
     "referees": [
       {
         "name": "Dar\u00edo Herrera",
@@ -13474,7 +13492,27 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "A. Jahanbakhsh",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "S. Hardani",
+        "playerOff": "S. Hardani",
+        "playerOn": "A. Jahanbakhsh",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Iran",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-21T19:00:00Z"
   },
   "537366": {
