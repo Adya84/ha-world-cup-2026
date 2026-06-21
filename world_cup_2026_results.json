@@ -41284,10 +41284,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
+      "awayCorners": 3,
       "awayFouls": 3,
       "awayOffsides": 0,
-      "awayPossession": "33%",
+      "awayPossession": "34%",
       "awayScore": 2,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -41353,7 +41353,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -41362,7 +41362,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": null,
@@ -41633,10 +41633,28 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "B. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "M. Araujo",
+          "playerOff": "M. Araujo",
+          "playerOn": "B. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": null,
@@ -41736,7 +41754,7 @@
       "homeCorners": 6,
       "homeFouls": 8,
       "homeOffsides": 3,
-      "homePossession": "67%",
+      "homePossession": "66%",
       "homeScore": 2,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -41747,49 +41765,49 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T23:46:54.177120+00:00",
-      "lastUpdated": "2026-06-22T01:46:52Z",
+      "lastApiSync": "2026-06-21T23:47:39.899275+00:00",
+      "lastUpdated": "2026-06-22T01:47:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
+          "corners": 3,
           "fouls": 3,
           "offsides": 0,
-          "possession": "33%",
+          "possession": "34%",
           "redCards": null,
-          "shotsOffGoal": 3,
+          "shotsOffGoal": 4,
           "shotsOnGoal": 2,
-          "totalShots": 6,
+          "totalShots": 7,
           "yellowCards": 1
         },
         "home": {
           "corners": 6,
           "fouls": 8,
           "offsides": 3,
-          "possession": "67%",
+          "possession": "66%",
           "redCards": null,
-          "shotsOffGoal": 5,
+          "shotsOffGoal": 6,
           "shotsOnGoal": 2,
-          "totalShots": 12,
+          "totalShots": 13,
           "yellowCards": 2
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-21T23:46:54.177120+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-21T23:47:39.899275+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchDetails": {
         "apiFootballFixtureId": 1489398,
-        "awayCorners": 1,
+        "awayCorners": 3,
         "awayFouls": 3,
         "awayOffsides": 0,
-        "awayPossession": "33%",
+        "awayPossession": "34%",
         "awayShotsOnGoal": 2,
         "cardEvents": [
           {
@@ -42117,6 +42135,24 @@
             "timer": "80:00",
             "timerSeconds": 4800,
             "type": "Substitution"
+          },
+          {
+            "assist": "B. Rodriguez",
+            "comments": null,
+            "detail": "Substitution 3",
+            "displayMinute": "82'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 82,
+            "player": "M. Araujo",
+            "playerOff": "M. Araujo",
+            "playerOn": "B. Rodriguez",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Uruguay",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -42217,31 +42253,31 @@
         "homeCorners": 6,
         "homeFouls": 8,
         "homeOffsides": 3,
-        "homePossession": "67%",
+        "homePossession": "66%",
         "homeShotsOnGoal": 2,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
-            "corners": 1,
+            "corners": 3,
             "fouls": 3,
             "offsides": 0,
-            "possession": "33%",
+            "possession": "34%",
             "redCards": null,
-            "shotsOffGoal": 3,
+            "shotsOffGoal": 4,
             "shotsOnGoal": 2,
-            "totalShots": 6,
+            "totalShots": 7,
             "yellowCards": 1
           },
           "home": {
             "corners": 6,
             "fouls": 8,
             "offsides": 3,
-            "possession": "67%",
+            "possession": "66%",
             "redCards": null,
-            "shotsOffGoal": 5,
+            "shotsOffGoal": 6,
             "shotsOnGoal": 2,
-            "totalShots": 12,
+            "totalShots": 13,
             "yellowCards": 2
           }
         },
@@ -42393,6 +42429,24 @@
             "timer": "80:00",
             "timerSeconds": 4800,
             "type": "Substitution"
+          },
+          {
+            "assist": "B. Rodriguez",
+            "comments": null,
+            "detail": "Substitution 3",
+            "displayMinute": "82'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 82,
+            "player": "M. Araujo",
+            "playerOff": "M. Araujo",
+            "playerOn": "B. Rodriguez",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Uruguay",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -42443,7 +42497,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -42616,6 +42670,24 @@
           "team": "Cape Verde Islands",
           "timer": "80:00",
           "timerSeconds": 4800,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "M. Araujo",
+          "playerOff": "M. Araujo",
+          "playerOn": "B. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "82:00",
+          "timerSeconds": 4920,
           "type": "Substitution"
         }
       ],
@@ -83935,10 +84007,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
+      "awayCorners": 3,
       "awayFouls": 3,
       "awayOffsides": 0,
-      "awayPossession": "33%",
+      "awayPossession": "34%",
       "awayScore": 2,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -84004,7 +84076,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -84013,7 +84085,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": null,
@@ -84284,10 +84356,28 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "B. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "M. Araujo",
+          "playerOff": "M. Araujo",
+          "playerOn": "B. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": null,
@@ -84387,7 +84477,7 @@
       "homeCorners": 6,
       "homeFouls": 8,
       "homeOffsides": 3,
-      "homePossession": "67%",
+      "homePossession": "66%",
       "homeScore": 2,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -84398,49 +84488,49 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T23:46:54.177120+00:00",
-      "lastUpdated": "2026-06-22T01:46:52Z",
+      "lastApiSync": "2026-06-21T23:47:39.899275+00:00",
+      "lastUpdated": "2026-06-22T01:47:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
+          "corners": 3,
           "fouls": 3,
           "offsides": 0,
-          "possession": "33%",
+          "possession": "34%",
           "redCards": null,
-          "shotsOffGoal": 3,
+          "shotsOffGoal": 4,
           "shotsOnGoal": 2,
-          "totalShots": 6,
+          "totalShots": 7,
           "yellowCards": 1
         },
         "home": {
           "corners": 6,
           "fouls": 8,
           "offsides": 3,
-          "possession": "67%",
+          "possession": "66%",
           "redCards": null,
-          "shotsOffGoal": 5,
+          "shotsOffGoal": 6,
           "shotsOnGoal": 2,
-          "totalShots": 12,
+          "totalShots": 13,
           "yellowCards": 2
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-21T23:46:54.177120+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-21T23:47:39.899275+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchDetails": {
         "apiFootballFixtureId": 1489398,
-        "awayCorners": 1,
+        "awayCorners": 3,
         "awayFouls": 3,
         "awayOffsides": 0,
-        "awayPossession": "33%",
+        "awayPossession": "34%",
         "awayShotsOnGoal": 2,
         "cardEvents": [
           {
@@ -84768,6 +84858,24 @@
             "timer": "80:00",
             "timerSeconds": 4800,
             "type": "Substitution"
+          },
+          {
+            "assist": "B. Rodriguez",
+            "comments": null,
+            "detail": "Substitution 3",
+            "displayMinute": "82'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 82,
+            "player": "M. Araujo",
+            "playerOff": "M. Araujo",
+            "playerOn": "B. Rodriguez",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Uruguay",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -84868,31 +84976,31 @@
         "homeCorners": 6,
         "homeFouls": 8,
         "homeOffsides": 3,
-        "homePossession": "67%",
+        "homePossession": "66%",
         "homeShotsOnGoal": 2,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
-            "corners": 1,
+            "corners": 3,
             "fouls": 3,
             "offsides": 0,
-            "possession": "33%",
+            "possession": "34%",
             "redCards": null,
-            "shotsOffGoal": 3,
+            "shotsOffGoal": 4,
             "shotsOnGoal": 2,
-            "totalShots": 6,
+            "totalShots": 7,
             "yellowCards": 1
           },
           "home": {
             "corners": 6,
             "fouls": 8,
             "offsides": 3,
-            "possession": "67%",
+            "possession": "66%",
             "redCards": null,
-            "shotsOffGoal": 5,
+            "shotsOffGoal": 6,
             "shotsOnGoal": 2,
-            "totalShots": 12,
+            "totalShots": 13,
             "yellowCards": 2
           }
         },
@@ -85044,6 +85152,24 @@
             "timer": "80:00",
             "timerSeconds": 4800,
             "type": "Substitution"
+          },
+          {
+            "assist": "B. Rodriguez",
+            "comments": null,
+            "detail": "Substitution 3",
+            "displayMinute": "82'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 82,
+            "player": "M. Araujo",
+            "playerOff": "M. Araujo",
+            "playerOn": "B. Rodriguez",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Uruguay",
+            "timer": "82:00",
+            "timerSeconds": 4920,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -85094,7 +85220,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -85267,6 +85393,24 @@
           "team": "Cape Verde Islands",
           "timer": "80:00",
           "timerSeconds": 4800,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "M. Araujo",
+          "playerOff": "M. Araujo",
+          "playerOn": "B. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "82:00",
+          "timerSeconds": 4920,
           "type": "Substitution"
         }
       ],
