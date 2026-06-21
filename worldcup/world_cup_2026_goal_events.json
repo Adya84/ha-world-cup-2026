@@ -13331,23 +13331,32 @@
     "utcDate": "2026-06-16T01:00:00Z"
   },
   "537365": {
+    "apiFootballFixtureId": 1489395,
     "awayScore": 0,
     "awayTeam": "Iran",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Belgium",
-    "phase_start": null,
+    "lastApiSync": "2026-06-21T19:01:13.109816+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-21T19:01:13.109816+00:00",
     "referees": [
       {
-        "id": 57288,
         "name": "Dar\u00edo Herrera",
         "nationality": "Argentina",
         "type": "REFEREE"
+      },
+      {
+        "name": "Dario Herrera, Argentina",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-21T19:00:00Z"
   },
   "537366": {
