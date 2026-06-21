@@ -16013,23 +16013,32 @@
     "utcDate": "2026-06-15T22:00:00Z"
   },
   "537371": {
+    "apiFootballFixtureId": 1489397,
     "awayScore": 0,
     "awayTeam": "Saudi Arabia",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Spain",
-    "phase_start": null,
+    "lastApiSync": "2026-06-21T16:02:06.208806+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-21T16:02:06.208806+00:00",
     "referees": [
       {
-        "id": 11260,
         "name": "Raphael Claus",
         "nationality": "Brazil",
         "type": "REFEREE"
+      },
+      {
+        "name": "Raphael Claus, Brazil",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-21T16:00:00Z"
   },
   "537372": {
