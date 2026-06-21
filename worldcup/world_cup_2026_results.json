@@ -42000,6 +42000,192 @@
         }
       ],
       "utcDate": "2026-06-21T19:00:00Z"
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/cape_verde.svg",
+        "id": 1930,
+        "name": "Cape Verde Islands",
+        "shortName": "Cape Verde",
+        "tla": "CPV"
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_H",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/758.svg",
+        "id": 758,
+        "name": "Uruguay",
+        "shortName": "Uruguay",
+        "tla": "URU"
+      },
+      "id": 537372,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-21T23:57:31Z",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchDetails": {
+        "apiFootballFixtureId": null,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 215543,
+            "name": "Espen Esk\u00e5s",
+            "nationality": "Norway",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 215543,
+            "name": "Espen Esk\u00e5s",
+            "nationality": "Norway",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Miami",
+          "cloudCoverage": 33.6,
+          "condition": "rainshowers_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-21T21:55:17.532325+00:00",
+          "humidity": 60.9,
+          "latitude": 25.958,
+          "longitude": -80.2389,
+          "name": "Hard Rock Stadium weather",
+          "observedAt": "2026-06-21T21:00:00Z",
+          "pressure": 1015.7,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Hard Rock Stadium",
+          "temperature": 31.6,
+          "temperatureUnit": "C",
+          "windBearing": 201.2,
+          "windSpeed": 4.7,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 33.6,
+        "condition": "rainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T21:55:17.532325+00:00",
+        "humidity": 60.9,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-06-21T21:00:00Z",
+        "pressure": 1015.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 31.6,
+        "temperatureUnit": "C",
+        "windBearing": 201.2,
+        "windSpeed": 4.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 215543,
+          "name": "Espen Esk\u00e5s",
+          "nationality": "Norway",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": "DRAW"
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "IN_PLAY",
+      "utcDate": "2026-06-21T22:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 33.6,
+        "condition": "rainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T21:55:17.532325+00:00",
+        "humidity": 60.9,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-06-21T21:00:00Z",
+        "pressure": 1015.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 31.6,
+        "temperatureUnit": "C",
+        "windBearing": 201.2,
+        "windSpeed": 4.7,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -84003,6 +84189,192 @@
         }
       ],
       "utcDate": "2026-06-21T19:00:00Z"
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/cape_verde.svg",
+        "id": 1930,
+        "name": "Cape Verde Islands",
+        "shortName": "Cape Verde",
+        "tla": "CPV"
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_H",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/758.svg",
+        "id": 758,
+        "name": "Uruguay",
+        "shortName": "Uruguay",
+        "tla": "URU"
+      },
+      "id": 537372,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-21T23:57:31Z",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchDetails": {
+        "apiFootballFixtureId": null,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 215543,
+            "name": "Espen Esk\u00e5s",
+            "nationality": "Norway",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 215543,
+            "name": "Espen Esk\u00e5s",
+            "nationality": "Norway",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Miami",
+          "cloudCoverage": 33.6,
+          "condition": "rainshowers_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-21T21:55:17.532325+00:00",
+          "humidity": 60.9,
+          "latitude": 25.958,
+          "longitude": -80.2389,
+          "name": "Hard Rock Stadium weather",
+          "observedAt": "2026-06-21T21:00:00Z",
+          "pressure": 1015.7,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Hard Rock Stadium",
+          "temperature": 31.6,
+          "temperatureUnit": "C",
+          "windBearing": 201.2,
+          "windSpeed": 4.7,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 33.6,
+        "condition": "rainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T21:55:17.532325+00:00",
+        "humidity": 60.9,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-06-21T21:00:00Z",
+        "pressure": 1015.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 31.6,
+        "temperatureUnit": "C",
+        "windBearing": 201.2,
+        "windSpeed": 4.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 215543,
+          "name": "Espen Esk\u00e5s",
+          "nationality": "Norway",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": "DRAW"
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "IN_PLAY",
+      "utcDate": "2026-06-21T22:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 33.6,
+        "condition": "rainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-21T21:55:17.532325+00:00",
+        "humidity": 60.9,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-06-21T21:00:00Z",
+        "pressure": 1015.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 31.6,
+        "temperatureUnit": "C",
+        "windBearing": 201.2,
+        "windSpeed": 4.7,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
