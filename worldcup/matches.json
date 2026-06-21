@@ -21550,20 +21550,13 @@
     },
     {
       "apiFootballFixtureId": 1489395,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 9,
-      "awayOffsides": 3,
-      "awayPossession": "29%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 3,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
         "id": 840,
@@ -21627,8 +21620,7 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -21636,263 +21628,32 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
-          "assist": null,
-          "comments": "Roughing",
-          "detail": "Yellow Card",
-          "displayMinute": "3'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 3,
-          "player": "R. Lukaku",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Belgium",
-          "timer": "3:00",
-          "timerSeconds": 180,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
+          "assist": "E. Hajsafi",
+          "awayTeam": "Iran",
           "comments": null,
-          "detail": "Goal Disallowed - offside",
+          "detail": "Normal Goal",
           "displayMinute": "25'",
           "extra": null,
-          "isDisallowed": true,
+          "goalNumber": 1,
+          "homeTeam": "Belgium",
+          "isDisallowed": false,
+          "matchId": 537365,
+          "matchUtcDate": "2026-06-21T19:00:00Z",
           "minute": 25,
           "player": "M. Taremi",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Var",
+          "rawType": "Goal",
           "source": "api_football",
           "team": "Iran",
           "timer": "25:00",
           "timerSeconds": 1500,
-          "type": "Disallowed Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "33'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 33,
-          "player": "S. Ezatolahi",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Iran",
-          "timer": "33:00",
-          "timerSeconds": 1980,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "A. Jahanbakhsh",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "S. Hardani",
-          "playerOff": "S. Hardani",
-          "playerOn": "A. Jahanbakhsh",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iran",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "T. Castagne",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "T. Meunier",
-          "playerOff": "T. Meunier",
-          "playerOn": "T. Castagne",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Belgium",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "H. Vanaken",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "N. Raskin",
-          "playerOff": "N. Raskin",
-          "playerOn": "H. Vanaken",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Belgium",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Lukebakio",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "A. Saelemaekers",
-          "playerOff": "A. Saelemaekers",
-          "playerOn": "D. Lukebakio",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Belgium",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Mohammadi",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "66'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 66,
-          "player": "E. Hajsafi",
-          "playerOff": "E. Hajsafi",
-          "playerOn": "M. Mohammadi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iran",
-          "timer": "66:00",
-          "timerSeconds": 3960,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Torabi",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "66'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 66,
-          "player": "M. Mohebi",
-          "playerOff": "M. Mohebi",
-          "playerOn": "M. Torabi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iran",
-          "timer": "66:00",
-          "timerSeconds": 3960,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Red Card",
-          "displayMinute": "66'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 66,
-          "player": "N. Ngoy",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Belgium",
-          "timer": "66:00",
-          "timerSeconds": 3960,
-          "type": "Red Card"
-        },
-        {
-          "assist": "A. Theate",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "73'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 73,
-          "player": "R. Lukaku",
-          "playerOff": "R. Lukaku",
-          "playerOn": "A. Theate",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Belgium",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Moghanlou",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "79'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 79,
-          "player": "S. Ghoddos",
-          "playerOff": "S. Ghoddos",
-          "playerOn": "S. Moghanlou",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iran",
-          "timer": "79:00",
-          "timerSeconds": 4740,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Hosseinzadeh",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "S. Ezatolahi",
-          "playerOff": "S. Ezatolahi",
-          "playerOn": "A. Hosseinzadeh",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iran",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Fernandez-Pardo",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "87'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 87,
-          "player": "K. De Bruyne",
-          "playerOff": "K. De Bruyne",
-          "playerOn": "M. Fernandez-Pardo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Belgium",
-          "timer": "87:00",
-          "timerSeconds": 5220,
-          "type": "Substitution"
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "E. Hajsafi",
@@ -21919,12 +21680,6 @@
         }
       ],
       "group": "GROUP_G",
-      "homeCorners": 4,
-      "homeFouls": 7,
-      "homeOffsides": 3,
-      "homePossession": "71%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 7,
       "homeTeam": {
         "crest": "https://crests.football-data.org/805.svg",
         "id": 805,
@@ -21934,42 +21689,17 @@
       },
       "id": 537365,
       "lastApiSync": "2026-06-21T21:00:36.831290+00:00",
-      "lastUpdated": "2026-06-21T23:00:34Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 2,
-          "fouls": 9,
-          "offsides": 3,
-          "possession": "29%",
-          "redCards": 0,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 3,
-          "totalShots": 6,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 7,
-          "offsides": 3,
-          "possession": "71%",
-          "redCards": 1,
-          "shotsOffGoal": 7,
-          "shotsOnGoal": 7,
-          "totalShots": 20,
-          "yellowCards": 1
-        }
-      },
+      "lastUpdated": "2026-06-21T23:01:22Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-21T21:00:36.831290+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -21994,29 +21724,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Dar\u00edo Herrera",
-          "nationality": "Argentina",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Dario Herrera, Argentina",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 57288,
           "name": "Dar\u00edo Herrera",
           "nationality": "Argentina",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Dario Herrera, Argentina",
           "type": "REFEREE"
         }
       ],
@@ -22032,7 +21747,6 @@
         },
         "winner": "DRAW"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -22041,7 +21755,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "A. Jahanbakhsh",
@@ -22225,11 +21939,6 @@
         }
       ],
       "utcDate": "2026-06-21T19:00:00Z",
-      "venue": {
-        "city": "Inglewood",
-        "id": null,
-        "name": "SoFi Stadium"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
