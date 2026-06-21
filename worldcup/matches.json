@@ -21913,10 +21913,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
+      "awayCorners": 0,
       "awayFouls": 1,
-      "awayOffsides": null,
-      "awayPossession": "45%",
+      "awayOffsides": 0,
+      "awayPossession": "43%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -21946,7 +21946,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 660,
+      "clockSeconds": 720,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -21955,7 +21955,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "11'",
+      "displayMinute": "12'",
       "events": [
         {
           "assist": null,
@@ -21976,13 +21976,13 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 660,
-      "fallbackClockText": "11'",
+      "fallbackClock": 720,
+      "fallbackClockText": "12'",
       "group": "GROUP_H",
-      "homeCorners": null,
+      "homeCorners": 1,
       "homeFouls": 2,
-      "homeOffsides": null,
-      "homePossession": "55%",
+      "homeOffsides": 1,
+      "homePossession": "57%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -21993,43 +21993,43 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T22:11:08.632300+00:00",
-      "lastUpdated": "2026-06-22T00:11:07Z",
+      "lastApiSync": "2026-06-21T22:11:55.573386+00:00",
+      "lastUpdated": "2026-06-22T00:11:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
+          "corners": 0,
           "fouls": 1,
-          "offsides": null,
-          "possession": "45%",
+          "offsides": 0,
+          "possession": "43%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
           "totalShots": 0,
-          "yellowCards": null
+          "yellowCards": 1
         },
         "home": {
-          "corners": null,
+          "corners": 1,
           "fouls": 2,
-          "offsides": null,
-          "possession": "55%",
+          "offsides": 1,
+          "possession": "57%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
-          "totalShots": 0,
-          "yellowCards": null
+          "totalShots": 1,
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "11'",
-        "lastApiSync": "2026-06-21T22:11:08.632300+00:00",
-        "seconds": 660,
+        "displayMinute": "12'",
+        "lastApiSync": "2026-06-21T22:11:55.573386+00:00",
+        "seconds": 720,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "11'"
+        "timer": "12'"
       },
-      "manualClockText": "11'",
+      "manualClockText": "12'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -22054,7 +22054,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 11,
+      "minute": 12,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
