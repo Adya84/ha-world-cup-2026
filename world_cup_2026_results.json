@@ -44989,7 +44989,7 @@
         "shortName": "Saudi Arabia",
         "tla": "KSA"
       },
-      "clockSeconds": 600,
+      "clockSeconds": 660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -44998,15 +44998,61 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "10'",
-      "fallbackClock": 600,
-      "fallbackClockText": "10'",
+      "displayMinute": "11'",
+      "events": [
+        {
+          "assist": "M. Oyarzabal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "11'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 11,
+          "player": "Lamine Yamal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "11:00",
+          "timerSeconds": 660,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 660,
+      "fallbackClockText": "11'",
+      "goalEvents": [
+        {
+          "assist": "M. Oyarzabal",
+          "awayTeam": "Saudi Arabia",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "11'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537371,
+          "matchUtcDate": "2026-06-21T16:00:00Z",
+          "minute": 11,
+          "player": "Lamine Yamal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "11:00",
+          "timerSeconds": 660,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 1,
       "homeFouls": 0,
       "homeOffsides": null,
       "homePossession": "84%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
@@ -45016,8 +45062,8 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T16:11:09.989027+00:00",
-      "lastUpdated": "2026-06-21T18:11:07Z",
+      "lastApiSync": "2026-06-21T16:11:46.009488+00:00",
+      "lastUpdated": "2026-06-21T18:11:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45045,14 +45091,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "10'",
-        "lastApiSync": "2026-06-21T16:11:09.989027+00:00",
-        "seconds": 600,
+        "displayMinute": "11'",
+        "lastApiSync": "2026-06-21T16:11:46.009488+00:00",
+        "seconds": 660,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "10'"
+        "timer": "11'"
       },
-      "manualClockText": "10'",
+      "manualClockText": "11'",
       "matchDetails": {
         "apiFootballFixtureId": 1489397,
         "awayCorners": 0,
@@ -45061,9 +45107,52 @@
         "awayPossession": "16%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
-        "events": [],
-        "goalEvents": [],
-        "goalEventsSource": null,
+        "events": [
+          {
+            "assist": "M. Oyarzabal",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "11'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 11,
+            "player": "Lamine Yamal",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "11:00",
+            "timerSeconds": 660,
+            "type": "Goal"
+          }
+        ],
+        "goalEvents": [
+          {
+            "assist": "M. Oyarzabal",
+            "awayTeam": "Saudi Arabia",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "11'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Spain",
+            "isDisallowed": false,
+            "matchId": 537371,
+            "matchUtcDate": "2026-06-21T16:00:00Z",
+            "minute": 11,
+            "player": "Lamine Yamal",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "11:00",
+            "timerSeconds": 660,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": "api_football_live",
         "homeCorners": 1,
         "homeFouls": 0,
         "homeOffsides": null,
@@ -45166,7 +45255,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 10,
+      "minute": 11,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -45196,11 +45285,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "winner": "DRAW"
       },
@@ -90235,7 +90324,7 @@
         "shortName": "Saudi Arabia",
         "tla": "KSA"
       },
-      "clockSeconds": 600,
+      "clockSeconds": 660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -90244,15 +90333,61 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "10'",
-      "fallbackClock": 600,
-      "fallbackClockText": "10'",
+      "displayMinute": "11'",
+      "events": [
+        {
+          "assist": "M. Oyarzabal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "11'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 11,
+          "player": "Lamine Yamal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "11:00",
+          "timerSeconds": 660,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 660,
+      "fallbackClockText": "11'",
+      "goalEvents": [
+        {
+          "assist": "M. Oyarzabal",
+          "awayTeam": "Saudi Arabia",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "11'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537371,
+          "matchUtcDate": "2026-06-21T16:00:00Z",
+          "minute": 11,
+          "player": "Lamine Yamal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "11:00",
+          "timerSeconds": 660,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 1,
       "homeFouls": 0,
       "homeOffsides": null,
       "homePossession": "84%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
@@ -90262,8 +90397,8 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T16:11:09.989027+00:00",
-      "lastUpdated": "2026-06-21T18:11:07Z",
+      "lastApiSync": "2026-06-21T16:11:46.009488+00:00",
+      "lastUpdated": "2026-06-21T18:11:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -90291,14 +90426,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "10'",
-        "lastApiSync": "2026-06-21T16:11:09.989027+00:00",
-        "seconds": 600,
+        "displayMinute": "11'",
+        "lastApiSync": "2026-06-21T16:11:46.009488+00:00",
+        "seconds": 660,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "10'"
+        "timer": "11'"
       },
-      "manualClockText": "10'",
+      "manualClockText": "11'",
       "matchDetails": {
         "apiFootballFixtureId": 1489397,
         "awayCorners": 0,
@@ -90307,9 +90442,52 @@
         "awayPossession": "16%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
-        "events": [],
-        "goalEvents": [],
-        "goalEventsSource": null,
+        "events": [
+          {
+            "assist": "M. Oyarzabal",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "11'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 11,
+            "player": "Lamine Yamal",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "11:00",
+            "timerSeconds": 660,
+            "type": "Goal"
+          }
+        ],
+        "goalEvents": [
+          {
+            "assist": "M. Oyarzabal",
+            "awayTeam": "Saudi Arabia",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "11'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Spain",
+            "isDisallowed": false,
+            "matchId": 537371,
+            "matchUtcDate": "2026-06-21T16:00:00Z",
+            "minute": 11,
+            "player": "Lamine Yamal",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "11:00",
+            "timerSeconds": 660,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": "api_football_live",
         "homeCorners": 1,
         "homeFouls": 0,
         "homeOffsides": null,
@@ -90412,7 +90590,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 10,
+      "minute": 11,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -90442,11 +90620,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "winner": "DRAW"
       },
