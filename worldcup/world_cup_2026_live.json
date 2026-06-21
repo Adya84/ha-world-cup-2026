@@ -2,8 +2,8 @@
   "live": [
     {
       "apiFootballFixtureId": 1489394,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -23,7 +23,7 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "K. Nakamura",
@@ -69,10 +69,46 @@
           "timer": "31:00",
           "timerSeconds": 1860,
           "type": "Goal"
+        },
+        {
+          "assist": "I. Gharbi",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "E. Saad",
+          "playerOff": "E. Saad",
+          "playerOn": "I. Gharbi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Ben Hamida",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Bronn",
+          "playerOff": "D. Bronn",
+          "playerOn": "M. Ben Hamida",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "K. Nakamura",
@@ -137,8 +173,8 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": "2026-06-21T05:05:26.379091+00:00",
-      "lastUpdated": "2026-06-21T07:05:25Z",
+      "lastApiSync": "2026-06-21T05:06:02.704664+00:00",
+      "lastUpdated": "2026-06-21T07:05:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -166,14 +202,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-21T05:05:26.379091+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-21T05:06:02.704664+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -198,7 +234,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -245,7 +281,45 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "I. Gharbi",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "E. Saad",
+          "playerOff": "E. Saad",
+          "playerOn": "I. Gharbi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Ben Hamida",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Bronn",
+          "playerOff": "D. Bronn",
+          "playerOn": "M. Ben Hamida",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-21T04:00:00Z",
       "venue": {
         "city": "Monterrey",
@@ -280,8 +354,8 @@
   "matches": [
     {
       "apiFootballFixtureId": 1489394,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -301,7 +375,7 @@
         "shortName": "Japan",
         "tla": "JPN"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -310,7 +384,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "K. Nakamura",
@@ -347,10 +421,46 @@
           "timer": "31:00",
           "timerSeconds": 1860,
           "type": "Goal"
+        },
+        {
+          "assist": "I. Gharbi",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "E. Saad",
+          "playerOff": "E. Saad",
+          "playerOn": "I. Gharbi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Ben Hamida",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Bronn",
+          "playerOff": "D. Bronn",
+          "playerOn": "M. Ben Hamida",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "K. Nakamura",
@@ -415,8 +525,8 @@
         "tla": "TUN"
       },
       "id": 537360,
-      "lastApiSync": "2026-06-21T05:05:26.379091+00:00",
-      "lastUpdated": "2026-06-21T07:05:25Z",
+      "lastApiSync": "2026-06-21T05:06:02.704664+00:00",
+      "lastUpdated": "2026-06-21T07:05:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -444,14 +554,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-21T05:05:26.379091+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-21T05:06:02.704664+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -476,7 +586,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -523,7 +633,45 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "I. Gharbi",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "E. Saad",
+          "playerOff": "E. Saad",
+          "playerOn": "I. Gharbi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Ben Hamida",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Bronn",
+          "playerOff": "D. Bronn",
+          "playerOn": "M. Ben Hamida",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-21T04:00:00Z",
       "venue": {
         "city": "Monterrey",
