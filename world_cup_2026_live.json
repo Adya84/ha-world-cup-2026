@@ -10,7 +10,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 1,
+      "awayOffsides": null,
+      "awayPossession": "45%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
         "id": 1930,
@@ -18,7 +23,27 @@
         "shortName": "Cape Verde",
         "tla": "CPV"
       },
-      "clockSeconds": 300,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "misses next match",
+          "detail": "Yellow Card",
+          "displayMinute": "5'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 5,
+          "player": "S. Lopes Cabral",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "5:00",
+          "timerSeconds": 300,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -27,11 +52,36 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "5'",
-      "fallbackClock": 300,
-      "fallbackClockText": "5'",
+      "displayMinute": "6'",
+      "events": [
+        {
+          "assist": null,
+          "comments": "misses next match",
+          "detail": "Yellow Card",
+          "displayMinute": "5'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 5,
+          "player": "S. Lopes Cabral",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "5:00",
+          "timerSeconds": 300,
+          "type": "Yellow Card"
+        }
+      ],
+      "fallbackClock": 360,
+      "fallbackClockText": "6'",
       "group": "GROUP_H",
+      "homeCorners": null,
+      "homeFouls": 2,
+      "homeOffsides": null,
+      "homePossession": "55%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/758.svg",
         "id": 758,
@@ -40,19 +90,43 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T22:05:44.522889+00:00",
-      "lastUpdated": "2026-06-22T00:05:43Z",
+      "lastApiSync": "2026-06-21T22:06:29.860478+00:00",
+      "lastUpdated": "2026-06-22T00:06:28Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 1,
+          "offsides": null,
+          "possession": "45%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 2,
+          "offsides": null,
+          "possession": "55%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "5'",
-        "lastApiSync": "2026-06-21T22:05:44.522889+00:00",
-        "seconds": 300,
+        "displayMinute": "6'",
+        "lastApiSync": "2026-06-21T22:06:29.860478+00:00",
+        "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "5'"
+        "timer": "6'"
       },
-      "manualClockText": "5'",
+      "manualClockText": "6'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -77,7 +151,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 5,
+      "minute": 6,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -167,7 +241,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 1,
+      "awayOffsides": null,
+      "awayPossession": "45%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
         "id": 1930,
@@ -175,7 +254,27 @@
         "shortName": "Cape Verde",
         "tla": "CPV"
       },
-      "clockSeconds": 300,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "misses next match",
+          "detail": "Yellow Card",
+          "displayMinute": "5'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 5,
+          "player": "S. Lopes Cabral",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "5:00",
+          "timerSeconds": 300,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -184,11 +283,36 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "5'",
-      "fallbackClock": 300,
-      "fallbackClockText": "5'",
+      "displayMinute": "6'",
+      "events": [
+        {
+          "assist": null,
+          "comments": "misses next match",
+          "detail": "Yellow Card",
+          "displayMinute": "5'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 5,
+          "player": "S. Lopes Cabral",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "5:00",
+          "timerSeconds": 300,
+          "type": "Yellow Card"
+        }
+      ],
+      "fallbackClock": 360,
+      "fallbackClockText": "6'",
       "group": "GROUP_H",
+      "homeCorners": null,
+      "homeFouls": 2,
+      "homeOffsides": null,
+      "homePossession": "55%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/758.svg",
         "id": 758,
@@ -197,19 +321,43 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T22:05:44.522889+00:00",
-      "lastUpdated": "2026-06-22T00:05:43Z",
+      "lastApiSync": "2026-06-21T22:06:29.860478+00:00",
+      "lastUpdated": "2026-06-22T00:06:28Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 1,
+          "offsides": null,
+          "possession": "45%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 2,
+          "offsides": null,
+          "possession": "55%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "5'",
-        "lastApiSync": "2026-06-21T22:05:44.522889+00:00",
-        "seconds": 300,
+        "displayMinute": "6'",
+        "lastApiSync": "2026-06-21T22:06:29.860478+00:00",
+        "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "5'"
+        "timer": "6'"
       },
-      "manualClockText": "5'",
+      "manualClockText": "6'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -234,7 +382,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 5,
+      "minute": 6,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
