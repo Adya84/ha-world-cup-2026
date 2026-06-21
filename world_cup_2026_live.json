@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2940,
+      "clockSeconds": 3000,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "49'",
+      "displayMinute": "50'",
       "events": [
         {
           "assist": "M. Oyarzabal",
@@ -127,6 +127,42 @@
           "type": "Yellow Card"
         },
         {
+          "assist": "A. Al Hamdan",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Al Juwayr",
+          "playerOff": "M. Al Juwayr",
+          "playerOn": "A. Al Hamdan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Kanno",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Al Khaibari",
+          "playerOff": "A. Al Khaibari",
+          "playerOn": "M. Kanno",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "F. Torres",
           "comments": null,
           "detail": "Substitution 1",
@@ -163,44 +199,26 @@
           "type": "Substitution"
         },
         {
-          "assist": "M. Kanno",
+          "assist": null,
           "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
+          "detail": "Own Goal",
+          "displayMinute": "49'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 46,
-          "player": "A. Al Khaibari",
-          "playerOff": "A. Al Khaibari",
-          "playerOn": "M. Kanno",
-          "rawType": "subst",
+          "minute": 49,
+          "player": "H. Tambakti",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
           "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Al Hamdan",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Al Juwayr",
-          "playerOff": "M. Al Juwayr",
-          "playerOn": "A. Al Hamdan",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
+          "team": "Spain",
+          "timer": "49:00",
+          "timerSeconds": 2940,
+          "type": "Own Goal"
         }
       ],
-      "fallbackClock": 2940,
-      "fallbackClockText": "49'",
+      "fallbackClock": 3000,
+      "fallbackClockText": "50'",
       "goalEvents": [
         {
           "assist": "M. Oyarzabal",
@@ -270,6 +288,29 @@
           "timer": "24:00",
           "timerSeconds": 1440,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Saudi Arabia",
+          "comments": null,
+          "detail": "Own Goal",
+          "displayMinute": "49'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537371,
+          "matchUtcDate": "2026-06-21T16:00:00Z",
+          "minute": 49,
+          "player": "H. Tambakti",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "49:00",
+          "timerSeconds": 2940,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -278,7 +319,7 @@
       "homeFouls": 3,
       "homeOffsides": 0,
       "homePossession": "71%",
-      "homeScore": 3,
+      "homeScore": 4,
       "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
@@ -288,8 +329,8 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T17:11:29.365963+00:00",
-      "lastUpdated": "2026-06-21T19:11:28Z",
+      "lastApiSync": "2026-06-21T17:12:46.401299+00:00",
+      "lastUpdated": "2026-06-21T19:12:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -317,14 +358,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "49'",
-        "lastApiSync": "2026-06-21T17:11:29.365963+00:00",
-        "seconds": 2940,
+        "displayMinute": "50'",
+        "lastApiSync": "2026-06-21T17:12:46.401299+00:00",
+        "seconds": 3000,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "49'"
+        "timer": "50'"
       },
-      "manualClockText": "49'",
+      "manualClockText": "50'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -332,7 +373,7 @@
         "condition": "lightrain",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T17:05:18.229073+00:00",
+        "fetchedAt": "2026-06-21T17:12:42.936897+00:00",
         "humidity": 68.2,
         "latitude": 33.7554,
         "longitude": -84.4008,
@@ -349,7 +390,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 49,
+      "minute": 50,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -379,7 +420,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 3
+          "home": 4
         },
         "halfTime": {
           "away": 0,
@@ -398,6 +439,42 @@
       "stage": "GROUP_STAGE",
       "status": "2H",
       "substitutionEvents": [
+        {
+          "assist": "A. Al Hamdan",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Al Juwayr",
+          "playerOff": "M. Al Juwayr",
+          "playerOn": "A. Al Hamdan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Kanno",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Al Khaibari",
+          "playerOff": "A. Al Khaibari",
+          "playerOn": "M. Kanno",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
         {
           "assist": "F. Torres",
           "comments": null,
@@ -433,42 +510,6 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
-        },
-        {
-          "assist": "M. Kanno",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "A. Al Khaibari",
-          "playerOff": "A. Al Khaibari",
-          "playerOn": "M. Kanno",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Al Hamdan",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Al Juwayr",
-          "playerOff": "M. Al Juwayr",
-          "playerOn": "A. Al Hamdan",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-21T16:00:00Z",
@@ -484,7 +525,7 @@
         "condition": "lightrain",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T17:05:18.229073+00:00",
+        "fetchedAt": "2026-06-21T17:12:42.936897+00:00",
         "humidity": 68.2,
         "latitude": 33.7554,
         "longitude": -84.4008,
@@ -546,7 +587,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2940,
+      "clockSeconds": 3000,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -555,7 +596,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "49'",
+      "displayMinute": "50'",
       "events": [
         {
           "assist": "M. Oyarzabal",
@@ -630,6 +671,42 @@
           "type": "Yellow Card"
         },
         {
+          "assist": "A. Al Hamdan",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Al Juwayr",
+          "playerOff": "M. Al Juwayr",
+          "playerOn": "A. Al Hamdan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Kanno",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Al Khaibari",
+          "playerOff": "A. Al Khaibari",
+          "playerOn": "M. Kanno",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "F. Torres",
           "comments": null,
           "detail": "Substitution 1",
@@ -666,44 +743,26 @@
           "type": "Substitution"
         },
         {
-          "assist": "M. Kanno",
+          "assist": null,
           "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
+          "detail": "Own Goal",
+          "displayMinute": "49'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 46,
-          "player": "A. Al Khaibari",
-          "playerOff": "A. Al Khaibari",
-          "playerOn": "M. Kanno",
-          "rawType": "subst",
+          "minute": 49,
+          "player": "H. Tambakti",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
           "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Al Hamdan",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Al Juwayr",
-          "playerOff": "M. Al Juwayr",
-          "playerOn": "A. Al Hamdan",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
+          "team": "Spain",
+          "timer": "49:00",
+          "timerSeconds": 2940,
+          "type": "Own Goal"
         }
       ],
-      "fallbackClock": 2940,
-      "fallbackClockText": "49'",
+      "fallbackClock": 3000,
+      "fallbackClockText": "50'",
       "goalEvents": [
         {
           "assist": "M. Oyarzabal",
@@ -773,6 +832,29 @@
           "timer": "24:00",
           "timerSeconds": 1440,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Saudi Arabia",
+          "comments": null,
+          "detail": "Own Goal",
+          "displayMinute": "49'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537371,
+          "matchUtcDate": "2026-06-21T16:00:00Z",
+          "minute": 49,
+          "player": "H. Tambakti",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "49:00",
+          "timerSeconds": 2940,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -781,7 +863,7 @@
       "homeFouls": 3,
       "homeOffsides": 0,
       "homePossession": "71%",
-      "homeScore": 3,
+      "homeScore": 4,
       "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
@@ -791,8 +873,8 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T17:11:29.365963+00:00",
-      "lastUpdated": "2026-06-21T19:11:28Z",
+      "lastApiSync": "2026-06-21T17:12:46.401299+00:00",
+      "lastUpdated": "2026-06-21T19:12:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -820,14 +902,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "49'",
-        "lastApiSync": "2026-06-21T17:11:29.365963+00:00",
-        "seconds": 2940,
+        "displayMinute": "50'",
+        "lastApiSync": "2026-06-21T17:12:46.401299+00:00",
+        "seconds": 3000,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "49'"
+        "timer": "50'"
       },
-      "manualClockText": "49'",
+      "manualClockText": "50'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -835,7 +917,7 @@
         "condition": "lightrain",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T17:05:18.229073+00:00",
+        "fetchedAt": "2026-06-21T17:12:42.936897+00:00",
         "humidity": 68.2,
         "latitude": 33.7554,
         "longitude": -84.4008,
@@ -852,7 +934,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 49,
+      "minute": 50,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -882,7 +964,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 3
+          "home": 4
         },
         "halfTime": {
           "away": 0,
@@ -901,6 +983,42 @@
       "stage": "GROUP_STAGE",
       "status": "2H",
       "substitutionEvents": [
+        {
+          "assist": "A. Al Hamdan",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "M. Al Juwayr",
+          "playerOff": "M. Al Juwayr",
+          "playerOn": "A. Al Hamdan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Kanno",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Al Khaibari",
+          "playerOff": "A. Al Khaibari",
+          "playerOn": "M. Kanno",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Saudi Arabia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
         {
           "assist": "F. Torres",
           "comments": null,
@@ -936,42 +1054,6 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
-        },
-        {
-          "assist": "M. Kanno",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "A. Al Khaibari",
-          "playerOff": "A. Al Khaibari",
-          "playerOn": "M. Kanno",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Al Hamdan",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "M. Al Juwayr",
-          "playerOff": "M. Al Juwayr",
-          "playerOn": "A. Al Hamdan",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Saudi Arabia",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-21T16:00:00Z",
@@ -987,7 +1069,7 @@
         "condition": "lightrain",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-21T17:05:18.229073+00:00",
+        "fetchedAt": "2026-06-21T17:12:42.936897+00:00",
         "humidity": 68.2,
         "latitude": 33.7554,
         "longitude": -84.4008,
