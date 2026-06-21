@@ -40048,8 +40048,8 @@
     },
     {
       "apiFootballFixtureId": 1489392,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -40107,7 +40107,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -40116,7 +40116,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": null,
@@ -40153,10 +40153,28 @@
           "timer": "39:00",
           "timerSeconds": 2340,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "K. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Alcivar",
+          "playerOff": "J. Alcivar",
+          "playerOn": "K. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": "GROUP_E",
       "homeCorners": 1,
       "homeFouls": 5,
@@ -40172,7 +40190,7 @@
         "tla": "ECU"
       },
       "id": 537354,
-      "lastApiSync": "2026-06-21T01:05:08.193789+00:00",
+      "lastApiSync": "2026-06-21T01:05:43.075572+00:00",
       "lastUpdated": "2026-06-21T03:04:56Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -40201,14 +40219,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-21T01:05:08.193789+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-21T01:05:43.075572+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchDetails": {
         "apiFootballFixtureId": 1489392,
         "awayCorners": 0,
@@ -40290,6 +40308,24 @@
             "timer": "39:00",
             "timerSeconds": 2340,
             "type": "Yellow Card"
+          },
+          {
+            "assist": "K. Rodriguez",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "J. Alcivar",
+            "playerOff": "J. Alcivar",
+            "playerOn": "K. Rodriguez",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Ecuador",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [],
@@ -40347,7 +40383,26 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "K. Rodriguez",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "J. Alcivar",
+            "playerOff": "J. Alcivar",
+            "playerOn": "K. Rodriguez",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Ecuador",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "Kansas City",
@@ -40396,7 +40451,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -40443,7 +40498,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "K. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Alcivar",
+          "playerOff": "J. Alcivar",
+          "playerOn": "K. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-21T00:00:00Z",
       "venue": {
         "city": "Kansas City",
@@ -80524,8 +80599,8 @@
     },
     {
       "apiFootballFixtureId": 1489392,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -80583,7 +80658,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -80592,7 +80667,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": null,
@@ -80629,10 +80704,28 @@
           "timer": "39:00",
           "timerSeconds": 2340,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "K. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Alcivar",
+          "playerOff": "J. Alcivar",
+          "playerOn": "K. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": "GROUP_E",
       "homeCorners": 1,
       "homeFouls": 5,
@@ -80648,7 +80741,7 @@
         "tla": "ECU"
       },
       "id": 537354,
-      "lastApiSync": "2026-06-21T01:05:08.193789+00:00",
+      "lastApiSync": "2026-06-21T01:05:43.075572+00:00",
       "lastUpdated": "2026-06-21T03:04:56Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -80677,14 +80770,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-21T01:05:08.193789+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-21T01:05:43.075572+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchDetails": {
         "apiFootballFixtureId": 1489392,
         "awayCorners": 0,
@@ -80766,6 +80859,24 @@
             "timer": "39:00",
             "timerSeconds": 2340,
             "type": "Yellow Card"
+          },
+          {
+            "assist": "K. Rodriguez",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "J. Alcivar",
+            "playerOff": "J. Alcivar",
+            "playerOn": "K. Rodriguez",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Ecuador",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [],
@@ -80823,7 +80934,26 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "K. Rodriguez",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "J. Alcivar",
+            "playerOff": "J. Alcivar",
+            "playerOn": "K. Rodriguez",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Ecuador",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "Kansas City",
@@ -80872,7 +81002,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -80919,7 +81049,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "K. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Alcivar",
+          "playerOff": "J. Alcivar",
+          "playerOn": "K. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-21T00:00:00Z",
       "venue": {
         "city": "Kansas City",
