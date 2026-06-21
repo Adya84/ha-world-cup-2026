@@ -21581,9 +21581,27 @@
           "timer": "20:00",
           "timerSeconds": 1200,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Olivera",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3480,
+      "clockSeconds": 3540,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -21592,7 +21610,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "58'",
+      "displayMinute": "59'",
       "events": [
         {
           "assist": null,
@@ -21701,10 +21719,46 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "N. Da Costa",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "Benchimol",
+          "playerOff": "Benchimol",
+          "playerOn": "N. Da Costa",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Olivera",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 3480,
-      "fallbackClockText": "58'",
+      "fallbackClock": 3540,
+      "fallbackClockText": "59'",
       "goalEvents": [
         {
           "assist": null,
@@ -21792,8 +21846,8 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T23:23:24.376471+00:00",
-      "lastUpdated": "2026-06-22T01:23:22Z",
+      "lastApiSync": "2026-06-21T23:24:10.086183+00:00",
+      "lastUpdated": "2026-06-22T01:24:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -21821,14 +21875,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "58'",
-        "lastApiSync": "2026-06-21T23:23:24.376471+00:00",
-        "seconds": 3480,
+        "displayMinute": "59'",
+        "lastApiSync": "2026-06-21T23:24:10.086183+00:00",
+        "seconds": 3540,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "58'"
+        "timer": "59'"
       },
-      "manualClockText": "58'",
+      "manualClockText": "59'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -21853,7 +21907,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 58,
+      "minute": 59,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -21918,6 +21972,24 @@
           "team": "Cape Verde Islands",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Da Costa",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "Benchimol",
+          "playerOff": "Benchimol",
+          "playerOn": "N. Da Costa",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "58:00",
+          "timerSeconds": 3480,
           "type": "Substitution"
         }
       ],
