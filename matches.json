@@ -21601,7 +21601,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3540,
+      "clockSeconds": 3600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -21610,7 +21610,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "59'",
+      "displayMinute": "60'",
       "events": [
         {
           "assist": null,
@@ -21721,6 +21721,24 @@
           "type": "Substitution"
         },
         {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Olivera",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Yellow Card"
+        },
+        {
           "assist": "N. Da Costa",
           "comments": null,
           "detail": "Substitution 2",
@@ -21739,26 +21757,26 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "58'",
+          "assist": "H. Varela",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "59'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 58,
-          "player": "M. Olivera",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
+          "minute": 59,
+          "player": "G. Rodrigues",
+          "playerOff": "G. Rodrigues",
+          "playerOn": "H. Varela",
+          "rawType": "subst",
           "source": "api_football",
-          "team": "Uruguay",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Yellow Card"
+          "team": "Cape Verde Islands",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3540,
-      "fallbackClockText": "59'",
+      "fallbackClock": 3600,
+      "fallbackClockText": "60'",
       "goalEvents": [
         {
           "assist": null,
@@ -21846,8 +21864,8 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T23:24:10.086183+00:00",
-      "lastUpdated": "2026-06-22T01:24:07Z",
+      "lastApiSync": "2026-06-21T23:24:55.265309+00:00",
+      "lastUpdated": "2026-06-22T01:24:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -21875,14 +21893,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "59'",
-        "lastApiSync": "2026-06-21T23:24:10.086183+00:00",
-        "seconds": 3540,
+        "displayMinute": "60'",
+        "lastApiSync": "2026-06-21T23:24:55.265309+00:00",
+        "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "59'"
+        "timer": "60'"
       },
-      "manualClockText": "59'",
+      "manualClockText": "60'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -21907,7 +21925,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 59,
+      "minute": 60,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -21990,6 +22008,24 @@
           "team": "Cape Verde Islands",
           "timer": "58:00",
           "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "H. Varela",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "G. Rodrigues",
+          "playerOff": "G. Rodrigues",
+          "playerOn": "H. Varela",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "59:00",
+          "timerSeconds": 3540,
           "type": "Substitution"
         }
       ],
