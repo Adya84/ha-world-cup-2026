@@ -21918,7 +21918,6 @@
         "shortName": "Cape Verde",
         "tla": "CPV"
       },
-      "clockSeconds": 0,
       "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
@@ -21938,15 +21937,14 @@
       },
       "id": 537372,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-21T23:09:34Z",
-      "liveSource": "pre_kickoff_window",
+      "lastUpdated": "2026-06-21T23:57:31Z",
       "manualClock": {
         "active": false,
         "displayMinute": "0'",
         "lastApiSync": null,
         "seconds": 0,
         "source": "awaiting_api_football_minute",
-        "status": "LIVE",
+        "status": "IN_PLAY",
         "timer": "0:00"
       },
       "manualClockText": "Awaiting kickoff API data",
@@ -21974,7 +21972,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -21989,14 +21986,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
           "away": null,
           "home": null
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "season": {
         "currentMatchday": 2,
@@ -22006,7 +22003,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-21T22:00:00Z",
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
