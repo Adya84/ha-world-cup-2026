@@ -12,8 +12,8 @@
       },
       "awayCorners": 1,
       "awayFouls": 1,
-      "awayOffsides": 1,
-      "awayPossession": "27%",
+      "awayOffsides": 3,
+      "awayPossession": "29%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2820,
+      "clockSeconds": 2940,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "47'",
+      "displayMinute": "49'",
       "events": [
         {
           "assist": "M. Oyarzabal",
@@ -127,16 +127,16 @@
           "type": "Yellow Card"
         },
         {
-          "assist": "Y. Pino",
+          "assist": "F. Torres",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "Y. Pino",
+          "player": "M. Oyarzabal",
+          "playerOff": "M. Oyarzabal",
+          "playerOn": "F. Torres",
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
@@ -145,16 +145,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "F. Torres",
+          "assist": "Y. Pino",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "M. Oyarzabal",
-          "playerOff": "M. Oyarzabal",
-          "playerOn": "F. Torres",
+          "player": "Lamine Yamal",
+          "playerOff": "Lamine Yamal",
+          "playerOn": "Y. Pino",
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
@@ -199,8 +199,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 2820,
-      "fallbackClockText": "47'",
+      "fallbackClock": 2940,
+      "fallbackClockText": "49'",
       "goalEvents": [
         {
           "assist": "M. Oyarzabal",
@@ -275,9 +275,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 4,
-      "homeFouls": 2,
+      "homeFouls": 3,
       "homeOffsides": 0,
-      "homePossession": "73%",
+      "homePossession": "71%",
       "homeScore": 3,
       "homeShotsOnGoal": 5,
       "homeTeam": {
@@ -288,26 +288,26 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T17:10:14.931372+00:00",
-      "lastUpdated": "2026-06-21T19:10:13Z",
+      "lastApiSync": "2026-06-21T17:11:29.365963+00:00",
+      "lastUpdated": "2026-06-21T19:11:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 1,
-          "offsides": 1,
-          "possession": "27%",
+          "offsides": 3,
+          "possession": "29%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
-          "totalShots": 1,
+          "totalShots": 2,
           "yellowCards": 1
         },
         "home": {
           "corners": 4,
-          "fouls": 2,
+          "fouls": 3,
           "offsides": 0,
-          "possession": "73%",
+          "possession": "71%",
           "redCards": null,
           "shotsOffGoal": 11,
           "shotsOnGoal": 5,
@@ -317,14 +317,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "47'",
-        "lastApiSync": "2026-06-21T17:10:14.931372+00:00",
-        "seconds": 2820,
+        "displayMinute": "49'",
+        "lastApiSync": "2026-06-21T17:11:29.365963+00:00",
+        "seconds": 2940,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "47'"
+        "timer": "49'"
       },
-      "manualClockText": "47'",
+      "manualClockText": "49'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -349,7 +349,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 47,
+      "minute": 49,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -399,16 +399,16 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "Y. Pino",
+          "assist": "F. Torres",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "Y. Pino",
+          "player": "M. Oyarzabal",
+          "playerOff": "M. Oyarzabal",
+          "playerOn": "F. Torres",
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
@@ -417,16 +417,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "F. Torres",
+          "assist": "Y. Pino",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "M. Oyarzabal",
-          "playerOff": "M. Oyarzabal",
-          "playerOn": "F. Torres",
+          "player": "Lamine Yamal",
+          "playerOff": "Lamine Yamal",
+          "playerOn": "Y. Pino",
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
@@ -515,8 +515,8 @@
       },
       "awayCorners": 1,
       "awayFouls": 1,
-      "awayOffsides": 1,
-      "awayPossession": "27%",
+      "awayOffsides": 3,
+      "awayPossession": "29%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -546,7 +546,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2820,
+      "clockSeconds": 2940,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -555,7 +555,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "47'",
+      "displayMinute": "49'",
       "events": [
         {
           "assist": "M. Oyarzabal",
@@ -630,16 +630,16 @@
           "type": "Yellow Card"
         },
         {
-          "assist": "Y. Pino",
+          "assist": "F. Torres",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "Y. Pino",
+          "player": "M. Oyarzabal",
+          "playerOff": "M. Oyarzabal",
+          "playerOn": "F. Torres",
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
@@ -648,16 +648,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "F. Torres",
+          "assist": "Y. Pino",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "M. Oyarzabal",
-          "playerOff": "M. Oyarzabal",
-          "playerOn": "F. Torres",
+          "player": "Lamine Yamal",
+          "playerOff": "Lamine Yamal",
+          "playerOn": "Y. Pino",
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
@@ -702,8 +702,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 2820,
-      "fallbackClockText": "47'",
+      "fallbackClock": 2940,
+      "fallbackClockText": "49'",
       "goalEvents": [
         {
           "assist": "M. Oyarzabal",
@@ -778,9 +778,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 4,
-      "homeFouls": 2,
+      "homeFouls": 3,
       "homeOffsides": 0,
-      "homePossession": "73%",
+      "homePossession": "71%",
       "homeScore": 3,
       "homeShotsOnGoal": 5,
       "homeTeam": {
@@ -791,26 +791,26 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T17:10:14.931372+00:00",
-      "lastUpdated": "2026-06-21T19:10:13Z",
+      "lastApiSync": "2026-06-21T17:11:29.365963+00:00",
+      "lastUpdated": "2026-06-21T19:11:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 1,
-          "offsides": 1,
-          "possession": "27%",
+          "offsides": 3,
+          "possession": "29%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
-          "totalShots": 1,
+          "totalShots": 2,
           "yellowCards": 1
         },
         "home": {
           "corners": 4,
-          "fouls": 2,
+          "fouls": 3,
           "offsides": 0,
-          "possession": "73%",
+          "possession": "71%",
           "redCards": null,
           "shotsOffGoal": 11,
           "shotsOnGoal": 5,
@@ -820,14 +820,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "47'",
-        "lastApiSync": "2026-06-21T17:10:14.931372+00:00",
-        "seconds": 2820,
+        "displayMinute": "49'",
+        "lastApiSync": "2026-06-21T17:11:29.365963+00:00",
+        "seconds": 2940,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "47'"
+        "timer": "49'"
       },
-      "manualClockText": "47'",
+      "manualClockText": "49'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -852,7 +852,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 47,
+      "minute": 49,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -902,16 +902,16 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "Y. Pino",
+          "assist": "F. Torres",
           "comments": null,
           "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "Y. Pino",
+          "player": "M. Oyarzabal",
+          "playerOff": "M. Oyarzabal",
+          "playerOn": "F. Torres",
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
@@ -920,16 +920,16 @@
           "type": "Substitution"
         },
         {
-          "assist": "F. Torres",
+          "assist": "Y. Pino",
           "comments": null,
           "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
           "minute": 46,
-          "player": "M. Oyarzabal",
-          "playerOff": "M. Oyarzabal",
-          "playerOn": "F. Torres",
+          "player": "Lamine Yamal",
+          "playerOff": "Lamine Yamal",
+          "playerOn": "Y. Pino",
           "rawType": "subst",
           "source": "api_football",
           "team": "Spain",
