@@ -23431,7 +23431,7 @@
         "shortName": "Saudi Arabia",
         "tla": "KSA"
       },
-      "clockSeconds": 1200,
+      "clockSeconds": 1260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -23440,7 +23440,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "20'",
+      "displayMinute": "21'",
       "events": [
         {
           "assist": "M. Oyarzabal",
@@ -23459,10 +23459,28 @@
           "timer": "10:00",
           "timerSeconds": 600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "21'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 21,
+          "player": "M. Oyarzabal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "21:00",
+          "timerSeconds": 1260,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 1200,
-      "fallbackClockText": "20'",
+      "fallbackClock": 1260,
+      "fallbackClockText": "21'",
       "goalEvents": [
         {
           "assist": "M. Oyarzabal",
@@ -23486,6 +23504,29 @@
           "timer": "10:00",
           "timerSeconds": 600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Saudi Arabia",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "21'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537371,
+          "matchUtcDate": "2026-06-21T16:00:00Z",
+          "minute": 21,
+          "player": "M. Oyarzabal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "21:00",
+          "timerSeconds": 1260,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -23494,7 +23535,7 @@
       "homeFouls": 1,
       "homeOffsides": null,
       "homePossession": "79%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
@@ -23504,8 +23545,8 @@
         "tla": "ESP"
       },
       "id": 537371,
-      "lastApiSync": "2026-06-21T16:21:23.691624+00:00",
-      "lastUpdated": "2026-06-21T18:21:19Z",
+      "lastApiSync": "2026-06-21T16:21:59.653427+00:00",
+      "lastUpdated": "2026-06-21T18:21:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -23533,14 +23574,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "20'",
-        "lastApiSync": "2026-06-21T16:21:23.691624+00:00",
-        "seconds": 1200,
+        "displayMinute": "21'",
+        "lastApiSync": "2026-06-21T16:21:59.653427+00:00",
+        "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "20'"
+        "timer": "21'"
       },
-      "manualClockText": "20'",
+      "manualClockText": "21'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -23565,7 +23606,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 20,
+      "minute": 21,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -23595,11 +23636,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 0,
-          "home": 1
+          "home": 2
         },
         "winner": "HOME_TEAM"
       },
