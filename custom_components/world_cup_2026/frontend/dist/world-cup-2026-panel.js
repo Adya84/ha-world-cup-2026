@@ -20,6 +20,9 @@ class WorldCup2026Panel extends HTMLElement {
     this._sidebarObserver = null;
     this._sidebarStyleRoots = new Set();
     this._sidebarObservers = [];
+    this._fixturesVisibleDays = 5;
+    this._fixturesVisibleMatches = 20;
+    this._knockoutVisibleMatches = 12;
     const savedLanguage = localStorage.getItem("world_cup_2026_language") || "en";
     const validLanguages = new Set(["en", "fr", "de", "es", "it", "nl", "pt", "pl", "ja", "sv", "no", "hu", "tr", "cs", "da", "fi", "el", "ro", "sk", "sl", "hr", "sr", "bg", "uk", "is", "qu", "gn", "ay"]);
     this._language = validLanguages.has(savedLanguage) ? savedLanguage : "en";
@@ -6299,6 +6302,13 @@ class WorldCup2026Panel extends HTMLElement {
   changePage(page) {
     const validPages = new Set(["overview", "live", "fixtures", "results", "groups", "knockout", "players", "records", "stats", "teams", "venues", "supporters"]);
     if (!validPages.has(page)) page = "overview";
+    if (page !== this._page && page === "fixtures") {
+      this._fixturesVisibleDays = 5;
+      this._fixturesVisibleMatches = 20;
+    }
+    if (page !== this._page && page === "knockout") {
+      this._knockoutVisibleMatches = 12;
+    }
     this._page = page;
     try { localStorage.setItem("world_cup_2026_last_page", page); } catch (e) {}
     this.render();
@@ -18612,6 +18622,15 @@ class WorldCup2026Panel extends HTMLElement {
       "argentina", "argentinian", "brazil", "brazilian", "uruguay", "uruguayan", "japan", "japanese",
       "korea", "korean", "australia", "australian", "turkey", "turkish", "qatar", "morocco", "ghana",
       "panama", "croatia", "austria", "belgium", "egypt", "iran", "iraq", "senegal", "switzerland",
+      "romania", "romanian",
+      "slovenia", "slovenian", "slovakia", "slovak", "czechia", "czech", "hungary", "hungarian",
+      "serbia", "serbian", "bulgaria", "bulgarian", "ukraine", "ukrainian", "greece", "greek",
+      "denmark", "danish", "finland", "finnish", "iceland", "icelandic", "ireland", "irish",
+      "scotland", "scottish", "wales", "welsh", "chile", "chilean", "colombia", "colombian",
+      "paraguay", "paraguayan", "peru", "peruvian", "venezuela", "venezuelan", "ecuador", "ecuadorian",
+      "bolivia", "bolivian", "costa rica", "costa rican", "honduras", "honduran", "guatemala", "guatemalan",
+      "jamaica", "jamaican", "saudi arabia", "saudi", "uae", "emirati", "china", "chinese",
+      "uzbekistan", "uzbek", "algeria", "algerian", "tunisia", "tunisian", "south africa", "south african",
     ]);
     const cleanOfficialText = (value) => String(value || "")
       .normalize("NFD")
@@ -18718,6 +18737,15 @@ class WorldCup2026Panel extends HTMLElement {
         "argentina", "argentinian", "brazil", "brazilian", "uruguay", "uruguayan", "japan", "japanese",
         "korea", "korean", "australia", "australian", "turkey", "turkish", "qatar", "morocco", "ghana",
         "panama", "croatia", "austria", "belgium", "egypt", "iran", "iraq", "senegal", "switzerland",
+        "romania", "romanian",
+        "slovenia", "slovenian", "slovakia", "slovak", "czechia", "czech", "hungary", "hungarian",
+        "serbia", "serbian", "bulgaria", "bulgarian", "ukraine", "ukrainian", "greece", "greek",
+        "denmark", "danish", "finland", "finnish", "iceland", "icelandic", "ireland", "irish",
+        "scotland", "scottish", "wales", "welsh", "chile", "chilean", "colombia", "colombian",
+        "paraguay", "paraguayan", "peru", "peruvian", "venezuela", "venezuelan", "ecuador", "ecuadorian",
+        "bolivia", "bolivian", "costa rica", "costa rican", "honduras", "honduran", "guatemala", "guatemalan",
+        "jamaica", "jamaican", "saudi arabia", "saudi", "uae", "emirati", "china", "chinese",
+        "uzbekistan", "uzbek", "algeria", "algerian", "tunisia", "tunisian", "south africa", "south african",
       ]);
       const parts = cleaned.split(/\s+/).filter(Boolean);
       while (parts.length > 1 && countryWords.has(cleanRefText(parts[parts.length - 1]))) {
@@ -19477,7 +19505,11 @@ class WorldCup2026Panel extends HTMLElement {
     const nextMatch = sortedFixtures.find(m => ["TIMED", "SCHEDULED"].includes(m.status));
     const dayCount = new Set(sortedFixtures.map(m => this.fixtureDateKey(m))).size;
 
-    const grouped = sortedFixtures.reduce((days, match) => {
+    const visibleMatchCount = Math.min(this._fixturesVisibleMatches || 20, sortedFixtures.length);
+    const visibleFixtures = sortedFixtures.slice(0, visibleMatchCount);
+    const hiddenMatchCount = Math.max(sortedFixtures.length - visibleMatchCount, 0);
+
+    const grouped = visibleFixtures.reduce((days, match) => {
       const key = this.fixtureDateKey(match);
       if (!days[key]) {
         days[key] = [];
@@ -19485,6 +19517,7 @@ class WorldCup2026Panel extends HTMLElement {
       days[key].push(match);
       return days;
     }, {});
+    const groupedEntries = Object.entries(grouped);
 
     return `
       <div class="fixtures-page-card wc-card">
@@ -19514,7 +19547,7 @@ class WorldCup2026Panel extends HTMLElement {
         ` : ""}
 
         <div class="fixtures-days">
-          ${Object.entries(grouped).map(([key, matches]) => `
+          ${groupedEntries.map(([key, matches]) => `
             <div class="fixtures-day-block">
               <div class="fixtures-day-heading">
                 <span>${this.esc(this.fixtureDayTitle(matches[0]))}</span>
@@ -19525,6 +19558,13 @@ class WorldCup2026Panel extends HTMLElement {
               </div>
             </div>
           `).join("")}
+          ${hiddenMatchCount ? `
+            <div class="fixtures-load-more-wrap">
+              <button class="overview-action-button fixtures-show-more-button" type="button">
+                + ${Math.min(20, hiddenMatchCount)} ${this.t("fixtures")}
+              </button>
+            </div>
+          ` : ""}
         </div>
       </div>
     `;
@@ -20442,6 +20482,13 @@ class WorldCup2026Panel extends HTMLElement {
       "brian brobbey|ned": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
       "b brobbey": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
       "b brobbey|netherlands": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/brian-brobbey.jpg",
+      "ayase ueda": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/ayase-ueda.jpg",
+      "ayase ueda|japan": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/ayase-ueda.jpg",
+      "ayase ueda|jpn": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/ayase-ueda.jpg",
+      "a ueda": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/ayase-ueda.jpg",
+      "a ueda|japan": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/ayase-ueda.jpg",
+      "ueda": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/ayase-ueda.jpg",
+      "ueda|japan": "https://raw.githubusercontent.com/Adya84/ha-world-cup-2026/main/custom_components/world_cup_2026/players/ayase-ueda.jpg",
     };
     const cleanPlayerKey = (value) => String(value || "")
       .normalize("NFD")
@@ -20948,6 +20995,20 @@ class WorldCup2026Panel extends HTMLElement {
         </div>
       `;
     };
+    const detailMatches = [];
+    roundMatches.forEach(({ stage, label, matches }) => {
+      matches.forEach((match, index) => detailMatches.push({ stage, label, match, index }));
+      if (!matches.length) detailMatches.push({ stage, label, match: null, index: 0 });
+    });
+    const knockoutVisibleCount = Math.min(this._knockoutVisibleMatches || 12, detailMatches.length);
+    const visibleDetailMatches = detailMatches.slice(0, knockoutVisibleCount);
+    const hiddenKnockoutCount = Math.max(detailMatches.length - knockoutVisibleCount, 0);
+    const visibleDetailRounds = visibleDetailMatches.reduce((rounds, item) => {
+      const key = `${item.stage}|${item.label}`;
+      if (!rounds[key]) rounds[key] = { stage: item.stage, label: item.label, items: [] };
+      rounds[key].items.push(item);
+      return rounds;
+    }, {});
 
     return `
       <div class="wc-card wc-web-card">
@@ -20984,12 +21045,13 @@ class WorldCup2026Panel extends HTMLElement {
       <div class="wc-card">
         <div class="wc-section-title">${this.esc(this.staticText("knockoutDetails"))}</div>
         <div class="wc-bracket">
-          ${roundMatches.map(({ stage, label, matches }) => `
+          ${Object.values(visibleDetailRounds).map(({ stage, label, items }) => `
               <div class="wc-bracket-round">
                 <div class="wc-round-title">${label}</div>
                 ${
-                  matches.length
-                    ? matches.map((m, index) => {
+                  items.length
+                    ? items.map(({ match: m, index }) => {
+                      if (!m) return `<div class="wc-bracket-match">${this.t("tbc")}<br><span class="wc-muted">${this.t("fixturesNotAvailable")}</span></div>`;
                       const knockoutNumber = this.knockoutDerivedMatchNumber(stage, index, m);
                       const venueInfo = this.fixtureVenueInfo(m, knockoutNumber);
                       return `
@@ -21014,6 +21076,13 @@ class WorldCup2026Panel extends HTMLElement {
               </div>
           `).join("")}
         </div>
+        ${hiddenKnockoutCount ? `
+          <div class="fixtures-load-more-wrap">
+            <button class="overview-action-button knockout-show-more-button" type="button">
+              + ${Math.min(12, hiddenKnockoutCount)} ${this.t("fixtures")}
+            </button>
+          </div>
+        ` : ""}
       </div>
     `;
   }
@@ -22867,6 +22936,17 @@ class WorldCup2026Panel extends HTMLElement {
     this.querySelectorAll(".wc-nav button, .wc-tablet-header-nav button, .overview-action-button").forEach((button) => {
       button.onclick = () => {
         const page = button.getAttribute("data-page");
+        if (button.classList.contains("fixtures-show-more-button")) {
+          this._fixturesVisibleDays = (this._fixturesVisibleDays || 5) + 5;
+          this._fixturesVisibleMatches = (this._fixturesVisibleMatches || 20) + 20;
+          this.render();
+          return;
+        }
+        if (button.classList.contains("knockout-show-more-button")) {
+          this._knockoutVisibleMatches = (this._knockoutVisibleMatches || 12) + 12;
+          this.render();
+          return;
+        }
         this.changePage(page);
       };
     });
