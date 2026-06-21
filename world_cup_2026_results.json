@@ -42015,7 +42015,7 @@
       "awayFouls": 2,
       "awayOffsides": 0,
       "awayPossession": "33%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
@@ -42108,10 +42108,49 @@
           "timer": "20:00",
           "timerSeconds": 1200,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "21'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 21,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "21:00",
+          "timerSeconds": 1260,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 1260,
       "fallbackClockText": "21'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "21'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 21,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "21:00",
+          "timerSeconds": 1260,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 2,
       "homeFouls": 2,
@@ -42127,8 +42166,8 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T22:20:51.212853+00:00",
-      "lastUpdated": "2026-06-22T00:20:49Z",
+      "lastApiSync": "2026-06-21T22:21:37.415256+00:00",
+      "lastUpdated": "2026-06-22T00:21:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -42157,7 +42196,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "21'",
-        "lastApiSync": "2026-06-21T22:20:51.212853+00:00",
+        "lastApiSync": "2026-06-21T22:21:37.415256+00:00",
         "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -42245,10 +42284,47 @@
             "timer": "20:00",
             "timerSeconds": 1200,
             "type": "Yellow Card"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "21'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 21,
+            "player": null,
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Cape Verde Islands",
+            "timer": "21:00",
+            "timerSeconds": 1260,
+            "type": "Goal"
           }
         ],
-        "goalEvents": [],
-        "goalEventsSource": null,
+        "goalEvents": [
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "21'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 21,
+            "player": null,
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Cape Verde Islands",
+            "timer": "21:00",
+            "timerSeconds": 1260,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": "api_football_live",
         "homeCorners": 2,
         "homeFouls": 2,
         "homeOffsides": 2,
@@ -42380,11 +42456,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -84446,7 +84522,7 @@
       "awayFouls": 2,
       "awayOffsides": 0,
       "awayPossession": "33%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
@@ -84539,10 +84615,49 @@
           "timer": "20:00",
           "timerSeconds": 1200,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "21'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 21,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "21:00",
+          "timerSeconds": 1260,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 1260,
       "fallbackClockText": "21'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "21'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 21,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "21:00",
+          "timerSeconds": 1260,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 2,
       "homeFouls": 2,
@@ -84558,8 +84673,8 @@
         "tla": "URU"
       },
       "id": 537372,
-      "lastApiSync": "2026-06-21T22:20:51.212853+00:00",
-      "lastUpdated": "2026-06-22T00:20:49Z",
+      "lastApiSync": "2026-06-21T22:21:37.415256+00:00",
+      "lastUpdated": "2026-06-22T00:21:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -84588,7 +84703,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "21'",
-        "lastApiSync": "2026-06-21T22:20:51.212853+00:00",
+        "lastApiSync": "2026-06-21T22:21:37.415256+00:00",
         "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -84676,10 +84791,47 @@
             "timer": "20:00",
             "timerSeconds": 1200,
             "type": "Yellow Card"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "21'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 21,
+            "player": null,
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Cape Verde Islands",
+            "timer": "21:00",
+            "timerSeconds": 1260,
+            "type": "Goal"
           }
         ],
-        "goalEvents": [],
-        "goalEventsSource": null,
+        "goalEvents": [
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "21'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 21,
+            "player": null,
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Cape Verde Islands",
+            "timer": "21:00",
+            "timerSeconds": 1260,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": "api_football_live",
         "homeCorners": 2,
         "homeFouls": 2,
         "homeOffsides": 2,
@@ -84811,11 +84963,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
