@@ -13949,7 +13949,7 @@
     "apiFootballFixtureId": 1489396,
     "awayScore": 3,
     "awayTeam": "Egypt",
-    "base_seconds": 5100,
+    "base_seconds": 5160,
     "cardEvents": [
       {
         "assist": null,
@@ -14007,8 +14007,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 5100,
-    "displayMinute": "85'",
+    "clock_seconds": 5160,
+    "displayMinute": "86'",
     "events": [
       {
         "assist": "T. Payne",
@@ -14243,6 +14243,24 @@
         "timer": "82:00",
         "timerSeconds": 4920,
         "type": "Goal"
+      },
+      {
+        "assist": "H. Abdelmaguid",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "85'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 85,
+        "player": "M. Salah",
+        "playerOff": "M. Salah",
+        "playerOn": "H. Abdelmaguid",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Egypt",
+        "timer": "85:00",
+        "timerSeconds": 5100,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -14341,9 +14359,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "New Zealand",
-    "lastApiSync": "2026-06-22T02:45:27.074963+00:00",
-    "manualClockText": "85'",
-    "phase_start": "2026-06-22T02:45:27.074963+00:00",
+    "lastApiSync": "2026-06-22T02:46:11.794918+00:00",
+    "manualClockText": "86'",
+    "phase_start": "2026-06-22T02:46:11.794918+00:00",
     "referees": [
       {
         "name": "Omar Mohamed Al Ali",
@@ -14464,6 +14482,24 @@
         "team": "Egypt",
         "timer": "76:00",
         "timerSeconds": 4560,
+        "type": "Substitution"
+      },
+      {
+        "assist": "H. Abdelmaguid",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "85'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 85,
+        "player": "M. Salah",
+        "playerOff": "M. Salah",
+        "playerOn": "H. Abdelmaguid",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Egypt",
+        "timer": "85:00",
+        "timerSeconds": 5100,
         "type": "Substitution"
       }
     ],
