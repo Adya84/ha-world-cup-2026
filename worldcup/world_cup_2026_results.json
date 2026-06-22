@@ -43999,6 +43999,227 @@
         }
       ],
       "utcDate": "2026-06-22T17:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1539017,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/iraq.svg",
+        "id": 8062,
+        "name": "Iraq",
+        "shortName": "Iraq",
+        "tla": "IRQ"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_I",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/773.svg",
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA"
+      },
+      "id": 537393,
+      "lastApiSync": "2026-06-22T21:01:03.992437+00:00",
+      "lastUpdated": "2026-06-22T23:01:01Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-22T21:01:03.992437+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1539017,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Drew Fischer",
+            "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Drew Fischer",
+            "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Philadelphia",
+          "cloudCoverage": 95.3,
+          "condition": "cloudy",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-22T20:55:04.922878+00:00",
+          "humidity": 56.7,
+          "latitude": 39.9008,
+          "longitude": -75.1675,
+          "name": "Lincoln Financial Field weather",
+          "observedAt": "2026-06-22T20:00:00Z",
+          "pressure": 1010.7,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Lincoln Financial Field",
+          "temperature": 29.9,
+          "temperatureUnit": "C",
+          "windBearing": 159.6,
+          "windSpeed": 5.8,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 95.3,
+        "condition": "cloudy",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T20:55:04.922878+00:00",
+        "humidity": 56.7,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-22T20:00:00Z",
+        "pressure": 1010.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 29.9,
+        "temperatureUnit": "C",
+        "windBearing": 159.6,
+        "windSpeed": 5.8,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-22T21:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 95.3,
+        "condition": "cloudy",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T20:55:04.922878+00:00",
+        "humidity": 56.7,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-22T20:00:00Z",
+        "pressure": 1010.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 29.9,
+        "temperatureUnit": "C",
+        "windBearing": 159.6,
+        "windSpeed": 5.8,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -88001,6 +88222,227 @@
         }
       ],
       "utcDate": "2026-06-22T17:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1539017,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/iraq.svg",
+        "id": 8062,
+        "name": "Iraq",
+        "shortName": "Iraq",
+        "tla": "IRQ"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_I",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/773.svg",
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA"
+      },
+      "id": 537393,
+      "lastApiSync": "2026-06-22T21:01:03.992437+00:00",
+      "lastUpdated": "2026-06-22T23:01:01Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-22T21:01:03.992437+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1539017,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Drew Fischer",
+            "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Drew Fischer",
+            "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Philadelphia",
+          "cloudCoverage": 95.3,
+          "condition": "cloudy",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-22T20:55:04.922878+00:00",
+          "humidity": 56.7,
+          "latitude": 39.9008,
+          "longitude": -75.1675,
+          "name": "Lincoln Financial Field weather",
+          "observedAt": "2026-06-22T20:00:00Z",
+          "pressure": 1010.7,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Lincoln Financial Field",
+          "temperature": 29.9,
+          "temperatureUnit": "C",
+          "windBearing": 159.6,
+          "windSpeed": 5.8,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 95.3,
+        "condition": "cloudy",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T20:55:04.922878+00:00",
+        "humidity": 56.7,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-22T20:00:00Z",
+        "pressure": 1010.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 29.9,
+        "temperatureUnit": "C",
+        "windBearing": 159.6,
+        "windSpeed": 5.8,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-22T21:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 95.3,
+        "condition": "cloudy",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T20:55:04.922878+00:00",
+        "humidity": 56.7,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-22T20:00:00Z",
+        "pressure": 1010.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 29.9,
+        "temperatureUnit": "C",
+        "windBearing": 159.6,
+        "windSpeed": 5.8,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
