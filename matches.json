@@ -21885,7 +21885,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/825.svg",
         "id": 825,
@@ -21949,7 +21948,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -21957,7 +21955,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "T. Payne",
@@ -22155,41 +22152,7 @@
         "tla": "NZL"
       },
       "id": 537366,
-      "lastApiSync": "2026-06-22T03:00:34.509942+00:00",
-      "lastUpdated": "2026-06-22T05:02:04Z",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-22T03:00:34.509942+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "90:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 22.7,
-        "condition": "fair_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-22T03:02:06.602765+00:00",
-        "humidity": 50.6,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-06-22T02:00:00Z",
-        "pressure": 1015.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 21.0,
-        "temperatureUnit": "C",
-        "windBearing": 241.0,
-        "windSpeed": 2.3,
-        "windSpeedUnit": "m/s"
-      },
+      "lastUpdated": "2026-06-22T05:02:22Z",
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
@@ -22222,7 +22185,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "R. Rabia",
@@ -22423,30 +22386,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-22T01:00:00Z",
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 22.7,
-        "condition": "fair_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-22T03:02:06.602765+00:00",
-        "humidity": 50.6,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-06-22T02:00:00Z",
-        "pressure": 1015.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 21.0,
-        "temperatureUnit": "C",
-        "windBearing": 241.0,
-        "windSpeed": 2.3,
-        "windSpeedUnit": "m/s"
-      }
+      "utcDate": "2026-06-22T01:00:00Z"
     },
     {
       "area": {
