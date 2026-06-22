@@ -23799,8 +23799,6 @@
     },
     {
       "apiFootballFixtureId": 1539017,
-      "apiFootballStatus": "INT",
-      "apiFootballStatusLong": "Match Interrupted",
       "area": {
         "code": "INT",
         "flag": null,
@@ -23808,12 +23806,6 @@
         "name": "World"
       },
       "awaitingLiveApiData": true,
-      "awayCorners": 1,
-      "awayFouls": 2,
-      "awayOffsides": null,
-      "awayPossession": "42%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -23901,12 +23893,6 @@
         }
       ],
       "group": "GROUP_I",
-      "homeCorners": 1,
-      "homeFouls": 5,
-      "homeOffsides": null,
-      "homePossession": "58%",
-      "homeScore": 1,
-      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -23916,39 +23902,14 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
-      "lastUpdated": "2026-06-23T01:54:40Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 1,
-          "fouls": 2,
-          "offsides": null,
-          "possession": "42%",
-          "redCards": null,
-          "shotsOffGoal": 1,
-          "shotsOnGoal": 0,
-          "totalShots": 2,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 1,
-          "fouls": 5,
-          "offsides": null,
-          "possession": "58%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 7,
-          "yellowCards": 0
-        }
-      },
+      "lastUpdated": "2026-06-23T01:55:10Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
         "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
         "seconds": 2700,
         "source": "awaiting_api_football_minute",
-        "status": "INT",
+        "status": "PAUSED",
         "timer": "45:00"
       },
       "manualClockText": "Awaiting kickoff API data",
@@ -23979,25 +23940,11 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Drew Fischer",
-          "nationality": "Canada",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Drew Fischer, Canada",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -24013,7 +23960,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -24022,7 +23968,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "INT",
+      "status": "PAUSED",
       "substitutionEvents": [
         {
           "assist": "A. Al Hamadi",
@@ -24044,11 +23990,6 @@
         }
       ],
       "utcDate": "2026-06-22T21:00:00Z",
-      "venue": {
-        "city": "Philadelphia",
-        "id": null,
-        "name": "Lincoln Financial Field"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -24080,6 +24021,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/senegal.svg",
         "id": 804,
@@ -24087,6 +24029,8 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -24094,6 +24038,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_I",
       "homeTeam": {
         "crest": "https://crests.football-data.org/813.svg",
@@ -24103,8 +24048,44 @@
         "tla": "NOR"
       },
       "id": 537394,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-23T01:06:28Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 98.4,
+        "condition": "rain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T23:55:12.020086+00:00",
+        "humidity": 88.0,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-22T23:00:00Z",
+        "pressure": 1010.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 23.4,
+        "temperatureUnit": "C",
+        "windBearing": 131.5,
+        "windSpeed": 3.2,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 2,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -24136,8 +24117,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-23T00:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-23T00:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 98.4,
+        "condition": "rain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T23:55:12.020086+00:00",
+        "humidity": 88.0,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-22T23:00:00Z",
+        "pressure": 1010.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 23.4,
+        "temperatureUnit": "C",
+        "windBearing": 131.5,
+        "windSpeed": 3.2,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
