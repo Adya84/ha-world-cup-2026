@@ -17825,7 +17825,7 @@
     "apiFootballFixtureId": 1489399,
     "awayScore": 0,
     "awayTeam": "Austria",
-    "base_seconds": 3840,
+    "base_seconds": 3900,
     "cardEvents": [
       {
         "assist": null,
@@ -17847,8 +17847,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3840,
-    "displayMinute": "64'",
+    "clock_seconds": 3900,
+    "displayMinute": "65'",
     "events": [
       {
         "assist": "L. Messi",
@@ -17939,6 +17939,24 @@
         "timer": "64:00",
         "timerSeconds": 3840,
         "type": "Substitution"
+      },
+      {
+        "assist": "N. Gonzalez",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "65'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 65,
+        "player": "L. Martinez",
+        "playerOff": "L. Martinez",
+        "playerOn": "N. Gonzalez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "65:00",
+        "timerSeconds": 3900,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -17991,9 +18009,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Argentina",
-    "lastApiSync": "2026-06-22T18:28:47.150892+00:00",
-    "manualClockText": "64'",
-    "phase_start": "2026-06-22T18:28:47.150892+00:00",
+    "lastApiSync": "2026-06-22T18:29:18.942076+00:00",
+    "manualClockText": "65'",
+    "phase_start": "2026-06-22T18:29:18.942076+00:00",
     "referees": [
       {
         "name": "Amin Omar",
@@ -18042,6 +18060,24 @@
         "team": "Argentina",
         "timer": "64:00",
         "timerSeconds": 3840,
+        "type": "Substitution"
+      },
+      {
+        "assist": "N. Gonzalez",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "65'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 65,
+        "player": "L. Martinez",
+        "playerOff": "L. Martinez",
+        "playerOn": "N. Gonzalez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "65:00",
+        "timerSeconds": 3900,
         "type": "Substitution"
       }
     ],
