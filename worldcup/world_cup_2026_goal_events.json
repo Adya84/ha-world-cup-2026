@@ -18459,23 +18459,32 @@
     "utcDate": "2026-06-17T04:00:00Z"
   },
   "537399": {
+    "apiFootballFixtureId": 1489399,
     "awayScore": 0,
     "awayTeam": "Austria",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Argentina",
-    "phase_start": null,
+    "lastApiSync": "2026-06-22T17:02:04.236695+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-22T17:02:04.236695+00:00",
     "referees": [
       {
-        "id": 276653,
         "name": "Amin Omar",
         "nationality": "Egypt",
         "type": "REFEREE"
+      },
+      {
+        "name": "Amin Mohamed Omar, Egypt",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-22T17:00:00Z"
   },
   "537400": {
