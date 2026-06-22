@@ -1,4 +1,264 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/825.svg",
+        "id": 825,
+        "name": "Egypt",
+        "shortName": "Egypt",
+        "tla": "EGY"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_G",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/783.svg",
+        "id": 783,
+        "name": "New Zealand",
+        "shortName": "New Zealand",
+        "tla": "NZL"
+      },
+      "id": 537366,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-22T01:59:01Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 7.0,
+        "condition": "clearsky_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T00:55:12.541398+00:00",
+        "humidity": 46.9,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-22T00:00:00Z",
+        "pressure": 1015.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 22.2,
+        "temperatureUnit": "C",
+        "windBearing": 262.2,
+        "windSpeed": 2.9,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 129569,
+          "name": "Omar Mohamed Al Ali",
+          "nationality": "United Arab Emirates",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-22T01:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 7.0,
+        "condition": "clearsky_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T00:55:12.541398+00:00",
+        "humidity": 46.9,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-22T00:00:00Z",
+        "pressure": 1015.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 22.2,
+        "temperatureUnit": "C",
+        "windBearing": 262.2,
+        "windSpeed": 2.9,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/825.svg",
+        "id": 825,
+        "name": "Egypt",
+        "shortName": "Egypt",
+        "tla": "EGY"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_G",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/783.svg",
+        "id": 783,
+        "name": "New Zealand",
+        "shortName": "New Zealand",
+        "tla": "NZL"
+      },
+      "id": 537366,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-22T01:59:01Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 7.0,
+        "condition": "clearsky_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T00:55:12.541398+00:00",
+        "humidity": 46.9,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-22T00:00:00Z",
+        "pressure": 1015.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 22.2,
+        "temperatureUnit": "C",
+        "windBearing": 262.2,
+        "windSpeed": 2.9,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 129569,
+          "name": "Omar Mohamed Al Ali",
+          "nationality": "United Arab Emirates",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-22T01:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 7.0,
+        "condition": "clearsky_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T00:55:12.541398+00:00",
+        "humidity": 46.9,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-22T00:00:00Z",
+        "pressure": 1015.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 22.2,
+        "temperatureUnit": "C",
+        "windBearing": 262.2,
+        "windSpeed": 2.9,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
