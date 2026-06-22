@@ -1,4 +1,264 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/816.svg",
+        "id": 816,
+        "name": "Austria",
+        "shortName": "Austria",
+        "tla": "AUT"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_J",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/762.png",
+        "id": 762,
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG"
+      },
+      "id": 537399,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-22T17:59:16Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Dallas",
+        "cloudCoverage": 22.7,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T16:55:02.724488+00:00",
+        "humidity": 61.7,
+        "latitude": 32.7473,
+        "longitude": -97.0945,
+        "name": "AT&T Stadium weather",
+        "observedAt": "2026-06-22T16:00:00Z",
+        "pressure": 1012.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "AT&T Stadium",
+        "temperature": 31.4,
+        "temperatureUnit": "C",
+        "windBearing": 196.3,
+        "windSpeed": 5.5,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 276653,
+          "name": "Amin Omar",
+          "nationality": "Egypt",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-22T17:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Dallas",
+        "cloudCoverage": 22.7,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T16:55:02.724488+00:00",
+        "humidity": 61.7,
+        "latitude": 32.7473,
+        "longitude": -97.0945,
+        "name": "AT&T Stadium weather",
+        "observedAt": "2026-06-22T16:00:00Z",
+        "pressure": 1012.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "AT&T Stadium",
+        "temperature": 31.4,
+        "temperatureUnit": "C",
+        "windBearing": 196.3,
+        "windSpeed": 5.5,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/816.svg",
+        "id": 816,
+        "name": "Austria",
+        "shortName": "Austria",
+        "tla": "AUT"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_J",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/762.png",
+        "id": 762,
+        "name": "Argentina",
+        "shortName": "Argentina",
+        "tla": "ARG"
+      },
+      "id": 537399,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-22T17:59:16Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Dallas",
+        "cloudCoverage": 22.7,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T16:55:02.724488+00:00",
+        "humidity": 61.7,
+        "latitude": 32.7473,
+        "longitude": -97.0945,
+        "name": "AT&T Stadium weather",
+        "observedAt": "2026-06-22T16:00:00Z",
+        "pressure": 1012.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "AT&T Stadium",
+        "temperature": 31.4,
+        "temperatureUnit": "C",
+        "windBearing": 196.3,
+        "windSpeed": 5.5,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 276653,
+          "name": "Amin Omar",
+          "nationality": "Egypt",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-22T17:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Dallas",
+        "cloudCoverage": 22.7,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T16:55:02.724488+00:00",
+        "humidity": 61.7,
+        "latitude": 32.7473,
+        "longitude": -97.0945,
+        "name": "AT&T Stadium weather",
+        "observedAt": "2026-06-22T16:00:00Z",
+        "pressure": 1012.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "AT&T Stadium",
+        "temperature": 31.4,
+        "temperatureUnit": "C",
+        "windBearing": 196.3,
+        "windSpeed": 5.5,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
