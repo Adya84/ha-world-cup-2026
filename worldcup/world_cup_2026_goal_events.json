@@ -13949,7 +13949,7 @@
     "apiFootballFixtureId": 1489396,
     "awayScore": 1,
     "awayTeam": "Egypt",
-    "base_seconds": 3540,
+    "base_seconds": 3600,
     "cardEvents": [
       {
         "assist": null,
@@ -14007,8 +14007,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3540,
-    "displayMinute": "59'",
+    "clock_seconds": 3600,
+    "displayMinute": "60'",
     "events": [
       {
         "assist": "T. Payne",
@@ -14101,14 +14101,14 @@
         "type": "Substitution"
       },
       {
-        "assist": null,
+        "assist": "M. Hany",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "58'",
         "extra": null,
         "isDisallowed": false,
         "minute": 58,
-        "player": null,
+        "player": "M. Ziko",
         "playerOff": null,
         "playerOn": null,
         "rawType": "Goal",
@@ -14142,13 +14142,36 @@
         "timer": "15:00",
         "timerSeconds": 900,
         "type": "Goal"
+      },
+      {
+        "assist": "M. Hany",
+        "awayTeam": "Egypt",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "58'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "New Zealand",
+        "isDisallowed": false,
+        "matchId": 537366,
+        "matchUtcDate": "2026-06-22T01:00:00Z",
+        "minute": 58,
+        "player": "M. Ziko",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Egypt",
+        "timer": "58:00",
+        "timerSeconds": 3480,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "New Zealand",
-    "lastApiSync": "2026-06-22T02:19:02.522076+00:00",
-    "manualClockText": "59'",
-    "phase_start": "2026-06-22T02:19:02.522076+00:00",
+    "lastApiSync": "2026-06-22T02:19:47.366781+00:00",
+    "manualClockText": "60'",
+    "phase_start": "2026-06-22T02:19:47.366781+00:00",
     "referees": [
       {
         "name": "Omar Mohamed Al Ali",
