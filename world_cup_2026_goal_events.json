@@ -16618,7 +16618,7 @@
     "apiFootballFixtureId": 1539017,
     "awayScore": 0,
     "awayTeam": "Iraq",
-    "base_seconds": 1500,
+    "base_seconds": 1560,
     "cardEvents": [
       {
         "assist": null,
@@ -16640,8 +16640,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 1500,
-    "displayMinute": "25'",
+    "clock_seconds": 1560,
+    "displayMinute": "26'",
     "events": [
       {
         "assist": null,
@@ -16678,6 +16678,24 @@
         "timer": "14:00",
         "timerSeconds": 840,
         "type": "Goal"
+      },
+      {
+        "assist": "A. Al Hamadi",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "26'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 26,
+        "player": "A. Hussein",
+        "playerOff": "A. Hussein",
+        "playerOn": "A. Al Hamadi",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Iraq",
+        "timer": "26:00",
+        "timerSeconds": 1560,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -16707,9 +16725,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "France",
-    "lastApiSync": "2026-06-22T21:26:16.134989+00:00",
-    "manualClockText": "25'",
-    "phase_start": "2026-06-22T21:26:16.134989+00:00",
+    "lastApiSync": "2026-06-22T21:26:46.890886+00:00",
+    "manualClockText": "26'",
+    "phase_start": "2026-06-22T21:26:46.890886+00:00",
     "referees": [
       {
         "name": "Drew Fischer",
@@ -16723,6 +16741,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "1H",
+    "substitutionEvents": [
+      {
+        "assist": "A. Al Hamadi",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "26'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 26,
+        "player": "A. Hussein",
+        "playerOff": "A. Hussein",
+        "playerOn": "A. Al Hamadi",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Iraq",
+        "timer": "26:00",
+        "timerSeconds": 1560,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-22T21:00:00Z"
   },
   "537394": {
