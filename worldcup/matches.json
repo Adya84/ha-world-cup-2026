@@ -21524,20 +21524,13 @@
     },
     {
       "apiFootballFixtureId": 1489398,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 3,
-      "awayFouls": 4,
-      "awayOffsides": 0,
-      "awayPossession": "34%",
-      "awayScore": 2,
-      "awayShotsOnGoal": 2,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
         "id": 1930,
@@ -21619,8 +21612,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -21628,51 +21620,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
-          "comments": null,
-          "detail": "Yellow Card",
-          "displayMinute": "5'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 5,
-          "player": "S. Lopes Cabral",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "5:00",
-          "timerSeconds": 300,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "20'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 20,
-          "player": "R. Bentancur",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "20:00",
-          "timerSeconds": 1200,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
+          "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "21'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Uruguay",
           "isDisallowed": false,
+          "matchId": 537372,
+          "matchUtcDate": "2026-06-21T22:00:00Z",
           "minute": 21,
           "player": "K. Lenini",
           "playerOff": null,
@@ -21686,11 +21647,16 @@
         },
         {
           "assist": null,
+          "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "44'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Uruguay",
           "isDisallowed": false,
+          "matchId": 537372,
+          "matchUtcDate": "2026-06-21T22:00:00Z",
           "minute": 44,
           "player": "M. Araujo",
           "playerOff": null,
@@ -21704,11 +21670,16 @@
         },
         {
           "assist": "M. Araujo",
+          "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "45+6'",
           "extra": 6,
+          "goalNumber": 3,
+          "homeTeam": "Uruguay",
           "isDisallowed": false,
+          "matchId": 537372,
+          "matchUtcDate": "2026-06-21T22:00:00Z",
           "minute": 45,
           "player": "A. Canobbio",
           "playerOff": null,
@@ -21721,84 +21692,17 @@
           "type": "Goal"
         },
         {
-          "assist": "D. Duarte",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "T. Arcanjo",
-          "playerOff": "T. Arcanjo",
-          "playerOn": "D. Duarte",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "M. Olivera",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "N. Da Costa",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "Benchimol",
-          "playerOff": "Benchimol",
-          "playerOn": "N. Da Costa",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "H. Varela",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "G. Rodrigues",
-          "playerOff": "G. Rodrigues",
-          "playerOn": "H. Varela",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
+          "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "61'",
           "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Uruguay",
           "isDisallowed": false,
+          "matchId": 537372,
+          "matchUtcDate": "2026-06-21T22:00:00Z",
           "minute": 61,
           "player": "H. Varela",
           "playerOff": null,
@@ -21809,136 +21713,8 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Goal Disallowed - offside",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": true,
-          "minute": 68,
-          "player": "M. Araujo",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Var",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Disallowed Goal"
-        },
-        {
-          "assist": "N. de la Cruz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "70'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 70,
-          "player": "M. Ugarte",
-          "playerOff": "M. Ugarte",
-          "playerOn": "N. de la Cruz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "70:00",
-          "timerSeconds": 4200,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Nunez",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "70'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 70,
-          "player": "F. Vinas",
-          "playerOff": "F. Vinas",
-          "playerOn": "D. Nunez",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "70:00",
-          "timerSeconds": 4200,
-          "type": "Substitution"
-        },
-        {
-          "assist": "L. Duarte",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "K. Lenini",
-          "playerOff": "K. Lenini",
-          "playerOn": "L. Duarte",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Y. Semedo",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "80'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 80,
-          "player": "J. Monteiro",
-          "playerOff": "J. Monteiro",
-          "playerOn": "Y. Semedo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Rodriguez",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "81'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 81,
-          "player": "M. Araujo",
-          "playerOff": "M. Araujo",
-          "playerOn": "B. Rodriguez",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "90+3'",
-          "extra": 3,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "D. Borges",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Cape Verde Islands",
-          "timer": "93:00",
-          "timerSeconds": 5580,
-          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -22033,14 +21809,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
-      "homeCorners": 11,
-      "homeFouls": 8,
-      "homeOffsides": 3,
-      "homePossession": "66%",
-      "homeScore": 2,
-      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/758.svg",
         "id": 758,
@@ -22050,42 +21819,17 @@
       },
       "id": 537372,
       "lastApiSync": "2026-06-22T00:04:16.319425+00:00",
-      "lastUpdated": "2026-06-22T02:04:16Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 3,
-          "fouls": 4,
-          "offsides": 0,
-          "possession": "34%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 2,
-          "totalShots": 7,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 11,
-          "fouls": 8,
-          "offsides": 3,
-          "possession": "66%",
-          "redCards": null,
-          "shotsOffGoal": 7,
-          "shotsOnGoal": 2,
-          "totalShots": 16,
-          "yellowCards": 2
-        }
-      },
+      "lastUpdated": "2026-06-22T02:05:01Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-22T00:04:16.319425+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -22110,29 +21854,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Espen Esk\u00e5s",
-          "nationality": "Norway",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Espen Eskas, Norway",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 215543,
           "name": "Espen Esk\u00e5s",
           "nationality": "Norway",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Espen Eskas, Norway",
           "type": "REFEREE"
         }
       ],
@@ -22148,7 +21877,6 @@
         },
         "winner": "DRAW"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -22157,7 +21885,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "D. Duarte",
@@ -22305,11 +22033,6 @@
         }
       ],
       "utcDate": "2026-06-21T22:00:00Z",
-      "venue": {
-        "city": "Miami Gardens",
-        "id": null,
-        "name": "Hard Rock Stadium"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
