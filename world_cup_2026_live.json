@@ -79,7 +79,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3540,
+      "clockSeconds": 3600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -88,7 +88,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "59'",
+      "displayMinute": "60'",
       "events": [
         {
           "assist": "T. Payne",
@@ -181,14 +181,14 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
+          "assist": "M. Hany",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
           "minute": 58,
-          "player": null,
+          "player": "M. Ziko",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -199,8 +199,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3540,
-      "fallbackClockText": "59'",
+      "fallbackClock": 3600,
+      "fallbackClockText": "60'",
       "goalEvents": [
         {
           "assist": "T. Payne",
@@ -224,6 +224,29 @@
           "timer": "15:00",
           "timerSeconds": 900,
           "type": "Goal"
+        },
+        {
+          "assist": "M. Hany",
+          "awayTeam": "Egypt",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "58'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537366,
+          "matchUtcDate": "2026-06-22T01:00:00Z",
+          "minute": 58,
+          "player": "M. Ziko",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -242,8 +265,8 @@
         "tla": "NZL"
       },
       "id": 537366,
-      "lastApiSync": "2026-06-22T02:19:02.522076+00:00",
-      "lastUpdated": "2026-06-22T04:19:01Z",
+      "lastApiSync": "2026-06-22T02:19:47.366781+00:00",
+      "lastUpdated": "2026-06-22T04:19:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -271,14 +294,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "59'",
-        "lastApiSync": "2026-06-22T02:19:02.522076+00:00",
-        "seconds": 3540,
+        "displayMinute": "60'",
+        "lastApiSync": "2026-06-22T02:19:47.366781+00:00",
+        "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "59'"
+        "timer": "60'"
       },
-      "manualClockText": "59'",
+      "manualClockText": "60'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -286,7 +309,7 @@
         "condition": "fair_day",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-22T02:09:05.093798+00:00",
+        "fetchedAt": "2026-06-22T02:19:47.188655+00:00",
         "humidity": 47.6,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -303,7 +326,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 59,
+      "minute": 60,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -339,7 +362,7 @@
           "away": 0,
           "home": 1
         },
-        "winner": "HOME_TEAM"
+        "winner": "DRAW"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -384,7 +407,7 @@
         "condition": "fair_day",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-22T02:09:05.093798+00:00",
+        "fetchedAt": "2026-06-22T02:19:47.188655+00:00",
         "humidity": 47.6,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -482,7 +505,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3540,
+      "clockSeconds": 3600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -491,7 +514,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "59'",
+      "displayMinute": "60'",
       "events": [
         {
           "assist": "T. Payne",
@@ -584,14 +607,14 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
+          "assist": "M. Hany",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
           "minute": 58,
-          "player": null,
+          "player": "M. Ziko",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -602,8 +625,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3540,
-      "fallbackClockText": "59'",
+      "fallbackClock": 3600,
+      "fallbackClockText": "60'",
       "goalEvents": [
         {
           "assist": "T. Payne",
@@ -627,6 +650,29 @@
           "timer": "15:00",
           "timerSeconds": 900,
           "type": "Goal"
+        },
+        {
+          "assist": "M. Hany",
+          "awayTeam": "Egypt",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "58'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537366,
+          "matchUtcDate": "2026-06-22T01:00:00Z",
+          "minute": 58,
+          "player": "M. Ziko",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -645,8 +691,8 @@
         "tla": "NZL"
       },
       "id": 537366,
-      "lastApiSync": "2026-06-22T02:19:02.522076+00:00",
-      "lastUpdated": "2026-06-22T04:19:01Z",
+      "lastApiSync": "2026-06-22T02:19:47.366781+00:00",
+      "lastUpdated": "2026-06-22T04:19:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -674,14 +720,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "59'",
-        "lastApiSync": "2026-06-22T02:19:02.522076+00:00",
-        "seconds": 3540,
+        "displayMinute": "60'",
+        "lastApiSync": "2026-06-22T02:19:47.366781+00:00",
+        "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "59'"
+        "timer": "60'"
       },
-      "manualClockText": "59'",
+      "manualClockText": "60'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -689,7 +735,7 @@
         "condition": "fair_day",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-22T02:09:05.093798+00:00",
+        "fetchedAt": "2026-06-22T02:19:47.188655+00:00",
         "humidity": 47.6,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -706,7 +752,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 59,
+      "minute": 60,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -742,7 +788,7 @@
           "away": 0,
           "home": 1
         },
-        "winner": "HOME_TEAM"
+        "winner": "DRAW"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -787,7 +833,7 @@
         "condition": "fair_day",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-22T02:09:05.093798+00:00",
+        "fetchedAt": "2026-06-22T02:19:47.188655+00:00",
         "humidity": 47.6,
         "latitude": 49.2768,
         "longitude": -123.1119,
