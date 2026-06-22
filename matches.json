@@ -21891,7 +21891,7 @@
       "awayFouls": 7,
       "awayOffsides": 0,
       "awayPossession": "59%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/825.svg",
@@ -21956,7 +21956,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -21965,7 +21965,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": "T. Payne",
@@ -22182,10 +22182,28 @@
           "timer": "76:00",
           "timerSeconds": 4560,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "Trezeguet",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": "T. Payne",
@@ -22255,6 +22273,29 @@
           "timer": "67:00",
           "timerSeconds": 4020,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Egypt",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "82'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537366,
+          "matchUtcDate": "2026-06-22T01:00:00Z",
+          "minute": 82,
+          "player": "Trezeguet",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -22273,8 +22314,8 @@
         "tla": "NZL"
       },
       "id": 537366,
-      "lastApiSync": "2026-06-22T02:41:41.753241+00:00",
-      "lastUpdated": "2026-06-22T04:41:40Z",
+      "lastApiSync": "2026-06-22T02:42:26.423211+00:00",
+      "lastUpdated": "2026-06-22T04:42:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -22302,14 +22343,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-22T02:41:41.753241+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-22T02:42:26.423211+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -22334,7 +22375,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -22363,7 +22404,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 1
         },
         "halfTime": {
