@@ -44002,6 +44002,8 @@
     },
     {
       "apiFootballFixtureId": 1539017,
+      "apiFootballStatus": "INT",
+      "apiFootballStatusLong": "Match Interrupted",
       "area": {
         "code": "INT",
         "flag": null,
@@ -44009,6 +44011,12 @@
         "name": "World"
       },
       "awaitingLiveApiData": true,
+      "awayCorners": 1,
+      "awayFouls": 2,
+      "awayOffsides": null,
+      "awayPossession": "42%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -44096,6 +44104,12 @@
         }
       ],
       "group": "GROUP_I",
+      "homeCorners": 1,
+      "homeFouls": 5,
+      "homeOffsides": null,
+      "homePossession": "58%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -44105,24 +44119,49 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
-      "lastUpdated": "2026-06-23T00:39:46Z",
+      "lastUpdated": "2026-06-23T00:40:13Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 1,
+          "fouls": 2,
+          "offsides": null,
+          "possession": "42%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 5,
+          "offsides": null,
+          "possession": "58%",
+          "redCards": null,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 1,
+          "totalShots": 7,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
         "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
         "seconds": 2700,
         "source": "awaiting_api_football_minute",
-        "status": "PAUSED",
+        "status": "INT",
         "timer": "45:00"
       },
       "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1539017,
-        "awayCorners": null,
-        "awayFouls": null,
+        "awayCorners": 1,
+        "awayFouls": 2,
         "awayOffsides": null,
-        "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayPossession": "42%",
+        "awayShotsOnGoal": 0,
         "cardEvents": [
           {
             "assist": null,
@@ -44194,27 +44233,56 @@
           }
         ],
         "goalEventsSource": null,
-        "homeCorners": null,
-        "homeFouls": null,
+        "homeCorners": 1,
+        "homeFouls": 5,
         "homeOffsides": null,
-        "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homePossession": "58%",
+        "homeShotsOnGoal": 1,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": 1,
+            "fouls": 2,
+            "offsides": null,
+            "possession": "42%",
+            "redCards": null,
+            "shotsOffGoal": 1,
+            "shotsOnGoal": 0,
+            "totalShots": 2,
+            "yellowCards": 1
+          },
+          "home": {
+            "corners": 1,
+            "fouls": 5,
+            "offsides": null,
+            "possession": "58%",
+            "redCards": null,
+            "shotsOffGoal": 3,
+            "shotsOnGoal": 1,
+            "totalShots": 7,
+            "yellowCards": 0
+          }
+        },
         "officials": [
           {
-            "id": 77052,
             "name": "Drew Fischer",
             "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 77052,
             "name": "Drew Fischer",
             "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
             "type": "REFEREE"
           }
         ],
@@ -44289,11 +44357,25 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -44309,6 +44391,7 @@
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -44317,7 +44400,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "PAUSED",
+      "status": "INT",
       "substitutionEvents": [
         {
           "assist": "A. Al Hamadi",
@@ -44339,6 +44422,11 @@
         }
       ],
       "utcDate": "2026-06-22T21:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -88367,6 +88455,8 @@
     },
     {
       "apiFootballFixtureId": 1539017,
+      "apiFootballStatus": "INT",
+      "apiFootballStatusLong": "Match Interrupted",
       "area": {
         "code": "INT",
         "flag": null,
@@ -88374,6 +88464,12 @@
         "name": "World"
       },
       "awaitingLiveApiData": true,
+      "awayCorners": 1,
+      "awayFouls": 2,
+      "awayOffsides": null,
+      "awayPossession": "42%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -88461,6 +88557,12 @@
         }
       ],
       "group": "GROUP_I",
+      "homeCorners": 1,
+      "homeFouls": 5,
+      "homeOffsides": null,
+      "homePossession": "58%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -88470,24 +88572,49 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
-      "lastUpdated": "2026-06-23T00:39:46Z",
+      "lastUpdated": "2026-06-23T00:40:13Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 1,
+          "fouls": 2,
+          "offsides": null,
+          "possession": "42%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 5,
+          "offsides": null,
+          "possession": "58%",
+          "redCards": null,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 1,
+          "totalShots": 7,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
         "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
         "seconds": 2700,
         "source": "awaiting_api_football_minute",
-        "status": "PAUSED",
+        "status": "INT",
         "timer": "45:00"
       },
       "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1539017,
-        "awayCorners": null,
-        "awayFouls": null,
+        "awayCorners": 1,
+        "awayFouls": 2,
         "awayOffsides": null,
-        "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayPossession": "42%",
+        "awayShotsOnGoal": 0,
         "cardEvents": [
           {
             "assist": null,
@@ -88559,27 +88686,56 @@
           }
         ],
         "goalEventsSource": null,
-        "homeCorners": null,
-        "homeFouls": null,
+        "homeCorners": 1,
+        "homeFouls": 5,
         "homeOffsides": null,
-        "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homePossession": "58%",
+        "homeShotsOnGoal": 1,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": 1,
+            "fouls": 2,
+            "offsides": null,
+            "possession": "42%",
+            "redCards": null,
+            "shotsOffGoal": 1,
+            "shotsOnGoal": 0,
+            "totalShots": 2,
+            "yellowCards": 1
+          },
+          "home": {
+            "corners": 1,
+            "fouls": 5,
+            "offsides": null,
+            "possession": "58%",
+            "redCards": null,
+            "shotsOffGoal": 3,
+            "shotsOnGoal": 1,
+            "totalShots": 7,
+            "yellowCards": 0
+          }
+        },
         "officials": [
           {
-            "id": 77052,
             "name": "Drew Fischer",
             "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 77052,
             "name": "Drew Fischer",
             "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
             "type": "REFEREE"
           }
         ],
@@ -88654,11 +88810,25 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -88674,6 +88844,7 @@
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -88682,7 +88853,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "PAUSED",
+      "status": "INT",
       "substitutionEvents": [
         {
           "assist": "A. Al Hamadi",
@@ -88704,6 +88875,11 @@
         }
       ],
       "utcDate": "2026-06-22T21:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
