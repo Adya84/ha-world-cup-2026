@@ -22910,13 +22910,16 @@
       "utcDate": "2026-06-22T17:00:00Z"
     },
     {
+      "apiFootballFixtureId": 1539017,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -22924,8 +22927,8 @@
         "shortName": "Iraq",
         "tla": "IRQ"
       },
-      "clockSeconds": 0,
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -22933,8 +22936,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_I",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -22943,19 +22949,19 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-22T22:32:37Z",
-      "liveSource": "pre_kickoff_window",
+      "lastApiSync": "2026-06-22T21:01:03.992437+00:00",
+      "lastUpdated": "2026-06-22T23:01:01Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "LIVE",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-22T21:01:03.992437+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -22980,30 +22986,45 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": null,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
-        "winner": null
+        "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -23012,8 +23033,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "1H",
       "utcDate": "2026-06-22T21:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
