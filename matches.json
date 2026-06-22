@@ -22407,7 +22407,7 @@
         "name": "World"
       },
       "awayCorners": 2,
-      "awayFouls": 8,
+      "awayFouls": 10,
       "awayOffsides": 0,
       "awayPossession": "42%",
       "awayScore": 0,
@@ -22446,12 +22446,12 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 76,
-          "player": "F. Medina",
+          "player": "K. Laimer",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
           "source": "api_football",
-          "team": "Argentina",
+          "team": "Austria",
           "timer": "76:00",
           "timerSeconds": 4560,
           "type": "Yellow Card"
@@ -22464,18 +22464,18 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 76,
-          "player": "K. Laimer",
+          "player": "F. Medina",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Card",
           "source": "api_football",
-          "team": "Austria",
+          "team": "Argentina",
           "timer": "76:00",
           "timerSeconds": 4560,
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4680,
+      "clockSeconds": 4740,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -22484,7 +22484,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "78'",
+      "displayMinute": "79'",
       "events": [
         {
           "assist": "L. Messi",
@@ -22613,9 +22613,27 @@
           "type": "Substitution"
         },
         {
-          "assist": "A. Prass",
+          "assist": "M. Arnautovic",
           "comments": null,
           "detail": "Substitution 2",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "P. Wanner",
+          "playerOff": "P. Wanner",
+          "playerOn": "M. Arnautovic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Prass",
+          "comments": null,
+          "detail": "Substitution 3",
           "displayMinute": "68'",
           "extra": null,
           "isDisallowed": false,
@@ -22631,22 +22649,22 @@
           "type": "Substitution"
         },
         {
-          "assist": "M. Arnautovic",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "68'",
+          "assist": null,
+          "comments": "Unsportsmanlike conduct",
+          "detail": "Yellow Card",
+          "displayMinute": "76'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 68,
-          "player": "P. Wanner",
-          "playerOff": "P. Wanner",
-          "playerOn": "M. Arnautovic",
-          "rawType": "subst",
+          "minute": 76,
+          "player": "K. Laimer",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
           "source": "api_football",
           "team": "Austria",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Yellow Card"
         },
         {
           "assist": null,
@@ -22667,26 +22685,26 @@
           "type": "Yellow Card"
         },
         {
-          "assist": null,
-          "comments": "Unsportsmanlike conduct",
-          "detail": "Yellow Card",
-          "displayMinute": "76'",
+          "assist": "P. Wimmer",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "79'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 76,
-          "player": "K. Laimer",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
+          "minute": 79,
+          "player": "R. Schmid",
+          "playerOff": "R. Schmid",
+          "playerOn": "P. Wimmer",
+          "rawType": "subst",
           "source": "api_football",
           "team": "Austria",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Yellow Card"
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4680,
-      "fallbackClockText": "78'",
+      "fallbackClock": 4740,
+      "fallbackClockText": "79'",
       "goalEvents": [
         {
           "assist": "L. Messi",
@@ -22751,20 +22769,20 @@
         "tla": "ARG"
       },
       "id": 537399,
-      "lastApiSync": "2026-06-22T18:42:38.182536+00:00",
-      "lastUpdated": "2026-06-22T20:42:37Z",
+      "lastApiSync": "2026-06-22T18:43:09.985502+00:00",
+      "lastUpdated": "2026-06-22T20:43:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
-          "fouls": 8,
+          "fouls": 10,
           "offsides": 0,
           "possession": "42%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 1,
           "totalShots": 5,
-          "yellowCards": 1
+          "yellowCards": 2
         },
         "home": {
           "corners": 1,
@@ -22775,19 +22793,19 @@
           "shotsOffGoal": 3,
           "shotsOnGoal": 2,
           "totalShots": 6,
-          "yellowCards": 0
+          "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "78'",
-        "lastApiSync": "2026-06-22T18:42:38.182536+00:00",
-        "seconds": 4680,
+        "displayMinute": "79'",
+        "lastApiSync": "2026-06-22T18:43:09.985502+00:00",
+        "seconds": 4740,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "78'"
+        "timer": "79'"
       },
-      "manualClockText": "78'",
+      "manualClockText": "79'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -22795,7 +22813,7 @@
         "condition": "cloudy",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-22T18:32:55.080735+00:00",
+        "fetchedAt": "2026-06-22T18:43:09.789034+00:00",
         "humidity": 50.5,
         "latitude": 32.7473,
         "longitude": -97.0945,
@@ -22812,7 +22830,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 78,
+      "minute": 79,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -22934,9 +22952,27 @@
           "type": "Substitution"
         },
         {
-          "assist": "A. Prass",
+          "assist": "M. Arnautovic",
           "comments": null,
           "detail": "Substitution 2",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "P. Wanner",
+          "playerOff": "P. Wanner",
+          "playerOn": "M. Arnautovic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Prass",
+          "comments": null,
+          "detail": "Substitution 3",
           "displayMinute": "68'",
           "extra": null,
           "isDisallowed": false,
@@ -22952,21 +22988,21 @@
           "type": "Substitution"
         },
         {
-          "assist": "M. Arnautovic",
+          "assist": "P. Wimmer",
           "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "68'",
+          "detail": "Substitution 4",
+          "displayMinute": "79'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 68,
-          "player": "P. Wanner",
-          "playerOff": "P. Wanner",
-          "playerOn": "M. Arnautovic",
+          "minute": 79,
+          "player": "R. Schmid",
+          "playerOff": "R. Schmid",
+          "playerOn": "P. Wimmer",
           "rawType": "subst",
           "source": "api_football",
           "team": "Austria",
-          "timer": "68:00",
-          "timerSeconds": 4080,
+          "timer": "79:00",
+          "timerSeconds": 4740,
           "type": "Substitution"
         }
       ],
@@ -22983,7 +23019,7 @@
         "condition": "cloudy",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-22T18:32:55.080735+00:00",
+        "fetchedAt": "2026-06-22T18:43:09.789034+00:00",
         "humidity": 50.5,
         "latitude": 32.7473,
         "longitude": -97.0945,
