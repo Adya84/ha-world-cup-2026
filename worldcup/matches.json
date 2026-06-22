@@ -21879,20 +21879,13 @@
     },
     {
       "apiFootballFixtureId": 1489396,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 3,
-      "awayFouls": 8,
-      "awayOffsides": 0,
-      "awayPossession": "56%",
-      "awayScore": 3,
-      "awayShotsOnGoal": 7,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/825.svg",
         "id": 825,
@@ -21956,8 +21949,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -21965,15 +21957,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "T. Payne",
+          "awayTeam": "Egypt",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "15'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "New Zealand",
           "isDisallowed": false,
+          "matchId": 537366,
+          "matchUtcDate": "2026-06-22T01:00:00Z",
           "minute": 15,
           "player": "F. Surman",
           "playerOff": null,
@@ -21986,84 +21983,17 @@
           "type": "Goal"
         },
         {
-          "assist": null,
-          "comments": "Roughing",
-          "detail": "Yellow Card",
-          "displayMinute": "17'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 17,
-          "player": "M. Lasheen",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Egypt",
-          "timer": "17:00",
-          "timerSeconds": 1020,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "20'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 20,
-          "player": "S. Singh",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "New Zealand",
-          "timer": "20:00",
-          "timerSeconds": 1200,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "34'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 34,
-          "player": "C. McCowatt",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "New Zealand",
-          "timer": "34:00",
-          "timerSeconds": 2040,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "R. Rabia",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "41'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 41,
-          "player": "H. Fathy",
-          "playerOff": "H. Fathy",
-          "playerOn": "R. Rabia",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Egypt",
-          "timer": "41:00",
-          "timerSeconds": 2460,
-          "type": "Substitution"
-        },
-        {
           "assist": "M. Hany",
+          "awayTeam": "Egypt",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "58'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "New Zealand",
           "isDisallowed": false,
+          "matchId": 537366,
+          "matchUtcDate": "2026-06-22T01:00:00Z",
           "minute": 58,
           "player": "M. Ziko",
           "playerOff": null,
@@ -22076,30 +22006,17 @@
           "type": "Goal"
         },
         {
-          "assist": "B. Old",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "66'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 66,
-          "player": "C. McCowatt",
-          "playerOff": "C. McCowatt",
-          "playerOn": "B. Old",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "New Zealand",
-          "timer": "66:00",
-          "timerSeconds": 3960,
-          "type": "Substitution"
-        },
-        {
           "assist": "M. Ziko",
+          "awayTeam": "Egypt",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "67'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "New Zealand",
           "isDisallowed": false,
+          "matchId": 537366,
+          "matchUtcDate": "2026-06-22T01:00:00Z",
           "minute": 67,
           "player": "M. Salah",
           "playerOff": null,
@@ -22112,84 +22029,17 @@
           "type": "Goal"
         },
         {
-          "assist": "R. Thomas",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "S. Singh",
-          "playerOff": "S. Singh",
-          "playerOn": "R. Thomas",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "New Zealand",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Randall",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "L. Cacace",
-          "playerOff": "L. Cacace",
-          "playerOn": "J. Randall",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "New Zealand",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Trezeguet",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "O. Marmoush",
-          "playerOff": "O. Marmoush",
-          "playerOn": "Trezeguet",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Egypt",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": "H. Abdelkarim",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "M. Ziko",
-          "playerOff": "M. Ziko",
-          "playerOn": "H. Abdelkarim",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Egypt",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
           "assist": "M. Salah",
+          "awayTeam": "Egypt",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "82'",
           "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "New Zealand",
           "isDisallowed": false,
+          "matchId": 537366,
+          "matchUtcDate": "2026-06-22T01:00:00Z",
           "minute": 82,
           "player": "Trezeguet",
           "playerOff": null,
@@ -22200,100 +22050,8 @@
           "timer": "82:00",
           "timerSeconds": 4920,
           "type": "Goal"
-        },
-        {
-          "assist": "Zizo",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "E. Ashour",
-          "playerOff": "E. Ashour",
-          "playerOn": "Zizo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Egypt",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": "H. Abdelmaguid",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "M. Salah",
-          "playerOff": "M. Salah",
-          "playerOn": "H. Abdelmaguid",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Egypt",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": "T. Bindon",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "T. Payne",
-          "playerOff": "T. Payne",
-          "playerOn": "T. Bindon",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "New Zealand",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": "F. De Vries",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "E. Just",
-          "playerOff": "E. Just",
-          "playerOn": "F. De Vries",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "New Zealand",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Abdelmonem",
-          "comments": null,
-          "detail": "Substitution 6",
-          "displayMinute": "90+9'",
-          "extra": 9,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "H. Abdelmaguid",
-          "playerOff": "H. Abdelmaguid",
-          "playerOn": "M. Abdelmonem",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Egypt",
-          "timer": "99:00",
-          "timerSeconds": 5940,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "T. Payne",
@@ -22388,14 +22146,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
-      "homeCorners": 4,
-      "homeFouls": 14,
-      "homeOffsides": 3,
-      "homePossession": "44%",
-      "homeScore": 1,
-      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/783.svg",
         "id": 783,
@@ -22405,42 +22156,17 @@
       },
       "id": 537366,
       "lastApiSync": "2026-06-22T03:00:34.509942+00:00",
-      "lastUpdated": "2026-06-22T05:00:31Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 3,
-          "fouls": 8,
-          "offsides": 0,
-          "possession": "56%",
-          "redCards": null,
-          "shotsOffGoal": 6,
-          "shotsOnGoal": 7,
-          "totalShots": 19,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 14,
-          "offsides": 3,
-          "possession": "44%",
-          "redCards": null,
-          "shotsOffGoal": 2,
-          "shotsOnGoal": 4,
-          "totalShots": 9,
-          "yellowCards": 2
-        }
-      },
+      "lastUpdated": "2026-06-22T05:01:19Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-22T03:00:34.509942+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -22465,29 +22191,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Omar Mohamed Al Ali",
-          "nationality": "United Arab Emirates",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Omar Mohamed Al Ali, United Arab Emirates",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 129569,
           "name": "Omar Mohamed Al Ali",
           "nationality": "United Arab Emirates",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Omar Mohamed Al Ali, United Arab Emirates",
           "type": "REFEREE"
         }
       ],
@@ -22503,7 +22214,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -22512,7 +22222,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "R. Rabia",
@@ -22714,11 +22424,6 @@
         }
       ],
       "utcDate": "2026-06-22T01:00:00Z",
-      "venue": {
-        "city": "Vancouver",
-        "id": 19445,
-        "name": "BC Place"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
