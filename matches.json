@@ -21887,12 +21887,12 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 7,
+      "awayCorners": 3,
+      "awayFouls": 8,
       "awayOffsides": 0,
       "awayPossession": "59%",
       "awayScore": 3,
-      "awayShotsOnGoal": 4,
+      "awayShotsOnGoal": 6,
       "awayTeam": {
         "crest": "https://crests.football-data.org/825.svg",
         "id": 825,
@@ -21956,7 +21956,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5160,
+      "clockSeconds": 5220,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -21965,7 +21965,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "86'",
+      "displayMinute": "87'",
       "events": [
         {
           "assist": "T. Payne",
@@ -22218,10 +22218,64 @@
           "timer": "85:00",
           "timerSeconds": 5100,
           "type": "Substitution"
+        },
+        {
+          "assist": "Zizo",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "E. Ashour",
+          "playerOff": "E. Ashour",
+          "playerOn": "Zizo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Bindon",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "T. Payne",
+          "playerOff": "T. Payne",
+          "playerOn": "T. Bindon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "New Zealand",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. De Vries",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "E. Just",
+          "playerOff": "E. Just",
+          "playerOn": "F. De Vries",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "New Zealand",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5160,
-      "fallbackClockText": "86'",
+      "fallbackClock": 5220,
+      "fallbackClockText": "87'",
       "goalEvents": [
         {
           "assist": "T. Payne",
@@ -22319,7 +22373,7 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
       "homeCorners": 2,
-      "homeFouls": 12,
+      "homeFouls": 13,
       "homeOffsides": 2,
       "homePossession": "41%",
       "homeScore": 1,
@@ -22332,24 +22386,24 @@
         "tla": "NZL"
       },
       "id": 537366,
-      "lastApiSync": "2026-06-22T02:46:11.794918+00:00",
-      "lastUpdated": "2026-06-22T04:46:10Z",
+      "lastApiSync": "2026-06-22T02:46:56.694481+00:00",
+      "lastUpdated": "2026-06-22T04:46:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 2,
-          "fouls": 7,
+          "corners": 3,
+          "fouls": 8,
           "offsides": 0,
           "possession": "59%",
           "redCards": null,
           "shotsOffGoal": 6,
-          "shotsOnGoal": 4,
-          "totalShots": 15,
+          "shotsOnGoal": 6,
+          "totalShots": 18,
           "yellowCards": 1
         },
         "home": {
           "corners": 2,
-          "fouls": 12,
+          "fouls": 13,
           "offsides": 2,
           "possession": "41%",
           "redCards": null,
@@ -22361,14 +22415,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "86'",
-        "lastApiSync": "2026-06-22T02:46:11.794918+00:00",
-        "seconds": 5160,
+        "displayMinute": "87'",
+        "lastApiSync": "2026-06-22T02:46:56.694481+00:00",
+        "seconds": 5220,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "86'"
+        "timer": "87'"
       },
-      "manualClockText": "86'",
+      "manualClockText": "87'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -22393,7 +22447,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 86,
+      "minute": 87,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -22566,6 +22620,60 @@
           "team": "Egypt",
           "timer": "85:00",
           "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Zizo",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "E. Ashour",
+          "playerOff": "E. Ashour",
+          "playerOn": "Zizo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Bindon",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "T. Payne",
+          "playerOff": "T. Payne",
+          "playerOn": "T. Bindon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "New Zealand",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. De Vries",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "E. Just",
+          "playerOff": "E. Just",
+          "playerOn": "F. De Vries",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "New Zealand",
+          "timer": "86:00",
+          "timerSeconds": 5160,
           "type": "Substitution"
         }
       ],
