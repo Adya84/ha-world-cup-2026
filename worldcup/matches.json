@@ -22419,7 +22419,27 @@
         "shortName": "Austria",
         "tla": "AUT"
       },
-      "clockSeconds": 2400,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "41'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 41,
+          "player": "S. Posch",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "41:00",
+          "timerSeconds": 2460,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 2460,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -22428,7 +22448,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "40'",
+      "displayMinute": "41'",
       "events": [
         {
           "assist": "L. Messi",
@@ -22465,10 +22485,28 @@
           "timer": "38:00",
           "timerSeconds": 2280,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "41'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 41,
+          "player": "S. Posch",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "41:00",
+          "timerSeconds": 2460,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 2400,
-      "fallbackClockText": "40'",
+      "fallbackClock": 2460,
+      "fallbackClockText": "41'",
       "goalEvents": [
         {
           "assist": "L. Messi",
@@ -22533,8 +22571,8 @@
         "tla": "ARG"
       },
       "id": 537399,
-      "lastApiSync": "2026-06-22T17:41:05.131047+00:00",
-      "lastUpdated": "2026-06-22T19:41:04Z",
+      "lastApiSync": "2026-06-22T17:41:36.477776+00:00",
+      "lastUpdated": "2026-06-22T19:41:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -22562,14 +22600,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "40'",
-        "lastApiSync": "2026-06-22T17:41:05.131047+00:00",
-        "seconds": 2400,
+        "displayMinute": "41'",
+        "lastApiSync": "2026-06-22T17:41:36.477776+00:00",
+        "seconds": 2460,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "40'"
+        "timer": "41'"
       },
-      "manualClockText": "40'",
+      "manualClockText": "41'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -22577,7 +22615,7 @@
         "condition": "fair_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-22T17:31:14.121827+00:00",
+        "fetchedAt": "2026-06-22T17:41:36.277188+00:00",
         "humidity": 54.2,
         "latitude": 32.7473,
         "longitude": -97.0945,
@@ -22594,7 +22632,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 40,
+      "minute": 41,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -22655,7 +22693,7 @@
         "condition": "fair_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-22T17:31:14.121827+00:00",
+        "fetchedAt": "2026-06-22T17:41:36.277188+00:00",
         "humidity": 54.2,
         "latitude": 32.7473,
         "longitude": -97.0945,
