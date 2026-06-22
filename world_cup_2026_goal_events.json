@@ -17825,10 +17825,10 @@
     "apiFootballFixtureId": 1489399,
     "awayScore": 0,
     "awayTeam": "Austria",
-    "base_seconds": 2280,
+    "base_seconds": 2340,
     "clock_active": false,
-    "clock_seconds": 2280,
-    "displayMinute": "38'",
+    "clock_seconds": 2340,
+    "displayMinute": "39'",
     "events": [
       {
         "assist": "L. Messi",
@@ -17847,6 +17847,24 @@
         "timer": "9:00",
         "timerSeconds": 540,
         "type": "Penalty"
+      },
+      {
+        "assist": "F. Medina",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "38'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 38,
+        "player": "L. Messi",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "38:00",
+        "timerSeconds": 2280,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -17872,13 +17890,36 @@
         "timer": "9:00",
         "timerSeconds": 540,
         "type": "Goal"
+      },
+      {
+        "assist": "F. Medina",
+        "awayTeam": "Austria",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "38'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "Argentina",
+        "isDisallowed": false,
+        "matchId": 537399,
+        "matchUtcDate": "2026-06-22T17:00:00Z",
+        "minute": 38,
+        "player": "L. Messi",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "38:00",
+        "timerSeconds": 2280,
+        "type": "Goal"
       }
     ],
-    "homeScore": 0,
+    "homeScore": 1,
     "homeTeam": "Argentina",
-    "lastApiSync": "2026-06-22T17:39:29.631733+00:00",
-    "manualClockText": "38'",
-    "phase_start": "2026-06-22T17:39:29.631733+00:00",
+    "lastApiSync": "2026-06-22T17:40:01.527241+00:00",
+    "manualClockText": "39'",
+    "phase_start": "2026-06-22T17:40:01.527241+00:00",
     "referees": [
       {
         "name": "Amin Omar",
