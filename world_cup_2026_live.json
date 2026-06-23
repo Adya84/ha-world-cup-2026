@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5340,
+      "clockSeconds": 5400,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "89'",
+      "displayMinute": "90'",
       "events": [
         {
           "assist": "J. Cancelo",
@@ -181,27 +181,9 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Semedo",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "J. Cancelo",
-          "playerOff": "J. Cancelo",
-          "playerOn": "N. Semedo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Portugal",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "F. Conceicao",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -230,6 +212,24 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Uzbekistan",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Cancelo",
+          "playerOff": "J. Cancelo",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
@@ -361,8 +361,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5340,
-      "fallbackClockText": "89'",
+      "fallbackClock": 5400,
+      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "J. Cancelo",
@@ -496,8 +496,8 @@
         "tla": "POR"
       },
       "id": 537405,
-      "lastApiSync": "2026-06-23T18:53:09.753163+00:00",
-      "lastUpdated": "2026-06-23T20:53:09Z",
+      "lastApiSync": "2026-06-23T18:53:37.802889+00:00",
+      "lastUpdated": "2026-06-23T20:53:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -525,14 +525,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "89'",
-        "lastApiSync": "2026-06-23T18:53:09.753163+00:00",
-        "seconds": 5340,
+        "displayMinute": "90'",
+        "lastApiSync": "2026-06-23T18:53:37.802889+00:00",
+        "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "89'"
+        "timer": "90'"
       },
-      "manualClockText": "89'",
+      "manualClockText": "90'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -557,7 +557,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 89,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -625,27 +625,9 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Semedo",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "J. Cancelo",
-          "playerOff": "J. Cancelo",
-          "playerOn": "N. Semedo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Portugal",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "F. Conceicao",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -674,6 +656,24 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Uzbekistan",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Cancelo",
+          "playerOff": "J. Cancelo",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
@@ -844,7 +844,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5340,
+      "clockSeconds": 5400,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -853,7 +853,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "89'",
+      "displayMinute": "90'",
       "events": [
         {
           "assist": "J. Cancelo",
@@ -964,27 +964,9 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Semedo",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "J. Cancelo",
-          "playerOff": "J. Cancelo",
-          "playerOn": "N. Semedo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Portugal",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "F. Conceicao",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -1013,6 +995,24 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Uzbekistan",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Cancelo",
+          "playerOff": "J. Cancelo",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
@@ -1144,8 +1144,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5340,
-      "fallbackClockText": "89'",
+      "fallbackClock": 5400,
+      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "J. Cancelo",
@@ -1279,8 +1279,8 @@
         "tla": "POR"
       },
       "id": 537405,
-      "lastApiSync": "2026-06-23T18:53:09.753163+00:00",
-      "lastUpdated": "2026-06-23T20:53:09Z",
+      "lastApiSync": "2026-06-23T18:53:37.802889+00:00",
+      "lastUpdated": "2026-06-23T20:53:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1308,14 +1308,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "89'",
-        "lastApiSync": "2026-06-23T18:53:09.753163+00:00",
-        "seconds": 5340,
+        "displayMinute": "90'",
+        "lastApiSync": "2026-06-23T18:53:37.802889+00:00",
+        "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "89'"
+        "timer": "90'"
       },
-      "manualClockText": "89'",
+      "manualClockText": "90'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -1340,7 +1340,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 89,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1408,27 +1408,9 @@
           "type": "Substitution"
         },
         {
-          "assist": "N. Semedo",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "J. Cancelo",
-          "playerOff": "J. Cancelo",
-          "playerOn": "N. Semedo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Portugal",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "F. Conceicao",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -1457,6 +1439,24 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Uzbekistan",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Cancelo",
+          "playerOff": "J. Cancelo",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
