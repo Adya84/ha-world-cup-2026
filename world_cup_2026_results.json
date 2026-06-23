@@ -45700,7 +45700,7 @@
       "awayCorners": 1,
       "awayFouls": 2,
       "awayOffsides": null,
-      "awayPossession": "44%",
+      "awayPossession": "45%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -45887,7 +45887,7 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": null,
-      "homePossession": "56%",
+      "homePossession": "55%",
       "homeScore": 2,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -45898,15 +45898,15 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
-      "lastUpdated": "2026-06-23T02:12:28Z",
+      "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
+      "lastUpdated": "2026-06-23T02:12:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 2,
           "offsides": null,
-          "possession": "44%",
+          "possession": "45%",
           "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -45917,7 +45917,7 @@
           "corners": 1,
           "fouls": 5,
           "offsides": null,
-          "possession": "56%",
+          "possession": "55%",
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
@@ -45928,7 +45928,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "57'",
-        "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
+        "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
         "seconds": 3420,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -45940,7 +45940,7 @@
         "awayCorners": 1,
         "awayFouls": 2,
         "awayOffsides": null,
-        "awayPossession": "44%",
+        "awayPossession": "45%",
         "awayShotsOnGoal": 0,
         "cardEvents": [
           {
@@ -46106,7 +46106,7 @@
         "homeCorners": 1,
         "homeFouls": 5,
         "homeOffsides": null,
-        "homePossession": "56%",
+        "homePossession": "55%",
         "homeShotsOnGoal": 1,
         "lineups": [],
         "lineupsData": [],
@@ -46115,7 +46115,7 @@
             "corners": 1,
             "fouls": 2,
             "offsides": null,
-            "possession": "44%",
+            "possession": "45%",
             "redCards": 0,
             "shotsOffGoal": 1,
             "shotsOnGoal": 0,
@@ -46126,7 +46126,7 @@
             "corners": 1,
             "fouls": 5,
             "offsides": null,
-            "possession": "56%",
+            "possession": "55%",
             "redCards": 0,
             "shotsOffGoal": 3,
             "shotsOnGoal": 1,
@@ -46345,7 +46345,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 720,
+      "clockSeconds": 780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -46354,9 +46354,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "12'",
-      "fallbackClock": 720,
-      "fallbackClockText": "12'",
+      "displayMinute": "13'",
+      "events": [
+        {
+          "assist": "M. Pedersen",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "12'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 12,
+          "player": "J. Ryerson",
+          "playerOff": "J. Ryerson",
+          "playerOn": "M. Pedersen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "12:00",
+          "timerSeconds": 720,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 780,
+      "fallbackClockText": "13'",
       "group": "GROUP_I",
       "homeCorners": 4,
       "homeFouls": 0,
@@ -46372,8 +46392,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
-      "lastUpdated": "2026-06-23T02:12:28Z",
+      "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
+      "lastUpdated": "2026-06-23T02:12:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -46401,14 +46421,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "12'",
-        "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
-        "seconds": 720,
+        "displayMinute": "13'",
+        "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
+        "seconds": 780,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "12'"
+        "timer": "13'"
       },
-      "manualClockText": "12'",
+      "manualClockText": "13'",
       "matchDetails": {
         "apiFootballFixtureId": 1489401,
         "awayCorners": 0,
@@ -46417,7 +46437,26 @@
         "awayPossession": "31%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
-        "events": [],
+        "events": [
+          {
+            "assist": "M. Pedersen",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "12'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 12,
+            "player": "J. Ryerson",
+            "playerOff": "J. Ryerson",
+            "playerOn": "M. Pedersen",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "12:00",
+            "timerSeconds": 720,
+            "type": "Substitution"
+          }
+        ],
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": 4,
@@ -46473,7 +46512,26 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "M. Pedersen",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "12'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 12,
+            "player": "J. Ryerson",
+            "playerOff": "J. Ryerson",
+            "playerOn": "M. Pedersen",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "12:00",
+            "timerSeconds": 720,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "New York/New Jersey",
@@ -46522,7 +46580,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 12,
+      "minute": 13,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -46570,6 +46628,26 @@
       },
       "stage": "GROUP_STAGE",
       "status": "1H",
+      "substitutionEvents": [
+        {
+          "assist": "M. Pedersen",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "12'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 12,
+          "player": "J. Ryerson",
+          "playerOff": "J. Ryerson",
+          "playerOn": "M. Pedersen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "12:00",
+          "timerSeconds": 720,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-23T00:00:00Z",
       "venue": {
         "city": "East Rutherford",
@@ -92302,7 +92380,7 @@
       "awayCorners": 1,
       "awayFouls": 2,
       "awayOffsides": null,
-      "awayPossession": "44%",
+      "awayPossession": "45%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -92489,7 +92567,7 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": null,
-      "homePossession": "56%",
+      "homePossession": "55%",
       "homeScore": 2,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -92500,15 +92578,15 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
-      "lastUpdated": "2026-06-23T02:12:28Z",
+      "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
+      "lastUpdated": "2026-06-23T02:12:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 2,
           "offsides": null,
-          "possession": "44%",
+          "possession": "45%",
           "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -92519,7 +92597,7 @@
           "corners": 1,
           "fouls": 5,
           "offsides": null,
-          "possession": "56%",
+          "possession": "55%",
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
@@ -92530,7 +92608,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "57'",
-        "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
+        "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
         "seconds": 3420,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -92542,7 +92620,7 @@
         "awayCorners": 1,
         "awayFouls": 2,
         "awayOffsides": null,
-        "awayPossession": "44%",
+        "awayPossession": "45%",
         "awayShotsOnGoal": 0,
         "cardEvents": [
           {
@@ -92708,7 +92786,7 @@
         "homeCorners": 1,
         "homeFouls": 5,
         "homeOffsides": null,
-        "homePossession": "56%",
+        "homePossession": "55%",
         "homeShotsOnGoal": 1,
         "lineups": [],
         "lineupsData": [],
@@ -92717,7 +92795,7 @@
             "corners": 1,
             "fouls": 2,
             "offsides": null,
-            "possession": "44%",
+            "possession": "45%",
             "redCards": 0,
             "shotsOffGoal": 1,
             "shotsOnGoal": 0,
@@ -92728,7 +92806,7 @@
             "corners": 1,
             "fouls": 5,
             "offsides": null,
-            "possession": "56%",
+            "possession": "55%",
             "redCards": 0,
             "shotsOffGoal": 3,
             "shotsOnGoal": 1,
@@ -92947,7 +93025,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 720,
+      "clockSeconds": 780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -92956,9 +93034,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "12'",
-      "fallbackClock": 720,
-      "fallbackClockText": "12'",
+      "displayMinute": "13'",
+      "events": [
+        {
+          "assist": "M. Pedersen",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "12'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 12,
+          "player": "J. Ryerson",
+          "playerOff": "J. Ryerson",
+          "playerOn": "M. Pedersen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "12:00",
+          "timerSeconds": 720,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 780,
+      "fallbackClockText": "13'",
       "group": "GROUP_I",
       "homeCorners": 4,
       "homeFouls": 0,
@@ -92974,8 +93072,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
-      "lastUpdated": "2026-06-23T02:12:28Z",
+      "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
+      "lastUpdated": "2026-06-23T02:12:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -93003,14 +93101,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "12'",
-        "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
-        "seconds": 720,
+        "displayMinute": "13'",
+        "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
+        "seconds": 780,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "12'"
+        "timer": "13'"
       },
-      "manualClockText": "12'",
+      "manualClockText": "13'",
       "matchDetails": {
         "apiFootballFixtureId": 1489401,
         "awayCorners": 0,
@@ -93019,7 +93117,26 @@
         "awayPossession": "31%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
-        "events": [],
+        "events": [
+          {
+            "assist": "M. Pedersen",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "12'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 12,
+            "player": "J. Ryerson",
+            "playerOff": "J. Ryerson",
+            "playerOn": "M. Pedersen",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "12:00",
+            "timerSeconds": 720,
+            "type": "Substitution"
+          }
+        ],
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": 4,
@@ -93075,7 +93192,26 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "M. Pedersen",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "12'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 12,
+            "player": "J. Ryerson",
+            "playerOff": "J. Ryerson",
+            "playerOn": "M. Pedersen",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "12:00",
+            "timerSeconds": 720,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "New York/New Jersey",
@@ -93124,7 +93260,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 12,
+      "minute": 13,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -93172,6 +93308,26 @@
       },
       "stage": "GROUP_STAGE",
       "status": "1H",
+      "substitutionEvents": [
+        {
+          "assist": "M. Pedersen",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "12'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 12,
+          "player": "J. Ryerson",
+          "playerOff": "J. Ryerson",
+          "playerOn": "M. Pedersen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "12:00",
+          "timerSeconds": 720,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-23T00:00:00Z",
       "venue": {
         "city": "East Rutherford",
