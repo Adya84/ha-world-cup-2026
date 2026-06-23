@@ -24746,6 +24746,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
         "id": 778,
@@ -24753,6 +24754,8 @@
         "shortName": "Algeria",
         "tla": "ALG"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -24760,6 +24763,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_J",
       "homeTeam": {
         "crest": "https://crests.football-data.org/8049.png",
@@ -24769,8 +24773,44 @@
         "tla": "JOR"
       },
       "id": 537400,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-23T04:21:49Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "San Francisco Bay Area",
+        "cloudCoverage": 2.3,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T02:55:11.175346+00:00",
+        "humidity": 58.0,
+        "latitude": 37.403,
+        "longitude": -121.97,
+        "name": "Levi's Stadium weather",
+        "observedAt": "2026-06-23T02:00:00Z",
+        "pressure": 1013.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Levi's Stadium",
+        "temperature": 19.7,
+        "temperatureUnit": "C",
+        "windBearing": 345.4,
+        "windSpeed": 3.7,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 2,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -24802,8 +24842,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-23T03:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-23T03:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "San Francisco Bay Area",
+        "cloudCoverage": 2.3,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T02:55:11.175346+00:00",
+        "humidity": 58.0,
+        "latitude": 37.403,
+        "longitude": -121.97,
+        "name": "Levi's Stadium weather",
+        "observedAt": "2026-06-23T02:00:00Z",
+        "pressure": 1013.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Levi's Stadium",
+        "temperature": 19.7,
+        "temperatureUnit": "C",
+        "windBearing": 345.4,
+        "windSpeed": 3.7,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
