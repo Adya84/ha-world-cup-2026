@@ -45792,7 +45792,7 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
-      "lastUpdated": "2026-06-23T02:00:13Z",
+      "lastUpdated": "2026-06-23T02:00:46Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
@@ -46047,6 +46047,207 @@
         "temperatureUnit": "C",
         "windBearing": 206.8,
         "windSpeed": 4.0,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "apiFootballFixtureId": 1489401,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/senegal.svg",
+        "id": 804,
+        "name": "Senegal",
+        "shortName": "Senegal",
+        "tla": "SEN"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_I",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/813.svg",
+        "id": 8872,
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR"
+      },
+      "id": 537394,
+      "lastApiSync": "2026-06-23T00:00:48.391001+00:00",
+      "lastUpdated": "2026-06-23T01:06:28Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-23T00:00:48.391001+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489401,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 11412,
+            "name": "Wilton Sampaio",
+            "nationality": "Brazil",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 11412,
+            "name": "Wilton Sampaio",
+            "nationality": "Brazil",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "New York/New Jersey",
+          "cloudCoverage": 98.4,
+          "condition": "rain",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-22T23:55:12.020086+00:00",
+          "humidity": 88.0,
+          "latitude": 40.8135,
+          "longitude": -74.0745,
+          "name": "MetLife Stadium weather",
+          "observedAt": "2026-06-22T23:00:00Z",
+          "pressure": 1010.8,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "MetLife Stadium",
+          "temperature": 23.4,
+          "temperatureUnit": "C",
+          "windBearing": 131.5,
+          "windSpeed": 3.2,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 98.4,
+        "condition": "rain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T23:55:12.020086+00:00",
+        "humidity": 88.0,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-22T23:00:00Z",
+        "pressure": 1010.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 23.4,
+        "temperatureUnit": "C",
+        "windBearing": 131.5,
+        "windSpeed": 3.2,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 11412,
+          "name": "Wilton Sampaio",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-23T00:00:00Z",
+      "venue": {
+        "city": "New York New Jersey",
+        "id": null,
+        "name": "MetLife Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 98.4,
+        "condition": "rain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T23:55:12.020086+00:00",
+        "humidity": 88.0,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-22T23:00:00Z",
+        "pressure": 1010.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 23.4,
+        "temperatureUnit": "C",
+        "windBearing": 131.5,
+        "windSpeed": 3.2,
         "windSpeedUnit": "m/s"
       }
     }
@@ -91844,7 +92045,7 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
-      "lastUpdated": "2026-06-23T02:00:13Z",
+      "lastUpdated": "2026-06-23T02:00:46Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
@@ -92099,6 +92300,207 @@
         "temperatureUnit": "C",
         "windBearing": 206.8,
         "windSpeed": 4.0,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "apiFootballFixtureId": 1489401,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/senegal.svg",
+        "id": 804,
+        "name": "Senegal",
+        "shortName": "Senegal",
+        "tla": "SEN"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_I",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/813.svg",
+        "id": 8872,
+        "name": "Norway",
+        "shortName": "Norway",
+        "tla": "NOR"
+      },
+      "id": 537394,
+      "lastApiSync": "2026-06-23T00:00:48.391001+00:00",
+      "lastUpdated": "2026-06-23T01:06:28Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-23T00:00:48.391001+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489401,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 11412,
+            "name": "Wilton Sampaio",
+            "nationality": "Brazil",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 11412,
+            "name": "Wilton Sampaio",
+            "nationality": "Brazil",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "New York/New Jersey",
+          "cloudCoverage": 98.4,
+          "condition": "rain",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-22T23:55:12.020086+00:00",
+          "humidity": 88.0,
+          "latitude": 40.8135,
+          "longitude": -74.0745,
+          "name": "MetLife Stadium weather",
+          "observedAt": "2026-06-22T23:00:00Z",
+          "pressure": 1010.8,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "MetLife Stadium",
+          "temperature": 23.4,
+          "temperatureUnit": "C",
+          "windBearing": 131.5,
+          "windSpeed": 3.2,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 98.4,
+        "condition": "rain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T23:55:12.020086+00:00",
+        "humidity": 88.0,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-22T23:00:00Z",
+        "pressure": 1010.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 23.4,
+        "temperatureUnit": "C",
+        "windBearing": 131.5,
+        "windSpeed": 3.2,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 11412,
+          "name": "Wilton Sampaio",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-23T00:00:00Z",
+      "venue": {
+        "city": "New York New Jersey",
+        "id": null,
+        "name": "MetLife Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 98.4,
+        "condition": "rain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-22T23:55:12.020086+00:00",
+        "humidity": 88.0,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-22T23:00:00Z",
+        "pressure": 1010.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 23.4,
+        "temperatureUnit": "C",
+        "windBearing": 131.5,
+        "windSpeed": 3.2,
         "windSpeedUnit": "m/s"
       }
     }
