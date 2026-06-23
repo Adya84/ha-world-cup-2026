@@ -17664,9 +17664,9 @@
     ],
     "homeScore": 2,
     "homeTeam": "France",
-    "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
+    "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
     "manualClockText": "57'",
-    "phase_start": "2026-06-23T00:12:28.545029+00:00",
+    "phase_start": "2026-06-23T00:12:58.920463+00:00",
     "referees": [
       {
         "name": "Drew Fischer",
@@ -17706,16 +17706,36 @@
     "apiFootballFixtureId": 1489401,
     "awayScore": 0,
     "awayTeam": "Senegal",
-    "base_seconds": 720,
+    "base_seconds": 780,
     "clock_active": false,
-    "clock_seconds": 720,
-    "displayMinute": "12'",
+    "clock_seconds": 780,
+    "displayMinute": "13'",
+    "events": [
+      {
+        "assist": "M. Pedersen",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "12'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 12,
+        "player": "J. Ryerson",
+        "playerOff": "J. Ryerson",
+        "playerOn": "M. Pedersen",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "12:00",
+        "timerSeconds": 720,
+        "type": "Substitution"
+      }
+    ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Norway",
-    "lastApiSync": "2026-06-23T00:12:28.545029+00:00",
-    "manualClockText": "12'",
-    "phase_start": "2026-06-23T00:12:28.545029+00:00",
+    "lastApiSync": "2026-06-23T00:12:58.920463+00:00",
+    "manualClockText": "13'",
+    "phase_start": "2026-06-23T00:12:58.920463+00:00",
     "referees": [
       {
         "name": "Wilton Sampaio",
@@ -17729,6 +17749,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "1H",
+    "substitutionEvents": [
+      {
+        "assist": "M. Pedersen",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "12'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 12,
+        "player": "J. Ryerson",
+        "playerOff": "J. Ryerson",
+        "playerOn": "M. Pedersen",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "12:00",
+        "timerSeconds": 720,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-23T00:00:00Z"
   },
   "537395": {
