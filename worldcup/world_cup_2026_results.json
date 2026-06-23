@@ -45730,7 +45730,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3000,
+      "clockSeconds": 3060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45739,7 +45739,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "50'",
+      "displayMinute": "51'",
       "events": [
         {
           "assist": null,
@@ -45814,8 +45814,8 @@
           "type": "VAR"
         }
       ],
-      "fallbackClock": 3000,
-      "fallbackClockText": "50'",
+      "fallbackClock": 3060,
+      "fallbackClockText": "51'",
       "goalEvents": [
         {
           "assist": "Michael Olise",
@@ -45857,8 +45857,8 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": "2026-06-23T00:05:39.501763+00:00",
-      "lastUpdated": "2026-06-23T02:05:37Z",
+      "lastApiSync": "2026-06-23T00:06:10.980443+00:00",
+      "lastUpdated": "2026-06-23T02:06:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45886,14 +45886,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "50'",
-        "lastApiSync": "2026-06-23T00:05:39.501763+00:00",
-        "seconds": 3000,
+        "displayMinute": "51'",
+        "lastApiSync": "2026-06-23T00:06:10.980443+00:00",
+        "seconds": 3060,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "50'"
+        "timer": "51'"
       },
-      "manualClockText": "50'",
+      "manualClockText": "51'",
       "matchDetails": {
         "apiFootballFixtureId": 1539017,
         "awayCorners": 1,
@@ -46142,7 +46142,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 50,
+      "minute": 51,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -46252,8 +46252,8 @@
       },
       "awayCorners": 0,
       "awayFouls": 0,
-      "awayOffsides": null,
-      "awayPossession": "0%",
+      "awayOffsides": 1,
+      "awayPossession": "7%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -46276,12 +46276,12 @@
       "fallbackClock": 360,
       "fallbackClockText": "6'",
       "group": "GROUP_I",
-      "homeCorners": 1,
+      "homeCorners": 4,
       "homeFouls": 0,
-      "homeOffsides": null,
-      "homePossession": "100%",
+      "homeOffsides": 0,
+      "homePossession": "93%",
       "homeScore": 0,
-      "homeShotsOnGoal": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/813.svg",
         "id": 8872,
@@ -46290,15 +46290,15 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:05:39.501763+00:00",
-      "lastUpdated": "2026-06-23T02:05:37Z",
+      "lastApiSync": "2026-06-23T00:06:10.980443+00:00",
+      "lastUpdated": "2026-06-23T02:06:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 0,
-          "offsides": null,
-          "possession": "0%",
+          "offsides": 1,
+          "possession": "7%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -46306,21 +46306,21 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 1,
+          "corners": 4,
           "fouls": 0,
-          "offsides": null,
-          "possession": "100%",
+          "offsides": 0,
+          "possession": "93%",
           "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 0,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 2,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "6'",
-        "lastApiSync": "2026-06-23T00:05:39.501763+00:00",
+        "lastApiSync": "2026-06-23T00:06:10.980443+00:00",
         "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -46331,26 +46331,26 @@
         "apiFootballFixtureId": 1489401,
         "awayCorners": 0,
         "awayFouls": 0,
-        "awayOffsides": null,
-        "awayPossession": "0%",
+        "awayOffsides": 1,
+        "awayPossession": "7%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
         "events": [],
         "goalEvents": [],
         "goalEventsSource": null,
-        "homeCorners": 1,
+        "homeCorners": 4,
         "homeFouls": 0,
-        "homeOffsides": null,
-        "homePossession": "100%",
-        "homeShotsOnGoal": 0,
+        "homeOffsides": 0,
+        "homePossession": "93%",
+        "homeShotsOnGoal": 1,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
             "corners": 0,
             "fouls": 0,
-            "offsides": null,
-            "possession": "0%",
+            "offsides": 1,
+            "possession": "7%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 0,
@@ -46358,14 +46358,14 @@
             "yellowCards": null
           },
           "home": {
-            "corners": 1,
+            "corners": 4,
             "fouls": 0,
-            "offsides": null,
-            "possession": "100%",
+            "offsides": 0,
+            "possession": "93%",
             "redCards": null,
-            "shotsOffGoal": 0,
-            "shotsOnGoal": 0,
-            "totalShots": 0,
+            "shotsOffGoal": 1,
+            "shotsOnGoal": 1,
+            "totalShots": 2,
             "yellowCards": null
           }
         },
@@ -92250,7 +92250,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3000,
+      "clockSeconds": 3060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -92259,7 +92259,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "50'",
+      "displayMinute": "51'",
       "events": [
         {
           "assist": null,
@@ -92334,8 +92334,8 @@
           "type": "VAR"
         }
       ],
-      "fallbackClock": 3000,
-      "fallbackClockText": "50'",
+      "fallbackClock": 3060,
+      "fallbackClockText": "51'",
       "goalEvents": [
         {
           "assist": "Michael Olise",
@@ -92377,8 +92377,8 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": "2026-06-23T00:05:39.501763+00:00",
-      "lastUpdated": "2026-06-23T02:05:37Z",
+      "lastApiSync": "2026-06-23T00:06:10.980443+00:00",
+      "lastUpdated": "2026-06-23T02:06:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -92406,14 +92406,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "50'",
-        "lastApiSync": "2026-06-23T00:05:39.501763+00:00",
-        "seconds": 3000,
+        "displayMinute": "51'",
+        "lastApiSync": "2026-06-23T00:06:10.980443+00:00",
+        "seconds": 3060,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "50'"
+        "timer": "51'"
       },
-      "manualClockText": "50'",
+      "manualClockText": "51'",
       "matchDetails": {
         "apiFootballFixtureId": 1539017,
         "awayCorners": 1,
@@ -92662,7 +92662,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 50,
+      "minute": 51,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -92772,8 +92772,8 @@
       },
       "awayCorners": 0,
       "awayFouls": 0,
-      "awayOffsides": null,
-      "awayPossession": "0%",
+      "awayOffsides": 1,
+      "awayPossession": "7%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -92796,12 +92796,12 @@
       "fallbackClock": 360,
       "fallbackClockText": "6'",
       "group": "GROUP_I",
-      "homeCorners": 1,
+      "homeCorners": 4,
       "homeFouls": 0,
-      "homeOffsides": null,
-      "homePossession": "100%",
+      "homeOffsides": 0,
+      "homePossession": "93%",
       "homeScore": 0,
-      "homeShotsOnGoal": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/813.svg",
         "id": 8872,
@@ -92810,15 +92810,15 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:05:39.501763+00:00",
-      "lastUpdated": "2026-06-23T02:05:37Z",
+      "lastApiSync": "2026-06-23T00:06:10.980443+00:00",
+      "lastUpdated": "2026-06-23T02:06:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 0,
-          "offsides": null,
-          "possession": "0%",
+          "offsides": 1,
+          "possession": "7%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -92826,21 +92826,21 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 1,
+          "corners": 4,
           "fouls": 0,
-          "offsides": null,
-          "possession": "100%",
+          "offsides": 0,
+          "possession": "93%",
           "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 0,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 2,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "6'",
-        "lastApiSync": "2026-06-23T00:05:39.501763+00:00",
+        "lastApiSync": "2026-06-23T00:06:10.980443+00:00",
         "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -92851,26 +92851,26 @@
         "apiFootballFixtureId": 1489401,
         "awayCorners": 0,
         "awayFouls": 0,
-        "awayOffsides": null,
-        "awayPossession": "0%",
+        "awayOffsides": 1,
+        "awayPossession": "7%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
         "events": [],
         "goalEvents": [],
         "goalEventsSource": null,
-        "homeCorners": 1,
+        "homeCorners": 4,
         "homeFouls": 0,
-        "homeOffsides": null,
-        "homePossession": "100%",
-        "homeShotsOnGoal": 0,
+        "homeOffsides": 0,
+        "homePossession": "93%",
+        "homeShotsOnGoal": 1,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
             "corners": 0,
             "fouls": 0,
-            "offsides": null,
-            "possession": "0%",
+            "offsides": 1,
+            "possession": "7%",
             "redCards": null,
             "shotsOffGoal": 0,
             "shotsOnGoal": 0,
@@ -92878,14 +92878,14 @@
             "yellowCards": null
           },
           "home": {
-            "corners": 1,
+            "corners": 4,
             "fouls": 0,
-            "offsides": null,
-            "possession": "100%",
+            "offsides": 0,
+            "possession": "93%",
             "redCards": null,
-            "shotsOffGoal": 0,
-            "shotsOnGoal": 0,
-            "totalShots": 0,
+            "shotsOffGoal": 1,
+            "shotsOnGoal": 1,
+            "totalShots": 2,
             "yellowCards": null
           }
         },
