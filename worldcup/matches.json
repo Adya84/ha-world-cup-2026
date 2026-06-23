@@ -24279,7 +24279,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -24288,7 +24288,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": "M. Pedersen",
@@ -24384,23 +24384,41 @@
           "assist": "I. Jakobs",
           "comments": null,
           "detail": "Substitution 1",
-          "displayMinute": "55'",
+          "displayMinute": "54'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 55,
+          "minute": 54,
           "player": "M. Diouf",
           "playerOff": "M. Diouf",
           "playerOn": "I. Jakobs",
           "rawType": "subst",
           "source": "api_football",
           "team": "Senegal",
-          "timer": "55:00",
-          "timerSeconds": 3300,
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Substitution"
+        },
+        {
+          "assist": "I. Mbaye",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "54'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 54,
+          "player": "P. Gueye",
+          "playerOff": "P. Gueye",
+          "playerOn": "I. Mbaye",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "54:00",
+          "timerSeconds": 3240,
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": null,
@@ -24488,8 +24506,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T01:14:26.442977+00:00",
-      "lastUpdated": "2026-06-23T03:14:25Z",
+      "lastApiSync": "2026-06-23T01:15:17.606007+00:00",
+      "lastUpdated": "2026-06-23T03:15:16Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -24517,14 +24535,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-06-23T01:14:26.442977+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-06-23T01:15:17.606007+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -24549,7 +24567,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -24638,18 +24656,36 @@
           "assist": "I. Jakobs",
           "comments": null,
           "detail": "Substitution 1",
-          "displayMinute": "55'",
+          "displayMinute": "54'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 55,
+          "minute": 54,
           "player": "M. Diouf",
           "playerOff": "M. Diouf",
           "playerOn": "I. Jakobs",
           "rawType": "subst",
           "source": "api_football",
           "team": "Senegal",
-          "timer": "55:00",
-          "timerSeconds": 3300,
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Substitution"
+        },
+        {
+          "assist": "I. Mbaye",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "54'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 54,
+          "player": "P. Gueye",
+          "playerOff": "P. Gueye",
+          "playerOn": "I. Mbaye",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "54:00",
+          "timerSeconds": 3240,
           "type": "Substitution"
         }
       ],
