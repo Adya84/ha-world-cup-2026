@@ -25794,7 +25794,7 @@
     "apiFootballFixtureId": 1489402,
     "awayScore": 0,
     "awayTeam": "Ghana",
-    "base_seconds": 4440,
+    "base_seconds": 4500,
     "cardEvents": [
       {
         "assist": null,
@@ -25834,8 +25834,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4440,
-    "displayMinute": "74'",
+    "clock_seconds": 4500,
+    "displayMinute": "75'",
     "events": [
       {
         "assist": null,
@@ -25946,30 +25946,48 @@
         "type": "Substitution"
       },
       {
-        "assist": "E. Eze",
+        "assist": "M. Rogers",
         "comments": null,
         "detail": "Substitution 3",
         "displayMinute": "73'",
         "extra": null,
         "isDisallowed": false,
         "minute": 73,
-        "player": "E. Anderson",
-        "playerOff": "E. Anderson",
-        "playerOn": "E. Eze",
+        "player": "J. Bellingham",
+        "playerOff": "J. Bellingham",
+        "playerOn": "M. Rogers",
         "rawType": "subst",
         "source": "api_football",
         "team": "England",
         "timer": "73:00",
         "timerSeconds": 4380,
         "type": "Substitution"
+      },
+      {
+        "assist": "E. Eze",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "74'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 74,
+        "player": "E. Anderson",
+        "playerOff": "E. Anderson",
+        "playerOn": "E. Eze",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "England",
+        "timer": "74:00",
+        "timerSeconds": 4440,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "England",
-    "lastApiSync": "2026-06-23T21:37:55.211509+00:00",
-    "manualClockText": "74'",
-    "phase_start": "2026-06-23T21:37:55.211509+00:00",
+    "lastApiSync": "2026-06-23T21:38:20.731263+00:00",
+    "manualClockText": "75'",
+    "phase_start": "2026-06-23T21:38:20.731263+00:00",
     "referees": [
       {
         "name": "Said Martinez",
@@ -26057,21 +26075,39 @@
         "type": "Substitution"
       },
       {
-        "assist": "E. Eze",
+        "assist": "M. Rogers",
         "comments": null,
         "detail": "Substitution 3",
         "displayMinute": "73'",
         "extra": null,
         "isDisallowed": false,
         "minute": 73,
+        "player": "J. Bellingham",
+        "playerOff": "J. Bellingham",
+        "playerOn": "M. Rogers",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "England",
+        "timer": "73:00",
+        "timerSeconds": 4380,
+        "type": "Substitution"
+      },
+      {
+        "assist": "E. Eze",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "74'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 74,
         "player": "E. Anderson",
         "playerOff": "E. Anderson",
         "playerOn": "E. Eze",
         "rawType": "subst",
         "source": "api_football",
         "team": "England",
-        "timer": "73:00",
-        "timerSeconds": 4380,
+        "timer": "74:00",
+        "timerSeconds": 4440,
         "type": "Substitution"
       }
     ],
