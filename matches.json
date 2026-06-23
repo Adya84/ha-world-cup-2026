@@ -29425,13 +29425,16 @@
       "utcDate": "2026-06-23T20:00:00Z"
     },
     {
+      "apiFootballFixtureId": 1489403,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/799.svg",
         "id": 799,
@@ -29439,8 +29442,8 @@
         "shortName": "Croatia",
         "tla": "CRO"
       },
-      "clockSeconds": 0,
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -29448,8 +29451,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_L",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -29458,19 +29464,19 @@
         "tla": "PAN"
       },
       "id": 537412,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-24T00:14:09Z",
-      "liveSource": "pre_kickoff_window",
+      "lastApiSync": "2026-06-23T23:00:27.031886+00:00",
+      "lastUpdated": "2026-06-24T01:00:20Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "LIVE",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-23T23:00:27.031886+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -29495,23 +29501,35 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": null,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "officials": [
+        {
+          "name": "Pierre Ghislain Atcho, Gabon",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Pierre Ghislain Atcho, Gabon",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
-        "winner": null
+        "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -29520,8 +29538,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "1H",
       "utcDate": "2026-06-23T23:00:00Z",
+      "venue": {
+        "city": "Toronto",
+        "id": 312,
+        "name": "BMO Field"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
