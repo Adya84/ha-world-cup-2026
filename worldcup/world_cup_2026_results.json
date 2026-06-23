@@ -55949,7 +55949,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4440,
+      "clockSeconds": 4500,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -55958,7 +55958,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "74'",
+      "displayMinute": "75'",
       "events": [
         {
           "assist": null,
@@ -56069,26 +56069,44 @@
           "type": "Substitution"
         },
         {
-          "assist": "E. Eze",
+          "assist": "M. Rogers",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "73'",
           "extra": null,
           "isDisallowed": false,
           "minute": 73,
-          "player": "E. Anderson",
-          "playerOff": "E. Anderson",
-          "playerOn": "E. Eze",
+          "player": "J. Bellingham",
+          "playerOff": "J. Bellingham",
+          "playerOn": "M. Rogers",
           "rawType": "subst",
           "source": "api_football",
           "team": "England",
           "timer": "73:00",
           "timerSeconds": 4380,
           "type": "Substitution"
+        },
+        {
+          "assist": "E. Eze",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "74'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 74,
+          "player": "E. Anderson",
+          "playerOff": "E. Anderson",
+          "playerOn": "E. Eze",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4440,
-      "fallbackClockText": "74'",
+      "fallbackClock": 4500,
+      "fallbackClockText": "75'",
       "group": "GROUP_L",
       "homeCorners": 4,
       "homeFouls": 9,
@@ -56104,8 +56122,8 @@
         "tla": "ENG"
       },
       "id": 537411,
-      "lastApiSync": "2026-06-23T21:37:55.211509+00:00",
-      "lastUpdated": "2026-06-23T23:37:53Z",
+      "lastApiSync": "2026-06-23T21:38:20.731263+00:00",
+      "lastUpdated": "2026-06-23T23:38:14Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -56133,14 +56151,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "74'",
-        "lastApiSync": "2026-06-23T21:37:55.211509+00:00",
-        "seconds": 4440,
+        "displayMinute": "75'",
+        "lastApiSync": "2026-06-23T21:38:20.731263+00:00",
+        "seconds": 4500,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "74'"
+        "timer": "75'"
       },
-      "manualClockText": "74'",
+      "manualClockText": "75'",
       "matchDetails": {
         "apiFootballFixtureId": 1489402,
         "awayCorners": 2,
@@ -56296,21 +56314,39 @@
             "type": "Substitution"
           },
           {
-            "assist": "E. Eze",
+            "assist": "M. Rogers",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "73'",
             "extra": null,
             "isDisallowed": false,
             "minute": 73,
+            "player": "J. Bellingham",
+            "playerOff": "J. Bellingham",
+            "playerOn": "M. Rogers",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "England",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "type": "Substitution"
+          },
+          {
+            "assist": "E. Eze",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "74'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 74,
             "player": "E. Anderson",
             "playerOff": "E. Anderson",
             "playerOn": "E. Eze",
             "rawType": "subst",
             "source": "api_football",
             "team": "England",
-            "timer": "73:00",
-            "timerSeconds": 4380,
+            "timer": "74:00",
+            "timerSeconds": 4440,
             "type": "Substitution"
           }
         ],
@@ -56443,21 +56479,39 @@
             "type": "Substitution"
           },
           {
-            "assist": "E. Eze",
+            "assist": "M. Rogers",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "73'",
             "extra": null,
             "isDisallowed": false,
             "minute": 73,
+            "player": "J. Bellingham",
+            "playerOff": "J. Bellingham",
+            "playerOn": "M. Rogers",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "England",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "type": "Substitution"
+          },
+          {
+            "assist": "E. Eze",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "74'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 74,
             "player": "E. Anderson",
             "playerOff": "E. Anderson",
             "playerOn": "E. Eze",
             "rawType": "subst",
             "source": "api_football",
             "team": "England",
-            "timer": "73:00",
-            "timerSeconds": 4380,
+            "timer": "74:00",
+            "timerSeconds": 4440,
             "type": "Substitution"
           }
         ],
@@ -56509,7 +56563,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 74,
+      "minute": 75,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -56631,21 +56685,39 @@
           "type": "Substitution"
         },
         {
-          "assist": "E. Eze",
+          "assist": "M. Rogers",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "73'",
           "extra": null,
           "isDisallowed": false,
           "minute": 73,
+          "player": "J. Bellingham",
+          "playerOff": "J. Bellingham",
+          "playerOn": "M. Rogers",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Eze",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "74'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 74,
           "player": "E. Anderson",
           "playerOff": "E. Anderson",
           "playerOn": "E. Eze",
           "rawType": "subst",
           "source": "api_football",
           "team": "England",
-          "timer": "73:00",
-          "timerSeconds": 4380,
+          "timer": "74:00",
+          "timerSeconds": 4440,
           "type": "Substitution"
         }
       ],
@@ -112630,7 +112702,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4440,
+      "clockSeconds": 4500,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -112639,7 +112711,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "74'",
+      "displayMinute": "75'",
       "events": [
         {
           "assist": null,
@@ -112750,26 +112822,44 @@
           "type": "Substitution"
         },
         {
-          "assist": "E. Eze",
+          "assist": "M. Rogers",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "73'",
           "extra": null,
           "isDisallowed": false,
           "minute": 73,
-          "player": "E. Anderson",
-          "playerOff": "E. Anderson",
-          "playerOn": "E. Eze",
+          "player": "J. Bellingham",
+          "playerOff": "J. Bellingham",
+          "playerOn": "M. Rogers",
           "rawType": "subst",
           "source": "api_football",
           "team": "England",
           "timer": "73:00",
           "timerSeconds": 4380,
           "type": "Substitution"
+        },
+        {
+          "assist": "E. Eze",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "74'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 74,
+          "player": "E. Anderson",
+          "playerOff": "E. Anderson",
+          "playerOn": "E. Eze",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "74:00",
+          "timerSeconds": 4440,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4440,
-      "fallbackClockText": "74'",
+      "fallbackClock": 4500,
+      "fallbackClockText": "75'",
       "group": "GROUP_L",
       "homeCorners": 4,
       "homeFouls": 9,
@@ -112785,8 +112875,8 @@
         "tla": "ENG"
       },
       "id": 537411,
-      "lastApiSync": "2026-06-23T21:37:55.211509+00:00",
-      "lastUpdated": "2026-06-23T23:37:53Z",
+      "lastApiSync": "2026-06-23T21:38:20.731263+00:00",
+      "lastUpdated": "2026-06-23T23:38:14Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -112814,14 +112904,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "74'",
-        "lastApiSync": "2026-06-23T21:37:55.211509+00:00",
-        "seconds": 4440,
+        "displayMinute": "75'",
+        "lastApiSync": "2026-06-23T21:38:20.731263+00:00",
+        "seconds": 4500,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "74'"
+        "timer": "75'"
       },
-      "manualClockText": "74'",
+      "manualClockText": "75'",
       "matchDetails": {
         "apiFootballFixtureId": 1489402,
         "awayCorners": 2,
@@ -112977,21 +113067,39 @@
             "type": "Substitution"
           },
           {
-            "assist": "E. Eze",
+            "assist": "M. Rogers",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "73'",
             "extra": null,
             "isDisallowed": false,
             "minute": 73,
+            "player": "J. Bellingham",
+            "playerOff": "J. Bellingham",
+            "playerOn": "M. Rogers",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "England",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "type": "Substitution"
+          },
+          {
+            "assist": "E. Eze",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "74'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 74,
             "player": "E. Anderson",
             "playerOff": "E. Anderson",
             "playerOn": "E. Eze",
             "rawType": "subst",
             "source": "api_football",
             "team": "England",
-            "timer": "73:00",
-            "timerSeconds": 4380,
+            "timer": "74:00",
+            "timerSeconds": 4440,
             "type": "Substitution"
           }
         ],
@@ -113124,21 +113232,39 @@
             "type": "Substitution"
           },
           {
-            "assist": "E. Eze",
+            "assist": "M. Rogers",
             "comments": null,
             "detail": "Substitution 3",
             "displayMinute": "73'",
             "extra": null,
             "isDisallowed": false,
             "minute": 73,
+            "player": "J. Bellingham",
+            "playerOff": "J. Bellingham",
+            "playerOn": "M. Rogers",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "England",
+            "timer": "73:00",
+            "timerSeconds": 4380,
+            "type": "Substitution"
+          },
+          {
+            "assist": "E. Eze",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "74'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 74,
             "player": "E. Anderson",
             "playerOff": "E. Anderson",
             "playerOn": "E. Eze",
             "rawType": "subst",
             "source": "api_football",
             "team": "England",
-            "timer": "73:00",
-            "timerSeconds": 4380,
+            "timer": "74:00",
+            "timerSeconds": 4440,
             "type": "Substitution"
           }
         ],
@@ -113190,7 +113316,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 74,
+      "minute": 75,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -113312,21 +113438,39 @@
           "type": "Substitution"
         },
         {
-          "assist": "E. Eze",
+          "assist": "M. Rogers",
           "comments": null,
           "detail": "Substitution 3",
           "displayMinute": "73'",
           "extra": null,
           "isDisallowed": false,
           "minute": 73,
+          "player": "J. Bellingham",
+          "playerOff": "J. Bellingham",
+          "playerOn": "M. Rogers",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Eze",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "74'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 74,
           "player": "E. Anderson",
           "playerOff": "E. Anderson",
           "playerOn": "E. Eze",
           "rawType": "subst",
           "source": "api_football",
           "team": "England",
-          "timer": "73:00",
-          "timerSeconds": 4380,
+          "timer": "74:00",
+          "timerSeconds": 4440,
           "type": "Substitution"
         }
       ],
