@@ -53707,6 +53707,227 @@
         }
       ],
       "utcDate": "2026-06-23T03:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489404,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/8070.png",
+        "id": 8070,
+        "name": "Uzbekistan",
+        "shortName": "Uzbekistan",
+        "tla": "UZB"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_K",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/765.svg",
+        "id": 765,
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR"
+      },
+      "id": 537405,
+      "lastApiSync": "2026-06-23T17:00:47.697460+00:00",
+      "lastUpdated": "2026-06-23T19:00:45Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-23T17:00:47.697460+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489404,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Jalal Jayed",
+            "nationality": "Morocco",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Jalal Jayed, Morocco",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Jalal Jayed",
+            "nationality": "Morocco",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Jalal Jayed, Morocco",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Houston",
+          "cloudCoverage": 31.2,
+          "condition": "fair_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-23T16:55:05.093990+00:00",
+          "humidity": 68.5,
+          "latitude": 29.6847,
+          "longitude": -95.4107,
+          "name": "NRG Stadium weather",
+          "observedAt": "2026-06-23T16:00:00Z",
+          "pressure": 1020.4,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "NRG Stadium",
+          "temperature": 30.6,
+          "temperatureUnit": "C",
+          "windBearing": 188.8,
+          "windSpeed": 3.3,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 31.2,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T16:55:05.093990+00:00",
+        "humidity": 68.5,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-23T16:00:00Z",
+        "pressure": 1020.4,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 30.6,
+        "temperatureUnit": "C",
+        "windBearing": 188.8,
+        "windSpeed": 3.3,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Jalal Jayed",
+          "nationality": "Morocco",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Jalal Jayed, Morocco",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Jalal Jayed",
+          "nationality": "Morocco",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Jalal Jayed, Morocco",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-23T17:00:00Z",
+      "venue": {
+        "city": "Houston",
+        "id": null,
+        "name": "NRG Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 31.2,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T16:55:05.093990+00:00",
+        "humidity": 68.5,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-23T16:00:00Z",
+        "pressure": 1020.4,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 30.6,
+        "temperatureUnit": "C",
+        "windBearing": 188.8,
+        "windSpeed": 3.3,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -107417,6 +107638,227 @@
         }
       ],
       "utcDate": "2026-06-23T03:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489404,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/8070.png",
+        "id": 8070,
+        "name": "Uzbekistan",
+        "shortName": "Uzbekistan",
+        "tla": "UZB"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_K",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/765.svg",
+        "id": 765,
+        "name": "Portugal",
+        "shortName": "Portugal",
+        "tla": "POR"
+      },
+      "id": 537405,
+      "lastApiSync": "2026-06-23T17:00:47.697460+00:00",
+      "lastUpdated": "2026-06-23T19:00:45Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-23T17:00:47.697460+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489404,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Jalal Jayed",
+            "nationality": "Morocco",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Jalal Jayed, Morocco",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Jalal Jayed",
+            "nationality": "Morocco",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Jalal Jayed, Morocco",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Houston",
+          "cloudCoverage": 31.2,
+          "condition": "fair_day",
+          "country": "USA",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-23T16:55:05.093990+00:00",
+          "humidity": 68.5,
+          "latitude": 29.6847,
+          "longitude": -95.4107,
+          "name": "NRG Stadium weather",
+          "observedAt": "2026-06-23T16:00:00Z",
+          "pressure": 1020.4,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "NRG Stadium",
+          "temperature": 30.6,
+          "temperatureUnit": "C",
+          "windBearing": 188.8,
+          "windSpeed": 3.3,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 31.2,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T16:55:05.093990+00:00",
+        "humidity": 68.5,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-23T16:00:00Z",
+        "pressure": 1020.4,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 30.6,
+        "temperatureUnit": "C",
+        "windBearing": 188.8,
+        "windSpeed": 3.3,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Jalal Jayed",
+          "nationality": "Morocco",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Jalal Jayed, Morocco",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Jalal Jayed",
+          "nationality": "Morocco",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Jalal Jayed, Morocco",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-23T17:00:00Z",
+      "venue": {
+        "city": "Houston",
+        "id": null,
+        "name": "NRG Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 31.2,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T16:55:05.093990+00:00",
+        "humidity": 68.5,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-23T16:00:00Z",
+        "pressure": 1020.4,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 30.6,
+        "temperatureUnit": "C",
+        "windBearing": 188.8,
+        "windSpeed": 3.3,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
