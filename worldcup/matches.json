@@ -27946,7 +27946,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": null,
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/8070.png",
         "id": 8070,
@@ -27954,7 +27959,7 @@
         "shortName": "Uzbekistan",
         "tla": "UZB"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -27963,11 +27968,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_K",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": null,
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/765.svg",
         "id": 765,
@@ -27976,19 +27986,43 @@
         "tla": "POR"
       },
       "id": 537405,
-      "lastApiSync": "2026-06-23T17:01:40.036109+00:00",
-      "lastUpdated": "2026-06-23T19:01:39Z",
+      "lastApiSync": "2026-06-23T17:02:05.580330+00:00",
+      "lastUpdated": "2026-06-23T19:02:03Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-23T17:01:40.036109+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-23T17:02:05.580330+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -28013,7 +28047,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
