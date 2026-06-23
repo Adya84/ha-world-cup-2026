@@ -53769,7 +53769,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5220,
+      "clockSeconds": 5280,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -53778,7 +53778,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "87'",
+      "displayMinute": "88'",
       "events": [
         {
           "assist": "J. Cancelo",
@@ -53907,24 +53907,6 @@
           "type": "Substitution"
         },
         {
-          "assist": "K. Alizhonov",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "S. Nasrullaev",
-          "playerOff": "S. Nasrullaev",
-          "playerOn": "K. Alizhonov",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uzbekistan",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "F. Conceicao",
           "comments": null,
           "detail": "Substitution 2",
@@ -53938,6 +53920,24 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "K. Alizhonov",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Nasrullaev",
+          "playerOff": "S. Nasrullaev",
+          "playerOn": "K. Alizhonov",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
@@ -54049,10 +54049,28 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "R. Leao",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 5220,
-      "fallbackClockText": "87'",
+      "fallbackClock": 5280,
+      "fallbackClockText": "88'",
       "goalEvents": [
         {
           "assist": "J. Cancelo",
@@ -54145,6 +54163,29 @@
           "timer": "60:00",
           "timerSeconds": 3600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Uzbekistan",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "87'",
+          "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Portugal",
+          "isDisallowed": false,
+          "matchId": 537405,
+          "matchUtcDate": "2026-06-23T17:00:00Z",
+          "minute": 87,
+          "player": "R. Leao",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -54153,8 +54194,8 @@
       "homeFouls": 12,
       "homeOffsides": 0,
       "homePossession": "68%",
-      "homeScore": 4,
-      "homeShotsOnGoal": 7,
+      "homeScore": 5,
+      "homeShotsOnGoal": 8,
       "homeTeam": {
         "crest": "https://crests.football-data.org/765.svg",
         "id": 765,
@@ -54163,8 +54204,8 @@
         "tla": "POR"
       },
       "id": 537405,
-      "lastApiSync": "2026-06-23T18:51:12.380088+00:00",
-      "lastUpdated": "2026-06-23T20:51:09Z",
+      "lastApiSync": "2026-06-23T18:51:40.105343+00:00",
+      "lastUpdated": "2026-06-23T20:51:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -54185,21 +54226,21 @@
           "possession": "68%",
           "redCards": null,
           "shotsOffGoal": 4,
-          "shotsOnGoal": 7,
-          "totalShots": 14,
+          "shotsOnGoal": 8,
+          "totalShots": 15,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "87'",
-        "lastApiSync": "2026-06-23T18:51:12.380088+00:00",
-        "seconds": 5220,
+        "displayMinute": "88'",
+        "lastApiSync": "2026-06-23T18:51:40.105343+00:00",
+        "seconds": 5280,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "87'"
+        "timer": "88'"
       },
-      "manualClockText": "87'",
+      "manualClockText": "88'",
       "matchDetails": {
         "apiFootballFixtureId": 1489404,
         "awayCorners": 2,
@@ -54373,24 +54414,6 @@
             "type": "Substitution"
           },
           {
-            "assist": "K. Alizhonov",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "S. Nasrullaev",
-            "playerOff": "S. Nasrullaev",
-            "playerOn": "K. Alizhonov",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uzbekistan",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
             "assist": "F. Conceicao",
             "comments": null,
             "detail": "Substitution 2",
@@ -54404,6 +54427,24 @@
             "rawType": "subst",
             "source": "api_football",
             "team": "Portugal",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
+            "assist": "K. Alizhonov",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "S. Nasrullaev",
+            "playerOff": "S. Nasrullaev",
+            "playerOn": "K. Alizhonov",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Uzbekistan",
             "timer": "46:00",
             "timerSeconds": 2760,
             "type": "Substitution"
@@ -54515,6 +54556,24 @@
             "timer": "83:00",
             "timerSeconds": 4980,
             "type": "Substitution"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "87'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 87,
+            "player": "R. Leao",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Portugal",
+            "timer": "87:00",
+            "timerSeconds": 5220,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -54609,6 +54668,29 @@
             "timer": "60:00",
             "timerSeconds": 3600,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Uzbekistan",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "87'",
+            "extra": null,
+            "goalNumber": 5,
+            "homeTeam": "Portugal",
+            "isDisallowed": false,
+            "matchId": 537405,
+            "matchUtcDate": "2026-06-23T17:00:00Z",
+            "minute": 87,
+            "player": "R. Leao",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Portugal",
+            "timer": "87:00",
+            "timerSeconds": 5220,
+            "type": "Goal"
           }
         ],
         "goalEventsSource": "api_football_live",
@@ -54616,7 +54698,7 @@
         "homeFouls": 12,
         "homeOffsides": 0,
         "homePossession": "68%",
-        "homeShotsOnGoal": 7,
+        "homeShotsOnGoal": 8,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
@@ -54638,8 +54720,8 @@
             "possession": "68%",
             "redCards": null,
             "shotsOffGoal": 4,
-            "shotsOnGoal": 7,
-            "totalShots": 14,
+            "shotsOnGoal": 8,
+            "totalShots": 15,
             "yellowCards": 1
           }
         },
@@ -54703,24 +54785,6 @@
             "type": "Substitution"
           },
           {
-            "assist": "K. Alizhonov",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "S. Nasrullaev",
-            "playerOff": "S. Nasrullaev",
-            "playerOn": "K. Alizhonov",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uzbekistan",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
             "assist": "F. Conceicao",
             "comments": null,
             "detail": "Substitution 2",
@@ -54734,6 +54798,24 @@
             "rawType": "subst",
             "source": "api_football",
             "team": "Portugal",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
+            "assist": "K. Alizhonov",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "S. Nasrullaev",
+            "playerOff": "S. Nasrullaev",
+            "playerOn": "K. Alizhonov",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Uzbekistan",
             "timer": "46:00",
             "timerSeconds": 2760,
             "type": "Substitution"
@@ -54859,7 +54941,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 87,
+      "minute": 88,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -54889,7 +54971,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 4
+          "home": 5
         },
         "halfTime": {
           "away": 0,
@@ -54945,24 +55027,6 @@
           "type": "Substitution"
         },
         {
-          "assist": "K. Alizhonov",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "S. Nasrullaev",
-          "playerOff": "S. Nasrullaev",
-          "playerOn": "K. Alizhonov",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uzbekistan",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "F. Conceicao",
           "comments": null,
           "detail": "Substitution 2",
@@ -54976,6 +55040,24 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "K. Alizhonov",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Nasrullaev",
+          "playerOff": "S. Nasrullaev",
+          "playerOn": "K. Alizhonov",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
@@ -108854,7 +108936,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5220,
+      "clockSeconds": 5280,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -108863,7 +108945,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "87'",
+      "displayMinute": "88'",
       "events": [
         {
           "assist": "J. Cancelo",
@@ -108992,24 +109074,6 @@
           "type": "Substitution"
         },
         {
-          "assist": "K. Alizhonov",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "S. Nasrullaev",
-          "playerOff": "S. Nasrullaev",
-          "playerOn": "K. Alizhonov",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uzbekistan",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "F. Conceicao",
           "comments": null,
           "detail": "Substitution 2",
@@ -109023,6 +109087,24 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "K. Alizhonov",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Nasrullaev",
+          "playerOff": "S. Nasrullaev",
+          "playerOn": "K. Alizhonov",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
@@ -109134,10 +109216,28 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "R. Leao",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 5220,
-      "fallbackClockText": "87'",
+      "fallbackClock": 5280,
+      "fallbackClockText": "88'",
       "goalEvents": [
         {
           "assist": "J. Cancelo",
@@ -109230,6 +109330,29 @@
           "timer": "60:00",
           "timerSeconds": 3600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Uzbekistan",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "87'",
+          "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Portugal",
+          "isDisallowed": false,
+          "matchId": 537405,
+          "matchUtcDate": "2026-06-23T17:00:00Z",
+          "minute": 87,
+          "player": "R. Leao",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -109238,8 +109361,8 @@
       "homeFouls": 12,
       "homeOffsides": 0,
       "homePossession": "68%",
-      "homeScore": 4,
-      "homeShotsOnGoal": 7,
+      "homeScore": 5,
+      "homeShotsOnGoal": 8,
       "homeTeam": {
         "crest": "https://crests.football-data.org/765.svg",
         "id": 765,
@@ -109248,8 +109371,8 @@
         "tla": "POR"
       },
       "id": 537405,
-      "lastApiSync": "2026-06-23T18:51:12.380088+00:00",
-      "lastUpdated": "2026-06-23T20:51:09Z",
+      "lastApiSync": "2026-06-23T18:51:40.105343+00:00",
+      "lastUpdated": "2026-06-23T20:51:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -109270,21 +109393,21 @@
           "possession": "68%",
           "redCards": null,
           "shotsOffGoal": 4,
-          "shotsOnGoal": 7,
-          "totalShots": 14,
+          "shotsOnGoal": 8,
+          "totalShots": 15,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "87'",
-        "lastApiSync": "2026-06-23T18:51:12.380088+00:00",
-        "seconds": 5220,
+        "displayMinute": "88'",
+        "lastApiSync": "2026-06-23T18:51:40.105343+00:00",
+        "seconds": 5280,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "87'"
+        "timer": "88'"
       },
-      "manualClockText": "87'",
+      "manualClockText": "88'",
       "matchDetails": {
         "apiFootballFixtureId": 1489404,
         "awayCorners": 2,
@@ -109458,24 +109581,6 @@
             "type": "Substitution"
           },
           {
-            "assist": "K. Alizhonov",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "S. Nasrullaev",
-            "playerOff": "S. Nasrullaev",
-            "playerOn": "K. Alizhonov",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uzbekistan",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
             "assist": "F. Conceicao",
             "comments": null,
             "detail": "Substitution 2",
@@ -109489,6 +109594,24 @@
             "rawType": "subst",
             "source": "api_football",
             "team": "Portugal",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
+            "assist": "K. Alizhonov",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "S. Nasrullaev",
+            "playerOff": "S. Nasrullaev",
+            "playerOn": "K. Alizhonov",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Uzbekistan",
             "timer": "46:00",
             "timerSeconds": 2760,
             "type": "Substitution"
@@ -109600,6 +109723,24 @@
             "timer": "83:00",
             "timerSeconds": 4980,
             "type": "Substitution"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "87'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 87,
+            "player": "R. Leao",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Portugal",
+            "timer": "87:00",
+            "timerSeconds": 5220,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -109694,6 +109835,29 @@
             "timer": "60:00",
             "timerSeconds": 3600,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Uzbekistan",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "87'",
+            "extra": null,
+            "goalNumber": 5,
+            "homeTeam": "Portugal",
+            "isDisallowed": false,
+            "matchId": 537405,
+            "matchUtcDate": "2026-06-23T17:00:00Z",
+            "minute": 87,
+            "player": "R. Leao",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Portugal",
+            "timer": "87:00",
+            "timerSeconds": 5220,
+            "type": "Goal"
           }
         ],
         "goalEventsSource": "api_football_live",
@@ -109701,7 +109865,7 @@
         "homeFouls": 12,
         "homeOffsides": 0,
         "homePossession": "68%",
-        "homeShotsOnGoal": 7,
+        "homeShotsOnGoal": 8,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
@@ -109723,8 +109887,8 @@
             "possession": "68%",
             "redCards": null,
             "shotsOffGoal": 4,
-            "shotsOnGoal": 7,
-            "totalShots": 14,
+            "shotsOnGoal": 8,
+            "totalShots": 15,
             "yellowCards": 1
           }
         },
@@ -109788,24 +109952,6 @@
             "type": "Substitution"
           },
           {
-            "assist": "K. Alizhonov",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "S. Nasrullaev",
-            "playerOff": "S. Nasrullaev",
-            "playerOn": "K. Alizhonov",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uzbekistan",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
             "assist": "F. Conceicao",
             "comments": null,
             "detail": "Substitution 2",
@@ -109819,6 +109965,24 @@
             "rawType": "subst",
             "source": "api_football",
             "team": "Portugal",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
+            "assist": "K. Alizhonov",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "S. Nasrullaev",
+            "playerOff": "S. Nasrullaev",
+            "playerOn": "K. Alizhonov",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Uzbekistan",
             "timer": "46:00",
             "timerSeconds": 2760,
             "type": "Substitution"
@@ -109944,7 +110108,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 87,
+      "minute": 88,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -109974,7 +110138,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 4
+          "home": 5
         },
         "halfTime": {
           "away": 0,
@@ -110030,24 +110194,6 @@
           "type": "Substitution"
         },
         {
-          "assist": "K. Alizhonov",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "S. Nasrullaev",
-          "playerOff": "S. Nasrullaev",
-          "playerOn": "K. Alizhonov",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uzbekistan",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "F. Conceicao",
           "comments": null,
           "detail": "Substitution 2",
@@ -110061,6 +110207,24 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "K. Alizhonov",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Nasrullaev",
+          "playerOff": "S. Nasrullaev",
+          "playerOn": "K. Alizhonov",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
