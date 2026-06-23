@@ -24258,8 +24258,8 @@
     },
     {
       "apiFootballFixtureId": 1489401,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -24279,7 +24279,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -24288,7 +24288,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "M. Pedersen",
@@ -24325,10 +24325,28 @@
           "timer": "43:00",
           "timerSeconds": 2580,
           "type": "Goal"
+        },
+        {
+          "assist": "P. Berg",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "F. Aursnes",
+          "playerOff": "F. Aursnes",
+          "playerOn": "P. Berg",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": null,
@@ -24370,8 +24388,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T01:04:44.640557+00:00",
-      "lastUpdated": "2026-06-23T03:04:43Z",
+      "lastApiSync": "2026-06-23T01:05:13.088836+00:00",
+      "lastUpdated": "2026-06-23T03:05:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -24399,14 +24417,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-23T01:04:44.640557+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-23T01:05:13.088836+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -24431,7 +24449,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -24478,7 +24496,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
       "substitutionEvents": [
         {
           "assist": "M. Pedersen",
@@ -24496,6 +24514,24 @@
           "team": "Norway",
           "timer": "13:00",
           "timerSeconds": 780,
+          "type": "Substitution"
+        },
+        {
+          "assist": "P. Berg",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "F. Aursnes",
+          "playerOff": "F. Aursnes",
+          "playerOn": "P. Berg",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
           "type": "Substitution"
         }
       ],
