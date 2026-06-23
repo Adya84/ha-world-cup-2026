@@ -23829,7 +23829,7 @@
     "apiFootballFixtureId": 1489404,
     "awayScore": 0,
     "awayTeam": "Uzbekistan",
-    "base_seconds": 3780,
+    "base_seconds": 3840,
     "cardEvents": [
       {
         "assist": null,
@@ -23851,8 +23851,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3780,
-    "displayMinute": "63'",
+    "clock_seconds": 3840,
+    "displayMinute": "64'",
     "events": [
       {
         "assist": "J. Cancelo",
@@ -24033,6 +24033,24 @@
         "timer": "60:00",
         "timerSeconds": 3600,
         "type": "Own Goal"
+      },
+      {
+        "assist": "Trincao",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "64'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 64,
+        "player": "Joao Felix",
+        "playerOff": "Joao Felix",
+        "playerOn": "Trincao",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Portugal",
+        "timer": "64:00",
+        "timerSeconds": 3840,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24131,9 +24149,9 @@
     ],
     "homeScore": 4,
     "homeTeam": "Portugal",
-    "lastApiSync": "2026-06-23T18:27:20.273354+00:00",
-    "manualClockText": "63'",
-    "phase_start": "2026-06-23T18:27:20.273354+00:00",
+    "lastApiSync": "2026-06-23T18:27:47.689763+00:00",
+    "manualClockText": "64'",
+    "phase_start": "2026-06-23T18:27:47.689763+00:00",
     "referees": [
       {
         "name": "Jalal Jayed",
@@ -24218,6 +24236,24 @@
         "team": "Portugal",
         "timer": "46:00",
         "timerSeconds": 2760,
+        "type": "Substitution"
+      },
+      {
+        "assist": "Trincao",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "64'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 64,
+        "player": "Joao Felix",
+        "playerOff": "Joao Felix",
+        "playerOn": "Trincao",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Portugal",
+        "timer": "64:00",
+        "timerSeconds": 3840,
         "type": "Substitution"
       }
     ],
