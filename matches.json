@@ -23805,7 +23805,11 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayCorners": 1,
+      "awayFouls": 2,
+      "awayOffsides": null,
+      "awayPossession": "42%",
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -23833,7 +23837,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -23841,7 +23844,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "Michael Olise",
@@ -23985,6 +23987,11 @@
         }
       ],
       "group": "GROUP_I",
+      "homeCorners": 1,
+      "homeFouls": 5,
+      "homeOffsides": null,
+      "homePossession": "58%",
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -23993,50 +24000,54 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
-      "lastUpdated": "2026-06-23T02:49:25Z",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "90:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 95.3,
-        "condition": "heavyrain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-23T00:40:23.226159+00:00",
-        "humidity": 94.9,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-06-23T00:00:00Z",
-        "pressure": 1012.1,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 23.6,
-        "temperatureUnit": "C",
-        "windBearing": 269.5,
-        "windSpeed": 3.8,
-        "windSpeedUnit": "m/s"
+      "lastUpdated": "2026-06-23T02:49:31Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 1,
+          "fouls": 2,
+          "offsides": null,
+          "possession": "42%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 5,
+          "offsides": null,
+          "possession": "58%",
+          "redCards": null,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 1,
+          "totalShots": 7,
+          "yellowCards": 0
+        }
       },
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -24060,7 +24071,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Ali Al-Hamadi",
@@ -24243,35 +24254,12 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-22T21:00:00Z",
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 95.3,
-        "condition": "heavyrain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-23T00:40:23.226159+00:00",
-        "humidity": 94.9,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-06-23T00:00:00Z",
-        "pressure": 1012.1,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 23.6,
-        "temperatureUnit": "C",
-        "windBearing": 269.5,
-        "windSpeed": 3.8,
-        "windSpeedUnit": "m/s"
-      }
+      "utcDate": "2026-06-22T21:00:00Z"
     },
     {
       "apiFootballFixtureId": 1489401,
-      "apiFootballStatus": "1H",
-      "apiFootballStatusLong": "First Half",
+      "apiFootballStatus": "HT",
+      "apiFootballStatusLong": "Halftime",
       "area": {
         "code": "INT",
         "flag": null,
@@ -24382,8 +24370,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:49:28.276257+00:00",
-      "lastUpdated": "2026-06-23T02:49:25Z",
+      "lastApiSync": "2026-06-23T00:49:59.754633+00:00",
+      "lastUpdated": "2026-06-23T02:49:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -24412,10 +24400,10 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-23T00:49:28.276257+00:00",
+        "lastApiSync": "2026-06-23T00:49:59.754633+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
-        "status": "1H",
+        "status": "HT",
         "timer": "45'"
       },
       "manualClockText": "45'",
@@ -24490,7 +24478,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "1H",
+      "status": "HT",
       "substitutionEvents": [
         {
           "assist": "M. Pedersen",
