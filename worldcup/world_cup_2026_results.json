@@ -53719,9 +53719,9 @@
         "name": "World"
       },
       "awayCorners": 2,
-      "awayFouls": 12,
+      "awayFouls": 13,
       "awayOffsides": 1,
-      "awayPossession": "33%",
+      "awayPossession": "32%",
       "awayScore": 0,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -53769,7 +53769,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4980,
+      "clockSeconds": 5040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -53778,7 +53778,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "83'",
+      "displayMinute": "84'",
       "events": [
         {
           "assist": "J. Cancelo",
@@ -53889,6 +53889,24 @@
           "type": "Substitution"
         },
         {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Cancelo",
+          "playerOff": "J. Cancelo",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "K. Alizhonov",
           "comments": null,
           "detail": "Substitution 2",
@@ -53909,7 +53927,7 @@
         {
           "assist": "F. Conceicao",
           "comments": null,
-          "detail": "Substitution 1",
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -53917,24 +53935,6 @@
           "player": "P. Neto",
           "playerOff": "P. Neto",
           "playerOn": "F. Conceicao",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Portugal",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Semedo",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "J. Cancelo",
-          "playerOff": "J. Cancelo",
-          "playerOn": "N. Semedo",
           "rawType": "subst",
           "source": "api_football",
           "team": "Portugal",
@@ -54051,8 +54051,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4980,
-      "fallbackClockText": "83'",
+      "fallbackClock": 5040,
+      "fallbackClockText": "84'",
       "goalEvents": [
         {
           "assist": "J. Cancelo",
@@ -54149,10 +54149,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_K",
-      "homeCorners": 2,
-      "homeFouls": 11,
+      "homeCorners": 3,
+      "homeFouls": 12,
       "homeOffsides": 0,
-      "homePossession": "67%",
+      "homePossession": "68%",
       "homeScore": 4,
       "homeShotsOnGoal": 7,
       "homeTeam": {
@@ -54163,15 +54163,15 @@
         "tla": "POR"
       },
       "id": 537405,
-      "lastApiSync": "2026-06-23T18:47:03.474172+00:00",
-      "lastUpdated": "2026-06-23T20:47:00Z",
+      "lastApiSync": "2026-06-23T18:47:35.216609+00:00",
+      "lastUpdated": "2026-06-23T20:47:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
-          "fouls": 12,
+          "fouls": 13,
           "offsides": 1,
-          "possession": "33%",
+          "possession": "32%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 2,
@@ -54179,10 +54179,10 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 2,
-          "fouls": 11,
+          "corners": 3,
+          "fouls": 12,
           "offsides": 0,
-          "possession": "67%",
+          "possession": "68%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 7,
@@ -54192,20 +54192,20 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "83'",
-        "lastApiSync": "2026-06-23T18:47:03.474172+00:00",
-        "seconds": 4980,
+        "displayMinute": "84'",
+        "lastApiSync": "2026-06-23T18:47:35.216609+00:00",
+        "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "83'"
+        "timer": "84'"
       },
-      "manualClockText": "83'",
+      "manualClockText": "84'",
       "matchDetails": {
         "apiFootballFixtureId": 1489404,
         "awayCorners": 2,
-        "awayFouls": 12,
+        "awayFouls": 13,
         "awayOffsides": 1,
-        "awayPossession": "33%",
+        "awayPossession": "32%",
         "awayShotsOnGoal": 2,
         "cardEvents": [
           {
@@ -54355,6 +54355,24 @@
             "type": "Substitution"
           },
           {
+            "assist": "N. Semedo",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "J. Cancelo",
+            "playerOff": "J. Cancelo",
+            "playerOn": "N. Semedo",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Portugal",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
             "assist": "K. Alizhonov",
             "comments": null,
             "detail": "Substitution 2",
@@ -54375,7 +54393,7 @@
           {
             "assist": "F. Conceicao",
             "comments": null,
-            "detail": "Substitution 1",
+            "detail": "Substitution 2",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
@@ -54383,24 +54401,6 @@
             "player": "P. Neto",
             "playerOff": "P. Neto",
             "playerOn": "F. Conceicao",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Portugal",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
-            "assist": "N. Semedo",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "J. Cancelo",
-            "playerOff": "J. Cancelo",
-            "playerOn": "N. Semedo",
             "rawType": "subst",
             "source": "api_football",
             "team": "Portugal",
@@ -54612,19 +54612,19 @@
           }
         ],
         "goalEventsSource": "api_football_live",
-        "homeCorners": 2,
-        "homeFouls": 11,
+        "homeCorners": 3,
+        "homeFouls": 12,
         "homeOffsides": 0,
-        "homePossession": "67%",
+        "homePossession": "68%",
         "homeShotsOnGoal": 7,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
             "corners": 2,
-            "fouls": 12,
+            "fouls": 13,
             "offsides": 1,
-            "possession": "33%",
+            "possession": "32%",
             "redCards": null,
             "shotsOffGoal": 2,
             "shotsOnGoal": 2,
@@ -54632,10 +54632,10 @@
             "yellowCards": 1
           },
           "home": {
-            "corners": 2,
-            "fouls": 11,
+            "corners": 3,
+            "fouls": 12,
             "offsides": 0,
-            "possession": "67%",
+            "possession": "68%",
             "redCards": null,
             "shotsOffGoal": 4,
             "shotsOnGoal": 7,
@@ -54685,6 +54685,24 @@
             "type": "Substitution"
           },
           {
+            "assist": "N. Semedo",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "J. Cancelo",
+            "playerOff": "J. Cancelo",
+            "playerOn": "N. Semedo",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Portugal",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
             "assist": "K. Alizhonov",
             "comments": null,
             "detail": "Substitution 2",
@@ -54705,7 +54723,7 @@
           {
             "assist": "F. Conceicao",
             "comments": null,
-            "detail": "Substitution 1",
+            "detail": "Substitution 2",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
@@ -54713,24 +54731,6 @@
             "player": "P. Neto",
             "playerOff": "P. Neto",
             "playerOn": "F. Conceicao",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Portugal",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
-            "assist": "N. Semedo",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "J. Cancelo",
-            "playerOff": "J. Cancelo",
-            "playerOn": "N. Semedo",
             "rawType": "subst",
             "source": "api_football",
             "team": "Portugal",
@@ -54859,7 +54859,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 83,
+      "minute": 84,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -54927,6 +54927,24 @@
           "type": "Substitution"
         },
         {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Cancelo",
+          "playerOff": "J. Cancelo",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "K. Alizhonov",
           "comments": null,
           "detail": "Substitution 2",
@@ -54947,7 +54965,7 @@
         {
           "assist": "F. Conceicao",
           "comments": null,
-          "detail": "Substitution 1",
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -54955,24 +54973,6 @@
           "player": "P. Neto",
           "playerOff": "P. Neto",
           "playerOn": "F. Conceicao",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Portugal",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Semedo",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "J. Cancelo",
-          "playerOff": "J. Cancelo",
-          "playerOn": "N. Semedo",
           "rawType": "subst",
           "source": "api_football",
           "team": "Portugal",
@@ -108804,9 +108804,9 @@
         "name": "World"
       },
       "awayCorners": 2,
-      "awayFouls": 12,
+      "awayFouls": 13,
       "awayOffsides": 1,
-      "awayPossession": "33%",
+      "awayPossession": "32%",
       "awayScore": 0,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -108854,7 +108854,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4980,
+      "clockSeconds": 5040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -108863,7 +108863,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "83'",
+      "displayMinute": "84'",
       "events": [
         {
           "assist": "J. Cancelo",
@@ -108974,6 +108974,24 @@
           "type": "Substitution"
         },
         {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Cancelo",
+          "playerOff": "J. Cancelo",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "K. Alizhonov",
           "comments": null,
           "detail": "Substitution 2",
@@ -108994,7 +109012,7 @@
         {
           "assist": "F. Conceicao",
           "comments": null,
-          "detail": "Substitution 1",
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -109002,24 +109020,6 @@
           "player": "P. Neto",
           "playerOff": "P. Neto",
           "playerOn": "F. Conceicao",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Portugal",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Semedo",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "J. Cancelo",
-          "playerOff": "J. Cancelo",
-          "playerOn": "N. Semedo",
           "rawType": "subst",
           "source": "api_football",
           "team": "Portugal",
@@ -109136,8 +109136,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4980,
-      "fallbackClockText": "83'",
+      "fallbackClock": 5040,
+      "fallbackClockText": "84'",
       "goalEvents": [
         {
           "assist": "J. Cancelo",
@@ -109234,10 +109234,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_K",
-      "homeCorners": 2,
-      "homeFouls": 11,
+      "homeCorners": 3,
+      "homeFouls": 12,
       "homeOffsides": 0,
-      "homePossession": "67%",
+      "homePossession": "68%",
       "homeScore": 4,
       "homeShotsOnGoal": 7,
       "homeTeam": {
@@ -109248,15 +109248,15 @@
         "tla": "POR"
       },
       "id": 537405,
-      "lastApiSync": "2026-06-23T18:47:03.474172+00:00",
-      "lastUpdated": "2026-06-23T20:47:00Z",
+      "lastApiSync": "2026-06-23T18:47:35.216609+00:00",
+      "lastUpdated": "2026-06-23T20:47:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
-          "fouls": 12,
+          "fouls": 13,
           "offsides": 1,
-          "possession": "33%",
+          "possession": "32%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 2,
@@ -109264,10 +109264,10 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 2,
-          "fouls": 11,
+          "corners": 3,
+          "fouls": 12,
           "offsides": 0,
-          "possession": "67%",
+          "possession": "68%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 7,
@@ -109277,20 +109277,20 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "83'",
-        "lastApiSync": "2026-06-23T18:47:03.474172+00:00",
-        "seconds": 4980,
+        "displayMinute": "84'",
+        "lastApiSync": "2026-06-23T18:47:35.216609+00:00",
+        "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "83'"
+        "timer": "84'"
       },
-      "manualClockText": "83'",
+      "manualClockText": "84'",
       "matchDetails": {
         "apiFootballFixtureId": 1489404,
         "awayCorners": 2,
-        "awayFouls": 12,
+        "awayFouls": 13,
         "awayOffsides": 1,
-        "awayPossession": "33%",
+        "awayPossession": "32%",
         "awayShotsOnGoal": 2,
         "cardEvents": [
           {
@@ -109440,6 +109440,24 @@
             "type": "Substitution"
           },
           {
+            "assist": "N. Semedo",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "J. Cancelo",
+            "playerOff": "J. Cancelo",
+            "playerOn": "N. Semedo",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Portugal",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
             "assist": "K. Alizhonov",
             "comments": null,
             "detail": "Substitution 2",
@@ -109460,7 +109478,7 @@
           {
             "assist": "F. Conceicao",
             "comments": null,
-            "detail": "Substitution 1",
+            "detail": "Substitution 2",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
@@ -109468,24 +109486,6 @@
             "player": "P. Neto",
             "playerOff": "P. Neto",
             "playerOn": "F. Conceicao",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Portugal",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
-            "assist": "N. Semedo",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "J. Cancelo",
-            "playerOff": "J. Cancelo",
-            "playerOn": "N. Semedo",
             "rawType": "subst",
             "source": "api_football",
             "team": "Portugal",
@@ -109697,19 +109697,19 @@
           }
         ],
         "goalEventsSource": "api_football_live",
-        "homeCorners": 2,
-        "homeFouls": 11,
+        "homeCorners": 3,
+        "homeFouls": 12,
         "homeOffsides": 0,
-        "homePossession": "67%",
+        "homePossession": "68%",
         "homeShotsOnGoal": 7,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
             "corners": 2,
-            "fouls": 12,
+            "fouls": 13,
             "offsides": 1,
-            "possession": "33%",
+            "possession": "32%",
             "redCards": null,
             "shotsOffGoal": 2,
             "shotsOnGoal": 2,
@@ -109717,10 +109717,10 @@
             "yellowCards": 1
           },
           "home": {
-            "corners": 2,
-            "fouls": 11,
+            "corners": 3,
+            "fouls": 12,
             "offsides": 0,
-            "possession": "67%",
+            "possession": "68%",
             "redCards": null,
             "shotsOffGoal": 4,
             "shotsOnGoal": 7,
@@ -109770,6 +109770,24 @@
             "type": "Substitution"
           },
           {
+            "assist": "N. Semedo",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "J. Cancelo",
+            "playerOff": "J. Cancelo",
+            "playerOn": "N. Semedo",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Portugal",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
             "assist": "K. Alizhonov",
             "comments": null,
             "detail": "Substitution 2",
@@ -109790,7 +109808,7 @@
           {
             "assist": "F. Conceicao",
             "comments": null,
-            "detail": "Substitution 1",
+            "detail": "Substitution 2",
             "displayMinute": "46'",
             "extra": null,
             "isDisallowed": false,
@@ -109798,24 +109816,6 @@
             "player": "P. Neto",
             "playerOff": "P. Neto",
             "playerOn": "F. Conceicao",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Portugal",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
-            "assist": "N. Semedo",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "J. Cancelo",
-            "playerOff": "J. Cancelo",
-            "playerOn": "N. Semedo",
             "rawType": "subst",
             "source": "api_football",
             "team": "Portugal",
@@ -109944,7 +109944,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 83,
+      "minute": 84,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -110012,6 +110012,24 @@
           "type": "Substitution"
         },
         {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Cancelo",
+          "playerOff": "J. Cancelo",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "K. Alizhonov",
           "comments": null,
           "detail": "Substitution 2",
@@ -110032,7 +110050,7 @@
         {
           "assist": "F. Conceicao",
           "comments": null,
-          "detail": "Substitution 1",
+          "detail": "Substitution 2",
           "displayMinute": "46'",
           "extra": null,
           "isDisallowed": false,
@@ -110040,24 +110058,6 @@
           "player": "P. Neto",
           "playerOff": "P. Neto",
           "playerOn": "F. Conceicao",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Portugal",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Semedo",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "J. Cancelo",
-          "playerOff": "J. Cancelo",
-          "playerOn": "N. Semedo",
           "rawType": "subst",
           "source": "api_football",
           "team": "Portugal",
