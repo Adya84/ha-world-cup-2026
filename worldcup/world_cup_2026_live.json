@@ -10,11 +10,11 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
+      "awayCorners": 5,
       "awayFouls": 6,
       "awayOffsides": 0,
-      "awayPossession": "74%",
-      "awayScore": 0,
+      "awayPossession": "75%",
+      "awayScore": 1,
       "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4080,
+      "clockSeconds": 4140,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "68'",
+      "displayMinute": "69'",
       "events": [
         {
           "assist": "M. Tamari",
@@ -161,10 +161,28 @@
           "timer": "64:00",
           "timerSeconds": 3840,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "69'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 69,
+          "player": "N. Benbouali",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 4080,
-      "fallbackClockText": "68'",
+      "fallbackClock": 4140,
+      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": "M. Tamari",
@@ -188,6 +206,29 @@
           "timer": "36:00",
           "timerSeconds": 2160,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Algeria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "69'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Jordan",
+          "isDisallowed": false,
+          "matchId": 537400,
+          "matchUtcDate": "2026-06-23T03:00:00Z",
+          "minute": 69,
+          "player": "N. Benbouali",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -195,7 +236,7 @@
       "homeCorners": 1,
       "homeFouls": 6,
       "homeOffsides": 1,
-      "homePossession": "26%",
+      "homePossession": "25%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -206,26 +247,26 @@
         "tla": "JOR"
       },
       "id": 537400,
-      "lastApiSync": "2026-06-23T04:30:53.550704+00:00",
-      "lastUpdated": "2026-06-23T06:30:51Z",
+      "lastApiSync": "2026-06-23T04:31:23.326361+00:00",
+      "lastUpdated": "2026-06-23T06:31:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 6,
           "offsides": 0,
-          "possession": "74%",
+          "possession": "75%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 4,
-          "totalShots": 9,
+          "totalShots": 10,
           "yellowCards": 1
         },
         "home": {
           "corners": 1,
           "fouls": 6,
           "offsides": 1,
-          "possession": "26%",
+          "possession": "25%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 3,
@@ -235,14 +276,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "68'",
-        "lastApiSync": "2026-06-23T04:30:53.550704+00:00",
-        "seconds": 4080,
+        "displayMinute": "69'",
+        "lastApiSync": "2026-06-23T04:31:23.326361+00:00",
+        "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "68'"
+        "timer": "69'"
       },
-      "manualClockText": "68'",
+      "manualClockText": "69'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -267,7 +308,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 68,
+      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -296,7 +337,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 1
         },
         "halfTime": {
@@ -395,11 +436,11 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
+      "awayCorners": 5,
       "awayFouls": 6,
       "awayOffsides": 0,
-      "awayPossession": "74%",
-      "awayScore": 0,
+      "awayPossession": "75%",
+      "awayScore": 1,
       "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
@@ -446,7 +487,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4080,
+      "clockSeconds": 4140,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -455,7 +496,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "68'",
+      "displayMinute": "69'",
       "events": [
         {
           "assist": "M. Tamari",
@@ -546,10 +587,28 @@
           "timer": "64:00",
           "timerSeconds": 3840,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "69'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 69,
+          "player": "N. Benbouali",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 4080,
-      "fallbackClockText": "68'",
+      "fallbackClock": 4140,
+      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": "M. Tamari",
@@ -573,6 +632,29 @@
           "timer": "36:00",
           "timerSeconds": 2160,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Algeria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "69'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Jordan",
+          "isDisallowed": false,
+          "matchId": 537400,
+          "matchUtcDate": "2026-06-23T03:00:00Z",
+          "minute": 69,
+          "player": "N. Benbouali",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -580,7 +662,7 @@
       "homeCorners": 1,
       "homeFouls": 6,
       "homeOffsides": 1,
-      "homePossession": "26%",
+      "homePossession": "25%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -591,26 +673,26 @@
         "tla": "JOR"
       },
       "id": 537400,
-      "lastApiSync": "2026-06-23T04:30:53.550704+00:00",
-      "lastUpdated": "2026-06-23T06:30:51Z",
+      "lastApiSync": "2026-06-23T04:31:23.326361+00:00",
+      "lastUpdated": "2026-06-23T06:31:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 6,
           "offsides": 0,
-          "possession": "74%",
+          "possession": "75%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 4,
-          "totalShots": 9,
+          "totalShots": 10,
           "yellowCards": 1
         },
         "home": {
           "corners": 1,
           "fouls": 6,
           "offsides": 1,
-          "possession": "26%",
+          "possession": "25%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 3,
@@ -620,14 +702,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "68'",
-        "lastApiSync": "2026-06-23T04:30:53.550704+00:00",
-        "seconds": 4080,
+        "displayMinute": "69'",
+        "lastApiSync": "2026-06-23T04:31:23.326361+00:00",
+        "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "68'"
+        "timer": "69'"
       },
-      "manualClockText": "68'",
+      "manualClockText": "69'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -652,7 +734,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 68,
+      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -681,7 +763,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 1
         },
         "halfTime": {
