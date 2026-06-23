@@ -24800,7 +24800,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5160,
+      "clockSeconds": 5220,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -24809,7 +24809,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "86'",
+      "displayMinute": "87'",
       "events": [
         {
           "assist": "M. Tamari",
@@ -24974,6 +24974,42 @@
           "type": "Goal"
         },
         {
+          "assist": "A. Azaizeh",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "M. Tamari",
+          "playerOff": "M. Tamari",
+          "playerOn": "A. Azaizeh",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Abu Hasheesh",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "M. Abu Taha",
+          "playerOff": "M. Abu Taha",
+          "playerOn": "M. Abu Hasheesh",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
           "assist": "Z. Belaid",
           "comments": null,
           "detail": "Substitution 4",
@@ -24987,24 +25023,6 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Algeria",
-          "timer": "86:00",
-          "timerSeconds": 5160,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Azaizeh",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "86'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 86,
-          "player": "M. Tamari",
-          "playerOff": "M. Tamari",
-          "playerOn": "A. Azaizeh",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Jordan",
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Substitution"
@@ -25028,8 +25046,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5160,
-      "fallbackClockText": "86'",
+      "fallbackClock": 5220,
+      "fallbackClockText": "87'",
       "goalEvents": [
         {
           "assist": "M. Tamari",
@@ -25117,8 +25135,8 @@
         "tla": "JOR"
       },
       "id": 537400,
-      "lastApiSync": "2026-06-23T04:48:52.802660+00:00",
-      "lastUpdated": "2026-06-23T06:48:49Z",
+      "lastApiSync": "2026-06-23T04:49:23.755264+00:00",
+      "lastUpdated": "2026-06-23T06:49:20Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -25146,14 +25164,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "86'",
-        "lastApiSync": "2026-06-23T04:48:52.802660+00:00",
-        "seconds": 5160,
+        "displayMinute": "87'",
+        "lastApiSync": "2026-06-23T04:49:23.755264+00:00",
+        "seconds": 5220,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "86'"
+        "timer": "87'"
       },
-      "manualClockText": "86'",
+      "manualClockText": "87'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -25178,7 +25196,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 86,
+      "minute": 87,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -25300,6 +25318,42 @@
           "type": "Substitution"
         },
         {
+          "assist": "A. Azaizeh",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "M. Tamari",
+          "playerOff": "M. Tamari",
+          "playerOn": "A. Azaizeh",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Abu Hasheesh",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "M. Abu Taha",
+          "playerOff": "M. Abu Taha",
+          "playerOn": "M. Abu Hasheesh",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
           "assist": "Z. Belaid",
           "comments": null,
           "detail": "Substitution 4",
@@ -25313,24 +25367,6 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Algeria",
-          "timer": "86:00",
-          "timerSeconds": 5160,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Azaizeh",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "86'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 86,
-          "player": "M. Tamari",
-          "playerOff": "M. Tamari",
-          "playerOn": "A. Azaizeh",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Jordan",
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Substitution"
