@@ -24270,7 +24270,7 @@
       "awayFouls": 4,
       "awayOffsides": 4,
       "awayPossession": "56%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/senegal.svg",
@@ -24541,6 +24541,24 @@
           "timer": "84:00",
           "timerSeconds": 5040,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+3'",
+          "extra": 3,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "I. Sarr",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "93:00",
+          "timerSeconds": 5580,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 5400,
@@ -24637,6 +24655,29 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Senegal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+3'",
+          "extra": 3,
+          "goalNumber": 5,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537394,
+          "matchUtcDate": "2026-06-23T00:00:00Z",
+          "minute": 90,
+          "player": "I. Sarr",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "93:00",
+          "timerSeconds": 5580,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -24655,8 +24696,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T01:51:51.865812+00:00",
-      "lastUpdated": "2026-06-23T03:51:49Z",
+      "lastApiSync": "2026-06-23T01:52:22.504660+00:00",
+      "lastUpdated": "2026-06-23T03:52:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -24685,7 +24726,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-23T01:51:51.865812+00:00",
+        "lastApiSync": "2026-06-23T01:52:22.504660+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -24745,7 +24786,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 3
         },
         "halfTime": {
