@@ -45689,6 +45689,8 @@
     },
     {
       "apiFootballFixtureId": 1539017,
+      "apiFootballStatus": "INT",
+      "apiFootballStatusLong": "Match Interrupted",
       "area": {
         "code": "INT",
         "flag": null,
@@ -45696,6 +45698,12 @@
         "name": "World"
       },
       "awaitingLiveApiData": true,
+      "awayCorners": 1,
+      "awayFouls": 2,
+      "awayOffsides": null,
+      "awayPossession": "42%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -45783,6 +45791,12 @@
         }
       ],
       "group": "GROUP_I",
+      "homeCorners": 1,
+      "homeFouls": 5,
+      "homeOffsides": null,
+      "homePossession": "58%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -45792,24 +45806,49 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
-      "lastUpdated": "2026-06-23T02:01:19Z",
+      "lastUpdated": "2026-06-23T02:01:52Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 1,
+          "fouls": 2,
+          "offsides": null,
+          "possession": "42%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 5,
+          "offsides": null,
+          "possession": "58%",
+          "redCards": null,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 1,
+          "totalShots": 7,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
         "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
         "seconds": 2700,
         "source": "awaiting_api_football_minute",
-        "status": "PAUSED",
+        "status": "INT",
         "timer": "45:00"
       },
       "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1539017,
-        "awayCorners": null,
-        "awayFouls": null,
+        "awayCorners": 1,
+        "awayFouls": 2,
         "awayOffsides": null,
-        "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayPossession": "42%",
+        "awayShotsOnGoal": 0,
         "cardEvents": [
           {
             "assist": null,
@@ -45881,27 +45920,56 @@
           }
         ],
         "goalEventsSource": null,
-        "homeCorners": null,
-        "homeFouls": null,
+        "homeCorners": 1,
+        "homeFouls": 5,
         "homeOffsides": null,
-        "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homePossession": "58%",
+        "homeShotsOnGoal": 1,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": 1,
+            "fouls": 2,
+            "offsides": null,
+            "possession": "42%",
+            "redCards": null,
+            "shotsOffGoal": 1,
+            "shotsOnGoal": 0,
+            "totalShots": 2,
+            "yellowCards": 1
+          },
+          "home": {
+            "corners": 1,
+            "fouls": 5,
+            "offsides": null,
+            "possession": "58%",
+            "redCards": null,
+            "shotsOffGoal": 3,
+            "shotsOnGoal": 1,
+            "totalShots": 7,
+            "yellowCards": 0
+          }
+        },
         "officials": [
           {
-            "id": 77052,
             "name": "Drew Fischer",
             "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 77052,
             "name": "Drew Fischer",
             "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
             "type": "REFEREE"
           }
         ],
@@ -45976,11 +46044,25 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -45996,6 +46078,7 @@
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -46004,7 +46087,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "PAUSED",
+      "status": "INT",
       "substitutionEvents": [
         {
           "assist": "A. Al Hamadi",
@@ -46026,6 +46109,11 @@
         }
       ],
       "utcDate": "2026-06-22T21:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -46068,7 +46156,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -46077,9 +46165,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_I",
       "homeScore": 0,
       "homeTeam": {
@@ -46090,19 +46178,19 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:01:20.766324+00:00",
-      "lastUpdated": "2026-06-23T02:01:19Z",
+      "lastApiSync": "2026-06-23T00:01:53.611806+00:00",
+      "lastUpdated": "2026-06-23T02:01:52Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-23T00:01:20.766324+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-23T00:01:53.611806+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchDetails": {
         "apiFootballFixtureId": 1489401,
         "awayCorners": null,
@@ -46124,17 +46212,23 @@
         "liveStatistics": {},
         "officials": [
           {
-            "id": 11412,
             "name": "Wilton Sampaio",
             "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Wilton Pereira Sampaio, Brazil",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 11412,
             "name": "Wilton Sampaio",
             "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Wilton Pereira Sampaio, Brazil",
             "type": "REFEREE"
           }
         ],
@@ -46187,15 +46281,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 11412,
           "name": "Wilton Sampaio",
           "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Wilton Pereira Sampaio, Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Wilton Sampaio",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Wilton Pereira Sampaio, Brazil",
           "type": "REFEREE"
         }
       ],
@@ -46223,7 +46331,7 @@
       "status": "1H",
       "utcDate": "2026-06-23T00:00:00Z",
       "venue": {
-        "city": "New York New Jersey",
+        "city": "East Rutherford",
         "id": null,
         "name": "MetLife Stadium"
       },
@@ -91942,6 +92050,8 @@
     },
     {
       "apiFootballFixtureId": 1539017,
+      "apiFootballStatus": "INT",
+      "apiFootballStatusLong": "Match Interrupted",
       "area": {
         "code": "INT",
         "flag": null,
@@ -91949,6 +92059,12 @@
         "name": "World"
       },
       "awaitingLiveApiData": true,
+      "awayCorners": 1,
+      "awayFouls": 2,
+      "awayOffsides": null,
+      "awayPossession": "42%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -92036,6 +92152,12 @@
         }
       ],
       "group": "GROUP_I",
+      "homeCorners": 1,
+      "homeFouls": 5,
+      "homeOffsides": null,
+      "homePossession": "58%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -92045,24 +92167,49 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
-      "lastUpdated": "2026-06-23T02:01:19Z",
+      "lastUpdated": "2026-06-23T02:01:52Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 1,
+          "fouls": 2,
+          "offsides": null,
+          "possession": "42%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 5,
+          "offsides": null,
+          "possession": "58%",
+          "redCards": null,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 1,
+          "totalShots": 7,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
         "lastApiSync": "2026-06-22T22:03:27.132301+00:00",
         "seconds": 2700,
         "source": "awaiting_api_football_minute",
-        "status": "PAUSED",
+        "status": "INT",
         "timer": "45:00"
       },
       "manualClockText": "Awaiting kickoff API data",
       "matchDetails": {
         "apiFootballFixtureId": 1539017,
-        "awayCorners": null,
-        "awayFouls": null,
+        "awayCorners": 1,
+        "awayFouls": 2,
         "awayOffsides": null,
-        "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayPossession": "42%",
+        "awayShotsOnGoal": 0,
         "cardEvents": [
           {
             "assist": null,
@@ -92134,27 +92281,56 @@
           }
         ],
         "goalEventsSource": null,
-        "homeCorners": null,
-        "homeFouls": null,
+        "homeCorners": 1,
+        "homeFouls": 5,
         "homeOffsides": null,
-        "homePossession": null,
-        "homeShotsOnGoal": null,
+        "homePossession": "58%",
+        "homeShotsOnGoal": 1,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": 1,
+            "fouls": 2,
+            "offsides": null,
+            "possession": "42%",
+            "redCards": null,
+            "shotsOffGoal": 1,
+            "shotsOnGoal": 0,
+            "totalShots": 2,
+            "yellowCards": 1
+          },
+          "home": {
+            "corners": 1,
+            "fouls": 5,
+            "offsides": null,
+            "possession": "58%",
+            "redCards": null,
+            "shotsOffGoal": 3,
+            "shotsOnGoal": 1,
+            "totalShots": 7,
+            "yellowCards": 0
+          }
+        },
         "officials": [
           {
-            "id": 77052,
             "name": "Drew Fischer",
             "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 77052,
             "name": "Drew Fischer",
             "nationality": "Canada",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Drew Fischer, Canada",
             "type": "REFEREE"
           }
         ],
@@ -92229,11 +92405,25 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -92249,6 +92439,7 @@
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -92257,7 +92448,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "PAUSED",
+      "status": "INT",
       "substitutionEvents": [
         {
           "assist": "A. Al Hamadi",
@@ -92279,6 +92470,11 @@
         }
       ],
       "utcDate": "2026-06-22T21:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -92321,7 +92517,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -92330,9 +92526,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_I",
       "homeScore": 0,
       "homeTeam": {
@@ -92343,19 +92539,19 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:01:20.766324+00:00",
-      "lastUpdated": "2026-06-23T02:01:19Z",
+      "lastApiSync": "2026-06-23T00:01:53.611806+00:00",
+      "lastUpdated": "2026-06-23T02:01:52Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-23T00:01:20.766324+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-23T00:01:53.611806+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchDetails": {
         "apiFootballFixtureId": 1489401,
         "awayCorners": null,
@@ -92377,17 +92573,23 @@
         "liveStatistics": {},
         "officials": [
           {
-            "id": 11412,
             "name": "Wilton Sampaio",
             "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Wilton Pereira Sampaio, Brazil",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 11412,
             "name": "Wilton Sampaio",
             "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Wilton Pereira Sampaio, Brazil",
             "type": "REFEREE"
           }
         ],
@@ -92440,15 +92642,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 11412,
           "name": "Wilton Sampaio",
           "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Wilton Pereira Sampaio, Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Wilton Sampaio",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Wilton Pereira Sampaio, Brazil",
           "type": "REFEREE"
         }
       ],
@@ -92476,7 +92692,7 @@
       "status": "1H",
       "utcDate": "2026-06-23T00:00:00Z",
       "venue": {
-        "city": "New York New Jersey",
+        "city": "East Rutherford",
         "id": null,
         "name": "MetLife Stadium"
       },
