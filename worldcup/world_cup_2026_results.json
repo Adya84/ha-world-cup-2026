@@ -56474,6 +56474,207 @@
         }
       ],
       "utcDate": "2026-06-23T20:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489403,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/799.svg",
+        "id": 799,
+        "name": "Croatia",
+        "shortName": "Croatia",
+        "tla": "CRO"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_L",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/panama.svg",
+        "id": 1836,
+        "name": "Panama",
+        "shortName": "Panama",
+        "tla": "PAN"
+      },
+      "id": 537412,
+      "lastApiSync": "2026-06-23T23:00:27.031886+00:00",
+      "lastUpdated": "2026-06-24T01:00:20Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-23T23:00:27.031886+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489403,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Pierre Ghislain Atcho, Gabon",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Pierre Ghislain Atcho, Gabon",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Toronto",
+          "cloudCoverage": 48.4,
+          "condition": "partlycloudy_day",
+          "country": "Canada",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-23T22:55:00.626494+00:00",
+          "humidity": 56.6,
+          "latitude": 43.6332,
+          "longitude": -79.4186,
+          "name": "BMO Field weather",
+          "observedAt": "2026-06-23T22:00:00Z",
+          "pressure": 1016.3,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "BMO Field",
+          "temperature": 19.9,
+          "temperatureUnit": "C",
+          "windBearing": 337.2,
+          "windSpeed": 5.8,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Toronto",
+        "cloudCoverage": 48.4,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T22:55:00.626494+00:00",
+        "humidity": 56.6,
+        "latitude": 43.6332,
+        "longitude": -79.4186,
+        "name": "BMO Field weather",
+        "observedAt": "2026-06-23T22:00:00Z",
+        "pressure": 1016.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BMO Field",
+        "temperature": 19.9,
+        "temperatureUnit": "C",
+        "windBearing": 337.2,
+        "windSpeed": 5.8,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Pierre Ghislain Atcho, Gabon",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Pierre Ghislain Atcho, Gabon",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-23T23:00:00Z",
+      "venue": {
+        "city": "Toronto",
+        "id": 312,
+        "name": "BMO Field"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Toronto",
+        "cloudCoverage": 48.4,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T22:55:00.626494+00:00",
+        "humidity": 56.6,
+        "latitude": 43.6332,
+        "longitude": -79.4186,
+        "name": "BMO Field weather",
+        "observedAt": "2026-06-23T22:00:00Z",
+        "pressure": 1016.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BMO Field",
+        "temperature": 19.9,
+        "temperatureUnit": "C",
+        "windBearing": 337.2,
+        "windSpeed": 5.8,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -112951,6 +113152,207 @@
         }
       ],
       "utcDate": "2026-06-23T20:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489403,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/799.svg",
+        "id": 799,
+        "name": "Croatia",
+        "shortName": "Croatia",
+        "tla": "CRO"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_L",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/panama.svg",
+        "id": 1836,
+        "name": "Panama",
+        "shortName": "Panama",
+        "tla": "PAN"
+      },
+      "id": 537412,
+      "lastApiSync": "2026-06-23T23:00:27.031886+00:00",
+      "lastUpdated": "2026-06-24T01:00:20Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-23T23:00:27.031886+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489403,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Pierre Ghislain Atcho, Gabon",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Pierre Ghislain Atcho, Gabon",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Toronto",
+          "cloudCoverage": 48.4,
+          "condition": "partlycloudy_day",
+          "country": "Canada",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-23T22:55:00.626494+00:00",
+          "humidity": 56.6,
+          "latitude": 43.6332,
+          "longitude": -79.4186,
+          "name": "BMO Field weather",
+          "observedAt": "2026-06-23T22:00:00Z",
+          "pressure": 1016.3,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "BMO Field",
+          "temperature": 19.9,
+          "temperatureUnit": "C",
+          "windBearing": 337.2,
+          "windSpeed": 5.8,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Toronto",
+        "cloudCoverage": 48.4,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T22:55:00.626494+00:00",
+        "humidity": 56.6,
+        "latitude": 43.6332,
+        "longitude": -79.4186,
+        "name": "BMO Field weather",
+        "observedAt": "2026-06-23T22:00:00Z",
+        "pressure": 1016.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BMO Field",
+        "temperature": 19.9,
+        "temperatureUnit": "C",
+        "windBearing": 337.2,
+        "windSpeed": 5.8,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 2,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Pierre Ghislain Atcho, Gabon",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Pierre Ghislain Atcho, Gabon",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 2,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-23T23:00:00Z",
+      "venue": {
+        "city": "Toronto",
+        "id": 312,
+        "name": "BMO Field"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Toronto",
+        "cloudCoverage": 48.4,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-23T22:55:00.626494+00:00",
+        "humidity": 56.6,
+        "latitude": 43.6332,
+        "longitude": -79.4186,
+        "name": "BMO Field weather",
+        "observedAt": "2026-06-23T22:00:00Z",
+        "pressure": 1016.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BMO Field",
+        "temperature": 19.9,
+        "temperatureUnit": "C",
+        "windBearing": 337.2,
+        "windSpeed": 5.8,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
