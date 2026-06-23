@@ -24828,6 +24828,42 @@
           "timer": "44:00",
           "timerSeconds": 2640,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "N. Bentaleb",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "R. Zerrouki",
+          "playerOff": "R. Zerrouki",
+          "playerOn": "N. Bentaleb",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Benbouali",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "H. Boudaoui",
+          "playerOff": "H. Boudaoui",
+          "playerOn": "N. Benbouali",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 2760,
@@ -24873,8 +24909,8 @@
         "tla": "JOR"
       },
       "id": 537400,
-      "lastApiSync": "2026-06-23T04:08:12.397433+00:00",
-      "lastUpdated": "2026-06-23T06:08:10Z",
+      "lastApiSync": "2026-06-23T04:08:42.147000+00:00",
+      "lastUpdated": "2026-06-23T06:08:41Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -24903,7 +24939,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-06-23T04:08:12.397433+00:00",
+        "lastApiSync": "2026-06-23T04:08:42.147000+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -24982,6 +25018,44 @@
       },
       "stage": "GROUP_STAGE",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "N. Bentaleb",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "R. Zerrouki",
+          "playerOff": "R. Zerrouki",
+          "playerOn": "N. Bentaleb",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Benbouali",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "H. Boudaoui",
+          "playerOff": "H. Boudaoui",
+          "playerOn": "N. Benbouali",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-23T03:00:00Z",
       "venue": {
         "city": "Santa Clara",
