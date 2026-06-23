@@ -20158,23 +20158,32 @@
     "utcDate": "2026-06-22T17:00:00Z"
   },
   "537400": {
+    "apiFootballFixtureId": 1489400,
     "awayScore": 0,
     "awayTeam": "Algeria",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Jordan",
-    "phase_start": null,
+    "lastApiSync": "2026-06-23T03:01:05.558453+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-23T03:01:05.558453+00:00",
     "referees": [
       {
-        "id": 9351,
         "name": "Slavko Vin\u010di\u010d",
         "nationality": "Slovenia",
         "type": "REFEREE"
+      },
+      {
+        "name": "Slavko Vin\u010di\u0107, Slovenia",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-23T03:00:00Z"
   },
   "537401": {
