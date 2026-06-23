@@ -24264,7 +24264,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/senegal.svg",
         "id": 804,
@@ -24272,7 +24271,6 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -24280,7 +24278,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -24524,41 +24521,7 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T02:00:26.177707+00:00",
-      "lastUpdated": "2026-06-23T04:00:53Z",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-23T02:00:26.177707+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "90:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "New York/New Jersey",
-        "cloudCoverage": 99.2,
-        "condition": "heavyrain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-23T01:57:25.565133+00:00",
-        "humidity": 96.1,
-        "latitude": 40.8135,
-        "longitude": -74.0745,
-        "name": "MetLife Stadium weather",
-        "observedAt": "2026-06-23T01:00:00Z",
-        "pressure": 1011.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "MetLife Stadium",
-        "temperature": 21.2,
-        "temperatureUnit": "C",
-        "windBearing": 220.4,
-        "windSpeed": 1.9,
-        "windSpeedUnit": "m/s"
-      },
+      "lastUpdated": "2026-06-23T04:01:01Z",
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
@@ -24591,7 +24554,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "M. Pedersen",
@@ -24774,30 +24737,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-23T00:00:00Z",
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "New York/New Jersey",
-        "cloudCoverage": 99.2,
-        "condition": "heavyrain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-23T01:57:25.565133+00:00",
-        "humidity": 96.1,
-        "latitude": 40.8135,
-        "longitude": -74.0745,
-        "name": "MetLife Stadium weather",
-        "observedAt": "2026-06-23T01:00:00Z",
-        "pressure": 1011.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "MetLife Stadium",
-        "temperature": 21.2,
-        "temperatureUnit": "C",
-        "windBearing": 220.4,
-        "windSpeed": 1.9,
-        "windSpeedUnit": "m/s"
-      }
+      "utcDate": "2026-06-23T00:00:00Z"
     },
     {
       "area": {
@@ -24829,7 +24769,7 @@
         "tla": "JOR"
       },
       "id": 537400,
-      "lastUpdated": "2026-06-23T03:00:01Z",
+      "lastUpdated": "2026-06-23T04:01:12Z",
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
