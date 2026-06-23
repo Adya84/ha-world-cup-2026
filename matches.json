@@ -23840,7 +23840,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4080,
+      "clockSeconds": 4140,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -23849,7 +23849,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "68'",
+      "displayMinute": "69'",
       "events": [
         {
           "assist": null,
@@ -23994,10 +23994,64 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Goal"
+        },
+        {
+          "assist": "D\u00e9sir\u00e9 Doue",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "Ousmane Demb\u00e9l\u00e9",
+          "playerOff": "Ousmane Demb\u00e9l\u00e9",
+          "playerOn": "D\u00e9sir\u00e9 Doue",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "France",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Rayan Cherki",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "Michael Olise",
+          "playerOff": "Michael Olise",
+          "playerOn": "Rayan Cherki",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "France",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Aimar Sher",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "Amir Al-Ammari",
+          "playerOff": "Amir Al-Ammari",
+          "playerOn": "Aimar Sher",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Iraq",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4080,
-      "fallbackClockText": "68'",
+      "fallbackClock": 4140,
+      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": "Michael Olise",
@@ -24085,8 +24139,8 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": "2026-06-23T00:23:43.786303+00:00",
-      "lastUpdated": "2026-06-23T02:23:43Z",
+      "lastApiSync": "2026-06-23T00:24:13.469449+00:00",
+      "lastUpdated": "2026-06-23T02:24:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -24114,14 +24168,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "68'",
-        "lastApiSync": "2026-06-23T00:23:43.786303+00:00",
-        "seconds": 4080,
+        "displayMinute": "69'",
+        "lastApiSync": "2026-06-23T00:24:13.469449+00:00",
+        "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "68'"
+        "timer": "69'"
       },
-      "manualClockText": "68'",
+      "manualClockText": "69'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -24146,7 +24200,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 68,
+      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -24247,6 +24301,60 @@
           "team": "Iraq",
           "timer": "60:00",
           "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D\u00e9sir\u00e9 Doue",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "Ousmane Demb\u00e9l\u00e9",
+          "playerOff": "Ousmane Demb\u00e9l\u00e9",
+          "playerOn": "D\u00e9sir\u00e9 Doue",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "France",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Rayan Cherki",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "Michael Olise",
+          "playerOff": "Michael Olise",
+          "playerOn": "Rayan Cherki",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "France",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Aimar Sher",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "Amir Al-Ammari",
+          "playerOff": "Amir Al-Ammari",
+          "playerOn": "Aimar Sher",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Iraq",
+          "timer": "68:00",
+          "timerSeconds": 4080,
           "type": "Substitution"
         }
       ],
@@ -24350,8 +24458,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:23:43.786303+00:00",
-      "lastUpdated": "2026-06-23T02:23:43Z",
+      "lastApiSync": "2026-06-23T00:24:13.469449+00:00",
+      "lastUpdated": "2026-06-23T02:24:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -24380,7 +24488,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "24'",
-        "lastApiSync": "2026-06-23T00:23:43.786303+00:00",
+        "lastApiSync": "2026-06-23T00:24:13.469449+00:00",
         "seconds": 1440,
         "source": "api_football_live_minute",
         "status": "1H",
