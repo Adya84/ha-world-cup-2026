@@ -2,20 +2,13 @@
   "live": [
     {
       "apiFootballFixtureId": 1539017,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 4,
-      "awayOffsides": 0,
-      "awayPossession": "45%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 0,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -43,8 +36,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -52,33 +44,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "6'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 6,
-          "player": "Amir Al-Ammari",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "6:00",
-          "timerSeconds": 360,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "Michael Olise",
+          "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "14'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537393,
+          "matchUtcDate": "2026-06-22T21:00:00Z",
           "minute": 14,
           "player": "Kylian Mbapp\u00e9",
           "playerOff": null,
@@ -91,48 +70,17 @@
           "type": "Goal"
         },
         {
-          "assist": "Ali Al-Hamadi",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "26'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 26,
-          "player": "Aymen Hussein",
-          "playerOff": "Aymen Hussein",
-          "playerOn": "Ali Al-Hamadi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "26:00",
-          "timerSeconds": 1560,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": null,
-          "displayMinute": "28'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 28,
-          "player": "Ali Al-Hamadi",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Var",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "28:00",
-          "timerSeconds": 1680,
-          "type": "VAR"
-        },
-        {
           "assist": "Ousmane Demb\u00e9l\u00e9",
+          "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "54'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537393,
+          "matchUtcDate": "2026-06-22T21:00:00Z",
           "minute": 54,
           "player": "Kylian Mbapp\u00e9",
           "playerOff": null,
@@ -145,48 +93,17 @@
           "type": "Goal"
         },
         {
-          "assist": "Youssef Amyn",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "Zaid Ismael",
-          "playerOff": "Zaid Ismael",
-          "playerOn": "Youssef Amyn",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Rebin Sulaka",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "Zaid Tahseen",
-          "playerOff": "Zaid Tahseen",
-          "playerOn": "Rebin Sulaka",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
           "assist": "Michael Olise",
+          "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "66'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537393,
+          "matchUtcDate": "2026-06-22T21:00:00Z",
           "minute": 66,
           "player": "Ousmane Demb\u00e9l\u00e9",
           "playerOff": null,
@@ -197,136 +114,8 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Goal"
-        },
-        {
-          "assist": "Aimar Sher",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 68,
-          "player": "Amir Al-Ammari",
-          "playerOff": "Amir Al-Ammari",
-          "playerOn": "Aimar Sher",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Rayan Cherki",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 68,
-          "player": "Michael Olise",
-          "playerOff": "Michael Olise",
-          "playerOn": "Rayan Cherki",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D\u00e9sir\u00e9 Doue",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 68,
-          "player": "Ousmane Demb\u00e9l\u00e9",
-          "playerOff": "Ousmane Demb\u00e9l\u00e9",
-          "playerOn": "D\u00e9sir\u00e9 Doue",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Marko Farji",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "69'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 69,
-          "player": "Ibrahim Bayesh",
-          "playerOff": "Ibrahim Bayesh",
-          "playerOn": "Marko Farji",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "69:00",
-          "timerSeconds": 4140,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Maghnes Akliouche",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "Bradley Barcola",
-          "playerOff": "Bradley Barcola",
-          "playerOn": "Maghnes Akliouche",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Malo Gusto",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "Jules Kound\u00e9",
-          "playerOff": "Jules Kound\u00e9",
-          "playerOn": "Malo Gusto",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Marcus Thuram",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "91'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 91,
-          "player": "Kylian Mbapp\u00e9",
-          "playerOff": "Kylian Mbapp\u00e9",
-          "playerOn": "Marcus Thuram",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "91:00",
-          "timerSeconds": 5460,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Michael Olise",
@@ -398,14 +187,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
-      "homeCorners": 4,
-      "homeFouls": 8,
-      "homeOffsides": 1,
-      "homePossession": "55%",
-      "homeScore": 3,
-      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -415,42 +197,17 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
-      "lastUpdated": "2026-06-23T02:47:55Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 2,
-          "fouls": 4,
-          "offsides": 0,
-          "possession": "45%",
-          "redCards": 0,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 0,
-          "totalShots": 4,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 8,
-          "offsides": 1,
-          "possession": "55%",
-          "redCards": 0,
-          "shotsOffGoal": 10,
-          "shotsOnGoal": 5,
-          "totalShots": 19,
-          "yellowCards": 0
-        }
-      },
+      "lastUpdated": "2026-06-23T02:48:25Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -475,29 +232,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Drew Fischer",
-          "nationality": "Canada",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Drew Fischer, Canada",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -513,7 +255,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -522,7 +263,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "Ali Al-Hamadi",
@@ -706,11 +447,6 @@
         }
       ],
       "utcDate": "2026-06-22T21:00:00Z",
-      "venue": {
-        "city": "Philadelphia",
-        "id": null,
-        "name": "Lincoln Financial Field"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -849,8 +585,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
-      "lastUpdated": "2026-06-23T02:47:55Z",
+      "lastApiSync": "2026-06-23T00:48:27.810207+00:00",
+      "lastUpdated": "2026-06-23T02:48:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -879,7 +615,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
+        "lastApiSync": "2026-06-23T00:48:27.810207+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -1012,20 +748,13 @@
   "matches": [
     {
       "apiFootballFixtureId": 1539017,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 4,
-      "awayOffsides": 0,
-      "awayPossession": "45%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 0,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iraq.svg",
         "id": 8062,
@@ -1053,8 +782,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -1062,33 +790,20 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "6'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 6,
-          "player": "Amir Al-Ammari",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "6:00",
-          "timerSeconds": 360,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "Michael Olise",
+          "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "14'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537393,
+          "matchUtcDate": "2026-06-22T21:00:00Z",
           "minute": 14,
           "player": "Kylian Mbapp\u00e9",
           "playerOff": null,
@@ -1101,48 +816,17 @@
           "type": "Goal"
         },
         {
-          "assist": "Ali Al-Hamadi",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "26'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 26,
-          "player": "Aymen Hussein",
-          "playerOff": "Aymen Hussein",
-          "playerOn": "Ali Al-Hamadi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "26:00",
-          "timerSeconds": 1560,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": null,
-          "displayMinute": "28'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 28,
-          "player": "Ali Al-Hamadi",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Var",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "28:00",
-          "timerSeconds": 1680,
-          "type": "VAR"
-        },
-        {
           "assist": "Ousmane Demb\u00e9l\u00e9",
+          "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "54'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537393,
+          "matchUtcDate": "2026-06-22T21:00:00Z",
           "minute": 54,
           "player": "Kylian Mbapp\u00e9",
           "playerOff": null,
@@ -1155,48 +839,17 @@
           "type": "Goal"
         },
         {
-          "assist": "Youssef Amyn",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "Zaid Ismael",
-          "playerOff": "Zaid Ismael",
-          "playerOn": "Youssef Amyn",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Rebin Sulaka",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "Zaid Tahseen",
-          "playerOff": "Zaid Tahseen",
-          "playerOn": "Rebin Sulaka",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
           "assist": "Michael Olise",
+          "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "66'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537393,
+          "matchUtcDate": "2026-06-22T21:00:00Z",
           "minute": 66,
           "player": "Ousmane Demb\u00e9l\u00e9",
           "playerOff": null,
@@ -1207,136 +860,8 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Goal"
-        },
-        {
-          "assist": "Aimar Sher",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 68,
-          "player": "Amir Al-Ammari",
-          "playerOff": "Amir Al-Ammari",
-          "playerOn": "Aimar Sher",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Rayan Cherki",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 68,
-          "player": "Michael Olise",
-          "playerOff": "Michael Olise",
-          "playerOn": "Rayan Cherki",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D\u00e9sir\u00e9 Doue",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 68,
-          "player": "Ousmane Demb\u00e9l\u00e9",
-          "playerOff": "Ousmane Demb\u00e9l\u00e9",
-          "playerOn": "D\u00e9sir\u00e9 Doue",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Marko Farji",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "69'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 69,
-          "player": "Ibrahim Bayesh",
-          "playerOff": "Ibrahim Bayesh",
-          "playerOn": "Marko Farji",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Iraq",
-          "timer": "69:00",
-          "timerSeconds": 4140,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Maghnes Akliouche",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "Bradley Barcola",
-          "playerOff": "Bradley Barcola",
-          "playerOn": "Maghnes Akliouche",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Malo Gusto",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "Jules Kound\u00e9",
-          "playerOff": "Jules Kound\u00e9",
-          "playerOn": "Malo Gusto",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Marcus Thuram",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "91'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 91,
-          "player": "Kylian Mbapp\u00e9",
-          "playerOff": "Kylian Mbapp\u00e9",
-          "playerOn": "Marcus Thuram",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "91:00",
-          "timerSeconds": 5460,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Michael Olise",
@@ -1408,14 +933,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
-      "homeCorners": 4,
-      "homeFouls": 8,
-      "homeOffsides": 1,
-      "homePossession": "55%",
-      "homeScore": 3,
-      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -1425,42 +943,17 @@
       },
       "id": 537393,
       "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
-      "lastUpdated": "2026-06-23T02:47:55Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": 2,
-          "fouls": 4,
-          "offsides": 0,
-          "possession": "45%",
-          "redCards": 0,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 0,
-          "totalShots": 4,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 8,
-          "offsides": 1,
-          "possession": "55%",
-          "redCards": 0,
-          "shotsOffGoal": 10,
-          "shotsOnGoal": 5,
-          "totalShots": 19,
-          "yellowCards": 0
-        }
-      },
+      "lastUpdated": "2026-06-23T02:48:25Z",
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
         "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -1485,29 +978,14 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Drew Fischer",
-          "nationality": "Canada",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Drew Fischer, Canada",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -1523,7 +1001,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -1532,7 +1009,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "Ali Al-Hamadi",
@@ -1716,11 +1193,6 @@
         }
       ],
       "utcDate": "2026-06-22T21:00:00Z",
-      "venue": {
-        "city": "Philadelphia",
-        "id": null,
-        "name": "Lincoln Financial Field"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -1859,8 +1331,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
-      "lastUpdated": "2026-06-23T02:47:55Z",
+      "lastApiSync": "2026-06-23T00:48:27.810207+00:00",
+      "lastUpdated": "2026-06-23T02:48:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1889,7 +1361,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-23T00:47:57.058967+00:00",
+        "lastApiSync": "2026-06-23T00:48:27.810207+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
