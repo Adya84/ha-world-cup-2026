@@ -29426,20 +29426,13 @@
     },
     {
       "apiFootballFixtureId": 1489403,
-      "apiFootballStatus": "1H",
-      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
-      "awayFouls": 4,
-      "awayOffsides": null,
-      "awayPossession": "60%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 0,
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/799.svg",
         "id": 799,
@@ -29447,8 +29440,7 @@
         "shortName": "Croatia",
         "tla": "CRO"
       },
-      "clockSeconds": 1920,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -29456,16 +29448,8 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "32'",
-      "fallbackClock": 1920,
-      "fallbackClockText": "32'",
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_L",
-      "homeCorners": null,
-      "homeFouls": 4,
-      "homeOffsides": null,
-      "homePossession": "40%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -29476,41 +29460,16 @@
       "id": 537412,
       "lastApiSync": "2026-06-23T23:32:17.753848+00:00",
       "lastUpdated": "2026-06-24T01:32:11Z",
-      "liveSource": "api_football",
-      "liveStatistics": {
-        "away": {
-          "corners": null,
-          "fouls": 4,
-          "offsides": null,
-          "possession": "60%",
-          "redCards": null,
-          "shotsOffGoal": 1,
-          "shotsOnGoal": 0,
-          "totalShots": 1,
-          "yellowCards": null
-        },
-        "home": {
-          "corners": null,
-          "fouls": 4,
-          "offsides": null,
-          "possession": "40%",
-          "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 1,
-          "yellowCards": null
-        }
-      },
       "manualClock": {
         "active": false,
         "displayMinute": "32'",
         "lastApiSync": "2026-06-23T23:32:17.753848+00:00",
         "seconds": 1920,
-        "source": "api_football_live_minute",
-        "status": "1H",
-        "timer": "32'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "32:00"
       },
-      "manualClockText": "32'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -29535,16 +29494,9 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 32,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Pierre Ghislain Atcho, Gabon",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
           "name": "Pierre Ghislain Atcho, Gabon",
@@ -29558,12 +29510,11 @@
           "home": 0
         },
         "halfTime": {
-          "away": 0,
-          "home": 0
+          "away": null,
+          "home": null
         },
         "winner": "DRAW"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 2,
         "endDate": "2026-07-19",
@@ -29572,13 +29523,8 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "1H",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-23T23:00:00Z",
-      "venue": {
-        "city": "Toronto",
-        "id": 312,
-        "name": "BMO Field"
-      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
