@@ -17849,9 +17849,9 @@
     ],
     "homeScore": 3,
     "homeTeam": "France",
-    "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
+    "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
     "manualClockText": "88'",
-    "phase_start": "2026-06-23T00:43:24.088755+00:00",
+    "phase_start": "2026-06-23T00:43:54.827970+00:00",
     "referees": [
       {
         "name": "Drew Fischer",
@@ -18035,10 +18035,10 @@
     "apiFootballFixtureId": 1489401,
     "awayScore": 0,
     "awayTeam": "Senegal",
-    "base_seconds": 2580,
+    "base_seconds": 2640,
     "clock_active": false,
-    "clock_seconds": 2580,
-    "displayMinute": "43'",
+    "clock_seconds": 2640,
+    "displayMinute": "44'",
     "events": [
       {
         "assist": "M. Pedersen",
@@ -18057,14 +18057,56 @@
         "timer": "13:00",
         "timerSeconds": 780,
         "type": "Substitution"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "43'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 43,
+        "player": "M. Pedersen",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "43:00",
+        "timerSeconds": 2580,
+        "type": "Goal"
       }
     ],
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "assist": null,
+        "awayTeam": "Senegal",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "43'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Norway",
+        "isDisallowed": false,
+        "matchId": 537394,
+        "matchUtcDate": "2026-06-23T00:00:00Z",
+        "minute": 43,
+        "player": "M. Pedersen",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "43:00",
+        "timerSeconds": 2580,
+        "type": "Goal"
+      }
+    ],
     "homeScore": 1,
     "homeTeam": "Norway",
-    "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
-    "manualClockText": "43'",
-    "phase_start": "2026-06-23T00:43:24.088755+00:00",
+    "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
+    "manualClockText": "44'",
+    "phase_start": "2026-06-23T00:43:54.827970+00:00",
     "referees": [
       {
         "name": "Wilton Sampaio",
