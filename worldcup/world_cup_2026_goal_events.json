@@ -23827,7 +23827,7 @@
   },
   "537405": {
     "apiFootballFixtureId": 1489404,
-    "awayScore": 1,
+    "awayScore": 0,
     "awayTeam": "Uzbekistan",
     "base_seconds": 1860,
     "cardEvents": [
@@ -23911,20 +23911,20 @@
       {
         "assist": null,
         "comments": null,
-        "detail": "Normal Goal",
+        "detail": "Goal Disallowed - Foul",
         "displayMinute": "29'",
         "extra": null,
-        "isDisallowed": false,
+        "isDisallowed": true,
         "minute": 29,
         "player": "A. Ganiev",
         "playerOff": null,
         "playerOn": null,
-        "rawType": "Goal",
+        "rawType": "Var",
         "source": "api_football",
         "team": "Uzbekistan",
         "timer": "29:00",
         "timerSeconds": 1740,
-        "type": "Goal"
+        "type": "Disallowed Goal"
       }
     ],
     "goalEvents": [
@@ -23973,36 +23973,13 @@
         "timer": "17:00",
         "timerSeconds": 1020,
         "type": "Goal"
-      },
-      {
-        "assist": null,
-        "awayTeam": "Uzbekistan",
-        "comments": null,
-        "detail": "Normal Goal",
-        "displayMinute": "29'",
-        "extra": null,
-        "goalNumber": 3,
-        "homeTeam": "Portugal",
-        "isDisallowed": false,
-        "matchId": 537405,
-        "matchUtcDate": "2026-06-23T17:00:00Z",
-        "minute": 29,
-        "player": "A. Ganiev",
-        "playerOff": null,
-        "playerOn": null,
-        "rawType": "Goal",
-        "source": "api_football",
-        "team": "Uzbekistan",
-        "timer": "29:00",
-        "timerSeconds": 1740,
-        "type": "Goal"
       }
     ],
     "homeScore": 2,
     "homeTeam": "Portugal",
-    "lastApiSync": "2026-06-23T17:31:10.303323+00:00",
+    "lastApiSync": "2026-06-23T17:31:38.099525+00:00",
     "manualClockText": "31'",
-    "phase_start": "2026-06-23T17:31:10.303323+00:00",
+    "phase_start": "2026-06-23T17:31:38.099525+00:00",
     "referees": [
       {
         "name": "Jalal Jayed",
