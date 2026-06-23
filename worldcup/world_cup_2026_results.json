@@ -46567,7 +46567,7 @@
       "awayFouls": 1,
       "awayOffsides": 3,
       "awayPossession": "52%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/senegal.svg",
@@ -46576,7 +46576,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 3180,
+      "clockSeconds": 3240,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -46585,7 +46585,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "53'",
+      "displayMinute": "54'",
       "events": [
         {
           "assist": "M. Pedersen",
@@ -46658,10 +46658,28 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "53'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 53,
+          "player": "I. Sarr",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3180,
-      "fallbackClockText": "53'",
+      "fallbackClock": 3240,
+      "fallbackClockText": "54'",
       "goalEvents": [
         {
           "assist": null,
@@ -46708,6 +46726,29 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Senegal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "53'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537394,
+          "matchUtcDate": "2026-06-23T00:00:00Z",
+          "minute": 53,
+          "player": "I. Sarr",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -46726,8 +46767,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T01:12:20.228869+00:00",
-      "lastUpdated": "2026-06-23T03:12:19Z",
+      "lastApiSync": "2026-06-23T01:12:55.069967+00:00",
+      "lastUpdated": "2026-06-23T03:12:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -46755,14 +46796,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "53'",
-        "lastApiSync": "2026-06-23T01:12:20.228869+00:00",
-        "seconds": 3180,
+        "displayMinute": "54'",
+        "lastApiSync": "2026-06-23T01:12:55.069967+00:00",
+        "seconds": 3240,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "53'"
+        "timer": "54'"
       },
-      "manualClockText": "53'",
+      "manualClockText": "54'",
       "matchDetails": {
         "apiFootballFixtureId": 1489401,
         "awayCorners": 1,
@@ -46843,6 +46884,24 @@
             "timer": "48:00",
             "timerSeconds": 2880,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "53'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 53,
+            "player": "I. Sarr",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Senegal",
+            "timer": "53:00",
+            "timerSeconds": 3180,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -46890,6 +46949,29 @@
             "team": "Norway",
             "timer": "48:00",
             "timerSeconds": 2880,
+            "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Senegal",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "53'",
+            "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "Norway",
+            "isDisallowed": false,
+            "matchId": 537394,
+            "matchUtcDate": "2026-06-23T00:00:00Z",
+            "minute": 53,
+            "player": "I. Sarr",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Senegal",
+            "timer": "53:00",
+            "timerSeconds": 3180,
             "type": "Goal"
           }
         ],
@@ -47033,7 +47115,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 53,
+      "minute": 54,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -47062,7 +47144,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 2
         },
         "halfTime": {
@@ -93718,7 +93800,7 @@
       "awayFouls": 1,
       "awayOffsides": 3,
       "awayPossession": "52%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/senegal.svg",
@@ -93727,7 +93809,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 3180,
+      "clockSeconds": 3240,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -93736,7 +93818,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "53'",
+      "displayMinute": "54'",
       "events": [
         {
           "assist": "M. Pedersen",
@@ -93809,10 +93891,28 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "53'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 53,
+          "player": "I. Sarr",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3180,
-      "fallbackClockText": "53'",
+      "fallbackClock": 3240,
+      "fallbackClockText": "54'",
       "goalEvents": [
         {
           "assist": null,
@@ -93859,6 +93959,29 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Senegal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "53'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537394,
+          "matchUtcDate": "2026-06-23T00:00:00Z",
+          "minute": 53,
+          "player": "I. Sarr",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -93877,8 +94000,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T01:12:20.228869+00:00",
-      "lastUpdated": "2026-06-23T03:12:19Z",
+      "lastApiSync": "2026-06-23T01:12:55.069967+00:00",
+      "lastUpdated": "2026-06-23T03:12:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -93906,14 +94029,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "53'",
-        "lastApiSync": "2026-06-23T01:12:20.228869+00:00",
-        "seconds": 3180,
+        "displayMinute": "54'",
+        "lastApiSync": "2026-06-23T01:12:55.069967+00:00",
+        "seconds": 3240,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "53'"
+        "timer": "54'"
       },
-      "manualClockText": "53'",
+      "manualClockText": "54'",
       "matchDetails": {
         "apiFootballFixtureId": 1489401,
         "awayCorners": 1,
@@ -93994,6 +94117,24 @@
             "timer": "48:00",
             "timerSeconds": 2880,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "53'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 53,
+            "player": "I. Sarr",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Senegal",
+            "timer": "53:00",
+            "timerSeconds": 3180,
+            "type": "Goal"
           }
         ],
         "goalEvents": [
@@ -94041,6 +94182,29 @@
             "team": "Norway",
             "timer": "48:00",
             "timerSeconds": 2880,
+            "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Senegal",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "53'",
+            "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "Norway",
+            "isDisallowed": false,
+            "matchId": 537394,
+            "matchUtcDate": "2026-06-23T00:00:00Z",
+            "minute": 53,
+            "player": "I. Sarr",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Senegal",
+            "timer": "53:00",
+            "timerSeconds": 3180,
             "type": "Goal"
           }
         ],
@@ -94184,7 +94348,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 53,
+      "minute": 54,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -94213,7 +94377,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 2
         },
         "halfTime": {
