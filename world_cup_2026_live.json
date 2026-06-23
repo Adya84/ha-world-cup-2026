@@ -10,12 +10,12 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 2,
+      "awayCorners": 3,
+      "awayFouls": 3,
       "awayOffsides": null,
       "awayPossession": "75%",
       "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
         "id": 778,
@@ -23,7 +23,7 @@
         "shortName": "Algeria",
         "tla": "ALG"
       },
-      "clockSeconds": 2040,
+      "clockSeconds": 2220,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,15 +32,61 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "34'",
-      "fallbackClock": 2040,
-      "fallbackClockText": "34'",
+      "displayMinute": "37'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 36,
+          "player": "N. Al Rashdan",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 2220,
+      "fallbackClockText": "37'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Algeria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Jordan",
+          "isDisallowed": false,
+          "matchId": 537400,
+          "matchUtcDate": "2026-06-23T03:00:00Z",
+          "minute": 36,
+          "player": "N. Al Rashdan",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_J",
       "homeCorners": 0,
       "homeFouls": 1,
       "homeOffsides": null,
       "homePossession": "25%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8049.png",
@@ -50,19 +96,19 @@
         "tla": "JOR"
       },
       "id": 537400,
-      "lastApiSync": "2026-06-23T03:36:17.088110+00:00",
-      "lastUpdated": "2026-06-23T05:36:12Z",
+      "lastApiSync": "2026-06-23T03:36:46.685472+00:00",
+      "lastUpdated": "2026-06-23T05:36:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 2,
-          "fouls": 2,
+          "corners": 3,
+          "fouls": 3,
           "offsides": null,
           "possession": "75%",
           "redCards": null,
           "shotsOffGoal": 1,
-          "shotsOnGoal": 1,
-          "totalShots": 3,
+          "shotsOnGoal": 2,
+          "totalShots": 4,
           "yellowCards": null
         },
         "home": {
@@ -79,14 +125,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "34'",
-        "lastApiSync": "2026-06-23T03:36:17.088110+00:00",
-        "seconds": 2040,
+        "displayMinute": "37'",
+        "lastApiSync": "2026-06-23T03:36:46.685472+00:00",
+        "seconds": 2220,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "34'"
+        "timer": "37'"
       },
-      "manualClockText": "34'",
+      "manualClockText": "37'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -111,7 +157,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 34,
+      "minute": 37,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -141,11 +187,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "winner": "DRAW"
       },
@@ -201,12 +247,12 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 2,
+      "awayCorners": 3,
+      "awayFouls": 3,
       "awayOffsides": null,
       "awayPossession": "75%",
       "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
         "id": 778,
@@ -214,7 +260,7 @@
         "shortName": "Algeria",
         "tla": "ALG"
       },
-      "clockSeconds": 2040,
+      "clockSeconds": 2220,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -223,15 +269,61 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "34'",
-      "fallbackClock": 2040,
-      "fallbackClockText": "34'",
+      "displayMinute": "37'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 36,
+          "player": "N. Al Rashdan",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 2220,
+      "fallbackClockText": "37'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Algeria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Jordan",
+          "isDisallowed": false,
+          "matchId": 537400,
+          "matchUtcDate": "2026-06-23T03:00:00Z",
+          "minute": 36,
+          "player": "N. Al Rashdan",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_J",
       "homeCorners": 0,
       "homeFouls": 1,
       "homeOffsides": null,
       "homePossession": "25%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8049.png",
@@ -241,19 +333,19 @@
         "tla": "JOR"
       },
       "id": 537400,
-      "lastApiSync": "2026-06-23T03:36:17.088110+00:00",
-      "lastUpdated": "2026-06-23T05:36:12Z",
+      "lastApiSync": "2026-06-23T03:36:46.685472+00:00",
+      "lastUpdated": "2026-06-23T05:36:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 2,
-          "fouls": 2,
+          "corners": 3,
+          "fouls": 3,
           "offsides": null,
           "possession": "75%",
           "redCards": null,
           "shotsOffGoal": 1,
-          "shotsOnGoal": 1,
-          "totalShots": 3,
+          "shotsOnGoal": 2,
+          "totalShots": 4,
           "yellowCards": null
         },
         "home": {
@@ -270,14 +362,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "34'",
-        "lastApiSync": "2026-06-23T03:36:17.088110+00:00",
-        "seconds": 2040,
+        "displayMinute": "37'",
+        "lastApiSync": "2026-06-23T03:36:46.685472+00:00",
+        "seconds": 2220,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "34'"
+        "timer": "37'"
       },
-      "manualClockText": "34'",
+      "manualClockText": "37'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -302,7 +394,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 34,
+      "minute": 37,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -332,11 +424,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "winner": "DRAW"
       },
