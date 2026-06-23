@@ -17868,12 +17868,12 @@
   },
   "537394": {
     "apiFootballFixtureId": 1489401,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Senegal",
-    "base_seconds": 3180,
+    "base_seconds": 3240,
     "clock_active": false,
-    "clock_seconds": 3180,
-    "displayMinute": "53'",
+    "clock_seconds": 3240,
+    "displayMinute": "54'",
     "events": [
       {
         "assist": "M. Pedersen",
@@ -17946,6 +17946,24 @@
         "timer": "48:00",
         "timerSeconds": 2880,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "53'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 53,
+        "player": "I. Sarr",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Senegal",
+        "timer": "53:00",
+        "timerSeconds": 3180,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -17994,13 +18012,36 @@
         "timer": "48:00",
         "timerSeconds": 2880,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Senegal",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "53'",
+        "extra": null,
+        "goalNumber": 3,
+        "homeTeam": "Norway",
+        "isDisallowed": false,
+        "matchId": 537394,
+        "matchUtcDate": "2026-06-23T00:00:00Z",
+        "minute": 53,
+        "player": "I. Sarr",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Senegal",
+        "timer": "53:00",
+        "timerSeconds": 3180,
+        "type": "Goal"
       }
     ],
     "homeScore": 2,
     "homeTeam": "Norway",
-    "lastApiSync": "2026-06-23T01:12:20.228869+00:00",
-    "manualClockText": "53'",
-    "phase_start": "2026-06-23T01:12:20.228869+00:00",
+    "lastApiSync": "2026-06-23T01:12:55.069967+00:00",
+    "manualClockText": "54'",
+    "phase_start": "2026-06-23T01:12:55.069967+00:00",
     "referees": [
       {
         "name": "Wilton Sampaio",
