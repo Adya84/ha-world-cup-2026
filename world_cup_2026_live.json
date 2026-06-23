@@ -396,8 +396,8 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
-      "lastUpdated": "2026-06-23T02:43:22Z",
+      "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
+      "lastUpdated": "2026-06-23T02:43:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -426,7 +426,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "88'",
-        "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
+        "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
         "seconds": 5280,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -722,7 +722,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 2580,
+      "clockSeconds": 2640,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -731,7 +731,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "43'",
+      "displayMinute": "44'",
       "events": [
         {
           "assist": "M. Pedersen",
@@ -750,10 +750,54 @@
           "timer": "13:00",
           "timerSeconds": 780,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "43'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 43,
+          "player": "M. Pedersen",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 2580,
-      "fallbackClockText": "43'",
+      "fallbackClock": 2640,
+      "fallbackClockText": "44'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Senegal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "43'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537394,
+          "matchUtcDate": "2026-06-23T00:00:00Z",
+          "minute": 43,
+          "player": "M. Pedersen",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
       "homeCorners": 4,
       "homeFouls": 6,
@@ -769,8 +813,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
-      "lastUpdated": "2026-06-23T02:43:22Z",
+      "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
+      "lastUpdated": "2026-06-23T02:43:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -798,14 +842,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "43'",
-        "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
-        "seconds": 2580,
+        "displayMinute": "44'",
+        "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
+        "seconds": 2640,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "43'"
+        "timer": "44'"
       },
-      "manualClockText": "43'",
+      "manualClockText": "44'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -830,7 +874,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 43,
+      "minute": 44,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1326,8 +1370,8 @@
         "tla": "FRA"
       },
       "id": 537393,
-      "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
-      "lastUpdated": "2026-06-23T02:43:22Z",
+      "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
+      "lastUpdated": "2026-06-23T02:43:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1356,7 +1400,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "88'",
-        "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
+        "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
         "seconds": 5280,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -1652,7 +1696,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 2580,
+      "clockSeconds": 2640,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1661,7 +1705,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "43'",
+      "displayMinute": "44'",
       "events": [
         {
           "assist": "M. Pedersen",
@@ -1680,10 +1724,54 @@
           "timer": "13:00",
           "timerSeconds": 780,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "43'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 43,
+          "player": "M. Pedersen",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 2580,
-      "fallbackClockText": "43'",
+      "fallbackClock": 2640,
+      "fallbackClockText": "44'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Senegal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "43'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537394,
+          "matchUtcDate": "2026-06-23T00:00:00Z",
+          "minute": 43,
+          "player": "M. Pedersen",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
       "homeCorners": 4,
       "homeFouls": 6,
@@ -1699,8 +1787,8 @@
         "tla": "NOR"
       },
       "id": 537394,
-      "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
-      "lastUpdated": "2026-06-23T02:43:22Z",
+      "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
+      "lastUpdated": "2026-06-23T02:43:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1728,14 +1816,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "43'",
-        "lastApiSync": "2026-06-23T00:43:24.088755+00:00",
-        "seconds": 2580,
+        "displayMinute": "44'",
+        "lastApiSync": "2026-06-23T00:43:54.827970+00:00",
+        "seconds": 2640,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "43'"
+        "timer": "44'"
       },
-      "manualClockText": "43'",
+      "manualClockText": "44'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -1760,7 +1848,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 43,
+      "minute": 44,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
