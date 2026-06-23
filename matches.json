@@ -29166,7 +29166,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5220,
+      "clockSeconds": 5280,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -29175,7 +29175,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "87'",
+      "displayMinute": "88'",
       "events": [
         {
           "assist": null,
@@ -29338,10 +29338,28 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Substitution"
+        },
+        {
+          "assist": "K. Peprah",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "M. Senaya",
+          "playerOff": "M. Senaya",
+          "playerOn": "K. Peprah",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5220,
-      "fallbackClockText": "87'",
+      "fallbackClock": 5280,
+      "fallbackClockText": "88'",
       "group": "GROUP_L",
       "homeCorners": 5,
       "homeFouls": 12,
@@ -29357,8 +29375,8 @@
         "tla": "ENG"
       },
       "id": 537411,
-      "lastApiSync": "2026-06-23T21:51:18.135420+00:00",
-      "lastUpdated": "2026-06-23T23:50:59Z",
+      "lastApiSync": "2026-06-23T21:51:44.793524+00:00",
+      "lastUpdated": "2026-06-23T23:51:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -29386,14 +29404,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "87'",
-        "lastApiSync": "2026-06-23T21:51:18.135420+00:00",
-        "seconds": 5220,
+        "displayMinute": "88'",
+        "lastApiSync": "2026-06-23T21:51:44.793524+00:00",
+        "seconds": 5280,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "87'"
+        "timer": "88'"
       },
-      "manualClockText": "87'",
+      "manualClockText": "88'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -29418,7 +29436,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 87,
+      "minute": 88,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -29591,6 +29609,24 @@
           "team": "England",
           "timer": "83:00",
           "timerSeconds": 4980,
+          "type": "Substitution"
+        },
+        {
+          "assist": "K. Peprah",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "M. Senaya",
+          "playerOff": "M. Senaya",
+          "playerOn": "K. Peprah",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "87:00",
+          "timerSeconds": 5220,
           "type": "Substitution"
         }
       ],
