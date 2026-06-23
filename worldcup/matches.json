@@ -28170,8 +28170,8 @@
         "tla": "POR"
       },
       "id": 537405,
-      "lastApiSync": "2026-06-23T17:59:39.914088+00:00",
-      "lastUpdated": "2026-06-23T19:59:39Z",
+      "lastApiSync": "2026-06-23T18:00:16.525983+00:00",
+      "lastUpdated": "2026-06-23T20:00:03Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -28200,7 +28200,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-23T17:59:39.914088+00:00",
+        "lastApiSync": "2026-06-23T18:00:16.525983+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -28339,12 +28339,19 @@
         "tla": "ENG"
       },
       "id": 537411,
-      "lastUpdated": "2026-06-23T15:20:15Z",
+      "lastUpdated": "2026-06-23T20:00:03Z",
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 190002,
+          "name": "Said Martinez",
+          "nationality": "Honduras",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
