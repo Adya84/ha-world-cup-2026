@@ -10,10 +10,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
+      "awayCorners": 0,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "32%",
+      "awayPossession": "30%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -23,7 +23,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 900,
+      "clockSeconds": 960,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "15'",
+      "displayMinute": "16'",
       "events": [
         {
           "assist": "J. Duverne",
@@ -53,8 +53,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 900,
-      "fallbackClockText": "15'",
+      "fallbackClock": 960,
+      "fallbackClockText": "16'",
       "goalEvents": [
         {
           "assist": "J. Duverne",
@@ -82,12 +82,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": null,
+      "homeCorners": 1,
       "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "68%",
+      "homePossession": "70%",
       "homeScore": 0,
-      "homeShotsOnGoal": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -96,15 +96,15 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T22:16:04.185934+00:00",
-      "lastUpdated": "2026-06-25T00:16:02Z",
+      "lastApiSync": "2026-06-24T22:16:30.762257+00:00",
+      "lastUpdated": "2026-06-25T00:16:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
+          "corners": 0,
           "fouls": 0,
           "offsides": null,
-          "possession": "32%",
+          "possession": "30%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -112,27 +112,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": null,
+          "corners": 1,
           "fouls": 1,
           "offsides": null,
-          "possession": "68%",
+          "possession": "70%",
           "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 0,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 3,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "15'",
-        "lastApiSync": "2026-06-24T22:16:04.185934+00:00",
-        "seconds": 900,
+        "displayMinute": "16'",
+        "lastApiSync": "2026-06-24T22:16:30.762257+00:00",
+        "seconds": 960,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "15'"
+        "timer": "16'"
       },
-      "manualClockText": "15'",
+      "manualClockText": "16'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -157,7 +157,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 15,
+      "minute": 16,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -248,7 +248,7 @@
       "awayCorners": null,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "38%",
+      "awayPossession": "46%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -320,7 +320,7 @@
       "homeCorners": null,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "62%",
+      "homePossession": "54%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -331,15 +331,15 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T22:16:04.185934+00:00",
-      "lastUpdated": "2026-06-25T00:16:02Z",
+      "lastApiSync": "2026-06-24T22:16:30.762257+00:00",
+      "lastUpdated": "2026-06-25T00:16:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": "38%",
+          "possession": "46%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -350,7 +350,7 @@
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": "62%",
+          "possession": "54%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -361,7 +361,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "15'",
-        "lastApiSync": "2026-06-24T22:16:04.185934+00:00",
+        "lastApiSync": "2026-06-24T22:16:30.762257+00:00",
         "seconds": 900,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -482,10 +482,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
+      "awayCorners": 0,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "32%",
+      "awayPossession": "30%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -495,7 +495,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 900,
+      "clockSeconds": 960,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -504,7 +504,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "15'",
+      "displayMinute": "16'",
       "events": [
         {
           "assist": "J. Duverne",
@@ -525,8 +525,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 900,
-      "fallbackClockText": "15'",
+      "fallbackClock": 960,
+      "fallbackClockText": "16'",
       "goalEvents": [
         {
           "assist": "J. Duverne",
@@ -554,12 +554,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": null,
+      "homeCorners": 1,
       "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "68%",
+      "homePossession": "70%",
       "homeScore": 0,
-      "homeShotsOnGoal": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -568,15 +568,15 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T22:16:04.185934+00:00",
-      "lastUpdated": "2026-06-25T00:16:02Z",
+      "lastApiSync": "2026-06-24T22:16:30.762257+00:00",
+      "lastUpdated": "2026-06-25T00:16:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
+          "corners": 0,
           "fouls": 0,
           "offsides": null,
-          "possession": "32%",
+          "possession": "30%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -584,27 +584,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": null,
+          "corners": 1,
           "fouls": 1,
           "offsides": null,
-          "possession": "68%",
+          "possession": "70%",
           "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 0,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 3,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "15'",
-        "lastApiSync": "2026-06-24T22:16:04.185934+00:00",
-        "seconds": 900,
+        "displayMinute": "16'",
+        "lastApiSync": "2026-06-24T22:16:30.762257+00:00",
+        "seconds": 960,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "15'"
+        "timer": "16'"
       },
-      "manualClockText": "15'",
+      "manualClockText": "16'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -629,7 +629,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 15,
+      "minute": 16,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -720,7 +720,7 @@
       "awayCorners": null,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "38%",
+      "awayPossession": "46%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -792,7 +792,7 @@
       "homeCorners": null,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "62%",
+      "homePossession": "54%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -803,15 +803,15 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T22:16:04.185934+00:00",
-      "lastUpdated": "2026-06-25T00:16:02Z",
+      "lastApiSync": "2026-06-24T22:16:30.762257+00:00",
+      "lastUpdated": "2026-06-25T00:16:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": "38%",
+          "possession": "46%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -822,7 +822,7 @@
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": "62%",
+          "possession": "54%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -833,7 +833,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "15'",
-        "lastApiSync": "2026-06-24T22:16:04.185934+00:00",
+        "lastApiSync": "2026-06-24T22:16:30.762257+00:00",
         "seconds": 900,
         "source": "api_football_live_minute",
         "status": "1H",
