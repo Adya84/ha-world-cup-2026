@@ -55065,8 +55065,8 @@
     },
     {
       "apiFootballFixtureId": 1539008,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -55086,7 +55086,7 @@
         "shortName": "Congo DR",
         "tla": "COD"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -55095,9 +55095,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "displayMinute": "46'",
+      "events": [
+        {
+          "assist": "N. Sadiki",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "N. Sadiki",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": "GROUP_K",
       "homeCorners": 2,
       "homeFouls": 4,
@@ -55113,8 +55133,8 @@
         "tla": "COL"
       },
       "id": 537406,
-      "lastApiSync": "2026-06-24T03:06:21.705500+00:00",
-      "lastUpdated": "2026-06-24T04:50:20Z",
+      "lastApiSync": "2026-06-24T03:06:45.888182+00:00",
+      "lastUpdated": "2026-06-24T05:06:32Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -55142,14 +55162,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-24T03:06:21.705500+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-24T03:06:45.888182+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchDetails": {
         "apiFootballFixtureId": 1539008,
         "awayCorners": 2,
@@ -55158,7 +55178,26 @@
         "awayPossession": "35%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
-        "events": [],
+        "events": [
+          {
+            "assist": "N. Sadiki",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "N. Mukau",
+            "playerOff": "N. Mukau",
+            "playerOn": "N. Sadiki",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Congo DR",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          }
+        ],
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": 2,
@@ -55204,7 +55243,26 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "N. Sadiki",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "N. Mukau",
+            "playerOff": "N. Mukau",
+            "playerOn": "N. Sadiki",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Congo DR",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "Guadalajara",
@@ -55212,7 +55270,7 @@
           "condition": "lightrainshowers_night",
           "country": "Mexico",
           "dewPoint": null,
-          "fetchedAt": "2026-06-24T02:56:39.411662+00:00",
+          "fetchedAt": "2026-06-24T03:06:45.719739+00:00",
           "humidity": 81.5,
           "latitude": 20.6818,
           "longitude": -103.4622,
@@ -55236,7 +55294,7 @@
         "condition": "lightrainshowers_night",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T02:56:39.411662+00:00",
+        "fetchedAt": "2026-06-24T03:06:45.719739+00:00",
         "humidity": 81.5,
         "latitude": 20.6818,
         "longitude": -103.4622,
@@ -55253,7 +55311,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -55290,7 +55348,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "N. Sadiki",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "N. Sadiki",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-24T02:00:00Z",
       "venue": {
         "city": "Guadalajara",
@@ -55304,7 +55382,7 @@
         "condition": "lightrainshowers_night",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T02:56:39.411662+00:00",
+        "fetchedAt": "2026-06-24T03:06:45.719739+00:00",
         "humidity": 81.5,
         "latitude": 20.6818,
         "longitude": -103.4622,
@@ -110388,8 +110466,8 @@
     },
     {
       "apiFootballFixtureId": 1539008,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -110409,7 +110487,7 @@
         "shortName": "Congo DR",
         "tla": "COD"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -110418,9 +110496,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "displayMinute": "46'",
+      "events": [
+        {
+          "assist": "N. Sadiki",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "N. Sadiki",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": "GROUP_K",
       "homeCorners": 2,
       "homeFouls": 4,
@@ -110436,8 +110534,8 @@
         "tla": "COL"
       },
       "id": 537406,
-      "lastApiSync": "2026-06-24T03:06:21.705500+00:00",
-      "lastUpdated": "2026-06-24T04:50:20Z",
+      "lastApiSync": "2026-06-24T03:06:45.888182+00:00",
+      "lastUpdated": "2026-06-24T05:06:32Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -110465,14 +110563,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-24T03:06:21.705500+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-24T03:06:45.888182+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchDetails": {
         "apiFootballFixtureId": 1539008,
         "awayCorners": 2,
@@ -110481,7 +110579,26 @@
         "awayPossession": "35%",
         "awayShotsOnGoal": 0,
         "cardEvents": [],
-        "events": [],
+        "events": [
+          {
+            "assist": "N. Sadiki",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "N. Mukau",
+            "playerOff": "N. Mukau",
+            "playerOn": "N. Sadiki",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Congo DR",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          }
+        ],
         "goalEvents": [],
         "goalEventsSource": null,
         "homeCorners": 2,
@@ -110527,7 +110644,26 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "N. Sadiki",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "N. Mukau",
+            "playerOff": "N. Mukau",
+            "playerOn": "N. Sadiki",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Congo DR",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "Guadalajara",
@@ -110535,7 +110671,7 @@
           "condition": "lightrainshowers_night",
           "country": "Mexico",
           "dewPoint": null,
-          "fetchedAt": "2026-06-24T02:56:39.411662+00:00",
+          "fetchedAt": "2026-06-24T03:06:45.719739+00:00",
           "humidity": 81.5,
           "latitude": 20.6818,
           "longitude": -103.4622,
@@ -110559,7 +110695,7 @@
         "condition": "lightrainshowers_night",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T02:56:39.411662+00:00",
+        "fetchedAt": "2026-06-24T03:06:45.719739+00:00",
         "humidity": 81.5,
         "latitude": 20.6818,
         "longitude": -103.4622,
@@ -110576,7 +110712,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -110613,7 +110749,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "N. Sadiki",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "N. Sadiki",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-24T02:00:00Z",
       "venue": {
         "city": "Guadalajara",
@@ -110627,7 +110783,7 @@
         "condition": "lightrainshowers_night",
         "country": "Mexico",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T02:56:39.411662+00:00",
+        "fetchedAt": "2026-06-24T03:06:45.719739+00:00",
         "humidity": 81.5,
         "latitude": 20.6818,
         "longitude": -103.4622,
