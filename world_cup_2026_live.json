@@ -126,8 +126,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T19:51:57.375577+00:00",
-      "lastUpdated": "2026-06-24T21:51:55Z",
+      "lastApiSync": "2026-06-24T19:52:24.006420+00:00",
+      "lastUpdated": "2026-06-24T21:52:23Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -156,7 +156,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-24T19:51:57.375577+00:00",
+        "lastApiSync": "2026-06-24T19:52:24.006420+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -299,15 +299,15 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T21:51:55Z",
+      "lastUpdated": "2026-06-24T21:52:23Z",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
+        "displayMinute": "45'",
         "lastApiSync": null,
-        "seconds": 0,
+        "seconds": 2700,
         "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "status": "PAUSED",
+        "timer": "45:00"
       },
       "manualClockText": "Awaiting kickoff API data",
       "matchday": 3,
@@ -329,8 +329,8 @@
           "home": 2
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 1,
+          "home": 2
         },
         "winner": "HOME_TEAM"
       },
@@ -342,7 +342,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "utcDate": "2026-06-24T19:00:00Z"
     }
   ],
@@ -473,8 +473,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T19:51:57.375577+00:00",
-      "lastUpdated": "2026-06-24T21:51:55Z",
+      "lastApiSync": "2026-06-24T19:52:24.006420+00:00",
+      "lastUpdated": "2026-06-24T21:52:23Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -503,7 +503,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-24T19:51:57.375577+00:00",
+        "lastApiSync": "2026-06-24T19:52:24.006420+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -646,15 +646,15 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T21:51:55Z",
+      "lastUpdated": "2026-06-24T21:52:23Z",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
+        "displayMinute": "45'",
         "lastApiSync": null,
-        "seconds": 0,
+        "seconds": 2700,
         "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "status": "PAUSED",
+        "timer": "45:00"
       },
       "manualClockText": "Awaiting kickoff API data",
       "matchday": 3,
@@ -676,8 +676,8 @@
           "home": 2
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 1,
+          "home": 2
         },
         "winner": "HOME_TEAM"
       },
@@ -689,7 +689,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "PAUSED",
       "utcDate": "2026-06-24T19:00:00Z"
     }
   ]
