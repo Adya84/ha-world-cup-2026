@@ -28281,7 +28281,7 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T21:54:52.980820+00:00",
+      "lastApiSync": "2026-06-24T21:55:13.682494+00:00",
       "lastUpdated": "2026-06-24T22:56:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -28311,7 +28311,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-24T21:54:52.980820+00:00",
+        "lastApiSync": "2026-06-24T21:55:13.682494+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -28629,6 +28629,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/haiti.svg",
         "id": 836,
@@ -28636,6 +28637,8 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -28643,6 +28646,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_C",
       "homeTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
@@ -28652,8 +28656,44 @@
         "tla": "MAR"
       },
       "id": 537344,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-24T23:03:28Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 32.0,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T21:55:13.702077+00:00",
+        "humidity": 43.1,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-24T21:00:00Z",
+        "pressure": 1017.2,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 28.2,
+        "temperatureUnit": "C",
+        "windBearing": 2.2,
+        "windSpeed": 2.0,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 3,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -28685,8 +28725,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-24T22:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-24T22:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Atlanta",
+        "cloudCoverage": 32.0,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T21:55:13.702077+00:00",
+        "humidity": 43.1,
+        "latitude": 33.7554,
+        "longitude": -84.4008,
+        "name": "Mercedes-Benz Stadium weather",
+        "observedAt": "2026-06-24T21:00:00Z",
+        "pressure": 1017.2,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Mercedes-Benz Stadium",
+        "temperature": 28.2,
+        "temperatureUnit": "C",
+        "windBearing": 2.2,
+        "windSpeed": 2.0,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
@@ -28695,6 +28758,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/764.svg",
         "id": 764,
@@ -28702,6 +28766,8 @@
         "shortName": "Brazil",
         "tla": "BRA"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -28709,6 +28775,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_C",
       "homeTeam": {
         "crest": "https://crests.football-data.org/814.svg",
@@ -28718,8 +28785,44 @@
         "tla": "SCO"
       },
       "id": 537343,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-24T23:05:02Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 89.8,
+        "condition": "rainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T21:55:13.888971+00:00",
+        "humidity": 58.5,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-06-24T21:00:00Z",
+        "pressure": 1016.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 31.3,
+        "temperatureUnit": "C",
+        "windBearing": 154.5,
+        "windSpeed": 3.7,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 3,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -28751,8 +28854,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-24T22:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-24T22:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 89.8,
+        "condition": "rainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T21:55:13.888971+00:00",
+        "humidity": 58.5,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-06-24T21:00:00Z",
+        "pressure": 1016.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 31.3,
+        "temperatureUnit": "C",
+        "windBearing": 154.5,
+        "windSpeed": 3.7,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
