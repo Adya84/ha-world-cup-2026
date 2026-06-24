@@ -3518,7 +3518,7 @@
   },
   "537337": {
     "apiFootballFixtureId": 1489408,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Canada",
     "base_seconds": 4560,
     "cardEvents": [
@@ -3724,6 +3724,42 @@
         "timer": "74:00",
         "timerSeconds": 4440,
         "type": "Substitution"
+      },
+      {
+        "assist": "P. David",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "76'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 76,
+        "player": "T. Buchanan",
+        "playerOff": "T. Buchanan",
+        "playerOn": "P. David",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Canada",
+        "timer": "76:00",
+        "timerSeconds": 4560,
+        "type": "Substitution"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "76'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 76,
+        "player": null,
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Canada",
+        "timer": "76:00",
+        "timerSeconds": 4560,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -3776,9 +3812,9 @@
     ],
     "homeScore": 2,
     "homeTeam": "Switzerland",
-    "lastApiSync": "2026-06-24T20:34:37.087434+00:00",
+    "lastApiSync": "2026-06-24T20:35:06.665949+00:00",
     "manualClockText": "76'",
-    "phase_start": "2026-06-24T20:34:37.087434+00:00",
+    "phase_start": "2026-06-24T20:35:06.665949+00:00",
     "referees": [
       {
         "name": "Ramon Abatti Abel",
@@ -3881,6 +3917,24 @@
         "team": "Switzerland",
         "timer": "74:00",
         "timerSeconds": 4440,
+        "type": "Substitution"
+      },
+      {
+        "assist": "P. David",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "76'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 76,
+        "player": "T. Buchanan",
+        "playerOff": "T. Buchanan",
+        "playerOn": "P. David",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Canada",
+        "timer": "76:00",
+        "timerSeconds": 4560,
         "type": "Substitution"
       }
     ],
