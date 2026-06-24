@@ -29913,7 +29913,7 @@
       "awayFouls": 8,
       "awayOffsides": 3,
       "awayPossession": "43%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
@@ -30132,6 +30132,42 @@
           "timer": "74:00",
           "timerSeconds": 4440,
           "type": "Substitution"
+        },
+        {
+          "assist": "P. David",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "T. Buchanan",
+          "playerOff": "T. Buchanan",
+          "playerOn": "P. David",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 4560,
@@ -30200,8 +30236,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:34:37.087434+00:00",
-      "lastUpdated": "2026-06-24T22:34:34Z",
+      "lastApiSync": "2026-06-24T20:35:06.665949+00:00",
+      "lastUpdated": "2026-06-24T22:35:02Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -30230,7 +30266,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "76'",
-        "lastApiSync": "2026-06-24T20:34:37.087434+00:00",
+        "lastApiSync": "2026-06-24T20:35:06.665949+00:00",
         "seconds": 4560,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -30290,7 +30326,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 2
         },
         "halfTime": {
@@ -30399,6 +30435,24 @@
           "timer": "74:00",
           "timerSeconds": 4440,
           "type": "Substitution"
+        },
+        {
+          "assist": "P. David",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "T. Buchanan",
+          "playerOff": "T. Buchanan",
+          "playerOn": "P. David",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-24T19:00:00Z",
@@ -30465,7 +30519,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:34:34Z",
+      "lastUpdated": "2026-06-24T22:35:02Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
