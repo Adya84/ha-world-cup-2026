@@ -26025,12 +26025,12 @@
   },
   "537412": {
     "apiFootballFixtureId": 1489403,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Croatia",
-    "base_seconds": 3240,
+    "base_seconds": 3300,
     "clock_active": false,
-    "clock_seconds": 3240,
-    "displayMinute": "54'",
+    "clock_seconds": 3300,
+    "displayMinute": "55'",
     "events": [
       {
         "assist": "A. Budimir",
@@ -26067,14 +26067,56 @@
         "timer": "46:00",
         "timerSeconds": 2760,
         "type": "Substitution"
+      },
+      {
+        "assist": "J. Stanisic",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "54'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 54,
+        "player": "A. Budimir",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Croatia",
+        "timer": "54:00",
+        "timerSeconds": 3240,
+        "type": "Goal"
       }
     ],
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "assist": "J. Stanisic",
+        "awayTeam": "Croatia",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "54'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Panama",
+        "isDisallowed": false,
+        "matchId": 537412,
+        "matchUtcDate": "2026-06-23T23:00:00Z",
+        "minute": 54,
+        "player": "A. Budimir",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Croatia",
+        "timer": "54:00",
+        "timerSeconds": 3240,
+        "type": "Goal"
+      }
+    ],
     "homeScore": 0,
     "homeTeam": "Panama",
-    "lastApiSync": "2026-06-24T00:12:41.014261+00:00",
-    "manualClockText": "54'",
-    "phase_start": "2026-06-24T00:12:41.014261+00:00",
+    "lastApiSync": "2026-06-24T00:13:07.465142+00:00",
+    "manualClockText": "55'",
+    "phase_start": "2026-06-24T00:13:07.465142+00:00",
     "referees": [
       {
         "name": "Pierre Ghislain Atcho, Gabon",
