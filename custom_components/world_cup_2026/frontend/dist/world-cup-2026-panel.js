@@ -18985,7 +18985,25 @@ class WorldCup2026Panel extends HTMLElement {
       seenRefs.add(key);
       displayRefs.push({ ...ref, name: cleanName });
     });
-    const refs = displayRefs.filter((ref) => {
+    const cleanOfficialRole = (value) => String(value || "")
+      .normalize("NFD")
+      .replace(/[\u0300-\u036f]/g, "")
+      .toLowerCase()
+      .replace(/[^a-z0-9 ]/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+
+    const rolePriority = (role) => {
+      const cleanRole = cleanOfficialRole(role);
+      if (!cleanRole || cleanRole === "referee" || cleanRole === "main referee") return 1;
+      if (cleanRole.includes("assistant") && !cleanRole.includes("video")) return 2;
+      if (cleanRole.includes("var") || cleanRole.includes("video")) return 3;
+      if (cleanRole.includes("fourth")) return 4;
+      return 5;
+    };
+
+    const cleanedRefsByRole = new Map();
+    displayRefs.forEach((ref) => {
       const name = String(ref?.name || "")
         .normalize("NFD")
         .replace(/[\u0300-\u036f]/g, "")
@@ -18993,8 +19011,34 @@ class WorldCup2026Panel extends HTMLElement {
         .replace(/[^a-z0-9 ]/g, " ")
         .replace(/\s+/g, " ")
         .trim();
-      return name && !["referee", "ref", "official", "main referee", "match official"].includes(name);
+      if (!name || ["referee", "ref", "official", "main referee", "match official"].includes(name)) return;
+
+      const cleanRole = cleanOfficialRole(ref?.type || "referee");
+      const roleKey = (!cleanRole || cleanRole === "referee" || cleanRole === "main referee")
+        ? "main-referee"
+        : cleanRole;
+
+      // API-Football can return the same main referee twice for secondary live
+      // matches. Keep only one official per role/name so game 2 and every other
+      // live match cannot show duplicate referee pills.
+      const existing = cleanedRefsByRole.get(roleKey);
+      if (!existing) {
+        cleanedRefsByRole.set(roleKey, ref);
+        return;
+      }
+
+      const existingHasNationality = Boolean(existing?.nationality);
+      const nextHasNationality = Boolean(ref?.nationality);
+      const existingRoleScore = rolePriority(existing?.type);
+      const nextRoleScore = rolePriority(ref?.type);
+      if ((nextRoleScore < existingRoleScore) || (!existingHasNationality && nextHasNationality)) {
+        cleanedRefsByRole.set(roleKey, ref);
+      }
     });
+
+    const refs = Array.from(cleanedRefsByRole.values())
+      .sort((a, b) => rolePriority(a?.type) - rolePriority(b?.type));
+
     const attendance = match?.attendance ?? match?.crowd ?? match?.spectators ?? null;
     if (!refs.length && !attendance) return "";
 
