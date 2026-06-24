@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5100,
+      "clockSeconds": 5160,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "85'",
+      "displayMinute": "86'",
       "events": [
         {
           "assist": null,
@@ -343,8 +343,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5100,
-      "fallbackClockText": "85'",
+      "fallbackClock": 5160,
+      "fallbackClockText": "86'",
       "goalEvents": [
         {
           "assist": null,
@@ -478,8 +478,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
-      "lastUpdated": "2026-06-25T01:47:46Z",
+      "lastApiSync": "2026-06-24T23:48:17.331279+00:00",
+      "lastUpdated": "2026-06-25T01:48:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -507,14 +507,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "85'",
-        "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
-        "seconds": 5100,
+        "displayMinute": "86'",
+        "lastApiSync": "2026-06-24T23:48:17.331279+00:00",
+        "seconds": 5160,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "85'"
+        "timer": "86'"
       },
-      "manualClockText": "85'",
+      "manualClockText": "86'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -522,7 +522,7 @@
         "condition": "fair_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:37:56.724030+00:00",
+        "fetchedAt": "2026-06-24T23:48:17.107184+00:00",
         "humidity": 44.5,
         "latitude": 33.7554,
         "longitude": -84.4008,
@@ -539,7 +539,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 85,
+      "minute": 86,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -782,7 +782,7 @@
         "condition": "fair_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:37:56.724030+00:00",
+        "fetchedAt": "2026-06-24T23:48:17.107184+00:00",
         "humidity": 44.5,
         "latitude": 33.7554,
         "longitude": -84.4008,
@@ -839,6 +839,24 @@
           "team": "Brazil",
           "timer": "62:00",
           "timerSeconds": 3720,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "Fabinho",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "83:00",
+          "timerSeconds": 4980,
           "type": "Yellow Card"
         }
       ],
@@ -1086,6 +1104,24 @@
           "timer": "82:00",
           "timerSeconds": 4920,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "Fabinho",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Yellow Card"
         }
       ],
       "fallbackClock": 4980,
@@ -1177,8 +1213,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
-      "lastUpdated": "2026-06-25T01:47:46Z",
+      "lastApiSync": "2026-06-24T23:48:17.331279+00:00",
+      "lastUpdated": "2026-06-25T01:48:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1207,7 +1243,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "83'",
-        "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
+        "lastApiSync": "2026-06-24T23:48:17.331279+00:00",
         "seconds": 4980,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -1221,7 +1257,7 @@
         "condition": "partlycloudy_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:37:56.902925+00:00",
+        "fetchedAt": "2026-06-24T23:48:17.273666+00:00",
         "humidity": 65.6,
         "latitude": 25.958,
         "longitude": -80.2389,
@@ -1445,7 +1481,7 @@
         "condition": "partlycloudy_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:37:56.902925+00:00",
+        "fetchedAt": "2026-06-24T23:48:17.273666+00:00",
         "humidity": 65.6,
         "latitude": 25.958,
         "longitude": -80.2389,
@@ -1507,7 +1543,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5100,
+      "clockSeconds": 5160,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1516,7 +1552,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "85'",
+      "displayMinute": "86'",
       "events": [
         {
           "assist": null,
@@ -1807,8 +1843,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5100,
-      "fallbackClockText": "85'",
+      "fallbackClock": 5160,
+      "fallbackClockText": "86'",
       "goalEvents": [
         {
           "assist": null,
@@ -1942,8 +1978,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
-      "lastUpdated": "2026-06-25T01:47:46Z",
+      "lastApiSync": "2026-06-24T23:48:17.331279+00:00",
+      "lastUpdated": "2026-06-25T01:48:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1971,14 +2007,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "85'",
-        "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
-        "seconds": 5100,
+        "displayMinute": "86'",
+        "lastApiSync": "2026-06-24T23:48:17.331279+00:00",
+        "seconds": 5160,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "85'"
+        "timer": "86'"
       },
-      "manualClockText": "85'",
+      "manualClockText": "86'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -1986,7 +2022,7 @@
         "condition": "fair_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:37:56.724030+00:00",
+        "fetchedAt": "2026-06-24T23:48:17.107184+00:00",
         "humidity": 44.5,
         "latitude": 33.7554,
         "longitude": -84.4008,
@@ -2003,7 +2039,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 85,
+      "minute": 86,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -2246,7 +2282,7 @@
         "condition": "fair_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:37:56.724030+00:00",
+        "fetchedAt": "2026-06-24T23:48:17.107184+00:00",
         "humidity": 44.5,
         "latitude": 33.7554,
         "longitude": -84.4008,
@@ -2303,6 +2339,24 @@
           "team": "Brazil",
           "timer": "62:00",
           "timerSeconds": 3720,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "Fabinho",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "83:00",
+          "timerSeconds": 4980,
           "type": "Yellow Card"
         }
       ],
@@ -2550,6 +2604,24 @@
           "timer": "82:00",
           "timerSeconds": 4920,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "Fabinho",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Yellow Card"
         }
       ],
       "fallbackClock": 4980,
@@ -2641,8 +2713,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
-      "lastUpdated": "2026-06-25T01:47:46Z",
+      "lastApiSync": "2026-06-24T23:48:17.331279+00:00",
+      "lastUpdated": "2026-06-25T01:48:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -2671,7 +2743,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "83'",
-        "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
+        "lastApiSync": "2026-06-24T23:48:17.331279+00:00",
         "seconds": 4980,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -2685,7 +2757,7 @@
         "condition": "partlycloudy_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:37:56.902925+00:00",
+        "fetchedAt": "2026-06-24T23:48:17.273666+00:00",
         "humidity": 65.6,
         "latitude": 25.958,
         "longitude": -80.2389,
@@ -2909,7 +2981,7 @@
         "condition": "partlycloudy_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:37:56.902925+00:00",
+        "fetchedAt": "2026-06-24T23:48:17.273666+00:00",
         "humidity": 65.6,
         "latitude": 25.958,
         "longitude": -80.2389,
