@@ -57431,7 +57431,7 @@
       "awayOffsides": 3,
       "awayPossession": "43%",
       "awayScore": 1,
-      "awayShotsOnGoal": 3,
+      "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
         "id": 828,
@@ -57477,7 +57477,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4560,
+      "clockSeconds": 4620,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -57486,7 +57486,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "76'",
+      "displayMinute": "77'",
       "events": [
         {
           "assist": null,
@@ -57654,18 +57654,18 @@
           "assist": "P. David",
           "comments": null,
           "detail": "Substitution 4",
-          "displayMinute": "76'",
+          "displayMinute": "75'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 76,
+          "minute": 75,
           "player": "T. Buchanan",
           "playerOff": "T. Buchanan",
           "playerOn": "P. David",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
-          "timer": "76:00",
-          "timerSeconds": 4560,
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         },
         {
@@ -57676,7 +57676,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 76,
-          "player": null,
+          "player": "P. David",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -57687,8 +57687,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 4560,
-      "fallbackClockText": "76'",
+      "fallbackClock": 4620,
+      "fallbackClockText": "77'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -57735,6 +57735,29 @@
           "timer": "57:00",
           "timerSeconds": 3420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Canada",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "76'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Switzerland",
+          "isDisallowed": false,
+          "matchId": 537337,
+          "matchUtcDate": "2026-06-24T19:00:00Z",
+          "minute": 76,
+          "player": "P. David",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -57753,8 +57776,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:35:06.665949+00:00",
-      "lastUpdated": "2026-06-24T22:35:02Z",
+      "lastApiSync": "2026-06-24T20:35:35.002006+00:00",
+      "lastUpdated": "2026-06-24T22:35:32Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -57764,8 +57787,8 @@
           "possession": "43%",
           "redCards": null,
           "shotsOffGoal": 2,
-          "shotsOnGoal": 3,
-          "totalShots": 8,
+          "shotsOnGoal": 4,
+          "totalShots": 9,
           "yellowCards": 1
         },
         "home": {
@@ -57782,21 +57805,21 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "76'",
-        "lastApiSync": "2026-06-24T20:35:06.665949+00:00",
-        "seconds": 4560,
+        "displayMinute": "77'",
+        "lastApiSync": "2026-06-24T20:35:35.002006+00:00",
+        "seconds": 4620,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "76'"
+        "timer": "77'"
       },
-      "manualClockText": "76'",
+      "manualClockText": "77'",
       "matchDetails": {
         "apiFootballFixtureId": 1489408,
         "awayCorners": 5,
         "awayFouls": 8,
         "awayOffsides": 3,
         "awayPossession": "43%",
-        "awayShotsOnGoal": 3,
+        "awayShotsOnGoal": 4,
         "cardEvents": [
           {
             "assist": null,
@@ -58002,18 +58025,18 @@
             "assist": "P. David",
             "comments": null,
             "detail": "Substitution 4",
-            "displayMinute": "76'",
+            "displayMinute": "75'",
             "extra": null,
             "isDisallowed": false,
-            "minute": 76,
+            "minute": 75,
             "player": "T. Buchanan",
             "playerOff": "T. Buchanan",
             "playerOn": "P. David",
             "rawType": "subst",
             "source": "api_football",
             "team": "Canada",
-            "timer": "76:00",
-            "timerSeconds": 4560,
+            "timer": "75:00",
+            "timerSeconds": 4500,
             "type": "Substitution"
           },
           {
@@ -58024,7 +58047,7 @@
             "extra": null,
             "isDisallowed": false,
             "minute": 76,
-            "player": null,
+            "player": "P. David",
             "playerOff": null,
             "playerOn": null,
             "rawType": "Goal",
@@ -58081,6 +58104,29 @@
             "timer": "57:00",
             "timerSeconds": 3420,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Canada",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "76'",
+            "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "Switzerland",
+            "isDisallowed": false,
+            "matchId": 537337,
+            "matchUtcDate": "2026-06-24T19:00:00Z",
+            "minute": 76,
+            "player": "P. David",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Canada",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "type": "Goal"
           }
         ],
         "goalEventsSource": "api_football_live",
@@ -58099,8 +58145,8 @@
             "possession": "43%",
             "redCards": null,
             "shotsOffGoal": 2,
-            "shotsOnGoal": 3,
-            "totalShots": 8,
+            "shotsOnGoal": 4,
+            "totalShots": 9,
             "yellowCards": 1
           },
           "home": {
@@ -58232,18 +58278,18 @@
             "assist": "P. David",
             "comments": null,
             "detail": "Substitution 4",
-            "displayMinute": "76'",
+            "displayMinute": "75'",
             "extra": null,
             "isDisallowed": false,
-            "minute": 76,
+            "minute": 75,
             "player": "T. Buchanan",
             "playerOff": "T. Buchanan",
             "playerOn": "P. David",
             "rawType": "subst",
             "source": "api_football",
             "team": "Canada",
-            "timer": "76:00",
-            "timerSeconds": 4560,
+            "timer": "75:00",
+            "timerSeconds": 4500,
             "type": "Substitution"
           }
         ],
@@ -58295,7 +58341,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 76,
+      "minute": 77,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -58438,18 +58484,18 @@
           "assist": "P. David",
           "comments": null,
           "detail": "Substitution 4",
-          "displayMinute": "76'",
+          "displayMinute": "75'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 76,
+          "minute": 75,
           "player": "T. Buchanan",
           "playerOff": "T. Buchanan",
           "playerOn": "P. David",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
-          "timer": "76:00",
-          "timerSeconds": 4560,
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         }
       ],
@@ -58517,7 +58563,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:35:02Z",
+      "lastUpdated": "2026-06-24T22:35:32Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
@@ -116034,7 +116080,7 @@
       "awayOffsides": 3,
       "awayPossession": "43%",
       "awayScore": 1,
-      "awayShotsOnGoal": 3,
+      "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
         "id": 828,
@@ -116080,7 +116126,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4560,
+      "clockSeconds": 4620,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -116089,7 +116135,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "76'",
+      "displayMinute": "77'",
       "events": [
         {
           "assist": null,
@@ -116257,18 +116303,18 @@
           "assist": "P. David",
           "comments": null,
           "detail": "Substitution 4",
-          "displayMinute": "76'",
+          "displayMinute": "75'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 76,
+          "minute": 75,
           "player": "T. Buchanan",
           "playerOff": "T. Buchanan",
           "playerOn": "P. David",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
-          "timer": "76:00",
-          "timerSeconds": 4560,
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         },
         {
@@ -116279,7 +116325,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 76,
-          "player": null,
+          "player": "P. David",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -116290,8 +116336,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 4560,
-      "fallbackClockText": "76'",
+      "fallbackClock": 4620,
+      "fallbackClockText": "77'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -116338,6 +116384,29 @@
           "timer": "57:00",
           "timerSeconds": 3420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Canada",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "76'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Switzerland",
+          "isDisallowed": false,
+          "matchId": 537337,
+          "matchUtcDate": "2026-06-24T19:00:00Z",
+          "minute": 76,
+          "player": "P. David",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -116356,8 +116425,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:35:06.665949+00:00",
-      "lastUpdated": "2026-06-24T22:35:02Z",
+      "lastApiSync": "2026-06-24T20:35:35.002006+00:00",
+      "lastUpdated": "2026-06-24T22:35:32Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -116367,8 +116436,8 @@
           "possession": "43%",
           "redCards": null,
           "shotsOffGoal": 2,
-          "shotsOnGoal": 3,
-          "totalShots": 8,
+          "shotsOnGoal": 4,
+          "totalShots": 9,
           "yellowCards": 1
         },
         "home": {
@@ -116385,21 +116454,21 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "76'",
-        "lastApiSync": "2026-06-24T20:35:06.665949+00:00",
-        "seconds": 4560,
+        "displayMinute": "77'",
+        "lastApiSync": "2026-06-24T20:35:35.002006+00:00",
+        "seconds": 4620,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "76'"
+        "timer": "77'"
       },
-      "manualClockText": "76'",
+      "manualClockText": "77'",
       "matchDetails": {
         "apiFootballFixtureId": 1489408,
         "awayCorners": 5,
         "awayFouls": 8,
         "awayOffsides": 3,
         "awayPossession": "43%",
-        "awayShotsOnGoal": 3,
+        "awayShotsOnGoal": 4,
         "cardEvents": [
           {
             "assist": null,
@@ -116605,18 +116674,18 @@
             "assist": "P. David",
             "comments": null,
             "detail": "Substitution 4",
-            "displayMinute": "76'",
+            "displayMinute": "75'",
             "extra": null,
             "isDisallowed": false,
-            "minute": 76,
+            "minute": 75,
             "player": "T. Buchanan",
             "playerOff": "T. Buchanan",
             "playerOn": "P. David",
             "rawType": "subst",
             "source": "api_football",
             "team": "Canada",
-            "timer": "76:00",
-            "timerSeconds": 4560,
+            "timer": "75:00",
+            "timerSeconds": 4500,
             "type": "Substitution"
           },
           {
@@ -116627,7 +116696,7 @@
             "extra": null,
             "isDisallowed": false,
             "minute": 76,
-            "player": null,
+            "player": "P. David",
             "playerOff": null,
             "playerOn": null,
             "rawType": "Goal",
@@ -116684,6 +116753,29 @@
             "timer": "57:00",
             "timerSeconds": 3420,
             "type": "Goal"
+          },
+          {
+            "assist": null,
+            "awayTeam": "Canada",
+            "comments": null,
+            "detail": "Normal Goal",
+            "displayMinute": "76'",
+            "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "Switzerland",
+            "isDisallowed": false,
+            "matchId": 537337,
+            "matchUtcDate": "2026-06-24T19:00:00Z",
+            "minute": 76,
+            "player": "P. David",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Canada",
+            "timer": "76:00",
+            "timerSeconds": 4560,
+            "type": "Goal"
           }
         ],
         "goalEventsSource": "api_football_live",
@@ -116702,8 +116794,8 @@
             "possession": "43%",
             "redCards": null,
             "shotsOffGoal": 2,
-            "shotsOnGoal": 3,
-            "totalShots": 8,
+            "shotsOnGoal": 4,
+            "totalShots": 9,
             "yellowCards": 1
           },
           "home": {
@@ -116835,18 +116927,18 @@
             "assist": "P. David",
             "comments": null,
             "detail": "Substitution 4",
-            "displayMinute": "76'",
+            "displayMinute": "75'",
             "extra": null,
             "isDisallowed": false,
-            "minute": 76,
+            "minute": 75,
             "player": "T. Buchanan",
             "playerOff": "T. Buchanan",
             "playerOn": "P. David",
             "rawType": "subst",
             "source": "api_football",
             "team": "Canada",
-            "timer": "76:00",
-            "timerSeconds": 4560,
+            "timer": "75:00",
+            "timerSeconds": 4500,
             "type": "Substitution"
           }
         ],
@@ -116898,7 +116990,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 76,
+      "minute": 77,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -117041,18 +117133,18 @@
           "assist": "P. David",
           "comments": null,
           "detail": "Substitution 4",
-          "displayMinute": "76'",
+          "displayMinute": "75'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 76,
+          "minute": 75,
           "player": "T. Buchanan",
           "playerOff": "T. Buchanan",
           "playerOn": "P. David",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
-          "timer": "76:00",
-          "timerSeconds": 4560,
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         }
       ],
@@ -117120,7 +117212,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:35:02Z",
+      "lastUpdated": "2026-06-24T22:35:32Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
