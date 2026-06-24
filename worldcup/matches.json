@@ -29960,7 +29960,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4740,
+      "clockSeconds": 4800,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -29969,7 +29969,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "79'",
+      "displayMinute": "80'",
       "events": [
         {
           "assist": null,
@@ -30168,10 +30168,28 @@
           "timer": "76:00",
           "timerSeconds": 4560,
           "type": "Goal"
+        },
+        {
+          "assist": "D. Ndoye",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "80'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 80,
+          "player": "R. Vargas",
+          "playerOff": "R. Vargas",
+          "playerOn": "D. Ndoye",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Switzerland",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4740,
-      "fallbackClockText": "79'",
+      "fallbackClock": 4800,
+      "fallbackClockText": "80'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -30259,8 +30277,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:38:28.424087+00:00",
-      "lastUpdated": "2026-06-24T22:38:25Z",
+      "lastApiSync": "2026-06-24T20:38:54.829323+00:00",
+      "lastUpdated": "2026-06-24T22:38:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -30288,14 +30306,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "79'",
-        "lastApiSync": "2026-06-24T20:38:28.424087+00:00",
-        "seconds": 4740,
+        "displayMinute": "80'",
+        "lastApiSync": "2026-06-24T20:38:54.829323+00:00",
+        "seconds": 4800,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "79'"
+        "timer": "80'"
       },
-      "manualClockText": "79'",
+      "manualClockText": "80'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -30320,7 +30338,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 79,
+      "minute": 80,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -30476,6 +30494,24 @@
           "timer": "75:00",
           "timerSeconds": 4500,
           "type": "Substitution"
+        },
+        {
+          "assist": "D. Ndoye",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "80'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 80,
+          "player": "R. Vargas",
+          "playerOff": "R. Vargas",
+          "playerOn": "D. Ndoye",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Switzerland",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-24T19:00:00Z",
@@ -30542,7 +30578,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:38:25Z",
+      "lastUpdated": "2026-06-24T22:38:52Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
