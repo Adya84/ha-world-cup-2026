@@ -28619,7 +28619,27 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 4920,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Unsportsmanlike conduct",
+          "detail": "Yellow Card",
+          "displayMinute": "79'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 79,
+          "player": "D. Nazon",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 4980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -28628,7 +28648,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "82'",
+      "displayMinute": "83'",
       "events": [
         {
           "assist": null,
@@ -28811,6 +28831,24 @@
           "type": "Goal"
         },
         {
+          "assist": null,
+          "comments": "Unsportsmanlike conduct",
+          "detail": "Yellow Card",
+          "displayMinute": "79'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 79,
+          "player": "D. Nazon",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "type": "Yellow Card"
+        },
+        {
           "assist": "C. Arcus",
           "comments": null,
           "detail": "Substitution 3",
@@ -28847,8 +28885,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4920,
-      "fallbackClockText": "82'",
+      "fallbackClock": 4980,
+      "fallbackClockText": "83'",
       "goalEvents": [
         {
           "assist": null,
@@ -28982,8 +29020,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:44:37.935396+00:00",
-      "lastUpdated": "2026-06-25T01:44:34Z",
+      "lastApiSync": "2026-06-24T23:45:08.496996+00:00",
+      "lastUpdated": "2026-06-25T01:45:02Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -29011,14 +29049,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "82'",
-        "lastApiSync": "2026-06-24T23:44:37.935396+00:00",
-        "seconds": 4920,
+        "displayMinute": "83'",
+        "lastApiSync": "2026-06-24T23:45:08.496996+00:00",
+        "seconds": 4980,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "82'"
+        "timer": "83'"
       },
-      "manualClockText": "82'",
+      "manualClockText": "83'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -29043,7 +29081,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 82,
+      "minute": 83,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -29555,8 +29593,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:44:37.935396+00:00",
-      "lastUpdated": "2026-06-25T01:44:34Z",
+      "lastApiSync": "2026-06-24T23:45:08.496996+00:00",
+      "lastUpdated": "2026-06-25T01:45:02Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -29585,7 +29623,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "80'",
-        "lastApiSync": "2026-06-24T23:44:37.935396+00:00",
+        "lastApiSync": "2026-06-24T23:45:08.496996+00:00",
         "seconds": 4800,
         "source": "api_football_live_minute",
         "status": "2H",
