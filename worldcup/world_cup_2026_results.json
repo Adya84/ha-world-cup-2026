@@ -54846,7 +54846,7 @@
       "awayCorners": 0,
       "awayFouls": 15,
       "awayOffsides": 0,
-      "awayPossession": "28%",
+      "awayPossession": "29%",
       "awayScore": 2,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -54876,7 +54876,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4980,
+      "clockSeconds": 5040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -54885,7 +54885,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "83'",
+      "displayMinute": "84'",
       "events": [
         {
           "assist": null,
@@ -55138,10 +55138,46 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. El Mourabet",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "N. El Aynaoui",
+          "playerOff": "N. El Aynaoui",
+          "playerOn": "S. El Mourabet",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Pierrot",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "L. Joseph",
+          "playerOff": "L. Joseph",
+          "playerOn": "F. Pierrot",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4980,
-      "fallbackClockText": "83'",
+      "fallbackClock": 5040,
+      "fallbackClockText": "84'",
       "goalEvents": [
         {
           "assist": null,
@@ -55264,7 +55300,7 @@
       "homeCorners": 8,
       "homeFouls": 7,
       "homeOffsides": 5,
-      "homePossession": "72%",
+      "homePossession": "71%",
       "homeScore": 3,
       "homeShotsOnGoal": 9,
       "homeTeam": {
@@ -55275,49 +55311,49 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:46:04.172763+00:00",
-      "lastUpdated": "2026-06-25T01:45:58Z",
+      "lastApiSync": "2026-06-24T23:46:31.668134+00:00",
+      "lastUpdated": "2026-06-25T01:46:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 15,
           "offsides": 0,
-          "possession": "28%",
+          "possession": "29%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
           "totalShots": 5,
-          "yellowCards": null
+          "yellowCards": 1
         },
         "home": {
           "corners": 8,
           "fouls": 7,
           "offsides": 5,
-          "possession": "72%",
+          "possession": "71%",
           "redCards": null,
           "shotsOffGoal": 6,
           "shotsOnGoal": 9,
           "totalShots": 19,
-          "yellowCards": null
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "83'",
-        "lastApiSync": "2026-06-24T23:46:04.172763+00:00",
-        "seconds": 4980,
+        "displayMinute": "84'",
+        "lastApiSync": "2026-06-24T23:46:31.668134+00:00",
+        "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "83'"
+        "timer": "84'"
       },
-      "manualClockText": "83'",
+      "manualClockText": "84'",
       "matchDetails": {
         "apiFootballFixtureId": 1489405,
         "awayCorners": 0,
         "awayFouls": 15,
         "awayOffsides": 0,
-        "awayPossession": "28%",
+        "awayPossession": "29%",
         "awayShotsOnGoal": 1,
         "cardEvents": [
           {
@@ -55591,6 +55627,42 @@
             "timer": "83:00",
             "timerSeconds": 4980,
             "type": "Substitution"
+          },
+          {
+            "assist": "S. El Mourabet",
+            "comments": null,
+            "detail": "Substitution 5",
+            "displayMinute": "83'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 83,
+            "player": "N. El Aynaoui",
+            "playerOff": "N. El Aynaoui",
+            "playerOn": "S. El Mourabet",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Morocco",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "type": "Substitution"
+          },
+          {
+            "assist": "F. Pierrot",
+            "comments": null,
+            "detail": "Substitution 5",
+            "displayMinute": "84'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 84,
+            "player": "L. Joseph",
+            "playerOff": "L. Joseph",
+            "playerOn": "F. Pierrot",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -55714,7 +55786,7 @@
         "homeCorners": 8,
         "homeFouls": 7,
         "homeOffsides": 5,
-        "homePossession": "72%",
+        "homePossession": "71%",
         "homeShotsOnGoal": 9,
         "lineups": [],
         "lineupsData": [],
@@ -55723,23 +55795,23 @@
             "corners": 0,
             "fouls": 15,
             "offsides": 0,
-            "possession": "28%",
+            "possession": "29%",
             "redCards": null,
             "shotsOffGoal": 3,
             "shotsOnGoal": 1,
             "totalShots": 5,
-            "yellowCards": null
+            "yellowCards": 1
           },
           "home": {
             "corners": 8,
             "fouls": 7,
             "offsides": 5,
-            "possession": "72%",
+            "possession": "71%",
             "redCards": null,
             "shotsOffGoal": 6,
             "shotsOnGoal": 9,
             "totalShots": 19,
-            "yellowCards": null
+            "yellowCards": 0
           }
         },
         "officials": [
@@ -55908,6 +55980,42 @@
             "timer": "83:00",
             "timerSeconds": 4980,
             "type": "Substitution"
+          },
+          {
+            "assist": "S. El Mourabet",
+            "comments": null,
+            "detail": "Substitution 5",
+            "displayMinute": "83'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 83,
+            "player": "N. El Aynaoui",
+            "playerOff": "N. El Aynaoui",
+            "playerOn": "S. El Mourabet",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Morocco",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "type": "Substitution"
+          },
+          {
+            "assist": "F. Pierrot",
+            "comments": null,
+            "detail": "Substitution 5",
+            "displayMinute": "84'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 84,
+            "player": "L. Joseph",
+            "playerOff": "L. Joseph",
+            "playerOn": "F. Pierrot",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -55958,7 +56066,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 83,
+      "minute": 84,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -56150,6 +56258,42 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. El Mourabet",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "N. El Aynaoui",
+          "playerOff": "N. El Aynaoui",
+          "playerOn": "S. El Mourabet",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Pierrot",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "L. Joseph",
+          "playerOff": "L. Joseph",
+          "playerOn": "F. Pierrot",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-24T22:00:00Z",
@@ -56225,7 +56369,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -56234,7 +56378,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": "Rayan",
@@ -56399,8 +56543,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -56488,8 +56632,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:46:04.172763+00:00",
-      "lastUpdated": "2026-06-25T01:45:58Z",
+      "lastApiSync": "2026-06-24T23:46:31.668134+00:00",
+      "lastUpdated": "2026-06-25T01:46:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -56517,14 +56661,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-24T23:46:04.172763+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-24T23:46:31.668134+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchDetails": {
         "apiFootballFixtureId": 1489406,
         "awayCorners": 3,
@@ -56963,7 +57107,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -111963,7 +112107,7 @@
       "awayCorners": 0,
       "awayFouls": 15,
       "awayOffsides": 0,
-      "awayPossession": "28%",
+      "awayPossession": "29%",
       "awayScore": 2,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -111993,7 +112137,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4980,
+      "clockSeconds": 5040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -112002,7 +112146,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "83'",
+      "displayMinute": "84'",
       "events": [
         {
           "assist": null,
@@ -112255,10 +112399,46 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. El Mourabet",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "N. El Aynaoui",
+          "playerOff": "N. El Aynaoui",
+          "playerOn": "S. El Mourabet",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Pierrot",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "L. Joseph",
+          "playerOff": "L. Joseph",
+          "playerOn": "F. Pierrot",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4980,
-      "fallbackClockText": "83'",
+      "fallbackClock": 5040,
+      "fallbackClockText": "84'",
       "goalEvents": [
         {
           "assist": null,
@@ -112381,7 +112561,7 @@
       "homeCorners": 8,
       "homeFouls": 7,
       "homeOffsides": 5,
-      "homePossession": "72%",
+      "homePossession": "71%",
       "homeScore": 3,
       "homeShotsOnGoal": 9,
       "homeTeam": {
@@ -112392,49 +112572,49 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:46:04.172763+00:00",
-      "lastUpdated": "2026-06-25T01:45:58Z",
+      "lastApiSync": "2026-06-24T23:46:31.668134+00:00",
+      "lastUpdated": "2026-06-25T01:46:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 15,
           "offsides": 0,
-          "possession": "28%",
+          "possession": "29%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
           "totalShots": 5,
-          "yellowCards": null
+          "yellowCards": 1
         },
         "home": {
           "corners": 8,
           "fouls": 7,
           "offsides": 5,
-          "possession": "72%",
+          "possession": "71%",
           "redCards": null,
           "shotsOffGoal": 6,
           "shotsOnGoal": 9,
           "totalShots": 19,
-          "yellowCards": null
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "83'",
-        "lastApiSync": "2026-06-24T23:46:04.172763+00:00",
-        "seconds": 4980,
+        "displayMinute": "84'",
+        "lastApiSync": "2026-06-24T23:46:31.668134+00:00",
+        "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "83'"
+        "timer": "84'"
       },
-      "manualClockText": "83'",
+      "manualClockText": "84'",
       "matchDetails": {
         "apiFootballFixtureId": 1489405,
         "awayCorners": 0,
         "awayFouls": 15,
         "awayOffsides": 0,
-        "awayPossession": "28%",
+        "awayPossession": "29%",
         "awayShotsOnGoal": 1,
         "cardEvents": [
           {
@@ -112708,6 +112888,42 @@
             "timer": "83:00",
             "timerSeconds": 4980,
             "type": "Substitution"
+          },
+          {
+            "assist": "S. El Mourabet",
+            "comments": null,
+            "detail": "Substitution 5",
+            "displayMinute": "83'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 83,
+            "player": "N. El Aynaoui",
+            "playerOff": "N. El Aynaoui",
+            "playerOn": "S. El Mourabet",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Morocco",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "type": "Substitution"
+          },
+          {
+            "assist": "F. Pierrot",
+            "comments": null,
+            "detail": "Substitution 5",
+            "displayMinute": "84'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 84,
+            "player": "L. Joseph",
+            "playerOff": "L. Joseph",
+            "playerOn": "F. Pierrot",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -112831,7 +113047,7 @@
         "homeCorners": 8,
         "homeFouls": 7,
         "homeOffsides": 5,
-        "homePossession": "72%",
+        "homePossession": "71%",
         "homeShotsOnGoal": 9,
         "lineups": [],
         "lineupsData": [],
@@ -112840,23 +113056,23 @@
             "corners": 0,
             "fouls": 15,
             "offsides": 0,
-            "possession": "28%",
+            "possession": "29%",
             "redCards": null,
             "shotsOffGoal": 3,
             "shotsOnGoal": 1,
             "totalShots": 5,
-            "yellowCards": null
+            "yellowCards": 1
           },
           "home": {
             "corners": 8,
             "fouls": 7,
             "offsides": 5,
-            "possession": "72%",
+            "possession": "71%",
             "redCards": null,
             "shotsOffGoal": 6,
             "shotsOnGoal": 9,
             "totalShots": 19,
-            "yellowCards": null
+            "yellowCards": 0
           }
         },
         "officials": [
@@ -113025,6 +113241,42 @@
             "timer": "83:00",
             "timerSeconds": 4980,
             "type": "Substitution"
+          },
+          {
+            "assist": "S. El Mourabet",
+            "comments": null,
+            "detail": "Substitution 5",
+            "displayMinute": "83'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 83,
+            "player": "N. El Aynaoui",
+            "playerOff": "N. El Aynaoui",
+            "playerOn": "S. El Mourabet",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Morocco",
+            "timer": "83:00",
+            "timerSeconds": 4980,
+            "type": "Substitution"
+          },
+          {
+            "assist": "F. Pierrot",
+            "comments": null,
+            "detail": "Substitution 5",
+            "displayMinute": "84'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 84,
+            "player": "L. Joseph",
+            "playerOff": "L. Joseph",
+            "playerOn": "F. Pierrot",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "84:00",
+            "timerSeconds": 5040,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -113075,7 +113327,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 83,
+      "minute": 84,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -113267,6 +113519,42 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. El Mourabet",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "N. El Aynaoui",
+          "playerOff": "N. El Aynaoui",
+          "playerOn": "S. El Mourabet",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Pierrot",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "L. Joseph",
+          "playerOff": "L. Joseph",
+          "playerOn": "F. Pierrot",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-24T22:00:00Z",
@@ -113342,7 +113630,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -113351,7 +113639,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": "Rayan",
@@ -113516,8 +113804,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -113605,8 +113893,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:46:04.172763+00:00",
-      "lastUpdated": "2026-06-25T01:45:58Z",
+      "lastApiSync": "2026-06-24T23:46:31.668134+00:00",
+      "lastUpdated": "2026-06-25T01:46:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -113634,14 +113922,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-24T23:46:04.172763+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-24T23:46:31.668134+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchDetails": {
         "apiFootballFixtureId": 1489406,
         "awayCorners": 3,
@@ -114080,7 +114368,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
