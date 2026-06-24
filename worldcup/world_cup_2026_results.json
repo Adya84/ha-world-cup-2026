@@ -50169,8 +50169,8 @@
     },
     {
       "apiFootballFixtureId": 1489408,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -50546,8 +50546,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -50635,8 +50633,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:56:04.294570+00:00",
-      "lastUpdated": "2026-06-24T22:55:58Z",
+      "lastApiSync": "2026-06-24T20:56:30.033600+00:00",
+      "lastUpdated": "2026-06-24T22:56:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -50663,12 +50661,12 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-24T20:56:04.294570+00:00",
+        "lastApiSync": "2026-06-24T20:56:30.033600+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
@@ -51332,52 +51330,7 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Vancouver",
-          "cloudCoverage": 32.8,
-          "condition": "fair_day",
-          "country": "Canada",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-24T20:53:32.971302+00:00",
-          "humidity": 47.0,
-          "latitude": 49.2768,
-          "longitude": -123.1119,
-          "name": "BC Place weather",
-          "observedAt": "2026-06-24T20:00:00Z",
-          "pressure": 1014.3,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "BC Place",
-          "temperature": 24.7,
-          "temperatureUnit": "C",
-          "windBearing": 208.6,
-          "windSpeed": 3.0,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 32.8,
-        "condition": "fair_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T20:53:32.971302+00:00",
-        "humidity": 47.0,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-06-24T20:00:00Z",
-        "pressure": 1014.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 24.7,
-        "temperatureUnit": "C",
-        "windBearing": 208.6,
-        "windSpeed": 3.0,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 3,
       "minute": 90,
@@ -51427,7 +51380,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "S. Eustaquio",
@@ -51615,29 +51568,6 @@
         "city": "Vancouver",
         "id": 19445,
         "name": "BC Place"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 32.8,
-        "condition": "fair_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T20:53:32.971302+00:00",
-        "humidity": 47.0,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-06-24T20:00:00Z",
-        "pressure": 1014.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 24.7,
-        "temperatureUnit": "C",
-        "windBearing": 208.6,
-        "windSpeed": 3.0,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -51674,7 +51604,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:55:58Z",
+      "lastUpdated": "2026-06-24T22:56:25Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
@@ -101929,8 +101859,8 @@
     },
     {
       "apiFootballFixtureId": 1489408,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -102306,8 +102236,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -102395,8 +102323,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:56:04.294570+00:00",
-      "lastUpdated": "2026-06-24T22:55:58Z",
+      "lastApiSync": "2026-06-24T20:56:30.033600+00:00",
+      "lastUpdated": "2026-06-24T22:56:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -102423,12 +102351,12 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-24T20:56:04.294570+00:00",
+        "lastApiSync": "2026-06-24T20:56:30.033600+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
@@ -103092,52 +103020,7 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Vancouver",
-          "cloudCoverage": 32.8,
-          "condition": "fair_day",
-          "country": "Canada",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-24T20:53:32.971302+00:00",
-          "humidity": 47.0,
-          "latitude": 49.2768,
-          "longitude": -123.1119,
-          "name": "BC Place weather",
-          "observedAt": "2026-06-24T20:00:00Z",
-          "pressure": 1014.3,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "BC Place",
-          "temperature": 24.7,
-          "temperatureUnit": "C",
-          "windBearing": 208.6,
-          "windSpeed": 3.0,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 32.8,
-        "condition": "fair_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T20:53:32.971302+00:00",
-        "humidity": 47.0,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-06-24T20:00:00Z",
-        "pressure": 1014.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 24.7,
-        "temperatureUnit": "C",
-        "windBearing": 208.6,
-        "windSpeed": 3.0,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 3,
       "minute": 90,
@@ -103187,7 +103070,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "S. Eustaquio",
@@ -103375,29 +103258,6 @@
         "city": "Vancouver",
         "id": 19445,
         "name": "BC Place"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 32.8,
-        "condition": "fair_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T20:53:32.971302+00:00",
-        "humidity": 47.0,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-06-24T20:00:00Z",
-        "pressure": 1014.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 24.7,
-        "temperatureUnit": "C",
-        "windBearing": 208.6,
-        "windSpeed": 3.0,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -103434,7 +103294,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:55:58Z",
+      "lastUpdated": "2026-06-24T22:56:25Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
