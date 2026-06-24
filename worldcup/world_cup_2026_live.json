@@ -23,7 +23,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,9 +32,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "displayMinute": "8'",
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
       "group": "GROUP_C",
       "homeCorners": null,
       "homeFouls": 0,
@@ -50,8 +50,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T22:08:14.346349+00:00",
-      "lastUpdated": "2026-06-25T00:08:10Z",
+      "lastApiSync": "2026-06-24T22:08:39.837598+00:00",
+      "lastUpdated": "2026-06-25T00:08:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -79,14 +79,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-06-24T22:08:14.346349+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-06-24T22:08:39.837598+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -111,7 +111,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -203,7 +203,7 @@
       "awayFouls": 0,
       "awayOffsides": null,
       "awayPossession": "25%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/764.svg",
@@ -212,7 +212,7 @@
         "shortName": "Brazil",
         "tla": "BRA"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -221,9 +221,50 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "displayMinute": "8'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeCorners": null,
       "homeFouls": 0,
@@ -239,8 +280,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T22:08:14.346349+00:00",
-      "lastUpdated": "2026-06-25T00:08:10Z",
+      "lastApiSync": "2026-06-24T22:08:39.837598+00:00",
+      "lastUpdated": "2026-06-25T00:08:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -268,14 +309,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-06-24T22:08:14.346349+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-06-24T22:08:39.837598+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -300,7 +341,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -329,11 +370,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -403,7 +444,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -412,9 +453,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "displayMinute": "8'",
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
       "group": "GROUP_C",
       "homeCorners": null,
       "homeFouls": 0,
@@ -430,8 +471,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T22:08:14.346349+00:00",
-      "lastUpdated": "2026-06-25T00:08:10Z",
+      "lastApiSync": "2026-06-24T22:08:39.837598+00:00",
+      "lastUpdated": "2026-06-25T00:08:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -459,14 +500,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-06-24T22:08:14.346349+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-06-24T22:08:39.837598+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -491,7 +532,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -583,7 +624,7 @@
       "awayFouls": 0,
       "awayOffsides": null,
       "awayPossession": "25%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/764.svg",
@@ -592,7 +633,7 @@
         "shortName": "Brazil",
         "tla": "BRA"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -601,9 +642,50 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "displayMinute": "8'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeCorners": null,
       "homeFouls": 0,
@@ -619,8 +701,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T22:08:14.346349+00:00",
-      "lastUpdated": "2026-06-25T00:08:10Z",
+      "lastApiSync": "2026-06-24T22:08:39.837598+00:00",
+      "lastUpdated": "2026-06-25T00:08:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -648,14 +730,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-06-24T22:08:14.346349+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-06-24T22:08:39.837598+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -680,7 +762,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -709,11 +791,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
