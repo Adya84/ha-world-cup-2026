@@ -23,7 +23,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 3900,
+      "clockSeconds": 3960,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "65'",
+      "displayMinute": "66'",
       "events": [
         {
           "assist": null,
@@ -107,8 +107,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3900,
-      "fallbackClockText": "65'",
+      "fallbackClock": 3960,
+      "fallbackClockText": "66'",
       "goalEvents": [
         {
           "assist": null,
@@ -219,8 +219,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:27:31.427679+00:00",
-      "lastUpdated": "2026-06-25T01:27:28Z",
+      "lastApiSync": "2026-06-24T23:27:57.737833+00:00",
+      "lastUpdated": "2026-06-25T01:27:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -248,14 +248,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "65'",
-        "lastApiSync": "2026-06-24T23:27:31.427679+00:00",
-        "seconds": 3900,
+        "displayMinute": "66'",
+        "lastApiSync": "2026-06-24T23:27:57.737833+00:00",
+        "seconds": 3960,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "65'"
+        "timer": "66'"
       },
-      "manualClockText": "65'",
+      "manualClockText": "66'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -280,7 +280,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 65,
+      "minute": 66,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -381,7 +381,27 @@
         "shortName": "Brazil",
         "tla": "BRA"
       },
-      "clockSeconds": 3720,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "Danilo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 3780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -390,7 +410,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "62'",
+      "displayMinute": "63'",
       "events": [
         {
           "assist": "Rayan",
@@ -481,10 +501,28 @@
           "timer": "60:00",
           "timerSeconds": 3600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "Danilo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 3720,
-      "fallbackClockText": "62'",
+      "fallbackClock": 3780,
+      "fallbackClockText": "63'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -572,8 +610,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:27:31.427679+00:00",
-      "lastUpdated": "2026-06-25T01:27:28Z",
+      "lastApiSync": "2026-06-24T23:27:57.737833+00:00",
+      "lastUpdated": "2026-06-25T01:27:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -601,14 +639,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "62'",
-        "lastApiSync": "2026-06-24T23:27:31.427679+00:00",
-        "seconds": 3720,
+        "displayMinute": "63'",
+        "lastApiSync": "2026-06-24T23:27:57.737833+00:00",
+        "seconds": 3780,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "62'"
+        "timer": "63'"
       },
-      "manualClockText": "62'",
+      "manualClockText": "63'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -633,7 +671,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 62,
+      "minute": 63,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -756,7 +794,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 3900,
+      "clockSeconds": 3960,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -765,7 +803,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "65'",
+      "displayMinute": "66'",
       "events": [
         {
           "assist": null,
@@ -840,8 +878,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3900,
-      "fallbackClockText": "65'",
+      "fallbackClock": 3960,
+      "fallbackClockText": "66'",
       "goalEvents": [
         {
           "assist": null,
@@ -952,8 +990,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:27:31.427679+00:00",
-      "lastUpdated": "2026-06-25T01:27:28Z",
+      "lastApiSync": "2026-06-24T23:27:57.737833+00:00",
+      "lastUpdated": "2026-06-25T01:27:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -981,14 +1019,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "65'",
-        "lastApiSync": "2026-06-24T23:27:31.427679+00:00",
-        "seconds": 3900,
+        "displayMinute": "66'",
+        "lastApiSync": "2026-06-24T23:27:57.737833+00:00",
+        "seconds": 3960,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "65'"
+        "timer": "66'"
       },
-      "manualClockText": "65'",
+      "manualClockText": "66'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -1013,7 +1051,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 65,
+      "minute": 66,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1114,7 +1152,27 @@
         "shortName": "Brazil",
         "tla": "BRA"
       },
-      "clockSeconds": 3720,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "Danilo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 3780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1123,7 +1181,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "62'",
+      "displayMinute": "63'",
       "events": [
         {
           "assist": "Rayan",
@@ -1214,10 +1272,28 @@
           "timer": "60:00",
           "timerSeconds": 3600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "Danilo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 3720,
-      "fallbackClockText": "62'",
+      "fallbackClock": 3780,
+      "fallbackClockText": "63'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -1305,8 +1381,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:27:31.427679+00:00",
-      "lastUpdated": "2026-06-25T01:27:28Z",
+      "lastApiSync": "2026-06-24T23:27:57.737833+00:00",
+      "lastUpdated": "2026-06-25T01:27:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1334,14 +1410,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "62'",
-        "lastApiSync": "2026-06-24T23:27:31.427679+00:00",
-        "seconds": 3720,
+        "displayMinute": "63'",
+        "lastApiSync": "2026-06-24T23:27:57.737833+00:00",
+        "seconds": 3780,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "62'"
+        "timer": "63'"
       },
-      "manualClockText": "62'",
+      "manualClockText": "63'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -1366,7 +1442,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 62,
+      "minute": 63,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
