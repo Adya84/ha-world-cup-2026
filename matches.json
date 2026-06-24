@@ -29074,8 +29074,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:47:23.245075+00:00",
-      "lastUpdated": "2026-06-25T01:47:19Z",
+      "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
+      "lastUpdated": "2026-06-25T01:47:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -29104,7 +29104,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "85'",
-        "lastApiSync": "2026-06-24T23:47:23.245075+00:00",
+        "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
         "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -29438,7 +29438,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4920,
+      "clockSeconds": 4980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -29447,7 +29447,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "82'",
+      "displayMinute": "83'",
       "events": [
         {
           "assist": "Rayan",
@@ -29646,10 +29646,46 @@
           "timer": "82:00",
           "timerSeconds": 4920,
           "type": "Substitution"
+        },
+        {
+          "assist": "Alex Sandro",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "Douglas Santos",
+          "playerOff": "Douglas Santos",
+          "playerOn": "Alex Sandro",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "Rayan",
+          "playerOff": "Rayan",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4920,
-      "fallbackClockText": "82'",
+      "fallbackClock": 4980,
+      "fallbackClockText": "83'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -29737,8 +29773,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:47:23.245075+00:00",
-      "lastUpdated": "2026-06-25T01:47:19Z",
+      "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
+      "lastUpdated": "2026-06-25T01:47:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -29766,14 +29802,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "82'",
-        "lastApiSync": "2026-06-24T23:47:23.245075+00:00",
-        "seconds": 4920,
+        "displayMinute": "83'",
+        "lastApiSync": "2026-06-24T23:47:50.634798+00:00",
+        "seconds": 4980,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "82'"
+        "timer": "83'"
       },
-      "manualClockText": "82'",
+      "manualClockText": "83'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -29798,7 +29834,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 82,
+      "minute": 83,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -29951,6 +29987,42 @@
           "rawType": "subst",
           "source": "api_football",
           "team": "Scotland",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Alex Sandro",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "Douglas Santos",
+          "playerOff": "Douglas Santos",
+          "playerOn": "Alex Sandro",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "Rayan",
+          "playerOff": "Rayan",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
           "timer": "82:00",
           "timerSeconds": 4920,
           "type": "Substitution"
