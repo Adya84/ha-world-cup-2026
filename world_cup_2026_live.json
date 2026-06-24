@@ -13,7 +13,7 @@
       "awayCorners": 0,
       "awayFouls": 3,
       "awayOffsides": 0,
-      "awayPossession": "30%",
+      "awayPossession": "29%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -82,12 +82,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 2,
+      "homeCorners": 3,
       "homeFouls": 3,
       "homeOffsides": 2,
-      "homePossession": "70%",
+      "homePossession": "71%",
       "homeScore": 0,
-      "homeShotsOnGoal": 1,
+      "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -96,15 +96,15 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T22:33:21.620342+00:00",
-      "lastUpdated": "2026-06-25T00:33:19Z",
+      "lastApiSync": "2026-06-24T22:33:47.232652+00:00",
+      "lastUpdated": "2026-06-25T00:33:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 3,
           "offsides": 0,
-          "possession": "30%",
+          "possession": "29%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -112,21 +112,21 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 2,
+          "corners": 3,
           "fouls": 3,
           "offsides": 2,
-          "possession": "70%",
+          "possession": "71%",
           "redCards": null,
-          "shotsOffGoal": 2,
-          "shotsOnGoal": 1,
-          "totalShots": 4,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 3,
+          "totalShots": 7,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "33'",
-        "lastApiSync": "2026-06-24T22:33:21.620342+00:00",
+        "lastApiSync": "2026-06-24T22:33:47.232652+00:00",
         "seconds": 1980,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -248,7 +248,7 @@
       "awayCorners": 1,
       "awayFouls": 1,
       "awayOffsides": null,
-      "awayPossession": "52%",
+      "awayPossession": "50%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -258,7 +258,7 @@
         "shortName": "Brazil",
         "tla": "BRA"
       },
-      "clockSeconds": 1920,
+      "clockSeconds": 1980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -267,7 +267,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "32'",
+      "displayMinute": "33'",
       "events": [
         {
           "assist": "Rayan",
@@ -306,8 +306,8 @@
           "type": "Disallowed Goal"
         }
       ],
-      "fallbackClock": 1920,
-      "fallbackClockText": "32'",
+      "fallbackClock": 1980,
+      "fallbackClockText": "33'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -335,10 +335,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 0,
+      "homeCorners": 1,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "48%",
+      "homePossession": "50%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -349,15 +349,15 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T22:33:21.620342+00:00",
-      "lastUpdated": "2026-06-25T00:33:19Z",
+      "lastApiSync": "2026-06-24T22:33:47.232652+00:00",
+      "lastUpdated": "2026-06-25T00:33:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 1,
           "offsides": null,
-          "possession": "52%",
+          "possession": "50%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -365,10 +365,10 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 0,
+          "corners": 1,
           "fouls": 0,
           "offsides": null,
-          "possession": "48%",
+          "possession": "50%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -378,14 +378,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "32'",
-        "lastApiSync": "2026-06-24T22:33:21.620342+00:00",
-        "seconds": 1920,
+        "displayMinute": "33'",
+        "lastApiSync": "2026-06-24T22:33:47.232652+00:00",
+        "seconds": 1980,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "32'"
+        "timer": "33'"
       },
-      "manualClockText": "32'",
+      "manualClockText": "33'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -410,7 +410,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 32,
+      "minute": 33,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -503,7 +503,7 @@
       "awayCorners": 0,
       "awayFouls": 3,
       "awayOffsides": 0,
-      "awayPossession": "30%",
+      "awayPossession": "29%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -572,12 +572,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 2,
+      "homeCorners": 3,
       "homeFouls": 3,
       "homeOffsides": 2,
-      "homePossession": "70%",
+      "homePossession": "71%",
       "homeScore": 0,
-      "homeShotsOnGoal": 1,
+      "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -586,15 +586,15 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T22:33:21.620342+00:00",
-      "lastUpdated": "2026-06-25T00:33:19Z",
+      "lastApiSync": "2026-06-24T22:33:47.232652+00:00",
+      "lastUpdated": "2026-06-25T00:33:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 3,
           "offsides": 0,
-          "possession": "30%",
+          "possession": "29%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -602,21 +602,21 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 2,
+          "corners": 3,
           "fouls": 3,
           "offsides": 2,
-          "possession": "70%",
+          "possession": "71%",
           "redCards": null,
-          "shotsOffGoal": 2,
-          "shotsOnGoal": 1,
-          "totalShots": 4,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 3,
+          "totalShots": 7,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "33'",
-        "lastApiSync": "2026-06-24T22:33:21.620342+00:00",
+        "lastApiSync": "2026-06-24T22:33:47.232652+00:00",
         "seconds": 1980,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -738,7 +738,7 @@
       "awayCorners": 1,
       "awayFouls": 1,
       "awayOffsides": null,
-      "awayPossession": "52%",
+      "awayPossession": "50%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -748,7 +748,7 @@
         "shortName": "Brazil",
         "tla": "BRA"
       },
-      "clockSeconds": 1920,
+      "clockSeconds": 1980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -757,7 +757,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "32'",
+      "displayMinute": "33'",
       "events": [
         {
           "assist": "Rayan",
@@ -796,8 +796,8 @@
           "type": "Disallowed Goal"
         }
       ],
-      "fallbackClock": 1920,
-      "fallbackClockText": "32'",
+      "fallbackClock": 1980,
+      "fallbackClockText": "33'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -825,10 +825,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 0,
+      "homeCorners": 1,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "48%",
+      "homePossession": "50%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -839,15 +839,15 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T22:33:21.620342+00:00",
-      "lastUpdated": "2026-06-25T00:33:19Z",
+      "lastApiSync": "2026-06-24T22:33:47.232652+00:00",
+      "lastUpdated": "2026-06-25T00:33:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 1,
           "offsides": null,
-          "possession": "52%",
+          "possession": "50%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -855,10 +855,10 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 0,
+          "corners": 1,
           "fouls": 0,
           "offsides": null,
-          "possession": "48%",
+          "possession": "50%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -868,14 +868,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "32'",
-        "lastApiSync": "2026-06-24T22:33:21.620342+00:00",
-        "seconds": 1920,
+        "displayMinute": "33'",
+        "lastApiSync": "2026-06-24T22:33:47.232652+00:00",
+        "seconds": 1980,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "32'"
+        "timer": "33'"
       },
-      "manualClockText": "32'",
+      "manualClockText": "33'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -900,7 +900,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 32,
+      "minute": 33,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
