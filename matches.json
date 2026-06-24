@@ -28281,7 +28281,7 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T22:10:50.019963+00:00",
+      "lastApiSync": "2026-06-24T22:11:17.039601+00:00",
       "lastUpdated": "2026-06-24T22:56:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -28311,7 +28311,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-24T22:10:50.019963+00:00",
+        "lastApiSync": "2026-06-24T22:11:17.039601+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -28636,7 +28636,7 @@
       "awayFouls": 0,
       "awayOffsides": null,
       "awayPossession": "25%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/haiti.svg",
@@ -28655,8 +28655,54 @@
         "type": "CUP"
       },
       "displayMinute": "10'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "10'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 10,
+          "player": "L. Joseph",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "10:00",
+          "timerSeconds": 600,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 600,
       "fallbackClockText": "10'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Haiti",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "10'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Morocco",
+          "isDisallowed": false,
+          "matchId": 537344,
+          "matchUtcDate": "2026-06-24T22:00:00Z",
+          "minute": 10,
+          "player": "L. Joseph",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "10:00",
+          "timerSeconds": 600,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
       "homeCorners": null,
       "homeFouls": 1,
@@ -28672,8 +28718,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T22:10:50.067910+00:00",
-      "lastUpdated": "2026-06-25T00:10:46Z",
+      "lastApiSync": "2026-06-24T22:11:17.089754+00:00",
+      "lastUpdated": "2026-06-25T00:11:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -28702,7 +28748,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "10'",
-        "lastApiSync": "2026-06-24T22:10:50.067910+00:00",
+        "lastApiSync": "2026-06-24T22:11:17.089754+00:00",
         "seconds": 600,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -28762,11 +28808,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -28907,8 +28953,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T22:10:50.067910+00:00",
-      "lastUpdated": "2026-06-25T00:10:46Z",
+      "lastApiSync": "2026-06-24T22:11:17.089754+00:00",
+      "lastUpdated": "2026-06-25T00:11:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -28937,7 +28983,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "10'",
-        "lastApiSync": "2026-06-24T22:10:50.067910+00:00",
+        "lastApiSync": "2026-06-24T22:11:17.089754+00:00",
         "seconds": 600,
         "source": "api_football_live_minute",
         "status": "1H",
