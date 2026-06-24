@@ -29426,8 +29426,8 @@
     },
     {
       "apiFootballFixtureId": 1489403,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -29447,7 +29447,7 @@
         "shortName": "Croatia",
         "tla": "CRO"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -29456,9 +29456,47 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "displayMinute": "46'",
+      "events": [
+        {
+          "assist": "A. Budimir",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "P. Musa",
+          "playerOff": "P. Musa",
+          "playerOn": "A. Budimir",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Kramaric",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Gvardiol",
+          "playerOff": "J. Gvardiol",
+          "playerOn": "A. Kramaric",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": "GROUP_L",
       "homeCorners": null,
       "homeFouls": 9,
@@ -29474,8 +29512,8 @@
         "tla": "PAN"
       },
       "id": 537412,
-      "lastApiSync": "2026-06-24T00:04:07.105665+00:00",
-      "lastUpdated": "2026-06-24T01:48:20Z",
+      "lastApiSync": "2026-06-24T00:04:32.421279+00:00",
+      "lastUpdated": "2026-06-24T02:04:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -29503,14 +29541,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-24T00:04:07.105665+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-24T00:04:32.421279+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -29535,7 +29573,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -29572,7 +29610,45 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "A. Budimir",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "P. Musa",
+          "playerOff": "P. Musa",
+          "playerOn": "A. Budimir",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Kramaric",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Gvardiol",
+          "playerOff": "J. Gvardiol",
+          "playerOn": "A. Kramaric",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-23T23:00:00Z",
       "venue": {
         "city": "Toronto",
