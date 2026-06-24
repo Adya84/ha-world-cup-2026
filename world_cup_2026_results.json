@@ -51765,6 +51765,227 @@
         }
       ],
       "utcDate": "2026-06-24T02:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489408,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/canada.svg",
+        "id": 828,
+        "name": "Canada",
+        "shortName": "Canada",
+        "tla": "CAN"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_B",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/788.svg",
+        "id": 788,
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI"
+      },
+      "id": 537337,
+      "lastApiSync": "2026-06-24T19:00:33.539764+00:00",
+      "lastUpdated": "2026-06-24T20:40:02Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-24T19:00:33.539764+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489408,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Ramon Abatti Abel",
+            "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ramon Abatti Abel, Brazil",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Ramon Abatti Abel",
+            "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ramon Abatti Abel, Brazil",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Vancouver",
+          "cloudCoverage": 99.2,
+          "condition": "partlycloudy_day",
+          "country": "Canada",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+          "humidity": 45.3,
+          "latitude": 49.2768,
+          "longitude": -123.1119,
+          "name": "BC Place weather",
+          "observedAt": "2026-06-24T18:00:00Z",
+          "pressure": 1014.9,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "BC Place",
+          "temperature": 24.4,
+          "temperatureUnit": "C",
+          "windBearing": 190.1,
+          "windSpeed": 2.7,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 99.2,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+        "humidity": 45.3,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-24T18:00:00Z",
+        "pressure": 1014.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 190.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Ramon Abatti Abel",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ramon Abatti Abel, Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Ramon Abatti Abel",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ramon Abatti Abel, Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "venue": {
+        "city": "Vancouver",
+        "id": 19445,
+        "name": "BC Place"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 99.2,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+        "humidity": 45.3,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-24T18:00:00Z",
+        "pressure": 1014.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 190.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "results": [
@@ -103533,6 +103754,227 @@
         }
       ],
       "utcDate": "2026-06-24T02:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1489408,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/canada.svg",
+        "id": 828,
+        "name": "Canada",
+        "shortName": "Canada",
+        "tla": "CAN"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_B",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/788.svg",
+        "id": 788,
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI"
+      },
+      "id": 537337,
+      "lastApiSync": "2026-06-24T19:00:33.539764+00:00",
+      "lastUpdated": "2026-06-24T20:40:02Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-24T19:00:33.539764+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489408,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Ramon Abatti Abel",
+            "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ramon Abatti Abel, Brazil",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Ramon Abatti Abel",
+            "nationality": "Brazil",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ramon Abatti Abel, Brazil",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Vancouver",
+          "cloudCoverage": 99.2,
+          "condition": "partlycloudy_day",
+          "country": "Canada",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+          "humidity": 45.3,
+          "latitude": 49.2768,
+          "longitude": -123.1119,
+          "name": "BC Place weather",
+          "observedAt": "2026-06-24T18:00:00Z",
+          "pressure": 1014.9,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "BC Place",
+          "temperature": 24.4,
+          "temperatureUnit": "C",
+          "windBearing": 190.1,
+          "windSpeed": 2.7,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 99.2,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+        "humidity": 45.3,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-24T18:00:00Z",
+        "pressure": 1014.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 190.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Ramon Abatti Abel",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ramon Abatti Abel, Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Ramon Abatti Abel",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ramon Abatti Abel, Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "venue": {
+        "city": "Vancouver",
+        "id": 19445,
+        "name": "BC Place"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 99.2,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+        "humidity": 45.3,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-24T18:00:00Z",
+        "pressure": 1014.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 190.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
