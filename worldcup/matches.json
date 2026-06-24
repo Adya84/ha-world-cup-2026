@@ -28609,7 +28609,7 @@
       "awayCorners": 0,
       "awayFouls": 2,
       "awayOffsides": 0,
-      "awayPossession": "31%",
+      "awayPossession": "33%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -28619,7 +28619,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 1320,
+      "clockSeconds": 1380,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -28628,7 +28628,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "22'",
+      "displayMinute": "23'",
       "events": [
         {
           "assist": "J. Duverne",
@@ -28649,8 +28649,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1320,
-      "fallbackClockText": "22'",
+      "fallbackClock": 1380,
+      "fallbackClockText": "23'",
       "goalEvents": [
         {
           "assist": "J. Duverne",
@@ -28681,7 +28681,7 @@
       "homeCorners": 2,
       "homeFouls": 2,
       "homeOffsides": 2,
-      "homePossession": "69%",
+      "homePossession": "67%",
       "homeScore": 0,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -28692,15 +28692,15 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T22:23:07.019874+00:00",
-      "lastUpdated": "2026-06-25T00:23:04Z",
+      "lastApiSync": "2026-06-24T22:23:53.474189+00:00",
+      "lastUpdated": "2026-06-25T00:23:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 2,
           "offsides": 0,
-          "possession": "31%",
+          "possession": "33%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -28711,7 +28711,7 @@
           "corners": 2,
           "fouls": 2,
           "offsides": 2,
-          "possession": "69%",
+          "possession": "67%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -28721,14 +28721,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "22'",
-        "lastApiSync": "2026-06-24T22:23:07.019874+00:00",
-        "seconds": 1320,
+        "displayMinute": "23'",
+        "lastApiSync": "2026-06-24T22:23:53.474189+00:00",
+        "seconds": 1380,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "22'"
+        "timer": "23'"
       },
-      "manualClockText": "22'",
+      "manualClockText": "23'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -28753,7 +28753,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 22,
+      "minute": 23,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -28844,8 +28844,8 @@
       "awayCorners": 1,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "50%",
-      "awayScore": 1,
+      "awayPossession": "52%",
+      "awayScore": 2,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/764.svg",
@@ -28854,7 +28854,7 @@
         "shortName": "Brazil",
         "tla": "BRA"
       },
-      "clockSeconds": 1320,
+      "clockSeconds": 1380,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -28863,7 +28863,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "22'",
+      "displayMinute": "23'",
       "events": [
         {
           "assist": "Rayan",
@@ -28882,10 +28882,28 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "22'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 22,
+          "player": "Vinicius Junior",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 1320,
-      "fallbackClockText": "22'",
+      "fallbackClock": 1380,
+      "fallbackClockText": "23'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -28909,6 +28927,29 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Brazil",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "22'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Scotland",
+          "isDisallowed": false,
+          "matchId": 537343,
+          "matchUtcDate": "2026-06-24T22:00:00Z",
+          "minute": 22,
+          "player": "Vinicius Junior",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -28916,7 +28957,7 @@
       "homeCorners": 0,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "50%",
+      "homePossession": "48%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -28927,26 +28968,26 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T22:23:07.019874+00:00",
-      "lastUpdated": "2026-06-25T00:23:04Z",
+      "lastApiSync": "2026-06-24T22:23:53.474189+00:00",
+      "lastUpdated": "2026-06-25T00:23:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 0,
           "offsides": null,
-          "possession": "50%",
+          "possession": "52%",
           "redCards": null,
-          "shotsOffGoal": 1,
+          "shotsOffGoal": 2,
           "shotsOnGoal": 1,
-          "totalShots": 4,
+          "totalShots": 5,
           "yellowCards": null
         },
         "home": {
           "corners": 0,
           "fouls": 0,
           "offsides": null,
-          "possession": "50%",
+          "possession": "48%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -28956,14 +28997,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "22'",
-        "lastApiSync": "2026-06-24T22:23:07.019874+00:00",
-        "seconds": 1320,
+        "displayMinute": "23'",
+        "lastApiSync": "2026-06-24T22:23:53.474189+00:00",
+        "seconds": 1380,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "22'"
+        "timer": "23'"
       },
-      "manualClockText": "22'",
+      "manualClockText": "23'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -28988,7 +29029,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 22,
+      "minute": 23,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -29017,11 +29058,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "halfTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "winner": "AWAY_TEAM"
