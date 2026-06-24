@@ -29438,7 +29438,7 @@
       "awayFouls": 5,
       "awayOffsides": null,
       "awayPossession": "64%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/799.svg",
@@ -29447,7 +29447,7 @@
         "shortName": "Croatia",
         "tla": "CRO"
       },
-      "clockSeconds": 3240,
+      "clockSeconds": 3300,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -29456,7 +29456,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "54'",
+      "displayMinute": "55'",
       "events": [
         {
           "assist": "A. Budimir",
@@ -29493,10 +29493,54 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Stanisic",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "54'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 54,
+          "player": "A. Budimir",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3240,
-      "fallbackClockText": "54'",
+      "fallbackClock": 3300,
+      "fallbackClockText": "55'",
+      "goalEvents": [
+        {
+          "assist": "J. Stanisic",
+          "awayTeam": "Croatia",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "54'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Panama",
+          "isDisallowed": false,
+          "matchId": 537412,
+          "matchUtcDate": "2026-06-23T23:00:00Z",
+          "minute": 54,
+          "player": "A. Budimir",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_L",
       "homeCorners": 0,
       "homeFouls": 9,
@@ -29512,8 +29556,8 @@
         "tla": "PAN"
       },
       "id": 537412,
-      "lastApiSync": "2026-06-24T00:12:41.014261+00:00",
-      "lastUpdated": "2026-06-24T02:12:05Z",
+      "lastApiSync": "2026-06-24T00:13:07.465142+00:00",
+      "lastUpdated": "2026-06-24T02:13:05Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -29541,14 +29585,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "54'",
-        "lastApiSync": "2026-06-24T00:12:41.014261+00:00",
-        "seconds": 3240,
+        "displayMinute": "55'",
+        "lastApiSync": "2026-06-24T00:13:07.465142+00:00",
+        "seconds": 3300,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "54'"
+        "timer": "55'"
       },
-      "manualClockText": "54'",
+      "manualClockText": "55'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -29573,7 +29617,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 2,
-      "minute": 54,
+      "minute": 55,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -29592,14 +29636,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
           "away": 0,
           "home": 0
         },
-        "winner": "DRAW"
+        "winner": "AWAY_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
