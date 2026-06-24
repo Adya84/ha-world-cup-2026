@@ -54856,7 +54856,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -54865,7 +54865,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": null,
@@ -55064,10 +55064,28 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "D. Simon",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "D. Jean Jacques",
+          "playerOff": "D. Jean Jacques",
+          "playerOn": "D. Simon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": null,
@@ -55187,12 +55205,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 6,
+      "homeCorners": 8,
       "homeFouls": 7,
       "homeOffsides": 5,
       "homePossession": "72%",
       "homeScore": 3,
-      "homeShotsOnGoal": 8,
+      "homeShotsOnGoal": 9,
       "homeTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -55201,8 +55219,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:43:18.646788+00:00",
-      "lastUpdated": "2026-06-25T01:43:17Z",
+      "lastApiSync": "2026-06-24T23:43:45.545506+00:00",
+      "lastUpdated": "2026-06-25T01:43:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -55217,27 +55235,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 6,
+          "corners": 8,
           "fouls": 7,
           "offsides": 5,
           "possession": "72%",
           "redCards": null,
-          "shotsOffGoal": 5,
-          "shotsOnGoal": 8,
-          "totalShots": 16,
+          "shotsOffGoal": 6,
+          "shotsOnGoal": 9,
+          "totalShots": 19,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-24T23:43:18.646788+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-24T23:43:45.545506+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchDetails": {
         "apiFootballFixtureId": 1489405,
         "awayCorners": 0,
@@ -55444,6 +55462,24 @@
             "timer": "80:00",
             "timerSeconds": 4800,
             "type": "Substitution"
+          },
+          {
+            "assist": "D. Simon",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "81'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 81,
+            "player": "D. Jean Jacques",
+            "playerOff": "D. Jean Jacques",
+            "playerOn": "D. Simon",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -55564,11 +55600,11 @@
           }
         ],
         "goalEventsSource": "api_football_live",
-        "homeCorners": 6,
+        "homeCorners": 8,
         "homeFouls": 7,
         "homeOffsides": 5,
         "homePossession": "72%",
-        "homeShotsOnGoal": 8,
+        "homeShotsOnGoal": 9,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
@@ -55584,14 +55620,14 @@
             "yellowCards": null
           },
           "home": {
-            "corners": 6,
+            "corners": 8,
             "fouls": 7,
             "offsides": 5,
             "possession": "72%",
             "redCards": null,
-            "shotsOffGoal": 5,
-            "shotsOnGoal": 8,
-            "totalShots": 16,
+            "shotsOffGoal": 6,
+            "shotsOnGoal": 9,
+            "totalShots": 19,
             "yellowCards": null
           }
         },
@@ -55725,6 +55761,24 @@
             "timer": "80:00",
             "timerSeconds": 4800,
             "type": "Substitution"
+          },
+          {
+            "assist": "D. Simon",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "81'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 81,
+            "player": "D. Jean Jacques",
+            "playerOff": "D. Jean Jacques",
+            "playerOn": "D. Simon",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -55775,7 +55829,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -55931,6 +55985,24 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "D. Simon",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "D. Jean Jacques",
+          "playerOff": "D. Jean Jacques",
+          "playerOn": "D. Simon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-24T22:00:00Z",
@@ -55974,9 +56046,9 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 4,
+      "awayFouls": 5,
       "awayOffsides": 1,
-      "awayPossession": "49%",
+      "awayPossession": "50%",
       "awayScore": 3,
       "awayShotsOnGoal": 7,
       "awayTeam": {
@@ -56006,7 +56078,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4680,
+      "clockSeconds": 4740,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -56015,7 +56087,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "78'",
+      "displayMinute": "79'",
       "events": [
         {
           "assist": "Rayan",
@@ -56180,8 +56252,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4680,
-      "fallbackClockText": "78'",
+      "fallbackClock": 4740,
+      "fallbackClockText": "79'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -56255,10 +56327,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 4,
+      "homeCorners": 6,
       "homeFouls": 7,
       "homeOffsides": 0,
-      "homePossession": "51%",
+      "homePossession": "50%",
       "homeScore": 0,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -56269,15 +56341,15 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:43:18.646788+00:00",
-      "lastUpdated": "2026-06-25T01:43:17Z",
+      "lastApiSync": "2026-06-24T23:43:45.545506+00:00",
+      "lastUpdated": "2026-06-25T01:43:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 4,
+          "fouls": 5,
           "offsides": 1,
-          "possession": "49%",
+          "possession": "50%",
           "redCards": null,
           "shotsOffGoal": 6,
           "shotsOnGoal": 7,
@@ -56285,33 +56357,33 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 4,
+          "corners": 6,
           "fouls": 7,
           "offsides": 0,
-          "possession": "51%",
+          "possession": "50%",
           "redCards": null,
-          "shotsOffGoal": 4,
+          "shotsOffGoal": 5,
           "shotsOnGoal": 3,
-          "totalShots": 9,
+          "totalShots": 10,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "78'",
-        "lastApiSync": "2026-06-24T23:43:18.646788+00:00",
-        "seconds": 4680,
+        "displayMinute": "79'",
+        "lastApiSync": "2026-06-24T23:43:45.545506+00:00",
+        "seconds": 4740,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "78'"
+        "timer": "79'"
       },
-      "manualClockText": "78'",
+      "manualClockText": "79'",
       "matchDetails": {
         "apiFootballFixtureId": 1489406,
         "awayCorners": 3,
-        "awayFouls": 4,
+        "awayFouls": 5,
         "awayOffsides": 1,
-        "awayPossession": "49%",
+        "awayPossession": "50%",
         "awayShotsOnGoal": 7,
         "cardEvents": [
           {
@@ -56569,19 +56641,19 @@
           }
         ],
         "goalEventsSource": "api_football_live",
-        "homeCorners": 4,
+        "homeCorners": 6,
         "homeFouls": 7,
         "homeOffsides": 0,
-        "homePossession": "51%",
+        "homePossession": "50%",
         "homeShotsOnGoal": 3,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
             "corners": 3,
-            "fouls": 4,
+            "fouls": 5,
             "offsides": 1,
-            "possession": "49%",
+            "possession": "50%",
             "redCards": null,
             "shotsOffGoal": 6,
             "shotsOnGoal": 7,
@@ -56589,14 +56661,14 @@
             "yellowCards": 1
           },
           "home": {
-            "corners": 4,
+            "corners": 6,
             "fouls": 7,
             "offsides": 0,
-            "possession": "51%",
+            "possession": "50%",
             "redCards": null,
-            "shotsOffGoal": 4,
+            "shotsOffGoal": 5,
             "shotsOnGoal": 3,
-            "totalShots": 9,
+            "totalShots": 10,
             "yellowCards": 0
           }
         },
@@ -56744,7 +56816,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 78,
+      "minute": 79,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -111754,7 +111826,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -111763,7 +111835,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": null,
@@ -111962,10 +112034,28 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "D. Simon",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "D. Jean Jacques",
+          "playerOff": "D. Jean Jacques",
+          "playerOn": "D. Simon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": null,
@@ -112085,12 +112175,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 6,
+      "homeCorners": 8,
       "homeFouls": 7,
       "homeOffsides": 5,
       "homePossession": "72%",
       "homeScore": 3,
-      "homeShotsOnGoal": 8,
+      "homeShotsOnGoal": 9,
       "homeTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -112099,8 +112189,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:43:18.646788+00:00",
-      "lastUpdated": "2026-06-25T01:43:17Z",
+      "lastApiSync": "2026-06-24T23:43:45.545506+00:00",
+      "lastUpdated": "2026-06-25T01:43:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -112115,27 +112205,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 6,
+          "corners": 8,
           "fouls": 7,
           "offsides": 5,
           "possession": "72%",
           "redCards": null,
-          "shotsOffGoal": 5,
-          "shotsOnGoal": 8,
-          "totalShots": 16,
+          "shotsOffGoal": 6,
+          "shotsOnGoal": 9,
+          "totalShots": 19,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-24T23:43:18.646788+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-24T23:43:45.545506+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchDetails": {
         "apiFootballFixtureId": 1489405,
         "awayCorners": 0,
@@ -112342,6 +112432,24 @@
             "timer": "80:00",
             "timerSeconds": 4800,
             "type": "Substitution"
+          },
+          {
+            "assist": "D. Simon",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "81'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 81,
+            "player": "D. Jean Jacques",
+            "playerOff": "D. Jean Jacques",
+            "playerOn": "D. Simon",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -112462,11 +112570,11 @@
           }
         ],
         "goalEventsSource": "api_football_live",
-        "homeCorners": 6,
+        "homeCorners": 8,
         "homeFouls": 7,
         "homeOffsides": 5,
         "homePossession": "72%",
-        "homeShotsOnGoal": 8,
+        "homeShotsOnGoal": 9,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
@@ -112482,14 +112590,14 @@
             "yellowCards": null
           },
           "home": {
-            "corners": 6,
+            "corners": 8,
             "fouls": 7,
             "offsides": 5,
             "possession": "72%",
             "redCards": null,
-            "shotsOffGoal": 5,
-            "shotsOnGoal": 8,
-            "totalShots": 16,
+            "shotsOffGoal": 6,
+            "shotsOnGoal": 9,
+            "totalShots": 19,
             "yellowCards": null
           }
         },
@@ -112623,6 +112731,24 @@
             "timer": "80:00",
             "timerSeconds": 4800,
             "type": "Substitution"
+          },
+          {
+            "assist": "D. Simon",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "81'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 81,
+            "player": "D. Jean Jacques",
+            "playerOff": "D. Jean Jacques",
+            "playerOn": "D. Simon",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "81:00",
+            "timerSeconds": 4860,
+            "type": "Substitution"
           }
         ],
         "weather": {
@@ -112673,7 +112799,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -112829,6 +112955,24 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "D. Simon",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "D. Jean Jacques",
+          "playerOff": "D. Jean Jacques",
+          "playerOn": "D. Simon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-24T22:00:00Z",
@@ -112872,9 +113016,9 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 4,
+      "awayFouls": 5,
       "awayOffsides": 1,
-      "awayPossession": "49%",
+      "awayPossession": "50%",
       "awayScore": 3,
       "awayShotsOnGoal": 7,
       "awayTeam": {
@@ -112904,7 +113048,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4680,
+      "clockSeconds": 4740,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -112913,7 +113057,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "78'",
+      "displayMinute": "79'",
       "events": [
         {
           "assist": "Rayan",
@@ -113078,8 +113222,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4680,
-      "fallbackClockText": "78'",
+      "fallbackClock": 4740,
+      "fallbackClockText": "79'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -113153,10 +113297,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_C",
-      "homeCorners": 4,
+      "homeCorners": 6,
       "homeFouls": 7,
       "homeOffsides": 0,
-      "homePossession": "51%",
+      "homePossession": "50%",
       "homeScore": 0,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -113167,15 +113311,15 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:43:18.646788+00:00",
-      "lastUpdated": "2026-06-25T01:43:17Z",
+      "lastApiSync": "2026-06-24T23:43:45.545506+00:00",
+      "lastUpdated": "2026-06-25T01:43:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 4,
+          "fouls": 5,
           "offsides": 1,
-          "possession": "49%",
+          "possession": "50%",
           "redCards": null,
           "shotsOffGoal": 6,
           "shotsOnGoal": 7,
@@ -113183,33 +113327,33 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 4,
+          "corners": 6,
           "fouls": 7,
           "offsides": 0,
-          "possession": "51%",
+          "possession": "50%",
           "redCards": null,
-          "shotsOffGoal": 4,
+          "shotsOffGoal": 5,
           "shotsOnGoal": 3,
-          "totalShots": 9,
+          "totalShots": 10,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "78'",
-        "lastApiSync": "2026-06-24T23:43:18.646788+00:00",
-        "seconds": 4680,
+        "displayMinute": "79'",
+        "lastApiSync": "2026-06-24T23:43:45.545506+00:00",
+        "seconds": 4740,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "78'"
+        "timer": "79'"
       },
-      "manualClockText": "78'",
+      "manualClockText": "79'",
       "matchDetails": {
         "apiFootballFixtureId": 1489406,
         "awayCorners": 3,
-        "awayFouls": 4,
+        "awayFouls": 5,
         "awayOffsides": 1,
-        "awayPossession": "49%",
+        "awayPossession": "50%",
         "awayShotsOnGoal": 7,
         "cardEvents": [
           {
@@ -113467,19 +113611,19 @@
           }
         ],
         "goalEventsSource": "api_football_live",
-        "homeCorners": 4,
+        "homeCorners": 6,
         "homeFouls": 7,
         "homeOffsides": 0,
-        "homePossession": "51%",
+        "homePossession": "50%",
         "homeShotsOnGoal": 3,
         "lineups": [],
         "lineupsData": [],
         "liveStatistics": {
           "away": {
             "corners": 3,
-            "fouls": 4,
+            "fouls": 5,
             "offsides": 1,
-            "possession": "49%",
+            "possession": "50%",
             "redCards": null,
             "shotsOffGoal": 6,
             "shotsOnGoal": 7,
@@ -113487,14 +113631,14 @@
             "yellowCards": 1
           },
           "home": {
-            "corners": 4,
+            "corners": 6,
             "fouls": 7,
             "offsides": 0,
-            "possession": "51%",
+            "possession": "50%",
             "redCards": null,
-            "shotsOffGoal": 4,
+            "shotsOffGoal": 5,
             "shotsOnGoal": 3,
-            "totalShots": 9,
+            "totalShots": 10,
             "yellowCards": 0
           }
         },
@@ -113642,7 +113786,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 78,
+      "minute": 79,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
