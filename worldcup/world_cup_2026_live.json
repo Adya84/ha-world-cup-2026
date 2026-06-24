@@ -11,7 +11,7 @@
         "name": "World"
       },
       "awayCorners": 6,
-      "awayFouls": 9,
+      "awayFouls": 10,
       "awayOffsides": 3,
       "awayPossession": "44%",
       "awayScore": 1,
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4980,
+      "clockSeconds": 5040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "83'",
+      "displayMinute": "84'",
       "events": [
         {
           "assist": null,
@@ -287,10 +287,28 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Shaffelburg",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "R. Laryea",
+          "playerOff": "R. Laryea",
+          "playerOn": "J. Shaffelburg",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4980,
-      "fallbackClockText": "83'",
+      "fallbackClock": 5040,
+      "fallbackClockText": "84'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -378,13 +396,13 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:42:03.841114+00:00",
-      "lastUpdated": "2026-06-24T22:41:58Z",
+      "lastApiSync": "2026-06-24T20:42:40.930404+00:00",
+      "lastUpdated": "2026-06-24T22:42:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 6,
-          "fouls": 9,
+          "fouls": 10,
           "offsides": 3,
           "possession": "44%",
           "redCards": null,
@@ -407,14 +425,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "83'",
-        "lastApiSync": "2026-06-24T20:42:03.841114+00:00",
-        "seconds": 4980,
+        "displayMinute": "84'",
+        "lastApiSync": "2026-06-24T20:42:40.930404+00:00",
+        "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "83'"
+        "timer": "84'"
       },
-      "manualClockText": "83'",
+      "manualClockText": "84'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -422,7 +440,7 @@
         "condition": "fair_day",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T20:39:55.718431+00:00",
+        "fetchedAt": "2026-06-24T20:42:35.793219+00:00",
         "humidity": 47.0,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -439,7 +457,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 83,
+      "minute": 84,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -613,6 +631,24 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Shaffelburg",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "R. Laryea",
+          "playerOff": "R. Laryea",
+          "playerOn": "J. Shaffelburg",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-24T19:00:00Z",
@@ -628,7 +664,7 @@
         "condition": "fair_day",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T20:39:55.718431+00:00",
+        "fetchedAt": "2026-06-24T20:42:35.793219+00:00",
         "humidity": 47.0,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -679,7 +715,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:41:58Z",
+      "lastUpdated": "2026-06-24T22:42:32Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
@@ -738,7 +774,7 @@
         "name": "World"
       },
       "awayCorners": 6,
-      "awayFouls": 9,
+      "awayFouls": 10,
       "awayOffsides": 3,
       "awayPossession": "44%",
       "awayScore": 1,
@@ -788,7 +824,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4980,
+      "clockSeconds": 5040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -797,7 +833,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "83'",
+      "displayMinute": "84'",
       "events": [
         {
           "assist": null,
@@ -1014,10 +1050,28 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Shaffelburg",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "R. Laryea",
+          "playerOff": "R. Laryea",
+          "playerOn": "J. Shaffelburg",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4980,
-      "fallbackClockText": "83'",
+      "fallbackClock": 5040,
+      "fallbackClockText": "84'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -1105,13 +1159,13 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:42:03.841114+00:00",
-      "lastUpdated": "2026-06-24T22:41:58Z",
+      "lastApiSync": "2026-06-24T20:42:40.930404+00:00",
+      "lastUpdated": "2026-06-24T22:42:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 6,
-          "fouls": 9,
+          "fouls": 10,
           "offsides": 3,
           "possession": "44%",
           "redCards": null,
@@ -1134,14 +1188,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "83'",
-        "lastApiSync": "2026-06-24T20:42:03.841114+00:00",
-        "seconds": 4980,
+        "displayMinute": "84'",
+        "lastApiSync": "2026-06-24T20:42:40.930404+00:00",
+        "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "83'"
+        "timer": "84'"
       },
-      "manualClockText": "83'",
+      "manualClockText": "84'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -1149,7 +1203,7 @@
         "condition": "fair_day",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T20:39:55.718431+00:00",
+        "fetchedAt": "2026-06-24T20:42:35.793219+00:00",
         "humidity": 47.0,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -1166,7 +1220,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 83,
+      "minute": 84,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1340,6 +1394,24 @@
           "timer": "80:00",
           "timerSeconds": 4800,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Shaffelburg",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "R. Laryea",
+          "playerOff": "R. Laryea",
+          "playerOn": "J. Shaffelburg",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-24T19:00:00Z",
@@ -1355,7 +1427,7 @@
         "condition": "fair_day",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-24T20:39:55.718431+00:00",
+        "fetchedAt": "2026-06-24T20:42:35.793219+00:00",
         "humidity": 47.0,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -1406,7 +1478,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:41:58Z",
+      "lastUpdated": "2026-06-24T22:42:32Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
