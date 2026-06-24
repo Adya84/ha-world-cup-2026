@@ -1,4 +1,430 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/canada.svg",
+        "id": 828,
+        "name": "Canada",
+        "shortName": "Canada",
+        "tla": "CAN"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_B",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/788.svg",
+        "id": 788,
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI"
+      },
+      "id": 537337,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-24T20:40:02Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 99.2,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+        "humidity": 45.3,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-24T18:00:00Z",
+        "pressure": 1014.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 190.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 18754,
+          "name": "Ramon Abatti Abel",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 99.2,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+        "humidity": 45.3,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-24T18:00:00Z",
+        "pressure": 1014.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 190.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/8030.svg",
+        "id": 8030,
+        "name": "Qatar",
+        "shortName": "Qatar",
+        "tla": "QAT"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_B",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/bosnia.svg",
+        "id": 1060,
+        "name": "Bosnia-Herzegovina",
+        "shortName": "Bosnia-H.",
+        "tla": "BIH"
+      },
+      "id": 537338,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-24T20:20:28Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 28805,
+          "name": "Jes\u00fas Valenzuela",
+          "nationality": "Venezuela",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-24T19:00:00Z"
+    }
+  ],
+  "matches": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/canada.svg",
+        "id": 828,
+        "name": "Canada",
+        "shortName": "Canada",
+        "tla": "CAN"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_B",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/788.svg",
+        "id": 788,
+        "name": "Switzerland",
+        "shortName": "Switzerland",
+        "tla": "SUI"
+      },
+      "id": 537337,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-24T20:40:02Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 99.2,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+        "humidity": 45.3,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-24T18:00:00Z",
+        "pressure": 1014.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 190.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 18754,
+          "name": "Ramon Abatti Abel",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-24T19:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 99.2,
+        "condition": "partlycloudy_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-24T18:55:10.800061+00:00",
+        "humidity": 45.3,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-24T18:00:00Z",
+        "pressure": 1014.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 24.4,
+        "temperatureUnit": "C",
+        "windBearing": 190.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/8030.svg",
+        "id": 8030,
+        "name": "Qatar",
+        "shortName": "Qatar",
+        "tla": "QAT"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_B",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/bosnia.svg",
+        "id": 1060,
+        "name": "Bosnia-Herzegovina",
+        "shortName": "Bosnia-H.",
+        "tla": "BIH"
+      },
+      "id": 537338,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-24T20:20:28Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 28805,
+          "name": "Jes\u00fas Valenzuela",
+          "nationality": "Venezuela",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-24T19:00:00Z"
+    }
+  ]
 }
