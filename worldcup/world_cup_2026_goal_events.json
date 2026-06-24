@@ -23388,16 +23388,36 @@
     "apiFootballFixtureId": 1539008,
     "awayScore": 0,
     "awayTeam": "Congo DR",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
+    "events": [
+      {
+        "assist": "N. Sadiki",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "N. Mukau",
+        "playerOff": "N. Mukau",
+        "playerOn": "N. Sadiki",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Congo DR",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Colombia",
-    "lastApiSync": "2026-06-24T03:06:21.705500+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-06-24T03:06:21.705500+00:00",
+    "lastApiSync": "2026-06-24T03:06:45.888182+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-06-24T03:06:45.888182+00:00",
     "referees": [
       {
         "name": "Maurizio Mariani, Italy",
@@ -23405,7 +23425,27 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "N. Sadiki",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "N. Mukau",
+        "playerOff": "N. Mukau",
+        "playerOn": "N. Sadiki",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Congo DR",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-24T02:00:00Z"
   },
   "537407": {
