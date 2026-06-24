@@ -5937,43 +5937,61 @@
     "utcDate": "2026-06-19T22:00:00Z"
   },
   "537343": {
+    "apiFootballFixtureId": 1489406,
     "awayScore": 0,
     "awayTeam": "Brazil",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Scotland",
-    "phase_start": null,
+    "lastApiSync": "2026-06-24T22:01:34.908609+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-24T22:01:34.908609+00:00",
     "referees": [
       {
-        "id": 56007,
         "name": "C\u00e9sar Ramos",
         "nationality": "Mexico",
         "type": "REFEREE"
-      }
-    ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
-    "utcDate": "2026-06-24T22:00:00Z"
-  },
-  "537344": {
-    "awayScore": 0,
-    "awayTeam": "Haiti",
-    "clock_active": false,
-    "goalEvents": [],
-    "homeScore": 0,
-    "homeTeam": "Morocco",
-    "phase_start": null,
-    "referees": [
+      },
       {
-        "id": 43899,
-        "name": "Danny Makkelie",
-        "nationality": "Netherlands",
+        "name": "C\u00e9sar Ramos Palazuelos, Mexico",
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
+    "utcDate": "2026-06-24T22:00:00Z"
+  },
+  "537344": {
+    "apiFootballFixtureId": 1489405,
+    "awayScore": 0,
+    "awayTeam": "Haiti",
+    "base_seconds": 60,
+    "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
+    "goalEvents": [],
+    "homeScore": 0,
+    "homeTeam": "Morocco",
+    "lastApiSync": "2026-06-24T22:01:34.908609+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-24T22:01:34.908609+00:00",
+    "referees": [
+      {
+        "name": "Danny Makkelie",
+        "nationality": "Netherlands",
+        "type": "REFEREE"
+      },
+      {
+        "name": "Danny Makkelie, Netherlands",
+        "type": "REFEREE"
+      }
+    ],
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-24T22:00:00Z"
   },
   "537345": {
