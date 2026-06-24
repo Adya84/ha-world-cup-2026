@@ -10,10 +10,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
+      "awayCorners": 3,
       "awayFouls": 5,
       "awayOffsides": 3,
-      "awayPossession": "37%",
+      "awayPossession": "38%",
       "awayScore": 0,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": null,
@@ -145,9 +145,27 @@
           "type": "Goal"
         },
         {
-          "assist": "L. Millar",
+          "assist": "S. Eustaquio",
           "comments": null,
           "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Choiniere",
+          "playerOff": "M. Choiniere",
+          "playerOn": "S. Eustaquio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Millar",
+          "comments": null,
+          "detail": "Substitution 2",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -165,7 +183,7 @@
         {
           "assist": "T. Oluwaseyi",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 3",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -179,28 +197,10 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Substitution"
-        },
-        {
-          "assist": "S. Eustaquio",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "M. Choiniere",
-          "playerOff": "M. Choiniere",
-          "playerOn": "S. Eustaquio",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Canada",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -254,7 +254,7 @@
       "homeCorners": 2,
       "homeFouls": 14,
       "homeOffsides": 1,
-      "homePossession": "63%",
+      "homePossession": "62%",
       "homeScore": 2,
       "homeShotsOnGoal": 4,
       "homeTeam": {
@@ -265,26 +265,26 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:22:19.877835+00:00",
-      "lastUpdated": "2026-06-24T22:22:16Z",
+      "lastApiSync": "2026-06-24T20:22:47.228499+00:00",
+      "lastUpdated": "2026-06-24T22:22:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
+          "corners": 3,
           "fouls": 5,
           "offsides": 3,
-          "possession": "37%",
+          "possession": "38%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 3,
-          "totalShots": 5,
+          "totalShots": 7,
           "yellowCards": 1
         },
         "home": {
           "corners": 2,
           "fouls": 14,
           "offsides": 1,
-          "possession": "63%",
+          "possession": "62%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 4,
@@ -294,14 +294,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-24T20:22:19.877835+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-24T20:22:47.228499+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -326,7 +326,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -376,9 +376,27 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "L. Millar",
+          "assist": "S. Eustaquio",
           "comments": null,
           "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Choiniere",
+          "playerOff": "M. Choiniere",
+          "playerOn": "S. Eustaquio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Millar",
+          "comments": null,
+          "detail": "Substitution 2",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -396,7 +414,7 @@
         {
           "assist": "T. Oluwaseyi",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 3",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -404,24 +422,6 @@
           "player": "C. Larin",
           "playerOff": "C. Larin",
           "playerOn": "T. Oluwaseyi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Canada",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Eustaquio",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "M. Choiniere",
-          "playerOff": "M. Choiniere",
-          "playerOn": "S. Eustaquio",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
@@ -494,7 +494,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:22:16Z",
+      "lastUpdated": "2026-06-24T22:22:43Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
@@ -552,10 +552,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
+      "awayCorners": 3,
       "awayFouls": 5,
       "awayOffsides": 3,
-      "awayPossession": "37%",
+      "awayPossession": "38%",
       "awayScore": 0,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -603,7 +603,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -612,7 +612,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": null,
@@ -687,9 +687,27 @@
           "type": "Goal"
         },
         {
-          "assist": "L. Millar",
+          "assist": "S. Eustaquio",
           "comments": null,
           "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Choiniere",
+          "playerOff": "M. Choiniere",
+          "playerOn": "S. Eustaquio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Millar",
+          "comments": null,
+          "detail": "Substitution 2",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -707,7 +725,7 @@
         {
           "assist": "T. Oluwaseyi",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 3",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -721,28 +739,10 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Substitution"
-        },
-        {
-          "assist": "S. Eustaquio",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "M. Choiniere",
-          "playerOff": "M. Choiniere",
-          "playerOn": "S. Eustaquio",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Canada",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -796,7 +796,7 @@
       "homeCorners": 2,
       "homeFouls": 14,
       "homeOffsides": 1,
-      "homePossession": "63%",
+      "homePossession": "62%",
       "homeScore": 2,
       "homeShotsOnGoal": 4,
       "homeTeam": {
@@ -807,26 +807,26 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:22:19.877835+00:00",
-      "lastUpdated": "2026-06-24T22:22:16Z",
+      "lastApiSync": "2026-06-24T20:22:47.228499+00:00",
+      "lastUpdated": "2026-06-24T22:22:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
+          "corners": 3,
           "fouls": 5,
           "offsides": 3,
-          "possession": "37%",
+          "possession": "38%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 3,
-          "totalShots": 5,
+          "totalShots": 7,
           "yellowCards": 1
         },
         "home": {
           "corners": 2,
           "fouls": 14,
           "offsides": 1,
-          "possession": "63%",
+          "possession": "62%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 4,
@@ -836,14 +836,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-24T20:22:19.877835+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-24T20:22:47.228499+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -868,7 +868,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -918,9 +918,27 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "L. Millar",
+          "assist": "S. Eustaquio",
           "comments": null,
           "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Choiniere",
+          "playerOff": "M. Choiniere",
+          "playerOn": "S. Eustaquio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Millar",
+          "comments": null,
+          "detail": "Substitution 2",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -938,7 +956,7 @@
         {
           "assist": "T. Oluwaseyi",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 3",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -946,24 +964,6 @@
           "player": "C. Larin",
           "playerOff": "C. Larin",
           "playerOn": "T. Oluwaseyi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Canada",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Eustaquio",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "M. Choiniere",
-          "playerOff": "M. Choiniere",
-          "playerOn": "S. Eustaquio",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
@@ -1036,7 +1036,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:22:16Z",
+      "lastUpdated": "2026-06-24T22:22:43Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
