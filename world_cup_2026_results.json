@@ -51806,13 +51806,13 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T19:00:58.522490+00:00",
-      "lastUpdated": "2026-06-24T20:40:02Z",
+      "lastApiSync": "2026-06-24T19:01:26.188944+00:00",
+      "lastUpdated": "2026-06-24T21:01:22Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
         "displayMinute": "1'",
-        "lastApiSync": "2026-06-24T19:00:58.522490+00:00",
+        "lastApiSync": "2026-06-24T19:01:26.188944+00:00",
         "seconds": 60,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -51945,7 +51945,7 @@
           "away": 0,
           "home": 0
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -51986,6 +51986,124 @@
         "windSpeed": 2.7,
         "windSpeedUnit": "m/s"
       }
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/8030.svg",
+        "id": 8030,
+        "name": "Qatar",
+        "shortName": "Qatar",
+        "tla": "QAT"
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_B",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/bosnia.svg",
+        "id": 1060,
+        "name": "Bosnia-Herzegovina",
+        "shortName": "Bosnia-H.",
+        "tla": "BIH"
+      },
+      "id": 537338,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-24T21:01:22Z",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchDetails": {
+        "apiFootballFixtureId": null,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 28805,
+            "name": "Jes\u00fas Valenzuela",
+            "nationality": "Venezuela",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 28805,
+            "name": "Jes\u00fas Valenzuela",
+            "nationality": "Venezuela",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {}
+      },
+      "matchday": 3,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 28805,
+          "name": "Jes\u00fas Valenzuela",
+          "nationality": "Venezuela",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": "DRAW"
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "IN_PLAY",
+      "utcDate": "2026-06-24T19:00:00Z"
     }
   ],
   "results": [
@@ -103795,13 +103913,13 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T19:00:58.522490+00:00",
-      "lastUpdated": "2026-06-24T20:40:02Z",
+      "lastApiSync": "2026-06-24T19:01:26.188944+00:00",
+      "lastUpdated": "2026-06-24T21:01:22Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
         "displayMinute": "1'",
-        "lastApiSync": "2026-06-24T19:00:58.522490+00:00",
+        "lastApiSync": "2026-06-24T19:01:26.188944+00:00",
         "seconds": 60,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -103934,7 +104052,7 @@
           "away": 0,
           "home": 0
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -103975,6 +104093,124 @@
         "windSpeed": 2.7,
         "windSpeedUnit": "m/s"
       }
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/8030.svg",
+        "id": 8030,
+        "name": "Qatar",
+        "shortName": "Qatar",
+        "tla": "QAT"
+      },
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_B",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/bosnia.svg",
+        "id": 1060,
+        "name": "Bosnia-Herzegovina",
+        "shortName": "Bosnia-H.",
+        "tla": "BIH"
+      },
+      "id": 537338,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-24T21:01:22Z",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchDetails": {
+        "apiFootballFixtureId": null,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 28805,
+            "name": "Jes\u00fas Valenzuela",
+            "nationality": "Venezuela",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 28805,
+            "name": "Jes\u00fas Valenzuela",
+            "nationality": "Venezuela",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {}
+      },
+      "matchday": 3,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 28805,
+          "name": "Jes\u00fas Valenzuela",
+          "nationality": "Venezuela",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": "DRAW"
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "IN_PLAY",
+      "utcDate": "2026-06-24T19:00:00Z"
     }
   ]
 }
