@@ -27024,13 +27024,13 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T19:00:58.522490+00:00",
-      "lastUpdated": "2026-06-24T20:40:02Z",
+      "lastApiSync": "2026-06-24T19:01:26.188944+00:00",
+      "lastUpdated": "2026-06-24T21:01:22Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
         "displayMinute": "1'",
-        "lastApiSync": "2026-06-24T19:00:58.522490+00:00",
+        "lastApiSync": "2026-06-24T19:01:26.188944+00:00",
         "seconds": 60,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -27097,7 +27097,7 @@
           "away": 0,
           "home": 0
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -27154,7 +27154,6 @@
         "shortName": "Qatar",
         "tla": "QAT"
       },
-      "clockSeconds": 0,
       "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
@@ -27174,20 +27173,18 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T20:20:28Z",
-      "liveSource": "pre_kickoff_window",
+      "lastUpdated": "2026-06-24T21:01:22Z",
       "manualClock": {
         "active": false,
         "displayMinute": "0'",
         "lastApiSync": null,
         "seconds": 0,
         "source": "awaiting_api_football_minute",
-        "status": "LIVE",
+        "status": "IN_PLAY",
         "timer": "0:00"
       },
       "manualClockText": "Awaiting kickoff API data",
       "matchday": 3,
-      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -27202,14 +27199,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
           "away": null,
           "home": null
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "season": {
         "currentMatchday": 3,
@@ -27219,7 +27216,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-24T19:00:00Z"
     },
     {
