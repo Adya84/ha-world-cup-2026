@@ -3520,7 +3520,7 @@
     "apiFootballFixtureId": 1489408,
     "awayScore": 1,
     "awayTeam": "Canada",
-    "base_seconds": 4740,
+    "base_seconds": 4800,
     "cardEvents": [
       {
         "assist": null,
@@ -3560,8 +3560,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4740,
-    "displayMinute": "79'",
+    "clock_seconds": 4800,
+    "displayMinute": "80'",
     "events": [
       {
         "assist": null,
@@ -3760,6 +3760,24 @@
         "timer": "76:00",
         "timerSeconds": 4560,
         "type": "Goal"
+      },
+      {
+        "assist": "D. Ndoye",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "80'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 80,
+        "player": "R. Vargas",
+        "playerOff": "R. Vargas",
+        "playerOn": "D. Ndoye",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Switzerland",
+        "timer": "80:00",
+        "timerSeconds": 4800,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -3835,9 +3853,9 @@
     ],
     "homeScore": 2,
     "homeTeam": "Switzerland",
-    "lastApiSync": "2026-06-24T20:38:28.424087+00:00",
-    "manualClockText": "79'",
-    "phase_start": "2026-06-24T20:38:28.424087+00:00",
+    "lastApiSync": "2026-06-24T20:38:54.829323+00:00",
+    "manualClockText": "80'",
+    "phase_start": "2026-06-24T20:38:54.829323+00:00",
     "referees": [
       {
         "name": "Ramon Abatti Abel",
@@ -3958,6 +3976,24 @@
         "team": "Canada",
         "timer": "75:00",
         "timerSeconds": 4500,
+        "type": "Substitution"
+      },
+      {
+        "assist": "D. Ndoye",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "80'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 80,
+        "player": "R. Vargas",
+        "playerOff": "R. Vargas",
+        "playerOn": "D. Ndoye",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Switzerland",
+        "timer": "80:00",
+        "timerSeconds": 4800,
         "type": "Substitution"
       }
     ],
