@@ -3600,7 +3600,7 @@
     "apiFootballFixtureId": 1489408,
     "awayScore": 0,
     "awayTeam": "Canada",
-    "base_seconds": 2760,
+    "base_seconds": 2820,
     "cardEvents": [
       {
         "assist": null,
@@ -3640,8 +3640,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 2760,
-    "displayMinute": "46'",
+    "clock_seconds": 2820,
+    "displayMinute": "47'",
     "events": [
       {
         "assist": null,
@@ -3678,14 +3678,56 @@
         "timer": "32:00",
         "timerSeconds": 1920,
         "type": "Yellow Card"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "R. Vargas",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Switzerland",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Goal"
       }
     ],
-    "goalEvents": [],
-    "homeScore": 0,
+    "goalEvents": [
+      {
+        "assist": null,
+        "awayTeam": "Canada",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "46'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Switzerland",
+        "isDisallowed": false,
+        "matchId": 537337,
+        "matchUtcDate": "2026-06-24T19:00:00Z",
+        "minute": 46,
+        "player": "R. Vargas",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Switzerland",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Goal"
+      }
+    ],
+    "homeScore": 1,
     "homeTeam": "Switzerland",
-    "lastApiSync": "2026-06-24T20:05:07.094351+00:00",
-    "manualClockText": "46'",
-    "phase_start": "2026-06-24T20:05:07.094351+00:00",
+    "lastApiSync": "2026-06-24T20:05:35.132540+00:00",
+    "manualClockText": "47'",
+    "phase_start": "2026-06-24T20:05:35.132540+00:00",
     "referees": [
       {
         "name": "Ramon Abatti Abel",
