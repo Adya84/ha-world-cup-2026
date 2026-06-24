@@ -28851,8 +28851,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:31:09.318545+00:00",
-      "lastUpdated": "2026-06-25T01:31:07Z",
+      "lastApiSync": "2026-06-24T23:31:35.043248+00:00",
+      "lastUpdated": "2026-06-25T01:31:32Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -28881,7 +28881,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "69'",
-        "lastApiSync": "2026-06-24T23:31:09.318545+00:00",
+        "lastApiSync": "2026-06-24T23:31:35.043248+00:00",
         "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -29071,7 +29071,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -29080,7 +29080,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": "Rayan",
@@ -29189,10 +29189,46 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "Fabinho",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "65'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 65,
+          "player": "Casemiro",
+          "playerOff": "Casemiro",
+          "playerOn": "Fabinho",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Martinelli",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "66'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 66,
+          "player": "Lucas Paqueta",
+          "playerOff": "Lucas Paqueta",
+          "playerOn": "G. Martinelli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -29280,8 +29316,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:31:09.318545+00:00",
-      "lastUpdated": "2026-06-25T01:31:07Z",
+      "lastApiSync": "2026-06-24T23:31:35.043248+00:00",
+      "lastUpdated": "2026-06-25T01:31:32Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -29309,14 +29345,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-24T23:31:09.318545+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-24T23:31:35.043248+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -29341,7 +29377,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -29406,6 +29442,42 @@
           "team": "Scotland",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Fabinho",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "65'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 65,
+          "player": "Casemiro",
+          "playerOff": "Casemiro",
+          "playerOn": "Fabinho",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "65:00",
+          "timerSeconds": 3900,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Martinelli",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "66'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 66,
+          "player": "Lucas Paqueta",
+          "playerOff": "Lucas Paqueta",
+          "playerOn": "G. Martinelli",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "66:00",
+          "timerSeconds": 3960,
           "type": "Substitution"
         }
       ],
