@@ -28000,7 +28000,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -28009,7 +28009,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": null,
@@ -28084,27 +28084,9 @@
           "type": "Goal"
         },
         {
-          "assist": "T. Oluwaseyi",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "C. Larin",
-          "playerOff": "C. Larin",
-          "playerOn": "T. Oluwaseyi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Canada",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
           "assist": "S. Eustaquio",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -28122,7 +28104,7 @@
         {
           "assist": "L. Millar",
           "comments": null,
-          "detail": "Substitution 3",
+          "detail": "Substitution 2",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -28136,10 +28118,28 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Oluwaseyi",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "C. Larin",
+          "playerOff": "C. Larin",
+          "playerOn": "T. Oluwaseyi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": "J. Manzambi",
@@ -28204,8 +28204,8 @@
         "tla": "SUI"
       },
       "id": 537337,
-      "lastApiSync": "2026-06-24T20:25:17.892405+00:00",
-      "lastUpdated": "2026-06-24T22:25:17Z",
+      "lastApiSync": "2026-06-24T20:25:45.775147+00:00",
+      "lastUpdated": "2026-06-24T22:25:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -28233,14 +28233,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-24T20:25:17.892405+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-24T20:25:45.775147+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -28265,7 +28265,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -28315,27 +28315,9 @@
       "status": "2H",
       "substitutionEvents": [
         {
-          "assist": "T. Oluwaseyi",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "C. Larin",
-          "playerOff": "C. Larin",
-          "playerOn": "T. Oluwaseyi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Canada",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
           "assist": "S. Eustaquio",
           "comments": null,
-          "detail": "Substitution 2",
+          "detail": "Substitution 1",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -28353,7 +28335,7 @@
         {
           "assist": "L. Millar",
           "comments": null,
-          "detail": "Substitution 3",
+          "detail": "Substitution 2",
           "displayMinute": "58'",
           "extra": null,
           "isDisallowed": false,
@@ -28361,6 +28343,24 @@
           "player": "A. Ahmed",
           "playerOff": "A. Ahmed",
           "playerOn": "L. Millar",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Oluwaseyi",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "C. Larin",
+          "playerOff": "C. Larin",
+          "playerOn": "T. Oluwaseyi",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
@@ -28433,7 +28433,7 @@
       },
       "id": 537338,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-24T22:25:17Z",
+      "lastUpdated": "2026-06-24T22:25:43Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
