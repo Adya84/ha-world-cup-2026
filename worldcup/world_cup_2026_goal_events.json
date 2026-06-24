@@ -3520,7 +3520,7 @@
     "apiFootballFixtureId": 1489408,
     "awayScore": 0,
     "awayTeam": "Canada",
-    "base_seconds": 4440,
+    "base_seconds": 4500,
     "cardEvents": [
       {
         "assist": null,
@@ -3560,8 +3560,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4440,
-    "displayMinute": "74'",
+    "clock_seconds": 4500,
+    "displayMinute": "75'",
     "events": [
       {
         "assist": null,
@@ -3688,6 +3688,42 @@
         "timer": "58:00",
         "timerSeconds": 3480,
         "type": "Substitution"
+      },
+      {
+        "assist": "S. Widmer",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "74'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 74,
+        "player": "L. Jaquez",
+        "playerOff": "L. Jaquez",
+        "playerOn": "S. Widmer",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Switzerland",
+        "timer": "74:00",
+        "timerSeconds": 4440,
+        "type": "Substitution"
+      },
+      {
+        "assist": "M. Aebischer",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "74'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 74,
+        "player": "D. Sow",
+        "playerOff": "D. Sow",
+        "playerOn": "M. Aebischer",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Switzerland",
+        "timer": "74:00",
+        "timerSeconds": 4440,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -3740,9 +3776,9 @@
     ],
     "homeScore": 2,
     "homeTeam": "Switzerland",
-    "lastApiSync": "2026-06-24T20:33:14.447076+00:00",
-    "manualClockText": "74'",
-    "phase_start": "2026-06-24T20:33:14.447076+00:00",
+    "lastApiSync": "2026-06-24T20:33:42.432367+00:00",
+    "manualClockText": "75'",
+    "phase_start": "2026-06-24T20:33:42.432367+00:00",
     "referees": [
       {
         "name": "Ramon Abatti Abel",
@@ -3809,6 +3845,42 @@
         "team": "Canada",
         "timer": "58:00",
         "timerSeconds": 3480,
+        "type": "Substitution"
+      },
+      {
+        "assist": "S. Widmer",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "74'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 74,
+        "player": "L. Jaquez",
+        "playerOff": "L. Jaquez",
+        "playerOn": "S. Widmer",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Switzerland",
+        "timer": "74:00",
+        "timerSeconds": 4440,
+        "type": "Substitution"
+      },
+      {
+        "assist": "M. Aebischer",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "74'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 74,
+        "player": "D. Sow",
+        "playerOff": "D. Sow",
+        "playerOn": "M. Aebischer",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Switzerland",
+        "timer": "74:00",
+        "timerSeconds": 4440,
         "type": "Substitution"
       }
     ],
