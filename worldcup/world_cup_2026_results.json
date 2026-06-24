@@ -54856,7 +54856,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -54865,7 +54865,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": null,
@@ -54938,10 +54938,46 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Goal"
+        },
+        {
+          "assist": "D. Nazon",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "R. Providence",
+          "playerOff": "R. Providence",
+          "playerOn": "D. Nazon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Deedson",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "W. Isidor",
+          "playerOff": "W. Isidor",
+          "playerOn": "L. Deedson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": null,
@@ -55052,8 +55088,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:28:50.874994+00:00",
-      "lastUpdated": "2026-06-25T01:28:46Z",
+      "lastApiSync": "2026-06-24T23:29:16.876315+00:00",
+      "lastUpdated": "2026-06-25T01:29:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -55081,14 +55117,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-24T23:28:50.874994+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-24T23:29:16.876315+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchDetails": {
         "apiFootballFixtureId": 1489405,
         "awayCorners": 0,
@@ -55169,6 +55205,42 @@
             "timer": "46:00",
             "timerSeconds": 2760,
             "type": "Goal"
+          },
+          {
+            "assist": "D. Nazon",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "R. Providence",
+            "playerOff": "R. Providence",
+            "playerOn": "D. Nazon",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          },
+          {
+            "assist": "L. Deedson",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "W. Isidor",
+            "playerOff": "W. Isidor",
+            "playerOn": "L. Deedson",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -55319,7 +55391,44 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "D. Nazon",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "R. Providence",
+            "playerOff": "R. Providence",
+            "playerOn": "D. Nazon",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          },
+          {
+            "assist": "L. Deedson",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "W. Isidor",
+            "playerOff": "W. Isidor",
+            "playerOn": "L. Deedson",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "Atlanta",
@@ -55368,7 +55477,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -55416,6 +55525,44 @@
       },
       "stage": "GROUP_STAGE",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "D. Nazon",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "R. Providence",
+          "playerOff": "R. Providence",
+          "playerOn": "D. Nazon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Deedson",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "W. Isidor",
+          "playerOff": "W. Isidor",
+          "playerOn": "L. Deedson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-24T22:00:00Z",
       "venue": {
         "city": "Atlanta",
@@ -55698,8 +55845,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:28:50.874994+00:00",
-      "lastUpdated": "2026-06-25T01:28:46Z",
+      "lastApiSync": "2026-06-24T23:29:16.876315+00:00",
+      "lastUpdated": "2026-06-25T01:29:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -55728,7 +55875,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "64'",
-        "lastApiSync": "2026-06-24T23:28:50.874994+00:00",
+        "lastApiSync": "2026-06-24T23:29:16.876315+00:00",
         "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -111021,7 +111168,7 @@
         "shortName": "Haiti",
         "tla": "HAI"
       },
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -111030,7 +111177,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": null,
@@ -111103,10 +111250,46 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Goal"
+        },
+        {
+          "assist": "D. Nazon",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "R. Providence",
+          "playerOff": "R. Providence",
+          "playerOn": "D. Nazon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Deedson",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "W. Isidor",
+          "playerOff": "W. Isidor",
+          "playerOn": "L. Deedson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": null,
@@ -111217,8 +111400,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-24T23:28:50.874994+00:00",
-      "lastUpdated": "2026-06-25T01:28:46Z",
+      "lastApiSync": "2026-06-24T23:29:16.876315+00:00",
+      "lastUpdated": "2026-06-25T01:29:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -111246,14 +111429,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-24T23:28:50.874994+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-24T23:29:16.876315+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchDetails": {
         "apiFootballFixtureId": 1489405,
         "awayCorners": 0,
@@ -111334,6 +111517,42 @@
             "timer": "46:00",
             "timerSeconds": 2760,
             "type": "Goal"
+          },
+          {
+            "assist": "D. Nazon",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "R. Providence",
+            "playerOff": "R. Providence",
+            "playerOn": "D. Nazon",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          },
+          {
+            "assist": "L. Deedson",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "W. Isidor",
+            "playerOff": "W. Isidor",
+            "playerOn": "L. Deedson",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -111484,7 +111703,44 @@
             "type": "REFEREE"
           }
         ],
-        "substitutionEvents": [],
+        "substitutionEvents": [
+          {
+            "assist": "D. Nazon",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "R. Providence",
+            "playerOff": "R. Providence",
+            "playerOn": "D. Nazon",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          },
+          {
+            "assist": "L. Deedson",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "W. Isidor",
+            "playerOff": "W. Isidor",
+            "playerOn": "L. Deedson",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Haiti",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          }
+        ],
         "weather": {
           "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
           "city": "Atlanta",
@@ -111533,7 +111789,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -111581,6 +111837,44 @@
       },
       "stage": "GROUP_STAGE",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "D. Nazon",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "R. Providence",
+          "playerOff": "R. Providence",
+          "playerOn": "D. Nazon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Deedson",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "W. Isidor",
+          "playerOff": "W. Isidor",
+          "playerOn": "L. Deedson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Haiti",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-24T22:00:00Z",
       "venue": {
         "city": "Atlanta",
@@ -111863,8 +112157,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-24T23:28:50.874994+00:00",
-      "lastUpdated": "2026-06-25T01:28:46Z",
+      "lastApiSync": "2026-06-24T23:29:16.876315+00:00",
+      "lastUpdated": "2026-06-25T01:29:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -111893,7 +112187,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "64'",
-        "lastApiSync": "2026-06-24T23:28:50.874994+00:00",
+        "lastApiSync": "2026-06-24T23:29:16.876315+00:00",
         "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
