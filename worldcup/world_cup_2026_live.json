@@ -1,4 +1,522 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/769.svg",
+        "id": 769,
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_A",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/798.svg",
+        "id": 798,
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE"
+      },
+      "id": 537331,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-25T02:44:46Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 88.3,
+        "condition": "heavyrain",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+        "humidity": 81.2,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1018.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 17.4,
+        "temperatureUnit": "C",
+        "windBearing": 118.6,
+        "windSpeed": 1.9,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 57435,
+          "name": "Yael Falc\u00f3n",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 88.3,
+        "condition": "heavyrain",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+        "humidity": 81.2,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1018.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 17.4,
+        "temperatureUnit": "C",
+        "windBearing": 118.6,
+        "windSpeed": 1.9,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/772.png",
+        "id": 772,
+        "name": "South Korea",
+        "shortName": "Korea Republic",
+        "tla": "KOR"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_A",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/9396.svg",
+        "id": 774,
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA"
+      },
+      "id": 537332,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-25T02:42:07Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 3.1,
+        "condition": "clearsky_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+        "humidity": 46.2,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1011.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 31.8,
+        "temperatureUnit": "C",
+        "windBearing": 128.1,
+        "windSpeed": 7.8,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 57301,
+          "name": "Facundo Tello",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 3.1,
+        "condition": "clearsky_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+        "humidity": 46.2,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1011.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 31.8,
+        "temperatureUnit": "C",
+        "windBearing": 128.1,
+        "windSpeed": 7.8,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/769.svg",
+        "id": 769,
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_A",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/798.svg",
+        "id": 798,
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE"
+      },
+      "id": 537331,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-25T02:44:46Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 88.3,
+        "condition": "heavyrain",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+        "humidity": 81.2,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1018.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 17.4,
+        "temperatureUnit": "C",
+        "windBearing": 118.6,
+        "windSpeed": 1.9,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 57435,
+          "name": "Yael Falc\u00f3n",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 88.3,
+        "condition": "heavyrain",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+        "humidity": 81.2,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1018.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 17.4,
+        "temperatureUnit": "C",
+        "windBearing": 118.6,
+        "windSpeed": 1.9,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/772.png",
+        "id": 772,
+        "name": "South Korea",
+        "shortName": "Korea Republic",
+        "tla": "KOR"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_A",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/9396.svg",
+        "id": 774,
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA"
+      },
+      "id": 537332,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-25T02:42:07Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 3.1,
+        "condition": "clearsky_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+        "humidity": 46.2,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1011.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 31.8,
+        "temperatureUnit": "C",
+        "windBearing": 128.1,
+        "windSpeed": 7.8,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 57301,
+          "name": "Facundo Tello",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 3.1,
+        "condition": "clearsky_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+        "humidity": 46.2,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1011.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 31.8,
+        "temperatureUnit": "C",
+        "windBearing": 128.1,
+        "windSpeed": 7.8,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
