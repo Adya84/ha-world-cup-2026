@@ -55422,7 +55422,7 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-25T01:00:30.662794+00:00",
+      "lastApiSync": "2026-06-25T01:01:21.886848+00:00",
       "lastUpdated": "2026-06-25T02:02:44Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -55452,7 +55452,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T01:00:30.662794+00:00",
+        "lastApiSync": "2026-06-25T01:01:21.886848+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -56966,7 +56966,7 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-25T01:00:30.664200+00:00",
+      "lastApiSync": "2026-06-25T01:01:21.888194+00:00",
       "lastUpdated": "2026-06-25T02:02:44Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -56996,7 +56996,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T01:00:30.664200+00:00",
+        "lastApiSync": "2026-06-25T01:01:21.888194+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -57919,6 +57919,448 @@
         "city": "Miami Gardens",
         "id": null,
         "name": "Hard Rock Stadium"
+      }
+    },
+    {
+      "apiFootballFixtureId": 1539010,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/769.svg",
+        "id": 769,
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_A",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/798.svg",
+        "id": 798,
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE"
+      },
+      "id": 537331,
+      "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+      "lastUpdated": "2026-06-25T02:44:46Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1539010,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Yael Falc\u00f3n",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Yael Falcon Perez, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Yael Falc\u00f3n",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Yael Falcon Perez, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Mexico City",
+          "cloudCoverage": 88.3,
+          "condition": "heavyrain",
+          "country": "Mexico",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+          "humidity": 81.2,
+          "latitude": 19.303,
+          "longitude": -99.1505,
+          "name": "Estadio Banorte weather",
+          "observedAt": "2026-06-25T00:00:00Z",
+          "pressure": 1018.0,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Estadio Banorte",
+          "temperature": 17.4,
+          "temperatureUnit": "C",
+          "windBearing": 118.6,
+          "windSpeed": 1.9,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 88.3,
+        "condition": "heavyrain",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+        "humidity": 81.2,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1018.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 17.4,
+        "temperatureUnit": "C",
+        "windBearing": 118.6,
+        "windSpeed": 1.9,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Yael Falc\u00f3n",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Yael Falcon Perez, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Yael Falc\u00f3n",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Yael Falcon Perez, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "venue": {
+        "city": "Mexico City",
+        "id": 1069,
+        "name": "Estadio Azteca"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 88.3,
+        "condition": "heavyrain",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+        "humidity": 81.2,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1018.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 17.4,
+        "temperatureUnit": "C",
+        "windBearing": 118.6,
+        "windSpeed": 1.9,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "apiFootballFixtureId": 1489407,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/772.png",
+        "id": 772,
+        "name": "South Korea",
+        "shortName": "Korea Republic",
+        "tla": "KOR"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_A",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/9396.svg",
+        "id": 774,
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA"
+      },
+      "id": 537332,
+      "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+      "lastUpdated": "2026-06-25T03:00:49Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489407,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Facundo Tello",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Facundo Raul Tello Figueroa, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Facundo Tello",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Facundo Raul Tello Figueroa, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Monterrey",
+          "cloudCoverage": 3.1,
+          "condition": "clearsky_day",
+          "country": "Mexico",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+          "humidity": 46.2,
+          "latitude": 25.6682,
+          "longitude": -100.2446,
+          "name": "Estadio BBVA weather",
+          "observedAt": "2026-06-25T00:00:00Z",
+          "pressure": 1011.6,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Estadio BBVA",
+          "temperature": 31.8,
+          "temperatureUnit": "C",
+          "windBearing": 128.1,
+          "windSpeed": 7.8,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 3.1,
+        "condition": "clearsky_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+        "humidity": 46.2,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1011.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 31.8,
+        "temperatureUnit": "C",
+        "windBearing": 128.1,
+        "windSpeed": 7.8,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Facundo Tello",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Facundo Raul Tello Figueroa, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Facundo Tello",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Facundo Raul Tello Figueroa, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "venue": {
+        "city": "Monterrey",
+        "id": 11905,
+        "name": "Estadio BBVA"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 3.1,
+        "condition": "clearsky_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+        "humidity": 46.2,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1011.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 31.8,
+        "temperatureUnit": "C",
+        "windBearing": 128.1,
+        "windSpeed": 7.8,
+        "windSpeedUnit": "m/s"
       }
     }
   ],
@@ -113345,7 +113787,7 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-25T01:00:30.662794+00:00",
+      "lastApiSync": "2026-06-25T01:01:21.886848+00:00",
       "lastUpdated": "2026-06-25T02:02:44Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -113375,7 +113817,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T01:00:30.662794+00:00",
+        "lastApiSync": "2026-06-25T01:01:21.886848+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -114889,7 +115331,7 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-25T01:00:30.664200+00:00",
+      "lastApiSync": "2026-06-25T01:01:21.888194+00:00",
       "lastUpdated": "2026-06-25T02:02:44Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -114919,7 +115361,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T01:00:30.664200+00:00",
+        "lastApiSync": "2026-06-25T01:01:21.888194+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -115842,6 +116284,448 @@
         "city": "Miami Gardens",
         "id": null,
         "name": "Hard Rock Stadium"
+      }
+    },
+    {
+      "apiFootballFixtureId": 1539010,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/769.svg",
+        "id": 769,
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_A",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/798.svg",
+        "id": 798,
+        "name": "Czechia",
+        "shortName": "Czechia",
+        "tla": "CZE"
+      },
+      "id": 537331,
+      "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+      "lastUpdated": "2026-06-25T02:44:46Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1539010,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Yael Falc\u00f3n",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Yael Falcon Perez, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Yael Falc\u00f3n",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Yael Falcon Perez, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Mexico City",
+          "cloudCoverage": 88.3,
+          "condition": "heavyrain",
+          "country": "Mexico",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+          "humidity": 81.2,
+          "latitude": 19.303,
+          "longitude": -99.1505,
+          "name": "Estadio Banorte weather",
+          "observedAt": "2026-06-25T00:00:00Z",
+          "pressure": 1018.0,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Estadio Banorte",
+          "temperature": 17.4,
+          "temperatureUnit": "C",
+          "windBearing": 118.6,
+          "windSpeed": 1.9,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 88.3,
+        "condition": "heavyrain",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+        "humidity": 81.2,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1018.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 17.4,
+        "temperatureUnit": "C",
+        "windBearing": 118.6,
+        "windSpeed": 1.9,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Yael Falc\u00f3n",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Yael Falcon Perez, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Yael Falc\u00f3n",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Yael Falcon Perez, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": null
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "venue": {
+        "city": "Mexico City",
+        "id": 1069,
+        "name": "Estadio Azteca"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 88.3,
+        "condition": "heavyrain",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.247520+00:00",
+        "humidity": 81.2,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1018.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 17.4,
+        "temperatureUnit": "C",
+        "windBearing": 118.6,
+        "windSpeed": 1.9,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "apiFootballFixtureId": 1489407,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/772.png",
+        "id": 772,
+        "name": "South Korea",
+        "shortName": "Korea Republic",
+        "tla": "KOR"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_A",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/9396.svg",
+        "id": 774,
+        "name": "South Africa",
+        "shortName": "South Africa",
+        "tla": "RSA"
+      },
+      "id": 537332,
+      "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+      "lastUpdated": "2026-06-25T03:00:49Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchDetails": {
+        "apiFootballFixtureId": 1489407,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [],
+        "events": [],
+        "goalEvents": [],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "name": "Facundo Tello",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Facundo Raul Tello Figueroa, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "name": "Facundo Tello",
+            "nationality": "Argentina",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Facundo Raul Tello Figueroa, Argentina",
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [],
+        "weather": {
+          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+          "city": "Monterrey",
+          "cloudCoverage": 3.1,
+          "condition": "clearsky_day",
+          "country": "Mexico",
+          "dewPoint": null,
+          "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+          "humidity": 46.2,
+          "latitude": 25.6682,
+          "longitude": -100.2446,
+          "name": "Estadio BBVA weather",
+          "observedAt": "2026-06-25T00:00:00Z",
+          "pressure": 1011.6,
+          "pressureUnit": "hPa",
+          "source": "met_no_stadium",
+          "stadium": "Estadio BBVA",
+          "temperature": 31.8,
+          "temperatureUnit": "C",
+          "windBearing": 128.1,
+          "windSpeed": 7.8,
+          "windSpeedUnit": "m/s"
+        }
+      },
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 3.1,
+        "condition": "clearsky_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+        "humidity": 46.2,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1011.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 31.8,
+        "temperatureUnit": "C",
+        "windBearing": 128.1,
+        "windSpeed": 7.8,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Facundo Tello",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Facundo Raul Tello Figueroa, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Facundo Tello",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Facundo Raul Tello Figueroa, Argentina",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-25T01:00:00Z",
+      "venue": {
+        "city": "Monterrey",
+        "id": 11905,
+        "name": "Estadio BBVA"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Monterrey",
+        "cloudCoverage": 3.1,
+        "condition": "clearsky_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T00:55:09.545530+00:00",
+        "humidity": 46.2,
+        "latitude": 25.6682,
+        "longitude": -100.2446,
+        "name": "Estadio BBVA weather",
+        "observedAt": "2026-06-25T00:00:00Z",
+        "pressure": 1011.6,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio BBVA",
+        "temperature": 31.8,
+        "temperatureUnit": "C",
+        "windBearing": 128.1,
+        "windSpeed": 7.8,
+        "windSpeedUnit": "m/s"
       }
     }
   ]
