@@ -32412,7 +32412,7 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T22:54:43.594461+00:00",
+      "lastApiSync": "2026-06-25T22:55:09.846656+00:00",
       "lastUpdated": "2026-06-25T23:59:26Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -32442,7 +32442,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T22:54:43.594461+00:00",
+        "lastApiSync": "2026-06-25T22:55:09.846656+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -33158,7 +33158,7 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T22:54:43.556052+00:00",
+      "lastApiSync": "2026-06-25T22:55:09.445827+00:00",
       "lastUpdated": "2026-06-25T23:59:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -33188,7 +33188,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T22:54:43.556052+00:00",
+        "lastApiSync": "2026-06-25T22:55:09.445827+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -33440,6 +33440,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
         "id": 8601,
@@ -33447,6 +33448,8 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -33454,6 +33457,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_F",
       "homeTeam": {
         "crest": "https://crests.football-data.org/tunisia.svg",
@@ -33463,8 +33467,44 @@
         "tla": "TUN"
       },
       "id": 537361,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-26T00:10:29Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Kansas City",
+        "cloudCoverage": 100.0,
+        "condition": "heavyrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T22:55:09.458129+00:00",
+        "humidity": 95.5,
+        "latitude": 39.0489,
+        "longitude": -94.4839,
+        "name": "Arrowhead Stadium weather",
+        "observedAt": "2026-06-25T22:00:00Z",
+        "pressure": 1013.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Arrowhead Stadium",
+        "temperature": 22.0,
+        "temperatureUnit": "C",
+        "windBearing": 11.9,
+        "windSpeed": 2.9,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 3,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33496,8 +33536,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-25T23:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-25T23:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Kansas City",
+        "cloudCoverage": 100.0,
+        "condition": "heavyrain",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T22:55:09.458129+00:00",
+        "humidity": 95.5,
+        "latitude": 39.0489,
+        "longitude": -94.4839,
+        "name": "Arrowhead Stadium weather",
+        "observedAt": "2026-06-25T22:00:00Z",
+        "pressure": 1013.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Arrowhead Stadium",
+        "temperature": 22.0,
+        "temperatureUnit": "C",
+        "windBearing": 11.9,
+        "windSpeed": 2.9,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
@@ -33506,6 +33569,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
         "id": 792,
@@ -33513,6 +33577,8 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -33520,6 +33586,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_F",
       "homeTeam": {
         "crest": "https://crests.football-data.org/766.svg",
@@ -33529,8 +33596,44 @@
         "tla": "JPN"
       },
       "id": 537362,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-26T00:08:04Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Dallas",
+        "cloudCoverage": 7.8,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T22:55:09.777405+00:00",
+        "humidity": 41.7,
+        "latitude": 32.7473,
+        "longitude": -97.0945,
+        "name": "AT&T Stadium weather",
+        "observedAt": "2026-06-25T22:00:00Z",
+        "pressure": 1010.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "AT&T Stadium",
+        "temperature": 34.1,
+        "temperatureUnit": "C",
+        "windBearing": 181.2,
+        "windSpeed": 7.1,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 3,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33562,8 +33665,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-25T23:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-25T23:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Dallas",
+        "cloudCoverage": 7.8,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T22:55:09.777405+00:00",
+        "humidity": 41.7,
+        "latitude": 32.7473,
+        "longitude": -97.0945,
+        "name": "AT&T Stadium weather",
+        "observedAt": "2026-06-25T22:00:00Z",
+        "pressure": 1010.3,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "AT&T Stadium",
+        "temperature": 34.1,
+        "temperatureUnit": "C",
+        "windBearing": 181.2,
+        "windSpeed": 7.1,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
