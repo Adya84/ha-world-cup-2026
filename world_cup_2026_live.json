@@ -10,10 +10,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
+      "awayCorners": 3,
       "awayFouls": 2,
       "awayOffsides": null,
-      "awayPossession": "67%",
+      "awayPossession": "68%",
       "awayScore": 2,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -23,7 +23,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 1920,
+      "clockSeconds": 1980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "32'",
+      "displayMinute": "33'",
       "events": [
         {
           "assist": null,
@@ -71,8 +71,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1920,
-      "fallbackClockText": "32'",
+      "fallbackClock": 1980,
+      "fallbackClockText": "33'",
       "goalEvents": [
         {
           "assist": null,
@@ -124,9 +124,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeCorners": 1,
-      "homeFouls": 3,
+      "homeFouls": 4,
       "homeOffsides": null,
-      "homePossession": "33%",
+      "homePossession": "32%",
       "homeScore": 0,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -137,26 +137,26 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-25T23:31:49.555787+00:00",
-      "lastUpdated": "2026-06-26T01:31:46Z",
+      "lastApiSync": "2026-06-25T23:32:11.202754+00:00",
+      "lastUpdated": "2026-06-26T01:32:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 2,
+          "corners": 3,
           "fouls": 2,
           "offsides": null,
-          "possession": "67%",
+          "possession": "68%",
           "redCards": 0,
-          "shotsOffGoal": 2,
+          "shotsOffGoal": 3,
           "shotsOnGoal": 2,
-          "totalShots": 6,
+          "totalShots": 8,
           "yellowCards": 0
         },
         "home": {
           "corners": 1,
-          "fouls": 3,
+          "fouls": 4,
           "offsides": null,
-          "possession": "33%",
+          "possession": "32%",
           "redCards": 0,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -166,14 +166,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "32'",
-        "lastApiSync": "2026-06-25T23:31:49.555787+00:00",
-        "seconds": 1920,
+        "displayMinute": "33'",
+        "lastApiSync": "2026-06-25T23:32:11.202754+00:00",
+        "seconds": 1980,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "32'"
+        "timer": "33'"
       },
-      "manualClockText": "32'",
+      "manualClockText": "33'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -198,7 +198,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 32,
+      "minute": 33,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -287,7 +287,7 @@
         "name": "World"
       },
       "awayCorners": 2,
-      "awayFouls": 1,
+      "awayFouls": 2,
       "awayOffsides": 0,
       "awayPossession": "48%",
       "awayScore": 0,
@@ -299,6 +299,26 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "Isak Hien",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Yellow Card"
+        }
+      ],
       "clockSeconds": 1920,
       "clockSource": "api_football_live_minute",
       "competition": {
@@ -309,6 +329,26 @@
         "type": "CUP"
       },
       "displayMinute": "32'",
+      "events": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "Isak Hien",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Yellow Card"
+        }
+      ],
       "fallbackClock": 1920,
       "fallbackClockText": "32'",
       "group": "GROUP_F",
@@ -326,13 +366,13 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-25T23:31:49.555787+00:00",
-      "lastUpdated": "2026-06-26T01:31:47Z",
+      "lastApiSync": "2026-06-25T23:32:11.202754+00:00",
+      "lastUpdated": "2026-06-26T01:32:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
-          "fouls": 1,
+          "fouls": 2,
           "offsides": 0,
           "possession": "48%",
           "redCards": 0,
@@ -356,7 +396,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "32'",
-        "lastApiSync": "2026-06-25T23:31:49.555787+00:00",
+        "lastApiSync": "2026-06-25T23:32:11.202754+00:00",
         "seconds": 1920,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -475,10 +515,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
+      "awayCorners": 3,
       "awayFouls": 2,
       "awayOffsides": null,
-      "awayPossession": "67%",
+      "awayPossession": "68%",
       "awayScore": 2,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -488,7 +528,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 1920,
+      "clockSeconds": 1980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -497,7 +537,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "32'",
+      "displayMinute": "33'",
       "events": [
         {
           "assist": null,
@@ -536,8 +576,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1920,
-      "fallbackClockText": "32'",
+      "fallbackClock": 1980,
+      "fallbackClockText": "33'",
       "goalEvents": [
         {
           "assist": null,
@@ -589,9 +629,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeCorners": 1,
-      "homeFouls": 3,
+      "homeFouls": 4,
       "homeOffsides": null,
-      "homePossession": "33%",
+      "homePossession": "32%",
       "homeScore": 0,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -602,26 +642,26 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-25T23:31:49.555787+00:00",
-      "lastUpdated": "2026-06-26T01:31:46Z",
+      "lastApiSync": "2026-06-25T23:32:11.202754+00:00",
+      "lastUpdated": "2026-06-26T01:32:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 2,
+          "corners": 3,
           "fouls": 2,
           "offsides": null,
-          "possession": "67%",
+          "possession": "68%",
           "redCards": 0,
-          "shotsOffGoal": 2,
+          "shotsOffGoal": 3,
           "shotsOnGoal": 2,
-          "totalShots": 6,
+          "totalShots": 8,
           "yellowCards": 0
         },
         "home": {
           "corners": 1,
-          "fouls": 3,
+          "fouls": 4,
           "offsides": null,
-          "possession": "33%",
+          "possession": "32%",
           "redCards": 0,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -631,14 +671,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "32'",
-        "lastApiSync": "2026-06-25T23:31:49.555787+00:00",
-        "seconds": 1920,
+        "displayMinute": "33'",
+        "lastApiSync": "2026-06-25T23:32:11.202754+00:00",
+        "seconds": 1980,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "32'"
+        "timer": "33'"
       },
-      "manualClockText": "32'",
+      "manualClockText": "33'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -663,7 +703,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 32,
+      "minute": 33,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -752,7 +792,7 @@
         "name": "World"
       },
       "awayCorners": 2,
-      "awayFouls": 1,
+      "awayFouls": 2,
       "awayOffsides": 0,
       "awayPossession": "48%",
       "awayScore": 0,
@@ -764,6 +804,26 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "Isak Hien",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Yellow Card"
+        }
+      ],
       "clockSeconds": 1920,
       "clockSource": "api_football_live_minute",
       "competition": {
@@ -774,6 +834,26 @@
         "type": "CUP"
       },
       "displayMinute": "32'",
+      "events": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "Isak Hien",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Sweden",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Yellow Card"
+        }
+      ],
       "fallbackClock": 1920,
       "fallbackClockText": "32'",
       "group": "GROUP_F",
@@ -791,13 +871,13 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-25T23:31:49.555787+00:00",
-      "lastUpdated": "2026-06-26T01:31:47Z",
+      "lastApiSync": "2026-06-25T23:32:11.202754+00:00",
+      "lastUpdated": "2026-06-26T01:32:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
-          "fouls": 1,
+          "fouls": 2,
           "offsides": 0,
           "possession": "48%",
           "redCards": 0,
@@ -821,7 +901,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "32'",
-        "lastApiSync": "2026-06-25T23:31:49.555787+00:00",
+        "lastApiSync": "2026-06-25T23:32:11.202754+00:00",
         "seconds": 1920,
         "source": "api_football_live_minute",
         "status": "1H",
