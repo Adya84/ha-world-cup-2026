@@ -29975,8 +29975,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:41:13.872494+00:00",
-      "lastUpdated": "2026-06-25T04:41:10Z",
+      "lastApiSync": "2026-06-25T02:41:40.678016+00:00",
+      "lastUpdated": "2026-06-25T04:41:38Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -30005,7 +30005,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "81'",
-        "lastApiSync": "2026-06-25T02:41:13.872494+00:00",
+        "lastApiSync": "2026-06-25T02:41:40.678016+00:00",
         "seconds": 4860,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -30271,7 +30271,7 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 6,
+      "awayFouls": 8,
       "awayOffsides": 0,
       "awayPossession": "66%",
       "awayScore": 0,
@@ -30511,6 +30511,24 @@
           "timer": "79:00",
           "timerSeconds": 4740,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "J. Adams",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "R. Mofokeng",
+          "playerOff": "R. Mofokeng",
+          "playerOn": "J. Adams",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 4860,
@@ -30556,20 +30574,20 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:41:13.872494+00:00",
-      "lastUpdated": "2026-06-25T04:41:10Z",
+      "lastApiSync": "2026-06-25T02:41:40.678016+00:00",
+      "lastUpdated": "2026-06-25T04:41:38Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 6,
+          "fouls": 8,
           "offsides": 0,
           "possession": "66%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 2,
           "totalShots": 5,
-          "yellowCards": 0
+          "yellowCards": 1
         },
         "home": {
           "corners": 4,
@@ -30586,7 +30604,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "81'",
-        "lastApiSync": "2026-06-25T02:41:13.872494+00:00",
+        "lastApiSync": "2026-06-25T02:41:40.678016+00:00",
         "seconds": 4860,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -30790,6 +30808,24 @@
           "team": "South Africa",
           "timer": "75:00",
           "timerSeconds": 4500,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Adams",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "R. Mofokeng",
+          "playerOff": "R. Mofokeng",
+          "playerOn": "J. Adams",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "81:00",
+          "timerSeconds": 4860,
           "type": "Substitution"
         }
       ],
