@@ -32086,7 +32086,7 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T23:03:34.134523+00:00",
+      "lastApiSync": "2026-06-25T23:04:00.968011+00:00",
       "lastUpdated": "2026-06-25T23:59:26Z",
       "liveStatistics": {
         "away": {
@@ -32772,7 +32772,7 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T23:03:34.134706+00:00",
+      "lastApiSync": "2026-06-25T23:04:00.968221+00:00",
       "lastUpdated": "2026-06-25T23:59:07Z",
       "liveStatistics": {
         "away": {
@@ -33073,12 +33073,12 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Own Goal",
           "displayMinute": "3'",
           "extra": null,
           "isDisallowed": false,
           "minute": 3,
-          "player": null,
+          "player": "Ellyes Skhiri",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -33086,7 +33086,7 @@
           "team": "Netherlands",
           "timer": "3:00",
           "timerSeconds": 180,
-          "type": "Goal"
+          "type": "Own Goal"
         }
       ],
       "fallbackClock": 240,
@@ -33094,13 +33094,18 @@
       "goalEvents": [
         {
           "assist": null,
+          "awayTeam": "Netherlands",
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Own Goal",
           "displayMinute": "3'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Tunisia",
           "isDisallowed": false,
+          "matchId": 537361,
+          "matchUtcDate": "2026-06-25T23:00:00Z",
           "minute": 3,
-          "player": null,
+          "player": "Ellyes Skhiri",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -33127,8 +33132,8 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-25T23:03:34.184258+00:00",
-      "lastUpdated": "2026-06-26T01:03:31Z",
+      "lastApiSync": "2026-06-25T23:04:01.016893+00:00",
+      "lastUpdated": "2026-06-26T01:03:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33157,7 +33162,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "4'",
-        "lastApiSync": "2026-06-25T23:03:34.184258+00:00",
+        "lastApiSync": "2026-06-25T23:04:01.016893+00:00",
         "seconds": 240,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -33289,7 +33294,7 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
-      "clockSeconds": 180,
+      "clockSeconds": 240,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33298,9 +33303,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "3'",
-      "fallbackClock": 180,
-      "fallbackClockText": "3'",
+      "displayMinute": "4'",
+      "fallbackClock": 240,
+      "fallbackClockText": "4'",
       "group": "GROUP_F",
       "homeCorners": 0,
       "homeFouls": null,
@@ -33316,8 +33321,8 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-25T23:03:34.184258+00:00",
-      "lastUpdated": "2026-06-26T01:03:31Z",
+      "lastApiSync": "2026-06-25T23:04:01.016893+00:00",
+      "lastUpdated": "2026-06-26T01:03:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33345,14 +33350,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "3'",
-        "lastApiSync": "2026-06-25T23:03:34.184258+00:00",
-        "seconds": 180,
+        "displayMinute": "4'",
+        "lastApiSync": "2026-06-25T23:04:01.016893+00:00",
+        "seconds": 240,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "3'"
+        "timer": "4'"
       },
-      "manualClockText": "3'",
+      "manualClockText": "4'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -33377,7 +33382,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 3,
+      "minute": 4,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
