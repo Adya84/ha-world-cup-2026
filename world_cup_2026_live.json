@@ -18,7 +18,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 120,
+      "clockSeconds": 180,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -27,9 +27,50 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "2'",
-      "fallbackClock": 120,
-      "fallbackClockText": "2'",
+      "displayMinute": "3'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "3'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 3,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "3:00",
+          "timerSeconds": 180,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 180,
+      "fallbackClockText": "3'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "3'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 3,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "3:00",
+          "timerSeconds": 180,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeScore": 0,
       "homeTeam": {
@@ -40,19 +81,19 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-25T23:02:15.066936+00:00",
-      "lastUpdated": "2026-06-26T01:02:13Z",
+      "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+      "lastUpdated": "2026-06-26T01:02:40Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "2'",
-        "lastApiSync": "2026-06-25T23:02:15.066936+00:00",
-        "seconds": 120,
+        "displayMinute": "3'",
+        "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+        "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "2'"
+        "timer": "3'"
       },
-      "manualClockText": "2'",
+      "manualClockText": "3'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -77,7 +118,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 2,
+      "minute": 3,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -173,7 +214,7 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
-      "clockSeconds": 120,
+      "clockSeconds": 180,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -182,9 +223,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "2'",
-      "fallbackClock": 120,
-      "fallbackClockText": "2'",
+      "displayMinute": "3'",
+      "fallbackClock": 180,
+      "fallbackClockText": "3'",
       "group": "GROUP_F",
       "homeScore": 0,
       "homeTeam": {
@@ -195,19 +236,19 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-25T23:02:15.066936+00:00",
-      "lastUpdated": "2026-06-26T01:02:13Z",
+      "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+      "lastUpdated": "2026-06-26T01:02:40Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "2'",
-        "lastApiSync": "2026-06-25T23:02:15.066936+00:00",
-        "seconds": 120,
+        "displayMinute": "3'",
+        "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+        "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "2'"
+        "timer": "3'"
       },
-      "manualClockText": "2'",
+      "manualClockText": "3'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -232,7 +273,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 2,
+      "minute": 3,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -328,7 +369,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 120,
+      "clockSeconds": 180,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -337,9 +378,50 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "2'",
-      "fallbackClock": 120,
-      "fallbackClockText": "2'",
+      "displayMinute": "3'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "3'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 3,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "3:00",
+          "timerSeconds": 180,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 180,
+      "fallbackClockText": "3'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "3'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 3,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "3:00",
+          "timerSeconds": 180,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeScore": 0,
       "homeTeam": {
@@ -350,19 +432,19 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-25T23:02:15.066936+00:00",
-      "lastUpdated": "2026-06-26T01:02:13Z",
+      "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+      "lastUpdated": "2026-06-26T01:02:40Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "2'",
-        "lastApiSync": "2026-06-25T23:02:15.066936+00:00",
-        "seconds": 120,
+        "displayMinute": "3'",
+        "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+        "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "2'"
+        "timer": "3'"
       },
-      "manualClockText": "2'",
+      "manualClockText": "3'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -387,7 +469,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 2,
+      "minute": 3,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -483,7 +565,7 @@
         "shortName": "Sweden",
         "tla": "SWE"
       },
-      "clockSeconds": 120,
+      "clockSeconds": 180,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -492,9 +574,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "2'",
-      "fallbackClock": 120,
-      "fallbackClockText": "2'",
+      "displayMinute": "3'",
+      "fallbackClock": 180,
+      "fallbackClockText": "3'",
       "group": "GROUP_F",
       "homeScore": 0,
       "homeTeam": {
@@ -505,19 +587,19 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-25T23:02:15.066936+00:00",
-      "lastUpdated": "2026-06-26T01:02:13Z",
+      "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+      "lastUpdated": "2026-06-26T01:02:40Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "2'",
-        "lastApiSync": "2026-06-25T23:02:15.066936+00:00",
-        "seconds": 120,
+        "displayMinute": "3'",
+        "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+        "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "2'"
+        "timer": "3'"
       },
-      "manualClockText": "2'",
+      "manualClockText": "3'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -542,7 +624,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 2,
+      "minute": 3,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
