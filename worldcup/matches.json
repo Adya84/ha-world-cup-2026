@@ -31913,7 +31913,27 @@
         "shortName": "Germany",
         "tla": "GER"
       },
-      "clockSeconds": 2580,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "43'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 43,
+          "player": "Piero Hincapi\u00e9",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 2640,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -31922,7 +31942,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "43'",
+      "displayMinute": "44'",
       "events": [
         {
           "assist": "Florian Wirtz",
@@ -31959,10 +31979,28 @@
           "timer": "9:00",
           "timerSeconds": 540,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "43'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 43,
+          "player": "Piero Hincapi\u00e9",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 2580,
-      "fallbackClockText": "43'",
+      "fallbackClock": 2640,
+      "fallbackClockText": "44'",
       "goalEvents": [
         {
           "assist": "Florian Wirtz",
@@ -32027,8 +32065,8 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T20:43:25.042302+00:00",
-      "lastUpdated": "2026-06-25T22:43:22Z",
+      "lastApiSync": "2026-06-25T20:43:52.229984+00:00",
+      "lastUpdated": "2026-06-25T22:43:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -32056,14 +32094,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "43'",
-        "lastApiSync": "2026-06-25T20:43:25.042302+00:00",
-        "seconds": 2580,
+        "displayMinute": "44'",
+        "lastApiSync": "2026-06-25T20:43:52.229984+00:00",
+        "seconds": 2640,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "43'"
+        "timer": "44'"
       },
-      "manualClockText": "43'",
+      "manualClockText": "44'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -32088,7 +32126,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 43,
+      "minute": 44,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -32300,8 +32338,8 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T20:43:25.042302+00:00",
-      "lastUpdated": "2026-06-25T22:43:22Z",
+      "lastApiSync": "2026-06-25T20:43:52.229984+00:00",
+      "lastUpdated": "2026-06-25T22:43:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -32330,7 +32368,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "43'",
-        "lastApiSync": "2026-06-25T20:43:25.042302+00:00",
+        "lastApiSync": "2026-06-25T20:43:52.229984+00:00",
         "seconds": 2580,
         "source": "api_football_live_minute",
         "status": "1H",
