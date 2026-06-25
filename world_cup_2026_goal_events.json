@@ -17222,23 +17222,31 @@
     "utcDate": "2026-06-25T23:00:00Z"
   },
   "537362": {
+    "apiFootballFixtureId": 1539011,
     "awayScore": 0,
     "awayTeam": "Sweden",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Japan",
-    "phase_start": null,
+    "lastApiSync": "2026-06-25T23:00:52.559541+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-25T23:00:52.559541+00:00",
     "referees": [
       {
-        "id": 190010,
         "name": "Ivan Barton",
-        "nationality": null,
+        "type": "REFEREE"
+      },
+      {
+        "name": "I. Barton",
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-25T23:00:00Z"
   },
   "537363": {
