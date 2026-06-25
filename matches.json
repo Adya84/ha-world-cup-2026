@@ -31951,7 +31951,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2820,
+      "clockSeconds": 2880,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -31960,7 +31960,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "47'",
+      "displayMinute": "48'",
       "events": [
         {
           "assist": "Florian Wirtz",
@@ -32051,10 +32051,28 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Penalty cancelled",
+          "displayMinute": "47'",
+          "extra": null,
+          "isDisallowed": true,
+          "minute": 47,
+          "player": "Kai Havertz",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Var",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "47:00",
+          "timerSeconds": 2820,
+          "type": "Disallowed Goal"
         }
       ],
-      "fallbackClock": 2820,
-      "fallbackClockText": "47'",
+      "fallbackClock": 2880,
+      "fallbackClockText": "48'",
       "goalEvents": [
         {
           "assist": "Florian Wirtz",
@@ -32119,8 +32137,8 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T21:07:55.861716+00:00",
-      "lastUpdated": "2026-06-25T23:07:52Z",
+      "lastApiSync": "2026-06-25T21:08:25.662131+00:00",
+      "lastUpdated": "2026-06-25T23:08:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -32148,14 +32166,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "47'",
-        "lastApiSync": "2026-06-25T21:07:55.861716+00:00",
-        "seconds": 2820,
+        "displayMinute": "48'",
+        "lastApiSync": "2026-06-25T21:08:25.662131+00:00",
+        "seconds": 2880,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "47'"
+        "timer": "48'"
       },
-      "manualClockText": "47'",
+      "manualClockText": "48'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -32180,7 +32198,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 47,
+      "minute": 48,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -32291,7 +32309,7 @@
       "awayCorners": 2,
       "awayFouls": 4,
       "awayOffsides": null,
-      "awayPossession": "70%",
+      "awayPossession": "69%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -32419,7 +32437,7 @@
       "homeCorners": 3,
       "homeFouls": 7,
       "homeOffsides": null,
-      "homePossession": "30%",
+      "homePossession": "31%",
       "homeScore": 0,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -32430,15 +32448,15 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T21:07:55.861716+00:00",
-      "lastUpdated": "2026-06-25T23:07:52Z",
+      "lastApiSync": "2026-06-25T21:08:25.662131+00:00",
+      "lastUpdated": "2026-06-25T23:08:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
           "fouls": 4,
           "offsides": null,
-          "possession": "70%",
+          "possession": "69%",
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
@@ -32449,7 +32467,7 @@
           "corners": 3,
           "fouls": 7,
           "offsides": null,
-          "possession": "30%",
+          "possession": "31%",
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
@@ -32460,7 +32478,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "47'",
-        "lastApiSync": "2026-06-25T21:07:55.861716+00:00",
+        "lastApiSync": "2026-06-25T21:08:25.662131+00:00",
         "seconds": 2820,
         "source": "api_football_live_minute",
         "status": "2H",
