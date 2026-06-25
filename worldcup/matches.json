@@ -31902,7 +31902,7 @@
       },
       "awayCorners": 1,
       "awayFouls": 9,
-      "awayOffsides": null,
+      "awayOffsides": 0,
       "awayPossession": "58%",
       "awayScore": 1,
       "awayShotsOnGoal": 3,
@@ -32251,9 +32251,27 @@
           "type": "Goal"
         },
         {
-          "assist": "Jordy Caicedo",
+          "assist": "Felix Torres",
           "comments": null,
           "detail": "Substitution 4",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "John Yeboah",
+          "playerOff": "John Yeboah",
+          "playerOn": "Felix Torres",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Jordy Caicedo",
+          "comments": null,
+          "detail": "Substitution 5",
           "displayMinute": "85'",
           "extra": null,
           "isDisallowed": false,
@@ -32346,7 +32364,7 @@
       "group": "GROUP_E",
       "homeCorners": 3,
       "homeFouls": 11,
-      "homeOffsides": null,
+      "homeOffsides": 1,
       "homePossession": "42%",
       "homeScore": 2,
       "homeShotsOnGoal": 3,
@@ -32358,14 +32376,14 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T21:46:10.841485+00:00",
-      "lastUpdated": "2026-06-25T23:46:07Z",
+      "lastApiSync": "2026-06-25T21:46:37.223071+00:00",
+      "lastUpdated": "2026-06-25T23:46:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 9,
-          "offsides": null,
+          "offsides": 0,
           "possession": "58%",
           "redCards": 0,
           "shotsOffGoal": 1,
@@ -32376,7 +32394,7 @@
         "home": {
           "corners": 3,
           "fouls": 11,
-          "offsides": null,
+          "offsides": 1,
           "possession": "42%",
           "redCards": 0,
           "shotsOffGoal": 2,
@@ -32388,7 +32406,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "86'",
-        "lastApiSync": "2026-06-25T21:46:10.841485+00:00",
+        "lastApiSync": "2026-06-25T21:46:37.223071+00:00",
         "seconds": 5160,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -32613,9 +32631,27 @@
           "type": "Substitution"
         },
         {
-          "assist": "Jordy Caicedo",
+          "assist": "Felix Torres",
           "comments": null,
           "detail": "Substitution 4",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "John Yeboah",
+          "playerOff": "John Yeboah",
+          "playerOn": "Felix Torres",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Jordy Caicedo",
+          "comments": null,
+          "detail": "Substitution 5",
           "displayMinute": "85'",
           "extra": null,
           "isDisallowed": false,
@@ -33052,8 +33088,8 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T21:46:10.841485+00:00",
-      "lastUpdated": "2026-06-25T23:46:07Z",
+      "lastApiSync": "2026-06-25T21:46:37.223071+00:00",
+      "lastUpdated": "2026-06-25T23:46:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33082,7 +33118,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "85'",
-        "lastApiSync": "2026-06-25T21:46:10.841485+00:00",
+        "lastApiSync": "2026-06-25T21:46:37.223071+00:00",
         "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
