@@ -9814,16 +9814,19 @@ class WorldCup2026Panel extends HTMLElement {
           z-index: 2;
           display: grid;
           grid-template-columns:
-            minmax(210px, 1.28fr)
-            minmax(185px, 1.08fr)
-            minmax(170px, 0.96fr)
-            minmax(160px, 0.88fr)
-            minmax(170px, 0.94fr)
-            minmax(112px, 0.58fr);
-          grid-template-rows: 24px repeat(32, minmax(17px, 1fr));
-          column-gap: 30px;
-          min-width: 1120px;
-          min-height: 690px;
+            minmax(165px, 1.05fr)
+            minmax(145px, 0.9fr)
+            minmax(132px, 0.82fr)
+            minmax(124px, 0.78fr)
+            minmax(150px, 0.95fr)
+            minmax(124px, 0.78fr)
+            minmax(132px, 0.82fr)
+            minmax(145px, 0.9fr)
+            minmax(165px, 1.05fr);
+          grid-template-rows: 24px repeat(17, minmax(28px, 1fr));
+          column-gap: 18px;
+          min-width: 1320px;
+          min-height: 650px;
           padding: 0 8px 10px 0;
         }
 
@@ -9851,8 +9854,8 @@ class WorldCup2026Panel extends HTMLElement {
           content: "";
           position: absolute;
           top: 50%;
-          left: -30px;
-          width: 30px;
+          left: -18px;
+          width: 18px;
           height: 2px;
           transform: translateY(-50%);
           background: linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.74));
@@ -9865,11 +9868,23 @@ class WorldCup2026Panel extends HTMLElement {
           position: absolute;
           top: 12%;
           bottom: 12%;
-          left: -30px;
+          left: -18px;
           width: 2px;
           background: linear-gradient(180deg, rgba(255,255,255,0.2), rgba(255,255,255,0.58), rgba(255,255,255,0.2));
           border-radius: 999px;
           pointer-events: none;
+        }
+
+        .wc-page-knockout .wc-spider-right:not(.wc-spider-first)::before {
+          left: auto;
+          right: -18px;
+          width: 18px;
+          background: linear-gradient(270deg, rgba(255,255,255,0.2), rgba(255,255,255,0.74));
+        }
+
+        .wc-page-knockout .wc-spider-right:not(.wc-spider-first)::after {
+          left: auto;
+          right: -18px;
         }
 
         .wc-page-knockout .wc-spider-match {
@@ -9941,8 +9956,8 @@ class WorldCup2026Panel extends HTMLElement {
 
         .wc-page-knockout .wc-spider-final-label {
           position: relative;
-          grid-column: 6;
-          grid-row: 2 / span 32;
+          grid-column: 5;
+          grid-row: 11;
           align-self: center;
           display: grid;
           gap: 4px;
@@ -9959,12 +9974,12 @@ class WorldCup2026Panel extends HTMLElement {
         .wc-page-knockout .wc-spider-final-label::before {
           content: "";
           position: absolute;
-          top: 50%;
-          left: -30px;
-          width: 30px;
-          height: 2px;
-          transform: translateY(-50%);
-          background: linear-gradient(90deg, rgba(255,255,255,0.25), rgba(255,215,90,0.75));
+          top: -42px;
+          left: 50%;
+          width: 2px;
+          height: 34px;
+          transform: translateX(-50%);
+          background: linear-gradient(180deg, rgba(255,255,255,0.25), rgba(255,215,90,0.75));
           border-radius: 999px;
         }
 
@@ -9983,25 +9998,38 @@ class WorldCup2026Panel extends HTMLElement {
         @media (max-width: 1400px) {
           .wc-page-knockout .wc-knockout-spider {
             grid-template-columns:
-              minmax(196px, 1.22fr)
-              minmax(174px, 1fr)
-              minmax(160px, 0.9fr)
-              minmax(152px, 0.84fr)
-              minmax(160px, 0.9fr)
-              minmax(104px, 0.55fr);
-            column-gap: 24px;
-            min-width: 1040px;
-            min-height: 640px;
+              minmax(150px, 1.05fr)
+              minmax(132px, 0.9fr)
+              minmax(120px, 0.82fr)
+              minmax(112px, 0.78fr)
+              minmax(138px, 0.95fr)
+              minmax(112px, 0.78fr)
+              minmax(120px, 0.82fr)
+              minmax(132px, 0.9fr)
+              minmax(150px, 1.05fr);
+            column-gap: 14px;
+            min-width: 1180px;
+            min-height: 620px;
           }
 
-          .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::before,
-          .wc-page-knockout .wc-spider-final-label::before {
-            left: -24px;
-            width: 24px;
+          .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::before {
+            left: -14px;
+            width: 14px;
+          }
+
+          .wc-page-knockout .wc-spider-right:not(.wc-spider-first)::before {
+            left: auto;
+            right: -14px;
+            width: 14px;
           }
 
           .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::after {
-            left: -24px;
+            left: -14px;
+          }
+
+          .wc-page-knockout .wc-spider-right:not(.wc-spider-first)::after {
+            left: auto;
+            right: -14px;
           }
         }
 
@@ -20363,10 +20391,15 @@ class WorldCup2026Panel extends HTMLElement {
     // Prefer a valid FIFA match number when the feed provides one, because the
     // official venue schedule is keyed to match numbers 73-104.
     // Only derive from stage/index when the feed omits or provides an invalid number.
+    const key = this.normaliseKnockoutStage(stage || match?.stage);
+    if (key === "LAST_32") {
+      const seededMatchNumber = this.knockoutRound32MatchNumberFromTeams(match);
+      if (seededMatchNumber) return seededMatchNumber;
+    }
+
     const existing = this.fixtureMatchNumber(match);
     if (existing && existing >= 73 && existing <= 104) return existing;
 
-    const key = this.normaliseKnockoutStage(stage || match?.stage);
     const start = this.knockoutRoundStarts()[key];
     if (!start) return existing;
 
@@ -20953,6 +20986,64 @@ class WorldCup2026Panel extends HTMLElement {
     };
   }
 
+  knockoutRound32ResolvedSeedMap() {
+    const qualifiers = this.knockoutGroupQualifiers();
+    const teamKey = (team) => this.fixtureTeamKey(team);
+    const seedMap = this.knockoutRound32SeedMap();
+
+    return Object.fromEntries(Object.entries(seedMap).map(([matchNumber, seeds]) => {
+      const teams = seeds.map((seed) => {
+        const resolved = this.knockoutTeamFromSeed(seed, qualifiers);
+        const value = resolved && !String(resolved).toLowerCase().startsWith("3rd ")
+          ? resolved
+          : seed;
+        return { label: value, key: teamKey(value), seed };
+      });
+      return [Number(matchNumber), teams];
+    }));
+  }
+
+  knockoutRound32MatchNumberFromTeams(match) {
+    if (!match) return null;
+    const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
+    const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
+    const knownKeys = [homeKey, awayKey].filter((key) => key && key !== "tbc");
+    if (!knownKeys.length) return null;
+
+    const seeds = this.knockoutRound32ResolvedSeedMap();
+    for (const [matchNumber, teams] of Object.entries(seeds)) {
+      const first = teams?.[0]?.key || "";
+      const second = teams?.[1]?.key || "";
+      const seedKeys = [first, second].filter((key) => key && !key.includes("/"));
+
+      if (homeKey && awayKey && homeKey !== "tbc" && awayKey !== "tbc") {
+        if ((homeKey === first && awayKey === second) || (homeKey === second && awayKey === first)) {
+          return Number(matchNumber);
+        }
+      }
+
+      if (seedKeys.some((seedKey) => knownKeys.includes(seedKey))) {
+        return Number(matchNumber);
+      }
+    }
+
+    return null;
+  }
+
+  knockoutBracketDisplayOrder(stage) {
+    const key = this.normaliseKnockoutStage(stage);
+    const orders = {
+      // Display order follows the official bracket branches, not raw match
+      // number order. Each adjacent pair feeds the same next-round match.
+      LAST_32: [74, 77, 73, 75, 83, 84, 81, 82, 76, 78, 79, 80, 86, 88, 85, 87],
+      LAST_16: [89, 90, 93, 94, 91, 92, 95, 96],
+      QUARTER_FINALS: [97, 98, 99, 100],
+      SEMI_FINALS: [101, 102],
+      FINAL: [104],
+    };
+    return orders[key] || null;
+  }
+
   knockoutTeamFromSeed(seed, qualifiers) {
     const raw = String(seed || "").trim().toUpperCase();
     const direct = raw.match(/^(W|RU)\s*([A-L])$/);
@@ -20972,9 +21063,9 @@ class WorldCup2026Panel extends HTMLElement {
     return "";
   }
 
-  knockoutSeededPlaceholder(stage, index, match = null) {
+  knockoutSeededPlaceholder(stage, index, match = null, forcedMatchNumber = null) {
     if (stage !== "LAST_32") return null;
-    const matchNumber = this.knockoutDerivedMatchNumber(stage, index, match || {});
+    const matchNumber = forcedMatchNumber || this.knockoutDerivedMatchNumber(stage, index, match || {});
     const seeds = this.knockoutRound32SeedMap()[matchNumber];
     if (!seeds) return null;
     const qualifiers = this.knockoutGroupQualifiers();
@@ -21369,6 +21460,7 @@ class WorldCup2026Panel extends HTMLElement {
     const spiderSlotsForRound = (stage, matches) => {
       const expected = spiderCounts[stage] || matches.length || 1;
       const start = this.knockoutRoundStarts()[stage];
+      const displayOrder = this.knockoutBracketDisplayOrder(stage);
       const slots = Array.from({ length: expected }, () => null);
       const overflow = [];
       const isUnknownTeam = (team) => {
@@ -21376,9 +21468,58 @@ class WorldCup2026Panel extends HTMLElement {
         return !key || key === this.fixtureTeamKey(this.t("tbc")) || key === "tbc" || key.includes("winner") || key.includes("runner up");
       };
 
+      if (stage === "LAST_32" && displayOrder) {
+        const matchByNumber = new Map();
+        const unmatched = [];
+        const mergeSeededWithFixture = (seeded, fixtureMatch, matchNumber) => {
+          if (!fixtureMatch) return seeded;
+          const homeUnknown = isUnknownTeam(this.getHomeTeam(fixtureMatch));
+          const awayUnknown = isUnknownTeam(this.getAwayTeam(fixtureMatch));
+          return {
+            ...seeded,
+            ...fixtureMatch,
+            matchNumber,
+            fifaMatchNumber: matchNumber,
+            homeTeam: homeUnknown ? seeded.homeTeam : fixtureMatch.homeTeam,
+            awayTeam: awayUnknown ? seeded.awayTeam : fixtureMatch.awayTeam,
+            score: fixtureMatch.score || seeded.score,
+            source: fixtureMatch.source || seeded.source,
+          };
+        };
+
+        matches.forEach((match, fallbackIndex) => {
+          const number = this.knockoutDerivedMatchNumber(stage, fallbackIndex, match) || this.fixtureMatchNumber(match);
+          if (number && number >= 73 && number <= 88 && !matchByNumber.has(number)) {
+            matchByNumber.set(number, match);
+          } else {
+            unmatched.push(match);
+          }
+        });
+
+        displayOrder.forEach((matchNumber, index) => {
+          const fixtureMatch = matchByNumber.get(matchNumber) || null;
+          const seeded = this.knockoutSeededPlaceholder(stage, index, fixtureMatch, matchNumber);
+          if (!seeded) return;
+          slots[index] = mergeSeededWithFixture(seeded, fixtureMatch, matchNumber);
+        });
+
+        unmatched.forEach((match) => {
+          const emptyIndex = slots.findIndex((slot) => !slot || slot.source === "standings_knockout_placeholder");
+          if (emptyIndex < 0) return;
+          const matchNumber = displayOrder[emptyIndex];
+          const seeded = this.knockoutSeededPlaceholder(stage, emptyIndex, match, matchNumber);
+          slots[emptyIndex] = seeded ? mergeSeededWithFixture(seeded, match, matchNumber) : match;
+        });
+
+        return slots;
+      }
+
       matches.forEach((match, fallbackIndex) => {
         const matchNumber = this.knockoutDerivedMatchNumber(stage, fallbackIndex, match);
-        const slotIndex = start && matchNumber ? matchNumber - start : fallbackIndex;
+        const orderedIndex = displayOrder && matchNumber ? displayOrder.indexOf(matchNumber) : -1;
+        const slotIndex = orderedIndex >= 0
+          ? orderedIndex
+          : (start && matchNumber ? matchNumber - start : fallbackIndex);
         if (slotIndex >= 0 && slotIndex < expected && !slots[slotIndex]) {
           slots[slotIndex] = match;
         } else {
@@ -21403,7 +21544,8 @@ class WorldCup2026Panel extends HTMLElement {
         });
 
         slots.forEach((match, index) => {
-          const seeded = this.knockoutSeededPlaceholder(stage, index, match);
+          const orderedMatchNumber = displayOrder?.[index] || null;
+          const seeded = this.knockoutSeededPlaceholder(stage, index, match, orderedMatchNumber);
           if (!seeded) return;
           const safeSeeded = { ...seeded };
           [this.getHomeTeam(seeded), this.getAwayTeam(seeded)].forEach((team, teamIndex) => {
@@ -21466,6 +21608,32 @@ class WorldCup2026Panel extends HTMLElement {
         </div>
       `;
     };
+    const roundSlots = (stage) => {
+      const round = roundMatches.find((item) => item.stage === stage);
+      return spiderSlotsForRound(stage, round?.matches || []);
+    };
+    const left32 = roundSlots("LAST_32").slice(0, 8);
+    const right32 = roundSlots("LAST_32").slice(8, 16);
+    const left16 = roundSlots("LAST_16").slice(0, 4);
+    const right16 = roundSlots("LAST_16").slice(4, 8);
+    const leftQf = roundSlots("QUARTER_FINALS").slice(0, 2);
+    const rightQf = roundSlots("QUARTER_FINALS").slice(2, 4);
+    const leftSemi = roundSlots("SEMI_FINALS").slice(0, 1);
+    const rightSemi = roundSlots("SEMI_FINALS").slice(1, 2);
+    const finalSlot = roundSlots("FINAL")[0] || null;
+    const mirrorRound = (matches, column, rows, side, stageKey) => matches.map((match, index) => {
+      const classes = [
+        "wc-spider-slot",
+        side === "left" ? "wc-spider-left" : "wc-spider-right",
+        stageKey === "LAST_32" ? "wc-spider-first" : "",
+        stageKey === "SEMI_FINALS" ? "wc-spider-semi" : "",
+      ].filter(Boolean).join(" ");
+      return `
+        <div class="${classes}" style="grid-column:${column};grid-row:${rows[index]};">
+          ${spiderMatch(match)}
+        </div>
+      `;
+    }).join("");
     const detailMatches = [];
     roundMatches.forEach(({ stage, label, matches }) => {
       const displayMatches = stage === "LAST_32"
@@ -21488,27 +21656,26 @@ class WorldCup2026Panel extends HTMLElement {
       <div class="wc-card wc-web-card">
         <div class="wc-section-title">Knockout Stage</div>
         <div class="wc-knockout-spider">
-          ${roundMatches.map(({ label }, roundIndex) => `
-            <div class="wc-spider-round-title" style="grid-column:${roundIndex + 1};">${label}</div>
-          `).join("")}
-          ${roundMatches.map(({ stage, matches }, roundIndex) => {
-            const slots = spiderSlotsForRound(stage, matches);
-            const expected = slots.length;
-            const span = 32 / expected;
-            return Array.from({ length: expected }, (_, index) => {
-              const start = (index * span) + 2;
-              const classes = [
-                "wc-spider-slot",
-                roundIndex === 0 ? "wc-spider-first" : "",
-                roundIndex === roundMatches.length - 1 ? "wc-spider-final" : "",
-              ].filter(Boolean).join(" ");
-              return `
-                <div class="${classes}" style="grid-column:${roundIndex + 1};grid-row:${start} / span ${span};">
-                  ${spiderMatch(slots[index])}
-                </div>
-              `;
-            }).join("");
-          }).join("")}
+          <div class="wc-spider-round-title" style="grid-column:1;">${this.t("round32")}</div>
+          <div class="wc-spider-round-title" style="grid-column:2;">${this.t("round16")}</div>
+          <div class="wc-spider-round-title" style="grid-column:3;">${this.t("quarterFinals")}</div>
+          <div class="wc-spider-round-title" style="grid-column:4;">${this.t("semiFinals")}</div>
+          <div class="wc-spider-round-title wc-spider-final-title" style="grid-column:5;">${this.t("final")}</div>
+          <div class="wc-spider-round-title" style="grid-column:6;">${this.t("semiFinals")}</div>
+          <div class="wc-spider-round-title" style="grid-column:7;">${this.t("quarterFinals")}</div>
+          <div class="wc-spider-round-title" style="grid-column:8;">${this.t("round16")}</div>
+          <div class="wc-spider-round-title" style="grid-column:9;">${this.t("round32")}</div>
+          ${mirrorRound(left32, 1, [2, 4, 6, 8, 11, 13, 15, 17], "left", "LAST_32")}
+          ${mirrorRound(left16, 2, [3, 7, 12, 16], "left", "LAST_16")}
+          ${mirrorRound(leftQf, 3, [5, 14], "left", "QUARTER_FINALS")}
+          ${mirrorRound(leftSemi, 4, [9], "left", "SEMI_FINALS")}
+          ${mirrorRound(rightSemi, 6, [9], "right", "SEMI_FINALS")}
+          ${mirrorRound(rightQf, 7, [5, 14], "right", "QUARTER_FINALS")}
+          ${mirrorRound(right16, 8, [3, 7, 12, 16], "right", "LAST_16")}
+          ${mirrorRound(right32, 9, [2, 4, 6, 8, 11, 13, 15, 17], "right", "LAST_32")}
+          <div class="wc-spider-slot wc-spider-final" style="grid-column:5;grid-row:8;">
+            ${spiderMatch(finalSlot)}
+          </div>
           <div class="wc-spider-final-label">
             <span>${this.esc(this.staticText("winner"))}</span>
             <strong>${this.t("tbc")}</strong>
