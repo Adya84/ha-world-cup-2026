@@ -17203,12 +17203,12 @@
   },
   "537361": {
     "apiFootballFixtureId": 1489412,
-    "awayScore": 1,
+    "awayScore": 2,
     "awayTeam": "Netherlands",
-    "base_seconds": 420,
+    "base_seconds": 480,
     "clock_active": false,
-    "clock_seconds": 420,
-    "displayMinute": "7'",
+    "clock_seconds": 480,
+    "displayMinute": "8'",
     "events": [
       {
         "assist": null,
@@ -17227,6 +17227,24 @@
         "timer": "3:00",
         "timerSeconds": 180,
         "type": "Own Goal"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "7'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 7,
+        "player": "Brian Brobbey",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Netherlands",
+        "timer": "7:00",
+        "timerSeconds": 420,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -17252,13 +17270,36 @@
         "timer": "3:00",
         "timerSeconds": 180,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Netherlands",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "7'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "Tunisia",
+        "isDisallowed": false,
+        "matchId": 537361,
+        "matchUtcDate": "2026-06-25T23:00:00Z",
+        "minute": 7,
+        "player": "Brian Brobbey",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Netherlands",
+        "timer": "7:00",
+        "timerSeconds": 420,
+        "type": "Goal"
       }
     ],
     "homeScore": 0,
     "homeTeam": "Tunisia",
-    "lastApiSync": "2026-06-25T23:07:04.892360+00:00",
-    "manualClockText": "7'",
-    "phase_start": "2026-06-25T23:07:04.892360+00:00",
+    "lastApiSync": "2026-06-25T23:07:30.794661+00:00",
+    "manualClockText": "8'",
+    "phase_start": "2026-06-25T23:07:30.794661+00:00",
     "referees": [
       {
         "name": "Katia Garc\u00eda",
@@ -17285,9 +17326,9 @@
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Japan",
-    "lastApiSync": "2026-06-25T23:07:04.892360+00:00",
+    "lastApiSync": "2026-06-25T23:07:30.794661+00:00",
     "manualClockText": "7'",
-    "phase_start": "2026-06-25T23:07:04.892360+00:00",
+    "phase_start": "2026-06-25T23:07:30.794661+00:00",
     "referees": [
       {
         "name": "Ivan Barton",
