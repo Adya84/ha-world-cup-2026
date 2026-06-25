@@ -32086,7 +32086,7 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T23:07:04.833847+00:00",
+      "lastApiSync": "2026-06-25T23:07:30.741359+00:00",
       "lastUpdated": "2026-06-25T23:59:26Z",
       "liveStatistics": {
         "away": {
@@ -32772,7 +32772,7 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T23:07:04.834110+00:00",
+      "lastApiSync": "2026-06-25T23:07:30.741648+00:00",
       "lastUpdated": "2026-06-25T23:59:07Z",
       "liveStatistics": {
         "away": {
@@ -33050,7 +33050,7 @@
       "awayFouls": 0,
       "awayOffsides": null,
       "awayPossession": "71%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
@@ -33059,7 +33059,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33068,7 +33068,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
+      "displayMinute": "8'",
       "events": [
         {
           "assist": null,
@@ -33087,10 +33087,28 @@
           "timer": "3:00",
           "timerSeconds": 180,
           "type": "Own Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": "Brian Brobbey",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
       "goalEvents": [
         {
           "assist": null,
@@ -33114,6 +33132,29 @@
           "timer": "3:00",
           "timerSeconds": 180,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Netherlands",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Tunisia",
+          "isDisallowed": false,
+          "matchId": 537361,
+          "matchUtcDate": "2026-06-25T23:00:00Z",
+          "minute": 7,
+          "player": "Brian Brobbey",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -33132,8 +33173,8 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-25T23:07:04.892360+00:00",
-      "lastUpdated": "2026-06-26T01:07:01Z",
+      "lastApiSync": "2026-06-25T23:07:30.794661+00:00",
+      "lastUpdated": "2026-06-26T01:07:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33161,14 +33202,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-06-25T23:07:04.892360+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-06-25T23:07:30.794661+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -33193,7 +33234,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33222,11 +33263,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "halfTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "winner": "AWAY_TEAM"
@@ -33321,8 +33362,8 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-25T23:07:04.892360+00:00",
-      "lastUpdated": "2026-06-26T01:07:01Z",
+      "lastApiSync": "2026-06-25T23:07:30.794661+00:00",
+      "lastUpdated": "2026-06-26T01:07:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33351,7 +33392,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "7'",
-        "lastApiSync": "2026-06-25T23:07:04.892360+00:00",
+        "lastApiSync": "2026-06-25T23:07:30.794661+00:00",
         "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
