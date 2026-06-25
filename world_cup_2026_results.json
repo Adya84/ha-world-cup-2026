@@ -55422,8 +55422,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-25T00:01:55.974473+00:00",
-      "lastUpdated": "2026-06-25T02:01:52Z",
+      "lastApiSync": "2026-06-25T00:02:26.371552+00:00",
+      "lastUpdated": "2026-06-25T02:02:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -55452,7 +55452,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T00:01:55.974473+00:00",
+        "lastApiSync": "2026-06-25T00:02:26.371552+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -56484,8 +56484,8 @@
     },
     {
       "apiFootballFixtureId": 1489406,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -56879,8 +56879,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -56968,8 +56966,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-25T00:01:56.057629+00:00",
-      "lastUpdated": "2026-06-25T02:01:52Z",
+      "lastApiSync": "2026-06-25T00:02:26.372577+00:00",
+      "lastUpdated": "2026-06-25T02:02:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -56996,12 +56994,12 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T00:01:56.057629+00:00",
+        "lastApiSync": "2026-06-25T00:02:26.372577+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
@@ -57683,52 +57681,7 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Miami",
-          "cloudCoverage": 64.8,
-          "condition": "partlycloudy_day",
-          "country": "USA",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-24T23:58:19.420341+00:00",
-          "humidity": 65.6,
-          "latitude": 25.958,
-          "longitude": -80.2389,
-          "name": "Hard Rock Stadium weather",
-          "observedAt": "2026-06-24T23:00:00Z",
-          "pressure": 1016.5,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "Hard Rock Stadium",
-          "temperature": 29.6,
-          "temperatureUnit": "C",
-          "windBearing": 2.1,
-          "windSpeed": 3.2,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Miami",
-        "cloudCoverage": 64.8,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:58:19.420341+00:00",
-        "humidity": 65.6,
-        "latitude": 25.958,
-        "longitude": -80.2389,
-        "name": "Hard Rock Stadium weather",
-        "observedAt": "2026-06-24T23:00:00Z",
-        "pressure": 1016.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Hard Rock Stadium",
-        "temperature": 29.6,
-        "temperatureUnit": "C",
-        "windBearing": 2.1,
-        "windSpeed": 3.2,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 3,
       "minute": 90,
@@ -57778,7 +57731,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "K. Tierney",
@@ -57966,29 +57919,6 @@
         "city": "Miami Gardens",
         "id": null,
         "name": "Hard Rock Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Miami",
-        "cloudCoverage": 64.8,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:58:19.420341+00:00",
-        "humidity": 65.6,
-        "latitude": 25.958,
-        "longitude": -80.2389,
-        "name": "Hard Rock Stadium weather",
-        "observedAt": "2026-06-24T23:00:00Z",
-        "pressure": 1016.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Hard Rock Stadium",
-        "temperature": 29.6,
-        "temperatureUnit": "C",
-        "windBearing": 2.1,
-        "windSpeed": 3.2,
-        "windSpeedUnit": "m/s"
       }
     }
   ],
@@ -113415,8 +113345,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-25T00:01:55.974473+00:00",
-      "lastUpdated": "2026-06-25T02:01:52Z",
+      "lastApiSync": "2026-06-25T00:02:26.371552+00:00",
+      "lastUpdated": "2026-06-25T02:02:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -113445,7 +113375,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T00:01:55.974473+00:00",
+        "lastApiSync": "2026-06-25T00:02:26.371552+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -114477,8 +114407,8 @@
     },
     {
       "apiFootballFixtureId": 1489406,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -114872,8 +114802,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Rayan",
@@ -114961,8 +114889,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-25T00:01:56.057629+00:00",
-      "lastUpdated": "2026-06-25T02:01:52Z",
+      "lastApiSync": "2026-06-25T00:02:26.372577+00:00",
+      "lastUpdated": "2026-06-25T02:02:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -114989,12 +114917,12 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T00:01:56.057629+00:00",
+        "lastApiSync": "2026-06-25T00:02:26.372577+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
@@ -115676,52 +115604,7 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Miami",
-          "cloudCoverage": 64.8,
-          "condition": "partlycloudy_day",
-          "country": "USA",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-24T23:58:19.420341+00:00",
-          "humidity": 65.6,
-          "latitude": 25.958,
-          "longitude": -80.2389,
-          "name": "Hard Rock Stadium weather",
-          "observedAt": "2026-06-24T23:00:00Z",
-          "pressure": 1016.5,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "Hard Rock Stadium",
-          "temperature": 29.6,
-          "temperatureUnit": "C",
-          "windBearing": 2.1,
-          "windSpeed": 3.2,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Miami",
-        "cloudCoverage": 64.8,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:58:19.420341+00:00",
-        "humidity": 65.6,
-        "latitude": 25.958,
-        "longitude": -80.2389,
-        "name": "Hard Rock Stadium weather",
-        "observedAt": "2026-06-24T23:00:00Z",
-        "pressure": 1016.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Hard Rock Stadium",
-        "temperature": 29.6,
-        "temperatureUnit": "C",
-        "windBearing": 2.1,
-        "windSpeed": 3.2,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 3,
       "minute": 90,
@@ -115771,7 +115654,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "K. Tierney",
@@ -115959,29 +115842,6 @@
         "city": "Miami Gardens",
         "id": null,
         "name": "Hard Rock Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Miami",
-        "cloudCoverage": 64.8,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:58:19.420341+00:00",
-        "humidity": 65.6,
-        "latitude": 25.958,
-        "longitude": -80.2389,
-        "name": "Hard Rock Stadium weather",
-        "observedAt": "2026-06-24T23:00:00Z",
-        "pressure": 1016.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Hard Rock Stadium",
-        "temperature": 29.6,
-        "temperatureUnit": "C",
-        "windBearing": 2.1,
-        "windSpeed": 3.2,
-        "windSpeedUnit": "m/s"
       }
     }
   ]
