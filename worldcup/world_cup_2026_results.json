@@ -61736,8 +61736,8 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T21:58:15.846131+00:00",
-      "lastUpdated": "2026-06-25T23:58:13Z",
+      "lastApiSync": "2026-06-25T21:58:41.492406+00:00",
+      "lastUpdated": "2026-06-25T23:58:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -61766,7 +61766,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T21:58:15.846131+00:00",
+        "lastApiSync": "2026-06-25T21:58:41.492406+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -62797,8 +62797,8 @@
     },
     {
       "apiFootballFixtureId": 1489409,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -63156,8 +63156,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Yan Diomande",
@@ -63222,8 +63220,8 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T21:58:15.846131+00:00",
-      "lastUpdated": "2026-06-25T23:58:13Z",
+      "lastApiSync": "2026-06-25T21:58:41.455827+00:00",
+      "lastUpdated": "2026-06-25T23:58:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -63250,12 +63248,12 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T21:58:15.846131+00:00",
+        "lastApiSync": "2026-06-25T21:58:41.455827+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
@@ -63878,52 +63876,7 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Philadelphia",
-          "cloudCoverage": 68.7,
-          "condition": "partlycloudy_day",
-          "country": "USA",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-25T21:52:27.407611+00:00",
-          "humidity": 32.8,
-          "latitude": 39.9008,
-          "longitude": -75.1675,
-          "name": "Lincoln Financial Field weather",
-          "observedAt": "2026-06-25T21:00:00Z",
-          "pressure": 1015.6,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "Lincoln Financial Field",
-          "temperature": 30.2,
-          "temperatureUnit": "C",
-          "windBearing": 201.2,
-          "windSpeed": 4.4,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 68.7,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-25T21:52:27.407611+00:00",
-        "humidity": 32.8,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-06-25T21:00:00Z",
-        "pressure": 1015.6,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 30.2,
-        "temperatureUnit": "C",
-        "windBearing": 201.2,
-        "windSpeed": 4.4,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 3,
       "minute": 90,
@@ -63973,7 +63926,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Christ Inao Oula\u00ef",
@@ -64161,29 +64114,6 @@
         "city": "Philadelphia",
         "id": null,
         "name": "Lincoln Financial Field"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 68.7,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-25T21:52:27.407611+00:00",
-        "humidity": 32.8,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-06-25T21:00:00Z",
-        "pressure": 1015.6,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 30.2,
-        "temperatureUnit": "C",
-        "windBearing": 201.2,
-        "windSpeed": 4.4,
-        "windSpeedUnit": "m/s"
       }
     }
   ],
@@ -125924,8 +125854,8 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T21:58:15.846131+00:00",
-      "lastUpdated": "2026-06-25T23:58:13Z",
+      "lastApiSync": "2026-06-25T21:58:41.492406+00:00",
+      "lastUpdated": "2026-06-25T23:58:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -125954,7 +125884,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T21:58:15.846131+00:00",
+        "lastApiSync": "2026-06-25T21:58:41.492406+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -126985,8 +126915,8 @@
     },
     {
       "apiFootballFixtureId": 1489409,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -127344,8 +127274,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Yan Diomande",
@@ -127410,8 +127338,8 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T21:58:15.846131+00:00",
-      "lastUpdated": "2026-06-25T23:58:13Z",
+      "lastApiSync": "2026-06-25T21:58:41.455827+00:00",
+      "lastUpdated": "2026-06-25T23:58:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -127438,12 +127366,12 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T21:58:15.846131+00:00",
+        "lastApiSync": "2026-06-25T21:58:41.455827+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
@@ -128066,52 +127994,7 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Philadelphia",
-          "cloudCoverage": 68.7,
-          "condition": "partlycloudy_day",
-          "country": "USA",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-25T21:52:27.407611+00:00",
-          "humidity": 32.8,
-          "latitude": 39.9008,
-          "longitude": -75.1675,
-          "name": "Lincoln Financial Field weather",
-          "observedAt": "2026-06-25T21:00:00Z",
-          "pressure": 1015.6,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "Lincoln Financial Field",
-          "temperature": 30.2,
-          "temperatureUnit": "C",
-          "windBearing": 201.2,
-          "windSpeed": 4.4,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 68.7,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-25T21:52:27.407611+00:00",
-        "humidity": 32.8,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-06-25T21:00:00Z",
-        "pressure": 1015.6,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 30.2,
-        "temperatureUnit": "C",
-        "windBearing": 201.2,
-        "windSpeed": 4.4,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 3,
       "minute": 90,
@@ -128161,7 +128044,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Christ Inao Oula\u00ef",
@@ -128349,29 +128232,6 @@
         "city": "Philadelphia",
         "id": null,
         "name": "Lincoln Financial Field"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 68.7,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-25T21:52:27.407611+00:00",
-        "humidity": 32.8,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-06-25T21:00:00Z",
-        "pressure": 1015.6,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 30.2,
-        "temperatureUnit": "C",
-        "windBearing": 201.2,
-        "windSpeed": 4.4,
-        "windSpeedUnit": "m/s"
       }
     }
   ]
