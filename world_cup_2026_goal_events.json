@@ -2003,18 +2003,62 @@
   },
   "537331": {
     "apiFootballFixtureId": 1539010,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Mexico",
     "base_seconds": 3300,
     "clock_active": false,
     "clock_seconds": 3300,
     "displayMinute": "55'",
-    "goalEvents": [],
+    "events": [
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "55'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 55,
+        "player": "M. Chavez Garcia",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Mexico",
+        "timer": "55:00",
+        "timerSeconds": 3300,
+        "type": "Goal"
+      }
+    ],
+    "goalEvents": [
+      {
+        "assist": null,
+        "awayTeam": "Mexico",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "55'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Czechia",
+        "isDisallowed": false,
+        "matchId": 537331,
+        "matchUtcDate": "2026-06-25T01:00:00Z",
+        "minute": 55,
+        "player": "M. Chavez Garcia",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Mexico",
+        "timer": "55:00",
+        "timerSeconds": 3300,
+        "type": "Goal"
+      }
+    ],
     "homeScore": 0,
     "homeTeam": "Czechia",
-    "lastApiSync": "2026-06-25T02:15:12.171972+00:00",
+    "lastApiSync": "2026-06-25T02:15:37.657535+00:00",
     "manualClockText": "55'",
-    "phase_start": "2026-06-25T02:15:12.171972+00:00",
+    "phase_start": "2026-06-25T02:15:37.657535+00:00",
     "referees": [
       {
         "name": "Yael Falc\u00f3n",
@@ -2034,10 +2078,10 @@
     "apiFootballFixtureId": 1489407,
     "awayScore": 0,
     "awayTeam": "Korea Republic",
-    "base_seconds": 3240,
+    "base_seconds": 3300,
     "clock_active": false,
-    "clock_seconds": 3240,
-    "displayMinute": "54'",
+    "clock_seconds": 3300,
+    "displayMinute": "55'",
     "events": [
       {
         "assist": "Son Heung-Min",
@@ -2097,9 +2141,9 @@
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "South Africa",
-    "lastApiSync": "2026-06-25T02:15:12.171972+00:00",
-    "manualClockText": "54'",
-    "phase_start": "2026-06-25T02:15:12.171972+00:00",
+    "lastApiSync": "2026-06-25T02:15:37.657535+00:00",
+    "manualClockText": "55'",
+    "phase_start": "2026-06-25T02:15:37.657535+00:00",
     "referees": [
       {
         "name": "Facundo Tello",
