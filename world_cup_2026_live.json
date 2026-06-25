@@ -23,7 +23,7 @@
         "shortName": "Mexico",
         "tla": "MEX"
       },
-      "clockSeconds": 3720,
+      "clockSeconds": 3780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "62'",
+      "displayMinute": "63'",
       "events": [
         {
           "assist": "L. Romo",
@@ -87,10 +87,28 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Goal"
+        },
+        {
+          "assist": "S. Gimenez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "G. Martinez",
+          "playerOff": "G. Martinez",
+          "playerOn": "S. Gimenez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3720,
-      "fallbackClockText": "62'",
+      "fallbackClock": 3780,
+      "fallbackClockText": "63'",
       "goalEvents": [
         {
           "assist": "L. Romo",
@@ -155,8 +173,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:22:53.279179+00:00",
-      "lastUpdated": "2026-06-25T04:22:49Z",
+      "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
+      "lastUpdated": "2026-06-25T04:23:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -184,14 +202,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "62'",
-        "lastApiSync": "2026-06-25T02:22:53.279179+00:00",
-        "seconds": 3720,
+        "displayMinute": "63'",
+        "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
+        "seconds": 3780,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "62'"
+        "timer": "63'"
       },
-      "manualClockText": "62'",
+      "manualClockText": "63'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -216,7 +234,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 62,
+      "minute": 63,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -282,6 +300,24 @@
           "timer": "56:00",
           "timerSeconds": 3360,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. Gimenez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "G. Martinez",
+          "playerOff": "G. Martinez",
+          "playerOn": "S. Gimenez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-25T01:00:00Z",
@@ -329,7 +365,7 @@
       "awayOffsides": 0,
       "awayPossession": "62%",
       "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/772.png",
         "id": 772,
@@ -337,7 +373,7 @@
         "shortName": "Korea Republic",
         "tla": "KOR"
       },
-      "clockSeconds": 3720,
+      "clockSeconds": 3780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -346,7 +382,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "62'",
+      "displayMinute": "63'",
       "events": [
         {
           "assist": "Son Heung-Min",
@@ -401,10 +437,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Moremi",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "O. Appollis",
+          "playerOff": "O. Appollis",
+          "playerOn": "T. Moremi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3720,
-      "fallbackClockText": "62'",
+      "fallbackClock": 3780,
+      "fallbackClockText": "63'",
       "group": "GROUP_A",
       "homeCorners": 4,
       "homeFouls": 4,
@@ -420,8 +474,8 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:22:53.279179+00:00",
-      "lastUpdated": "2026-06-25T04:22:49Z",
+      "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
+      "lastUpdated": "2026-06-25T04:23:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -431,8 +485,8 @@
           "possession": "62%",
           "redCards": null,
           "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 4,
+          "shotsOnGoal": 2,
+          "totalShots": 5,
           "yellowCards": null
         },
         "home": {
@@ -449,14 +503,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "62'",
-        "lastApiSync": "2026-06-25T02:22:53.279179+00:00",
-        "seconds": 3720,
+        "displayMinute": "63'",
+        "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
+        "seconds": 3780,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "62'"
+        "timer": "63'"
       },
-      "manualClockText": "62'",
+      "manualClockText": "63'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -481,7 +535,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 62,
+      "minute": 63,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -582,6 +636,24 @@
           "team": "South Korea",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Moremi",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "O. Appollis",
+          "playerOff": "O. Appollis",
+          "playerOn": "T. Moremi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "62:00",
+          "timerSeconds": 3720,
           "type": "Substitution"
         }
       ],
@@ -640,7 +712,7 @@
         "shortName": "Mexico",
         "tla": "MEX"
       },
-      "clockSeconds": 3720,
+      "clockSeconds": 3780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -649,7 +721,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "62'",
+      "displayMinute": "63'",
       "events": [
         {
           "assist": "L. Romo",
@@ -704,10 +776,28 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Goal"
+        },
+        {
+          "assist": "S. Gimenez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "G. Martinez",
+          "playerOff": "G. Martinez",
+          "playerOn": "S. Gimenez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3720,
-      "fallbackClockText": "62'",
+      "fallbackClock": 3780,
+      "fallbackClockText": "63'",
       "goalEvents": [
         {
           "assist": "L. Romo",
@@ -772,8 +862,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:22:53.279179+00:00",
-      "lastUpdated": "2026-06-25T04:22:49Z",
+      "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
+      "lastUpdated": "2026-06-25T04:23:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -801,14 +891,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "62'",
-        "lastApiSync": "2026-06-25T02:22:53.279179+00:00",
-        "seconds": 3720,
+        "displayMinute": "63'",
+        "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
+        "seconds": 3780,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "62'"
+        "timer": "63'"
       },
-      "manualClockText": "62'",
+      "manualClockText": "63'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -833,7 +923,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 62,
+      "minute": 63,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -899,6 +989,24 @@
           "timer": "56:00",
           "timerSeconds": 3360,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. Gimenez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "G. Martinez",
+          "playerOff": "G. Martinez",
+          "playerOn": "S. Gimenez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-25T01:00:00Z",
@@ -946,7 +1054,7 @@
       "awayOffsides": 0,
       "awayPossession": "62%",
       "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/772.png",
         "id": 772,
@@ -954,7 +1062,7 @@
         "shortName": "Korea Republic",
         "tla": "KOR"
       },
-      "clockSeconds": 3720,
+      "clockSeconds": 3780,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -963,7 +1071,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "62'",
+      "displayMinute": "63'",
       "events": [
         {
           "assist": "Son Heung-Min",
@@ -1018,10 +1126,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Moremi",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "O. Appollis",
+          "playerOff": "O. Appollis",
+          "playerOn": "T. Moremi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3720,
-      "fallbackClockText": "62'",
+      "fallbackClock": 3780,
+      "fallbackClockText": "63'",
       "group": "GROUP_A",
       "homeCorners": 4,
       "homeFouls": 4,
@@ -1037,8 +1163,8 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:22:53.279179+00:00",
-      "lastUpdated": "2026-06-25T04:22:49Z",
+      "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
+      "lastUpdated": "2026-06-25T04:23:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1048,8 +1174,8 @@
           "possession": "62%",
           "redCards": null,
           "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 4,
+          "shotsOnGoal": 2,
+          "totalShots": 5,
           "yellowCards": null
         },
         "home": {
@@ -1066,14 +1192,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "62'",
-        "lastApiSync": "2026-06-25T02:22:53.279179+00:00",
-        "seconds": 3720,
+        "displayMinute": "63'",
+        "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
+        "seconds": 3780,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "62'"
+        "timer": "63'"
       },
-      "manualClockText": "62'",
+      "manualClockText": "63'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -1098,7 +1224,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 62,
+      "minute": 63,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1199,6 +1325,24 @@
           "team": "South Korea",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Moremi",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "O. Appollis",
+          "playerOff": "O. Appollis",
+          "playerOn": "T. Moremi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "62:00",
+          "timerSeconds": 3720,
           "type": "Substitution"
         }
       ],
