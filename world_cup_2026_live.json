@@ -79,7 +79,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3840,
+      "clockSeconds": 3900,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -88,7 +88,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "64'",
+      "displayMinute": "65'",
       "events": [
         {
           "assist": "Florian Wirtz",
@@ -253,8 +253,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 3840,
-      "fallbackClockText": "64'",
+      "fallbackClock": 3900,
+      "fallbackClockText": "65'",
       "goalEvents": [
         {
           "assist": "Florian Wirtz",
@@ -319,8 +319,8 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T21:24:38.069601+00:00",
-      "lastUpdated": "2026-06-25T23:24:34Z",
+      "lastApiSync": "2026-06-25T21:25:08.738987+00:00",
+      "lastUpdated": "2026-06-25T23:25:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -348,14 +348,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "64'",
-        "lastApiSync": "2026-06-25T21:24:38.069601+00:00",
-        "seconds": 3840,
+        "displayMinute": "65'",
+        "lastApiSync": "2026-06-25T21:25:08.738987+00:00",
+        "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "64'"
+        "timer": "65'"
       },
-      "manualClockText": "64'",
+      "manualClockText": "65'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -380,7 +380,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 64,
+      "minute": 65,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -528,7 +528,7 @@
       "awayFouls": 4,
       "awayOffsides": 1,
       "awayPossession": "66%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/787.svg",
@@ -557,7 +557,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -566,7 +566,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": "Yan Diomande",
@@ -639,10 +639,28 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "Nicolas P\u00e9p\u00e9",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Ivory Coast",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": "Yan Diomande",
@@ -666,6 +684,29 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Ivory Coast",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "64'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Cura\u00e7ao",
+          "isDisallowed": false,
+          "matchId": 537356,
+          "matchUtcDate": "2026-06-25T20:00:00Z",
+          "minute": 64,
+          "player": "Nicolas P\u00e9p\u00e9",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Ivory Coast",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -684,8 +725,8 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T21:24:38.069601+00:00",
-      "lastUpdated": "2026-06-25T23:24:34Z",
+      "lastApiSync": "2026-06-25T21:25:08.738987+00:00",
+      "lastUpdated": "2026-06-25T23:25:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -713,14 +754,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-25T21:24:38.069601+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-25T21:25:08.738987+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -745,7 +786,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -774,7 +815,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "halfTime": {
@@ -942,7 +983,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3840,
+      "clockSeconds": 3900,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -951,7 +992,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "64'",
+      "displayMinute": "65'",
       "events": [
         {
           "assist": "Florian Wirtz",
@@ -1116,8 +1157,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 3840,
-      "fallbackClockText": "64'",
+      "fallbackClock": 3900,
+      "fallbackClockText": "65'",
       "goalEvents": [
         {
           "assist": "Florian Wirtz",
@@ -1182,8 +1223,8 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T21:24:38.069601+00:00",
-      "lastUpdated": "2026-06-25T23:24:34Z",
+      "lastApiSync": "2026-06-25T21:25:08.738987+00:00",
+      "lastUpdated": "2026-06-25T23:25:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1211,14 +1252,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "64'",
-        "lastApiSync": "2026-06-25T21:24:38.069601+00:00",
-        "seconds": 3840,
+        "displayMinute": "65'",
+        "lastApiSync": "2026-06-25T21:25:08.738987+00:00",
+        "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "64'"
+        "timer": "65'"
       },
-      "manualClockText": "64'",
+      "manualClockText": "65'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -1243,7 +1284,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 64,
+      "minute": 65,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1391,7 +1432,7 @@
       "awayFouls": 4,
       "awayOffsides": 1,
       "awayPossession": "66%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/787.svg",
@@ -1420,7 +1461,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1429,7 +1470,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": "Yan Diomande",
@@ -1502,10 +1543,28 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "Nicolas P\u00e9p\u00e9",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Ivory Coast",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": "Yan Diomande",
@@ -1529,6 +1588,29 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Ivory Coast",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "64'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Cura\u00e7ao",
+          "isDisallowed": false,
+          "matchId": 537356,
+          "matchUtcDate": "2026-06-25T20:00:00Z",
+          "minute": 64,
+          "player": "Nicolas P\u00e9p\u00e9",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Ivory Coast",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -1547,8 +1629,8 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T21:24:38.069601+00:00",
-      "lastUpdated": "2026-06-25T23:24:34Z",
+      "lastApiSync": "2026-06-25T21:25:08.738987+00:00",
+      "lastUpdated": "2026-06-25T23:25:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1576,14 +1658,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-25T21:24:38.069601+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-25T21:25:08.738987+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -1608,7 +1690,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1637,7 +1719,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "halfTime": {
