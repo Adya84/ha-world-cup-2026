@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5160,
+      "clockSeconds": 5340,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "86'",
+      "displayMinute": "89'",
       "events": [
         {
           "assist": "L. Romo",
@@ -251,10 +251,46 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Chory",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "L. Cerv",
+          "playerOff": "L. Cerv",
+          "playerOn": "T. Chory",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Sojka",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "T. Soucek",
+          "playerOff": "T. Soucek",
+          "playerOn": "A. Sojka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5160,
-      "fallbackClockText": "86'",
+      "fallbackClock": 5340,
+      "fallbackClockText": "89'",
       "goalEvents": [
         {
           "assist": "L. Romo",
@@ -319,8 +355,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:49:02.893690+00:00",
-      "lastUpdated": "2026-06-25T04:49:02Z",
+      "lastApiSync": "2026-06-25T02:49:29.305905+00:00",
+      "lastUpdated": "2026-06-25T04:49:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -328,7 +364,7 @@
           "fouls": 12,
           "offsides": 0,
           "possession": "48%",
-          "redCards": null,
+          "redCards": 0,
           "shotsOffGoal": 4,
           "shotsOnGoal": 3,
           "totalShots": 9,
@@ -339,7 +375,7 @@
           "fouls": 9,
           "offsides": 1,
           "possession": "52%",
-          "redCards": null,
+          "redCards": 0,
           "shotsOffGoal": 6,
           "shotsOnGoal": 1,
           "totalShots": 11,
@@ -348,14 +384,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "86'",
-        "lastApiSync": "2026-06-25T02:49:02.893690+00:00",
-        "seconds": 5160,
+        "displayMinute": "89'",
+        "lastApiSync": "2026-06-25T02:49:29.305905+00:00",
+        "seconds": 5340,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "86'"
+        "timer": "89'"
       },
-      "manualClockText": "86'",
+      "manualClockText": "89'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -380,7 +416,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 86,
+      "minute": 89,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -572,6 +608,42 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Chory",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "L. Cerv",
+          "playerOff": "L. Cerv",
+          "playerOn": "T. Chory",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Sojka",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "T. Soucek",
+          "playerOff": "T. Soucek",
+          "playerOn": "A. Sojka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-25T01:00:00Z",
@@ -614,8 +686,8 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
-      "awayFouls": 8,
+      "awayCorners": 5,
+      "awayFouls": 9,
       "awayOffsides": 0,
       "awayPossession": "68%",
       "awayScore": 0,
@@ -665,7 +737,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5160,
+      "clockSeconds": 5340,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -674,7 +746,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "86'",
+      "displayMinute": "89'",
       "events": [
         {
           "assist": "Son Heung-Min",
@@ -875,8 +947,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5160,
-      "fallbackClockText": "86'",
+      "fallbackClock": 5340,
+      "fallbackClockText": "89'",
       "goalEvents": [
         {
           "assist": "T. Moremi",
@@ -918,19 +990,19 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:49:02.893690+00:00",
-      "lastUpdated": "2026-06-25T04:49:02Z",
+      "lastApiSync": "2026-06-25T02:49:29.305905+00:00",
+      "lastUpdated": "2026-06-25T04:49:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 4,
-          "fouls": 8,
+          "corners": 5,
+          "fouls": 9,
           "offsides": 0,
           "possession": "68%",
-          "redCards": null,
-          "shotsOffGoal": 3,
+          "redCards": 0,
+          "shotsOffGoal": 4,
           "shotsOnGoal": 2,
-          "totalShots": 5,
+          "totalShots": 7,
           "yellowCards": 1
         },
         "home": {
@@ -938,7 +1010,7 @@
           "fouls": 7,
           "offsides": 3,
           "possession": "32%",
-          "redCards": null,
+          "redCards": 0,
           "shotsOffGoal": 5,
           "shotsOnGoal": 4,
           "totalShots": 13,
@@ -947,14 +1019,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "86'",
-        "lastApiSync": "2026-06-25T02:49:02.893690+00:00",
-        "seconds": 5160,
+        "displayMinute": "89'",
+        "lastApiSync": "2026-06-25T02:49:29.305905+00:00",
+        "seconds": 5340,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "86'"
+        "timer": "89'"
       },
-      "manualClockText": "86'",
+      "manualClockText": "89'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -979,7 +1051,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 86,
+      "minute": 89,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1248,7 +1320,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5160,
+      "clockSeconds": 5340,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1257,7 +1329,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "86'",
+      "displayMinute": "89'",
       "events": [
         {
           "assist": "L. Romo",
@@ -1456,10 +1528,46 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Chory",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "L. Cerv",
+          "playerOff": "L. Cerv",
+          "playerOn": "T. Chory",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Sojka",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "T. Soucek",
+          "playerOff": "T. Soucek",
+          "playerOn": "A. Sojka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5160,
-      "fallbackClockText": "86'",
+      "fallbackClock": 5340,
+      "fallbackClockText": "89'",
       "goalEvents": [
         {
           "assist": "L. Romo",
@@ -1524,8 +1632,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:49:02.893690+00:00",
-      "lastUpdated": "2026-06-25T04:49:02Z",
+      "lastApiSync": "2026-06-25T02:49:29.305905+00:00",
+      "lastUpdated": "2026-06-25T04:49:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1533,7 +1641,7 @@
           "fouls": 12,
           "offsides": 0,
           "possession": "48%",
-          "redCards": null,
+          "redCards": 0,
           "shotsOffGoal": 4,
           "shotsOnGoal": 3,
           "totalShots": 9,
@@ -1544,7 +1652,7 @@
           "fouls": 9,
           "offsides": 1,
           "possession": "52%",
-          "redCards": null,
+          "redCards": 0,
           "shotsOffGoal": 6,
           "shotsOnGoal": 1,
           "totalShots": 11,
@@ -1553,14 +1661,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "86'",
-        "lastApiSync": "2026-06-25T02:49:02.893690+00:00",
-        "seconds": 5160,
+        "displayMinute": "89'",
+        "lastApiSync": "2026-06-25T02:49:29.305905+00:00",
+        "seconds": 5340,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "86'"
+        "timer": "89'"
       },
-      "manualClockText": "86'",
+      "manualClockText": "89'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -1585,7 +1693,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 86,
+      "minute": 89,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1777,6 +1885,42 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": "T. Chory",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "L. Cerv",
+          "playerOff": "L. Cerv",
+          "playerOn": "T. Chory",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Sojka",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "87'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 87,
+          "player": "T. Soucek",
+          "playerOff": "T. Soucek",
+          "playerOn": "A. Sojka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Czechia",
+          "timer": "87:00",
+          "timerSeconds": 5220,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-25T01:00:00Z",
@@ -1819,8 +1963,8 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
-      "awayFouls": 8,
+      "awayCorners": 5,
+      "awayFouls": 9,
       "awayOffsides": 0,
       "awayPossession": "68%",
       "awayScore": 0,
@@ -1870,7 +2014,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5160,
+      "clockSeconds": 5340,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1879,7 +2023,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "86'",
+      "displayMinute": "89'",
       "events": [
         {
           "assist": "Son Heung-Min",
@@ -2080,8 +2224,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5160,
-      "fallbackClockText": "86'",
+      "fallbackClock": 5340,
+      "fallbackClockText": "89'",
       "goalEvents": [
         {
           "assist": "T. Moremi",
@@ -2123,19 +2267,19 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:49:02.893690+00:00",
-      "lastUpdated": "2026-06-25T04:49:02Z",
+      "lastApiSync": "2026-06-25T02:49:29.305905+00:00",
+      "lastUpdated": "2026-06-25T04:49:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 4,
-          "fouls": 8,
+          "corners": 5,
+          "fouls": 9,
           "offsides": 0,
           "possession": "68%",
-          "redCards": null,
-          "shotsOffGoal": 3,
+          "redCards": 0,
+          "shotsOffGoal": 4,
           "shotsOnGoal": 2,
-          "totalShots": 5,
+          "totalShots": 7,
           "yellowCards": 1
         },
         "home": {
@@ -2143,7 +2287,7 @@
           "fouls": 7,
           "offsides": 3,
           "possession": "32%",
-          "redCards": null,
+          "redCards": 0,
           "shotsOffGoal": 5,
           "shotsOnGoal": 4,
           "totalShots": 13,
@@ -2152,14 +2296,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "86'",
-        "lastApiSync": "2026-06-25T02:49:02.893690+00:00",
-        "seconds": 5160,
+        "displayMinute": "89'",
+        "lastApiSync": "2026-06-25T02:49:29.305905+00:00",
+        "seconds": 5340,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "86'"
+        "timer": "89'"
       },
-      "manualClockText": "86'",
+      "manualClockText": "89'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -2184,7 +2328,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 86,
+      "minute": 89,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
