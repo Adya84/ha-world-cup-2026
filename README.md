@@ -1,7 +1,7 @@
 # ⚽ Home Assistant World Cup 2026
 
 [![License](https://img.shields.io/badge/license-Personal%20Use-red.svg)](LICENSE)
-![Version](https://img.shields.io/badge/version-v4.2.6-green)
+![Version](https://img.shields.io/badge/version-v4.3.9-green)
 ![Home Assistant](https://img.shields.io/badge/Home%20Assistant-2025.1%2B-blue)
 ![HACS](https://img.shields.io/badge/HACS-Custom-orange)
 ![Tablet Mode](https://img.shields.io/badge/Tablet%20Mode-Yes-success)
@@ -37,7 +37,7 @@ Current sections include:
 
 ---
 
-# 🚀 Latest Release - v4.2.6
+# 🚀 Latest Release - v4.3.9
 
 The biggest update yet for the World Cup 2026 integration, introducing a dedicated Tablet Mode, improved navigation, enhanced language support and major interface improvements throughout the application.
 
