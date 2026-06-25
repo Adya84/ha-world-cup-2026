@@ -30050,8 +30050,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:57:19.991962+00:00",
-      "lastUpdated": "2026-06-25T04:57:17Z",
+      "lastApiSync": "2026-06-25T02:57:45.683038+00:00",
+      "lastUpdated": "2026-06-25T04:57:43Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -30080,7 +30080,7 @@
       "manualClock": {
         "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T02:57:19.991962+00:00",
+        "lastApiSync": "2026-06-25T02:57:45.683038+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "FINISHED",
@@ -30327,8 +30327,8 @@
     },
     {
       "apiFootballFixtureId": 1489407,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -30596,8 +30596,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "T. Moremi",
@@ -30639,8 +30637,8 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:57:20.037561+00:00",
-      "lastUpdated": "2026-06-25T04:57:16Z",
+      "lastApiSync": "2026-06-25T02:57:45.683328+00:00",
+      "lastUpdated": "2026-06-25T04:57:44Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -30667,38 +30665,15 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T02:57:20.037561+00:00",
+        "lastApiSync": "2026-06-25T02:57:45.683328+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Monterrey",
-        "cloudCoverage": 4.7,
-        "condition": "clearsky_night",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-25T02:47:45.493641+00:00",
-        "humidity": 60.5,
-        "latitude": 25.6682,
-        "longitude": -100.2446,
-        "name": "Estadio BBVA weather",
-        "observedAt": "2026-06-25T02:00:00Z",
-        "pressure": 1012.7,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio BBVA",
-        "temperature": 28.3,
-        "temperatureUnit": "C",
-        "windBearing": 138.0,
-        "windSpeed": 6.2,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": 3,
       "minute": 90,
       "odds": {
@@ -30747,7 +30722,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Son Heung-Min",
@@ -30899,29 +30874,6 @@
         "city": "Monterrey",
         "id": 11905,
         "name": "Estadio BBVA"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Monterrey",
-        "cloudCoverage": 4.7,
-        "condition": "clearsky_night",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-25T02:47:45.493641+00:00",
-        "humidity": 60.5,
-        "latitude": 25.6682,
-        "longitude": -100.2446,
-        "name": "Estadio BBVA weather",
-        "observedAt": "2026-06-25T02:00:00Z",
-        "pressure": 1012.7,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio BBVA",
-        "temperature": 28.3,
-        "temperatureUnit": "C",
-        "windBearing": 138.0,
-        "windSpeed": 6.2,
-        "windSpeedUnit": "m/s"
       }
     },
     {
