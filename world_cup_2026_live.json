@@ -23,7 +23,7 @@
         "shortName": "Germany",
         "tla": "GER"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
+      "displayMinute": "8'",
       "events": [
         {
           "assist": "Florian Wirtz",
@@ -53,8 +53,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
       "goalEvents": [
         {
           "assist": "Florian Wirtz",
@@ -96,8 +96,8 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
-      "lastUpdated": "2026-06-25T22:07:19Z",
+      "lastApiSync": "2026-06-25T20:08:02.861453+00:00",
+      "lastUpdated": "2026-06-25T22:07:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -125,14 +125,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-06-25T20:08:02.861453+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -140,7 +140,7 @@
         "condition": "lightrainshowers_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-25T20:05:42.245623+00:00",
+        "fetchedAt": "2026-06-25T20:07:55.582251+00:00",
         "humidity": 38.8,
         "latitude": 40.8135,
         "longitude": -74.0745,
@@ -157,7 +157,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -218,7 +218,7 @@
         "condition": "lightrainshowers_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-25T20:05:42.245623+00:00",
+        "fetchedAt": "2026-06-25T20:07:55.582251+00:00",
         "humidity": 38.8,
         "latitude": 40.8135,
         "longitude": -74.0745,
@@ -249,7 +249,7 @@
       "awayFouls": null,
       "awayOffsides": null,
       "awayPossession": "72%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/787.svg",
@@ -268,8 +268,49 @@
         "type": "CUP"
       },
       "displayMinute": "7'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Ivory Coast",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 420,
       "fallbackClockText": "7'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Ivory Coast",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_E",
       "homeCorners": null,
       "homeFouls": null,
@@ -285,8 +326,8 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
-      "lastUpdated": "2026-06-25T22:07:19Z",
+      "lastApiSync": "2026-06-25T20:08:02.861453+00:00",
+      "lastUpdated": "2026-06-25T22:07:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -315,7 +356,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "7'",
-        "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
+        "lastApiSync": "2026-06-25T20:08:02.861453+00:00",
         "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -329,7 +370,7 @@
         "condition": "partlycloudy_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-25T20:05:42.499526+00:00",
+        "fetchedAt": "2026-06-25T20:07:55.783547+00:00",
         "humidity": 33.1,
         "latitude": 39.9008,
         "longitude": -75.1675,
@@ -375,11 +416,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -407,7 +448,7 @@
         "condition": "partlycloudy_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-25T20:05:42.499526+00:00",
+        "fetchedAt": "2026-06-25T20:07:55.783547+00:00",
         "humidity": 33.1,
         "latitude": 39.9008,
         "longitude": -75.1675,
@@ -449,7 +490,7 @@
         "shortName": "Germany",
         "tla": "GER"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -458,7 +499,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
+      "displayMinute": "8'",
       "events": [
         {
           "assist": "Florian Wirtz",
@@ -479,8 +520,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
       "goalEvents": [
         {
           "assist": "Florian Wirtz",
@@ -522,8 +563,8 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
-      "lastUpdated": "2026-06-25T22:07:19Z",
+      "lastApiSync": "2026-06-25T20:08:02.861453+00:00",
+      "lastUpdated": "2026-06-25T22:07:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -551,14 +592,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-06-25T20:08:02.861453+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -566,7 +607,7 @@
         "condition": "lightrainshowers_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-25T20:05:42.245623+00:00",
+        "fetchedAt": "2026-06-25T20:07:55.582251+00:00",
         "humidity": 38.8,
         "latitude": 40.8135,
         "longitude": -74.0745,
@@ -583,7 +624,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -644,7 +685,7 @@
         "condition": "lightrainshowers_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-25T20:05:42.245623+00:00",
+        "fetchedAt": "2026-06-25T20:07:55.582251+00:00",
         "humidity": 38.8,
         "latitude": 40.8135,
         "longitude": -74.0745,
@@ -675,7 +716,7 @@
       "awayFouls": null,
       "awayOffsides": null,
       "awayPossession": "72%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/787.svg",
@@ -694,8 +735,49 @@
         "type": "CUP"
       },
       "displayMinute": "7'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Ivory Coast",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 420,
       "fallbackClockText": "7'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Ivory Coast",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_E",
       "homeCorners": null,
       "homeFouls": null,
@@ -711,8 +793,8 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
-      "lastUpdated": "2026-06-25T22:07:19Z",
+      "lastApiSync": "2026-06-25T20:08:02.861453+00:00",
+      "lastUpdated": "2026-06-25T22:07:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -741,7 +823,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "7'",
-        "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
+        "lastApiSync": "2026-06-25T20:08:02.861453+00:00",
         "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -755,7 +837,7 @@
         "condition": "partlycloudy_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-25T20:05:42.499526+00:00",
+        "fetchedAt": "2026-06-25T20:07:55.783547+00:00",
         "humidity": 33.1,
         "latitude": 39.9008,
         "longitude": -75.1675,
@@ -801,11 +883,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -833,7 +915,7 @@
         "condition": "partlycloudy_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-25T20:05:42.499526+00:00",
+        "fetchedAt": "2026-06-25T20:07:55.783547+00:00",
         "humidity": 33.1,
         "latitude": 39.9008,
         "longitude": -75.1675,
