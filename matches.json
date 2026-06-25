@@ -29658,8 +29658,8 @@
     },
     {
       "apiFootballFixtureId": 1539010,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -29671,7 +29671,7 @@
       "awayOffsides": 0,
       "awayPossession": "49%",
       "awayScore": 3,
-      "awayShotsOnGoal": 3,
+      "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/769.svg",
         "id": 769,
@@ -29963,8 +29963,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "L. Romo",
@@ -30052,8 +30050,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:56:54.219707+00:00",
-      "lastUpdated": "2026-06-25T04:56:52Z",
+      "lastApiSync": "2026-06-25T02:57:19.991962+00:00",
+      "lastUpdated": "2026-06-25T04:57:17Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -30063,8 +30061,8 @@
           "possession": "49%",
           "redCards": null,
           "shotsOffGoal": 4,
-          "shotsOnGoal": 3,
-          "totalShots": 9,
+          "shotsOnGoal": 5,
+          "totalShots": 11,
           "yellowCards": 1
         },
         "home": {
@@ -30073,45 +30071,22 @@
           "offsides": 1,
           "possession": "51%",
           "redCards": null,
-          "shotsOffGoal": 6,
+          "shotsOffGoal": 8,
           "shotsOnGoal": 1,
-          "totalShots": 12,
+          "totalShots": 13,
           "yellowCards": 0
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T02:56:54.219707+00:00",
+        "lastApiSync": "2026-06-25T02:57:19.991962+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Mexico City",
-        "cloudCoverage": 100.0,
-        "condition": "heavyrain",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-25T02:47:45.326970+00:00",
-        "humidity": 95.1,
-        "latitude": 19.303,
-        "longitude": -99.1505,
-        "name": "Estadio Banorte weather",
-        "observedAt": "2026-06-25T02:00:00Z",
-        "pressure": 1020.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio Banorte",
-        "temperature": 15.5,
-        "temperatureUnit": "C",
-        "windBearing": 95.9,
-        "windSpeed": 1.6,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": 3,
       "minute": 90,
       "odds": {
@@ -30160,7 +30135,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "L. Provod",
@@ -30348,29 +30323,6 @@
         "city": "Mexico City",
         "id": 1069,
         "name": "Estadio Azteca"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Mexico City",
-        "cloudCoverage": 100.0,
-        "condition": "heavyrain",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-25T02:47:45.326970+00:00",
-        "humidity": 95.1,
-        "latitude": 19.303,
-        "longitude": -99.1505,
-        "name": "Estadio Banorte weather",
-        "observedAt": "2026-06-25T02:00:00Z",
-        "pressure": 1020.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio Banorte",
-        "temperature": 15.5,
-        "temperatureUnit": "C",
-        "windBearing": 95.9,
-        "windSpeed": 1.6,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -30383,12 +30335,12 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 5,
+      "awayCorners": 6,
       "awayFouls": 9,
       "awayOffsides": 0,
-      "awayPossession": "69%",
+      "awayPossession": "68%",
       "awayScore": 0,
-      "awayShotsOnGoal": 2,
+      "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/772.png",
         "id": 772,
@@ -30676,7 +30628,7 @@
       "homeCorners": 4,
       "homeFouls": 7,
       "homeOffsides": 3,
-      "homePossession": "31%",
+      "homePossession": "32%",
       "homeScore": 1,
       "homeShotsOnGoal": 4,
       "homeTeam": {
@@ -30687,26 +30639,26 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:56:54.219707+00:00",
-      "lastUpdated": "2026-06-25T04:56:52Z",
+      "lastApiSync": "2026-06-25T02:57:20.037561+00:00",
+      "lastUpdated": "2026-06-25T04:57:16Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 5,
+          "corners": 6,
           "fouls": 9,
           "offsides": 0,
-          "possession": "69%",
+          "possession": "68%",
           "redCards": null,
           "shotsOffGoal": 4,
-          "shotsOnGoal": 2,
-          "totalShots": 7,
+          "shotsOnGoal": 3,
+          "totalShots": 8,
           "yellowCards": 1
         },
         "home": {
           "corners": 4,
           "fouls": 7,
           "offsides": 3,
-          "possession": "31%",
+          "possession": "32%",
           "redCards": null,
           "shotsOffGoal": 5,
           "shotsOnGoal": 4,
@@ -30717,7 +30669,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T02:56:54.219707+00:00",
+        "lastApiSync": "2026-06-25T02:57:20.037561+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
