@@ -1,4 +1,708 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "apiFootballFixtureId": 1489410,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/759.svg",
+        "id": 759,
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER"
+      },
+      "clockSeconds": 120,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "2'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 2,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football_post_match",
+          "team": "Germany",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 2,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football_post_match",
+          "team": "Germany",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
+      "group": "GROUP_E",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/791.svg",
+        "id": 791,
+        "name": "Ecuador",
+        "shortName": "Ecuador",
+        "tla": "ECU"
+      },
+      "id": 537355,
+      "lastApiSync": "2026-06-25T20:02:22.504298+00:00",
+      "lastUpdated": "2026-06-25T22:02:14Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-25T20:02:22.504298+00:00",
+        "seconds": 120,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "2'"
+      },
+      "manualClockText": "2'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 25.0,
+        "condition": "lightrainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T20:02:17.967403+00:00",
+        "humidity": 38.8,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-25T19:00:00Z",
+        "pressure": 1016.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 27.9,
+        "temperatureUnit": "C",
+        "windBearing": 161.7,
+        "windSpeed": 4.4,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 2,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Tori Penso",
+          "nationality": "USA",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Tori Penso, USA",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Tori Penso",
+          "nationality": "USA",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Tori Penso, USA",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "AWAY_TEAM"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-25T20:00:00Z",
+      "venue": {
+        "city": "East Rutherford",
+        "id": null,
+        "name": "MetLife Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 25.0,
+        "condition": "lightrainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T20:02:17.967403+00:00",
+        "humidity": 38.8,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-25T19:00:00Z",
+        "pressure": 1016.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 27.9,
+        "temperatureUnit": "C",
+        "windBearing": 161.7,
+        "windSpeed": 4.4,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "apiFootballFixtureId": 1489409,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/787.svg",
+        "id": 1935,
+        "name": "Ivory Coast",
+        "shortName": "Ivory Coast",
+        "tla": "CIV"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_E",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/curacao.svg",
+        "id": 9460,
+        "name": "Cura\u00e7ao",
+        "shortName": "Cura\u00e7ao",
+        "tla": "CUW"
+      },
+      "id": 537356,
+      "lastApiSync": "2026-06-25T20:02:22.504298+00:00",
+      "lastUpdated": "2026-06-25T22:02:13Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-25T20:02:22.504298+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 48.4,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T20:02:18.168123+00:00",
+        "humidity": 33.1,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-25T19:00:00Z",
+        "pressure": 1016.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 29.5,
+        "temperatureUnit": "C",
+        "windBearing": 197.9,
+        "windSpeed": 4.3,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Glenn Nyberg",
+          "nationality": "Sweden",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Glenn Nyberg, Sweden",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Glenn Nyberg",
+          "nationality": "Sweden",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Glenn Nyberg, Sweden",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-25T20:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 48.4,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T20:02:18.168123+00:00",
+        "humidity": 33.1,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-25T19:00:00Z",
+        "pressure": 1016.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 29.5,
+        "temperatureUnit": "C",
+        "windBearing": 197.9,
+        "windSpeed": 4.3,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "apiFootballFixtureId": 1489410,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/759.svg",
+        "id": 759,
+        "name": "Germany",
+        "shortName": "Germany",
+        "tla": "GER"
+      },
+      "clockSeconds": 120,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "2'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 2,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football_post_match",
+          "team": "Germany",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "2'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 2,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football_post_match",
+          "team": "Germany",
+          "timer": "2:00",
+          "timerSeconds": 120,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
+      "group": "GROUP_E",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/791.svg",
+        "id": 791,
+        "name": "Ecuador",
+        "shortName": "Ecuador",
+        "tla": "ECU"
+      },
+      "id": 537355,
+      "lastApiSync": "2026-06-25T20:02:22.504298+00:00",
+      "lastUpdated": "2026-06-25T22:02:14Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-25T20:02:22.504298+00:00",
+        "seconds": 120,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "2'"
+      },
+      "manualClockText": "2'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 25.0,
+        "condition": "lightrainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T20:02:17.967403+00:00",
+        "humidity": 38.8,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-25T19:00:00Z",
+        "pressure": 1016.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 27.9,
+        "temperatureUnit": "C",
+        "windBearing": 161.7,
+        "windSpeed": 4.4,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 2,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Tori Penso",
+          "nationality": "USA",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Tori Penso, USA",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Tori Penso",
+          "nationality": "USA",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Tori Penso, USA",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "AWAY_TEAM"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-25T20:00:00Z",
+      "venue": {
+        "city": "East Rutherford",
+        "id": null,
+        "name": "MetLife Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 25.0,
+        "condition": "lightrainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T20:02:17.967403+00:00",
+        "humidity": 38.8,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-06-25T19:00:00Z",
+        "pressure": 1016.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 27.9,
+        "temperatureUnit": "C",
+        "windBearing": 161.7,
+        "windSpeed": 4.4,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "apiFootballFixtureId": 1489409,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayScore": 0,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/787.svg",
+        "id": 1935,
+        "name": "Ivory Coast",
+        "shortName": "Ivory Coast",
+        "tla": "CIV"
+      },
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
+      "group": "GROUP_E",
+      "homeScore": 0,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/curacao.svg",
+        "id": 9460,
+        "name": "Cura\u00e7ao",
+        "shortName": "Cura\u00e7ao",
+        "tla": "CUW"
+      },
+      "id": 537356,
+      "lastApiSync": "2026-06-25T20:02:22.504298+00:00",
+      "lastUpdated": "2026-06-25T22:02:13Z",
+      "liveSource": "api_football",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-25T20:02:22.504298+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
+      },
+      "manualClockText": "1'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 48.4,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T20:02:18.168123+00:00",
+        "humidity": 33.1,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-25T19:00:00Z",
+        "pressure": 1016.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 29.5,
+        "temperatureUnit": "C",
+        "windBearing": 197.9,
+        "windSpeed": 4.3,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": 1,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Glenn Nyberg",
+          "nationality": "Sweden",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Glenn Nyberg, Sweden",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Glenn Nyberg",
+          "nationality": "Sweden",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Glenn Nyberg, Sweden",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "winner": "DRAW"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "1H",
+      "utcDate": "2026-06-25T20:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Philadelphia",
+        "cloudCoverage": 48.4,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-25T20:02:18.168123+00:00",
+        "humidity": 33.1,
+        "latitude": 39.9008,
+        "longitude": -75.1675,
+        "name": "Lincoln Financial Field weather",
+        "observedAt": "2026-06-25T19:00:00Z",
+        "pressure": 1016.5,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lincoln Financial Field",
+        "temperature": 29.5,
+        "temperatureUnit": "C",
+        "windBearing": 197.9,
+        "windSpeed": 4.3,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
