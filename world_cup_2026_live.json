@@ -23,7 +23,7 @@
         "shortName": "Mexico",
         "tla": "MEX"
       },
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": "L. Romo",
@@ -105,10 +105,28 @@
           "timer": "63:00",
           "timerSeconds": 3780,
           "type": "Substitution"
+        },
+        {
+          "assist": "O. Vargas",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "L. Romo",
+          "playerOff": "L. Romo",
+          "playerOn": "O. Vargas",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": "L. Romo",
@@ -173,8 +191,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
-      "lastUpdated": "2026-06-25T04:23:25Z",
+      "lastApiSync": "2026-06-25T02:24:16.761854+00:00",
+      "lastUpdated": "2026-06-25T04:24:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -202,14 +220,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-25T02:24:16.761854+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -234,7 +252,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -318,6 +336,24 @@
           "timer": "63:00",
           "timerSeconds": 3780,
           "type": "Substitution"
+        },
+        {
+          "assist": "O. Vargas",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "L. Romo",
+          "playerOff": "L. Romo",
+          "playerOn": "O. Vargas",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-25T01:00:00Z",
@@ -373,7 +409,7 @@
         "shortName": "Korea Republic",
         "tla": "KOR"
       },
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -382,7 +418,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": "Son Heung-Min",
@@ -455,16 +491,60 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "T. Maseko",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Korea Republic",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "63'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "South Africa",
+          "isDisallowed": false,
+          "matchId": 537332,
+          "matchUtcDate": "2026-06-25T01:00:00Z",
+          "minute": 63,
+          "player": "T. Maseko",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_A",
       "homeCorners": 4,
       "homeFouls": 4,
       "homeOffsides": 3,
       "homePossession": "38%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/9396.svg",
@@ -474,8 +554,8 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
-      "lastUpdated": "2026-06-25T04:23:25Z",
+      "lastApiSync": "2026-06-25T02:24:16.761854+00:00",
+      "lastUpdated": "2026-06-25T04:24:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -503,14 +583,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-25T02:24:16.761854+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -535,7 +615,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -565,7 +645,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
@@ -712,7 +792,7 @@
         "shortName": "Mexico",
         "tla": "MEX"
       },
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -721,7 +801,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": "L. Romo",
@@ -794,10 +874,28 @@
           "timer": "63:00",
           "timerSeconds": 3780,
           "type": "Substitution"
+        },
+        {
+          "assist": "O. Vargas",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "L. Romo",
+          "playerOff": "L. Romo",
+          "playerOn": "O. Vargas",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": "L. Romo",
@@ -862,8 +960,8 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
-      "lastUpdated": "2026-06-25T04:23:25Z",
+      "lastApiSync": "2026-06-25T02:24:16.761854+00:00",
+      "lastUpdated": "2026-06-25T04:24:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -891,14 +989,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-25T02:24:16.761854+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -923,7 +1021,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1007,6 +1105,24 @@
           "timer": "63:00",
           "timerSeconds": 3780,
           "type": "Substitution"
+        },
+        {
+          "assist": "O. Vargas",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "L. Romo",
+          "playerOff": "L. Romo",
+          "playerOn": "O. Vargas",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-25T01:00:00Z",
@@ -1062,7 +1178,7 @@
         "shortName": "Korea Republic",
         "tla": "KOR"
       },
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1071,7 +1187,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": "Son Heung-Min",
@@ -1144,16 +1260,60 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "T. Maseko",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Korea Republic",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "63'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "South Africa",
+          "isDisallowed": false,
+          "matchId": 537332,
+          "matchUtcDate": "2026-06-25T01:00:00Z",
+          "minute": 63,
+          "player": "T. Maseko",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_A",
       "homeCorners": 4,
       "homeFouls": 4,
       "homeOffsides": 3,
       "homePossession": "38%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/9396.svg",
@@ -1163,8 +1323,8 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
-      "lastUpdated": "2026-06-25T04:23:25Z",
+      "lastApiSync": "2026-06-25T02:24:16.761854+00:00",
+      "lastUpdated": "2026-06-25T04:24:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1192,14 +1352,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-25T02:23:28.715282+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-25T02:24:16.761854+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -1224,7 +1384,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1254,7 +1414,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
