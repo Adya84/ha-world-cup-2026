@@ -1127,7 +1127,7 @@ class WorldCupCoordinator(DataUpdateCoordinator):
             f"?lat={location.get('lat')}&lon={location.get('lon')}"
         )
         headers = {
-            "User-Agent": "ha-world-cup-2026/4.2.10 Home Assistant stadium weather",
+            "User-Agent": "ha-world-cup-2026/4.3.8 Home Assistant stadium weather",
             "Accept": "application/json",
         }
 
