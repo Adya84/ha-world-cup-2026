@@ -54835,8 +54835,8 @@
     },
     {
       "apiFootballFixtureId": 1489405,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -55266,8 +55266,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -55424,8 +55422,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-25T00:01:27.505522+00:00",
-      "lastUpdated": "2026-06-25T02:01:05Z",
+      "lastApiSync": "2026-06-25T00:01:55.974473+00:00",
+      "lastUpdated": "2026-06-25T02:01:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -55452,12 +55450,12 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T00:01:27.505522+00:00",
+        "lastApiSync": "2026-06-25T00:01:55.974473+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
@@ -56244,52 +56242,7 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Atlanta",
-          "cloudCoverage": 14.8,
-          "condition": "fair_day",
-          "country": "USA",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-24T23:58:19.232680+00:00",
-          "humidity": 44.5,
-          "latitude": 33.7554,
-          "longitude": -84.4008,
-          "name": "Mercedes-Benz Stadium weather",
-          "observedAt": "2026-06-24T23:00:00Z",
-          "pressure": 1016.3,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "Mercedes-Benz Stadium",
-          "temperature": 27.9,
-          "temperatureUnit": "C",
-          "windBearing": 43.2,
-          "windSpeed": 2.4,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 14.8,
-        "condition": "fair_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:58:19.232680+00:00",
-        "humidity": 44.5,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-24T23:00:00Z",
-        "pressure": 1016.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.9,
-        "temperatureUnit": "C",
-        "windBearing": 43.2,
-        "windSpeed": 2.4,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 3,
       "minute": 90,
@@ -56339,7 +56292,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "D. Nazon",
@@ -56527,29 +56480,6 @@
         "city": "Atlanta",
         "id": 1898,
         "name": "Mercedes-Benz Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 14.8,
-        "condition": "fair_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:58:19.232680+00:00",
-        "humidity": 44.5,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-24T23:00:00Z",
-        "pressure": 1016.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.9,
-        "temperatureUnit": "C",
-        "windBearing": 43.2,
-        "windSpeed": 2.4,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -57038,8 +56968,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-25T00:01:27.505522+00:00",
-      "lastUpdated": "2026-06-25T02:01:05Z",
+      "lastApiSync": "2026-06-25T00:01:56.057629+00:00",
+      "lastUpdated": "2026-06-25T02:01:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -57068,7 +56998,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T00:01:27.505522+00:00",
+        "lastApiSync": "2026-06-25T00:01:56.057629+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -112898,8 +112828,8 @@
     },
     {
       "apiFootballFixtureId": 1489405,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -113329,8 +113259,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -113487,8 +113415,8 @@
         "tla": "MAR"
       },
       "id": 537344,
-      "lastApiSync": "2026-06-25T00:01:27.505522+00:00",
-      "lastUpdated": "2026-06-25T02:01:05Z",
+      "lastApiSync": "2026-06-25T00:01:55.974473+00:00",
+      "lastUpdated": "2026-06-25T02:01:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -113515,12 +113443,12 @@
         }
       },
       "manualClock": {
-        "active": false,
+        "active": true,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T00:01:27.505522+00:00",
+        "lastApiSync": "2026-06-25T00:01:55.974473+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
-        "status": "2H",
+        "status": "FINISHED",
         "timer": "90'"
       },
       "manualClockText": "90'",
@@ -114307,52 +114235,7 @@
             "type": "Substitution"
           }
         ],
-        "weather": {
-          "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-          "city": "Atlanta",
-          "cloudCoverage": 14.8,
-          "condition": "fair_day",
-          "country": "USA",
-          "dewPoint": null,
-          "fetchedAt": "2026-06-24T23:58:19.232680+00:00",
-          "humidity": 44.5,
-          "latitude": 33.7554,
-          "longitude": -84.4008,
-          "name": "Mercedes-Benz Stadium weather",
-          "observedAt": "2026-06-24T23:00:00Z",
-          "pressure": 1016.3,
-          "pressureUnit": "hPa",
-          "source": "met_no_stadium",
-          "stadium": "Mercedes-Benz Stadium",
-          "temperature": 27.9,
-          "temperatureUnit": "C",
-          "windBearing": 43.2,
-          "windSpeed": 2.4,
-          "windSpeedUnit": "m/s"
-        }
-      },
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 14.8,
-        "condition": "fair_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:58:19.232680+00:00",
-        "humidity": 44.5,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-24T23:00:00Z",
-        "pressure": 1016.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.9,
-        "temperatureUnit": "C",
-        "windBearing": 43.2,
-        "windSpeed": 2.4,
-        "windSpeedUnit": "m/s"
+        "weather": {}
       },
       "matchday": 3,
       "minute": 90,
@@ -114402,7 +114285,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "D. Nazon",
@@ -114590,29 +114473,6 @@
         "city": "Atlanta",
         "id": 1898,
         "name": "Mercedes-Benz Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 14.8,
-        "condition": "fair_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-24T23:58:19.232680+00:00",
-        "humidity": 44.5,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-24T23:00:00Z",
-        "pressure": 1016.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.9,
-        "temperatureUnit": "C",
-        "windBearing": 43.2,
-        "windSpeed": 2.4,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -115101,8 +114961,8 @@
         "tla": "SCO"
       },
       "id": 537343,
-      "lastApiSync": "2026-06-25T00:01:27.505522+00:00",
-      "lastUpdated": "2026-06-25T02:01:05Z",
+      "lastApiSync": "2026-06-25T00:01:56.057629+00:00",
+      "lastUpdated": "2026-06-25T02:01:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -115131,7 +114991,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-25T00:01:27.505522+00:00",
+        "lastApiSync": "2026-06-25T00:01:56.057629+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
