@@ -32086,7 +32086,7 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T23:02:42.179536+00:00",
+      "lastApiSync": "2026-06-25T23:03:07.822769+00:00",
       "lastUpdated": "2026-06-25T23:59:26Z",
       "liveStatistics": {
         "away": {
@@ -32772,7 +32772,7 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T23:02:42.179736+00:00",
+      "lastApiSync": "2026-06-25T23:03:07.823004+00:00",
       "lastUpdated": "2026-06-25T23:59:07Z",
       "liveStatistics": {
         "away": {
@@ -33046,7 +33046,12 @@
         "id": 2267,
         "name": "World"
       },
-      "awayScore": 0,
+      "awayCorners": null,
+      "awayFouls": null,
+      "awayOffsides": null,
+      "awayPossession": "88%",
+      "awayScore": 1,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
         "id": 8601,
@@ -33054,7 +33059,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 180,
+      "clockSeconds": 240,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33063,7 +33068,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "3'",
+      "displayMinute": "4'",
       "events": [
         {
           "assist": null,
@@ -33084,8 +33089,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 180,
-      "fallbackClockText": "3'",
+      "fallbackClock": 240,
+      "fallbackClockText": "4'",
       "goalEvents": [
         {
           "assist": null,
@@ -33108,7 +33113,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
+      "homeCorners": null,
+      "homeFouls": null,
+      "homeOffsides": null,
+      "homePossession": "12%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/tunisia.svg",
         "id": 802,
@@ -33117,19 +33127,43 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
-      "lastUpdated": "2026-06-26T01:02:40Z",
+      "lastApiSync": "2026-06-25T23:03:07.869658+00:00",
+      "lastUpdated": "2026-06-26T01:03:04Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": null,
+          "offsides": null,
+          "possession": "88%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": null,
+          "fouls": null,
+          "offsides": null,
+          "possession": "12%",
+          "redCards": 0,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 1,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "3'",
-        "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
-        "seconds": 180,
+        "displayMinute": "4'",
+        "lastApiSync": "2026-06-25T23:03:07.869658+00:00",
+        "seconds": 240,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "3'"
+        "timer": "4'"
       },
-      "manualClockText": "3'",
+      "manualClockText": "4'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -33154,7 +33188,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 3,
+      "minute": 4,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33183,11 +33217,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -33242,7 +33276,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 2,
+      "awayFouls": null,
+      "awayOffsides": null,
+      "awayPossession": "100%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/792.svg",
         "id": 792,
@@ -33263,7 +33302,12 @@
       "fallbackClock": 180,
       "fallbackClockText": "3'",
       "group": "GROUP_F",
+      "homeCorners": 0,
+      "homeFouls": null,
+      "homeOffsides": null,
+      "homePossession": "0%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/766.svg",
         "id": 766,
@@ -33272,13 +33316,37 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
-      "lastUpdated": "2026-06-26T01:02:40Z",
+      "lastApiSync": "2026-06-25T23:03:07.869658+00:00",
+      "lastUpdated": "2026-06-26T01:03:04Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 2,
+          "fouls": null,
+          "offsides": null,
+          "possession": "100%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": null,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": 0,
+          "fouls": null,
+          "offsides": null,
+          "possession": "0%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": null,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "3'",
-        "lastApiSync": "2026-06-25T23:02:42.229004+00:00",
+        "lastApiSync": "2026-06-25T23:03:07.869658+00:00",
         "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
