@@ -2002,43 +2002,61 @@
     "utcDate": "2026-06-19T01:00:00Z"
   },
   "537331": {
+    "apiFootballFixtureId": 1539010,
     "awayScore": 0,
     "awayTeam": "Mexico",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Czechia",
-    "phase_start": null,
+    "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-25T01:01:21.990470+00:00",
     "referees": [
       {
-        "id": 57435,
         "name": "Yael Falc\u00f3n",
         "nationality": "Argentina",
         "type": "REFEREE"
-      }
-    ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
-    "utcDate": "2026-06-25T01:00:00Z"
-  },
-  "537332": {
-    "awayScore": 0,
-    "awayTeam": "Korea Republic",
-    "clock_active": false,
-    "goalEvents": [],
-    "homeScore": 0,
-    "homeTeam": "South Africa",
-    "phase_start": null,
-    "referees": [
+      },
       {
-        "id": 57301,
-        "name": "Facundo Tello",
-        "nationality": "Argentina",
+        "name": "Yael Falcon Perez, Argentina",
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
+    "utcDate": "2026-06-25T01:00:00Z"
+  },
+  "537332": {
+    "apiFootballFixtureId": 1489407,
+    "awayScore": 0,
+    "awayTeam": "Korea Republic",
+    "base_seconds": 60,
+    "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
+    "goalEvents": [],
+    "homeScore": 0,
+    "homeTeam": "South Africa",
+    "lastApiSync": "2026-06-25T01:01:21.990470+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-25T01:01:21.990470+00:00",
+    "referees": [
+      {
+        "name": "Facundo Tello",
+        "nationality": "Argentina",
+        "type": "REFEREE"
+      },
+      {
+        "name": "Facundo Raul Tello Figueroa, Argentina",
+        "type": "REFEREE"
+      }
+    ],
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-25T01:00:00Z"
   },
   "537333": {
