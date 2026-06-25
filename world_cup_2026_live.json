@@ -13,7 +13,7 @@
       "awayCorners": null,
       "awayFouls": 7,
       "awayOffsides": null,
-      "awayPossession": "52%",
+      "awayPossession": "54%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -37,9 +37,9 @@
       "fallbackClockText": "46'",
       "group": "GROUP_A",
       "homeCorners": null,
-      "homeFouls": 4,
+      "homeFouls": 5,
       "homeOffsides": null,
-      "homePossession": "48%",
+      "homePossession": "46%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -50,26 +50,26 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:06:03.900212+00:00",
-      "lastUpdated": "2026-06-25T04:05:58Z",
+      "lastApiSync": "2026-06-25T02:06:30.338223+00:00",
+      "lastUpdated": "2026-06-25T04:06:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 7,
           "offsides": null,
-          "possession": "52%",
+          "possession": "54%",
           "redCards": null,
-          "shotsOffGoal": 2,
+          "shotsOffGoal": 3,
           "shotsOnGoal": 1,
-          "totalShots": 4,
+          "totalShots": 5,
           "yellowCards": null
         },
         "home": {
           "corners": null,
-          "fouls": 4,
+          "fouls": 5,
           "offsides": null,
-          "possession": "48%",
+          "possession": "46%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 0,
@@ -80,7 +80,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-06-25T02:06:03.900212+00:00",
+        "lastApiSync": "2026-06-25T02:06:30.338223+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -191,8 +191,8 @@
     },
     {
       "apiFootballFixtureId": 1489407,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -212,7 +212,7 @@
         "shortName": "Korea Republic",
         "tla": "KOR"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -221,9 +221,47 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "displayMinute": "46'",
+      "events": [
+        {
+          "assist": "Son Heung-Min",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Hwang Hee-Chan",
+          "playerOff": "Hwang Hee-Chan",
+          "playerOn": "Son Heung-Min",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Kim Jin-Gyu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Paik Seung-Ho",
+          "playerOff": "Paik Seung-Ho",
+          "playerOn": "Kim Jin-Gyu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": "GROUP_A",
       "homeCorners": 3,
       "homeFouls": 2,
@@ -239,8 +277,8 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:06:03.900212+00:00",
-      "lastUpdated": "2026-06-25T04:05:58Z",
+      "lastApiSync": "2026-06-25T02:06:30.338223+00:00",
+      "lastUpdated": "2026-06-25T04:06:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -268,14 +306,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-25T02:06:03.900212+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-25T02:06:30.338223+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -300,7 +338,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -347,7 +385,45 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "Son Heung-Min",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Hwang Hee-Chan",
+          "playerOff": "Hwang Hee-Chan",
+          "playerOn": "Son Heung-Min",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Kim Jin-Gyu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Paik Seung-Ho",
+          "playerOff": "Paik Seung-Ho",
+          "playerOn": "Kim Jin-Gyu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-25T01:00:00Z",
       "venue": {
         "city": "Monterrey",
@@ -393,7 +469,7 @@
       "awayCorners": null,
       "awayFouls": 7,
       "awayOffsides": null,
-      "awayPossession": "52%",
+      "awayPossession": "54%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -417,9 +493,9 @@
       "fallbackClockText": "46'",
       "group": "GROUP_A",
       "homeCorners": null,
-      "homeFouls": 4,
+      "homeFouls": 5,
       "homeOffsides": null,
-      "homePossession": "48%",
+      "homePossession": "46%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -430,26 +506,26 @@
         "tla": "CZE"
       },
       "id": 537331,
-      "lastApiSync": "2026-06-25T02:06:03.900212+00:00",
-      "lastUpdated": "2026-06-25T04:05:58Z",
+      "lastApiSync": "2026-06-25T02:06:30.338223+00:00",
+      "lastUpdated": "2026-06-25T04:06:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 7,
           "offsides": null,
-          "possession": "52%",
+          "possession": "54%",
           "redCards": null,
-          "shotsOffGoal": 2,
+          "shotsOffGoal": 3,
           "shotsOnGoal": 1,
-          "totalShots": 4,
+          "totalShots": 5,
           "yellowCards": null
         },
         "home": {
           "corners": null,
-          "fouls": 4,
+          "fouls": 5,
           "offsides": null,
-          "possession": "48%",
+          "possession": "46%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 0,
@@ -460,7 +536,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-06-25T02:06:03.900212+00:00",
+        "lastApiSync": "2026-06-25T02:06:30.338223+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -571,8 +647,8 @@
     },
     {
       "apiFootballFixtureId": 1489407,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -592,7 +668,7 @@
         "shortName": "Korea Republic",
         "tla": "KOR"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -601,9 +677,47 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "displayMinute": "46'",
+      "events": [
+        {
+          "assist": "Son Heung-Min",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Hwang Hee-Chan",
+          "playerOff": "Hwang Hee-Chan",
+          "playerOn": "Son Heung-Min",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Kim Jin-Gyu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Paik Seung-Ho",
+          "playerOff": "Paik Seung-Ho",
+          "playerOn": "Kim Jin-Gyu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": "GROUP_A",
       "homeCorners": 3,
       "homeFouls": 2,
@@ -619,8 +733,8 @@
         "tla": "RSA"
       },
       "id": 537332,
-      "lastApiSync": "2026-06-25T02:06:03.900212+00:00",
-      "lastUpdated": "2026-06-25T04:05:58Z",
+      "lastApiSync": "2026-06-25T02:06:30.338223+00:00",
+      "lastUpdated": "2026-06-25T04:06:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -648,14 +762,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-25T02:06:03.900212+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-25T02:06:30.338223+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -680,7 +794,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -727,7 +841,45 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "Son Heung-Min",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Hwang Hee-Chan",
+          "playerOff": "Hwang Hee-Chan",
+          "playerOn": "Son Heung-Min",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Kim Jin-Gyu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Paik Seung-Ho",
+          "playerOff": "Paik Seung-Ho",
+          "playerOn": "Kim Jin-Gyu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Korea",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-25T01:00:00Z",
       "venue": {
         "city": "Monterrey",
