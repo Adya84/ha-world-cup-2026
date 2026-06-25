@@ -10,7 +10,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": "83%",
       "awayScore": 1,
+      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/759.svg",
         "id": 759,
@@ -30,14 +35,14 @@
       "displayMinute": "7'",
       "events": [
         {
-          "assist": "F. Wirtz",
+          "assist": "Florian Wirtz",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "2'",
           "extra": null,
           "isDisallowed": false,
           "minute": 2,
-          "player": "L. Sane",
+          "player": "Leroy San\u00e9",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -52,7 +57,7 @@
       "fallbackClockText": "7'",
       "goalEvents": [
         {
-          "assist": "F. Wirtz",
+          "assist": "Florian Wirtz",
           "awayTeam": "Germany",
           "comments": null,
           "detail": "Normal Goal",
@@ -64,7 +69,7 @@
           "matchId": 537355,
           "matchUtcDate": "2026-06-25T20:00:00Z",
           "minute": 2,
-          "player": "L. Sane",
+          "player": "Leroy San\u00e9",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -77,7 +82,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_E",
+      "homeCorners": null,
+      "homeFouls": 1,
+      "homeOffsides": null,
+      "homePossession": "17%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/791.svg",
         "id": 791,
@@ -86,13 +96,37 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T20:06:54.081447+00:00",
-      "lastUpdated": "2026-06-25T22:06:46Z",
+      "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
+      "lastUpdated": "2026-06-25T22:07:19Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "83%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 1,
+          "totalShots": 1,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": null,
+          "fouls": 1,
+          "offsides": null,
+          "possession": "17%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "7'",
-        "lastApiSync": "2026-06-25T20:06:54.081447+00:00",
+        "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
         "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -211,7 +245,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": null,
+      "awayOffsides": null,
+      "awayPossession": "72%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/787.svg",
         "id": 1935,
@@ -219,7 +258,7 @@
         "shortName": "Ivory Coast",
         "tla": "CIV"
       },
-      "clockSeconds": 360,
+      "clockSeconds": 420,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -228,11 +267,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "6'",
-      "fallbackClock": 360,
-      "fallbackClockText": "6'",
+      "displayMinute": "7'",
+      "fallbackClock": 420,
+      "fallbackClockText": "7'",
       "group": "GROUP_E",
+      "homeCorners": null,
+      "homeFouls": null,
+      "homeOffsides": null,
+      "homePossession": "28%",
       "homeScore": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/curacao.svg",
         "id": 9460,
@@ -241,19 +285,43 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T20:06:54.081447+00:00",
-      "lastUpdated": "2026-06-25T22:06:46Z",
+      "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
+      "lastUpdated": "2026-06-25T22:07:19Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": null,
+          "offsides": null,
+          "possession": "72%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": null,
+          "fouls": null,
+          "offsides": null,
+          "possession": "28%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 1,
+          "totalShots": 1,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "6'",
-        "lastApiSync": "2026-06-25T20:06:54.081447+00:00",
-        "seconds": 360,
+        "displayMinute": "7'",
+        "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
+        "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "6'"
+        "timer": "7'"
       },
-      "manualClockText": "6'",
+      "manualClockText": "7'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -278,7 +346,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 6,
+      "minute": 7,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -368,7 +436,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": "83%",
       "awayScore": 1,
+      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/759.svg",
         "id": 759,
@@ -388,14 +461,14 @@
       "displayMinute": "7'",
       "events": [
         {
-          "assist": "F. Wirtz",
+          "assist": "Florian Wirtz",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "2'",
           "extra": null,
           "isDisallowed": false,
           "minute": 2,
-          "player": "L. Sane",
+          "player": "Leroy San\u00e9",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -410,7 +483,7 @@
       "fallbackClockText": "7'",
       "goalEvents": [
         {
-          "assist": "F. Wirtz",
+          "assist": "Florian Wirtz",
           "awayTeam": "Germany",
           "comments": null,
           "detail": "Normal Goal",
@@ -422,7 +495,7 @@
           "matchId": 537355,
           "matchUtcDate": "2026-06-25T20:00:00Z",
           "minute": 2,
-          "player": "L. Sane",
+          "player": "Leroy San\u00e9",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -435,7 +508,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_E",
+      "homeCorners": null,
+      "homeFouls": 1,
+      "homeOffsides": null,
+      "homePossession": "17%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/791.svg",
         "id": 791,
@@ -444,13 +522,37 @@
         "tla": "ECU"
       },
       "id": 537355,
-      "lastApiSync": "2026-06-25T20:06:54.081447+00:00",
-      "lastUpdated": "2026-06-25T22:06:46Z",
+      "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
+      "lastUpdated": "2026-06-25T22:07:19Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "83%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 1,
+          "totalShots": 1,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": null,
+          "fouls": 1,
+          "offsides": null,
+          "possession": "17%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "7'",
-        "lastApiSync": "2026-06-25T20:06:54.081447+00:00",
+        "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
         "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -569,7 +671,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": null,
+      "awayOffsides": null,
+      "awayPossession": "72%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/787.svg",
         "id": 1935,
@@ -577,7 +684,7 @@
         "shortName": "Ivory Coast",
         "tla": "CIV"
       },
-      "clockSeconds": 360,
+      "clockSeconds": 420,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -586,11 +693,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "6'",
-      "fallbackClock": 360,
-      "fallbackClockText": "6'",
+      "displayMinute": "7'",
+      "fallbackClock": 420,
+      "fallbackClockText": "7'",
       "group": "GROUP_E",
+      "homeCorners": null,
+      "homeFouls": null,
+      "homeOffsides": null,
+      "homePossession": "28%",
       "homeScore": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/curacao.svg",
         "id": 9460,
@@ -599,19 +711,43 @@
         "tla": "CUW"
       },
       "id": 537356,
-      "lastApiSync": "2026-06-25T20:06:54.081447+00:00",
-      "lastUpdated": "2026-06-25T22:06:46Z",
+      "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
+      "lastUpdated": "2026-06-25T22:07:19Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": null,
+          "offsides": null,
+          "possession": "72%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": null,
+          "fouls": null,
+          "offsides": null,
+          "possession": "28%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 1,
+          "totalShots": 1,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "6'",
-        "lastApiSync": "2026-06-25T20:06:54.081447+00:00",
-        "seconds": 360,
+        "displayMinute": "7'",
+        "lastApiSync": "2026-06-25T20:07:25.057618+00:00",
+        "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "6'"
+        "timer": "7'"
       },
-      "manualClockText": "6'",
+      "manualClockText": "7'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -636,7 +772,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 6,
+      "minute": 7,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
