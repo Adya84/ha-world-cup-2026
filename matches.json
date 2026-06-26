@@ -34099,8 +34099,8 @@
         "tla": "TUR"
       },
       "id": 537349,
-      "lastApiSync": "2026-06-26T03:58:43.980825+00:00",
-      "lastUpdated": "2026-06-26T05:58:41Z",
+      "lastApiSync": "2026-06-26T03:59:04.730040+00:00",
+      "lastUpdated": "2026-06-26T05:59:02Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34129,7 +34129,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-26T03:58:43.980825+00:00",
+        "lastApiSync": "2026-06-26T03:59:04.730040+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -34420,8 +34420,8 @@
     },
     {
       "apiFootballFixtureId": 1489411,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -34479,8 +34479,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -34488,7 +34486,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "Maur\u00edcio Magalh\u00e3es Prado",
@@ -34671,8 +34668,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "group": "GROUP_D",
       "homeCorners": 1,
       "homeFouls": 9,
@@ -34688,9 +34683,8 @@
         "tla": "PAR"
       },
       "id": 537350,
-      "lastApiSync": "2026-06-26T03:58:43.980825+00:00",
-      "lastUpdated": "2026-06-26T05:58:40Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-26T03:59:04.653121+00:00",
+      "lastUpdated": "2026-06-26T05:58:55Z",
       "liveStatistics": {
         "away": {
           "corners": 3,
@@ -34714,39 +34708,6 @@
           "totalShots": 7,
           "yellowCards": 1
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-26T03:58:43.980825+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "San Francisco Bay Area",
-        "cloudCoverage": 2.3,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T03:56:36.779672+00:00",
-        "humidity": 50.1,
-        "latitude": 37.403,
-        "longitude": -121.97,
-        "name": "Levi's Stadium weather",
-        "observedAt": "2026-06-26T03:00:00Z",
-        "pressure": 1012.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Levi's Stadium",
-        "temperature": 19.4,
-        "temperatureUnit": "C",
-        "windBearing": 326.8,
-        "windSpeed": 2.5,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -34796,7 +34757,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Maur\u00edcio Magalh\u00e3es Prado",
@@ -34948,29 +34909,6 @@
         "city": "San Francisco Bay Area",
         "id": null,
         "name": "Levi's Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "San Francisco Bay Area",
-        "cloudCoverage": 2.3,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T03:56:36.779672+00:00",
-        "humidity": 50.1,
-        "latitude": 37.403,
-        "longitude": -121.97,
-        "name": "Levi's Stadium weather",
-        "observedAt": "2026-06-26T03:00:00Z",
-        "pressure": 1012.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Levi's Stadium",
-        "temperature": 19.4,
-        "temperatureUnit": "C",
-        "windBearing": 326.8,
-        "windSpeed": 2.5,
-        "windSpeedUnit": "m/s"
       }
     },
     {
