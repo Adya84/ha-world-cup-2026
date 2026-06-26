@@ -33597,7 +33597,7 @@
         "shortName": "France",
         "tla": "FRA"
       },
-      "clockSeconds": 300,
+      "clockSeconds": 360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33606,9 +33606,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "5'",
-      "fallbackClock": 300,
-      "fallbackClockText": "5'",
+      "displayMinute": "6'",
+      "fallbackClock": 360,
+      "fallbackClockText": "6'",
       "group": "GROUP_I",
       "homeCorners": null,
       "homeFouls": 0,
@@ -33624,8 +33624,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:06:38.947495+00:00",
-      "lastUpdated": "2026-06-26T21:06:34Z",
+      "lastApiSync": "2026-06-26T19:07:08.892229+00:00",
+      "lastUpdated": "2026-06-26T21:06:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33653,14 +33653,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "5'",
-        "lastApiSync": "2026-06-26T19:06:38.947495+00:00",
-        "seconds": 300,
+        "displayMinute": "6'",
+        "lastApiSync": "2026-06-26T19:07:08.892229+00:00",
+        "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "5'"
+        "timer": "6'"
       },
-      "manualClockText": "5'",
+      "manualClockText": "6'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -33685,7 +33685,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 5,
+      "minute": 6,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33786,7 +33786,7 @@
         "shortName": "Iraq",
         "tla": "IRQ"
       },
-      "clockSeconds": 240,
+      "clockSeconds": 300,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33795,17 +33795,17 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "4'",
+      "displayMinute": "5'",
       "events": [
         {
-          "assist": null,
+          "assist": "L. Camara",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "4'",
           "extra": null,
           "isDisallowed": false,
           "minute": 4,
-          "player": null,
+          "player": "A. Seck",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -33816,18 +33816,23 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 240,
-      "fallbackClockText": "4'",
+      "fallbackClock": 300,
+      "fallbackClockText": "5'",
       "goalEvents": [
         {
-          "assist": null,
+          "assist": "L. Camara",
+          "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "4'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Senegal",
           "isDisallowed": false,
+          "matchId": 537396,
+          "matchUtcDate": "2026-06-26T19:00:00Z",
           "minute": 4,
-          "player": null,
+          "player": "A. Seck",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -33854,8 +33859,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:06:38.947495+00:00",
-      "lastUpdated": "2026-06-26T21:06:34Z",
+      "lastApiSync": "2026-06-26T19:07:08.892229+00:00",
+      "lastUpdated": "2026-06-26T21:06:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33883,14 +33888,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "4'",
-        "lastApiSync": "2026-06-26T19:06:38.947495+00:00",
-        "seconds": 240,
+        "displayMinute": "5'",
+        "lastApiSync": "2026-06-26T19:07:08.892229+00:00",
+        "seconds": 300,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "4'"
+        "timer": "5'"
       },
-      "manualClockText": "4'",
+      "manualClockText": "5'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -33915,7 +33920,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 4,
+      "minute": 5,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
