@@ -1,4 +1,522 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/760.svg",
+        "id": 760,
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_H",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/758.svg",
+        "id": 758,
+        "name": "Uruguay",
+        "shortName": "Uruguay",
+        "tla": "URU"
+      },
+      "id": 537373,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-27T01:08:04Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Guadalajara",
+        "cloudCoverage": 46.1,
+        "condition": "heavyrainshowers_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-26T23:55:09.746815+00:00",
+        "humidity": 61.2,
+        "latitude": 20.6818,
+        "longitude": -103.4622,
+        "name": "Estadio Akron weather",
+        "observedAt": "2026-06-26T23:00:00Z",
+        "pressure": 1014.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Akron",
+        "temperature": 23.3,
+        "temperatureUnit": "C",
+        "windBearing": 164.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 76608,
+          "name": "Ismail Elfath",
+          "nationality": "United States",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Guadalajara",
+        "cloudCoverage": 46.1,
+        "condition": "heavyrainshowers_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-26T23:55:09.746815+00:00",
+        "humidity": 61.2,
+        "latitude": 20.6818,
+        "longitude": -103.4622,
+        "name": "Estadio Akron weather",
+        "observedAt": "2026-06-26T23:00:00Z",
+        "pressure": 1014.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Akron",
+        "temperature": 23.3,
+        "temperatureUnit": "C",
+        "windBearing": 164.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/saudi_arabia.svg",
+        "id": 801,
+        "name": "Saudi Arabia",
+        "shortName": "Saudi Arabia",
+        "tla": "KSA"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_H",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/cape_verde.svg",
+        "id": 1930,
+        "name": "Cape Verde Islands",
+        "shortName": "Cape Verde",
+        "tla": "CPV"
+      },
+      "id": 537374,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-27T01:07:59Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 0.0,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-26T23:55:09.996632+00:00",
+        "humidity": 57.4,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-26T23:00:00Z",
+        "pressure": 1014.2,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 31.6,
+        "temperatureUnit": "C",
+        "windBearing": 175.2,
+        "windSpeed": 5.2,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 43918,
+          "name": "Fran\u00e7ois Letexier",
+          "nationality": "France",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 0.0,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-26T23:55:09.996632+00:00",
+        "humidity": 57.4,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-26T23:00:00Z",
+        "pressure": 1014.2,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 31.6,
+        "temperatureUnit": "C",
+        "windBearing": 175.2,
+        "windSpeed": 5.2,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/760.svg",
+        "id": 760,
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_H",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/758.svg",
+        "id": 758,
+        "name": "Uruguay",
+        "shortName": "Uruguay",
+        "tla": "URU"
+      },
+      "id": 537373,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-27T01:08:04Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Guadalajara",
+        "cloudCoverage": 46.1,
+        "condition": "heavyrainshowers_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-26T23:55:09.746815+00:00",
+        "humidity": 61.2,
+        "latitude": 20.6818,
+        "longitude": -103.4622,
+        "name": "Estadio Akron weather",
+        "observedAt": "2026-06-26T23:00:00Z",
+        "pressure": 1014.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Akron",
+        "temperature": 23.3,
+        "temperatureUnit": "C",
+        "windBearing": 164.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 76608,
+          "name": "Ismail Elfath",
+          "nationality": "United States",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Guadalajara",
+        "cloudCoverage": 46.1,
+        "condition": "heavyrainshowers_day",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-26T23:55:09.746815+00:00",
+        "humidity": 61.2,
+        "latitude": 20.6818,
+        "longitude": -103.4622,
+        "name": "Estadio Akron weather",
+        "observedAt": "2026-06-26T23:00:00Z",
+        "pressure": 1014.0,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Akron",
+        "temperature": 23.3,
+        "temperatureUnit": "C",
+        "windBearing": 164.1,
+        "windSpeed": 2.7,
+        "windSpeedUnit": "m/s"
+      }
+    },
+    {
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awaitingLiveApiData": true,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/saudi_arabia.svg",
+        "id": 801,
+        "name": "Saudi Arabia",
+        "shortName": "Saudi Arabia",
+        "tla": "KSA"
+      },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "Awaiting kickoff API data",
+      "group": "GROUP_H",
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/cape_verde.svg",
+        "id": 1930,
+        "name": "Cape Verde Islands",
+        "shortName": "Cape Verde",
+        "tla": "CPV"
+      },
+      "id": 537374,
+      "lastApiSync": null,
+      "lastUpdated": "2026-06-27T01:07:59Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 0.0,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-26T23:55:09.996632+00:00",
+        "humidity": 57.4,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-26T23:00:00Z",
+        "pressure": 1014.2,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 31.6,
+        "temperatureUnit": "C",
+        "windBearing": 175.2,
+        "windSpeed": 5.2,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": 3,
+      "minute": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 43918,
+          "name": "Fran\u00e7ois Letexier",
+          "nationality": "France",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": null,
+          "home": null
+        },
+        "halfTime": {
+          "away": null,
+          "home": null
+        },
+        "winner": null
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "GROUP_STAGE",
+      "status": "LIVE",
+      "utcDate": "2026-06-27T00:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Houston",
+        "cloudCoverage": 0.0,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-26T23:55:09.996632+00:00",
+        "humidity": 57.4,
+        "latitude": 29.6847,
+        "longitude": -95.4107,
+        "name": "NRG Stadium weather",
+        "observedAt": "2026-06-26T23:00:00Z",
+        "pressure": 1014.2,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "NRG Stadium",
+        "temperature": 31.6,
+        "temperatureUnit": "C",
+        "windBearing": 175.2,
+        "windSpeed": 5.2,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
