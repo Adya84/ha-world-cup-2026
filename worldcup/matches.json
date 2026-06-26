@@ -33192,7 +33192,7 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T02:02:58.329351+00:00",
+      "lastApiSync": "2026-06-26T02:03:25.205850+00:00",
       "lastUpdated": "2026-06-26T02:55:44Z",
       "liveStatistics": {
         "away": {
@@ -33878,7 +33878,7 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T02:02:58.329551+00:00",
+      "lastApiSync": "2026-06-26T02:03:25.206024+00:00",
       "lastUpdated": "2026-06-26T02:59:59Z",
       "liveStatistics": {
         "away": {
@@ -34150,12 +34150,12 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
+      "awayCorners": 2,
       "awayFouls": null,
       "awayOffsides": null,
       "awayPossession": "94%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 0,
+      "awayScore": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/usa.svg",
         "id": 771,
@@ -34173,8 +34173,49 @@
         "type": "CUP"
       },
       "displayMinute": "3'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "3'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 3,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "3:00",
+          "timerSeconds": 180,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 180,
       "fallbackClockText": "3'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "3'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 3,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "3:00",
+          "timerSeconds": 180,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_D",
       "homeCorners": 0,
       "homeFouls": null,
@@ -34190,19 +34231,19 @@
         "tla": "TUR"
       },
       "id": 537349,
-      "lastApiSync": "2026-06-26T02:02:58.377868+00:00",
-      "lastUpdated": "2026-06-26T04:02:56Z",
+      "lastApiSync": "2026-06-26T02:03:25.251281+00:00",
+      "lastUpdated": "2026-06-26T04:03:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
+          "corners": 2,
           "fouls": null,
           "offsides": null,
           "possession": "94%",
           "redCards": 0,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 1,
+          "shotsOnGoal": 2,
+          "totalShots": 3,
           "yellowCards": 0
         },
         "home": {
@@ -34220,7 +34261,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "3'",
-        "lastApiSync": "2026-06-26T02:02:58.377868+00:00",
+        "lastApiSync": "2026-06-26T02:03:25.251281+00:00",
         "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -34278,11 +34319,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -34337,10 +34378,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 0,
+      "awayCorners": null,
       "awayFouls": null,
       "awayOffsides": null,
-      "awayPossession": "54%",
+      "awayPossession": "51%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -34363,10 +34404,10 @@
       "fallbackClock": 180,
       "fallbackClockText": "3'",
       "group": "GROUP_D",
-      "homeCorners": 0,
+      "homeCorners": null,
       "homeFouls": null,
       "homeOffsides": null,
-      "homePossession": "46%",
+      "homePossession": "49%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -34377,37 +34418,37 @@
         "tla": "PAR"
       },
       "id": 537350,
-      "lastApiSync": "2026-06-26T02:02:58.377868+00:00",
-      "lastUpdated": "2026-06-26T04:02:56Z",
+      "lastApiSync": "2026-06-26T02:03:25.251281+00:00",
+      "lastUpdated": "2026-06-26T04:03:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 0,
+          "corners": null,
           "fouls": null,
           "offsides": null,
-          "possession": "54%",
+          "possession": "51%",
           "redCards": 0,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
-          "totalShots": 0,
+          "totalShots": null,
           "yellowCards": 0
         },
         "home": {
-          "corners": 0,
+          "corners": null,
           "fouls": null,
           "offsides": null,
-          "possession": "46%",
+          "possession": "49%",
           "redCards": 0,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
-          "totalShots": 0,
+          "totalShots": null,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "3'",
-        "lastApiSync": "2026-06-26T02:02:58.377868+00:00",
+        "lastApiSync": "2026-06-26T02:03:25.251281+00:00",
         "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
