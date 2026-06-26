@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1200,
+      "clockSeconds": 1260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "20'",
+      "displayMinute": "21'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -91,14 +91,14 @@
           "type": "Yellow Card"
         },
         {
-          "assist": null,
+          "assist": "K. Mbappe",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "20'",
           "extra": null,
           "isDisallowed": false,
           "minute": 20,
-          "player": null,
+          "player": "O. Dembele",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -109,8 +109,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1200,
-      "fallbackClockText": "20'",
+      "fallbackClock": 1260,
+      "fallbackClockText": "21'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -134,6 +134,29 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": "K. Mbappe",
+          "awayTeam": "France",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "20'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537395,
+          "matchUtcDate": "2026-06-26T19:00:00Z",
+          "minute": 20,
+          "player": "O. Dembele",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -152,7 +175,7 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:21:39.838283+00:00",
+      "lastApiSync": "2026-06-26T19:22:11.022007+00:00",
       "lastUpdated": "2026-06-26T21:21:11Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -181,14 +204,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "20'",
-        "lastApiSync": "2026-06-26T19:21:39.838283+00:00",
-        "seconds": 1200,
+        "displayMinute": "21'",
+        "lastApiSync": "2026-06-26T19:22:11.022007+00:00",
+        "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "20'"
+        "timer": "21'"
       },
-      "manualClockText": "20'",
+      "manualClockText": "21'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -213,7 +236,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 20,
+      "minute": 21,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -352,7 +375,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1140,
+      "clockSeconds": 1200,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -361,7 +384,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "19'",
+      "displayMinute": "20'",
       "events": [
         {
           "assist": "A. Seck",
@@ -436,8 +459,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 1140,
-      "fallbackClockText": "19'",
+      "fallbackClock": 1200,
+      "fallbackClockText": "20'",
       "goalEvents": [
         {
           "assist": "A. Seck",
@@ -479,8 +502,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:21:39.838283+00:00",
-      "lastUpdated": "2026-06-26T21:21:34Z",
+      "lastApiSync": "2026-06-26T19:22:11.022007+00:00",
+      "lastUpdated": "2026-06-26T21:21:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -508,14 +531,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "19'",
-        "lastApiSync": "2026-06-26T19:21:39.838283+00:00",
-        "seconds": 1140,
+        "displayMinute": "20'",
+        "lastApiSync": "2026-06-26T19:22:11.022007+00:00",
+        "seconds": 1200,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "19'"
+        "timer": "20'"
       },
-      "manualClockText": "19'",
+      "manualClockText": "20'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -540,7 +563,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 19,
+      "minute": 20,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -683,7 +706,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1200,
+      "clockSeconds": 1260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -692,7 +715,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "20'",
+      "displayMinute": "21'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -731,14 +754,14 @@
           "type": "Yellow Card"
         },
         {
-          "assist": null,
+          "assist": "K. Mbappe",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "20'",
           "extra": null,
           "isDisallowed": false,
           "minute": 20,
-          "player": null,
+          "player": "O. Dembele",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -749,8 +772,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1200,
-      "fallbackClockText": "20'",
+      "fallbackClock": 1260,
+      "fallbackClockText": "21'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -774,6 +797,29 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": "K. Mbappe",
+          "awayTeam": "France",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "20'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537395,
+          "matchUtcDate": "2026-06-26T19:00:00Z",
+          "minute": 20,
+          "player": "O. Dembele",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "20:00",
+          "timerSeconds": 1200,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -792,7 +838,7 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:21:39.838283+00:00",
+      "lastApiSync": "2026-06-26T19:22:11.022007+00:00",
       "lastUpdated": "2026-06-26T21:21:11Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -821,14 +867,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "20'",
-        "lastApiSync": "2026-06-26T19:21:39.838283+00:00",
-        "seconds": 1200,
+        "displayMinute": "21'",
+        "lastApiSync": "2026-06-26T19:22:11.022007+00:00",
+        "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "20'"
+        "timer": "21'"
       },
-      "manualClockText": "20'",
+      "manualClockText": "21'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -853,7 +899,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 20,
+      "minute": 21,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -992,7 +1038,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1140,
+      "clockSeconds": 1200,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1001,7 +1047,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "19'",
+      "displayMinute": "20'",
       "events": [
         {
           "assist": "A. Seck",
@@ -1076,8 +1122,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 1140,
-      "fallbackClockText": "19'",
+      "fallbackClock": 1200,
+      "fallbackClockText": "20'",
       "goalEvents": [
         {
           "assist": "A. Seck",
@@ -1119,8 +1165,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:21:39.838283+00:00",
-      "lastUpdated": "2026-06-26T21:21:34Z",
+      "lastApiSync": "2026-06-26T19:22:11.022007+00:00",
+      "lastUpdated": "2026-06-26T21:21:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1148,14 +1194,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "19'",
-        "lastApiSync": "2026-06-26T19:21:39.838283+00:00",
-        "seconds": 1140,
+        "displayMinute": "20'",
+        "lastApiSync": "2026-06-26T19:22:11.022007+00:00",
+        "seconds": 1200,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "19'"
+        "timer": "20'"
       },
-      "manualClockText": "19'",
+      "manualClockText": "20'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -1180,7 +1226,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 19,
+      "minute": 20,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
