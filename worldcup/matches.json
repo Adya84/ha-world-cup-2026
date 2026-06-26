@@ -33406,7 +33406,7 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:58:00.369137+00:00",
+      "lastApiSync": "2026-06-26T00:58:27.730624+00:00",
       "lastUpdated": "2026-06-26T02:55:44Z",
       "liveStatistics": {
         "away": {
@@ -33672,8 +33672,8 @@
     },
     {
       "apiFootballFixtureId": 1539011,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -33749,8 +33749,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -33758,7 +33756,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -34031,8 +34028,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Ritsu Doan",
@@ -34097,9 +34092,8 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:58:00.420809+00:00",
-      "lastUpdated": "2026-06-26T02:57:58Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-26T00:58:27.730916+00:00",
+      "lastUpdated": "2026-06-26T02:58:25Z",
       "liveStatistics": {
         "away": {
           "corners": 8,
@@ -34123,39 +34117,6 @@
           "totalShots": 8,
           "yellowCards": 1
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-26T00:58:00.420809+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Dallas",
-        "cloudCoverage": 35.2,
-        "condition": "fair_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T00:52:25.936779+00:00",
-        "humidity": 45.6,
-        "latitude": 32.7473,
-        "longitude": -97.0945,
-        "name": "AT&T Stadium weather",
-        "observedAt": "2026-06-26T00:00:00Z",
-        "pressure": 1008.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "AT&T Stadium",
-        "temperature": 33.2,
-        "temperatureUnit": "C",
-        "windBearing": 179.9,
-        "windSpeed": 7.2,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -34203,7 +34164,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Lucas Bergvall",
@@ -34391,29 +34352,6 @@
         "city": "Dallas",
         "id": null,
         "name": "AT&T Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Dallas",
-        "cloudCoverage": 35.2,
-        "condition": "fair_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T00:52:25.936779+00:00",
-        "humidity": 45.6,
-        "latitude": 32.7473,
-        "longitude": -97.0945,
-        "name": "AT&T Stadium weather",
-        "observedAt": "2026-06-26T00:00:00Z",
-        "pressure": 1008.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "AT&T Stadium",
-        "temperature": 33.2,
-        "temperatureUnit": "C",
-        "windBearing": 179.9,
-        "windSpeed": 7.2,
-        "windSpeedUnit": "m/s"
       }
     },
     {
