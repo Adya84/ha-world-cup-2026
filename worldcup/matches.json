@@ -33908,8 +33908,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T20:25:08.730621+00:00",
-      "lastUpdated": "2026-06-26T22:24:58Z",
+      "lastApiSync": "2026-06-26T20:25:32.908864+00:00",
+      "lastUpdated": "2026-06-26T22:25:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33938,7 +33938,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "61'",
-        "lastApiSync": "2026-06-26T20:25:08.730621+00:00",
+        "lastApiSync": "2026-06-26T20:25:32.908864+00:00",
         "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -34146,7 +34146,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3420,
+      "clockSeconds": 3480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -34155,7 +34155,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "57'",
+      "displayMinute": "58'",
       "events": [
         {
           "assist": "A. Seck",
@@ -34264,10 +34264,28 @@
           "timer": "56:00",
           "timerSeconds": 3360,
           "type": "Goal"
+        },
+        {
+          "assist": "P. Gueye",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "H. Diarra",
+          "playerOff": "H. Diarra",
+          "playerOn": "P. Gueye",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "57:00",
+          "timerSeconds": 3420,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3420,
-      "fallbackClockText": "57'",
+      "fallbackClock": 3480,
+      "fallbackClockText": "58'",
       "goalEvents": [
         {
           "assist": "A. Seck",
@@ -34332,8 +34350,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T20:25:08.730621+00:00",
-      "lastUpdated": "2026-06-26T22:24:58Z",
+      "lastApiSync": "2026-06-26T20:25:32.908864+00:00",
+      "lastUpdated": "2026-06-26T22:25:29Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34361,14 +34379,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "57'",
-        "lastApiSync": "2026-06-26T20:25:08.730621+00:00",
-        "seconds": 3420,
+        "displayMinute": "58'",
+        "lastApiSync": "2026-06-26T20:25:32.908864+00:00",
+        "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "57'"
+        "timer": "58'"
       },
-      "manualClockText": "57'",
+      "manualClockText": "58'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -34393,7 +34411,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 57,
+      "minute": 58,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -34476,6 +34494,24 @@
           "team": "Iraq",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "P. Gueye",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "H. Diarra",
+          "playerOff": "H. Diarra",
+          "playerOn": "P. Gueye",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "57:00",
+          "timerSeconds": 3420,
           "type": "Substitution"
         }
       ],
