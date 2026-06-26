@@ -33014,8 +33014,8 @@
     },
     {
       "apiFootballFixtureId": 1489412,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -33035,8 +33035,6 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -33044,7 +33042,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -33299,8 +33296,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -33411,9 +33406,8 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:54:35.017769+00:00",
-      "lastUpdated": "2026-06-26T02:54:32Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-26T00:54:55.896042+00:00",
+      "lastUpdated": "2026-06-26T02:54:53Z",
       "liveStatistics": {
         "away": {
           "corners": 6,
@@ -33437,39 +33431,6 @@
           "totalShots": 10,
           "yellowCards": 0
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-26T00:54:35.017769+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Kansas City",
-        "cloudCoverage": 100.0,
-        "condition": "rain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T00:52:25.751063+00:00",
-        "humidity": 95.5,
-        "latitude": 39.0489,
-        "longitude": -94.4839,
-        "name": "Arrowhead Stadium weather",
-        "observedAt": "2026-06-26T00:00:00Z",
-        "pressure": 1011.8,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Arrowhead Stadium",
-        "temperature": 21.9,
-        "temperatureUnit": "C",
-        "windBearing": 88.6,
-        "windSpeed": 3.8,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -33519,7 +33480,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Mohamed Hadj Mahmoud",
@@ -33707,29 +33668,6 @@
         "city": "Kansas City",
         "id": null,
         "name": "Arrowhead Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Kansas City",
-        "cloudCoverage": 100.0,
-        "condition": "rain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T00:52:25.751063+00:00",
-        "humidity": 95.5,
-        "latitude": 39.0489,
-        "longitude": -94.4839,
-        "name": "Arrowhead Stadium weather",
-        "observedAt": "2026-06-26T00:00:00Z",
-        "pressure": 1011.8,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Arrowhead Stadium",
-        "temperature": 21.9,
-        "temperatureUnit": "C",
-        "windBearing": 88.6,
-        "windSpeed": 3.8,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -34159,8 +34097,8 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:54:35.017769+00:00",
-      "lastUpdated": "2026-06-26T02:54:32Z",
+      "lastApiSync": "2026-06-26T00:54:55.953227+00:00",
+      "lastUpdated": "2026-06-26T02:54:53Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34189,7 +34127,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-26T00:54:35.017769+00:00",
+        "lastApiSync": "2026-06-26T00:54:55.953227+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
