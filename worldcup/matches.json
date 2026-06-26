@@ -33705,7 +33705,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33714,7 +33714,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": "Sebastian Berhalter",
@@ -33825,8 +33825,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": "Sebastian Berhalter",
@@ -33937,8 +33937,8 @@
         "tla": "TUR"
       },
       "id": 537349,
-      "lastApiSync": "2026-06-26T03:30:14.477496+00:00",
-      "lastUpdated": "2026-06-26T05:30:13Z",
+      "lastApiSync": "2026-06-26T03:30:35.969128+00:00",
+      "lastUpdated": "2026-06-26T05:30:35Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33966,14 +33966,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-06-26T03:30:14.477496+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-06-26T03:30:35.969128+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -33998,7 +33998,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -34201,6 +34201,24 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Substitution"
+        },
+        {
+          "assist": "Alex Arce",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "Julio Enciso",
+          "playerOff": "Julio Enciso",
+          "playerOn": "Alex Arce",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 4020,
@@ -34220,8 +34238,8 @@
         "tla": "PAR"
       },
       "id": 537350,
-      "lastApiSync": "2026-06-26T03:30:14.477496+00:00",
-      "lastUpdated": "2026-06-26T05:30:13Z",
+      "lastApiSync": "2026-06-26T03:30:35.969128+00:00",
+      "lastUpdated": "2026-06-26T05:30:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34250,7 +34268,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "67'",
-        "lastApiSync": "2026-06-26T03:30:14.477496+00:00",
+        "lastApiSync": "2026-06-26T03:30:35.969128+00:00",
         "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -34364,6 +34382,24 @@
           "team": "Australia",
           "timer": "58:00",
           "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Alex Arce",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "Julio Enciso",
+          "playerOff": "Julio Enciso",
+          "playerOn": "Alex Arce",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "67:00",
+          "timerSeconds": 4020,
           "type": "Substitution"
         }
       ],
