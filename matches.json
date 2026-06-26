@@ -33035,7 +33035,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 5040,
+      "clockSeconds": 5100,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33044,7 +33044,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "84'",
+      "displayMinute": "85'",
       "events": [
         {
           "assist": null,
@@ -33261,10 +33261,28 @@
           "timer": "77:00",
           "timerSeconds": 4620,
           "type": "Substitution"
+        },
+        {
+          "assist": "Noa Lang",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "Cody Gakpo",
+          "playerOff": "Cody Gakpo",
+          "playerOn": "Noa Lang",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5040,
-      "fallbackClockText": "84'",
+      "fallbackClock": 5100,
+      "fallbackClockText": "85'",
       "goalEvents": [
         {
           "assist": null,
@@ -33375,8 +33393,8 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:43:40.328856+00:00",
-      "lastUpdated": "2026-06-26T02:43:38Z",
+      "lastApiSync": "2026-06-26T00:44:03.253075+00:00",
+      "lastUpdated": "2026-06-26T02:44:02Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33404,14 +33422,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "84'",
-        "lastApiSync": "2026-06-26T00:43:40.328856+00:00",
-        "seconds": 5040,
+        "displayMinute": "85'",
+        "lastApiSync": "2026-06-26T00:44:03.253075+00:00",
+        "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "84'"
+        "timer": "85'"
       },
-      "manualClockText": "84'",
+      "manualClockText": "85'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -33436,7 +33454,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 84,
+      "minute": 85,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33627,6 +33645,24 @@
           "team": "Netherlands",
           "timer": "77:00",
           "timerSeconds": 4620,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Noa Lang",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "Cody Gakpo",
+          "playerOff": "Cody Gakpo",
+          "playerOn": "Noa Lang",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "84:00",
+          "timerSeconds": 5040,
           "type": "Substitution"
         }
       ],
@@ -34015,8 +34051,8 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:43:40.328856+00:00",
-      "lastUpdated": "2026-06-26T02:43:38Z",
+      "lastApiSync": "2026-06-26T00:44:03.253075+00:00",
+      "lastUpdated": "2026-06-26T02:44:02Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34045,7 +34081,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "83'",
-        "lastApiSync": "2026-06-26T00:43:40.328856+00:00",
+        "lastApiSync": "2026-06-26T00:44:03.253075+00:00",
         "seconds": 4980,
         "source": "api_football_live_minute",
         "status": "2H",
