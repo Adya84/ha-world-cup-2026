@@ -33585,9 +33585,9 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 6,
+      "awayFouls": 7,
       "awayOffsides": 1,
-      "awayPossession": "63%",
+      "awayPossession": "60%",
       "awayScore": 3,
       "awayShotsOnGoal": 8,
       "awayTeam": {
@@ -33856,7 +33856,7 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": 0,
-      "homePossession": "37%",
+      "homePossession": "40%",
       "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -33867,15 +33867,15 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T20:13:29.380771+00:00",
-      "lastUpdated": "2026-06-26T22:13:25Z",
+      "lastApiSync": "2026-06-26T20:13:52.125863+00:00",
+      "lastUpdated": "2026-06-26T22:13:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 6,
+          "fouls": 7,
           "offsides": 1,
-          "possession": "63%",
+          "possession": "60%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 8,
@@ -33886,7 +33886,7 @@
           "corners": 1,
           "fouls": 5,
           "offsides": 0,
-          "possession": "37%",
+          "possession": "40%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 2,
@@ -33897,7 +33897,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "50'",
-        "lastApiSync": "2026-06-26T20:13:29.380771+00:00",
+        "lastApiSync": "2026-06-26T20:13:52.125863+00:00",
         "seconds": 3000,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -34187,6 +34187,24 @@
           "timer": "18:00",
           "timerSeconds": 1080,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "J. Hassan",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Basil",
+          "playerOff": "A. Basil",
+          "playerOn": "J. Hassan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Iraq",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 2760,
@@ -34232,8 +34250,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T20:13:29.380771+00:00",
-      "lastUpdated": "2026-06-26T22:13:25Z",
+      "lastApiSync": "2026-06-26T20:13:52.125863+00:00",
+      "lastUpdated": "2026-06-26T22:13:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34262,7 +34280,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-06-26T20:13:29.380771+00:00",
+        "lastApiSync": "2026-06-26T20:13:52.125863+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -34358,6 +34376,24 @@
           "team": "Iraq",
           "timer": "16:00",
           "timerSeconds": 960,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Hassan",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Basil",
+          "playerOff": "A. Basil",
+          "playerOn": "J. Hassan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Iraq",
+          "timer": "46:00",
+          "timerSeconds": 2760,
           "type": "Substitution"
         }
       ],
