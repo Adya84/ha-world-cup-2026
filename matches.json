@@ -33576,8 +33576,8 @@
     },
     {
       "apiFootballFixtureId": 1489416,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -33635,8 +33635,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -33644,7 +33642,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -33971,8 +33968,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -34129,9 +34124,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T20:59:33.702210+00:00",
-      "lastUpdated": "2026-06-26T22:59:31Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-26T20:59:56.180959+00:00",
+      "lastUpdated": "2026-06-26T22:59:53Z",
       "liveStatistics": {
         "away": {
           "corners": 5,
@@ -34155,39 +34149,6 @@
           "totalShots": 10,
           "yellowCards": 1
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-26T20:59:33.702210+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Boston",
-        "cloudCoverage": 97.7,
-        "condition": "cloudy",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T20:58:49.531070+00:00",
-        "humidity": 81.7,
-        "latitude": 42.0909,
-        "longitude": -71.2643,
-        "name": "Gillette Stadium weather",
-        "observedAt": "2026-06-26T20:00:00Z",
-        "pressure": 1015.0,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Gillette Stadium",
-        "temperature": 23.1,
-        "temperatureUnit": "C",
-        "windBearing": 193.8,
-        "windSpeed": 4.2,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -34237,7 +34198,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "M. Pedersen",
@@ -34425,29 +34386,6 @@
         "city": "Boston",
         "id": 1618,
         "name": "Gillette Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Boston",
-        "cloudCoverage": 97.7,
-        "condition": "cloudy",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T20:58:49.531070+00:00",
-        "humidity": 81.7,
-        "latitude": 42.0909,
-        "longitude": -71.2643,
-        "name": "Gillette Stadium weather",
-        "observedAt": "2026-06-26T20:00:00Z",
-        "pressure": 1015.0,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Gillette Stadium",
-        "temperature": 23.1,
-        "temperatureUnit": "C",
-        "windBearing": 193.8,
-        "windSpeed": 4.2,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -35072,8 +35010,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T20:59:33.702210+00:00",
-      "lastUpdated": "2026-06-26T22:59:31Z",
+      "lastApiSync": "2026-06-26T20:59:56.243055+00:00",
+      "lastUpdated": "2026-06-26T22:59:53Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35102,7 +35040,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-26T20:59:33.702210+00:00",
+        "lastApiSync": "2026-06-26T20:59:56.243055+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
