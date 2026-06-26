@@ -33635,7 +33635,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5100,
+      "clockSeconds": 5160,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33644,7 +33644,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "85'",
+      "displayMinute": "86'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -33917,8 +33917,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5100,
-      "fallbackClockText": "85'",
+      "fallbackClock": 5160,
+      "fallbackClockText": "86'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -34052,8 +34052,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T20:49:03.559478+00:00",
-      "lastUpdated": "2026-06-26T22:48:58Z",
+      "lastApiSync": "2026-06-26T20:49:26.192857+00:00",
+      "lastUpdated": "2026-06-26T22:49:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34081,14 +34081,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "85'",
-        "lastApiSync": "2026-06-26T20:49:03.559478+00:00",
-        "seconds": 5100,
+        "displayMinute": "86'",
+        "lastApiSync": "2026-06-26T20:49:26.192857+00:00",
+        "seconds": 5160,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "85'"
+        "timer": "86'"
       },
-      "manualClockText": "85'",
+      "manualClockText": "86'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -34113,7 +34113,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 85,
+      "minute": 86,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -34350,7 +34350,7 @@
       "awayCorners": 3,
       "awayFouls": 8,
       "awayOffsides": 0,
-      "awayPossession": "35%",
+      "awayPossession": "34%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -34416,7 +34416,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -34425,7 +34425,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": "A. Seck",
@@ -34714,10 +34714,28 @@
           "timer": "75:00",
           "timerSeconds": 4500,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "A. Diao",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "I. Sarr",
+          "playerOff": "I. Sarr",
+          "playerOn": "A. Diao",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "81:00",
+          "timerSeconds": 4860,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": "A. Seck",
@@ -34814,12 +34832,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
-      "homeCorners": 9,
+      "homeCorners": 11,
       "homeFouls": 8,
       "homeOffsides": 1,
-      "homePossession": "65%",
+      "homePossession": "66%",
       "homeScore": 4,
-      "homeShotsOnGoal": 6,
+      "homeShotsOnGoal": 8,
       "homeTeam": {
         "crest": "https://crests.football-data.org/senegal.svg",
         "id": 804,
@@ -34828,15 +34846,15 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T20:49:03.559478+00:00",
-      "lastUpdated": "2026-06-26T22:48:59Z",
+      "lastApiSync": "2026-06-26T20:49:26.192857+00:00",
+      "lastUpdated": "2026-06-26T22:49:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
           "fouls": 8,
           "offsides": 0,
-          "possession": "35%",
+          "possession": "34%",
           "redCards": 1,
           "shotsOffGoal": 0,
           "shotsOnGoal": 1,
@@ -34844,27 +34862,27 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 9,
+          "corners": 11,
           "fouls": 8,
           "offsides": 1,
-          "possession": "65%",
+          "possession": "66%",
           "redCards": 0,
           "shotsOffGoal": 11,
-          "shotsOnGoal": 6,
-          "totalShots": 20,
+          "shotsOnGoal": 8,
+          "totalShots": 22,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-06-26T20:49:03.559478+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-06-26T20:49:26.192857+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -34889,7 +34907,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -35098,6 +35116,24 @@
           "team": "Iraq",
           "timer": "67:00",
           "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Diao",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "81'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 81,
+          "player": "I. Sarr",
+          "playerOff": "I. Sarr",
+          "playerOn": "A. Diao",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "81:00",
+          "timerSeconds": 4860,
           "type": "Substitution"
         }
       ],
