@@ -33878,8 +33878,8 @@
         "tla": "TUR"
       },
       "id": 537349,
-      "lastApiSync": "2026-06-26T03:09:31.968373+00:00",
-      "lastUpdated": "2026-06-26T05:09:28Z",
+      "lastApiSync": "2026-06-26T03:09:54.021557+00:00",
+      "lastUpdated": "2026-06-26T05:09:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33908,7 +33908,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "47'",
-        "lastApiSync": "2026-06-26T03:09:31.968373+00:00",
+        "lastApiSync": "2026-06-26T03:09:54.021557+00:00",
         "seconds": 2820,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -34038,7 +34038,27 @@
         "shortName": "Australia",
         "tla": "AUS"
       },
-      "clockSeconds": 2760,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Jackson Irvine",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 2820,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -34047,7 +34067,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "46'",
+      "displayMinute": "47'",
       "events": [
         {
           "assist": "Maur\u00edcio Magalh\u00e3es Prado",
@@ -34066,10 +34086,28 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Jackson Irvine",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Australia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 2760,
-      "fallbackClockText": "46'",
+      "fallbackClock": 2820,
+      "fallbackClockText": "47'",
       "group": "GROUP_D",
       "homeCorners": 0,
       "homeFouls": 5,
@@ -34085,8 +34123,8 @@
         "tla": "PAR"
       },
       "id": 537350,
-      "lastApiSync": "2026-06-26T03:09:31.968373+00:00",
-      "lastUpdated": "2026-06-26T05:09:28Z",
+      "lastApiSync": "2026-06-26T03:09:54.021557+00:00",
+      "lastUpdated": "2026-06-26T05:09:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34114,14 +34152,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "46'",
-        "lastApiSync": "2026-06-26T03:09:31.968373+00:00",
-        "seconds": 2760,
+        "displayMinute": "47'",
+        "lastApiSync": "2026-06-26T03:09:54.021557+00:00",
+        "seconds": 2820,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "46'"
+        "timer": "47'"
       },
-      "manualClockText": "46'",
+      "manualClockText": "47'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "San Francisco Bay Area",
@@ -34146,7 +34184,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 46,
+      "minute": 47,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
