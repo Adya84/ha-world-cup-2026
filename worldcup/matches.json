@@ -33753,6 +33753,24 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Larsen",
+          "comments": null,
+          "detail": "Missed Penalty",
+          "displayMinute": "50'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 50,
+          "player": "J. Larsen",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "50:00",
+          "timerSeconds": 3000,
+          "type": "Penalty"
         }
       ],
       "fallbackClock": 3000,
@@ -33849,6 +33867,29 @@
           "timer": "32:00",
           "timerSeconds": 1920,
           "type": "Goal"
+        },
+        {
+          "assist": "J. Larsen",
+          "awayTeam": "France",
+          "comments": null,
+          "detail": "Missed Penalty",
+          "displayMinute": "50'",
+          "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537395,
+          "matchUtcDate": "2026-06-26T19:00:00Z",
+          "minute": 50,
+          "player": "J. Larsen",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "50:00",
+          "timerSeconds": 3000,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -33867,8 +33908,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T20:13:52.125863+00:00",
-      "lastUpdated": "2026-06-26T22:13:49Z",
+      "lastApiSync": "2026-06-26T20:14:15.496546+00:00",
+      "lastUpdated": "2026-06-26T22:14:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33897,7 +33938,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "50'",
-        "lastApiSync": "2026-06-26T20:13:52.125863+00:00",
+        "lastApiSync": "2026-06-26T20:14:15.496546+00:00",
         "seconds": 3000,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -34250,8 +34291,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T20:13:52.125863+00:00",
-      "lastUpdated": "2026-06-26T22:13:49Z",
+      "lastApiSync": "2026-06-26T20:14:15.496546+00:00",
+      "lastUpdated": "2026-06-26T22:14:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34280,7 +34321,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-06-26T20:13:52.125863+00:00",
+        "lastApiSync": "2026-06-26T20:14:15.496546+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
