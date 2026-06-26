@@ -13,7 +13,7 @@
       "awayCorners": 3,
       "awayFouls": 5,
       "awayOffsides": 1,
-      "awayPossession": "71%",
+      "awayPossession": "70%",
       "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -23,7 +23,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 3000,
+      "clockSeconds": 3060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "50'",
+      "displayMinute": "51'",
       "events": [
         {
           "assist": null,
@@ -71,8 +71,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3000,
-      "fallbackClockText": "50'",
+      "fallbackClock": 3060,
+      "fallbackClockText": "51'",
       "goalEvents": [
         {
           "assist": null,
@@ -126,7 +126,7 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": 1,
-      "homePossession": "29%",
+      "homePossession": "30%",
       "homeScore": 0,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -137,15 +137,15 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:09:46.961190+00:00",
-      "lastUpdated": "2026-06-26T02:09:43Z",
+      "lastApiSync": "2026-06-26T00:10:10.241925+00:00",
+      "lastUpdated": "2026-06-26T02:10:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
           "fouls": 5,
           "offsides": 1,
-          "possession": "71%",
+          "possession": "70%",
           "redCards": 0,
           "shotsOffGoal": 5,
           "shotsOnGoal": 3,
@@ -156,7 +156,7 @@
           "corners": 1,
           "fouls": 5,
           "offsides": 1,
-          "possession": "29%",
+          "possession": "30%",
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
@@ -166,14 +166,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "50'",
-        "lastApiSync": "2026-06-26T00:09:46.961190+00:00",
-        "seconds": 3000,
+        "displayMinute": "51'",
+        "lastApiSync": "2026-06-26T00:10:10.241925+00:00",
+        "seconds": 3060,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "50'"
+        "timer": "51'"
       },
-      "manualClockText": "50'",
+      "manualClockText": "51'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -198,7 +198,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 50,
+      "minute": 51,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -286,10 +286,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 3,
+      "awayCorners": 5,
       "awayFouls": 6,
       "awayOffsides": 1,
-      "awayPossession": "45%",
+      "awayPossession": "43%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -319,7 +319,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2940,
+      "clockSeconds": 3000,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -328,7 +328,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "49'",
+      "displayMinute": "50'",
       "events": [
         {
           "assist": null,
@@ -385,13 +385,13 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 2940,
-      "fallbackClockText": "49'",
+      "fallbackClock": 3000,
+      "fallbackClockText": "50'",
       "group": "GROUP_F",
       "homeCorners": 1,
       "homeFouls": 11,
       "homeOffsides": 1,
-      "homePossession": "55%",
+      "homePossession": "57%",
       "homeScore": 0,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -402,15 +402,15 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:09:46.961190+00:00",
-      "lastUpdated": "2026-06-26T02:09:43Z",
+      "lastApiSync": "2026-06-26T00:10:10.241925+00:00",
+      "lastUpdated": "2026-06-26T02:10:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 3,
+          "corners": 5,
           "fouls": 6,
           "offsides": 1,
-          "possession": "45%",
+          "possession": "43%",
           "redCards": 0,
           "shotsOffGoal": 0,
           "shotsOnGoal": 1,
@@ -421,24 +421,24 @@
           "corners": 1,
           "fouls": 11,
           "offsides": 1,
-          "possession": "55%",
+          "possession": "57%",
           "redCards": 0,
-          "shotsOffGoal": 1,
+          "shotsOffGoal": 2,
           "shotsOnGoal": 2,
-          "totalShots": 4,
+          "totalShots": 5,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "49'",
-        "lastApiSync": "2026-06-26T00:09:46.961190+00:00",
-        "seconds": 2940,
+        "displayMinute": "50'",
+        "lastApiSync": "2026-06-26T00:10:10.241925+00:00",
+        "seconds": 3000,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "49'"
+        "timer": "50'"
       },
-      "manualClockText": "49'",
+      "manualClockText": "50'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -463,7 +463,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 49,
+      "minute": 50,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -592,7 +592,7 @@
       "awayCorners": 3,
       "awayFouls": 5,
       "awayOffsides": 1,
-      "awayPossession": "71%",
+      "awayPossession": "70%",
       "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -602,7 +602,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 3000,
+      "clockSeconds": 3060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -611,7 +611,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "50'",
+      "displayMinute": "51'",
       "events": [
         {
           "assist": null,
@@ -650,8 +650,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3000,
-      "fallbackClockText": "50'",
+      "fallbackClock": 3060,
+      "fallbackClockText": "51'",
       "goalEvents": [
         {
           "assist": null,
@@ -705,7 +705,7 @@
       "homeCorners": 1,
       "homeFouls": 5,
       "homeOffsides": 1,
-      "homePossession": "29%",
+      "homePossession": "30%",
       "homeScore": 0,
       "homeShotsOnGoal": 1,
       "homeTeam": {
@@ -716,15 +716,15 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:09:46.961190+00:00",
-      "lastUpdated": "2026-06-26T02:09:43Z",
+      "lastApiSync": "2026-06-26T00:10:10.241925+00:00",
+      "lastUpdated": "2026-06-26T02:10:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
           "fouls": 5,
           "offsides": 1,
-          "possession": "71%",
+          "possession": "70%",
           "redCards": 0,
           "shotsOffGoal": 5,
           "shotsOnGoal": 3,
@@ -735,7 +735,7 @@
           "corners": 1,
           "fouls": 5,
           "offsides": 1,
-          "possession": "29%",
+          "possession": "30%",
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
@@ -745,14 +745,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "50'",
-        "lastApiSync": "2026-06-26T00:09:46.961190+00:00",
-        "seconds": 3000,
+        "displayMinute": "51'",
+        "lastApiSync": "2026-06-26T00:10:10.241925+00:00",
+        "seconds": 3060,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "50'"
+        "timer": "51'"
       },
-      "manualClockText": "50'",
+      "manualClockText": "51'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -777,7 +777,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 50,
+      "minute": 51,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -865,10 +865,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 3,
+      "awayCorners": 5,
       "awayFouls": 6,
       "awayOffsides": 1,
-      "awayPossession": "45%",
+      "awayPossession": "43%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -898,7 +898,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2940,
+      "clockSeconds": 3000,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -907,7 +907,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "49'",
+      "displayMinute": "50'",
       "events": [
         {
           "assist": null,
@@ -964,13 +964,13 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 2940,
-      "fallbackClockText": "49'",
+      "fallbackClock": 3000,
+      "fallbackClockText": "50'",
       "group": "GROUP_F",
       "homeCorners": 1,
       "homeFouls": 11,
       "homeOffsides": 1,
-      "homePossession": "55%",
+      "homePossession": "57%",
       "homeScore": 0,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -981,15 +981,15 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:09:46.961190+00:00",
-      "lastUpdated": "2026-06-26T02:09:43Z",
+      "lastApiSync": "2026-06-26T00:10:10.241925+00:00",
+      "lastUpdated": "2026-06-26T02:10:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 3,
+          "corners": 5,
           "fouls": 6,
           "offsides": 1,
-          "possession": "45%",
+          "possession": "43%",
           "redCards": 0,
           "shotsOffGoal": 0,
           "shotsOnGoal": 1,
@@ -1000,24 +1000,24 @@
           "corners": 1,
           "fouls": 11,
           "offsides": 1,
-          "possession": "55%",
+          "possession": "57%",
           "redCards": 0,
-          "shotsOffGoal": 1,
+          "shotsOffGoal": 2,
           "shotsOnGoal": 2,
-          "totalShots": 4,
+          "totalShots": 5,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "49'",
-        "lastApiSync": "2026-06-26T00:09:46.961190+00:00",
-        "seconds": 2940,
+        "displayMinute": "50'",
+        "lastApiSync": "2026-06-26T00:10:10.241925+00:00",
+        "seconds": 3000,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "49'"
+        "timer": "50'"
       },
-      "manualClockText": "49'",
+      "manualClockText": "50'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -1042,7 +1042,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 49,
+      "minute": 50,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
