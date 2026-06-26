@@ -33664,8 +33664,8 @@
     },
     {
       "apiFootballFixtureId": 1539012,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -33705,8 +33705,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -33714,7 +33712,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "Sebastian Berhalter",
@@ -34005,8 +34002,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Sebastian Berhalter",
@@ -34140,9 +34135,8 @@
         "tla": "TUR"
       },
       "id": 537349,
-      "lastApiSync": "2026-06-26T04:02:33.407286+00:00",
-      "lastUpdated": "2026-06-26T06:02:32Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-26T04:02:59.024971+00:00",
+      "lastUpdated": "2026-06-26T06:02:55Z",
       "liveStatistics": {
         "away": {
           "corners": 9,
@@ -34166,39 +34160,6 @@
           "totalShots": 9,
           "yellowCards": 0
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-26T04:02:33.407286+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Los Angeles",
-        "cloudCoverage": 2.3,
-        "condition": "clearsky_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T03:56:36.612446+00:00",
-        "humidity": 71.3,
-        "latitude": 33.9535,
-        "longitude": -118.3392,
-        "name": "SoFi Stadium weather",
-        "observedAt": "2026-06-26T03:00:00Z",
-        "pressure": 1012.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "SoFi Stadium",
-        "temperature": 18.6,
-        "temperatureUnit": "C",
-        "windBearing": 227.9,
-        "windSpeed": 3.4,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -34235,7 +34196,7 @@
           "away": 1,
           "home": 2
         },
-        "winner": "DRAW"
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -34246,7 +34207,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Christian Pulisic",
@@ -34434,29 +34395,6 @@
         "city": "Los Angeles",
         "id": null,
         "name": "SoFi Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Los Angeles",
-        "cloudCoverage": 2.3,
-        "condition": "clearsky_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-26T03:56:36.612446+00:00",
-        "humidity": 71.3,
-        "latitude": 33.9535,
-        "longitude": -118.3392,
-        "name": "SoFi Stadium weather",
-        "observedAt": "2026-06-26T03:00:00Z",
-        "pressure": 1012.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "SoFi Stadium",
-        "temperature": 18.6,
-        "temperatureUnit": "C",
-        "windBearing": 227.9,
-        "windSpeed": 3.4,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -34724,7 +34662,7 @@
         "tla": "PAR"
       },
       "id": 537350,
-      "lastApiSync": "2026-06-26T04:02:33.369861+00:00",
+      "lastApiSync": "2026-06-26T04:02:59.025025+00:00",
       "lastUpdated": "2026-06-26T06:00:38Z",
       "liveStatistics": {
         "away": {
