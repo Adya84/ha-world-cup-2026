@@ -33635,7 +33635,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4500,
+      "clockSeconds": 4560,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33644,7 +33644,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "75'",
+      "displayMinute": "76'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -33863,8 +33863,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 4500,
-      "fallbackClockText": "75'",
+      "fallbackClock": 4560,
+      "fallbackClockText": "76'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -33998,8 +33998,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T20:39:04.982149+00:00",
-      "lastUpdated": "2026-06-26T22:39:02Z",
+      "lastApiSync": "2026-06-26T20:39:31.378462+00:00",
+      "lastUpdated": "2026-06-26T22:39:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34027,14 +34027,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "75'",
-        "lastApiSync": "2026-06-26T20:39:04.982149+00:00",
-        "seconds": 4500,
+        "displayMinute": "76'",
+        "lastApiSync": "2026-06-26T20:39:31.378462+00:00",
+        "seconds": 4560,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "75'"
+        "timer": "76'"
       },
-      "manualClockText": "75'",
+      "manualClockText": "76'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -34059,7 +34059,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 75,
+      "minute": 76,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -34290,7 +34290,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4260,
+      "clockSeconds": 4320,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -34299,7 +34299,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "71'",
+      "displayMinute": "72'",
       "events": [
         {
           "assist": "A. Seck",
@@ -34552,10 +34552,28 @@
           "timer": "67:00",
           "timerSeconds": 4020,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "P. Gueye",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 4260,
-      "fallbackClockText": "71'",
+      "fallbackClock": 4320,
+      "fallbackClockText": "72'",
       "goalEvents": [
         {
           "assist": "A. Seck",
@@ -34625,6 +34643,29 @@
           "timer": "59:00",
           "timerSeconds": 3540,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Iraq",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "71'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Senegal",
+          "isDisallowed": false,
+          "matchId": 537396,
+          "matchUtcDate": "2026-06-26T19:00:00Z",
+          "minute": 71,
+          "player": "P. Gueye",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -34633,7 +34674,7 @@
       "homeFouls": 8,
       "homeOffsides": 1,
       "homePossession": "63%",
-      "homeScore": 3,
+      "homeScore": 4,
       "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/senegal.svg",
@@ -34643,8 +34684,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T20:39:04.982149+00:00",
-      "lastUpdated": "2026-06-26T22:39:02Z",
+      "lastApiSync": "2026-06-26T20:39:31.378462+00:00",
+      "lastUpdated": "2026-06-26T22:39:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34672,14 +34713,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "71'",
-        "lastApiSync": "2026-06-26T20:39:04.982149+00:00",
-        "seconds": 4260,
+        "displayMinute": "72'",
+        "lastApiSync": "2026-06-26T20:39:31.378462+00:00",
+        "seconds": 4320,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "71'"
+        "timer": "72'"
       },
-      "manualClockText": "71'",
+      "manualClockText": "72'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -34704,7 +34745,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 71,
+      "minute": 72,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -34734,7 +34775,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 3
+          "home": 4
         },
         "halfTime": {
           "away": 0,
