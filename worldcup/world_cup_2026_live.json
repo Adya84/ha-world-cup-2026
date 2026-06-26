@@ -10,11 +10,11 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
+      "awayCorners": 5,
       "awayFouls": 7,
       "awayOffsides": 1,
       "awayPossession": "72%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
@@ -86,6 +86,24 @@
           "team": "Tunisia",
           "timer": "54:00",
           "timerSeconds": 3240,
+          "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "Jan Paul van Hecke",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "62:00",
+          "timerSeconds": 3720,
           "type": "Goal"
         }
       ],
@@ -160,6 +178,29 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Netherlands",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "62'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Tunisia",
+          "isDisallowed": false,
+          "matchId": 537361,
+          "matchUtcDate": "2026-06-25T23:00:00Z",
+          "minute": 62,
+          "player": "Jan Paul van Hecke",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -178,12 +219,12 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:20:51.973424+00:00",
-      "lastUpdated": "2026-06-26T02:20:49Z",
+      "lastApiSync": "2026-06-26T00:21:14.611198+00:00",
+      "lastUpdated": "2026-06-26T02:21:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 7,
           "offsides": 1,
           "possession": "72%",
@@ -208,7 +249,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "62'",
-        "lastApiSync": "2026-06-26T00:20:51.973424+00:00",
+        "lastApiSync": "2026-06-26T00:21:14.611198+00:00",
         "seconds": 3720,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -268,7 +309,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 1
         },
         "halfTime": {
@@ -330,7 +371,7 @@
       "awayCorners": 5,
       "awayFouls": 7,
       "awayOffsides": 1,
-      "awayPossession": "42%",
+      "awayPossession": "44%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -360,7 +401,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3600,
+      "clockSeconds": 3660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -369,7 +410,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "60'",
+      "displayMinute": "61'",
       "events": [
         {
           "assist": null,
@@ -444,8 +485,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3600,
-      "fallbackClockText": "60'",
+      "fallbackClock": 3660,
+      "fallbackClockText": "61'",
       "goalEvents": [
         {
           "assist": "Ritsu Doan",
@@ -474,9 +515,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeCorners": 1,
-      "homeFouls": 11,
+      "homeFouls": 12,
       "homeOffsides": 3,
-      "homePossession": "58%",
+      "homePossession": "56%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -487,15 +528,15 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:20:51.973424+00:00",
-      "lastUpdated": "2026-06-26T02:20:49Z",
+      "lastApiSync": "2026-06-26T00:21:14.611198+00:00",
+      "lastUpdated": "2026-06-26T02:21:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 5,
           "fouls": 7,
           "offsides": 1,
-          "possession": "42%",
+          "possession": "44%",
           "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -504,9 +545,9 @@
         },
         "home": {
           "corners": 1,
-          "fouls": 11,
+          "fouls": 12,
           "offsides": 3,
-          "possession": "58%",
+          "possession": "56%",
           "redCards": 0,
           "shotsOffGoal": 2,
           "shotsOnGoal": 3,
@@ -516,14 +557,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "60'",
-        "lastApiSync": "2026-06-26T00:20:51.973424+00:00",
-        "seconds": 3600,
+        "displayMinute": "61'",
+        "lastApiSync": "2026-06-26T00:21:14.611198+00:00",
+        "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "60'"
+        "timer": "61'"
       },
-      "manualClockText": "60'",
+      "manualClockText": "61'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -548,7 +589,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 60,
+      "minute": 61,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -674,11 +715,11 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
+      "awayCorners": 5,
       "awayFouls": 7,
       "awayOffsides": 1,
       "awayPossession": "72%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/8601.svg",
@@ -750,6 +791,24 @@
           "team": "Tunisia",
           "timer": "54:00",
           "timerSeconds": 3240,
+          "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "Jan Paul van Hecke",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "62:00",
+          "timerSeconds": 3720,
           "type": "Goal"
         }
       ],
@@ -824,6 +883,29 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Netherlands",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "62'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Tunisia",
+          "isDisallowed": false,
+          "matchId": 537361,
+          "matchUtcDate": "2026-06-25T23:00:00Z",
+          "minute": 62,
+          "player": "Jan Paul van Hecke",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -842,12 +924,12 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:20:51.973424+00:00",
-      "lastUpdated": "2026-06-26T02:20:49Z",
+      "lastApiSync": "2026-06-26T00:21:14.611198+00:00",
+      "lastUpdated": "2026-06-26T02:21:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 7,
           "offsides": 1,
           "possession": "72%",
@@ -872,7 +954,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "62'",
-        "lastApiSync": "2026-06-26T00:20:51.973424+00:00",
+        "lastApiSync": "2026-06-26T00:21:14.611198+00:00",
         "seconds": 3720,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -932,7 +1014,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 1
         },
         "halfTime": {
@@ -994,7 +1076,7 @@
       "awayCorners": 5,
       "awayFouls": 7,
       "awayOffsides": 1,
-      "awayPossession": "42%",
+      "awayPossession": "44%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -1024,7 +1106,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3600,
+      "clockSeconds": 3660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1033,7 +1115,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "60'",
+      "displayMinute": "61'",
       "events": [
         {
           "assist": null,
@@ -1108,8 +1190,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3600,
-      "fallbackClockText": "60'",
+      "fallbackClock": 3660,
+      "fallbackClockText": "61'",
       "goalEvents": [
         {
           "assist": "Ritsu Doan",
@@ -1138,9 +1220,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_F",
       "homeCorners": 1,
-      "homeFouls": 11,
+      "homeFouls": 12,
       "homeOffsides": 3,
-      "homePossession": "58%",
+      "homePossession": "56%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -1151,15 +1233,15 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:20:51.973424+00:00",
-      "lastUpdated": "2026-06-26T02:20:49Z",
+      "lastApiSync": "2026-06-26T00:21:14.611198+00:00",
+      "lastUpdated": "2026-06-26T02:21:10Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 5,
           "fouls": 7,
           "offsides": 1,
-          "possession": "42%",
+          "possession": "44%",
           "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -1168,9 +1250,9 @@
         },
         "home": {
           "corners": 1,
-          "fouls": 11,
+          "fouls": 12,
           "offsides": 3,
-          "possession": "58%",
+          "possession": "56%",
           "redCards": 0,
           "shotsOffGoal": 2,
           "shotsOnGoal": 3,
@@ -1180,14 +1262,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "60'",
-        "lastApiSync": "2026-06-26T00:20:51.973424+00:00",
-        "seconds": 3600,
+        "displayMinute": "61'",
+        "lastApiSync": "2026-06-26T00:21:14.611198+00:00",
+        "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "60'"
+        "timer": "61'"
       },
-      "manualClockText": "60'",
+      "manualClockText": "61'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -1212,7 +1294,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 60,
+      "minute": 61,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
