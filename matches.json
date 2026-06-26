@@ -33699,6 +33699,24 @@
           "timer": "21:00",
           "timerSeconds": 1260,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "O. Dembele",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 1980,
@@ -33772,6 +33790,29 @@
           "timer": "21:00",
           "timerSeconds": 1260,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "France",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "32'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537395,
+          "matchUtcDate": "2026-06-26T19:00:00Z",
+          "minute": 32,
+          "player": "O. Dembele",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -33790,8 +33831,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:34:08.904065+00:00",
-      "lastUpdated": "2026-06-26T21:33:58Z",
+      "lastApiSync": "2026-06-26T19:34:34.266493+00:00",
+      "lastUpdated": "2026-06-26T21:34:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33820,7 +33861,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "33'",
-        "lastApiSync": "2026-06-26T19:34:08.904065+00:00",
+        "lastApiSync": "2026-06-26T19:34:34.266493+00:00",
         "seconds": 1980,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -33942,7 +33983,7 @@
       "awayCorners": 1,
       "awayFouls": 3,
       "awayOffsides": null,
-      "awayPossession": "54%",
+      "awayPossession": "44%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -34104,9 +34145,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
       "homeCorners": 2,
-      "homeFouls": 2,
+      "homeFouls": 3,
       "homeOffsides": null,
-      "homePossession": "46%",
+      "homePossession": "56%",
       "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -34117,15 +34158,15 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:34:08.904065+00:00",
-      "lastUpdated": "2026-06-26T21:33:58Z",
+      "lastApiSync": "2026-06-26T19:34:34.266493+00:00",
+      "lastUpdated": "2026-06-26T21:34:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 3,
           "offsides": null,
-          "possession": "54%",
+          "possession": "44%",
           "redCards": 1,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -34134,9 +34175,9 @@
         },
         "home": {
           "corners": 2,
-          "fouls": 2,
+          "fouls": 3,
           "offsides": null,
-          "possession": "46%",
+          "possession": "56%",
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 2,
@@ -34147,7 +34188,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "32'",
-        "lastApiSync": "2026-06-26T19:34:08.904065+00:00",
+        "lastApiSync": "2026-06-26T19:34:34.266493+00:00",
         "seconds": 1920,
         "source": "api_football_live_minute",
         "status": "1H",
