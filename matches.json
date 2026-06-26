@@ -33588,7 +33588,7 @@
       "awayFouls": 0,
       "awayOffsides": null,
       "awayPossession": "79%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/773.svg",
@@ -33597,7 +33597,7 @@
         "shortName": "France",
         "tla": "FRA"
       },
-      "clockSeconds": 360,
+      "clockSeconds": 420,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33606,9 +33606,55 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "6'",
-      "fallbackClock": 360,
-      "fallbackClockText": "6'",
+      "displayMinute": "7'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": "O. Dembele",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 420,
+      "fallbackClockText": "7'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "France",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537395,
+          "matchUtcDate": "2026-06-26T19:00:00Z",
+          "minute": 7,
+          "player": "O. Dembele",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
       "homeCorners": null,
       "homeFouls": 0,
@@ -33624,8 +33670,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
-      "lastUpdated": "2026-06-26T21:07:52Z",
+      "lastApiSync": "2026-06-26T19:08:22.264147+00:00",
+      "lastUpdated": "2026-06-26T21:08:16Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33653,14 +33699,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "6'",
-        "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
-        "seconds": 360,
+        "displayMinute": "7'",
+        "lastApiSync": "2026-06-26T19:08:22.264147+00:00",
+        "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "6'"
+        "timer": "7'"
       },
-      "manualClockText": "6'",
+      "manualClockText": "7'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -33685,7 +33731,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 6,
+      "minute": 7,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33714,11 +33760,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -33859,8 +33905,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
-      "lastUpdated": "2026-06-26T21:07:52Z",
+      "lastApiSync": "2026-06-26T19:08:22.264147+00:00",
+      "lastUpdated": "2026-06-26T21:08:16Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33889,7 +33935,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "6'",
-        "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
+        "lastApiSync": "2026-06-26T19:08:22.264147+00:00",
         "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
