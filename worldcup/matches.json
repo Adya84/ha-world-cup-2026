@@ -33035,7 +33035,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 3240,
+      "clockSeconds": 3300,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33044,7 +33044,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "54'",
+      "displayMinute": "55'",
       "events": [
         {
           "assist": null,
@@ -33081,10 +33081,28 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "54'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 54,
+          "player": "Hazem Mastouri",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3240,
-      "fallbackClockText": "54'",
+      "fallbackClock": 3300,
+      "fallbackClockText": "55'",
       "goalEvents": [
         {
           "assist": null,
@@ -33131,6 +33149,29 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Netherlands",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "54'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Tunisia",
+          "isDisallowed": false,
+          "matchId": 537361,
+          "matchUtcDate": "2026-06-25T23:00:00Z",
+          "minute": 54,
+          "player": "Hazem Mastouri",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "54:00",
+          "timerSeconds": 3240,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -33149,8 +33190,8 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:13:27.530686+00:00",
-      "lastUpdated": "2026-06-26T02:13:25Z",
+      "lastApiSync": "2026-06-26T00:13:49.355734+00:00",
+      "lastUpdated": "2026-06-26T02:13:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33178,14 +33219,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "54'",
-        "lastApiSync": "2026-06-26T00:13:27.530686+00:00",
-        "seconds": 3240,
+        "displayMinute": "55'",
+        "lastApiSync": "2026-06-26T00:13:49.355734+00:00",
+        "seconds": 3300,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "54'"
+        "timer": "55'"
       },
-      "manualClockText": "54'",
+      "manualClockText": "55'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -33210,7 +33251,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 54,
+      "minute": 55,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33414,8 +33455,8 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:13:27.530686+00:00",
-      "lastUpdated": "2026-06-26T02:13:25Z",
+      "lastApiSync": "2026-06-26T00:13:49.355734+00:00",
+      "lastUpdated": "2026-06-26T02:13:47Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33444,7 +33485,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "53'",
-        "lastApiSync": "2026-06-26T00:13:27.530686+00:00",
+        "lastApiSync": "2026-06-26T00:13:49.355734+00:00",
         "seconds": 3180,
         "source": "api_football_live_minute",
         "status": "2H",
