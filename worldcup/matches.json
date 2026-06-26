@@ -33587,9 +33587,9 @@
       "awayCorners": 1,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "73%",
+      "awayPossession": "65%",
       "awayScore": 1,
-      "awayShotsOnGoal": 4,
+      "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -33597,6 +33597,26 @@
         "shortName": "France",
         "tla": "FRA"
       },
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "10'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 10,
+          "player": "P. Berg",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "10:00",
+          "timerSeconds": 600,
+          "type": "Yellow Card"
+        }
+      ],
       "clockSeconds": 600,
       "clockSource": "api_football_live_minute",
       "competition": {
@@ -33625,6 +33645,24 @@
           "timer": "7:00",
           "timerSeconds": 420,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "10'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 10,
+          "player": "P. Berg",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "10:00",
+          "timerSeconds": 600,
+          "type": "Yellow Card"
         }
       ],
       "fallbackClock": 600,
@@ -33657,9 +33695,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
       "homeCorners": 0,
-      "homeFouls": 1,
+      "homeFouls": 2,
       "homeOffsides": null,
-      "homePossession": "27%",
+      "homePossession": "35%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -33670,26 +33708,26 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:11:33.108923+00:00",
-      "lastUpdated": "2026-06-26T21:11:28Z",
+      "lastApiSync": "2026-06-26T19:11:57.985927+00:00",
+      "lastUpdated": "2026-06-26T21:11:53Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 0,
           "offsides": null,
-          "possession": "73%",
+          "possession": "65%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 4,
-          "totalShots": 4,
+          "shotsOnGoal": 5,
+          "totalShots": 5,
           "yellowCards": null
         },
         "home": {
           "corners": 0,
-          "fouls": 1,
+          "fouls": 2,
           "offsides": null,
-          "possession": "27%",
+          "possession": "35%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -33700,7 +33738,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "10'",
-        "lastApiSync": "2026-06-26T19:11:33.108923+00:00",
+        "lastApiSync": "2026-06-26T19:11:57.985927+00:00",
         "seconds": 600,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -33832,7 +33870,7 @@
         "shortName": "Iraq",
         "tla": "IRQ"
       },
-      "clockSeconds": 540,
+      "clockSeconds": 600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33841,7 +33879,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "9'",
+      "displayMinute": "10'",
       "events": [
         {
           "assist": "A. Seck",
@@ -33862,8 +33900,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 540,
-      "fallbackClockText": "9'",
+      "fallbackClock": 600,
+      "fallbackClockText": "10'",
       "goalEvents": [
         {
           "assist": "A. Seck",
@@ -33905,8 +33943,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:11:33.108923+00:00",
-      "lastUpdated": "2026-06-26T21:11:28Z",
+      "lastApiSync": "2026-06-26T19:11:57.985927+00:00",
+      "lastUpdated": "2026-06-26T21:11:53Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33934,14 +33972,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "9'",
-        "lastApiSync": "2026-06-26T19:11:33.108923+00:00",
-        "seconds": 540,
+        "displayMinute": "10'",
+        "lastApiSync": "2026-06-26T19:11:57.985927+00:00",
+        "seconds": 600,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "9'"
+        "timer": "10'"
       },
-      "manualClockText": "9'",
+      "manualClockText": "10'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -33966,7 +34004,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 9,
+      "minute": 10,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
