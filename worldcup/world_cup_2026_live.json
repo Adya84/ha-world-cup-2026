@@ -13,9 +13,9 @@
       "awayCorners": null,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "75%",
+      "awayPossession": "79%",
       "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -39,7 +39,7 @@
       "homeCorners": null,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "25%",
+      "homePossession": "21%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -50,26 +50,26 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:07:33.469568+00:00",
-      "lastUpdated": "2026-06-26T21:07:28Z",
+      "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
+      "lastUpdated": "2026-06-26T21:07:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": "75%",
+          "possession": "79%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 1,
-          "totalShots": 1,
+          "shotsOnGoal": 2,
+          "totalShots": 2,
           "yellowCards": null
         },
         "home": {
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": "25%",
+          "possession": "21%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -80,7 +80,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "6'",
-        "lastApiSync": "2026-06-26T19:07:33.469568+00:00",
+        "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
         "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -212,7 +212,7 @@
         "shortName": "Iraq",
         "tla": "IRQ"
       },
-      "clockSeconds": 300,
+      "clockSeconds": 360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -221,17 +221,17 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "5'",
+      "displayMinute": "6'",
       "events": [
         {
-          "assist": "L. Camara",
+          "assist": null,
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "4'",
           "extra": null,
           "isDisallowed": false,
           "minute": 4,
-          "player": "A. Seck",
+          "player": "H. Diarra",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -242,11 +242,11 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 300,
-      "fallbackClockText": "5'",
+      "fallbackClock": 360,
+      "fallbackClockText": "6'",
       "goalEvents": [
         {
-          "assist": "L. Camara",
+          "assist": null,
           "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
@@ -258,7 +258,7 @@
           "matchId": 537396,
           "matchUtcDate": "2026-06-26T19:00:00Z",
           "minute": 4,
-          "player": "A. Seck",
+          "player": "H. Diarra",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -285,8 +285,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:07:33.469568+00:00",
-      "lastUpdated": "2026-06-26T21:07:28Z",
+      "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
+      "lastUpdated": "2026-06-26T21:07:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -314,14 +314,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "5'",
-        "lastApiSync": "2026-06-26T19:07:33.469568+00:00",
-        "seconds": 300,
+        "displayMinute": "6'",
+        "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
+        "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "5'"
+        "timer": "6'"
       },
-      "manualClockText": "5'",
+      "manualClockText": "6'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -346,7 +346,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 5,
+      "minute": 6,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -382,7 +382,7 @@
           "away": 0,
           "home": 1
         },
-        "winner": "DRAW"
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -439,9 +439,9 @@
       "awayCorners": null,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "75%",
+      "awayPossession": "79%",
       "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -465,7 +465,7 @@
       "homeCorners": null,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "25%",
+      "homePossession": "21%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -476,26 +476,26 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:07:33.469568+00:00",
-      "lastUpdated": "2026-06-26T21:07:28Z",
+      "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
+      "lastUpdated": "2026-06-26T21:07:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": "75%",
+          "possession": "79%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 1,
-          "totalShots": 1,
+          "shotsOnGoal": 2,
+          "totalShots": 2,
           "yellowCards": null
         },
         "home": {
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": "25%",
+          "possession": "21%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -506,7 +506,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "6'",
-        "lastApiSync": "2026-06-26T19:07:33.469568+00:00",
+        "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
         "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -638,7 +638,7 @@
         "shortName": "Iraq",
         "tla": "IRQ"
       },
-      "clockSeconds": 300,
+      "clockSeconds": 360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -647,17 +647,17 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "5'",
+      "displayMinute": "6'",
       "events": [
         {
-          "assist": "L. Camara",
+          "assist": null,
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "4'",
           "extra": null,
           "isDisallowed": false,
           "minute": 4,
-          "player": "A. Seck",
+          "player": "H. Diarra",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -668,11 +668,11 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 300,
-      "fallbackClockText": "5'",
+      "fallbackClock": 360,
+      "fallbackClockText": "6'",
       "goalEvents": [
         {
-          "assist": "L. Camara",
+          "assist": null,
           "awayTeam": "Iraq",
           "comments": null,
           "detail": "Normal Goal",
@@ -684,7 +684,7 @@
           "matchId": 537396,
           "matchUtcDate": "2026-06-26T19:00:00Z",
           "minute": 4,
-          "player": "A. Seck",
+          "player": "H. Diarra",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -711,8 +711,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:07:33.469568+00:00",
-      "lastUpdated": "2026-06-26T21:07:28Z",
+      "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
+      "lastUpdated": "2026-06-26T21:07:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -740,14 +740,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "5'",
-        "lastApiSync": "2026-06-26T19:07:33.469568+00:00",
-        "seconds": 300,
+        "displayMinute": "6'",
+        "lastApiSync": "2026-06-26T19:07:57.569962+00:00",
+        "seconds": 360,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "5'"
+        "timer": "6'"
       },
-      "manualClockText": "5'",
+      "manualClockText": "6'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -772,7 +772,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 5,
+      "minute": 6,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -808,7 +808,7 @@
           "away": 0,
           "home": 1
         },
-        "winner": "DRAW"
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
