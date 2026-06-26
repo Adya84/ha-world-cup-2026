@@ -24412,23 +24412,32 @@
     "utcDate": "2026-06-23T00:00:00Z"
   },
   "537395": {
+    "apiFootballFixtureId": 1489416,
     "awayScore": 0,
     "awayTeam": "France",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Norway",
-    "phase_start": null,
+    "lastApiSync": "2026-06-26T19:01:48.818678+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-26T19:01:48.818678+00:00",
     "referees": [
       {
-        "id": 11605,
         "name": "Michael Oliver",
         "nationality": "England",
         "type": "REFEREE"
+      },
+      {
+        "name": "Michael Oliver, England",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-26T19:00:00Z"
   },
   "537396": {
