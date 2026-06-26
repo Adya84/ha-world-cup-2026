@@ -33617,7 +33617,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3660,
+      "clockSeconds": 3720,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33626,7 +33626,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "61'",
+      "displayMinute": "62'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -33773,8 +33773,8 @@
           "type": "Penalty"
         }
       ],
-      "fallbackClock": 3660,
-      "fallbackClockText": "61'",
+      "fallbackClock": 3720,
+      "fallbackClockText": "62'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -33908,8 +33908,8 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T20:25:32.908864+00:00",
-      "lastUpdated": "2026-06-26T22:25:28Z",
+      "lastApiSync": "2026-06-26T20:25:55.613056+00:00",
+      "lastUpdated": "2026-06-26T22:25:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33937,14 +33937,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "61'",
-        "lastApiSync": "2026-06-26T20:25:32.908864+00:00",
-        "seconds": 3660,
+        "displayMinute": "62'",
+        "lastApiSync": "2026-06-26T20:25:55.613056+00:00",
+        "seconds": 3720,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "61'"
+        "timer": "62'"
       },
-      "manualClockText": "61'",
+      "manualClockText": "62'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -33969,7 +33969,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 61,
+      "minute": 62,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -34282,6 +34282,42 @@
           "timer": "57:00",
           "timerSeconds": 3420,
           "type": "Substitution"
+        },
+        {
+          "assist": "I. Ndiaye",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "I. Mbaye",
+          "playerOff": "I. Mbaye",
+          "playerOn": "I. Ndiaye",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Jackson",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "L. Camara",
+          "playerOff": "L. Camara",
+          "playerOn": "N. Jackson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3480,
@@ -34350,8 +34386,8 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T20:25:32.908864+00:00",
-      "lastUpdated": "2026-06-26T22:25:29Z",
+      "lastApiSync": "2026-06-26T20:25:55.613056+00:00",
+      "lastUpdated": "2026-06-26T22:25:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34380,7 +34416,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "58'",
-        "lastApiSync": "2026-06-26T20:25:32.908864+00:00",
+        "lastApiSync": "2026-06-26T20:25:55.613056+00:00",
         "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -34512,6 +34548,42 @@
           "team": "Senegal",
           "timer": "57:00",
           "timerSeconds": 3420,
+          "type": "Substitution"
+        },
+        {
+          "assist": "I. Ndiaye",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "I. Mbaye",
+          "playerOff": "I. Mbaye",
+          "playerOn": "I. Ndiaye",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Jackson",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "L. Camara",
+          "playerOff": "L. Camara",
+          "playerOn": "N. Jackson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "58:00",
+          "timerSeconds": 3480,
           "type": "Substitution"
         }
       ],
