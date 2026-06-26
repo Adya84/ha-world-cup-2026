@@ -33035,7 +33035,7 @@
         "shortName": "Netherlands",
         "tla": "NED"
       },
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33044,7 +33044,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": null,
@@ -33117,10 +33117,28 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Goal"
+        },
+        {
+          "assist": "Mohamed Hadj Mahmoud",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "Rani Khedira",
+          "playerOff": "Rani Khedira",
+          "playerOn": "Mohamed Hadj Mahmoud",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": null,
@@ -33231,8 +33249,8 @@
         "tla": "TUN"
       },
       "id": 537361,
-      "lastApiSync": "2026-06-26T00:26:34.312039+00:00",
-      "lastUpdated": "2026-06-26T02:26:31Z",
+      "lastApiSync": "2026-06-26T00:26:56.201790+00:00",
+      "lastUpdated": "2026-06-26T02:26:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33260,14 +33278,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-06-26T00:26:34.312039+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-06-26T00:26:56.201790+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -33292,7 +33310,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -33340,6 +33358,26 @@
       },
       "stage": "GROUP_STAGE",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "Mohamed Hadj Mahmoud",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "Rani Khedira",
+          "playerOff": "Rani Khedira",
+          "playerOn": "Mohamed Hadj Mahmoud",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Tunisia",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-25T23:00:00Z",
       "venue": {
         "city": "Kansas City",
@@ -33581,8 +33619,8 @@
         "tla": "JPN"
       },
       "id": 537362,
-      "lastApiSync": "2026-06-26T00:26:34.312039+00:00",
-      "lastUpdated": "2026-06-26T02:26:31Z",
+      "lastApiSync": "2026-06-26T00:26:56.201790+00:00",
+      "lastUpdated": "2026-06-26T02:26:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -33611,7 +33649,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "66'",
-        "lastApiSync": "2026-06-26T00:26:34.312039+00:00",
+        "lastApiSync": "2026-06-26T00:26:56.201790+00:00",
         "seconds": 3960,
         "source": "api_football_live_minute",
         "status": "2H",
