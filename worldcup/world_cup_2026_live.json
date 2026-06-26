@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1260,
+      "clockSeconds": 1320,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "21'",
+      "displayMinute": "22'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -109,7 +109,7 @@
           "type": "Goal"
         },
         {
-          "assist": null,
+          "assist": "A. Schjelderup",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "21'",
@@ -127,8 +127,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1260,
-      "fallbackClockText": "21'",
+      "fallbackClock": 1320,
+      "fallbackClockText": "22'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -177,7 +177,7 @@
           "type": "Goal"
         },
         {
-          "assist": null,
+          "assist": "A. Schjelderup",
           "awayTeam": "France",
           "comments": null,
           "detail": "Normal Goal",
@@ -206,7 +206,7 @@
       "homeFouls": 3,
       "homeOffsides": 0,
       "homePossession": "29%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/813.svg",
@@ -216,7 +216,7 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:23:00.182422+00:00",
+      "lastApiSync": "2026-06-26T19:23:24.906710+00:00",
       "lastUpdated": "2026-06-26T21:22:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -245,14 +245,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "21'",
-        "lastApiSync": "2026-06-26T19:23:00.182422+00:00",
-        "seconds": 1260,
+        "displayMinute": "22'",
+        "lastApiSync": "2026-06-26T19:23:24.906710+00:00",
+        "seconds": 1320,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "21'"
+        "timer": "22'"
       },
-      "manualClockText": "21'",
+      "manualClockText": "22'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -277,7 +277,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 21,
+      "minute": 22,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -307,11 +307,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 2,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 2,
-          "home": 0
+          "home": 1
         },
         "winner": "AWAY_TEAM"
       },
@@ -368,7 +368,7 @@
       "awayCorners": 0,
       "awayFouls": 3,
       "awayOffsides": null,
-      "awayPossession": "60%",
+      "awayPossession": "58%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -416,7 +416,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1200,
+      "clockSeconds": 1260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -425,7 +425,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "20'",
+      "displayMinute": "21'",
       "events": [
         {
           "assist": "A. Seck",
@@ -500,8 +500,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 1200,
-      "fallbackClockText": "20'",
+      "fallbackClock": 1260,
+      "fallbackClockText": "21'",
       "goalEvents": [
         {
           "assist": "A. Seck",
@@ -530,9 +530,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
       "homeCorners": 2,
-      "homeFouls": 0,
+      "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "40%",
+      "homePossession": "42%",
       "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -543,43 +543,43 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:23:00.182422+00:00",
-      "lastUpdated": "2026-06-26T21:22:55Z",
+      "lastApiSync": "2026-06-26T19:23:24.906710+00:00",
+      "lastUpdated": "2026-06-26T21:23:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 3,
           "offsides": null,
-          "possession": "60%",
+          "possession": "58%",
           "redCards": 1,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
           "totalShots": 0,
-          "yellowCards": null
+          "yellowCards": 0
         },
         "home": {
           "corners": 2,
-          "fouls": 0,
+          "fouls": 1,
           "offsides": null,
-          "possession": "40%",
+          "possession": "42%",
           "redCards": 0,
-          "shotsOffGoal": 2,
+          "shotsOffGoal": 3,
           "shotsOnGoal": 2,
-          "totalShots": 5,
-          "yellowCards": null
+          "totalShots": 6,
+          "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "20'",
-        "lastApiSync": "2026-06-26T19:23:00.182422+00:00",
-        "seconds": 1200,
+        "displayMinute": "21'",
+        "lastApiSync": "2026-06-26T19:23:24.906710+00:00",
+        "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "20'"
+        "timer": "21'"
       },
-      "manualClockText": "20'",
+      "manualClockText": "21'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -604,7 +604,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 20,
+      "minute": 21,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -747,7 +747,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1260,
+      "clockSeconds": 1320,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -756,7 +756,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "21'",
+      "displayMinute": "22'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -813,7 +813,7 @@
           "type": "Goal"
         },
         {
-          "assist": null,
+          "assist": "A. Schjelderup",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "21'",
@@ -831,8 +831,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 1260,
-      "fallbackClockText": "21'",
+      "fallbackClock": 1320,
+      "fallbackClockText": "22'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -881,7 +881,7 @@
           "type": "Goal"
         },
         {
-          "assist": null,
+          "assist": "A. Schjelderup",
           "awayTeam": "France",
           "comments": null,
           "detail": "Normal Goal",
@@ -910,7 +910,7 @@
       "homeFouls": 3,
       "homeOffsides": 0,
       "homePossession": "29%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/813.svg",
@@ -920,7 +920,7 @@
         "tla": "NOR"
       },
       "id": 537395,
-      "lastApiSync": "2026-06-26T19:23:00.182422+00:00",
+      "lastApiSync": "2026-06-26T19:23:24.906710+00:00",
       "lastUpdated": "2026-06-26T21:22:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -949,14 +949,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "21'",
-        "lastApiSync": "2026-06-26T19:23:00.182422+00:00",
-        "seconds": 1260,
+        "displayMinute": "22'",
+        "lastApiSync": "2026-06-26T19:23:24.906710+00:00",
+        "seconds": 1320,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "21'"
+        "timer": "22'"
       },
-      "manualClockText": "21'",
+      "manualClockText": "22'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -981,7 +981,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 21,
+      "minute": 22,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1011,11 +1011,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 2,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 2,
-          "home": 0
+          "home": 1
         },
         "winner": "AWAY_TEAM"
       },
@@ -1072,7 +1072,7 @@
       "awayCorners": 0,
       "awayFouls": 3,
       "awayOffsides": null,
-      "awayPossession": "60%",
+      "awayPossession": "58%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -1120,7 +1120,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 1200,
+      "clockSeconds": 1260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1129,7 +1129,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "20'",
+      "displayMinute": "21'",
       "events": [
         {
           "assist": "A. Seck",
@@ -1204,8 +1204,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 1200,
-      "fallbackClockText": "20'",
+      "fallbackClock": 1260,
+      "fallbackClockText": "21'",
       "goalEvents": [
         {
           "assist": "A. Seck",
@@ -1234,9 +1234,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_I",
       "homeCorners": 2,
-      "homeFouls": 0,
+      "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "40%",
+      "homePossession": "42%",
       "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -1247,43 +1247,43 @@
         "tla": "SEN"
       },
       "id": 537396,
-      "lastApiSync": "2026-06-26T19:23:00.182422+00:00",
-      "lastUpdated": "2026-06-26T21:22:55Z",
+      "lastApiSync": "2026-06-26T19:23:24.906710+00:00",
+      "lastUpdated": "2026-06-26T21:23:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 3,
           "offsides": null,
-          "possession": "60%",
+          "possession": "58%",
           "redCards": 1,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
           "totalShots": 0,
-          "yellowCards": null
+          "yellowCards": 0
         },
         "home": {
           "corners": 2,
-          "fouls": 0,
+          "fouls": 1,
           "offsides": null,
-          "possession": "40%",
+          "possession": "42%",
           "redCards": 0,
-          "shotsOffGoal": 2,
+          "shotsOffGoal": 3,
           "shotsOnGoal": 2,
-          "totalShots": 5,
-          "yellowCards": null
+          "totalShots": 6,
+          "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "20'",
-        "lastApiSync": "2026-06-26T19:23:00.182422+00:00",
-        "seconds": 1200,
+        "displayMinute": "21'",
+        "lastApiSync": "2026-06-26T19:23:24.906710+00:00",
+        "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "20'"
+        "timer": "21'"
       },
-      "manualClockText": "20'",
+      "manualClockText": "21'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Toronto",
@@ -1308,7 +1308,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 20,
+      "minute": 21,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
