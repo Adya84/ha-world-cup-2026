@@ -33674,7 +33674,7 @@
       },
       "awayCorners": 9,
       "awayFouls": 12,
-      "awayOffsides": 4,
+      "awayOffsides": 5,
       "awayPossession": "54%",
       "awayScore": 2,
       "awayShotsOnGoal": 7,
@@ -33705,7 +33705,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5280,
+      "clockSeconds": 5340,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -33714,7 +33714,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "88'",
+      "displayMinute": "89'",
       "events": [
         {
           "assist": "Sebastian Berhalter",
@@ -33931,10 +33931,28 @@
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Substitution"
+        },
+        {
+          "assist": "Kaan Ayhan",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "88'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 88,
+          "player": "Orkun K\u00f6k\u00e7\u00fc",
+          "playerOff": "Orkun K\u00f6k\u00e7\u00fc",
+          "playerOn": "Kaan Ayhan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "T\u00fcrkiye",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5280,
-      "fallbackClockText": "88'",
+      "fallbackClock": 5340,
+      "fallbackClockText": "89'",
       "goalEvents": [
         {
           "assist": "Sebastian Berhalter",
@@ -34045,14 +34063,14 @@
         "tla": "TUR"
       },
       "id": 537349,
-      "lastApiSync": "2026-06-26T03:51:05.022424+00:00",
-      "lastUpdated": "2026-06-26T05:51:02Z",
+      "lastApiSync": "2026-06-26T03:51:25.724318+00:00",
+      "lastUpdated": "2026-06-26T05:51:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 9,
           "fouls": 12,
-          "offsides": 4,
+          "offsides": 5,
           "possession": "54%",
           "redCards": 0,
           "shotsOffGoal": 6,
@@ -34068,20 +34086,20 @@
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 2,
-          "totalShots": 8,
+          "totalShots": 7,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "88'",
-        "lastApiSync": "2026-06-26T03:51:05.022424+00:00",
-        "seconds": 5280,
+        "displayMinute": "89'",
+        "lastApiSync": "2026-06-26T03:51:25.724318+00:00",
+        "seconds": 5340,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "88'"
+        "timer": "89'"
       },
-      "manualClockText": "88'",
+      "manualClockText": "89'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -34106,7 +34124,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 88,
+      "minute": 89,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -34277,6 +34295,24 @@
           "team": "USA",
           "timer": "86:00",
           "timerSeconds": 5160,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Kaan Ayhan",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "88'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 88,
+          "player": "Orkun K\u00f6k\u00e7\u00fc",
+          "playerOff": "Orkun K\u00f6k\u00e7\u00fc",
+          "playerOn": "Kaan Ayhan",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "T\u00fcrkiye",
+          "timer": "88:00",
+          "timerSeconds": 5280,
           "type": "Substitution"
         }
       ],
@@ -34544,8 +34580,8 @@
         "tla": "PAR"
       },
       "id": 537350,
-      "lastApiSync": "2026-06-26T03:51:05.022424+00:00",
-      "lastUpdated": "2026-06-26T05:51:02Z",
+      "lastApiSync": "2026-06-26T03:51:25.724318+00:00",
+      "lastUpdated": "2026-06-26T05:51:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34574,7 +34610,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "88'",
-        "lastApiSync": "2026-06-26T03:51:05.022424+00:00",
+        "lastApiSync": "2026-06-26T03:51:25.724318+00:00",
         "seconds": 5280,
         "source": "api_football_live_minute",
         "status": "2H",
