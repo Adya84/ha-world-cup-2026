@@ -34964,15 +34964,20 @@
     },
     {
       "apiFootballFixtureId": 1489422,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 5,
+      "awayFouls": 3,
+      "awayOffsides": 3,
+      "awayPossession": "72%",
       "awayScore": 0,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -34980,7 +34985,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -34989,11 +34994,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "displayMinute": "46'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": "GROUP_L",
+      "homeCorners": 1,
+      "homeFouls": 8,
+      "homeOffsides": 1,
+      "homePossession": "28%",
       "homeScore": 0,
+      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -35002,19 +35012,43 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:04:13.401728+00:00",
-      "lastUpdated": "2026-06-28T00:04:03Z",
+      "lastApiSync": "2026-06-27T22:04:43.391473+00:00",
+      "lastUpdated": "2026-06-28T00:04:39Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 5,
+          "fouls": 3,
+          "offsides": 3,
+          "possession": "72%",
+          "redCards": null,
+          "shotsOffGoal": 5,
+          "shotsOnGoal": 2,
+          "totalShots": 8,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 8,
+          "offsides": 1,
+          "possession": "28%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 2,
+          "totalShots": 3,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T22:04:13.401728+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-27T22:04:43.391473+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -35039,7 +35073,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -35086,7 +35120,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
       "utcDate": "2026-06-27T21:00:00Z",
       "venue": {
         "city": "East Rutherford",
@@ -35213,8 +35247,8 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:04:13.401728+00:00",
-      "lastUpdated": "2026-06-28T00:04:03Z",
+      "lastApiSync": "2026-06-27T22:04:43.391473+00:00",
+      "lastUpdated": "2026-06-28T00:04:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35243,7 +35277,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T22:04:13.401728+00:00",
+        "lastApiSync": "2026-06-27T22:04:43.391473+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
