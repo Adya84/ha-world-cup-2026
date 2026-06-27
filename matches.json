@@ -35696,9 +35696,27 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "E. Just",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "New Zealand",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3360,
+      "clockSeconds": 3420,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35707,7 +35725,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "56'",
+      "displayMinute": "57'",
       "events": [
         {
           "assist": null,
@@ -35798,10 +35816,46 @@
           "timer": "50:00",
           "timerSeconds": 3000,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "E. Just",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "New Zealand",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": "M. Fernandez-Pardo",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "J. Doku",
+          "playerOff": "J. Doku",
+          "playerOn": "M. Fernandez-Pardo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3360,
-      "fallbackClockText": "56'",
+      "fallbackClock": 3420,
+      "fallbackClockText": "57'",
       "goalEvents": [
         {
           "assist": null,
@@ -35866,8 +35920,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:18:41.082127+00:00",
-      "lastUpdated": "2026-06-27T06:18:38Z",
+      "lastApiSync": "2026-06-27T04:19:03.692290+00:00",
+      "lastUpdated": "2026-06-27T06:18:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35895,14 +35949,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "56'",
-        "lastApiSync": "2026-06-27T04:18:41.082127+00:00",
-        "seconds": 3360,
+        "displayMinute": "57'",
+        "lastApiSync": "2026-06-27T04:19:03.692290+00:00",
+        "seconds": 3420,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "56'"
+        "timer": "57'"
       },
-      "manualClockText": "56'",
+      "manualClockText": "57'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -35927,7 +35981,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 56,
+      "minute": 57,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -36010,6 +36064,24 @@
           "team": "New Zealand",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Fernandez-Pardo",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "J. Doku",
+          "playerOff": "J. Doku",
+          "playerOn": "M. Fernandez-Pardo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "56:00",
+          "timerSeconds": 3360,
           "type": "Substitution"
         }
       ],
@@ -36439,8 +36511,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:18:41.082127+00:00",
-      "lastUpdated": "2026-06-27T06:18:37Z",
+      "lastApiSync": "2026-06-27T04:19:03.692290+00:00",
+      "lastUpdated": "2026-06-27T06:18:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -36469,7 +36541,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "55'",
-        "lastApiSync": "2026-06-27T04:18:41.082127+00:00",
+        "lastApiSync": "2026-06-27T04:19:03.692290+00:00",
         "seconds": 3300,
         "source": "api_football_live_minute",
         "status": "2H",
