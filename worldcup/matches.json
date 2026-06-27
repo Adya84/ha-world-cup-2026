@@ -35657,8 +35657,8 @@
     },
     {
       "apiFootballFixtureId": 1489415,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -35716,8 +35716,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -35725,7 +35723,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -36052,8 +36049,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -36210,9 +36205,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:57:53.455947+00:00",
-      "lastUpdated": "2026-06-27T06:57:50Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-27T04:58:15.127734+00:00",
+      "lastUpdated": "2026-06-27T06:58:13Z",
       "liveStatistics": {
         "away": {
           "corners": 8,
@@ -36236,39 +36230,6 @@
           "totalShots": 6,
           "yellowCards": 2
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T04:57:53.455947+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 38.3,
-        "condition": "lightrainshowers_night",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:57:10.772964+00:00",
-        "humidity": 92.1,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-06-27T04:00:00Z",
-        "pressure": 1007.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 14.3,
-        "temperatureUnit": "C",
-        "windBearing": 70.4,
-        "windSpeed": 3.4,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -36318,7 +36279,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "J. Randall",
@@ -36506,29 +36467,6 @@
         "city": "Vancouver",
         "id": 19445,
         "name": "BC Place"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 38.3,
-        "condition": "lightrainshowers_night",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:57:10.772964+00:00",
-        "humidity": 92.1,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-06-27T04:00:00Z",
-        "pressure": 1007.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 14.3,
-        "temperatureUnit": "C",
-        "windBearing": 70.4,
-        "windSpeed": 3.4,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -37112,8 +37050,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:57:53.455947+00:00",
-      "lastUpdated": "2026-06-27T06:57:50Z",
+      "lastApiSync": "2026-06-27T04:58:15.199062+00:00",
+      "lastUpdated": "2026-06-27T06:58:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -37142,7 +37080,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T04:57:53.455947+00:00",
+        "lastApiSync": "2026-06-27T04:58:15.199062+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
