@@ -23,7 +23,7 @@
         "shortName": "Portugal",
         "tla": "POR"
       },
-      "clockSeconds": 1200,
+      "clockSeconds": 1260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,9 +32,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "20'",
-      "fallbackClock": 1200,
-      "fallbackClockText": "20'",
+      "displayMinute": "21'",
+      "fallbackClock": 1260,
+      "fallbackClockText": "21'",
       "group": "GROUP_K",
       "homeCorners": 1,
       "homeFouls": 1,
@@ -50,8 +50,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-27T23:51:16.011720+00:00",
-      "lastUpdated": "2026-06-28T01:51:12Z",
+      "lastApiSync": "2026-06-27T23:51:41.376042+00:00",
+      "lastUpdated": "2026-06-28T01:51:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -79,14 +79,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "20'",
-        "lastApiSync": "2026-06-27T23:51:16.011720+00:00",
-        "seconds": 1200,
+        "displayMinute": "21'",
+        "lastApiSync": "2026-06-27T23:51:41.376042+00:00",
+        "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "20'"
+        "timer": "21'"
       },
-      "manualClockText": "20'",
+      "manualClockText": "21'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -111,7 +111,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 20,
+      "minute": 21,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -242,22 +242,22 @@
           "type": "Goal"
         },
         {
-          "assist": "B. Cipenga",
+          "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - Foul",
           "displayMinute": "17'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 17,
           "player": "N. Mbuku",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Congo DR",
           "timer": "17:00",
           "timerSeconds": 1020,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
       "fallbackClock": 1200,
@@ -285,29 +285,6 @@
           "timer": "10:00",
           "timerSeconds": 600,
           "type": "Goal"
-        },
-        {
-          "assist": "B. Cipenga",
-          "awayTeam": "Uzbekistan",
-          "comments": null,
-          "detail": "Normal Goal",
-          "displayMinute": "17'",
-          "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Congo DR",
-          "isDisallowed": false,
-          "matchId": 537408,
-          "matchUtcDate": "2026-06-27T23:30:00Z",
-          "minute": 17,
-          "player": "N. Mbuku",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Congo DR",
-          "timer": "17:00",
-          "timerSeconds": 1020,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -326,8 +303,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-27T23:51:16.011720+00:00",
-      "lastUpdated": "2026-06-28T01:51:12Z",
+      "lastApiSync": "2026-06-27T23:51:41.376042+00:00",
+      "lastUpdated": "2026-06-28T01:51:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -356,7 +333,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "20'",
-        "lastApiSync": "2026-06-27T23:51:16.011720+00:00",
+        "lastApiSync": "2026-06-27T23:51:41.376042+00:00",
         "seconds": 1200,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -490,7 +467,7 @@
         "shortName": "Portugal",
         "tla": "POR"
       },
-      "clockSeconds": 1200,
+      "clockSeconds": 1260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -499,9 +476,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "20'",
-      "fallbackClock": 1200,
-      "fallbackClockText": "20'",
+      "displayMinute": "21'",
+      "fallbackClock": 1260,
+      "fallbackClockText": "21'",
       "group": "GROUP_K",
       "homeCorners": 1,
       "homeFouls": 1,
@@ -517,8 +494,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-27T23:51:16.011720+00:00",
-      "lastUpdated": "2026-06-28T01:51:12Z",
+      "lastApiSync": "2026-06-27T23:51:41.376042+00:00",
+      "lastUpdated": "2026-06-28T01:51:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -546,14 +523,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "20'",
-        "lastApiSync": "2026-06-27T23:51:16.011720+00:00",
-        "seconds": 1200,
+        "displayMinute": "21'",
+        "lastApiSync": "2026-06-27T23:51:41.376042+00:00",
+        "seconds": 1260,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "20'"
+        "timer": "21'"
       },
-      "manualClockText": "20'",
+      "manualClockText": "21'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -578,7 +555,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 20,
+      "minute": 21,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -709,22 +686,22 @@
           "type": "Goal"
         },
         {
-          "assist": "B. Cipenga",
+          "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - Foul",
           "displayMinute": "17'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 17,
           "player": "N. Mbuku",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Congo DR",
           "timer": "17:00",
           "timerSeconds": 1020,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
       "fallbackClock": 1200,
@@ -752,29 +729,6 @@
           "timer": "10:00",
           "timerSeconds": 600,
           "type": "Goal"
-        },
-        {
-          "assist": "B. Cipenga",
-          "awayTeam": "Uzbekistan",
-          "comments": null,
-          "detail": "Normal Goal",
-          "displayMinute": "17'",
-          "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Congo DR",
-          "isDisallowed": false,
-          "matchId": 537408,
-          "matchUtcDate": "2026-06-27T23:30:00Z",
-          "minute": 17,
-          "player": "N. Mbuku",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Congo DR",
-          "timer": "17:00",
-          "timerSeconds": 1020,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -793,8 +747,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-27T23:51:16.011720+00:00",
-      "lastUpdated": "2026-06-28T01:51:12Z",
+      "lastApiSync": "2026-06-27T23:51:41.376042+00:00",
+      "lastUpdated": "2026-06-28T01:51:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -823,7 +777,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "20'",
-        "lastApiSync": "2026-06-27T23:51:16.011720+00:00",
+        "lastApiSync": "2026-06-27T23:51:41.376042+00:00",
         "seconds": 1200,
         "source": "api_football_live_minute",
         "status": "1H",
