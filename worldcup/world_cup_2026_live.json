@@ -50,8 +50,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T03:05:15.369223+00:00",
-      "lastUpdated": "2026-06-27T05:05:13Z",
+      "lastApiSync": "2026-06-27T03:05:40.677178+00:00",
+      "lastUpdated": "2026-06-27T05:05:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -80,7 +80,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "4'",
-        "lastApiSync": "2026-06-27T03:05:15.369223+00:00",
+        "lastApiSync": "2026-06-27T03:05:40.677178+00:00",
         "seconds": 240,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -202,7 +202,7 @@
       "awayCorners": null,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": null,
+      "awayPossession": "35%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -222,13 +222,59 @@
         "type": "CUP"
       },
       "displayMinute": "5'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "5'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 5,
+          "player": "M. Saber",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "5:00",
+          "timerSeconds": 300,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 300,
       "fallbackClockText": "5'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Iran",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "5'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Egypt",
+          "isDisallowed": false,
+          "matchId": 537368,
+          "matchUtcDate": "2026-06-27T03:00:00Z",
+          "minute": 5,
+          "player": "M. Saber",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "5:00",
+          "timerSeconds": 300,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
       "homeCorners": null,
-      "homeFouls": 0,
+      "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": null,
+      "homePossession": "65%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -239,15 +285,15 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T03:05:15.369223+00:00",
-      "lastUpdated": "2026-06-27T05:05:13Z",
+      "lastApiSync": "2026-06-27T03:05:40.677178+00:00",
+      "lastUpdated": "2026-06-27T05:05:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": null,
+          "possession": "35%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -256,9 +302,9 @@
         },
         "home": {
           "corners": null,
-          "fouls": 0,
+          "fouls": 1,
           "offsides": null,
-          "possession": null,
+          "possession": "65%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -269,7 +315,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "5'",
-        "lastApiSync": "2026-06-27T03:05:15.369223+00:00",
+        "lastApiSync": "2026-06-27T03:05:40.677178+00:00",
         "seconds": 300,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -430,8 +476,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T03:05:15.369223+00:00",
-      "lastUpdated": "2026-06-27T05:05:13Z",
+      "lastApiSync": "2026-06-27T03:05:40.677178+00:00",
+      "lastUpdated": "2026-06-27T05:05:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -460,7 +506,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "4'",
-        "lastApiSync": "2026-06-27T03:05:15.369223+00:00",
+        "lastApiSync": "2026-06-27T03:05:40.677178+00:00",
         "seconds": 240,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -582,7 +628,7 @@
       "awayCorners": null,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": null,
+      "awayPossession": "35%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -602,13 +648,59 @@
         "type": "CUP"
       },
       "displayMinute": "5'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "5'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 5,
+          "player": "M. Saber",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "5:00",
+          "timerSeconds": 300,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 300,
       "fallbackClockText": "5'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Iran",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "5'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Egypt",
+          "isDisallowed": false,
+          "matchId": 537368,
+          "matchUtcDate": "2026-06-27T03:00:00Z",
+          "minute": 5,
+          "player": "M. Saber",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "5:00",
+          "timerSeconds": 300,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
       "homeCorners": null,
-      "homeFouls": 0,
+      "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": null,
+      "homePossession": "65%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -619,15 +711,15 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T03:05:15.369223+00:00",
-      "lastUpdated": "2026-06-27T05:05:13Z",
+      "lastApiSync": "2026-06-27T03:05:40.677178+00:00",
+      "lastUpdated": "2026-06-27T05:05:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 0,
           "offsides": null,
-          "possession": null,
+          "possession": "35%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -636,9 +728,9 @@
         },
         "home": {
           "corners": null,
-          "fouls": 0,
+          "fouls": 1,
           "offsides": null,
-          "possession": null,
+          "possession": "65%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -649,7 +741,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "5'",
-        "lastApiSync": "2026-06-27T03:05:15.369223+00:00",
+        "lastApiSync": "2026-06-27T03:05:40.677178+00:00",
         "seconds": 300,
         "source": "api_football_live_minute",
         "status": "1H",
