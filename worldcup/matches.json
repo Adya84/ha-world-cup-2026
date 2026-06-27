@@ -35023,7 +35023,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4080,
+      "clockSeconds": 4140,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35032,7 +35032,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "68'",
+      "displayMinute": "69'",
       "events": [
         {
           "assist": "J. Fajardo",
@@ -35161,8 +35161,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 4080,
-      "fallbackClockText": "68'",
+      "fallbackClock": 4140,
+      "fallbackClockText": "69'",
       "goalEvents": [
         {
           "assist": "B. Saka",
@@ -35227,8 +35227,8 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:27:11.969080+00:00",
-      "lastUpdated": "2026-06-28T00:27:09Z",
+      "lastApiSync": "2026-06-27T22:27:33.588106+00:00",
+      "lastUpdated": "2026-06-28T00:27:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35256,14 +35256,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "68'",
-        "lastApiSync": "2026-06-27T22:27:11.969080+00:00",
-        "seconds": 4080,
+        "displayMinute": "69'",
+        "lastApiSync": "2026-06-27T22:27:33.588106+00:00",
+        "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "68'"
+        "timer": "69'"
       },
-      "manualClockText": "68'",
+      "manualClockText": "69'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -35288,7 +35288,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 68,
+      "minute": 69,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -35445,7 +35445,7 @@
         "shortName": "Ghana",
         "tla": "GHA"
       },
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35454,7 +35454,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": "M. Kovacic",
@@ -35509,10 +35509,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "I. Matanovic",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "66'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 66,
+          "player": "A. Budimir",
+          "playerOff": "A. Budimir",
+          "playerOn": "I. Matanovic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": "M. Kovacic",
@@ -35554,8 +35572,8 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:27:11.969080+00:00",
-      "lastUpdated": "2026-06-28T00:27:09Z",
+      "lastApiSync": "2026-06-27T22:27:33.588106+00:00",
+      "lastUpdated": "2026-06-28T00:27:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35583,14 +35601,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-27T22:27:11.969080+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-27T22:27:33.588106+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -35615,7 +35633,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -35698,6 +35716,24 @@
           "team": "Ghana",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "I. Matanovic",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "66'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 66,
+          "player": "A. Budimir",
+          "playerOff": "A. Budimir",
+          "playerOn": "I. Matanovic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "66:00",
+          "timerSeconds": 3960,
           "type": "Substitution"
         }
       ],
