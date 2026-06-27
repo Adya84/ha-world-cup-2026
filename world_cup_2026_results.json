@@ -66681,20 +66681,12 @@
     },
     {
       "apiFootballFixtureId": 1489417,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 6,
-      "awayFouls": 14,
-      "awayOffsides": 2,
-      "awayPossession": "67%",
-      "awayScore": 1,
-      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -66804,11 +66796,16 @@
       "events": [
         {
           "assist": "M. Llorente",
+          "awayTeam": "Spain",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "42'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Uruguay",
           "isDisallowed": false,
+          "matchId": 537373,
+          "matchUtcDate": "2026-06-27T00:00:00Z",
           "minute": 42,
           "player": "A. Baena",
           "playerOff": null,
@@ -66819,258 +66816,6 @@
           "timer": "42:00",
           "timerSeconds": 2520,
           "type": "Goal"
-        },
-        {
-          "assist": "N. de la Cruz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "45'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 45,
-          "player": "M. Ugarte",
-          "playerOff": "M. Ugarte",
-          "playerOn": "N. de la Cruz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "45:00",
-          "timerSeconds": 2700,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Rochet",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "F. Muslera",
-          "playerOff": "F. Muslera",
-          "playerOn": "S. Rochet",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "A. Baena",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "54'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 54,
-          "player": "J. Sanabria",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "54:00",
-          "timerSeconds": 3240,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "F. Vinas",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "57'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 57,
-          "player": "F. Valverde",
-          "playerOff": "F. Valverde",
-          "playerOn": "F. Vinas",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "57:00",
-          "timerSeconds": 3420,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Elbowing",
-          "detail": "Yellow Card",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "G. Varela",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "F. Ruiz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "Pedri",
-          "playerOff": "Pedri",
-          "playerOn": "F. Ruiz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Olmo",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "M. Merino",
-          "playerOff": "M. Merino",
-          "playerOn": "D. Olmo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Y. Pino",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "66'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 66,
-          "player": "A. Baena",
-          "playerOff": "A. Baena",
-          "playerOn": "Y. Pino",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "66:00",
-          "timerSeconds": 3960,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Rodriguez",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "70'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 70,
-          "player": "J. Sanabria",
-          "playerOff": "J. Sanabria",
-          "playerOn": "B. Rodriguez",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "70:00",
-          "timerSeconds": 4200,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Williams",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "N. Williams",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": "F. Torres",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "M. Oyarzabal",
-          "playerOff": "M. Oyarzabal",
-          "playerOn": "F. Torres",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "90+3'",
-          "extra": 3,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "N. de la Cruz",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "93:00",
-          "timerSeconds": 5580,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Serious foul",
-          "detail": "Red Card",
-          "displayMinute": "90+5'",
-          "extra": 5,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "A. Canobbio",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "95:00",
-          "timerSeconds": 5700,
-          "type": "Red Card"
         }
       ],
       "goalEvents": [
@@ -67098,14 +66843,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
-      "homeCorners": 1,
-      "homeFouls": 14,
-      "homeOffsides": 5,
-      "homePossession": "33%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/758.svg",
         "id": 758,
@@ -67114,39 +66852,14 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T03:14:38.949755+00:00",
       "lastUpdated": "2026-06-27T04:02:59Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 6,
-          "fouls": 14,
-          "offsides": 2,
-          "possession": "67%",
-          "redCards": 0,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 1,
-          "totalShots": 6,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 1,
-          "fouls": 14,
-          "offsides": 5,
-          "possession": "33%",
-          "redCards": 1,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 5,
-          "yellowCards": 3
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1489417,
-        "awayCorners": 6,
-        "awayFouls": 14,
-        "awayOffsides": 2,
-        "awayPossession": "67%",
-        "awayShotsOnGoal": 1,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -67242,11 +66955,16 @@
         "events": [
           {
             "assist": "M. Llorente",
+            "awayTeam": "Spain",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "42'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Uruguay",
             "isDisallowed": false,
+            "matchId": 537373,
+            "matchUtcDate": "2026-06-27T00:00:00Z",
             "minute": 42,
             "player": "A. Baena",
             "playerOff": null,
@@ -67257,258 +66975,6 @@
             "timer": "42:00",
             "timerSeconds": 2520,
             "type": "Goal"
-          },
-          {
-            "assist": "N. de la Cruz",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "45'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 45,
-            "player": "M. Ugarte",
-            "playerOff": "M. Ugarte",
-            "playerOn": "N. de la Cruz",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "45:00",
-            "timerSeconds": 2700,
-            "type": "Substitution"
-          },
-          {
-            "assist": "S. Rochet",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "F. Muslera",
-            "playerOff": "F. Muslera",
-            "playerOn": "S. Rochet",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
-            "assist": null,
-            "comments": "Holding",
-            "detail": "Yellow Card",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "A. Baena",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Yellow Card"
-          },
-          {
-            "assist": null,
-            "comments": "Tripping",
-            "detail": "Yellow Card",
-            "displayMinute": "54'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 54,
-            "player": "J. Sanabria",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "54:00",
-            "timerSeconds": 3240,
-            "type": "Yellow Card"
-          },
-          {
-            "assist": "F. Vinas",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "57'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 57,
-            "player": "F. Valverde",
-            "playerOff": "F. Valverde",
-            "playerOn": "F. Vinas",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "57:00",
-            "timerSeconds": 3420,
-            "type": "Substitution"
-          },
-          {
-            "assist": null,
-            "comments": "Elbowing",
-            "detail": "Yellow Card",
-            "displayMinute": "58'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 58,
-            "player": "G. Varela",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "58:00",
-            "timerSeconds": 3480,
-            "type": "Yellow Card"
-          },
-          {
-            "assist": "F. Ruiz",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "60'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 60,
-            "player": "Pedri",
-            "playerOff": "Pedri",
-            "playerOn": "F. Ruiz",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "60:00",
-            "timerSeconds": 3600,
-            "type": "Substitution"
-          },
-          {
-            "assist": "D. Olmo",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "60'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 60,
-            "player": "M. Merino",
-            "playerOff": "M. Merino",
-            "playerOn": "D. Olmo",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "60:00",
-            "timerSeconds": 3600,
-            "type": "Substitution"
-          },
-          {
-            "assist": "Y. Pino",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "66'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 66,
-            "player": "A. Baena",
-            "playerOff": "A. Baena",
-            "playerOn": "Y. Pino",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "66:00",
-            "timerSeconds": 3960,
-            "type": "Substitution"
-          },
-          {
-            "assist": "B. Rodriguez",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "70'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 70,
-            "player": "J. Sanabria",
-            "playerOff": "J. Sanabria",
-            "playerOn": "B. Rodriguez",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "70:00",
-            "timerSeconds": 4200,
-            "type": "Substitution"
-          },
-          {
-            "assist": "N. Williams",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "76'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 76,
-            "player": "Lamine Yamal",
-            "playerOff": "Lamine Yamal",
-            "playerOn": "N. Williams",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "type": "Substitution"
-          },
-          {
-            "assist": "F. Torres",
-            "comments": null,
-            "detail": "Substitution 5",
-            "displayMinute": "76'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 76,
-            "player": "M. Oyarzabal",
-            "playerOff": "M. Oyarzabal",
-            "playerOn": "F. Torres",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "type": "Substitution"
-          },
-          {
-            "assist": null,
-            "comments": "Tripping",
-            "detail": "Yellow Card",
-            "displayMinute": "90+3'",
-            "extra": 3,
-            "isDisallowed": false,
-            "minute": 90,
-            "player": "N. de la Cruz",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "93:00",
-            "timerSeconds": 5580,
-            "type": "Yellow Card"
-          },
-          {
-            "assist": null,
-            "comments": "Serious foul",
-            "detail": "Red Card",
-            "displayMinute": "90+5'",
-            "extra": 5,
-            "isDisallowed": false,
-            "minute": 90,
-            "player": "A. Canobbio",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "95:00",
-            "timerSeconds": 5700,
-            "type": "Red Card"
           }
         ],
         "goalEvents": [
@@ -67536,57 +67002,28 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": "api_football_live",
-        "homeCorners": 1,
-        "homeFouls": 14,
-        "homeOffsides": 5,
-        "homePossession": "33%",
-        "homeShotsOnGoal": 1,
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 6,
-            "fouls": 14,
-            "offsides": 2,
-            "possession": "67%",
-            "redCards": 0,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 1,
-            "totalShots": 6,
-            "yellowCards": 1
-          },
-          "home": {
-            "corners": 1,
-            "fouls": 14,
-            "offsides": 5,
-            "possession": "33%",
-            "redCards": 1,
-            "shotsOffGoal": 3,
-            "shotsOnGoal": 1,
-            "totalShots": 5,
-            "yellowCards": 3
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 76608,
             "name": "Ismail Elfath",
             "nationality": "United States",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Ismail Elfath, USA",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 76608,
             "name": "Ismail Elfath",
             "nationality": "United States",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Ismail Elfath, USA",
             "type": "REFEREE"
           }
         ],
@@ -67757,29 +67194,14 @@
         "weather": {}
       },
       "matchday": 3,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Ismail Elfath",
-          "nationality": "United States",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Ismail Elfath, USA",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 76608,
           "name": "Ismail Elfath",
           "nationality": "United States",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Ismail Elfath, USA",
           "type": "REFEREE"
         }
       ],
@@ -67795,7 +67217,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -67969,29 +67390,16 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-27T00:00:00Z",
-      "venue": {
-        "city": "Zapopan",
-        "id": 1076,
-        "name": "Estadio Akron"
-      }
+      "utcDate": "2026-06-27T00:00:00Z"
     },
     {
       "apiFootballFixtureId": 1489413,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 16,
-      "awayOffsides": 0,
-      "awayPossession": "49%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/saudi_arabia.svg",
         "id": 801,
@@ -68335,12 +67743,6 @@
         }
       ],
       "group": "GROUP_H",
-      "homeCorners": 4,
-      "homeFouls": 10,
-      "homeOffsides": 2,
-      "homePossession": "51%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
         "id": 1930,
@@ -68349,39 +67751,14 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T03:14:38.950071+00:00",
       "lastUpdated": "2026-06-27T04:00:59Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 2,
-          "fouls": 16,
-          "offsides": 0,
-          "possession": "49%",
-          "redCards": null,
-          "shotsOffGoal": 1,
-          "shotsOnGoal": 3,
-          "totalShots": 7,
-          "yellowCards": 3
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 10,
-          "offsides": 2,
-          "possession": "51%",
-          "redCards": null,
-          "shotsOffGoal": 8,
-          "shotsOnGoal": 2,
-          "totalShots": 15,
-          "yellowCards": 1
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1489413,
-        "awayCorners": 2,
-        "awayFouls": 16,
-        "awayOffsides": 0,
-        "awayPossession": "49%",
-        "awayShotsOnGoal": 3,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -68712,56 +68089,27 @@
         ],
         "goalEvents": [],
         "goalEventsSource": null,
-        "homeCorners": 4,
-        "homeFouls": 10,
-        "homeOffsides": 2,
-        "homePossession": "51%",
-        "homeShotsOnGoal": 2,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 2,
-            "fouls": 16,
-            "offsides": 0,
-            "possession": "49%",
-            "redCards": null,
-            "shotsOffGoal": 1,
-            "shotsOnGoal": 3,
-            "totalShots": 7,
-            "yellowCards": 3
-          },
-          "home": {
-            "corners": 4,
-            "fouls": 10,
-            "offsides": 2,
-            "possession": "51%",
-            "redCards": null,
-            "shotsOffGoal": 8,
-            "shotsOnGoal": 2,
-            "totalShots": 15,
-            "yellowCards": 1
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 43918,
             "name": "Fran\u00e7ois Letexier",
             "nationality": "France",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Fran\u00e7ois Letexier, France",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 43918,
             "name": "Fran\u00e7ois Letexier",
             "nationality": "France",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Fran\u00e7ois Letexier, France",
             "type": "REFEREE"
           }
         ],
@@ -68950,29 +68298,14 @@
         "weather": {}
       },
       "matchday": 3,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Fran\u00e7ois Letexier",
-          "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Fran\u00e7ois Letexier, France",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 43918,
           "name": "Fran\u00e7ois Letexier",
           "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Fran\u00e7ois Letexier, France",
           "type": "REFEREE"
         }
       ],
@@ -68988,7 +68321,6 @@
         },
         "winner": "DRAW"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -69180,12 +68512,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-27T00:00:00Z",
-      "venue": {
-        "city": "Houston",
-        "id": null,
-        "name": "NRG Stadium"
-      }
+      "utcDate": "2026-06-27T00:00:00Z"
     }
   ],
   "results": [
@@ -135870,20 +135197,12 @@
     },
     {
       "apiFootballFixtureId": 1489417,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 6,
-      "awayFouls": 14,
-      "awayOffsides": 2,
-      "awayPossession": "67%",
-      "awayScore": 1,
-      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -135993,11 +135312,16 @@
       "events": [
         {
           "assist": "M. Llorente",
+          "awayTeam": "Spain",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "42'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Uruguay",
           "isDisallowed": false,
+          "matchId": 537373,
+          "matchUtcDate": "2026-06-27T00:00:00Z",
           "minute": 42,
           "player": "A. Baena",
           "playerOff": null,
@@ -136008,258 +135332,6 @@
           "timer": "42:00",
           "timerSeconds": 2520,
           "type": "Goal"
-        },
-        {
-          "assist": "N. de la Cruz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "45'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 45,
-          "player": "M. Ugarte",
-          "playerOff": "M. Ugarte",
-          "playerOn": "N. de la Cruz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "45:00",
-          "timerSeconds": 2700,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Rochet",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "F. Muslera",
-          "playerOff": "F. Muslera",
-          "playerOn": "S. Rochet",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "A. Baena",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "54'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 54,
-          "player": "J. Sanabria",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "54:00",
-          "timerSeconds": 3240,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "F. Vinas",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "57'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 57,
-          "player": "F. Valverde",
-          "playerOff": "F. Valverde",
-          "playerOn": "F. Vinas",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "57:00",
-          "timerSeconds": 3420,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Elbowing",
-          "detail": "Yellow Card",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "G. Varela",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "F. Ruiz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "Pedri",
-          "playerOff": "Pedri",
-          "playerOn": "F. Ruiz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Olmo",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "M. Merino",
-          "playerOff": "M. Merino",
-          "playerOn": "D. Olmo",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Y. Pino",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "66'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 66,
-          "player": "A. Baena",
-          "playerOff": "A. Baena",
-          "playerOn": "Y. Pino",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "66:00",
-          "timerSeconds": 3960,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Rodriguez",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "70'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 70,
-          "player": "J. Sanabria",
-          "playerOff": "J. Sanabria",
-          "playerOn": "B. Rodriguez",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "70:00",
-          "timerSeconds": 4200,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Williams",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "N. Williams",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": "F. Torres",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "M. Oyarzabal",
-          "playerOff": "M. Oyarzabal",
-          "playerOn": "F. Torres",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "90+3'",
-          "extra": 3,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "N. de la Cruz",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "93:00",
-          "timerSeconds": 5580,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Serious foul",
-          "detail": "Red Card",
-          "displayMinute": "90+5'",
-          "extra": 5,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "A. Canobbio",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Uruguay",
-          "timer": "95:00",
-          "timerSeconds": 5700,
-          "type": "Red Card"
         }
       ],
       "goalEvents": [
@@ -136287,14 +135359,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
-      "homeCorners": 1,
-      "homeFouls": 14,
-      "homeOffsides": 5,
-      "homePossession": "33%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/758.svg",
         "id": 758,
@@ -136303,39 +135368,14 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T03:14:38.949755+00:00",
       "lastUpdated": "2026-06-27T04:02:59Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 6,
-          "fouls": 14,
-          "offsides": 2,
-          "possession": "67%",
-          "redCards": 0,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 1,
-          "totalShots": 6,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 1,
-          "fouls": 14,
-          "offsides": 5,
-          "possession": "33%",
-          "redCards": 1,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 5,
-          "yellowCards": 3
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1489417,
-        "awayCorners": 6,
-        "awayFouls": 14,
-        "awayOffsides": 2,
-        "awayPossession": "67%",
-        "awayShotsOnGoal": 1,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -136431,11 +135471,16 @@
         "events": [
           {
             "assist": "M. Llorente",
+            "awayTeam": "Spain",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "42'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Uruguay",
             "isDisallowed": false,
+            "matchId": 537373,
+            "matchUtcDate": "2026-06-27T00:00:00Z",
             "minute": 42,
             "player": "A. Baena",
             "playerOff": null,
@@ -136446,258 +135491,6 @@
             "timer": "42:00",
             "timerSeconds": 2520,
             "type": "Goal"
-          },
-          {
-            "assist": "N. de la Cruz",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "45'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 45,
-            "player": "M. Ugarte",
-            "playerOff": "M. Ugarte",
-            "playerOn": "N. de la Cruz",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "45:00",
-            "timerSeconds": 2700,
-            "type": "Substitution"
-          },
-          {
-            "assist": "S. Rochet",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "F. Muslera",
-            "playerOff": "F. Muslera",
-            "playerOn": "S. Rochet",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Substitution"
-          },
-          {
-            "assist": null,
-            "comments": "Holding",
-            "detail": "Yellow Card",
-            "displayMinute": "46'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 46,
-            "player": "A. Baena",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "46:00",
-            "timerSeconds": 2760,
-            "type": "Yellow Card"
-          },
-          {
-            "assist": null,
-            "comments": "Tripping",
-            "detail": "Yellow Card",
-            "displayMinute": "54'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 54,
-            "player": "J. Sanabria",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "54:00",
-            "timerSeconds": 3240,
-            "type": "Yellow Card"
-          },
-          {
-            "assist": "F. Vinas",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "57'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 57,
-            "player": "F. Valverde",
-            "playerOff": "F. Valverde",
-            "playerOn": "F. Vinas",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "57:00",
-            "timerSeconds": 3420,
-            "type": "Substitution"
-          },
-          {
-            "assist": null,
-            "comments": "Elbowing",
-            "detail": "Yellow Card",
-            "displayMinute": "58'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 58,
-            "player": "G. Varela",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "58:00",
-            "timerSeconds": 3480,
-            "type": "Yellow Card"
-          },
-          {
-            "assist": "F. Ruiz",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "60'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 60,
-            "player": "Pedri",
-            "playerOff": "Pedri",
-            "playerOn": "F. Ruiz",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "60:00",
-            "timerSeconds": 3600,
-            "type": "Substitution"
-          },
-          {
-            "assist": "D. Olmo",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "60'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 60,
-            "player": "M. Merino",
-            "playerOff": "M. Merino",
-            "playerOn": "D. Olmo",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "60:00",
-            "timerSeconds": 3600,
-            "type": "Substitution"
-          },
-          {
-            "assist": "Y. Pino",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "66'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 66,
-            "player": "A. Baena",
-            "playerOff": "A. Baena",
-            "playerOn": "Y. Pino",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "66:00",
-            "timerSeconds": 3960,
-            "type": "Substitution"
-          },
-          {
-            "assist": "B. Rodriguez",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "70'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 70,
-            "player": "J. Sanabria",
-            "playerOff": "J. Sanabria",
-            "playerOn": "B. Rodriguez",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "70:00",
-            "timerSeconds": 4200,
-            "type": "Substitution"
-          },
-          {
-            "assist": "N. Williams",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "76'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 76,
-            "player": "Lamine Yamal",
-            "playerOff": "Lamine Yamal",
-            "playerOn": "N. Williams",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "type": "Substitution"
-          },
-          {
-            "assist": "F. Torres",
-            "comments": null,
-            "detail": "Substitution 5",
-            "displayMinute": "76'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 76,
-            "player": "M. Oyarzabal",
-            "playerOff": "M. Oyarzabal",
-            "playerOn": "F. Torres",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Spain",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "type": "Substitution"
-          },
-          {
-            "assist": null,
-            "comments": "Tripping",
-            "detail": "Yellow Card",
-            "displayMinute": "90+3'",
-            "extra": 3,
-            "isDisallowed": false,
-            "minute": 90,
-            "player": "N. de la Cruz",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "93:00",
-            "timerSeconds": 5580,
-            "type": "Yellow Card"
-          },
-          {
-            "assist": null,
-            "comments": "Serious foul",
-            "detail": "Red Card",
-            "displayMinute": "90+5'",
-            "extra": 5,
-            "isDisallowed": false,
-            "minute": 90,
-            "player": "A. Canobbio",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Uruguay",
-            "timer": "95:00",
-            "timerSeconds": 5700,
-            "type": "Red Card"
           }
         ],
         "goalEvents": [
@@ -136725,57 +135518,28 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": "api_football_live",
-        "homeCorners": 1,
-        "homeFouls": 14,
-        "homeOffsides": 5,
-        "homePossession": "33%",
-        "homeShotsOnGoal": 1,
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 6,
-            "fouls": 14,
-            "offsides": 2,
-            "possession": "67%",
-            "redCards": 0,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 1,
-            "totalShots": 6,
-            "yellowCards": 1
-          },
-          "home": {
-            "corners": 1,
-            "fouls": 14,
-            "offsides": 5,
-            "possession": "33%",
-            "redCards": 1,
-            "shotsOffGoal": 3,
-            "shotsOnGoal": 1,
-            "totalShots": 5,
-            "yellowCards": 3
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 76608,
             "name": "Ismail Elfath",
             "nationality": "United States",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Ismail Elfath, USA",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 76608,
             "name": "Ismail Elfath",
             "nationality": "United States",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Ismail Elfath, USA",
             "type": "REFEREE"
           }
         ],
@@ -136946,29 +135710,14 @@
         "weather": {}
       },
       "matchday": 3,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Ismail Elfath",
-          "nationality": "United States",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Ismail Elfath, USA",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 76608,
           "name": "Ismail Elfath",
           "nationality": "United States",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Ismail Elfath, USA",
           "type": "REFEREE"
         }
       ],
@@ -136984,7 +135733,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -137158,29 +135906,16 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-27T00:00:00Z",
-      "venue": {
-        "city": "Zapopan",
-        "id": 1076,
-        "name": "Estadio Akron"
-      }
+      "utcDate": "2026-06-27T00:00:00Z"
     },
     {
       "apiFootballFixtureId": 1489413,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 16,
-      "awayOffsides": 0,
-      "awayPossession": "49%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/saudi_arabia.svg",
         "id": 801,
@@ -137524,12 +136259,6 @@
         }
       ],
       "group": "GROUP_H",
-      "homeCorners": 4,
-      "homeFouls": 10,
-      "homeOffsides": 2,
-      "homePossession": "51%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
         "id": 1930,
@@ -137538,39 +136267,14 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T03:14:38.950071+00:00",
       "lastUpdated": "2026-06-27T04:00:59Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 2,
-          "fouls": 16,
-          "offsides": 0,
-          "possession": "49%",
-          "redCards": null,
-          "shotsOffGoal": 1,
-          "shotsOnGoal": 3,
-          "totalShots": 7,
-          "yellowCards": 3
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 10,
-          "offsides": 2,
-          "possession": "51%",
-          "redCards": null,
-          "shotsOffGoal": 8,
-          "shotsOnGoal": 2,
-          "totalShots": 15,
-          "yellowCards": 1
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1489413,
-        "awayCorners": 2,
-        "awayFouls": 16,
-        "awayOffsides": 0,
-        "awayPossession": "49%",
-        "awayShotsOnGoal": 3,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -137901,56 +136605,27 @@
         ],
         "goalEvents": [],
         "goalEventsSource": null,
-        "homeCorners": 4,
-        "homeFouls": 10,
-        "homeOffsides": 2,
-        "homePossession": "51%",
-        "homeShotsOnGoal": 2,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 2,
-            "fouls": 16,
-            "offsides": 0,
-            "possession": "49%",
-            "redCards": null,
-            "shotsOffGoal": 1,
-            "shotsOnGoal": 3,
-            "totalShots": 7,
-            "yellowCards": 3
-          },
-          "home": {
-            "corners": 4,
-            "fouls": 10,
-            "offsides": 2,
-            "possession": "51%",
-            "redCards": null,
-            "shotsOffGoal": 8,
-            "shotsOnGoal": 2,
-            "totalShots": 15,
-            "yellowCards": 1
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 43918,
             "name": "Fran\u00e7ois Letexier",
             "nationality": "France",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Fran\u00e7ois Letexier, France",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 43918,
             "name": "Fran\u00e7ois Letexier",
             "nationality": "France",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Fran\u00e7ois Letexier, France",
             "type": "REFEREE"
           }
         ],
@@ -138139,29 +136814,14 @@
         "weather": {}
       },
       "matchday": 3,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Fran\u00e7ois Letexier",
-          "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Fran\u00e7ois Letexier, France",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 43918,
           "name": "Fran\u00e7ois Letexier",
           "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Fran\u00e7ois Letexier, France",
           "type": "REFEREE"
         }
       ],
@@ -138177,7 +136837,6 @@
         },
         "winner": "DRAW"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -138369,12 +137028,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-27T00:00:00Z",
-      "venue": {
-        "city": "Houston",
-        "id": null,
-        "name": "NRG Stadium"
-      }
+      "utcDate": "2026-06-27T00:00:00Z"
     }
   ]
 }
