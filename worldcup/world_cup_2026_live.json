@@ -14,7 +14,7 @@
       "awayFouls": 5,
       "awayOffsides": 1,
       "awayPossession": "59%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 6,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": null,
@@ -233,10 +233,28 @@
           "timer": "64:00",
           "timerSeconds": 3840,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "K. De Bruyne",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": null,
@@ -283,6 +301,29 @@
           "timer": "50:00",
           "timerSeconds": 3000,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "67'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537367,
+          "matchUtcDate": "2026-06-27T03:00:00Z",
+          "minute": 67,
+          "player": "K. De Bruyne",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -301,8 +342,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:28:46.529796+00:00",
-      "lastUpdated": "2026-06-27T06:28:43Z",
+      "lastApiSync": "2026-06-27T04:29:08.865852+00:00",
+      "lastUpdated": "2026-06-27T06:29:04Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -330,14 +371,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-27T04:28:46.529796+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-27T04:29:08.865852+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -362,7 +403,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -391,7 +432,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 0
         },
         "halfTime": {
@@ -946,8 +987,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:28:46.529796+00:00",
-      "lastUpdated": "2026-06-27T06:28:43Z",
+      "lastApiSync": "2026-06-27T04:29:08.865852+00:00",
+      "lastUpdated": "2026-06-27T06:29:05Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -976,7 +1017,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "65'",
-        "lastApiSync": "2026-06-27T04:28:46.529796+00:00",
+        "lastApiSync": "2026-06-27T04:29:08.865852+00:00",
         "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -1193,7 +1234,7 @@
       "awayFouls": 5,
       "awayOffsides": 1,
       "awayPossession": "59%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 6,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -1240,7 +1281,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1249,7 +1290,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": null,
@@ -1412,10 +1453,28 @@
           "timer": "64:00",
           "timerSeconds": 3840,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "K. De Bruyne",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": null,
@@ -1462,6 +1521,29 @@
           "timer": "50:00",
           "timerSeconds": 3000,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "67'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537367,
+          "matchUtcDate": "2026-06-27T03:00:00Z",
+          "minute": 67,
+          "player": "K. De Bruyne",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -1480,8 +1562,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:28:46.529796+00:00",
-      "lastUpdated": "2026-06-27T06:28:43Z",
+      "lastApiSync": "2026-06-27T04:29:08.865852+00:00",
+      "lastUpdated": "2026-06-27T06:29:04Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1509,14 +1591,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-27T04:28:46.529796+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-27T04:29:08.865852+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -1541,7 +1623,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1570,7 +1652,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 0
         },
         "halfTime": {
@@ -2125,8 +2207,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:28:46.529796+00:00",
-      "lastUpdated": "2026-06-27T06:28:43Z",
+      "lastApiSync": "2026-06-27T04:29:08.865852+00:00",
+      "lastUpdated": "2026-06-27T06:29:05Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -2155,7 +2237,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "65'",
-        "lastApiSync": "2026-06-27T04:28:46.529796+00:00",
+        "lastApiSync": "2026-06-27T04:29:08.865852+00:00",
         "seconds": 3900,
         "source": "api_football_live_minute",
         "status": "2H",
