@@ -34977,7 +34977,7 @@
       "awayOffsides": 3,
       "awayPossession": "72%",
       "awayScore": 0,
-      "awayShotsOnGoal": 2,
+      "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -35006,7 +35006,7 @@
         },
         {
           "assist": null,
-          "comments": null,
+          "comments": "Roughing",
           "detail": "Yellow Card",
           "displayMinute": "61'",
           "extra": null,
@@ -35072,7 +35072,7 @@
         },
         {
           "assist": null,
-          "comments": null,
+          "comments": "Roughing",
           "detail": "Yellow Card",
           "displayMinute": "61'",
           "extra": null,
@@ -35087,10 +35087,54 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "J. Bellingham",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "England",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 3720,
       "fallbackClockText": "62'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "England",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "62'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Panama",
+          "isDisallowed": false,
+          "matchId": 537413,
+          "matchUtcDate": "2026-06-27T21:00:00Z",
+          "minute": 62,
+          "player": "J. Bellingham",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "England",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_L",
       "homeCorners": 1,
       "homeFouls": 12,
@@ -35106,8 +35150,8 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:20:35.397179+00:00",
-      "lastUpdated": "2026-06-28T00:20:33Z",
+      "lastApiSync": "2026-06-27T22:20:56.614074+00:00",
+      "lastUpdated": "2026-06-28T00:20:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35117,8 +35161,8 @@
           "possession": "72%",
           "redCards": null,
           "shotsOffGoal": 7,
-          "shotsOnGoal": 2,
-          "totalShots": 10,
+          "shotsOnGoal": 3,
+          "totalShots": 11,
           "yellowCards": 0
         },
         "home": {
@@ -35136,7 +35180,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "62'",
-        "lastApiSync": "2026-06-27T22:20:35.397179+00:00",
+        "lastApiSync": "2026-06-27T22:20:56.614074+00:00",
         "seconds": 3720,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -35275,10 +35319,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
+      "awayCorners": 1,
       "awayFouls": 8,
       "awayOffsides": 1,
-      "awayPossession": "49%",
+      "awayPossession": "51%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -35288,7 +35332,7 @@
         "shortName": "Ghana",
         "tla": "GHA"
       },
-      "clockSeconds": 3540,
+      "clockSeconds": 3600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35297,7 +35341,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "59'",
+      "displayMinute": "60'",
       "events": [
         {
           "assist": "M. Kovacic",
@@ -35354,8 +35398,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 3540,
-      "fallbackClockText": "59'",
+      "fallbackClock": 3600,
+      "fallbackClockText": "60'",
       "goalEvents": [
         {
           "assist": "M. Kovacic",
@@ -35383,10 +35427,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_L",
-      "homeCorners": null,
+      "homeCorners": 0,
       "homeFouls": 4,
       "homeOffsides": 0,
-      "homePossession": "51%",
+      "homePossession": "49%",
       "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -35397,26 +35441,26 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:20:35.397179+00:00",
-      "lastUpdated": "2026-06-28T00:20:33Z",
+      "lastApiSync": "2026-06-27T22:20:56.614074+00:00",
+      "lastUpdated": "2026-06-28T00:20:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
+          "corners": 1,
           "fouls": 8,
           "offsides": 1,
-          "possession": "49%",
+          "possession": "51%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 0,
-          "totalShots": 2,
+          "totalShots": 3,
           "yellowCards": null
         },
         "home": {
-          "corners": null,
+          "corners": 0,
           "fouls": 4,
           "offsides": 0,
-          "possession": "51%",
+          "possession": "49%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 2,
@@ -35426,14 +35470,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "59'",
-        "lastApiSync": "2026-06-27T22:20:35.397179+00:00",
-        "seconds": 3540,
+        "displayMinute": "60'",
+        "lastApiSync": "2026-06-27T22:20:56.614074+00:00",
+        "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "59'"
+        "timer": "60'"
       },
-      "manualClockText": "59'",
+      "manualClockText": "60'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -35458,7 +35502,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 59,
+      "minute": 60,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
