@@ -34964,8 +34964,8 @@
     },
     {
       "apiFootballFixtureId": 1489422,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -35041,8 +35041,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -35050,7 +35048,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "J. Fajardo",
@@ -35323,8 +35320,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "B. Saka",
@@ -35389,9 +35384,8 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:55:21.463257+00:00",
-      "lastUpdated": "2026-06-28T00:55:18Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-27T22:55:42.782761+00:00",
+      "lastUpdated": "2026-06-28T00:55:39Z",
       "liveStatistics": {
         "away": {
           "corners": 6,
@@ -35415,39 +35409,6 @@
           "totalShots": 12,
           "yellowCards": 2
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T22:55:21.463257+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "New York/New Jersey",
-        "cloudCoverage": 100.0,
-        "condition": "rain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T22:55:21.163111+00:00",
-        "humidity": 92.5,
-        "latitude": 40.8135,
-        "longitude": -74.0745,
-        "name": "MetLife Stadium weather",
-        "observedAt": "2026-06-27T22:00:00Z",
-        "pressure": 1014.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "MetLife Stadium",
-        "temperature": 21.8,
-        "temperatureUnit": "C",
-        "windBearing": 58.1,
-        "windSpeed": 1.6,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -35497,7 +35458,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "J. Fajardo",
@@ -35685,29 +35646,6 @@
         "city": "East Rutherford",
         "id": null,
         "name": "MetLife Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "New York/New Jersey",
-        "cloudCoverage": 100.0,
-        "condition": "rain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T22:55:21.163111+00:00",
-        "humidity": 92.5,
-        "latitude": 40.8135,
-        "longitude": -74.0745,
-        "name": "MetLife Stadium weather",
-        "observedAt": "2026-06-27T22:00:00Z",
-        "pressure": 1014.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "MetLife Stadium",
-        "temperature": 21.8,
-        "temperatureUnit": "C",
-        "windBearing": 58.1,
-        "windSpeed": 1.6,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -36088,8 +36026,8 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:55:21.463257+00:00",
-      "lastUpdated": "2026-06-28T00:55:18Z",
+      "lastApiSync": "2026-06-27T22:55:42.956304+00:00",
+      "lastUpdated": "2026-06-28T00:55:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -36118,7 +36056,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T22:55:21.463257+00:00",
+        "lastApiSync": "2026-06-27T22:55:42.956304+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
