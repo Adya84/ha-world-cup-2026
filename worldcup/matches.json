@@ -35023,7 +35023,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35032,7 +35032,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": "J. Fajardo",
@@ -35105,10 +35105,28 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Goal"
+        },
+        {
+          "assist": "D. Spence",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "J. Quansah",
+          "playerOff": "J. Quansah",
+          "playerOn": "D. Spence",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": "B. Saka",
@@ -35150,8 +35168,8 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:22:03.135072+00:00",
-      "lastUpdated": "2026-06-28T00:21:57Z",
+      "lastApiSync": "2026-06-27T22:22:25.032850+00:00",
+      "lastUpdated": "2026-06-28T00:22:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35179,14 +35197,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-06-27T22:22:03.135072+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-06-27T22:22:25.032850+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -35211,7 +35229,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -35276,6 +35294,24 @@
           "team": "Panama",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Spence",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "J. Quansah",
+          "playerOff": "J. Quansah",
+          "playerOn": "D. Spence",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "64:00",
+          "timerSeconds": 3840,
           "type": "Substitution"
         }
       ],
@@ -35441,8 +35477,8 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:22:03.135072+00:00",
-      "lastUpdated": "2026-06-28T00:21:57Z",
+      "lastApiSync": "2026-06-27T22:22:25.032850+00:00",
+      "lastUpdated": "2026-06-28T00:22:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35471,7 +35507,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "61'",
-        "lastApiSync": "2026-06-27T22:22:03.135072+00:00",
+        "lastApiSync": "2026-06-27T22:22:25.032850+00:00",
         "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
