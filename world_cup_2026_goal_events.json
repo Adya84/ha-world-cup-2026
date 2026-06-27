@@ -30691,23 +30691,32 @@
     "utcDate": "2026-06-24T02:00:00Z"
   },
   "537407": {
+    "apiFootballFixtureId": 1489419,
     "awayScore": 0,
     "awayTeam": "Portugal",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Colombia",
-    "phase_start": null,
+    "lastApiSync": "2026-06-27T23:31:35.439402+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-27T23:31:35.439402+00:00",
     "referees": [
       {
-        "id": 55970,
         "name": "Alireza Faghani",
         "nationality": "Iran",
         "type": "REFEREE"
+      },
+      {
+        "name": "Alireza Faghani, Australia",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-27T23:30:00Z"
   },
   "537408": {
