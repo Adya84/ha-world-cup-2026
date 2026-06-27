@@ -19660,7 +19660,7 @@
   },
   "537367": {
     "apiFootballFixtureId": 1489415,
-    "awayScore": 4,
+    "awayScore": 5,
     "awayTeam": "Belgium",
     "base_seconds": 5400,
     "cardEvents": [
@@ -20010,6 +20010,24 @@
         "timer": "86:00",
         "timerSeconds": 5160,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "90+4'",
+        "extra": 4,
+        "isDisallowed": false,
+        "minute": 90,
+        "player": "A. Saelemaekers",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "94:00",
+        "timerSeconds": 5640,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -20127,13 +20145,36 @@
         "timer": "86:00",
         "timerSeconds": 5160,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Belgium",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "90+4'",
+        "extra": 4,
+        "goalNumber": 6,
+        "homeTeam": "New Zealand",
+        "isDisallowed": false,
+        "matchId": 537367,
+        "matchUtcDate": "2026-06-27T03:00:00Z",
+        "minute": 90,
+        "player": "A. Saelemaekers",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "94:00",
+        "timerSeconds": 5640,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "New Zealand",
-    "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
+    "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
     "manualClockText": "90'",
-    "phase_start": "2026-06-27T04:56:48.813312+00:00",
+    "phase_start": "2026-06-27T04:57:11.023630+00:00",
     "referees": [
       {
         "name": "Adham Makhadmeh",
@@ -20333,7 +20374,7 @@
   },
   "537368": {
     "apiFootballFixtureId": 1489414,
-    "awayScore": 1,
+    "awayScore": 2,
     "awayTeam": "Iran",
     "base_seconds": 5400,
     "cardEvents": [
@@ -20830,9 +20871,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Egypt",
-    "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
+    "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
     "manualClockText": "90'",
-    "phase_start": "2026-06-27T04:56:48.813312+00:00",
+    "phase_start": "2026-06-27T04:57:11.023630+00:00",
     "referees": [
       {
         "name": "Szymon Marciniak",
