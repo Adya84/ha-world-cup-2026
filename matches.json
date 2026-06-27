@@ -972,11 +972,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
-      "awayFouls": 17,
-      "awayOffsides": 1,
-      "awayPossession": "35%",
-      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/761.svg",
         "id": 761,
@@ -1104,11 +1099,16 @@
       "events": [
         {
           "assist": null,
+          "awayTeam": "Paraguay",
           "comments": null,
           "detail": "Own Goal",
           "displayMinute": "7'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "USA",
           "isDisallowed": false,
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
           "minute": 7,
           "player": "D. Bobadilla",
           "playerOff": null,
@@ -1118,33 +1118,20 @@
           "team": "USA",
           "timer": "7:00",
           "timerSeconds": 420,
-          "type": "Own Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "10'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 10,
-          "player": "Juan C\u00e1ceres",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "10:00",
-          "timerSeconds": 600,
-          "type": "Yellow Card"
+          "type": "Goal"
         },
         {
           "assist": "C. Pulisic",
+          "awayTeam": "Paraguay",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "31'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "USA",
           "isDisallowed": false,
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
           "minute": 31,
           "player": "F. Balogun",
           "playerOff": null,
@@ -1158,11 +1145,16 @@
         },
         {
           "assist": "M. Tillman",
+          "awayTeam": "Paraguay",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "45'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "USA",
           "isDisallowed": false,
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
           "minute": 45,
           "player": "F. Balogun",
           "playerOff": null,
@@ -1175,138 +1167,17 @@
           "type": "Goal"
         },
         {
-          "assist": "S. Berhalter",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "C. Pulisic",
-          "playerOff": "C. Pulisic",
-          "playerOn": "S. Berhalter",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Mauricio",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "D. Bobadilla",
-          "playerOff": "D. Bobadilla",
-          "playerOn": "Mauricio",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Simulation",
-          "detail": "Yellow Card",
-          "displayMinute": "53'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 53,
-          "player": "Miguel Almir\u00f3n",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "53:00",
-          "timerSeconds": 3180,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "59'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 59,
-          "player": "Tyler Adams",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "A. Arce",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "62'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 62,
-          "player": "A. Sanabria",
-          "playerOff": "A. Sanabria",
-          "playerOn": "A. Arce",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "type": "Substitution"
-        },
-        {
-          "assist": "R. Pepi",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "72'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 72,
-          "player": "F. Balogun",
-          "playerOff": "F. Balogun",
-          "playerOn": "R. Pepi",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "type": "Substitution"
-        },
-        {
-          "assist": "T. Weah",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "72'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 72,
-          "player": "S. Dest",
-          "playerOff": "S. Dest",
-          "playerOn": "T. Weah",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "type": "Substitution"
-        },
-        {
           "assist": "J. Enciso",
+          "awayTeam": "Paraguay",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "73'",
           "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "USA",
           "isDisallowed": false,
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
           "minute": 73,
           "player": "Mauricio",
           "playerOff": null,
@@ -1319,120 +1190,17 @@
           "type": "Goal"
         },
         {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "79'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 79,
-          "player": "Diego G\u00f3mez",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "79:00",
-          "timerSeconds": 4740,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "G. Velazquez",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "79'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 79,
-          "player": "J. Caceres",
-          "playerOff": "J. Caceres",
-          "playerOn": "G. Velazquez",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "79:00",
-          "timerSeconds": 4740,
-          "type": "Substitution"
-        },
-        {
-          "assist": "R. Sosa",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "79'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 79,
-          "player": "M. Almiron",
-          "playerOff": "M. Almiron",
-          "playerOn": "R. Sosa",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "79:00",
-          "timerSeconds": 4740,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Kaku",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "80'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 80,
-          "player": "D. Gomez",
-          "playerOff": "D. Gomez",
-          "playerOn": "Kaku",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "type": "Substitution"
-        },
-        {
-          "assist": "G. Reyna",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "82'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 82,
-          "player": "M. Tillman",
-          "playerOff": "M. Tillman",
-          "playerOn": "G. Reyna",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "82:00",
-          "timerSeconds": 4920,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "88'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 88,
-          "player": "Alex Arce",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "88:00",
-          "timerSeconds": 5280,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "A. Freeman",
+          "awayTeam": "Paraguay",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90'",
           "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "USA",
           "isDisallowed": false,
+          "matchId": 537345,
+          "matchUtcDate": "2026-06-13T01:00:00Z",
           "minute": 90,
           "player": "G. Reyna",
           "playerOff": null,
@@ -1443,24 +1211,6 @@
           "timer": "90:00",
           "timerSeconds": 5400,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "90+3'",
-          "extra": 3,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "Junior Alonso",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Paraguay",
-          "timer": "93:00",
-          "timerSeconds": 5580,
-          "type": "Yellow Card"
         }
       ],
       "goalEvents": [
@@ -1580,13 +1330,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "group": "GROUP_D",
-      "homeCorners": 3,
-      "homeFouls": 13,
-      "homeOffsides": 2,
-      "homePossession": "65%",
-      "homeShotsOnGoal": 6,
       "homeTeam": {
         "crest": "https://crests.football-data.org/usa.svg",
         "id": 771,
@@ -1596,53 +1340,15 @@
       },
       "id": 537345,
       "lastUpdated": "2026-06-26T15:20:14Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 1,
-          "fouls": 17,
-          "offsides": 1,
-          "possession": "35%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 9,
-          "yellowCards": 5
-        },
-        "home": {
-          "corners": 3,
-          "fouls": 13,
-          "offsides": 2,
-          "possession": "65%",
-          "redCards": null,
-          "shotsOffGoal": 6,
-          "shotsOnGoal": 6,
-          "totalShots": 16,
-          "yellowCards": 1
-        }
-      },
       "matchday": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Danny Makkelie",
-          "nationality": "Netherlands",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Danny Makkelie, Netherlands",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 43899,
           "name": "Danny Makkelie",
           "nationality": "Netherlands",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Danny Makkelie, Netherlands",
           "type": "REFEREE"
         }
       ],
@@ -35113,8 +34819,8 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T00:59:49.784183+00:00",
-      "lastUpdated": "2026-06-27T02:59:46Z",
+      "lastApiSync": "2026-06-27T01:00:25.108662+00:00",
+      "lastUpdated": "2026-06-27T03:00:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35143,7 +34849,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T00:59:49.784183+00:00",
+        "lastApiSync": "2026-06-27T01:00:25.108662+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -35416,8 +35122,8 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T00:59:49.784183+00:00",
-      "lastUpdated": "2026-06-27T02:59:46Z",
+      "lastApiSync": "2026-06-27T01:00:25.108662+00:00",
+      "lastUpdated": "2026-06-27T03:00:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35446,7 +35152,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T00:59:49.784183+00:00",
+        "lastApiSync": "2026-06-27T01:00:25.108662+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -35605,12 +35311,19 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastUpdated": "2026-06-26T15:20:14Z",
+      "lastUpdated": "2026-06-27T03:00:02Z",
       "matchday": 3,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 129250,
+          "name": "Adham Makhadmeh",
+          "nationality": "Jordan",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
@@ -35664,12 +35377,19 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastUpdated": "2026-06-26T15:20:14Z",
+      "lastUpdated": "2026-06-27T03:00:02Z",
       "matchday": 3,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 43888,
+          "name": "Szymon Marciniak",
+          "nationality": "Poland",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
