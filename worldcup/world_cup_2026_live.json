@@ -13,7 +13,7 @@
       "awayCorners": 7,
       "awayFouls": 7,
       "awayOffsides": 1,
-      "awayPossession": "57%",
+      "awayPossession": "56%",
       "awayScore": 3,
       "awayShotsOnGoal": 7,
       "awayTeam": {
@@ -323,6 +323,42 @@
           "timer": "84:00",
           "timerSeconds": 5040,
           "type": "Goal"
+        },
+        {
+          "assist": "R. Lukaku",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "C. De Ketelaere",
+          "playerOff": "C. De Ketelaere",
+          "playerOn": "R. Lukaku",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Raskin",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "Y. Tielemans",
+          "playerOff": "Y. Tielemans",
+          "playerOn": "N. Raskin",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 5100,
@@ -423,12 +459,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
-      "homeCorners": 4,
+      "homeCorners": 5,
       "homeFouls": 9,
       "homeOffsides": 1,
-      "homePossession": "43%",
+      "homePossession": "44%",
       "homeScore": 1,
-      "homeShotsOnGoal": 1,
+      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/783.svg",
         "id": 783,
@@ -437,15 +473,15 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:47:16.185987+00:00",
-      "lastUpdated": "2026-06-27T06:47:13Z",
+      "lastApiSync": "2026-06-27T04:47:37.932015+00:00",
+      "lastUpdated": "2026-06-27T06:47:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 7,
           "fouls": 7,
           "offsides": 1,
-          "possession": "57%",
+          "possession": "56%",
           "redCards": null,
           "shotsOffGoal": 11,
           "shotsOnGoal": 7,
@@ -453,21 +489,21 @@
           "yellowCards": 0
         },
         "home": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 9,
           "offsides": 1,
-          "possession": "43%",
+          "possession": "44%",
           "redCards": null,
           "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 5,
+          "shotsOnGoal": 2,
+          "totalShots": 6,
           "yellowCards": 2
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "85'",
-        "lastApiSync": "2026-06-27T04:47:16.185987+00:00",
+        "lastApiSync": "2026-06-27T04:47:37.932015+00:00",
         "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -690,6 +726,42 @@
           "timer": "79:00",
           "timerSeconds": 4740,
           "type": "Substitution"
+        },
+        {
+          "assist": "R. Lukaku",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "C. De Ketelaere",
+          "playerOff": "C. De Ketelaere",
+          "playerOn": "R. Lukaku",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Raskin",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "Y. Tielemans",
+          "playerOff": "Y. Tielemans",
+          "playerOn": "N. Raskin",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-27T03:00:00Z",
@@ -735,7 +807,7 @@
       "awayCorners": 0,
       "awayFouls": 14,
       "awayOffsides": 1,
-      "awayPossession": "35%",
+      "awayPossession": "36%",
       "awayScore": 1,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -837,7 +909,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4980,
+      "clockSeconds": 5040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -846,7 +918,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "83'",
+      "displayMinute": "84'",
       "events": [
         {
           "assist": null,
@@ -1119,8 +1191,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 4980,
-      "fallbackClockText": "83'",
+      "fallbackClock": 5040,
+      "fallbackClockText": "84'",
       "goalEvents": [
         {
           "assist": null,
@@ -1197,7 +1269,7 @@
       "homeCorners": 8,
       "homeFouls": 9,
       "homeOffsides": 0,
-      "homePossession": "65%",
+      "homePossession": "64%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -1208,26 +1280,26 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:47:16.185987+00:00",
-      "lastUpdated": "2026-06-27T06:47:13Z",
+      "lastApiSync": "2026-06-27T04:47:37.932015+00:00",
+      "lastUpdated": "2026-06-27T06:47:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 14,
           "offsides": 1,
-          "possession": "35%",
+          "possession": "36%",
           "redCards": null,
           "shotsOffGoal": 5,
           "shotsOnGoal": 3,
           "totalShots": 9,
-          "yellowCards": 2
+          "yellowCards": 3
         },
         "home": {
           "corners": 8,
           "fouls": 9,
           "offsides": 0,
-          "possession": "65%",
+          "possession": "64%",
           "redCards": null,
           "shotsOffGoal": 5,
           "shotsOnGoal": 3,
@@ -1237,14 +1309,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "83'",
-        "lastApiSync": "2026-06-27T04:47:16.185987+00:00",
-        "seconds": 4980,
+        "displayMinute": "84'",
+        "lastApiSync": "2026-06-27T04:47:37.932015+00:00",
+        "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "83'"
+        "timer": "84'"
       },
-      "manualClockText": "83'",
+      "manualClockText": "84'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -1269,7 +1341,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 83,
+      "minute": 84,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1490,7 +1562,7 @@
       "awayCorners": 7,
       "awayFouls": 7,
       "awayOffsides": 1,
-      "awayPossession": "57%",
+      "awayPossession": "56%",
       "awayScore": 3,
       "awayShotsOnGoal": 7,
       "awayTeam": {
@@ -1800,6 +1872,42 @@
           "timer": "84:00",
           "timerSeconds": 5040,
           "type": "Goal"
+        },
+        {
+          "assist": "R. Lukaku",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "C. De Ketelaere",
+          "playerOff": "C. De Ketelaere",
+          "playerOn": "R. Lukaku",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Raskin",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "Y. Tielemans",
+          "playerOff": "Y. Tielemans",
+          "playerOn": "N. Raskin",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 5100,
@@ -1900,12 +2008,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
-      "homeCorners": 4,
+      "homeCorners": 5,
       "homeFouls": 9,
       "homeOffsides": 1,
-      "homePossession": "43%",
+      "homePossession": "44%",
       "homeScore": 1,
-      "homeShotsOnGoal": 1,
+      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/783.svg",
         "id": 783,
@@ -1914,15 +2022,15 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:47:16.185987+00:00",
-      "lastUpdated": "2026-06-27T06:47:13Z",
+      "lastApiSync": "2026-06-27T04:47:37.932015+00:00",
+      "lastUpdated": "2026-06-27T06:47:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 7,
           "fouls": 7,
           "offsides": 1,
-          "possession": "57%",
+          "possession": "56%",
           "redCards": null,
           "shotsOffGoal": 11,
           "shotsOnGoal": 7,
@@ -1930,21 +2038,21 @@
           "yellowCards": 0
         },
         "home": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 9,
           "offsides": 1,
-          "possession": "43%",
+          "possession": "44%",
           "redCards": null,
           "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 5,
+          "shotsOnGoal": 2,
+          "totalShots": 6,
           "yellowCards": 2
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "85'",
-        "lastApiSync": "2026-06-27T04:47:16.185987+00:00",
+        "lastApiSync": "2026-06-27T04:47:37.932015+00:00",
         "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -2167,6 +2275,42 @@
           "timer": "79:00",
           "timerSeconds": 4740,
           "type": "Substitution"
+        },
+        {
+          "assist": "R. Lukaku",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "C. De Ketelaere",
+          "playerOff": "C. De Ketelaere",
+          "playerOn": "R. Lukaku",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Raskin",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "Y. Tielemans",
+          "playerOff": "Y. Tielemans",
+          "playerOn": "N. Raskin",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-27T03:00:00Z",
@@ -2212,7 +2356,7 @@
       "awayCorners": 0,
       "awayFouls": 14,
       "awayOffsides": 1,
-      "awayPossession": "35%",
+      "awayPossession": "36%",
       "awayScore": 1,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -2314,7 +2458,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4980,
+      "clockSeconds": 5040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -2323,7 +2467,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "83'",
+      "displayMinute": "84'",
       "events": [
         {
           "assist": null,
@@ -2596,8 +2740,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 4980,
-      "fallbackClockText": "83'",
+      "fallbackClock": 5040,
+      "fallbackClockText": "84'",
       "goalEvents": [
         {
           "assist": null,
@@ -2674,7 +2818,7 @@
       "homeCorners": 8,
       "homeFouls": 9,
       "homeOffsides": 0,
-      "homePossession": "65%",
+      "homePossession": "64%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -2685,26 +2829,26 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:47:16.185987+00:00",
-      "lastUpdated": "2026-06-27T06:47:13Z",
+      "lastApiSync": "2026-06-27T04:47:37.932015+00:00",
+      "lastUpdated": "2026-06-27T06:47:34Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 14,
           "offsides": 1,
-          "possession": "35%",
+          "possession": "36%",
           "redCards": null,
           "shotsOffGoal": 5,
           "shotsOnGoal": 3,
           "totalShots": 9,
-          "yellowCards": 2
+          "yellowCards": 3
         },
         "home": {
           "corners": 8,
           "fouls": 9,
           "offsides": 0,
-          "possession": "65%",
+          "possession": "64%",
           "redCards": null,
           "shotsOffGoal": 5,
           "shotsOnGoal": 3,
@@ -2714,14 +2858,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "83'",
-        "lastApiSync": "2026-06-27T04:47:16.185987+00:00",
-        "seconds": 4980,
+        "displayMinute": "84'",
+        "lastApiSync": "2026-06-27T04:47:37.932015+00:00",
+        "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "83'"
+        "timer": "84'"
       },
-      "manualClockText": "83'",
+      "manualClockText": "84'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -2746,7 +2890,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 83,
+      "minute": 84,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
