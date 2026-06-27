@@ -35140,7 +35140,7 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T02:54:43.748697+00:00",
+      "lastApiSync": "2026-06-27T02:55:03.903552+00:00",
       "lastUpdated": "2026-06-27T04:02:59Z",
       "liveStatistics": {
         "away": {
@@ -35759,7 +35759,7 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T02:54:43.748870+00:00",
+      "lastApiSync": "2026-06-27T02:55:03.903684+00:00",
       "lastUpdated": "2026-06-27T04:00:59Z",
       "liveStatistics": {
         "away": {
@@ -36030,6 +36030,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
         "id": 805,
@@ -36037,6 +36038,8 @@
         "shortName": "Belgium",
         "tla": "BEL"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -36044,6 +36047,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_G",
       "homeTeam": {
         "crest": "https://crests.football-data.org/783.svg",
@@ -36053,8 +36057,44 @@
         "tla": "NZL"
       },
       "id": 537367,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-27T04:11:36Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 60.9,
+        "condition": "rainshowers_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-27T02:55:03.912129+00:00",
+        "humidity": 87.7,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-27T02:00:00Z",
+        "pressure": 1007.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 15.4,
+        "temperatureUnit": "C",
+        "windBearing": 108.2,
+        "windSpeed": 3.0,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 3,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -36086,8 +36126,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-27T03:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-27T03:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Vancouver",
+        "cloudCoverage": 60.9,
+        "condition": "rainshowers_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-27T02:55:03.912129+00:00",
+        "humidity": 87.7,
+        "latitude": 49.2768,
+        "longitude": -123.1119,
+        "name": "BC Place weather",
+        "observedAt": "2026-06-27T02:00:00Z",
+        "pressure": 1007.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BC Place",
+        "temperature": 15.4,
+        "temperatureUnit": "C",
+        "windBearing": 108.2,
+        "windSpeed": 3.0,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
@@ -36096,6 +36159,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
         "id": 840,
@@ -36103,6 +36167,8 @@
         "shortName": "Iran",
         "tla": "IRN"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -36110,6 +36176,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_G",
       "homeTeam": {
         "crest": "https://crests.football-data.org/825.svg",
@@ -36119,8 +36186,44 @@
         "tla": "EGY"
       },
       "id": 537368,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-27T04:28:37Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Seattle",
+        "cloudCoverage": 17.2,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-27T02:55:04.080285+00:00",
+        "humidity": 64.8,
+        "latitude": 47.5952,
+        "longitude": -122.3316,
+        "name": "Lumen Field weather",
+        "observedAt": "2026-06-27T02:00:00Z",
+        "pressure": 1007.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lumen Field",
+        "temperature": 18.2,
+        "temperatureUnit": "C",
+        "windBearing": 211.7,
+        "windSpeed": 6.3,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 3,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -36152,8 +36255,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-27T03:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-27T03:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Seattle",
+        "cloudCoverage": 17.2,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-27T02:55:04.080285+00:00",
+        "humidity": 64.8,
+        "latitude": 47.5952,
+        "longitude": -122.3316,
+        "name": "Lumen Field weather",
+        "observedAt": "2026-06-27T02:00:00Z",
+        "pressure": 1007.9,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Lumen Field",
+        "temperature": 18.2,
+        "temperatureUnit": "C",
+        "windBearing": 211.7,
+        "windSpeed": 6.3,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
