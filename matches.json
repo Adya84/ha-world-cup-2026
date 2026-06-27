@@ -34964,12 +34964,20 @@
     },
     {
       "apiFootballFixtureId": 1489422,
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 6,
+      "awayFouls": 11,
+      "awayOffsides": 4,
+      "awayPossession": "67%",
+      "awayScore": 2,
+      "awayShotsOnGoal": 6,
       "awayTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -35042,17 +35050,66 @@
       },
       "events": [
         {
+          "assist": "J. Fajardo",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "T. Rodriguez",
+          "playerOff": "T. Rodriguez",
+          "playerOn": "J. Fajardo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Panama",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "53'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 53,
+          "player": "J. Fajardo",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Panama",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "J. Quansah",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "England",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Yellow Card"
+        },
+        {
           "assist": "B. Saka",
-          "awayTeam": "England",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "62'",
           "extra": null,
-          "goalNumber": 1,
-          "homeTeam": "Panama",
           "isDisallowed": false,
-          "matchId": 537413,
-          "matchUtcDate": "2026-06-27T21:00:00Z",
           "minute": 62,
           "player": "J. Bellingham",
           "playerOff": null,
@@ -35065,17 +35122,48 @@
           "type": "Goal"
         },
         {
+          "assist": "D. Spence",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "J. Quansah",
+          "playerOff": "J. Quansah",
+          "playerOn": "D. Spence",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Madueke",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "B. Saka",
+          "playerOff": "B. Saka",
+          "playerOn": "N. Madueke",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
+        },
+        {
           "assist": "J. Bellingham",
-          "awayTeam": "England",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "67'",
           "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Panama",
           "isDisallowed": false,
-          "matchId": 537413,
-          "matchUtcDate": "2026-06-27T21:00:00Z",
           "minute": 67,
           "player": "H. Kane",
           "playerOff": null,
@@ -35086,6 +35174,150 @@
           "timer": "67:00",
           "timerSeconds": 4020,
           "type": "Goal"
+        },
+        {
+          "assist": "I. Diaz",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "Y. Barcenas",
+          "playerOff": "Y. Barcenas",
+          "playerOn": "I. Diaz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Panama",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Londono",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "J. Rodriguez",
+          "playerOff": "J. Rodriguez",
+          "playerOn": "A. Londono",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Panama",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Eze",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "J. Bellingham",
+          "playerOff": "J. Bellingham",
+          "playerOn": "E. Eze",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "A. Andrade",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Panama",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": "J. Henderson",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "E. Anderson",
+          "playerOff": "E. Anderson",
+          "playerOn": "J. Henderson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
+        },
+        {
+          "assist": "O. Watkins",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "H. Kane",
+          "playerOff": "H. Kane",
+          "playerOn": "O. Watkins",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Quintero",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "88'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 88,
+          "player": "C. Harvey",
+          "playerOff": "C. Harvey",
+          "playerOn": "A. Quintero",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Panama",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Davis",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "88'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 88,
+          "player": "J. Gutierrez",
+          "playerOff": "J. Gutierrez",
+          "playerOn": "E. Davis",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Panama",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -35136,7 +35368,14 @@
           "type": "Goal"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_L",
+      "homeCorners": 2,
+      "homeFouls": 14,
+      "homeOffsides": 3,
+      "homePossession": "33%",
+      "homeScore": 0,
+      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -35145,16 +35384,56 @@
         "tla": "PAN"
       },
       "id": 537413,
+      "lastApiSync": "2026-06-27T23:14:23.837710+00:00",
       "lastUpdated": "2026-06-28T00:56:42Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 6,
+          "fouls": 11,
+          "offsides": 4,
+          "possession": "67%",
+          "redCards": null,
+          "shotsOffGoal": 8,
+          "shotsOnGoal": 6,
+          "totalShots": 16,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 2,
+          "fouls": 14,
+          "offsides": 3,
+          "possession": "33%",
+          "redCards": null,
+          "shotsOffGoal": 7,
+          "shotsOnGoal": 2,
+          "totalShots": 12,
+          "yellowCards": 2
+        }
+      },
       "matchday": 3,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 236084,
           "name": "Abdulrahman Al Jassim",
           "nationality": "Qatar",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Abdulrahman Al-Jassim, Qatar",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Abdulrahman Al Jassim",
+          "nationality": "Qatar",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Abdulrahman Al-Jassim, Qatar",
           "type": "REFEREE"
         }
       ],
@@ -35170,6 +35449,7 @@
         },
         "winner": "AWAY_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -35361,16 +35641,29 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-27T21:00:00Z"
+      "utcDate": "2026-06-27T21:00:00Z",
+      "venue": {
+        "city": "East Rutherford",
+        "id": null,
+        "name": "MetLife Stadium"
+      }
     },
     {
       "apiFootballFixtureId": 1489420,
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 2,
+      "awayFouls": 13,
+      "awayOffsides": 2,
+      "awayPossession": "46%",
+      "awayScore": 1,
+      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/ghana.svg",
         "id": 763,
@@ -35426,16 +35719,11 @@
       "events": [
         {
           "assist": "M. Kovacic",
-          "awayTeam": "Ghana",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "31'",
           "extra": null,
-          "goalNumber": 1,
-          "homeTeam": "Croatia",
           "isDisallowed": false,
-          "matchId": 537414,
-          "matchUtcDate": "2026-06-27T21:00:00Z",
           "minute": 31,
           "player": "P. Sucic",
           "playerOff": null,
@@ -35448,17 +35736,120 @@
           "type": "Goal"
         },
         {
+          "assist": "K. Peprah",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Adjetey",
+          "playerOff": "J. Adjetey",
+          "playerOn": "K. Peprah",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "I. Fatawu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "E. Owusu",
+          "playerOff": "E. Owusu",
+          "playerOn": "I. Fatawu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "I. Matanovic",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "66'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 66,
+          "player": "A. Budimir",
+          "playerOff": "A. Budimir",
+          "playerOn": "I. Matanovic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "I. Perisic",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": "B. Thomas-Asante",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "J. Ayew",
+          "playerOff": "J. Ayew",
+          "playerOn": "B. Thomas-Asante",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
           "assist": "E. Nuamah",
-          "awayTeam": "Ghana",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "K. Sulemana",
+          "playerOff": "K. Sulemana",
+          "playerOn": "E. Nuamah",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Nuamah",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "73'",
           "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Croatia",
           "isDisallowed": false,
-          "matchId": 537414,
-          "matchUtcDate": "2026-06-27T21:00:00Z",
           "minute": 73,
           "player": "D. Luckassen",
           "playerOff": null,
@@ -35471,17 +35862,30 @@
           "type": "Goal"
         },
         {
+          "assist": "M. Pasalic",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "78'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 78,
+          "player": "M. Kovacic",
+          "playerOff": "M. Kovacic",
+          "playerOn": "M. Pasalic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "78:00",
+          "timerSeconds": 4680,
+          "type": "Substitution"
+        },
+        {
           "assist": "L. Modric",
-          "awayTeam": "Ghana",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "83'",
           "extra": null,
-          "goalNumber": 3,
-          "homeTeam": "Croatia",
           "isDisallowed": false,
-          "matchId": 537414,
-          "matchUtcDate": "2026-06-27T21:00:00Z",
           "minute": 83,
           "player": "N. Vlasic",
           "playerOff": null,
@@ -35492,6 +35896,78 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Goal"
+        },
+        {
+          "assist": "C. Yirenkyi",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "K. Sibo",
+          "playerOff": "K. Sibo",
+          "playerOn": "C. Yirenkyi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Pasalic",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "88'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 88,
+          "player": "M. Baturina",
+          "playerOff": "M. Baturina",
+          "playerOn": "M. Pasalic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Gvardiol",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "88'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 88,
+          "player": "N. Vlasic",
+          "playerOff": "N. Vlasic",
+          "playerOn": "J. Gvardiol",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "90+4'",
+          "extra": 4,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "K. Peprah",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "94:00",
+          "timerSeconds": 5640,
+          "type": "Yellow Card"
         }
       ],
       "goalEvents": [
@@ -35565,7 +36041,14 @@
           "type": "Goal"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_L",
+      "homeCorners": 3,
+      "homeFouls": 9,
+      "homeOffsides": 1,
+      "homePossession": "54%",
+      "homeScore": 2,
+      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/799.svg",
         "id": 799,
@@ -35574,16 +36057,56 @@
         "tla": "CRO"
       },
       "id": 537414,
+      "lastApiSync": "2026-06-27T23:14:23.838533+00:00",
       "lastUpdated": "2026-06-28T00:59:51Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 2,
+          "fouls": 13,
+          "offsides": 2,
+          "possession": "46%",
+          "redCards": null,
+          "shotsOffGoal": 2,
+          "shotsOnGoal": 1,
+          "totalShots": 5,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 3,
+          "fouls": 9,
+          "offsides": 1,
+          "possession": "54%",
+          "redCards": null,
+          "shotsOffGoal": 2,
+          "shotsOnGoal": 4,
+          "totalShots": 8,
+          "yellowCards": 1
+        }
+      },
       "matchday": 3,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -35599,6 +36122,7 @@
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -35772,7 +36296,12 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-27T21:00:00Z"
+      "utcDate": "2026-06-27T21:00:00Z",
+      "venue": {
+        "city": "Philadelphia",
+        "id": null,
+        "name": "Lincoln Financial Field"
+      }
     },
     {
       "area": {
