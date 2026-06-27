@@ -35140,7 +35140,7 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T03:01:12.648505+00:00",
+      "lastApiSync": "2026-06-27T03:01:39.826639+00:00",
       "lastUpdated": "2026-06-27T04:02:59Z",
       "liveStatistics": {
         "away": {
@@ -35759,7 +35759,7 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T03:01:12.648637+00:00",
+      "lastApiSync": "2026-06-27T03:01:39.826890+00:00",
       "lastUpdated": "2026-06-27T04:00:59Z",
       "liveStatistics": {
         "away": {
@@ -36024,13 +36024,16 @@
       }
     },
     {
+      "apiFootballFixtureId": 1489415,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
         "id": 805,
@@ -36038,7 +36041,8 @@
         "shortName": "Belgium",
         "tla": "BEL"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -36046,8 +36050,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_G",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/783.svg",
         "id": 783,
@@ -36056,18 +36063,19 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-27T05:01:07Z",
+      "lastApiSync": "2026-06-27T03:01:39.884557+00:00",
+      "lastUpdated": "2026-06-27T05:01:34Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-27T03:01:39.884557+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -36092,14 +36100,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 129250,
           "name": "Adham Makhadmeh",
           "nationality": "Jordan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Adham Mohammad, Jordan",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Adham Makhadmeh",
+          "nationality": "Jordan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Adham Mohammad, Jordan",
           "type": "REFEREE"
         }
       ],
@@ -36110,11 +36133,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -36123,8 +36147,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-27T03:00:00Z",
+      "venue": {
+        "city": "Vancouver",
+        "id": 19445,
+        "name": "BC Place"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -36150,13 +36179,16 @@
       }
     },
     {
+      "apiFootballFixtureId": 1489414,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
         "id": 840,
@@ -36164,7 +36196,8 @@
         "shortName": "Iran",
         "tla": "IRN"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -36172,8 +36205,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_G",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/825.svg",
         "id": 825,
@@ -36182,18 +36218,19 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-27T05:01:07Z",
+      "lastApiSync": "2026-06-27T03:01:39.884557+00:00",
+      "lastUpdated": "2026-06-27T05:01:34Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-27T03:01:39.884557+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -36218,14 +36255,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 43888,
           "name": "Szymon Marciniak",
           "nationality": "Poland",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Szymon Marciniak, Poland",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Szymon Marciniak",
+          "nationality": "Poland",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Szymon Marciniak, Poland",
           "type": "REFEREE"
         }
       ],
@@ -36236,11 +36288,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -36249,8 +36302,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-27T03:00:00Z",
+      "venue": {
+        "city": "Seattle",
+        "id": 11534,
+        "name": "Lumen Field"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
