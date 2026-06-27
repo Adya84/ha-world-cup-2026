@@ -34756,13 +34756,13 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T00:02:04.271417+00:00",
-      "lastUpdated": "2026-06-27T02:02:02Z",
+      "lastApiSync": "2026-06-27T00:02:24.572575+00:00",
+      "lastUpdated": "2026-06-27T02:02:22Z",
       "liveSource": "api_football",
       "manualClock": {
         "active": false,
         "displayMinute": "1'",
-        "lastApiSync": "2026-06-27T00:02:04.271417+00:00",
+        "lastApiSync": "2026-06-27T00:02:24.572575+00:00",
         "seconds": 60,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -34872,13 +34872,16 @@
       }
     },
     {
+      "apiFootballFixtureId": 1489413,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/saudi_arabia.svg",
         "id": 801,
@@ -34886,7 +34889,8 @@
         "shortName": "Saudi Arabia",
         "tla": "KSA"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -34894,8 +34898,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_H",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
         "id": 1930,
@@ -34904,18 +34911,19 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-27T02:02:01Z",
+      "lastApiSync": "2026-06-27T00:02:24.572575+00:00",
+      "lastUpdated": "2026-06-27T02:02:22Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-27T00:02:24.572575+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -34940,14 +34948,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 43918,
           "name": "Fran\u00e7ois Letexier",
           "nationality": "France",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Fran\u00e7ois Letexier, France",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Fran\u00e7ois Letexier",
+          "nationality": "France",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Fran\u00e7ois Letexier, France",
           "type": "REFEREE"
         }
       ],
@@ -34958,11 +34981,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -34971,8 +34995,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-27T00:00:00Z",
+      "venue": {
+        "city": "Houston",
+        "id": null,
+        "name": "NRG Stadium"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
