@@ -34707,8 +34707,8 @@
     },
     {
       "apiFootballFixtureId": 1489417,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -34820,8 +34820,6 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -34829,7 +34827,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "M. Llorente",
@@ -35102,8 +35099,6 @@
           "type": "Red Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "M. Llorente",
@@ -35145,9 +35140,8 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T02:01:35.538809+00:00",
-      "lastUpdated": "2026-06-27T04:01:32Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-27T02:02:00.157886+00:00",
+      "lastUpdated": "2026-06-27T04:01:59Z",
       "liveStatistics": {
         "away": {
           "corners": 6,
@@ -35171,39 +35165,6 @@
           "totalShots": 5,
           "yellowCards": 3
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T02:01:35.538809+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Guadalajara",
-        "cloudCoverage": 41.4,
-        "condition": "partlycloudy_day",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T01:57:24.906196+00:00",
-        "humidity": 92.6,
-        "latitude": 20.6818,
-        "longitude": -103.4622,
-        "name": "Estadio Akron weather",
-        "observedAt": "2026-06-27T01:00:00Z",
-        "pressure": 1016.2,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio Akron",
-        "temperature": 19.2,
-        "temperatureUnit": "C",
-        "windBearing": 139.3,
-        "windSpeed": 1.1,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -35253,7 +35214,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "N. de la Cruz",
@@ -35423,29 +35384,6 @@
         "city": "Zapopan",
         "id": 1076,
         "name": "Estadio Akron"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Guadalajara",
-        "cloudCoverage": 41.4,
-        "condition": "partlycloudy_day",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T01:57:24.906196+00:00",
-        "humidity": 92.6,
-        "latitude": 20.6818,
-        "longitude": -103.4622,
-        "name": "Estadio Akron weather",
-        "observedAt": "2026-06-27T01:00:00Z",
-        "pressure": 1016.2,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio Akron",
-        "temperature": 19.2,
-        "temperatureUnit": "C",
-        "windBearing": 139.3,
-        "windSpeed": 1.1,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -35821,7 +35759,7 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T02:01:35.487538+00:00",
+      "lastApiSync": "2026-06-27T02:02:00.158100+00:00",
       "lastUpdated": "2026-06-27T04:00:59Z",
       "liveStatistics": {
         "away": {
