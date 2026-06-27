@@ -20,6 +20,8 @@ _LOGGER = logging.getLogger(__name__)
 
 SCAN_INTERVAL_IDLE = timedelta(minutes=30)
 SCAN_INTERVAL_NORMAL = timedelta(minutes=30)
+SCAN_INTERVAL_GAME_DAY = timedelta(minutes=10)
+SCAN_INTERVAL_KICKOFF_APPROACH = timedelta(minutes=1)
 SCAN_INTERVAL_PRE_MATCH = timedelta(seconds=10)
 SCAN_INTERVAL_LIVE = timedelta(seconds=10)
 LIVE_EVENT_FETCH_INTERVAL = timedelta(seconds=10)
@@ -1208,7 +1210,12 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         return matches
 
     def _choose_poll_interval(self, matches):
-        """Use fast polling only when there is a live or nearly-live match."""
+        """Use fast polling only when there is a live or nearly-live match.
+
+        Quiet mode still needs to wake up before the 5 minute pre-kickoff
+        window. Otherwise a 30 minute idle sleep can miss the exact moment
+        a fixture should move into Live.
+        """
         now = datetime.now(timezone.utc)
         if self._cached_live_api_active(now):
             return SCAN_INTERVAL_LIVE
@@ -1219,6 +1226,10 @@ class WorldCupCoordinator(DataUpdateCoordinator):
         if next_seconds is not None:
             if next_seconds <= 5 * 60:
                 return SCAN_INTERVAL_PRE_MATCH
+            if next_seconds <= 30 * 60:
+                return SCAN_INTERVAL_KICKOFF_APPROACH
+            if next_seconds <= 3 * 60 * 60:
+                return SCAN_INTERVAL_GAME_DAY
             if next_seconds <= 24 * 60 * 60:
                 return SCAN_INTERVAL_NORMAL
 
