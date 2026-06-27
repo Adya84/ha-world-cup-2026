@@ -20800,20 +20800,20 @@
       {
         "assist": null,
         "comments": null,
-        "detail": "Normal Goal",
+        "detail": "Goal Disallowed - offside",
         "displayMinute": "90+3'",
         "extra": 3,
-        "isDisallowed": false,
+        "isDisallowed": true,
         "minute": 90,
         "player": "S. Khalilzadeh",
         "playerOff": null,
         "playerOn": null,
-        "rawType": "Goal",
+        "rawType": "Var",
         "source": "api_football",
         "team": "Iran",
         "timer": "93:00",
         "timerSeconds": 5580,
-        "type": "Goal"
+        "type": "Disallowed Goal"
       }
     ],
     "goalEvents": [
@@ -20885,36 +20885,13 @@
         "timer": "14:00",
         "timerSeconds": 840,
         "type": "Goal"
-      },
-      {
-        "assist": null,
-        "awayTeam": "Iran",
-        "comments": null,
-        "detail": "Normal Goal",
-        "displayMinute": "90+3'",
-        "extra": 3,
-        "goalNumber": 4,
-        "homeTeam": "Egypt",
-        "isDisallowed": false,
-        "matchId": 537368,
-        "matchUtcDate": "2026-06-27T03:00:00Z",
-        "minute": 90,
-        "player": "S. Khalilzadeh",
-        "playerOff": null,
-        "playerOn": null,
-        "rawType": "Goal",
-        "source": "api_football",
-        "team": "Iran",
-        "timer": "93:00",
-        "timerSeconds": 5580,
-        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "Egypt",
-    "lastApiSync": "2026-06-27T04:59:57.570101+00:00",
+    "lastApiSync": "2026-06-27T05:00:36.043877+00:00",
     "manualClockText": "90'",
-    "phase_start": "2026-06-27T04:59:57.570101+00:00",
+    "phase_start": "2026-06-27T05:00:36.043877+00:00",
     "referees": [
       {
         "name": "Szymon Marciniak",
