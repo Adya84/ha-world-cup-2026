@@ -35657,8 +35657,8 @@
     },
     {
       "apiFootballFixtureId": 1489415,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -35678,7 +35678,7 @@
         "shortName": "Belgium",
         "tla": "BEL"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35687,7 +35687,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": null,
@@ -35706,10 +35706,28 @@
           "timer": "28:00",
           "timerSeconds": 1680,
           "type": "Goal"
+        },
+        {
+          "assist": "J. Randall",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Singh",
+          "playerOff": "S. Singh",
+          "playerOn": "J. Randall",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "New Zealand",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": null,
@@ -35751,8 +35769,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:07:39.596779+00:00",
-      "lastUpdated": "2026-06-27T06:07:37Z",
+      "lastApiSync": "2026-06-27T04:08:05.417336+00:00",
+      "lastUpdated": "2026-06-27T06:07:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35780,14 +35798,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T04:07:39.596779+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-27T04:08:05.417336+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -35812,7 +35830,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -35859,7 +35877,27 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "J. Randall",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "S. Singh",
+          "playerOff": "S. Singh",
+          "playerOn": "J. Randall",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "New Zealand",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-27T03:00:00Z",
       "venue": {
         "city": "Vancouver",
@@ -36232,8 +36270,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:07:39.596779+00:00",
-      "lastUpdated": "2026-06-27T06:07:37Z",
+      "lastApiSync": "2026-06-27T04:08:05.417336+00:00",
+      "lastUpdated": "2026-06-27T06:07:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -36262,7 +36300,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T04:07:39.596779+00:00",
+        "lastApiSync": "2026-06-27T04:08:05.417336+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
