@@ -14,7 +14,7 @@
       "awayFouls": 7,
       "awayOffsides": 1,
       "awayPossession": "55%",
-      "awayScore": 4,
+      "awayScore": 5,
       "awayShotsOnGoal": 9,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -377,6 +377,24 @@
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+4'",
+          "extra": 4,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "A. Saelemaekers",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "94:00",
+          "timerSeconds": 5640,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 5400,
@@ -496,6 +514,29 @@
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+4'",
+          "extra": 4,
+          "goalNumber": 6,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537367,
+          "matchUtcDate": "2026-06-27T03:00:00Z",
+          "minute": 90,
+          "player": "A. Saelemaekers",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "94:00",
+          "timerSeconds": 5640,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -514,8 +555,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
-      "lastUpdated": "2026-06-27T06:56:46Z",
+      "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
+      "lastUpdated": "2026-06-27T06:57:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -544,7 +585,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
+        "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -558,7 +599,7 @@
         "condition": "lightrainshowers_night",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:46:54.234439+00:00",
+        "fetchedAt": "2026-06-27T04:57:10.772964+00:00",
         "humidity": 92.1,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -604,7 +645,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 4,
+          "away": 5,
           "home": 1
         },
         "halfTime": {
@@ -818,7 +859,7 @@
         "condition": "lightrainshowers_night",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:46:54.234439+00:00",
+        "fetchedAt": "2026-06-27T04:57:10.772964+00:00",
         "humidity": 92.1,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -849,7 +890,7 @@
       "awayFouls": 16,
       "awayOffsides": 2,
       "awayPossession": "38%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
@@ -1375,8 +1416,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
-      "lastUpdated": "2026-06-27T06:56:46Z",
+      "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
+      "lastUpdated": "2026-06-27T06:57:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1405,7 +1446,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
+        "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -1419,7 +1460,7 @@
         "condition": "partlycloudy_night",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:46:54.414770+00:00",
+        "fetchedAt": "2026-06-27T04:57:10.941294+00:00",
         "humidity": 74.2,
         "latitude": 47.5952,
         "longitude": -122.3316,
@@ -1465,7 +1506,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 1
         },
         "halfTime": {
@@ -1643,7 +1684,7 @@
         "condition": "partlycloudy_night",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:46:54.414770+00:00",
+        "fetchedAt": "2026-06-27T04:57:10.941294+00:00",
         "humidity": 74.2,
         "latitude": 47.5952,
         "longitude": -122.3316,
@@ -1676,7 +1717,7 @@
       "awayFouls": 7,
       "awayOffsides": 1,
       "awayPossession": "55%",
-      "awayScore": 4,
+      "awayScore": 5,
       "awayShotsOnGoal": 9,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -2039,6 +2080,24 @@
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+4'",
+          "extra": 4,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "A. Saelemaekers",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "94:00",
+          "timerSeconds": 5640,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 5400,
@@ -2158,6 +2217,29 @@
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+4'",
+          "extra": 4,
+          "goalNumber": 6,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537367,
+          "matchUtcDate": "2026-06-27T03:00:00Z",
+          "minute": 90,
+          "player": "A. Saelemaekers",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "94:00",
+          "timerSeconds": 5640,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -2176,8 +2258,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
-      "lastUpdated": "2026-06-27T06:56:46Z",
+      "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
+      "lastUpdated": "2026-06-27T06:57:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -2206,7 +2288,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
+        "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -2220,7 +2302,7 @@
         "condition": "lightrainshowers_night",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:46:54.234439+00:00",
+        "fetchedAt": "2026-06-27T04:57:10.772964+00:00",
         "humidity": 92.1,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -2266,7 +2348,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 4,
+          "away": 5,
           "home": 1
         },
         "halfTime": {
@@ -2480,7 +2562,7 @@
         "condition": "lightrainshowers_night",
         "country": "Canada",
         "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:46:54.234439+00:00",
+        "fetchedAt": "2026-06-27T04:57:10.772964+00:00",
         "humidity": 92.1,
         "latitude": 49.2768,
         "longitude": -123.1119,
@@ -2511,7 +2593,7 @@
       "awayFouls": 16,
       "awayOffsides": 2,
       "awayPossession": "38%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/iran.svg",
@@ -3037,8 +3119,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
-      "lastUpdated": "2026-06-27T06:56:46Z",
+      "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
+      "lastUpdated": "2026-06-27T06:57:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -3067,7 +3149,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T04:56:48.813312+00:00",
+        "lastApiSync": "2026-06-27T04:57:11.023630+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -3081,7 +3163,7 @@
         "condition": "partlycloudy_night",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:46:54.414770+00:00",
+        "fetchedAt": "2026-06-27T04:57:10.941294+00:00",
         "humidity": 74.2,
         "latitude": 47.5952,
         "longitude": -122.3316,
@@ -3127,7 +3209,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 1
         },
         "halfTime": {
@@ -3305,7 +3387,7 @@
         "condition": "partlycloudy_night",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-27T04:46:54.414770+00:00",
+        "fetchedAt": "2026-06-27T04:57:10.941294+00:00",
         "humidity": 74.2,
         "latitude": 47.5952,
         "longitude": -122.3316,
