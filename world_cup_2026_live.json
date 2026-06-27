@@ -2,8 +2,8 @@
   "live": [
     {
       "apiFootballFixtureId": 1489417,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -23,7 +23,7 @@
         "shortName": "Spain",
         "tla": "ESP"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "M. Llorente",
@@ -69,10 +69,28 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. Rochet",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "F. Muslera",
+          "playerOff": "F. Muslera",
+          "playerOn": "S. Rochet",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "M. Llorente",
@@ -114,8 +132,8 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T01:09:51.495500+00:00",
-      "lastUpdated": "2026-06-27T03:09:49Z",
+      "lastApiSync": "2026-06-27T01:10:13.621166+00:00",
+      "lastUpdated": "2026-06-27T03:10:11Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -143,14 +161,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T01:09:51.495500+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-27T01:10:13.621166+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Guadalajara",
@@ -175,7 +193,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -222,7 +240,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
       "substitutionEvents": [
         {
           "assist": "N. de la Cruz",
@@ -240,6 +258,24 @@
           "team": "Uruguay",
           "timer": "45:00",
           "timerSeconds": 2700,
+          "type": "Substitution"
+        },
+        {
+          "assist": "S. Rochet",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "F. Muslera",
+          "playerOff": "F. Muslera",
+          "playerOn": "S. Rochet",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "46:00",
+          "timerSeconds": 2760,
           "type": "Substitution"
         }
       ],
@@ -435,8 +471,8 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T01:09:51.495500+00:00",
-      "lastUpdated": "2026-06-27T03:09:49Z",
+      "lastApiSync": "2026-06-27T01:10:13.621166+00:00",
+      "lastUpdated": "2026-06-27T03:10:11Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -465,7 +501,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-06-27T01:09:51.495500+00:00",
+        "lastApiSync": "2026-06-27T01:10:13.621166+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -616,8 +652,8 @@
   "matches": [
     {
       "apiFootballFixtureId": 1489417,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -637,7 +673,7 @@
         "shortName": "Spain",
         "tla": "ESP"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -646,7 +682,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "M. Llorente",
@@ -683,10 +719,28 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Substitution"
+        },
+        {
+          "assist": "S. Rochet",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "F. Muslera",
+          "playerOff": "F. Muslera",
+          "playerOn": "S. Rochet",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "M. Llorente",
@@ -728,8 +782,8 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T01:09:51.495500+00:00",
-      "lastUpdated": "2026-06-27T03:09:49Z",
+      "lastApiSync": "2026-06-27T01:10:13.621166+00:00",
+      "lastUpdated": "2026-06-27T03:10:11Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -757,14 +811,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T01:09:51.495500+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-27T01:10:13.621166+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Guadalajara",
@@ -789,7 +843,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -836,7 +890,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
       "substitutionEvents": [
         {
           "assist": "N. de la Cruz",
@@ -854,6 +908,24 @@
           "team": "Uruguay",
           "timer": "45:00",
           "timerSeconds": 2700,
+          "type": "Substitution"
+        },
+        {
+          "assist": "S. Rochet",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "F. Muslera",
+          "playerOff": "F. Muslera",
+          "playerOn": "S. Rochet",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uruguay",
+          "timer": "46:00",
+          "timerSeconds": 2760,
           "type": "Substitution"
         }
       ],
@@ -1049,8 +1121,8 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T01:09:51.495500+00:00",
-      "lastUpdated": "2026-06-27T03:09:49Z",
+      "lastApiSync": "2026-06-27T01:10:13.621166+00:00",
+      "lastUpdated": "2026-06-27T03:10:11Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1079,7 +1151,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-06-27T01:09:51.495500+00:00",
+        "lastApiSync": "2026-06-27T01:10:13.621166+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
