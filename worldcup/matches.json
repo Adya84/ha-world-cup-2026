@@ -34731,7 +34731,6 @@
         "shortName": "Spain",
         "tla": "ESP"
       },
-      "clockSeconds": 0,
       "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
@@ -34751,15 +34750,14 @@
       },
       "id": 537373,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-27T01:08:04Z",
-      "liveSource": "pre_kickoff_window",
+      "lastUpdated": "2026-06-27T02:00:52Z",
       "manualClock": {
         "active": false,
         "displayMinute": "0'",
         "lastApiSync": null,
         "seconds": 0,
         "source": "awaiting_api_football_minute",
-        "status": "LIVE",
+        "status": "IN_PLAY",
         "timer": "0:00"
       },
       "manualClockText": "Awaiting kickoff API data",
@@ -34787,7 +34785,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -34802,14 +34799,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
           "away": null,
           "home": null
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "season": {
         "currentMatchday": 3,
@@ -34819,7 +34816,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-27T00:00:00Z",
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
