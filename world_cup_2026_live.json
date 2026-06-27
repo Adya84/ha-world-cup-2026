@@ -10,7 +10,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": "0%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -18,7 +23,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -27,11 +32,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_L",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": "100%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -40,19 +50,43 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T21:02:17.228961+00:00",
-      "lastUpdated": "2026-06-27T23:02:12Z",
+      "lastApiSync": "2026-06-27T21:02:38.334132+00:00",
+      "lastUpdated": "2026-06-27T23:02:33Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "0%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "100%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-27T21:02:17.228961+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-27T21:02:38.334132+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -77,7 +111,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -165,7 +199,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 1,
+      "awayOffsides": null,
+      "awayPossession": "0%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/ghana.svg",
         "id": 763,
@@ -173,7 +212,7 @@
         "shortName": "Ghana",
         "tla": "GHA"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -182,11 +221,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_L",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": "100%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/799.svg",
         "id": 799,
@@ -195,19 +239,43 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T21:02:17.228961+00:00",
-      "lastUpdated": "2026-06-27T23:02:12Z",
+      "lastApiSync": "2026-06-27T21:02:38.334132+00:00",
+      "lastUpdated": "2026-06-27T23:02:33Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 1,
+          "offsides": null,
+          "possession": "0%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "100%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-27T21:02:17.228961+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-27T21:02:38.334132+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -232,7 +300,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -322,7 +390,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": "0%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -330,7 +403,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -339,11 +412,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_L",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": "100%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/panama.svg",
         "id": 1836,
@@ -352,19 +430,43 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T21:02:17.228961+00:00",
-      "lastUpdated": "2026-06-27T23:02:12Z",
+      "lastApiSync": "2026-06-27T21:02:38.334132+00:00",
+      "lastUpdated": "2026-06-27T23:02:33Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "0%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "100%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-27T21:02:17.228961+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-27T21:02:38.334132+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -389,7 +491,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -477,7 +579,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 1,
+      "awayOffsides": null,
+      "awayPossession": "0%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/ghana.svg",
         "id": 763,
@@ -485,7 +592,7 @@
         "shortName": "Ghana",
         "tla": "GHA"
       },
-      "clockSeconds": 60,
+      "clockSeconds": 120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -494,11 +601,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "1'",
-      "fallbackClock": 60,
-      "fallbackClockText": "1'",
+      "displayMinute": "2'",
+      "fallbackClock": 120,
+      "fallbackClockText": "2'",
       "group": "GROUP_L",
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": "100%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/799.svg",
         "id": 799,
@@ -507,19 +619,43 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T21:02:17.228961+00:00",
-      "lastUpdated": "2026-06-27T23:02:12Z",
+      "lastApiSync": "2026-06-27T21:02:38.334132+00:00",
+      "lastUpdated": "2026-06-27T23:02:33Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 1,
+          "offsides": null,
+          "possession": "0%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "100%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "1'",
-        "lastApiSync": "2026-06-27T21:02:17.228961+00:00",
-        "seconds": 60,
+        "displayMinute": "2'",
+        "lastApiSync": "2026-06-27T21:02:38.334132+00:00",
+        "seconds": 120,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "1'"
+        "timer": "2'"
       },
-      "manualClockText": "1'",
+      "manualClockText": "2'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -544,7 +680,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 1,
+      "minute": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
