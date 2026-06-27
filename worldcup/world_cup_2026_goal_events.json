@@ -31028,23 +31028,32 @@
     "utcDate": "2026-06-23T23:00:00Z"
   },
   "537413": {
+    "apiFootballFixtureId": 1489422,
     "awayScore": 0,
     "awayTeam": "England",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Panama",
-    "phase_start": null,
+    "lastApiSync": "2026-06-27T21:01:10.780145+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-06-27T21:01:10.780145+00:00",
     "referees": [
       {
-        "id": 236084,
         "name": "Abdulrahman Al Jassim",
         "nationality": "Qatar",
         "type": "REFEREE"
+      },
+      {
+        "name": "Abdulrahman Al-Jassim, Qatar",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-06-27T21:00:00Z"
   },
   "537414": {
@@ -31064,7 +31073,7 @@
       }
     ],
     "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "status": "IN_PLAY",
     "utcDate": "2026-06-27T21:00:00Z"
   },
   "537415": {
