@@ -34975,7 +34975,7 @@
       "awayCorners": 5,
       "awayFouls": 3,
       "awayOffsides": 3,
-      "awayPossession": "72%",
+      "awayPossession": "73%",
       "awayScore": 0,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -35019,9 +35019,9 @@
       "fallbackClockText": "48'",
       "group": "GROUP_L",
       "homeCorners": 1,
-      "homeFouls": 10,
+      "homeFouls": 11,
       "homeOffsides": 1,
-      "homePossession": "28%",
+      "homePossession": "27%",
       "homeScore": 0,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -35032,15 +35032,15 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:06:34.712710+00:00",
-      "lastUpdated": "2026-06-28T00:06:30Z",
+      "lastApiSync": "2026-06-27T22:06:56.419992+00:00",
+      "lastUpdated": "2026-06-28T00:06:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 5,
           "fouls": 3,
           "offsides": 3,
-          "possession": "72%",
+          "possession": "73%",
           "redCards": null,
           "shotsOffGoal": 6,
           "shotsOnGoal": 2,
@@ -35049,9 +35049,9 @@
         },
         "home": {
           "corners": 1,
-          "fouls": 10,
+          "fouls": 11,
           "offsides": 1,
-          "possession": "28%",
+          "possession": "27%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 2,
@@ -35062,7 +35062,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "48'",
-        "lastApiSync": "2026-06-27T22:06:34.712710+00:00",
+        "lastApiSync": "2026-06-27T22:06:56.419992+00:00",
         "seconds": 2880,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -35193,8 +35193,8 @@
     },
     {
       "apiFootballFixtureId": 1489420,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -35214,7 +35214,7 @@
         "shortName": "Ghana",
         "tla": "GHA"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35223,7 +35223,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "M. Kovacic",
@@ -35242,10 +35242,46 @@
           "timer": "31:00",
           "timerSeconds": 1860,
           "type": "Goal"
+        },
+        {
+          "assist": "K. Peprah",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Adjetey",
+          "playerOff": "J. Adjetey",
+          "playerOn": "K. Peprah",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "I. Fatawu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "E. Owusu",
+          "playerOff": "E. Owusu",
+          "playerOn": "I. Fatawu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "M. Kovacic",
@@ -35287,8 +35323,8 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:06:34.712710+00:00",
-      "lastUpdated": "2026-06-28T00:06:30Z",
+      "lastApiSync": "2026-06-27T22:06:56.419992+00:00",
+      "lastUpdated": "2026-06-28T00:06:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35316,14 +35352,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-27T22:06:34.712710+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-27T22:06:56.419992+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -35348,7 +35384,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -35395,7 +35431,45 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "K. Peprah",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Adjetey",
+          "playerOff": "J. Adjetey",
+          "playerOn": "K. Peprah",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "I. Fatawu",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "E. Owusu",
+          "playerOff": "E. Owusu",
+          "playerOn": "I. Fatawu",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-27T21:00:00Z",
       "venue": {
         "city": "Philadelphia",
