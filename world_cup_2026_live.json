@@ -10,10 +10,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 5,
+      "awayCorners": 6,
       "awayFouls": 10,
       "awayOffsides": 1,
-      "awayPossession": "71%",
+      "awayPossession": "72%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -215,6 +215,42 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "F. Ruiz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "Pedri",
+          "playerOff": "Pedri",
+          "playerOn": "F. Ruiz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Olmo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "M. Merino",
+          "playerOff": "M. Merino",
+          "playerOn": "D. Olmo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3600,
@@ -247,9 +283,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 0,
-      "homeFouls": 4,
+      "homeFouls": 6,
       "homeOffsides": 3,
-      "homePossession": "29%",
+      "homePossession": "28%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -260,15 +296,15 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T01:24:04.871064+00:00",
-      "lastUpdated": "2026-06-27T03:24:02Z",
+      "lastApiSync": "2026-06-27T01:24:25.701751+00:00",
+      "lastUpdated": "2026-06-27T03:24:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 5,
+          "corners": 6,
           "fouls": 10,
           "offsides": 1,
-          "possession": "71%",
+          "possession": "72%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -277,20 +313,20 @@
         },
         "home": {
           "corners": 0,
-          "fouls": 4,
+          "fouls": 6,
           "offsides": 3,
-          "possession": "29%",
+          "possession": "28%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 0,
           "totalShots": 3,
-          "yellowCards": 1
+          "yellowCards": 2
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "60'",
-        "lastApiSync": "2026-06-27T01:24:04.871064+00:00",
+        "lastApiSync": "2026-06-27T01:24:25.701751+00:00",
         "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -423,6 +459,42 @@
           "timer": "57:00",
           "timerSeconds": 3420,
           "type": "Substitution"
+        },
+        {
+          "assist": "F. Ruiz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "Pedri",
+          "playerOff": "Pedri",
+          "playerOn": "F. Ruiz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Olmo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "M. Merino",
+          "playerOff": "M. Merino",
+          "playerOn": "D. Olmo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-27T00:00:00Z",
@@ -516,7 +588,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3600,
+      "clockSeconds": 3660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -525,7 +597,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "60'",
+      "displayMinute": "61'",
       "events": [
         {
           "assist": null,
@@ -600,8 +672,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 3600,
-      "fallbackClockText": "60'",
+      "fallbackClock": 3660,
+      "fallbackClockText": "61'",
       "group": "GROUP_H",
       "homeCorners": 3,
       "homeFouls": 7,
@@ -617,8 +689,8 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T01:24:04.871064+00:00",
-      "lastUpdated": "2026-06-27T03:24:02Z",
+      "lastApiSync": "2026-06-27T01:24:25.701751+00:00",
+      "lastUpdated": "2026-06-27T03:24:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -638,22 +710,22 @@
           "offsides": null,
           "possession": "53%",
           "redCards": null,
-          "shotsOffGoal": 4,
+          "shotsOffGoal": 5,
           "shotsOnGoal": 1,
-          "totalShots": 7,
+          "totalShots": 8,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "60'",
-        "lastApiSync": "2026-06-27T01:24:04.871064+00:00",
-        "seconds": 3600,
+        "displayMinute": "61'",
+        "lastApiSync": "2026-06-27T01:24:25.701751+00:00",
+        "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "60'"
+        "timer": "61'"
       },
-      "manualClockText": "60'",
+      "manualClockText": "61'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -678,7 +750,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 60,
+      "minute": 61,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -806,10 +878,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 5,
+      "awayCorners": 6,
       "awayFouls": 10,
       "awayOffsides": 1,
-      "awayPossession": "71%",
+      "awayPossession": "72%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -1011,6 +1083,42 @@
           "timer": "58:00",
           "timerSeconds": 3480,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "F. Ruiz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "Pedri",
+          "playerOff": "Pedri",
+          "playerOn": "F. Ruiz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Olmo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "M. Merino",
+          "playerOff": "M. Merino",
+          "playerOn": "D. Olmo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3600,
@@ -1043,9 +1151,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 0,
-      "homeFouls": 4,
+      "homeFouls": 6,
       "homeOffsides": 3,
-      "homePossession": "29%",
+      "homePossession": "28%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -1056,15 +1164,15 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T01:24:04.871064+00:00",
-      "lastUpdated": "2026-06-27T03:24:02Z",
+      "lastApiSync": "2026-06-27T01:24:25.701751+00:00",
+      "lastUpdated": "2026-06-27T03:24:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 5,
+          "corners": 6,
           "fouls": 10,
           "offsides": 1,
-          "possession": "71%",
+          "possession": "72%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -1073,20 +1181,20 @@
         },
         "home": {
           "corners": 0,
-          "fouls": 4,
+          "fouls": 6,
           "offsides": 3,
-          "possession": "29%",
+          "possession": "28%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 0,
           "totalShots": 3,
-          "yellowCards": 1
+          "yellowCards": 2
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "60'",
-        "lastApiSync": "2026-06-27T01:24:04.871064+00:00",
+        "lastApiSync": "2026-06-27T01:24:25.701751+00:00",
         "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -1219,6 +1327,42 @@
           "timer": "57:00",
           "timerSeconds": 3420,
           "type": "Substitution"
+        },
+        {
+          "assist": "F. Ruiz",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "Pedri",
+          "playerOff": "Pedri",
+          "playerOn": "F. Ruiz",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Olmo",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "M. Merino",
+          "playerOff": "M. Merino",
+          "playerOn": "D. Olmo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-27T00:00:00Z",
@@ -1312,7 +1456,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3600,
+      "clockSeconds": 3660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1321,7 +1465,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "60'",
+      "displayMinute": "61'",
       "events": [
         {
           "assist": null,
@@ -1396,8 +1540,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 3600,
-      "fallbackClockText": "60'",
+      "fallbackClock": 3660,
+      "fallbackClockText": "61'",
       "group": "GROUP_H",
       "homeCorners": 3,
       "homeFouls": 7,
@@ -1413,8 +1557,8 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T01:24:04.871064+00:00",
-      "lastUpdated": "2026-06-27T03:24:02Z",
+      "lastApiSync": "2026-06-27T01:24:25.701751+00:00",
+      "lastUpdated": "2026-06-27T03:24:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1434,22 +1578,22 @@
           "offsides": null,
           "possession": "53%",
           "redCards": null,
-          "shotsOffGoal": 4,
+          "shotsOffGoal": 5,
           "shotsOnGoal": 1,
-          "totalShots": 7,
+          "totalShots": 8,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "60'",
-        "lastApiSync": "2026-06-27T01:24:04.871064+00:00",
-        "seconds": 3600,
+        "displayMinute": "61'",
+        "lastApiSync": "2026-06-27T01:24:25.701751+00:00",
+        "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "60'"
+        "timer": "61'"
       },
-      "manualClockText": "60'",
+      "manualClockText": "61'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -1474,7 +1618,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 60,
+      "minute": 61,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
