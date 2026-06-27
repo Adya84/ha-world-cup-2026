@@ -35669,7 +35669,7 @@
       "awayFouls": 0,
       "awayOffsides": 0,
       "awayPossession": "74%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -35678,7 +35678,7 @@
         "shortName": "Belgium",
         "tla": "BEL"
       },
-      "clockSeconds": 1620,
+      "clockSeconds": 1680,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35687,9 +35687,50 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "27'",
-      "fallbackClock": 1620,
-      "fallbackClockText": "27'",
+      "displayMinute": "28'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "28'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 28,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 1680,
+      "fallbackClockText": "28'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "28'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 28,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_G",
       "homeCorners": 0,
       "homeFouls": 1,
@@ -35705,8 +35746,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T03:28:37.738536+00:00",
-      "lastUpdated": "2026-06-27T05:28:34Z",
+      "lastApiSync": "2026-06-27T03:28:59.559503+00:00",
+      "lastUpdated": "2026-06-27T05:28:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35734,14 +35775,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "27'",
-        "lastApiSync": "2026-06-27T03:28:37.738536+00:00",
-        "seconds": 1620,
+        "displayMinute": "28'",
+        "lastApiSync": "2026-06-27T03:28:59.559503+00:00",
+        "seconds": 1680,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "27'"
+        "timer": "28'"
       },
-      "manualClockText": "27'",
+      "manualClockText": "28'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -35766,7 +35807,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 27,
+      "minute": 28,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -35795,11 +35836,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -36114,8 +36155,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T03:28:37.738536+00:00",
-      "lastUpdated": "2026-06-27T05:28:34Z",
+      "lastApiSync": "2026-06-27T03:28:59.559503+00:00",
+      "lastUpdated": "2026-06-27T05:28:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -36144,7 +36185,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "28'",
-        "lastApiSync": "2026-06-27T03:28:37.738536+00:00",
+        "lastApiSync": "2026-06-27T03:28:59.559503+00:00",
         "seconds": 1680,
         "source": "api_football_live_minute",
         "status": "1H",
