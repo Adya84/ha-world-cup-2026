@@ -35353,8 +35353,8 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:43:48.436713+00:00",
-      "lastUpdated": "2026-06-28T00:43:45Z",
+      "lastApiSync": "2026-06-27T22:44:10.240864+00:00",
+      "lastUpdated": "2026-06-28T00:44:06Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35383,7 +35383,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "85'",
-        "lastApiSync": "2026-06-27T22:43:48.436713+00:00",
+        "lastApiSync": "2026-06-27T22:44:10.240864+00:00",
         "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -35853,6 +35853,24 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": "L. Modric",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "N. Vlasic",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 4980,
@@ -35903,6 +35921,29 @@
           "timer": "73:00",
           "timerSeconds": 4380,
           "type": "Goal"
+        },
+        {
+          "assist": "L. Modric",
+          "awayTeam": "Ghana",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "83'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Croatia",
+          "isDisallowed": false,
+          "matchId": 537414,
+          "matchUtcDate": "2026-06-27T21:00:00Z",
+          "minute": 83,
+          "player": "N. Vlasic",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -35911,7 +35952,7 @@
       "homeFouls": 6,
       "homeOffsides": 0,
       "homePossession": "53%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/799.svg",
@@ -35921,8 +35962,8 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:43:48.436713+00:00",
-      "lastUpdated": "2026-06-28T00:43:45Z",
+      "lastApiSync": "2026-06-27T22:44:10.240864+00:00",
+      "lastUpdated": "2026-06-28T00:44:06Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35951,7 +35992,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "83'",
-        "lastApiSync": "2026-06-27T22:43:48.436713+00:00",
+        "lastApiSync": "2026-06-27T22:44:10.240864+00:00",
         "seconds": 4980,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -36012,7 +36053,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 1,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 0,
