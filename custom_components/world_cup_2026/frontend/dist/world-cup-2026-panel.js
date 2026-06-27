@@ -10030,6 +10030,192 @@ class WorldCup2026Panel extends HTMLElement {
           }
         }
 
+        .wc-page-knockout .wc-web-card {
+          max-width: 100% !important;
+          overflow-x: auto !important;
+          overflow-y: visible !important;
+          overscroll-behavior-x: contain;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-gutter: stable;
+        }
+
+        .wc-page-knockout .wc-knockout-spider {
+          width: max-content;
+          max-width: none;
+          column-gap: 10px !important;
+          min-width: 1160px !important;
+        }
+
+        .wc-page-knockout .wc-web-card::-webkit-scrollbar {
+          height: 10px;
+        }
+
+        .wc-page-knockout .wc-web-card::-webkit-scrollbar-thumb {
+          background: rgba(255,255,255,0.28);
+          border-radius: 999px;
+        }
+
+        .wc-app.wc-view-tablet.wc-page-knockout .wc-web-card,
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-web-card {
+          margin-left: 0 !important;
+          margin-right: 0 !important;
+          padding: 10px !important;
+          border-radius: 12px !important;
+        }
+
+        .wc-app.wc-view-tablet.wc-page-knockout .wc-knockout-spider {
+          min-width: 1060px !important;
+          min-height: 585px !important;
+          column-gap: 8px !important;
+          transform: none;
+          transform-origin: top left;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-knockout-spider {
+          min-width: 940px !important;
+          min-height: 560px !important;
+          grid-template-columns:
+            minmax(118px, 1.05fr)
+            minmax(104px, 0.9fr)
+            minmax(96px, 0.82fr)
+            minmax(90px, 0.78fr)
+            minmax(112px, 0.95fr)
+            minmax(90px, 0.78fr)
+            minmax(96px, 0.82fr)
+            minmax(104px, 0.9fr)
+            minmax(118px, 1.05fr) !important;
+          column-gap: 8px !important;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-spider-match {
+          min-height: 32px !important;
+          padding: 3px 4px !important;
+          grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr) !important;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-spider-team {
+          font-size: 9px !important;
+        }
+
+        .wc-page-knockout .wc-web-card {
+          overflow-x: hidden !important;
+        }
+
+        .wc-page-knockout .wc-knockout-spider,
+        .wc-app.wc-view-tablet.wc-page-knockout .wc-knockout-spider,
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-knockout-spider {
+          width: 100% !important;
+          min-width: 0 !important;
+          max-width: 100% !important;
+          grid-template-columns:
+            minmax(0, 1.1fr)
+            minmax(0, 0.92fr)
+            minmax(0, 0.82fr)
+            minmax(0, 0.74fr)
+            minmax(0, 0.86fr)
+            minmax(0, 0.74fr)
+            minmax(0, 0.82fr)
+            minmax(0, 0.92fr)
+            minmax(0, 1.1fr) !important;
+          column-gap: 6px !important;
+          padding-right: 0 !important;
+          box-sizing: border-box !important;
+        }
+
+        .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::before {
+          left: -6px !important;
+          width: 6px !important;
+        }
+
+        .wc-page-knockout .wc-spider-right:not(.wc-spider-first)::before {
+          left: auto !important;
+          right: -6px !important;
+          width: 6px !important;
+        }
+
+        .wc-page-knockout .wc-spider-slot:not(.wc-spider-first)::after {
+          left: -6px !important;
+        }
+
+        .wc-page-knockout .wc-spider-right:not(.wc-spider-first)::after {
+          left: auto !important;
+          right: -6px !important;
+        }
+
+        .wc-page-knockout .wc-spider-match {
+          grid-template-columns: minmax(0, 1fr) 26px minmax(0, 1fr) !important;
+          gap: 3px !important;
+          padding: 4px 5px !important;
+        }
+
+        .wc-page-knockout .wc-spider-team {
+          gap: 3px !important;
+          font-size: 8.5px !important;
+        }
+
+        .wc-page-knockout .wc-spider-team .group-flag-img,
+        .wc-page-knockout .wc-spider-team .group-flag-missing {
+          width: 12px !important;
+          min-width: 12px !important;
+          height: 8px !important;
+        }
+
+        .wc-page-knockout .wc-spider-vs {
+          font-size: 7px !important;
+        }
+
+        .wc-app.wc-view-tablet.wc-page-knockout .wc-knockout-spider {
+          column-gap: 5px !important;
+          grid-template-rows: 22px repeat(17, minmax(26px, 1fr)) !important;
+          min-height: 545px !important;
+        }
+
+        .wc-app.wc-view-tablet.wc-page-knockout .wc-spider-match {
+          grid-template-columns: minmax(0, 1fr) 22px minmax(0, 1fr) !important;
+          min-height: 30px !important;
+          padding: 3px 4px !important;
+        }
+
+        .wc-app.wc-view-tablet.wc-page-knockout .wc-spider-team {
+          font-size: 7.5px !important;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-knockout-spider {
+          column-gap: 3px !important;
+          grid-template-rows: 18px repeat(17, minmax(22px, 1fr)) !important;
+          min-height: 470px !important;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-spider-round-title {
+          font-size: 6px !important;
+          letter-spacing: 0 !important;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-spider-match {
+          grid-template-columns: minmax(0, 1fr) 16px minmax(0, 1fr) !important;
+          min-height: 24px !important;
+          padding: 2px 2px !important;
+          gap: 1px !important;
+          border-radius: 5px !important;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-spider-team {
+          gap: 1px !important;
+          font-size: 5.8px !important;
+          line-height: 1 !important;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-spider-team .group-flag-img,
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-spider-team .group-flag-missing {
+          width: 8px !important;
+          min-width: 8px !important;
+          height: 6px !important;
+        }
+
+        .wc-app.wc-view-mobile.wc-page-knockout .wc-spider-vs {
+          font-size: 5px !important;
+        }
+
         .wc-bracket {
           display: grid;
           grid-template-columns: minmax(178px, 1.18fr) repeat(5, minmax(145px, 1fr));
