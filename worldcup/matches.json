@@ -35145,8 +35145,8 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T01:59:34.067530+00:00",
-      "lastUpdated": "2026-06-27T03:59:31Z",
+      "lastApiSync": "2026-06-27T01:59:55.792970+00:00",
+      "lastUpdated": "2026-06-27T03:59:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35175,7 +35175,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T01:59:34.067530+00:00",
+        "lastApiSync": "2026-06-27T01:59:55.792970+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -35450,8 +35450,8 @@
     },
     {
       "apiFootballFixtureId": 1489413,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -35545,8 +35545,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -35554,7 +35552,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -35809,8 +35806,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "group": "GROUP_H",
       "homeCorners": 4,
       "homeFouls": 10,
@@ -35826,9 +35821,8 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T01:59:34.067530+00:00",
-      "lastUpdated": "2026-06-27T03:59:31Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-27T01:59:55.691005+00:00",
+      "lastUpdated": "2026-06-27T03:59:52Z",
       "liveStatistics": {
         "away": {
           "corners": 2,
@@ -35852,39 +35846,6 @@
           "totalShots": 15,
           "yellowCards": 1
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T01:59:34.067530+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Houston",
-        "cloudCoverage": 10.9,
-        "condition": "clearsky_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T01:57:25.075443+00:00",
-        "humidity": 74.2,
-        "latitude": 29.6847,
-        "longitude": -95.4107,
-        "name": "NRG Stadium weather",
-        "observedAt": "2026-06-27T01:00:00Z",
-        "pressure": 1014.4,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "NRG Stadium",
-        "temperature": 29.3,
-        "temperatureUnit": "C",
-        "windBearing": 167.6,
-        "windSpeed": 4.1,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -35934,7 +35895,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "A. Lajami",
@@ -36122,29 +36083,6 @@
         "city": "Houston",
         "id": null,
         "name": "NRG Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Houston",
-        "cloudCoverage": 10.9,
-        "condition": "clearsky_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T01:57:25.075443+00:00",
-        "humidity": 74.2,
-        "latitude": 29.6847,
-        "longitude": -95.4107,
-        "name": "NRG Stadium weather",
-        "observedAt": "2026-06-27T01:00:00Z",
-        "pressure": 1014.4,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "NRG Stadium",
-        "temperature": 29.3,
-        "temperatureUnit": "C",
-        "windBearing": 167.6,
-        "windSpeed": 4.1,
-        "windSpeedUnit": "m/s"
       }
     },
     {
