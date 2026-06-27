@@ -34730,7 +34730,7 @@
       "awayFouls": 5,
       "awayOffsides": 1,
       "awayPossession": "74%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/760.svg",
@@ -34749,8 +34749,54 @@
         "type": "CUP"
       },
       "displayMinute": "42'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "42'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 42,
+          "player": "A. Baena",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 2520,
       "fallbackClockText": "42'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Spain",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "42'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Uruguay",
+          "isDisallowed": false,
+          "matchId": 537373,
+          "matchUtcDate": "2026-06-27T00:00:00Z",
+          "minute": 42,
+          "player": "A. Baena",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_H",
       "homeCorners": 0,
       "homeFouls": 1,
@@ -34766,8 +34812,8 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T00:42:42.253830+00:00",
-      "lastUpdated": "2026-06-27T02:42:40Z",
+      "lastApiSync": "2026-06-27T00:43:03.534980+00:00",
+      "lastUpdated": "2026-06-27T02:42:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -34796,7 +34842,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "42'",
-        "lastApiSync": "2026-06-27T00:42:42.253830+00:00",
+        "lastApiSync": "2026-06-27T00:43:03.534980+00:00",
         "seconds": 2520,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -34856,11 +34902,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -35049,8 +35095,8 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T00:42:42.253830+00:00",
-      "lastUpdated": "2026-06-27T02:42:40Z",
+      "lastApiSync": "2026-06-27T00:43:03.534980+00:00",
+      "lastUpdated": "2026-06-27T02:42:58Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35079,7 +35125,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "41'",
-        "lastApiSync": "2026-06-27T00:42:42.253830+00:00",
+        "lastApiSync": "2026-06-27T00:43:03.534980+00:00",
         "seconds": 2460,
         "source": "api_football_live_minute",
         "status": "1H",
