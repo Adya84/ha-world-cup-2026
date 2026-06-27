@@ -35384,7 +35384,7 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:58:46.229342+00:00",
+      "lastApiSync": "2026-06-27T22:59:11.636329+00:00",
       "lastUpdated": "2026-06-28T00:56:42Z",
       "liveStatistics": {
         "away": {
@@ -35650,8 +35650,8 @@
     },
     {
       "apiFootballFixtureId": 1489420,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -35709,8 +35709,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -35718,7 +35716,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "M. Kovacic",
@@ -35973,8 +35970,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "M. Kovacic",
@@ -36062,9 +36057,8 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:58:46.312748+00:00",
-      "lastUpdated": "2026-06-28T00:58:42Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-27T22:59:11.637072+00:00",
+      "lastUpdated": "2026-06-28T00:59:09Z",
       "liveStatistics": {
         "away": {
           "corners": 2,
@@ -36088,39 +36082,6 @@
           "totalShots": 8,
           "yellowCards": 1
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-27T22:58:46.312748+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 99.2,
-        "condition": "rain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T22:55:21.335051+00:00",
-        "humidity": 95.1,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-06-27T22:00:00Z",
-        "pressure": 1013.2,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 22.0,
-        "temperatureUnit": "C",
-        "windBearing": 59.1,
-        "windSpeed": 3.9,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -36170,7 +36131,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "K. Peprah",
@@ -36340,29 +36301,6 @@
         "city": "Philadelphia",
         "id": null,
         "name": "Lincoln Financial Field"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 99.2,
-        "condition": "rain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-27T22:55:21.335051+00:00",
-        "humidity": 95.1,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-06-27T22:00:00Z",
-        "pressure": 1013.2,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 22.0,
-        "temperatureUnit": "C",
-        "windBearing": 59.1,
-        "windSpeed": 3.9,
-        "windSpeedUnit": "m/s"
       }
     },
     {
