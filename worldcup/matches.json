@@ -35353,8 +35353,8 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T22:45:39.786783+00:00",
-      "lastUpdated": "2026-06-28T00:45:36Z",
+      "lastApiSync": "2026-06-27T22:46:05.693666+00:00",
+      "lastUpdated": "2026-06-28T00:45:57Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35383,7 +35383,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "87'",
-        "lastApiSync": "2026-06-27T22:45:39.786783+00:00",
+        "lastApiSync": "2026-06-27T22:46:05.693666+00:00",
         "seconds": 5220,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -35681,7 +35681,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5040,
+      "clockSeconds": 5100,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35690,7 +35690,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "84'",
+      "displayMinute": "85'",
       "events": [
         {
           "assist": "M. Kovacic",
@@ -35871,10 +35871,28 @@
           "timer": "83:00",
           "timerSeconds": 4980,
           "type": "Goal"
+        },
+        {
+          "assist": "C. Yirenkyi",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "K. Sibo",
+          "playerOff": "K. Sibo",
+          "playerOn": "C. Yirenkyi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5040,
-      "fallbackClockText": "84'",
+      "fallbackClock": 5100,
+      "fallbackClockText": "85'",
       "goalEvents": [
         {
           "assist": "M. Kovacic",
@@ -35962,8 +35980,8 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T22:45:39.786783+00:00",
-      "lastUpdated": "2026-06-28T00:45:36Z",
+      "lastApiSync": "2026-06-27T22:46:05.693666+00:00",
+      "lastUpdated": "2026-06-28T00:45:57Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35991,14 +36009,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "84'",
-        "lastApiSync": "2026-06-27T22:45:39.786783+00:00",
-        "seconds": 5040,
+        "displayMinute": "85'",
+        "lastApiSync": "2026-06-27T22:46:05.693666+00:00",
+        "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "84'"
+        "timer": "85'"
       },
-      "manualClockText": "84'",
+      "manualClockText": "85'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -36023,7 +36041,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 84,
+      "minute": 85,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -36178,6 +36196,24 @@
           "team": "Croatia",
           "timer": "78:00",
           "timerSeconds": 4680,
+          "type": "Substitution"
+        },
+        {
+          "assist": "C. Yirenkyi",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "K. Sibo",
+          "playerOff": "K. Sibo",
+          "playerOn": "C. Yirenkyi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ghana",
+          "timer": "85:00",
+          "timerSeconds": 5100,
           "type": "Substitution"
         }
       ],
