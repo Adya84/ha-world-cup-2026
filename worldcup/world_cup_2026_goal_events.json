@@ -31166,12 +31166,32 @@
     "clock_active": false,
     "clock_seconds": 2760,
     "displayMinute": "46'",
+    "events": [
+      {
+        "assist": "J. Fajardo",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "T. Rodriguez",
+        "playerOff": "T. Rodriguez",
+        "playerOn": "J. Fajardo",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Panama",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Panama",
-    "lastApiSync": "2026-06-27T22:04:43.391473+00:00",
+    "lastApiSync": "2026-06-27T22:05:07.942612+00:00",
     "manualClockText": "46'",
-    "phase_start": "2026-06-27T22:04:43.391473+00:00",
+    "phase_start": "2026-06-27T22:05:07.942612+00:00",
     "referees": [
       {
         "name": "Abdulrahman Al Jassim",
@@ -31185,6 +31205,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "J. Fajardo",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "T. Rodriguez",
+        "playerOff": "T. Rodriguez",
+        "playerOn": "J. Fajardo",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Panama",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-27T21:00:00Z"
   },
   "537414": {
@@ -31242,9 +31282,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Croatia",
-    "lastApiSync": "2026-06-27T22:04:43.391473+00:00",
+    "lastApiSync": "2026-06-27T22:05:07.942612+00:00",
     "manualClockText": "45'",
-    "phase_start": "2026-06-27T22:04:43.391473+00:00",
+    "phase_start": "2026-06-27T22:05:07.942612+00:00",
     "referees": [
       {
         "name": "Drew Fischer",
