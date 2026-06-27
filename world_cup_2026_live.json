@@ -14,7 +14,7 @@
       "awayFouls": 2,
       "awayOffsides": 1,
       "awayPossession": "61%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3000,
+      "clockSeconds": 3060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "50'",
+      "displayMinute": "51'",
       "events": [
         {
           "assist": null,
@@ -125,10 +125,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "50'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 50,
+          "player": "L. Trossard",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "50:00",
+          "timerSeconds": 3000,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3000,
-      "fallbackClockText": "50'",
+      "fallbackClock": 3060,
+      "fallbackClockText": "51'",
       "goalEvents": [
         {
           "assist": null,
@@ -152,6 +170,29 @@
           "timer": "28:00",
           "timerSeconds": 1680,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "50'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537367,
+          "matchUtcDate": "2026-06-27T03:00:00Z",
+          "minute": 50,
+          "player": "L. Trossard",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "50:00",
+          "timerSeconds": 3000,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -170,8 +211,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:12:50.185232+00:00",
-      "lastUpdated": "2026-06-27T06:12:46Z",
+      "lastApiSync": "2026-06-27T04:13:11.169220+00:00",
+      "lastUpdated": "2026-06-27T06:13:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -199,14 +240,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "50'",
-        "lastApiSync": "2026-06-27T04:12:50.185232+00:00",
-        "seconds": 3000,
+        "displayMinute": "51'",
+        "lastApiSync": "2026-06-27T04:13:11.169220+00:00",
+        "seconds": 3060,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "50'"
+        "timer": "51'"
       },
-      "manualClockText": "50'",
+      "manualClockText": "51'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -231,7 +272,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 50,
+      "minute": 51,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -260,7 +301,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "halfTime": {
@@ -743,8 +784,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:12:50.185232+00:00",
-      "lastUpdated": "2026-06-27T06:12:46Z",
+      "lastApiSync": "2026-06-27T04:13:11.169220+00:00",
+      "lastUpdated": "2026-06-27T06:13:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -773,7 +814,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "49'",
-        "lastApiSync": "2026-06-27T04:12:50.185232+00:00",
+        "lastApiSync": "2026-06-27T04:13:11.169220+00:00",
         "seconds": 2940,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -972,7 +1013,7 @@
       "awayFouls": 2,
       "awayOffsides": 1,
       "awayPossession": "61%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -1001,7 +1042,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3000,
+      "clockSeconds": 3060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1010,7 +1051,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "50'",
+      "displayMinute": "51'",
       "events": [
         {
           "assist": null,
@@ -1083,10 +1124,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "50'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 50,
+          "player": "L. Trossard",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "50:00",
+          "timerSeconds": 3000,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3000,
-      "fallbackClockText": "50'",
+      "fallbackClock": 3060,
+      "fallbackClockText": "51'",
       "goalEvents": [
         {
           "assist": null,
@@ -1110,6 +1169,29 @@
           "timer": "28:00",
           "timerSeconds": 1680,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "50'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "New Zealand",
+          "isDisallowed": false,
+          "matchId": 537367,
+          "matchUtcDate": "2026-06-27T03:00:00Z",
+          "minute": 50,
+          "player": "L. Trossard",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "50:00",
+          "timerSeconds": 3000,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -1128,8 +1210,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T04:12:50.185232+00:00",
-      "lastUpdated": "2026-06-27T06:12:46Z",
+      "lastApiSync": "2026-06-27T04:13:11.169220+00:00",
+      "lastUpdated": "2026-06-27T06:13:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1157,14 +1239,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "50'",
-        "lastApiSync": "2026-06-27T04:12:50.185232+00:00",
-        "seconds": 3000,
+        "displayMinute": "51'",
+        "lastApiSync": "2026-06-27T04:13:11.169220+00:00",
+        "seconds": 3060,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "50'"
+        "timer": "51'"
       },
-      "manualClockText": "50'",
+      "manualClockText": "51'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -1189,7 +1271,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 50,
+      "minute": 51,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1218,7 +1300,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "halfTime": {
@@ -1701,8 +1783,8 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T04:12:50.185232+00:00",
-      "lastUpdated": "2026-06-27T06:12:46Z",
+      "lastApiSync": "2026-06-27T04:13:11.169220+00:00",
+      "lastUpdated": "2026-06-27T06:13:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1731,7 +1813,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "49'",
-        "lastApiSync": "2026-06-27T04:12:50.185232+00:00",
+        "lastApiSync": "2026-06-27T04:13:11.169220+00:00",
         "seconds": 2940,
         "source": "api_football_live_minute",
         "status": "2H",
