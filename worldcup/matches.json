@@ -35140,7 +35140,7 @@
         "tla": "URU"
       },
       "id": 537373,
-      "lastApiSync": "2026-06-27T03:00:51.313077+00:00",
+      "lastApiSync": "2026-06-27T03:01:12.648505+00:00",
       "lastUpdated": "2026-06-27T04:02:59Z",
       "liveStatistics": {
         "away": {
@@ -35759,7 +35759,7 @@
         "tla": "CPV"
       },
       "id": 537374,
-      "lastApiSync": "2026-06-27T03:00:51.313233+00:00",
+      "lastApiSync": "2026-06-27T03:01:12.648637+00:00",
       "lastUpdated": "2026-06-27T04:00:59Z",
       "liveStatistics": {
         "away": {
@@ -36038,7 +36038,6 @@
         "shortName": "Belgium",
         "tla": "BEL"
       },
-      "clockSeconds": 0,
       "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
@@ -36058,15 +36057,14 @@
       },
       "id": 537367,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-27T04:11:36Z",
-      "liveSource": "pre_kickoff_window",
+      "lastUpdated": "2026-06-27T05:01:07Z",
       "manualClock": {
         "active": false,
         "displayMinute": "0'",
         "lastApiSync": null,
         "seconds": 0,
         "source": "awaiting_api_football_minute",
-        "status": "LIVE",
+        "status": "IN_PLAY",
         "timer": "0:00"
       },
       "manualClockText": "Awaiting kickoff API data",
@@ -36094,7 +36092,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -36109,14 +36106,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
           "away": null,
           "home": null
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "season": {
         "currentMatchday": 3,
@@ -36126,7 +36123,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-27T03:00:00Z",
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
@@ -36167,7 +36164,6 @@
         "shortName": "Iran",
         "tla": "IRN"
       },
-      "clockSeconds": 0,
       "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
@@ -36187,15 +36183,14 @@
       },
       "id": 537368,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-27T04:28:37Z",
-      "liveSource": "pre_kickoff_window",
+      "lastUpdated": "2026-06-27T05:01:07Z",
       "manualClock": {
         "active": false,
         "displayMinute": "0'",
         "lastApiSync": null,
         "seconds": 0,
         "source": "awaiting_api_football_minute",
-        "status": "LIVE",
+        "status": "IN_PLAY",
         "timer": "0:00"
       },
       "manualClockText": "Awaiting kickoff API data",
@@ -36223,7 +36218,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -36238,14 +36232,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
           "away": null,
           "home": null
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "season": {
         "currentMatchday": 3,
@@ -36255,7 +36249,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-27T03:00:00Z",
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
