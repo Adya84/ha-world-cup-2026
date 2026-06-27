@@ -35751,8 +35751,8 @@
         "tla": "NZL"
       },
       "id": 537367,
-      "lastApiSync": "2026-06-27T03:42:04.103191+00:00",
-      "lastUpdated": "2026-06-27T05:41:59Z",
+      "lastApiSync": "2026-06-27T03:42:24.991019+00:00",
+      "lastUpdated": "2026-06-27T05:42:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -35781,7 +35781,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "41'",
-        "lastApiSync": "2026-06-27T03:42:04.103191+00:00",
+        "lastApiSync": "2026-06-27T03:42:24.991019+00:00",
         "seconds": 2460,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -35901,7 +35901,7 @@
         "name": "World"
       },
       "awayCorners": 0,
-      "awayFouls": 6,
+      "awayFouls": 7,
       "awayOffsides": null,
       "awayPossession": "40%",
       "awayScore": 1,
@@ -35949,9 +35949,27 @@
           "timer": "20:00",
           "timerSeconds": 1200,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "42'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 42,
+          "player": "Y. Ibrahim",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2460,
+      "clockSeconds": 2520,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -35960,7 +35978,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "41'",
+      "displayMinute": "42'",
       "events": [
         {
           "assist": null,
@@ -36069,10 +36087,28 @@
           "timer": "20:00",
           "timerSeconds": 1200,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "42'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 42,
+          "player": "Y. Ibrahim",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 2460,
-      "fallbackClockText": "41'",
+      "fallbackClock": 2520,
+      "fallbackClockText": "42'",
       "goalEvents": [
         {
           "assist": null,
@@ -36160,13 +36196,13 @@
         "tla": "EGY"
       },
       "id": 537368,
-      "lastApiSync": "2026-06-27T03:42:04.103191+00:00",
-      "lastUpdated": "2026-06-27T05:41:59Z",
+      "lastApiSync": "2026-06-27T03:42:24.991019+00:00",
+      "lastUpdated": "2026-06-27T05:42:22Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
-          "fouls": 6,
+          "fouls": 7,
           "offsides": null,
           "possession": "40%",
           "redCards": null,
@@ -36189,14 +36225,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "41'",
-        "lastApiSync": "2026-06-27T03:42:04.103191+00:00",
-        "seconds": 2460,
+        "displayMinute": "42'",
+        "lastApiSync": "2026-06-27T03:42:24.991019+00:00",
+        "seconds": 2520,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "41'"
+        "timer": "42'"
       },
-      "manualClockText": "41'",
+      "manualClockText": "42'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -36221,7 +36257,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 41,
+      "minute": 42,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
