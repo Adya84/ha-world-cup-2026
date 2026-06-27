@@ -36873,7 +36873,7 @@
         "tla": "PAN"
       },
       "id": 537413,
-      "lastApiSync": "2026-06-27T23:30:24.884479+00:00",
+      "lastApiSync": "2026-06-27T23:30:48.755443+00:00",
       "lastUpdated": "2026-06-28T00:56:42Z",
       "liveStatistics": {
         "away": {
@@ -37546,7 +37546,7 @@
         "tla": "CRO"
       },
       "id": 537414,
-      "lastApiSync": "2026-06-27T23:30:24.885336+00:00",
+      "lastApiSync": "2026-06-27T23:30:48.756334+00:00",
       "lastUpdated": "2026-06-28T00:59:51Z",
       "liveStatistics": {
         "away": {
@@ -37807,7 +37807,6 @@
         "shortName": "Portugal",
         "tla": "POR"
       },
-      "clockSeconds": 0,
       "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
@@ -37827,15 +37826,14 @@
       },
       "id": 537407,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-28T01:29:27Z",
-      "liveSource": "pre_kickoff_window",
+      "lastUpdated": "2026-06-28T01:30:45Z",
       "manualClock": {
         "active": false,
         "displayMinute": "0'",
         "lastApiSync": null,
         "seconds": 0,
         "source": "awaiting_api_football_minute",
-        "status": "LIVE",
+        "status": "IN_PLAY",
         "timer": "0:00"
       },
       "manualClockText": "Awaiting kickoff API data",
@@ -37863,7 +37861,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -37878,14 +37875,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
           "away": null,
           "home": null
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "season": {
         "currentMatchday": 3,
@@ -37895,7 +37892,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-27T23:30:00Z",
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
@@ -37936,7 +37933,6 @@
         "shortName": "Uzbekistan",
         "tla": "UZB"
       },
-      "clockSeconds": 0,
       "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
@@ -37956,15 +37952,14 @@
       },
       "id": 537408,
       "lastApiSync": null,
-      "lastUpdated": "2026-06-28T00:51:42Z",
-      "liveSource": "pre_kickoff_window",
+      "lastUpdated": "2026-06-28T01:30:45Z",
       "manualClock": {
         "active": false,
         "displayMinute": "0'",
         "lastApiSync": null,
         "seconds": 0,
         "source": "awaiting_api_football_minute",
-        "status": "LIVE",
+        "status": "IN_PLAY",
         "timer": "0:00"
       },
       "manualClockText": "Awaiting kickoff API data",
@@ -37992,7 +37987,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -38007,14 +38001,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
           "away": null,
           "home": null
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "season": {
         "currentMatchday": 3,
@@ -38024,7 +38018,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "utcDate": "2026-06-27T23:30:00Z",
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
