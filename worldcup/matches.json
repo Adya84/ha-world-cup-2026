@@ -37288,7 +37288,7 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T02:28:30.616084+00:00",
+      "lastApiSync": "2026-06-28T02:28:56.492111+00:00",
       "lastUpdated": "2026-06-28T03:29:27Z",
       "liveStatistics": {
         "away": {
@@ -38146,7 +38146,7 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T02:28:30.616505+00:00",
+      "lastApiSync": "2026-06-28T02:28:56.492428+00:00",
       "lastUpdated": "2026-06-28T03:33:09Z",
       "liveStatistics": {
         "away": {
@@ -38544,8 +38544,8 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T02:28:30.675733+00:00",
-      "lastUpdated": "2026-06-28T04:28:27Z",
+      "lastApiSync": "2026-06-28T02:28:56.550563+00:00",
+      "lastUpdated": "2026-06-28T04:28:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -38574,7 +38574,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "28'",
-        "lastApiSync": "2026-06-28T02:28:30.675733+00:00",
+        "lastApiSync": "2026-06-28T02:28:56.550563+00:00",
         "seconds": 1680,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -38754,10 +38754,54 @@
           "timer": "11:00",
           "timerSeconds": 660,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "28'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 28,
+          "player": "M. Arnautovic",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 1680,
       "fallbackClockText": "28'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Austria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "28'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Algeria",
+          "isDisallowed": false,
+          "matchId": 537402,
+          "matchUtcDate": "2026-06-28T02:00:00Z",
+          "minute": 28,
+          "player": "M. Arnautovic",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_J",
       "homeCorners": null,
       "homeFouls": 1,
@@ -38773,8 +38817,8 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T02:28:30.675733+00:00",
-      "lastUpdated": "2026-06-28T04:28:27Z",
+      "lastApiSync": "2026-06-28T02:28:56.550563+00:00",
+      "lastUpdated": "2026-06-28T04:28:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -38803,7 +38847,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "28'",
-        "lastApiSync": "2026-06-28T02:28:30.675733+00:00",
+        "lastApiSync": "2026-06-28T02:28:56.550563+00:00",
         "seconds": 1680,
         "source": "api_football_live_minute",
         "status": "1H",
