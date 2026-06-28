@@ -2668,11 +2668,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 8,
-      "awayFouls": 4,
-      "awayOffsides": 3,
-      "awayPossession": "72%",
-      "awayShotsOnGoal": 8,
       "awayTeam": {
         "crest": "https://crests.football-data.org/803.svg",
         "id": 803,
@@ -2710,11 +2705,16 @@
       "events": [
         {
           "assist": "P. Okon-Engstler",
+          "awayTeam": "Turkey",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "27'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Australia",
           "isDisallowed": false,
+          "matchId": 537346,
+          "matchUtcDate": "2026-06-14T04:00:00Z",
           "minute": 27,
           "player": "N. Irankunda",
           "playerOff": null,
@@ -2727,102 +2727,17 @@
           "type": "Goal"
         },
         {
-          "assist": "K. Yildiz",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "B. Yilmaz",
-          "playerOff": "B. Yilmaz",
-          "playerOn": "K. Yildiz",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Velupillay",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "61'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 61,
-          "player": "N. Irankunda",
-          "playerOff": "N. Irankunda",
-          "playerOn": "N. Velupillay",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Australia",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Y. Akgun",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "62'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 62,
-          "player": "O. Kokcu",
-          "playerOff": "O. Kokcu",
-          "playerOn": "Y. Akgun",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Geria",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "74'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 74,
-          "player": "J. Italiano",
-          "playerOff": "J. Italiano",
-          "playerOn": "J. Geria",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Australia",
-          "timer": "74:00",
-          "timerSeconds": 4440,
-          "type": "Substitution"
-        },
-        {
-          "assist": "T. Yengi",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "74'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 74,
-          "player": "M. Toure",
-          "playerOff": "M. Toure",
-          "playerOn": "T. Yengi",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Australia",
-          "timer": "74:00",
-          "timerSeconds": 4440,
-          "type": "Substitution"
-        },
-        {
           "assist": null,
+          "awayTeam": "Turkey",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "75'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Australia",
           "isDisallowed": false,
+          "matchId": 537346,
+          "matchUtcDate": "2026-06-14T04:00:00Z",
           "minute": 75,
           "player": "C. Metcalfe",
           "playerOff": null,
@@ -2833,114 +2748,6 @@
           "timer": "75:00",
           "timerSeconds": 4500,
           "type": "Goal"
-        },
-        {
-          "assist": "M. Muldur",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "81'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 81,
-          "player": "Z. Celik",
-          "playerOff": "Z. Celik",
-          "playerOn": "M. Muldur",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Ozcan",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "81'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 81,
-          "player": "I. Yuksek",
-          "playerOff": "I. Yuksek",
-          "playerOn": "S. Ozcan",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Behich",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "J. Bos",
-          "playerOff": "J. Bos",
-          "playerOn": "A. Behich",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Australia",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Irvine",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "P. Okon-Engstler",
-          "playerOff": "P. Okon-Engstler",
-          "playerOn": "J. Irvine",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Australia",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Gul",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "K. Akturkoglu",
-          "playerOff": "K. Akturkoglu",
-          "playerOn": "D. Gul",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "86'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 86,
-          "player": "Yunus Akg\u00fcn",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "86:00",
-          "timerSeconds": 5160,
-          "type": "Yellow Card"
         }
       ],
       "goalEvents": [
@@ -2991,13 +2798,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "group": "GROUP_D",
-      "homeCorners": 5,
-      "homeFouls": 12,
-      "homeOffsides": 1,
-      "homePossession": "28%",
-      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/779.svg",
         "id": 779,
@@ -3007,53 +2808,15 @@
       },
       "id": 537346,
       "lastUpdated": "2026-06-27T20:20:40Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 8,
-          "fouls": 4,
-          "offsides": 3,
-          "possession": "72%",
-          "redCards": null,
-          "shotsOffGoal": 10,
-          "shotsOnGoal": 8,
-          "totalShots": 30,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 5,
-          "fouls": 12,
-          "offsides": 1,
-          "possession": "28%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 4,
-          "totalShots": 9,
-          "yellowCards": 0
-        }
-      },
       "matchday": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Jes\u00fas Valenzuela",
-          "nationality": "Venezuela",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Jes\u00fas Valenzuela, Venezuela",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 28805,
           "name": "Jes\u00fas Valenzuela",
           "nationality": "Venezuela",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Jes\u00fas Valenzuela, Venezuela",
           "type": "REFEREE"
         }
       ],
@@ -38525,7 +38288,7 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T03:59:57.098928+00:00",
+      "lastApiSync": "2026-06-28T04:00:22.819024+00:00",
       "lastUpdated": "2026-06-28T05:58:45Z",
       "liveStatistics": {
         "away": {
@@ -39293,8 +39056,8 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T03:59:57.099073+00:00",
-      "lastUpdated": "2026-06-28T05:59:54Z",
+      "lastApiSync": "2026-06-28T04:00:22.819163+00:00",
+      "lastUpdated": "2026-06-28T06:00:15Z",
       "liveStatistics": {
         "away": {
           "corners": 3,
