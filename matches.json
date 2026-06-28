@@ -2331,11 +2331,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 3,
-      "awayFouls": 21,
-      "awayOffsides": 1,
-      "awayPossession": "46%",
-      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/814.svg",
         "id": 8873,
@@ -2427,11 +2422,16 @@
       "events": [
         {
           "assist": null,
+          "awayTeam": "Scotland",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "28'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Haiti",
           "isDisallowed": false,
+          "matchId": 537340,
+          "matchUtcDate": "2026-06-14T01:00:00Z",
           "minute": 28,
           "player": "J. McGinn",
           "playerOff": null,
@@ -2442,222 +2442,6 @@
           "timer": "28:00",
           "timerSeconds": 1680,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "39'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 39,
-          "player": "Jean-Ricner Bellegarde",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Haiti",
-          "timer": "39:00",
-          "timerSeconds": 2340,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "Aaron Hickey",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Scotland",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "J. Casimir",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "61'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 61,
-          "player": "L. Deedson",
-          "playerOff": "L. Deedson",
-          "playerOn": "J. Casimir",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Haiti",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "type": "Substitution"
-        },
-        {
-          "assist": "R. Christie",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "75'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 75,
-          "player": "B. Gannon-Doak",
-          "playerOff": "B. Gannon-Doak",
-          "playerOn": "R. Christie",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Scotland",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "type": "Substitution"
-        },
-        {
-          "assist": "L. Dykes",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "75'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 75,
-          "player": "C. Adams",
-          "playerOff": "C. Adams",
-          "playerOn": "L. Dykes",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Scotland",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Patterson",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "75'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 75,
-          "player": "A. Hickey",
-          "playerOff": "A. Hickey",
-          "playerOn": "N. Patterson",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Scotland",
-          "timer": "75:00",
-          "timerSeconds": 4500,
-          "type": "Substitution"
-        },
-        {
-          "assist": "L. Joseph",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "W. Isidor",
-          "playerOff": "W. Isidor",
-          "playerOn": "L. Joseph",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Haiti",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": "K. McLean",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "L. Shankland",
-          "playerOff": "L. Shankland",
-          "playerOn": "K. McLean",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Scotland",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Substitution"
-        },
-        {
-          "assist": "F. Curtis",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "J. McGinn",
-          "playerOff": "J. McGinn",
-          "playerOn": "F. Curtis",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Scotland",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Y. Fortune",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "R. Providence",
-          "playerOff": "R. Providence",
-          "playerOn": "Y. Fortune",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Haiti",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "90+1'",
-          "extra": 1,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "Findlay Curtis",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Scotland",
-          "timer": "91:00",
-          "timerSeconds": 5460,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "90+5'",
-          "extra": 5,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "Kenny McLean",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Scotland",
-          "timer": "95:00",
-          "timerSeconds": 5700,
-          "type": "Yellow Card"
         }
       ],
       "goalEvents": [
@@ -2685,13 +2469,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "group": "GROUP_C",
-      "homeCorners": 4,
-      "homeFouls": 23,
-      "homeOffsides": 3,
-      "homePossession": "54%",
-      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/haiti.svg",
         "id": 836,
@@ -2701,51 +2479,15 @@
       },
       "id": 537340,
       "lastUpdated": "2026-06-27T20:20:40Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 3,
-          "fouls": 21,
-          "offsides": 1,
-          "possession": "46%",
-          "redCards": null,
-          "shotsOffGoal": 5,
-          "shotsOnGoal": 2,
-          "totalShots": 9,
-          "yellowCards": 3
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 23,
-          "offsides": 3,
-          "possession": "54%",
-          "redCards": null,
-          "shotsOffGoal": 9,
-          "shotsOnGoal": 2,
-          "totalShots": 15,
-          "yellowCards": 1
-        }
-      },
       "matchday": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Mustapha Ghorbal",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Mustapha Ghorbal, Algeria",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 190017,
           "name": "Mustapha Ghorbal",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Mustapha Ghorbal, Algeria",
+          "nationality": null,
           "type": "REFEREE"
         }
       ],
@@ -37387,8 +37129,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T00:59:47.374926+00:00",
-      "lastUpdated": "2026-06-28T02:59:45Z",
+      "lastApiSync": "2026-06-28T01:00:45.687292+00:00",
+      "lastUpdated": "2026-06-28T03:00:06Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -37417,7 +37159,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "68'",
-        "lastApiSync": "2026-06-28T00:59:47.374926+00:00",
+        "lastApiSync": "2026-06-28T01:00:45.687292+00:00",
         "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -37715,7 +37457,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -37724,7 +37466,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": "A. Mozgovoy",
@@ -37907,8 +37649,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": "A. Mozgovoy",
@@ -37950,8 +37692,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T00:59:47.374926+00:00",
-      "lastUpdated": "2026-06-28T02:59:45Z",
+      "lastApiSync": "2026-06-28T01:00:45.687292+00:00",
+      "lastUpdated": "2026-06-28T03:00:06Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -37979,14 +37721,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-28T00:59:47.374926+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-28T01:00:45.687292+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -38011,7 +37753,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
