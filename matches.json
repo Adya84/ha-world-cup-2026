@@ -38033,10 +38033,10 @@
       },
       "awayCorners": 2,
       "awayFouls": 5,
-      "awayOffsides": 1,
-      "awayPossession": "74%",
+      "awayOffsides": 2,
+      "awayPossession": "72%",
       "awayScore": 2,
-      "awayShotsOnGoal": 2,
+      "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -38064,7 +38064,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2760,
+      "clockSeconds": 2820,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -38073,7 +38073,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "46'",
+      "displayMinute": "47'",
       "events": [
         {
           "assist": null,
@@ -38146,10 +38146,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "M. Tamari",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Azaizeh",
+          "playerOff": "A. Azaizeh",
+          "playerOn": "M. Tamari",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2760,
-      "fallbackClockText": "46'",
+      "fallbackClock": 2820,
+      "fallbackClockText": "47'",
       "goalEvents": [
         {
           "assist": null,
@@ -38201,9 +38219,9 @@
       "goalEventsSource": "api_football_live",
       "group": "GROUP_J",
       "homeCorners": 1,
-      "homeFouls": 4,
-      "homeOffsides": 0,
-      "homePossession": "26%",
+      "homeFouls": 5,
+      "homeOffsides": 1,
+      "homePossession": "28%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -38214,26 +38232,26 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T03:08:05.736362+00:00",
-      "lastUpdated": "2026-06-28T05:08:03Z",
+      "lastApiSync": "2026-06-28T03:08:27.002742+00:00",
+      "lastUpdated": "2026-06-28T05:08:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
           "fouls": 5,
-          "offsides": 1,
-          "possession": "74%",
+          "offsides": 2,
+          "possession": "72%",
           "redCards": null,
           "shotsOffGoal": 2,
-          "shotsOnGoal": 2,
-          "totalShots": 4,
+          "shotsOnGoal": 3,
+          "totalShots": 5,
           "yellowCards": 0
         },
         "home": {
           "corners": 1,
-          "fouls": 4,
-          "offsides": 0,
-          "possession": "26%",
+          "fouls": 5,
+          "offsides": 1,
+          "possession": "28%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -38243,14 +38261,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "46'",
-        "lastApiSync": "2026-06-28T03:08:05.736362+00:00",
-        "seconds": 2760,
+        "displayMinute": "47'",
+        "lastApiSync": "2026-06-28T03:08:27.002742+00:00",
+        "seconds": 2820,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "46'"
+        "timer": "47'"
       },
-      "manualClockText": "46'",
+      "manualClockText": "47'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -38275,7 +38293,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 46,
+      "minute": 47,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -38341,6 +38359,24 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "M. Tamari",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Azaizeh",
+          "playerOff": "A. Azaizeh",
+          "playerOn": "M. Tamari",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Jordan",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
       "utcDate": "2026-06-28T02:00:00Z",
@@ -38383,10 +38419,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 1,
-      "awayFouls": 3,
+      "awayCorners": 2,
+      "awayFouls": 4,
       "awayOffsides": 3,
-      "awayPossession": "44%",
+      "awayPossession": "43%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -38416,7 +38452,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2760,
+      "clockSeconds": 2820,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -38425,7 +38461,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "46'",
+      "displayMinute": "47'",
       "events": [
         {
           "assist": null,
@@ -38536,8 +38572,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 2760,
-      "fallbackClockText": "46'",
+      "fallbackClock": 2820,
+      "fallbackClockText": "47'",
       "goalEvents": [
         {
           "assist": "D. Alaba",
@@ -38591,7 +38627,7 @@
       "homeCorners": 0,
       "homeFouls": 1,
       "homeOffsides": 0,
-      "homePossession": "56%",
+      "homePossession": "57%",
       "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -38602,26 +38638,26 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T03:08:05.736362+00:00",
-      "lastUpdated": "2026-06-28T05:08:03Z",
+      "lastApiSync": "2026-06-28T03:08:27.002742+00:00",
+      "lastUpdated": "2026-06-28T05:08:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 1,
-          "fouls": 3,
+          "corners": 2,
+          "fouls": 4,
           "offsides": 3,
-          "possession": "44%",
+          "possession": "43%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
-          "totalShots": 4,
+          "totalShots": 5,
           "yellowCards": 1
         },
         "home": {
           "corners": 0,
           "fouls": 1,
           "offsides": 0,
-          "possession": "56%",
+          "possession": "57%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 2,
@@ -38631,14 +38667,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "46'",
-        "lastApiSync": "2026-06-28T03:08:05.736362+00:00",
-        "seconds": 2760,
+        "displayMinute": "47'",
+        "lastApiSync": "2026-06-28T03:08:27.002742+00:00",
+        "seconds": 2820,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "46'"
+        "timer": "47'"
       },
-      "manualClockText": "46'",
+      "manualClockText": "47'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -38663,7 +38699,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 46,
+      "minute": 47,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
