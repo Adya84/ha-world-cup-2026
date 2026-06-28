@@ -37028,7 +37028,7 @@
         "shortName": "Portugal",
         "tla": "POR"
       },
-      "clockSeconds": 4200,
+      "clockSeconds": 4260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -37037,7 +37037,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "70'",
+      "displayMinute": "71'",
       "events": [
         {
           "assist": "J. Neves",
@@ -37110,10 +37110,46 @@
           "timer": "60:00",
           "timerSeconds": 3600,
           "type": "Substitution"
+        },
+        {
+          "assist": "R. Leao",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "Joao Felix",
+          "playerOff": "Joao Felix",
+          "playerOn": "R. Leao",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Samu Costa",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "Vitinha",
+          "playerOff": "Vitinha",
+          "playerOn": "Samu Costa",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4200,
-      "fallbackClockText": "70'",
+      "fallbackClock": 4260,
+      "fallbackClockText": "71'",
       "group": "GROUP_K",
       "homeCorners": 2,
       "homeFouls": 6,
@@ -37129,8 +37165,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T01:02:31.104798+00:00",
-      "lastUpdated": "2026-06-28T03:02:27Z",
+      "lastApiSync": "2026-06-28T01:02:52.432003+00:00",
+      "lastUpdated": "2026-06-28T03:02:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -37158,14 +37194,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "70'",
-        "lastApiSync": "2026-06-28T01:02:31.104798+00:00",
-        "seconds": 4200,
+        "displayMinute": "71'",
+        "lastApiSync": "2026-06-28T01:02:52.432003+00:00",
+        "seconds": 4260,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "70'"
+        "timer": "71'"
       },
-      "manualClockText": "70'",
+      "manualClockText": "71'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -37190,7 +37226,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 70,
+      "minute": 71,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -37309,6 +37345,42 @@
           "team": "Colombia",
           "timer": "60:00",
           "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Leao",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "Joao Felix",
+          "playerOff": "Joao Felix",
+          "playerOn": "R. Leao",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "71:00",
+          "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Samu Costa",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "71'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 71,
+          "player": "Vitinha",
+          "playerOff": "Vitinha",
+          "playerOn": "Samu Costa",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "71:00",
+          "timerSeconds": 4260,
           "type": "Substitution"
         }
       ],
@@ -37733,8 +37805,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T01:02:31.104798+00:00",
-      "lastUpdated": "2026-06-28T03:02:27Z",
+      "lastApiSync": "2026-06-28T01:02:52.432003+00:00",
+      "lastUpdated": "2026-06-28T03:02:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -37763,7 +37835,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "69'",
-        "lastApiSync": "2026-06-28T01:02:31.104798+00:00",
+        "lastApiSync": "2026-06-28T01:02:52.432003+00:00",
         "seconds": 4140,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -37830,7 +37902,7 @@
           "away": 1,
           "home": 0
         },
-        "winner": "AWAY_TEAM"
+        "winner": "DRAW"
       },
       "scoreSource": "api_football_live",
       "season": {
