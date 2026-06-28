@@ -37288,7 +37288,7 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T01:31:49.514349+00:00",
+      "lastApiSync": "2026-06-28T01:32:15.143938+00:00",
       "lastUpdated": "2026-06-28T03:29:27Z",
       "liveStatistics": {
         "away": {
@@ -37554,8 +37554,8 @@
     },
     {
       "apiFootballFixtureId": 1539013,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -37667,8 +37667,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -37676,7 +37674,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "A. Mozgovoy",
@@ -38039,8 +38036,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "A. Mozgovoy",
@@ -38151,9 +38146,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T01:31:49.581666+00:00",
-      "lastUpdated": "2026-06-28T03:31:48Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-28T01:32:15.144373+00:00",
+      "lastUpdated": "2026-06-28T03:32:12Z",
       "liveStatistics": {
         "away": {
           "corners": 4,
@@ -38177,39 +38171,6 @@
           "totalShots": 18,
           "yellowCards": 3
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T01:31:49.581666+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 21.1,
-        "condition": "fair_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-28T01:27:21.776622+00:00",
-        "humidity": 69.8,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-28T01:00:00Z",
-        "pressure": 1016.0,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.7,
-        "temperatureUnit": "C",
-        "windBearing": 223.8,
-        "windSpeed": 2.3,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -38259,7 +38220,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "F. Mayele",
@@ -38447,29 +38408,6 @@
         "city": "Atlanta",
         "id": 1898,
         "name": "Mercedes-Benz Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Atlanta",
-        "cloudCoverage": 21.1,
-        "condition": "fair_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-28T01:27:21.776622+00:00",
-        "humidity": 69.8,
-        "latitude": 33.7554,
-        "longitude": -84.4008,
-        "name": "Mercedes-Benz Stadium weather",
-        "observedAt": "2026-06-28T01:00:00Z",
-        "pressure": 1016.0,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Mercedes-Benz Stadium",
-        "temperature": 27.7,
-        "temperatureUnit": "C",
-        "windBearing": 223.8,
-        "windSpeed": 2.3,
-        "windSpeedUnit": "m/s"
       }
     },
     {
