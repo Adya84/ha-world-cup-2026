@@ -28311,7 +28311,7 @@
     "apiFootballFixtureId": 1489421,
     "awayScore": 2,
     "awayTeam": "Argentina",
-    "base_seconds": 3300,
+    "base_seconds": 3360,
     "cardEvents": [
       {
         "assist": null,
@@ -28333,8 +28333,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3300,
-    "displayMinute": "55'",
+    "clock_seconds": 3360,
+    "displayMinute": "56'",
     "events": [
       {
         "assist": null,
@@ -28427,7 +28427,7 @@
         "type": "Substitution"
       },
       {
-        "assist": null,
+        "assist": "E. Haddad",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "55'",
@@ -28493,7 +28493,7 @@
         "type": "Goal"
       },
       {
-        "assist": null,
+        "assist": "E. Haddad",
         "awayTeam": "Argentina",
         "comments": null,
         "detail": "Normal Goal",
@@ -28518,9 +28518,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Jordan",
-    "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-    "manualClockText": "55'",
-    "phase_start": "2026-06-28T03:17:17.894397+00:00",
+    "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+    "manualClockText": "56'",
+    "phase_start": "2026-06-28T03:17:37.837594+00:00",
     "referees": [
       {
         "name": "Istv\u00e1n Kov\u00e1cs",
@@ -28576,9 +28576,9 @@
   },
   "537402": {
     "apiFootballFixtureId": 1489418,
-    "awayScore": 1,
+    "awayScore": 2,
     "awayTeam": "Austria",
-    "base_seconds": 3300,
+    "base_seconds": 3360,
     "cardEvents": [
       {
         "assist": null,
@@ -28600,8 +28600,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3300,
-    "displayMinute": "55'",
+    "clock_seconds": 3360,
+    "displayMinute": "56'",
     "events": [
       {
         "assist": null,
@@ -28710,6 +28710,24 @@
         "timer": "46:00",
         "timerSeconds": 2760,
         "type": "Substitution"
+      },
+      {
+        "assist": "K. Laimer",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "55'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 55,
+        "player": "M. Sabitzer",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Austria",
+        "timer": "55:00",
+        "timerSeconds": 3300,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -28758,13 +28776,36 @@
         "timer": "45:00",
         "timerSeconds": 2700,
         "type": "Goal"
+      },
+      {
+        "assist": "K. Laimer",
+        "awayTeam": "Austria",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "55'",
+        "extra": null,
+        "goalNumber": 3,
+        "homeTeam": "Algeria",
+        "isDisallowed": false,
+        "matchId": 537402,
+        "matchUtcDate": "2026-06-28T02:00:00Z",
+        "minute": 55,
+        "player": "M. Sabitzer",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Austria",
+        "timer": "55:00",
+        "timerSeconds": 3300,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "Algeria",
-    "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-    "manualClockText": "55'",
-    "phase_start": "2026-06-28T03:17:17.894397+00:00",
+    "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+    "manualClockText": "56'",
+    "phase_start": "2026-06-28T03:17:37.837594+00:00",
     "referees": [
       {
         "name": "Il'giz Tantashev",
