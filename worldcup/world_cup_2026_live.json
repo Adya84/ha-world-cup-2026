@@ -23,7 +23,7 @@
         "shortName": "Portugal",
         "tla": "POR"
       },
-      "clockSeconds": 4140,
+      "clockSeconds": 4200,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "69'",
+      "displayMinute": "70'",
       "events": [
         {
           "assist": "J. Neves",
@@ -107,8 +107,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4140,
-      "fallbackClockText": "69'",
+      "fallbackClock": 4200,
+      "fallbackClockText": "70'",
       "group": "GROUP_K",
       "homeCorners": 2,
       "homeFouls": 6,
@@ -124,8 +124,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T01:01:19.261826+00:00",
-      "lastUpdated": "2026-06-28T03:01:09Z",
+      "lastApiSync": "2026-06-28T01:01:41.708967+00:00",
+      "lastUpdated": "2026-06-28T03:01:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -153,14 +153,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "69'",
-        "lastApiSync": "2026-06-28T01:01:19.261826+00:00",
-        "seconds": 4140,
+        "displayMinute": "70'",
+        "lastApiSync": "2026-06-28T01:01:41.708967+00:00",
+        "seconds": 4200,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "69'"
+        "timer": "70'"
       },
-      "manualClockText": "69'",
+      "manualClockText": "70'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -185,7 +185,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 69,
+      "minute": 70,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -452,7 +452,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -461,7 +461,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": "A. Mozgovoy",
@@ -642,10 +642,28 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "Y. Wissa",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Penalty"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": "A. Mozgovoy",
@@ -669,6 +687,29 @@
           "timer": "10:00",
           "timerSeconds": 600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Uzbekistan",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "68'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Congo DR",
+          "isDisallowed": false,
+          "matchId": 537408,
+          "matchUtcDate": "2026-06-27T23:30:00Z",
+          "minute": 68,
+          "player": "Y. Wissa",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -687,8 +728,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T01:01:19.261826+00:00",
-      "lastUpdated": "2026-06-28T03:01:09Z",
+      "lastApiSync": "2026-06-28T01:01:41.708967+00:00",
+      "lastUpdated": "2026-06-28T03:01:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -716,14 +757,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-06-28T01:01:19.261826+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-06-28T01:01:41.708967+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -748,7 +789,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -907,7 +948,7 @@
         "shortName": "Portugal",
         "tla": "POR"
       },
-      "clockSeconds": 4140,
+      "clockSeconds": 4200,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -916,7 +957,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "69'",
+      "displayMinute": "70'",
       "events": [
         {
           "assist": "J. Neves",
@@ -991,8 +1032,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4140,
-      "fallbackClockText": "69'",
+      "fallbackClock": 4200,
+      "fallbackClockText": "70'",
       "group": "GROUP_K",
       "homeCorners": 2,
       "homeFouls": 6,
@@ -1008,8 +1049,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T01:01:19.261826+00:00",
-      "lastUpdated": "2026-06-28T03:01:09Z",
+      "lastApiSync": "2026-06-28T01:01:41.708967+00:00",
+      "lastUpdated": "2026-06-28T03:01:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1037,14 +1078,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "69'",
-        "lastApiSync": "2026-06-28T01:01:19.261826+00:00",
-        "seconds": 4140,
+        "displayMinute": "70'",
+        "lastApiSync": "2026-06-28T01:01:41.708967+00:00",
+        "seconds": 4200,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "69'"
+        "timer": "70'"
       },
-      "manualClockText": "69'",
+      "manualClockText": "70'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -1069,7 +1110,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 69,
+      "minute": 70,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1336,7 +1377,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1345,7 +1386,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": "A. Mozgovoy",
@@ -1526,10 +1567,28 @@
           "timer": "62:00",
           "timerSeconds": 3720,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "68'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 68,
+          "player": "Y. Wissa",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Penalty"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": "A. Mozgovoy",
@@ -1553,6 +1612,29 @@
           "timer": "10:00",
           "timerSeconds": 600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Uzbekistan",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "68'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Congo DR",
+          "isDisallowed": false,
+          "matchId": 537408,
+          "matchUtcDate": "2026-06-27T23:30:00Z",
+          "minute": 68,
+          "player": "Y. Wissa",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "68:00",
+          "timerSeconds": 4080,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -1571,8 +1653,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T01:01:19.261826+00:00",
-      "lastUpdated": "2026-06-28T03:01:09Z",
+      "lastApiSync": "2026-06-28T01:01:41.708967+00:00",
+      "lastUpdated": "2026-06-28T03:01:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1600,14 +1682,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-06-28T01:01:19.261826+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-06-28T01:01:41.708967+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Atlanta",
@@ -1632,7 +1714,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
