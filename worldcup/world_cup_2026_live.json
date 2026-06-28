@@ -2,15 +2,14 @@
   "live": [
     {
       "apiFootballFixtureId": 1489419,
-      "apiFootballStatus": "1H",
-      "apiFootballStatusLong": "First Half",
+      "apiFootballStatus": "HT",
+      "apiFootballStatusLong": "Halftime",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 0,
       "awayFouls": 4,
       "awayOffsides": 1,
@@ -24,7 +23,8 @@
         "shortName": "Portugal",
         "tla": "POR"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 2700,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -32,7 +32,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "45'",
+      "fallbackClock": 2700,
+      "fallbackClockText": "45'",
       "group": "GROUP_K",
       "homeCorners": 1,
       "homeFouls": 3,
@@ -48,8 +50,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T00:22:09.757767+00:00",
-      "lastUpdated": "2026-06-28T02:22:27Z",
+      "lastApiSync": "2026-06-28T00:22:54.629869+00:00",
+      "lastUpdated": "2026-06-28T02:22:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -78,13 +80,13 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-28T00:22:09.757767+00:00",
+        "lastApiSync": "2026-06-28T00:22:54.629869+00:00",
         "seconds": 2700,
-        "source": "awaiting_api_football_minute",
-        "status": "1H",
-        "timer": "45:00"
+        "source": "api_football_live_minute",
+        "status": "HT",
+        "timer": "45'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "45'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -109,6 +111,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 45,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -155,7 +158,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "1H",
+      "status": "HT",
       "utcDate": "2026-06-27T23:30:00Z",
       "venue": {
         "city": "Miami Gardens",
@@ -410,8 +413,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T00:22:31.782746+00:00",
-      "lastUpdated": "2026-06-28T02:22:27Z",
+      "lastApiSync": "2026-06-28T00:22:54.629869+00:00",
+      "lastUpdated": "2026-06-28T02:22:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -440,7 +443,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-28T00:22:31.782746+00:00",
+        "lastApiSync": "2026-06-28T00:22:54.629869+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -553,15 +556,14 @@
   "matches": [
     {
       "apiFootballFixtureId": 1489419,
-      "apiFootballStatus": "1H",
-      "apiFootballStatusLong": "First Half",
+      "apiFootballStatus": "HT",
+      "apiFootballStatusLong": "Halftime",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 0,
       "awayFouls": 4,
       "awayOffsides": 1,
@@ -575,7 +577,8 @@
         "shortName": "Portugal",
         "tla": "POR"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 2700,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -583,7 +586,9 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "45'",
+      "fallbackClock": 2700,
+      "fallbackClockText": "45'",
       "group": "GROUP_K",
       "homeCorners": 1,
       "homeFouls": 3,
@@ -599,8 +604,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T00:22:09.757767+00:00",
-      "lastUpdated": "2026-06-28T02:22:27Z",
+      "lastApiSync": "2026-06-28T00:22:54.629869+00:00",
+      "lastUpdated": "2026-06-28T02:22:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -629,13 +634,13 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-28T00:22:09.757767+00:00",
+        "lastApiSync": "2026-06-28T00:22:54.629869+00:00",
         "seconds": 2700,
-        "source": "awaiting_api_football_minute",
-        "status": "1H",
-        "timer": "45:00"
+        "source": "api_football_live_minute",
+        "status": "HT",
+        "timer": "45'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "45'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -660,6 +665,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 45,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -706,7 +712,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "1H",
+      "status": "HT",
       "utcDate": "2026-06-27T23:30:00Z",
       "venue": {
         "city": "Miami Gardens",
@@ -961,8 +967,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T00:22:31.782746+00:00",
-      "lastUpdated": "2026-06-28T02:22:27Z",
+      "lastApiSync": "2026-06-28T00:22:54.629869+00:00",
+      "lastUpdated": "2026-06-28T02:22:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -991,7 +997,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-06-28T00:22:31.782746+00:00",
+        "lastApiSync": "2026-06-28T00:22:54.629869+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "1H",
