@@ -35774,7 +35774,7 @@
       "awayFouls": 16,
       "awayOffsides": null,
       "awayPossession": "42%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 6,
       "awayTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
@@ -36011,10 +36011,54 @@
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+2'",
+          "extra": 2,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "S. Eustaquio",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "92:00",
+          "timerSeconds": 5520,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 5400,
       "fallbackClockText": "90'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Canada",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+2'",
+          "extra": 2,
+          "goalNumber": 1,
+          "homeTeam": "South Africa",
+          "isDisallowed": false,
+          "matchId": 537417,
+          "matchUtcDate": "2026-06-28T19:00:00Z",
+          "minute": 90,
+          "player": "S. Eustaquio",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Canada",
+          "timer": "92:00",
+          "timerSeconds": 5520,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 9,
@@ -36030,8 +36074,8 @@
         "tla": "RSA"
       },
       "id": 537417,
-      "lastApiSync": "2026-06-28T20:51:44.387661+00:00",
-      "lastUpdated": "2026-06-28T22:51:39Z",
+      "lastApiSync": "2026-06-28T20:52:07.801574+00:00",
+      "lastUpdated": "2026-06-28T22:51:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -36060,7 +36104,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T20:51:44.387661+00:00",
+        "lastApiSync": "2026-06-28T20:52:07.801574+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -36120,14 +36164,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
           "away": 0,
           "home": 0
         },
-        "winner": "DRAW"
+        "winner": "AWAY_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
