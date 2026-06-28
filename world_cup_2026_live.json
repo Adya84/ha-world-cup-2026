@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": null,
@@ -145,7 +145,7 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
+          "assist": "E. Haddad",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "55'",
@@ -163,8 +163,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": null,
@@ -213,7 +213,7 @@
           "type": "Goal"
         },
         {
-          "assist": null,
+          "assist": "E. Haddad",
           "awayTeam": "Argentina",
           "comments": null,
           "detail": "Normal Goal",
@@ -252,8 +252,8 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-      "lastUpdated": "2026-06-28T05:17:15Z",
+      "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+      "lastUpdated": "2026-06-28T05:17:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -281,14 +281,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -313,7 +313,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -443,7 +443,7 @@
       "awayFouls": 4,
       "awayOffsides": 3,
       "awayPossession": "42%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/816.svg",
@@ -472,7 +472,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -481,7 +481,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": null,
@@ -590,10 +590,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "K. Laimer",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "55'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 55,
+          "player": "M. Sabitzer",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": "D. Alaba",
@@ -640,6 +658,29 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Goal"
+        },
+        {
+          "assist": "K. Laimer",
+          "awayTeam": "Austria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "55'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Algeria",
+          "isDisallowed": false,
+          "matchId": 537402,
+          "matchUtcDate": "2026-06-28T02:00:00Z",
+          "minute": 55,
+          "player": "M. Sabitzer",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -658,8 +699,8 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-      "lastUpdated": "2026-06-28T05:17:15Z",
+      "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+      "lastUpdated": "2026-06-28T05:17:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -687,14 +728,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -719,7 +760,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -748,7 +789,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 1
         },
         "halfTime": {
@@ -898,7 +939,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -907,7 +948,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": null,
@@ -1000,7 +1041,7 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
+          "assist": "E. Haddad",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "55'",
@@ -1018,8 +1059,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": null,
@@ -1068,7 +1109,7 @@
           "type": "Goal"
         },
         {
-          "assist": null,
+          "assist": "E. Haddad",
           "awayTeam": "Argentina",
           "comments": null,
           "detail": "Normal Goal",
@@ -1107,8 +1148,8 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-      "lastUpdated": "2026-06-28T05:17:15Z",
+      "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+      "lastUpdated": "2026-06-28T05:17:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1136,14 +1177,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -1168,7 +1209,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1298,7 +1339,7 @@
       "awayFouls": 4,
       "awayOffsides": 3,
       "awayPossession": "42%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/816.svg",
@@ -1327,7 +1368,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -1336,7 +1377,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": null,
@@ -1445,10 +1486,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "K. Laimer",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "55'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 55,
+          "player": "M. Sabitzer",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": "D. Alaba",
@@ -1495,6 +1554,29 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Goal"
+        },
+        {
+          "assist": "K. Laimer",
+          "awayTeam": "Austria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "55'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Algeria",
+          "isDisallowed": false,
+          "matchId": 537402,
+          "matchUtcDate": "2026-06-28T02:00:00Z",
+          "minute": 55,
+          "player": "M. Sabitzer",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -1513,8 +1595,8 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-      "lastUpdated": "2026-06-28T05:17:15Z",
+      "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+      "lastUpdated": "2026-06-28T05:17:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1542,14 +1624,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-06-28T03:17:17.894397+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-06-28T03:17:37.837594+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -1574,7 +1656,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1603,7 +1685,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 1
         },
         "halfTime": {
