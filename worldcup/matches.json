@@ -38023,8 +38023,8 @@
     },
     {
       "apiFootballFixtureId": 1489421,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -38085,8 +38085,8 @@
           "assist": null,
           "comments": "Tripping",
           "detail": "Yellow Card",
-          "displayMinute": "90+4'",
-          "extra": 4,
+          "displayMinute": "90+5'",
+          "extra": 5,
           "isDisallowed": false,
           "minute": 90,
           "player": "Shararh",
@@ -38095,13 +38095,11 @@
           "rawType": "Card",
           "source": "api_football",
           "team": "Jordan",
-          "timer": "94:00",
-          "timerSeconds": 5640,
+          "timer": "95:00",
+          "timerSeconds": 5700,
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -38109,7 +38107,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -38403,8 +38400,8 @@
           "assist": null,
           "comments": "Tripping",
           "detail": "Yellow Card",
-          "displayMinute": "90+4'",
-          "extra": 4,
+          "displayMinute": "90+5'",
+          "extra": 5,
           "isDisallowed": false,
           "minute": 90,
           "player": "Shararh",
@@ -38413,13 +38410,11 @@
           "rawType": "Card",
           "source": "api_football",
           "team": "Jordan",
-          "timer": "94:00",
-          "timerSeconds": 5640,
+          "timer": "95:00",
+          "timerSeconds": 5700,
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -38530,9 +38525,8 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T03:57:30.697426+00:00",
-      "lastUpdated": "2026-06-28T05:57:27Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-28T03:57:51.311137+00:00",
+      "lastUpdated": "2026-06-28T05:57:48Z",
       "liveStatistics": {
         "away": {
           "corners": 6,
@@ -38557,39 +38551,6 @@
           "yellowCards": 2
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T03:57:30.697426+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Dallas",
-        "cloudCoverage": 87.5,
-        "condition": "partlycloudy_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-28T03:47:34.976411+00:00",
-        "humidity": 53.3,
-        "latitude": 32.7473,
-        "longitude": -97.0945,
-        "name": "AT&T Stadium weather",
-        "observedAt": "2026-06-28T03:00:00Z",
-        "pressure": 1010.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "AT&T Stadium",
-        "temperature": 31.6,
-        "temperatureUnit": "C",
-        "windBearing": 179.6,
-        "windSpeed": 6.0,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": 3,
       "minute": 90,
       "odds": {
@@ -38604,6 +38565,10 @@
         {
           "name": "Istvan Kovacs, Romania",
           "type": "REFEREE"
+        },
+        {
+          "name": "I. Kovacs",
+          "type": "REFEREE"
         }
       ],
       "referees": [
@@ -38614,6 +38579,10 @@
         },
         {
           "name": "Istvan Kovacs, Romania",
+          "type": "REFEREE"
+        },
+        {
+          "name": "I. Kovacs",
           "type": "REFEREE"
         }
       ],
@@ -38638,7 +38607,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "M. Al Mardi",
@@ -38826,29 +38795,6 @@
         "city": "Arlington",
         "id": null,
         "name": "AT&T Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Dallas",
-        "cloudCoverage": 87.5,
-        "condition": "partlycloudy_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-28T03:47:34.976411+00:00",
-        "humidity": 53.3,
-        "latitude": 32.7473,
-        "longitude": -97.0945,
-        "name": "AT&T Stadium weather",
-        "observedAt": "2026-06-28T03:00:00Z",
-        "pressure": 1010.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "AT&T Stadium",
-        "temperature": 31.6,
-        "temperatureUnit": "C",
-        "windBearing": 179.6,
-        "windSpeed": 6.0,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -38865,7 +38811,7 @@
       "awayFouls": 7,
       "awayOffsides": 3,
       "awayPossession": "34%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/816.svg",
@@ -39311,8 +39257,8 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T03:57:30.697426+00:00",
-      "lastUpdated": "2026-06-28T05:57:27Z",
+      "lastApiSync": "2026-06-28T03:57:51.537866+00:00",
+      "lastUpdated": "2026-06-28T05:57:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -39341,7 +39287,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T03:57:30.697426+00:00",
+        "lastApiSync": "2026-06-28T03:57:51.537866+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -39355,7 +39301,7 @@
         "condition": "fair_night",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-28T03:47:35.153204+00:00",
+        "fetchedAt": "2026-06-28T03:57:51.320208+00:00",
         "humidity": 88.9,
         "latitude": 39.0489,
         "longitude": -94.4839,
@@ -39401,7 +39347,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 3
         },
         "halfTime": {
@@ -39597,7 +39543,7 @@
         "condition": "fair_night",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-28T03:47:35.153204+00:00",
+        "fetchedAt": "2026-06-28T03:57:51.320208+00:00",
         "humidity": 88.9,
         "latitude": 39.0489,
         "longitude": -94.4839,
