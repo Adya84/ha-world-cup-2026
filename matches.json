@@ -38525,7 +38525,7 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T03:59:06.821267+00:00",
+      "lastApiSync": "2026-06-28T03:59:32.467105+00:00",
       "lastUpdated": "2026-06-28T05:58:45Z",
       "liveStatistics": {
         "away": {
@@ -38799,8 +38799,8 @@
     },
     {
       "apiFootballFixtureId": 1489418,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -38840,8 +38840,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -38849,7 +38847,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -39140,8 +39137,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "D. Alaba",
@@ -39298,9 +39293,8 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T03:59:06.874090+00:00",
-      "lastUpdated": "2026-06-28T05:59:06Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-28T03:59:32.467242+00:00",
+      "lastUpdated": "2026-06-28T05:59:30Z",
       "liveStatistics": {
         "away": {
           "corners": 3,
@@ -39324,39 +39318,6 @@
           "totalShots": 12,
           "yellowCards": 0
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T03:59:06.874090+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Kansas City",
-        "cloudCoverage": 19.5,
-        "condition": "fair_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-28T03:57:51.320208+00:00",
-        "humidity": 88.9,
-        "latitude": 39.0489,
-        "longitude": -94.4839,
-        "name": "Arrowhead Stadium weather",
-        "observedAt": "2026-06-28T03:00:00Z",
-        "pressure": 1008.4,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Arrowhead Stadium",
-        "temperature": 25.4,
-        "temperatureUnit": "C",
-        "windBearing": 144.9,
-        "windSpeed": 4.7,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -39395,7 +39356,7 @@
           "away": 1,
           "home": 1
         },
-        "winner": "HOME_TEAM"
+        "winner": "DRAW"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -39406,7 +39367,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "M. Gregoritsch",
@@ -39576,29 +39537,6 @@
         "city": "Kansas City",
         "id": null,
         "name": "Arrowhead Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Kansas City",
-        "cloudCoverage": 19.5,
-        "condition": "fair_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-28T03:57:51.320208+00:00",
-        "humidity": 88.9,
-        "latitude": 39.0489,
-        "longitude": -94.4839,
-        "name": "Arrowhead Stadium weather",
-        "observedAt": "2026-06-28T03:00:00Z",
-        "pressure": 1008.4,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Arrowhead Stadium",
-        "temperature": 25.4,
-        "temperatureUnit": "C",
-        "windBearing": 144.9,
-        "windSpeed": 4.7,
-        "windSpeedUnit": "m/s"
       }
     },
     {
