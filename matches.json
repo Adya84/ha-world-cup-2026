@@ -37007,8 +37007,8 @@
     },
     {
       "apiFootballFixtureId": 1489419,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -37048,8 +37048,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -37057,7 +37055,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "J. Neves",
@@ -37276,8 +37273,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "group": "GROUP_K",
       "homeCorners": 5,
       "homeFouls": 11,
@@ -37293,9 +37288,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T01:28:49.692471+00:00",
-      "lastUpdated": "2026-06-28T03:28:48Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-28T01:29:10.247291+00:00",
+      "lastUpdated": "2026-06-28T03:29:06Z",
       "liveStatistics": {
         "away": {
           "corners": 2,
@@ -37319,39 +37313,6 @@
           "totalShots": 23,
           "yellowCards": 1
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T01:28:49.692471+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Miami",
-        "cloudCoverage": 3.9,
-        "condition": "clearsky_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-28T01:27:21.605749+00:00",
-        "humidity": 77.1,
-        "latitude": 25.958,
-        "longitude": -80.2389,
-        "name": "Hard Rock Stadium weather",
-        "observedAt": "2026-06-28T01:00:00Z",
-        "pressure": 1018.6,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Hard Rock Stadium",
-        "temperature": 28.1,
-        "temperatureUnit": "C",
-        "windBearing": 104.8,
-        "windSpeed": 3.1,
-        "windSpeedUnit": "m/s"
       },
       "matchday": 3,
       "minute": 90,
@@ -37401,7 +37362,7 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "J. Neves",
@@ -37589,29 +37550,6 @@
         "city": "Miami Gardens",
         "id": null,
         "name": "Hard Rock Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Miami",
-        "cloudCoverage": 3.9,
-        "condition": "clearsky_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-28T01:27:21.605749+00:00",
-        "humidity": 77.1,
-        "latitude": 25.958,
-        "longitude": -80.2389,
-        "name": "Hard Rock Stadium weather",
-        "observedAt": "2026-06-28T01:00:00Z",
-        "pressure": 1018.6,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Hard Rock Stadium",
-        "temperature": 28.1,
-        "temperatureUnit": "C",
-        "windBearing": 104.8,
-        "windSpeed": 3.1,
-        "windSpeedUnit": "m/s"
       }
     },
     {
@@ -38213,8 +38151,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T01:28:49.692471+00:00",
-      "lastUpdated": "2026-06-28T03:28:48Z",
+      "lastApiSync": "2026-06-28T01:29:10.308967+00:00",
+      "lastUpdated": "2026-06-28T03:29:06Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -38243,7 +38181,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T01:28:49.692471+00:00",
+        "lastApiSync": "2026-06-28T01:29:10.308967+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
