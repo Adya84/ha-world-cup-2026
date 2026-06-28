@@ -37242,10 +37242,10 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Goal Under Review - offside",
+          "detail": "Goal Disallowed - offside",
           "displayMinute": "90+2'",
           "extra": 2,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 90,
           "player": "D. Sanchez",
           "playerOff": null,
@@ -37255,32 +37255,11 @@
           "team": "Colombia",
           "timer": "92:00",
           "timerSeconds": 5520,
-          "type": "VAR"
+          "type": "Disallowed Goal"
         }
       ],
       "fallbackClock": 5400,
       "fallbackClockText": "90'",
-      "goalEvents": [
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Goal Under Review - offside",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "D. Sanchez",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Var",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "VAR"
-        }
-      ],
-      "goalEventsSource": "api_football_live",
       "group": "GROUP_K",
       "homeCorners": 4,
       "homeFouls": 11,
@@ -37296,8 +37275,8 @@
         "tla": "COL"
       },
       "id": 537407,
-      "lastApiSync": "2026-06-28T01:24:30.558258+00:00",
-      "lastUpdated": "2026-06-28T03:24:27Z",
+      "lastApiSync": "2026-06-28T01:24:52.115072+00:00",
+      "lastUpdated": "2026-06-28T03:24:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -37326,7 +37305,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T01:24:30.558258+00:00",
+        "lastApiSync": "2026-06-28T01:24:52.115072+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -38147,7 +38126,7 @@
       "homeFouls": 6,
       "homeOffsides": 3,
       "homePossession": "61%",
-      "homeScore": 2,
+      "homeScore": 3,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/congo_dr.svg",
@@ -38157,8 +38136,8 @@
         "tla": "COD"
       },
       "id": 537408,
-      "lastApiSync": "2026-06-28T01:24:30.558258+00:00",
-      "lastUpdated": "2026-06-28T03:24:27Z",
+      "lastApiSync": "2026-06-28T01:24:52.115072+00:00",
+      "lastUpdated": "2026-06-28T03:24:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -38187,7 +38166,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-06-28T01:24:30.558258+00:00",
+        "lastApiSync": "2026-06-28T01:24:52.115072+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -38248,7 +38227,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 1,
-          "home": 2
+          "home": 3
         },
         "halfTime": {
           "away": 1,
