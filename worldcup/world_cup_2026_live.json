@@ -2,8 +2,8 @@
   "live": [
     {
       "apiFootballFixtureId": 1561329,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -23,7 +23,7 @@
         "shortName": "Canada",
         "tla": "CAN"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,9 +32,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "displayMinute": "46'",
+      "events": [
+        {
+          "assist": "T. Mbatha",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "R. Mofokeng",
+          "playerOff": "R. Mofokeng",
+          "playerOn": "T. Mbatha",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 5,
@@ -50,8 +70,8 @@
         "tla": "RSA"
       },
       "id": 537417,
-      "lastApiSync": "2026-06-28T20:05:35.343895+00:00",
-      "lastUpdated": "2026-06-28T22:05:30Z",
+      "lastApiSync": "2026-06-28T20:05:57.968865+00:00",
+      "lastUpdated": "2026-06-28T22:05:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -79,14 +99,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-28T20:05:35.343895+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-28T20:05:57.968865+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -111,7 +131,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -158,7 +178,27 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "T. Mbatha",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "R. Mofokeng",
+          "playerOff": "R. Mofokeng",
+          "playerOn": "T. Mbatha",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-28T19:00:00Z",
       "venue": {
         "city": "Inglewood",
@@ -193,8 +233,8 @@
   "matches": [
     {
       "apiFootballFixtureId": 1561329,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -214,7 +254,7 @@
         "shortName": "Canada",
         "tla": "CAN"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -223,9 +263,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "displayMinute": "46'",
+      "events": [
+        {
+          "assist": "T. Mbatha",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "R. Mofokeng",
+          "playerOff": "R. Mofokeng",
+          "playerOn": "T. Mbatha",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 5,
@@ -241,8 +301,8 @@
         "tla": "RSA"
       },
       "id": 537417,
-      "lastApiSync": "2026-06-28T20:05:35.343895+00:00",
-      "lastUpdated": "2026-06-28T22:05:30Z",
+      "lastApiSync": "2026-06-28T20:05:57.968865+00:00",
+      "lastUpdated": "2026-06-28T22:05:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -270,14 +330,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-28T20:05:35.343895+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-28T20:05:57.968865+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -302,7 +362,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -349,7 +409,27 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "T. Mbatha",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "R. Mofokeng",
+          "playerOff": "R. Mofokeng",
+          "playerOn": "T. Mbatha",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "South Africa",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-28T19:00:00Z",
       "venue": {
         "city": "Inglewood",
