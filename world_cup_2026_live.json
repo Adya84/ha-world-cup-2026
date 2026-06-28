@@ -161,6 +161,42 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Goal"
+        },
+        {
+          "assist": "T. Almada",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "G. Lo Celso",
+          "playerOff": "G. Lo Celso",
+          "playerOn": "T. Almada",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Messi",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "L. Martinez",
+          "playerOff": "L. Martinez",
+          "playerOn": "L. Messi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3600,
@@ -252,8 +288,8 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T03:21:49.644811+00:00",
-      "lastUpdated": "2026-06-28T05:21:48Z",
+      "lastApiSync": "2026-06-28T03:22:10.489956+00:00",
+      "lastUpdated": "2026-06-28T05:22:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -282,7 +318,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "60'",
-        "lastApiSync": "2026-06-28T03:21:49.644811+00:00",
+        "lastApiSync": "2026-06-28T03:22:10.489956+00:00",
         "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -396,6 +432,42 @@
           "team": "Jordan",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Almada",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "G. Lo Celso",
+          "playerOff": "G. Lo Celso",
+          "playerOn": "T. Almada",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Messi",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "L. Martinez",
+          "playerOff": "L. Martinez",
+          "playerOn": "L. Messi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "60:00",
+          "timerSeconds": 3600,
           "type": "Substitution"
         }
       ],
@@ -608,6 +680,24 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "R. Mahrez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 3600,
@@ -681,6 +771,29 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Austria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "60'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Algeria",
+          "isDisallowed": false,
+          "matchId": 537402,
+          "matchUtcDate": "2026-06-28T02:00:00Z",
+          "minute": 60,
+          "player": "R. Mahrez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -689,7 +802,7 @@
       "homeFouls": 1,
       "homeOffsides": 0,
       "homePossession": "58%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
@@ -699,8 +812,8 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T03:21:49.644811+00:00",
-      "lastUpdated": "2026-06-28T05:21:48Z",
+      "lastApiSync": "2026-06-28T03:22:10.489956+00:00",
+      "lastUpdated": "2026-06-28T05:22:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -729,7 +842,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "60'",
-        "lastApiSync": "2026-06-28T03:21:49.644811+00:00",
+        "lastApiSync": "2026-06-28T03:22:10.489956+00:00",
         "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -790,7 +903,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 2,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 1,
@@ -1057,6 +1170,42 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Goal"
+        },
+        {
+          "assist": "T. Almada",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "G. Lo Celso",
+          "playerOff": "G. Lo Celso",
+          "playerOn": "T. Almada",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Messi",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "L. Martinez",
+          "playerOff": "L. Martinez",
+          "playerOn": "L. Messi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3600,
@@ -1148,8 +1297,8 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": "2026-06-28T03:21:49.644811+00:00",
-      "lastUpdated": "2026-06-28T05:21:48Z",
+      "lastApiSync": "2026-06-28T03:22:10.489956+00:00",
+      "lastUpdated": "2026-06-28T05:22:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1178,7 +1327,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "60'",
-        "lastApiSync": "2026-06-28T03:21:49.644811+00:00",
+        "lastApiSync": "2026-06-28T03:22:10.489956+00:00",
         "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -1292,6 +1441,42 @@
           "team": "Jordan",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Almada",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "G. Lo Celso",
+          "playerOff": "G. Lo Celso",
+          "playerOn": "T. Almada",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Messi",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "L. Martinez",
+          "playerOff": "L. Martinez",
+          "playerOn": "L. Messi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "60:00",
+          "timerSeconds": 3600,
           "type": "Substitution"
         }
       ],
@@ -1504,6 +1689,24 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "R. Mahrez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 3600,
@@ -1577,6 +1780,29 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Austria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "60'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Algeria",
+          "isDisallowed": false,
+          "matchId": 537402,
+          "matchUtcDate": "2026-06-28T02:00:00Z",
+          "minute": 60,
+          "player": "R. Mahrez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Algeria",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -1585,7 +1811,7 @@
       "homeFouls": 1,
       "homeOffsides": 0,
       "homePossession": "58%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
@@ -1595,8 +1821,8 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": "2026-06-28T03:21:49.644811+00:00",
-      "lastUpdated": "2026-06-28T05:21:48Z",
+      "lastApiSync": "2026-06-28T03:22:10.489956+00:00",
+      "lastUpdated": "2026-06-28T05:22:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1625,7 +1851,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "60'",
-        "lastApiSync": "2026-06-28T03:21:49.644811+00:00",
+        "lastApiSync": "2026-06-28T03:22:10.489956+00:00",
         "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -1686,7 +1912,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 2,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 1,
