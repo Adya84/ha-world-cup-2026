@@ -1,13 +1,16 @@
 {
   "live": [
     {
+      "apiFootballFixtureId": 1489421,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -15,7 +18,8 @@
         "shortName": "Argentina",
         "tla": "ARG"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -23,8 +27,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_J",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8049.png",
         "id": 8049,
@@ -33,18 +40,19 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-28T04:01:12Z",
+      "lastApiSync": "2026-06-28T02:01:44.532286+00:00",
+      "lastUpdated": "2026-06-28T04:01:39Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-28T02:01:44.532286+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -69,14 +77,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 37278,
           "name": "Istv\u00e1n Kov\u00e1cs",
           "nationality": "Romania",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Istvan Kovacs, Romania",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Istv\u00e1n Kov\u00e1cs",
+          "nationality": "Romania",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Istvan Kovacs, Romania",
           "type": "REFEREE"
         }
       ],
@@ -87,11 +110,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -100,8 +124,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-28T02:00:00Z",
+      "venue": {
+        "city": "Arlington",
+        "id": null,
+        "name": "AT&T Stadium"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -127,13 +156,16 @@
       }
     },
     {
+      "apiFootballFixtureId": 1489418,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/816.svg",
         "id": 816,
@@ -141,7 +173,8 @@
         "shortName": "Austria",
         "tla": "AUT"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -149,8 +182,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_J",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
         "id": 778,
@@ -159,18 +195,19 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-28T04:01:12Z",
+      "lastApiSync": "2026-06-28T02:01:44.532286+00:00",
+      "lastUpdated": "2026-06-28T04:01:39Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-28T02:01:44.532286+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -195,14 +232,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 236055,
           "name": "Il'giz Tantashev",
           "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ilgiz Tantashev, Uzbekistan",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Il'giz Tantashev",
+          "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ilgiz Tantashev, Uzbekistan",
           "type": "REFEREE"
         }
       ],
@@ -213,11 +265,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -226,8 +279,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-28T02:00:00Z",
+      "venue": {
+        "city": "Kansas City",
+        "id": null,
+        "name": "Arrowhead Stadium"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -255,13 +313,16 @@
   ],
   "matches": [
     {
+      "apiFootballFixtureId": 1489421,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -269,7 +330,8 @@
         "shortName": "Argentina",
         "tla": "ARG"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -277,8 +339,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_J",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/8049.png",
         "id": 8049,
@@ -287,18 +352,19 @@
         "tla": "JOR"
       },
       "id": 537401,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-28T04:01:12Z",
+      "lastApiSync": "2026-06-28T02:01:44.532286+00:00",
+      "lastUpdated": "2026-06-28T04:01:39Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-28T02:01:44.532286+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -323,14 +389,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 37278,
           "name": "Istv\u00e1n Kov\u00e1cs",
           "nationality": "Romania",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Istvan Kovacs, Romania",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Istv\u00e1n Kov\u00e1cs",
+          "nationality": "Romania",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Istvan Kovacs, Romania",
           "type": "REFEREE"
         }
       ],
@@ -341,11 +422,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -354,8 +436,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-28T02:00:00Z",
+      "venue": {
+        "city": "Arlington",
+        "id": null,
+        "name": "AT&T Stadium"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Dallas",
@@ -381,13 +468,16 @@
       }
     },
     {
+      "apiFootballFixtureId": 1489418,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/816.svg",
         "id": 816,
@@ -395,7 +485,8 @@
         "shortName": "Austria",
         "tla": "AUT"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -403,8 +494,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": "GROUP_J",
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
         "id": 778,
@@ -413,18 +507,19 @@
         "tla": "ALG"
       },
       "id": 537402,
-      "lastApiSync": null,
-      "lastUpdated": "2026-06-28T04:01:12Z",
+      "lastApiSync": "2026-06-28T02:01:44.532286+00:00",
+      "lastUpdated": "2026-06-28T04:01:39Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-06-28T02:01:44.532286+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -449,14 +544,29 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": 3,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 236055,
           "name": "Il'giz Tantashev",
           "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ilgiz Tantashev, Uzbekistan",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Il'giz Tantashev",
+          "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ilgiz Tantashev, Uzbekistan",
           "type": "REFEREE"
         }
       ],
@@ -467,11 +577,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -480,8 +591,13 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "IN_PLAY",
+      "status": "1H",
       "utcDate": "2026-06-28T02:00:00Z",
+      "venue": {
+        "city": "Kansas City",
+        "id": null,
+        "name": "Arrowhead Stadium"
+      },
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
