@@ -37007,12 +37007,20 @@
     },
     {
       "apiFootballFixtureId": 1489419,
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 2,
+      "awayFouls": 6,
+      "awayOffsides": 2,
+      "awayPossession": "45%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/765.svg",
         "id": 765,
@@ -37266,6 +37274,12 @@
         }
       ],
       "group": "GROUP_K",
+      "homeCorners": 5,
+      "homeFouls": 12,
+      "homeOffsides": 3,
+      "homePossession": "55%",
+      "homeScore": 0,
+      "homeShotsOnGoal": 6,
       "homeTeam": {
         "crest": "https://crests.football-data.org/818.svg",
         "id": 818,
@@ -37274,16 +37288,56 @@
         "tla": "COL"
       },
       "id": 537407,
+      "lastApiSync": "2026-06-28T01:55:11.811103+00:00",
       "lastUpdated": "2026-06-28T03:29:27Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 2,
+          "fouls": 6,
+          "offsides": 2,
+          "possession": "45%",
+          "redCards": null,
+          "shotsOffGoal": 7,
+          "shotsOnGoal": 2,
+          "totalShots": 13,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": 5,
+          "fouls": 12,
+          "offsides": 3,
+          "possession": "55%",
+          "redCards": null,
+          "shotsOffGoal": 11,
+          "shotsOnGoal": 6,
+          "totalShots": 24,
+          "yellowCards": 1
+        }
+      },
       "matchday": 3,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 55970,
           "name": "Alireza Faghani",
           "nationality": "Iran",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Alireza Faghani, Australia",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Alireza Faghani",
+          "nationality": "Iran",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Alireza Faghani, Australia",
           "type": "REFEREE"
         }
       ],
@@ -37299,6 +37353,7 @@
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -37490,16 +37545,29 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-27T23:30:00Z"
+      "utcDate": "2026-06-27T23:30:00Z",
+      "venue": {
+        "city": "Miami Gardens",
+        "id": null,
+        "name": "Hard Rock Stadium"
+      }
     },
     {
       "apiFootballFixtureId": 1539013,
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 4,
+      "awayFouls": 16,
+      "awayOffsides": 1,
+      "awayPossession": "42%",
+      "awayScore": 1,
+      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/8070.png",
         "id": 8070,
@@ -37609,16 +37677,11 @@
       "events": [
         {
           "assist": "A. Mozgovoy",
-          "awayTeam": "Uzbekistan",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
-          "goalNumber": 1,
-          "homeTeam": "Congo DR",
           "isDisallowed": false,
-          "matchId": 537408,
-          "matchUtcDate": "2026-06-27T23:30:00Z",
           "minute": 10,
           "player": "E. Shomurodov",
           "playerOff": null,
@@ -37632,16 +37695,173 @@
         },
         {
           "assist": null,
-          "awayTeam": "Uzbekistan",
+          "comments": null,
+          "detail": "Goal Disallowed - Foul",
+          "displayMinute": "17'",
+          "extra": null,
+          "isDisallowed": true,
+          "minute": 17,
+          "player": "N. Mbuku",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Var",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "17:00",
+          "timerSeconds": 1020,
+          "type": "Disallowed Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "21'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 21,
+          "player": "N. Sadiki",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "21:00",
+          "timerSeconds": 1260,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "43'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 43,
+          "player": "A. Khusanov",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Uzbekistan",
+          "timer": "43:00",
+          "timerSeconds": 2580,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "48'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 48,
+          "player": "S. Nasrullaev",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Uzbekistan",
+          "timer": "48:00",
+          "timerSeconds": 2880,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Roughing",
+          "detail": "Yellow Card",
+          "displayMinute": "45+5'",
+          "extra": 5,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "N. Mbuku",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "50:00",
+          "timerSeconds": 3000,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": "F. Mayele",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "51'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 51,
+          "player": "C. Bakambu",
+          "playerOff": "C. Bakambu",
+          "playerOn": "F. Mayele",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "51:00",
+          "timerSeconds": 3060,
+          "type": "Substitution"
+        },
+        {
+          "assist": "O. Khamrobekov",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "O. Shukurov",
+          "playerOff": "O. Shukurov",
+          "playerOn": "O. Khamrobekov",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Ganiev",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "D. Khamdamov",
+          "playerOff": "D. Khamdamov",
+          "playerOn": "A. Ganiev",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "S. Moutoussamy",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
           "comments": null,
           "detail": "Penalty",
           "displayMinute": "68'",
           "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Congo DR",
           "isDisallowed": false,
-          "matchId": 537408,
-          "matchUtcDate": "2026-06-27T23:30:00Z",
           "minute": 68,
           "player": "Y. Wissa",
           "playerOff": null,
@@ -37651,20 +37871,87 @@
           "team": "Congo DR",
           "timer": "68:00",
           "timerSeconds": 4080,
-          "type": "Goal"
+          "type": "Penalty"
+        },
+        {
+          "assist": "T. Bongonda",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "B. Cipenga",
+          "playerOff": "B. Cipenga",
+          "playerOn": "T. Bongonda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Mukau",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "S. Moutoussamy",
+          "playerOff": "S. Moutoussamy",
+          "playerOn": "N. Mukau",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Elia",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "N. Mbuku",
+          "playerOff": "N. Mbuku",
+          "playerOn": "M. Elia",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "type": "Substitution"
+        },
+        {
+          "assist": "O. Urunov",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "73'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 73,
+          "player": "A. Fayzullaev",
+          "playerOff": "A. Fayzullaev",
+          "playerOn": "O. Urunov",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
+          "timer": "73:00",
+          "timerSeconds": 4380,
+          "type": "Substitution"
         },
         {
           "assist": null,
-          "awayTeam": "Uzbekistan",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "78'",
           "extra": null,
-          "goalNumber": 3,
-          "homeTeam": "Congo DR",
           "isDisallowed": false,
-          "matchId": 537408,
-          "matchUtcDate": "2026-06-27T23:30:00Z",
           "minute": 78,
           "player": "F. Mayele",
           "playerOff": null,
@@ -37677,17 +37964,66 @@
           "type": "Goal"
         },
         {
+          "assist": "I. Sergeev",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "J. Urozov",
+          "playerOff": "J. Urozov",
+          "playerOn": "I. Sergeev",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Iskanderov",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": "A. Mozgovoy",
+          "playerOff": "A. Mozgovoy",
+          "playerOn": "J. Iskanderov",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Uzbekistan",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Kayembe",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "A. Masuaku",
+          "playerOff": "A. Masuaku",
+          "playerOn": "J. Kayembe",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
+        },
+        {
           "assist": "M. Elia",
-          "awayTeam": "Uzbekistan",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90+1'",
           "extra": 1,
-          "goalNumber": 4,
-          "homeTeam": "Congo DR",
           "isDisallowed": false,
-          "matchId": 537408,
-          "matchUtcDate": "2026-06-27T23:30:00Z",
           "minute": 90,
           "player": "Y. Wissa",
           "playerOff": null,
@@ -37794,7 +38130,14 @@
           "type": "Goal"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "group": "GROUP_K",
+      "homeCorners": 2,
+      "homeFouls": 6,
+      "homeOffsides": 3,
+      "homePossession": "58%",
+      "homeScore": 3,
+      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/congo_dr.svg",
         "id": 1934,
@@ -37803,16 +38146,56 @@
         "tla": "COD"
       },
       "id": 537408,
+      "lastApiSync": "2026-06-28T01:55:11.811448+00:00",
       "lastUpdated": "2026-06-28T03:33:09Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 4,
+          "fouls": 16,
+          "offsides": 1,
+          "possession": "42%",
+          "redCards": null,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 1,
+          "totalShots": 4,
+          "yellowCards": 2
+        },
+        "home": {
+          "corners": 2,
+          "fouls": 6,
+          "offsides": 3,
+          "possession": "58%",
+          "redCards": null,
+          "shotsOffGoal": 14,
+          "shotsOnGoal": 4,
+          "totalShots": 19,
+          "yellowCards": 3
+        }
+      },
       "matchday": 3,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 43878,
           "name": "Felix Zwayer",
           "nationality": "Germany",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Felix Zwayer, Germany",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Felix Zwayer",
+          "nationality": "Germany",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Felix Zwayer, Germany",
           "type": "REFEREE"
         }
       ],
@@ -37828,6 +38211,7 @@
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -38019,7 +38403,12 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-06-27T23:30:00Z"
+      "utcDate": "2026-06-27T23:30:00Z",
+      "venue": {
+        "city": "Atlanta",
+        "id": 1898,
+        "name": "Mercedes-Benz Stadium"
+      }
     },
     {
       "area": {
@@ -38028,6 +38417,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -38035,6 +38425,8 @@
         "shortName": "Argentina",
         "tla": "ARG"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -38042,6 +38434,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_J",
       "homeTeam": {
         "crest": "https://crests.football-data.org/8049.png",
@@ -38051,8 +38444,44 @@
         "tla": "JOR"
       },
       "id": 537401,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-28T03:12:21Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Dallas",
+        "cloudCoverage": 89.8,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-28T01:55:11.825525+00:00",
+        "humidity": 45.0,
+        "latitude": 32.7473,
+        "longitude": -97.0945,
+        "name": "AT&T Stadium weather",
+        "observedAt": "2026-06-28T01:00:00Z",
+        "pressure": 1009.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "AT&T Stadium",
+        "temperature": 33.6,
+        "temperatureUnit": "C",
+        "windBearing": 181.8,
+        "windSpeed": 6.8,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 3,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -38084,8 +38513,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-28T02:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-28T02:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Dallas",
+        "cloudCoverage": 89.8,
+        "condition": "partlycloudy_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-28T01:55:11.825525+00:00",
+        "humidity": 45.0,
+        "latitude": 32.7473,
+        "longitude": -97.0945,
+        "name": "AT&T Stadium weather",
+        "observedAt": "2026-06-28T01:00:00Z",
+        "pressure": 1009.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "AT&T Stadium",
+        "temperature": 33.6,
+        "temperatureUnit": "C",
+        "windBearing": 181.8,
+        "windSpeed": 6.8,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
@@ -38094,6 +38546,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/816.svg",
         "id": 816,
@@ -38101,6 +38554,8 @@
         "shortName": "Austria",
         "tla": "AUT"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -38108,6 +38563,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": "GROUP_J",
       "homeTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
@@ -38117,8 +38573,44 @@
         "tla": "ALG"
       },
       "id": 537402,
+      "lastApiSync": null,
       "lastUpdated": "2026-06-28T03:51:48Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Kansas City",
+        "cloudCoverage": 13.3,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-28T01:55:11.997870+00:00",
+        "humidity": 79.3,
+        "latitude": 39.0489,
+        "longitude": -94.4839,
+        "name": "Arrowhead Stadium weather",
+        "observedAt": "2026-06-28T01:00:00Z",
+        "pressure": 1007.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Arrowhead Stadium",
+        "temperature": 26.7,
+        "temperatureUnit": "C",
+        "windBearing": 160.2,
+        "windSpeed": 3.5,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": 3,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -38150,8 +38642,31 @@
         "winner": null
       },
       "stage": "GROUP_STAGE",
-      "status": "TIMED",
-      "utcDate": "2026-06-28T02:00:00Z"
+      "status": "LIVE",
+      "utcDate": "2026-06-28T02:00:00Z",
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Kansas City",
+        "cloudCoverage": 13.3,
+        "condition": "fair_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-06-28T01:55:11.997870+00:00",
+        "humidity": 79.3,
+        "latitude": 39.0489,
+        "longitude": -94.4839,
+        "name": "Arrowhead Stadium weather",
+        "observedAt": "2026-06-28T01:00:00Z",
+        "pressure": 1007.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Arrowhead Stadium",
+        "temperature": 26.7,
+        "temperatureUnit": "C",
+        "windBearing": 160.2,
+        "windSpeed": 3.5,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
