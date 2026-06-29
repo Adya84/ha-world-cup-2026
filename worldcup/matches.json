@@ -40579,6 +40579,24 @@
           "timer": "48:00",
           "timerSeconds": 2880,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "Gabriel",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "Casemiro",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 3360,
@@ -40606,6 +40624,29 @@
           "timer": "29:00",
           "timerSeconds": 1740,
           "type": "Goal"
+        },
+        {
+          "assist": "Gabriel",
+          "awayTeam": "Japan",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "56'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Brazil",
+          "isDisallowed": false,
+          "matchId": 537423,
+          "matchUtcDate": "2026-06-29T17:00:00Z",
+          "minute": 56,
+          "player": "Casemiro",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -40615,7 +40656,7 @@
       "homeOffsides": 1,
       "homePossession": "66%",
       "homeScore": 1,
-      "homeShotsOnGoal": 3,
+      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
         "id": 764,
@@ -40624,8 +40665,8 @@
         "tla": "BRA"
       },
       "id": 537423,
-      "lastApiSync": "2026-06-29T18:17:50.741188+00:00",
-      "lastUpdated": "2026-06-29T20:17:14Z",
+      "lastApiSync": "2026-06-29T18:18:15.093906+00:00",
+      "lastUpdated": "2026-06-29T20:18:12Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -40646,15 +40687,15 @@
           "possession": "66%",
           "redCards": null,
           "shotsOffGoal": 3,
-          "shotsOnGoal": 3,
-          "totalShots": 10,
+          "shotsOnGoal": 5,
+          "totalShots": 12,
           "yellowCards": 2
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "56'",
-        "lastApiSync": "2026-06-29T18:17:50.741188+00:00",
+        "lastApiSync": "2026-06-29T18:18:15.093906+00:00",
         "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
