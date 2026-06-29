@@ -42823,6 +42823,24 @@
           "timer": "122:00",
           "timerSeconds": 7320,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Penalty Shootout",
+          "detail": "Penalty",
+          "displayMinute": "120+2'",
+          "extra": 2,
+          "isDisallowed": false,
+          "minute": 120,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "122:00",
+          "timerSeconds": 7320,
+          "type": "Penalty"
         }
       ],
       "goalEvents": [
@@ -42936,7 +42954,7 @@
       },
       "id": 537415,
       "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
-      "lastUpdated": "2026-06-30T01:20:45Z",
+      "lastUpdated": "2026-06-30T01:21:00Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -43036,14 +43054,14 @@
           "home": 0
         },
         "penalties": {
-          "away": 1,
+          "away": 2,
           "home": 1
         },
         "regularTime": {
           "away": 1,
           "home": 1
         },
-        "winner": null
+        "winner": "AWAY_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
