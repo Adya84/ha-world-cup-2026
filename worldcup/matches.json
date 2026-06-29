@@ -40845,8 +40845,8 @@
     },
     {
       "apiFootballFixtureId": 1565176,
-      "apiFootballStatus": "BT",
-      "apiFootballStatusLong": "Break Time",
+      "apiFootballStatus": "ET",
+      "apiFootballStatusLong": "Extra Time",
       "area": {
         "code": "INT",
         "flag": null,
@@ -41058,6 +41058,24 @@
           "timer": "88:00",
           "timerSeconds": 5280,
           "type": "Substitution"
+        },
+        {
+          "assist": "G. Velazquez",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "91'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 91,
+          "player": "M. Almiron",
+          "playerOff": "M. Almiron",
+          "playerOn": "G. Velazquez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 5760,
@@ -41126,8 +41144,8 @@
         "tla": "GER"
       },
       "id": 537415,
-      "lastApiSync": "2026-06-29T22:33:48.164792+00:00",
-      "lastUpdated": "2026-06-30T00:33:45Z",
+      "lastApiSync": "2026-06-29T22:34:08.491720+00:00",
+      "lastUpdated": "2026-06-30T00:34:06Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -41156,10 +41174,10 @@
       "manualClock": {
         "active": false,
         "displayMinute": "96'",
-        "lastApiSync": "2026-06-29T22:33:48.164792+00:00",
+        "lastApiSync": "2026-06-29T22:34:08.491720+00:00",
         "seconds": 5760,
         "source": "api_football_live_minute",
-        "status": "BT",
+        "status": "ET",
         "timer": "96'"
       },
       "manualClockText": "96'",
@@ -41214,7 +41232,11 @@
         }
       ],
       "score": {
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
+        "extraTime": {
+          "away": 0,
+          "home": 0
+        },
         "fullTime": {
           "away": 1,
           "home": 1
@@ -41222,6 +41244,10 @@
         "halfTime": {
           "away": 1,
           "home": 0
+        },
+        "regularTime": {
+          "away": 1,
+          "home": 1
         },
         "winner": "DRAW"
       },
@@ -41234,7 +41260,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "BT",
+      "status": "ET",
       "substitutionEvents": [
         {
           "assist": "L. Goretzka",
@@ -41342,6 +41368,24 @@
           "team": "Germany",
           "timer": "88:00",
           "timerSeconds": 5280,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Velazquez",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "91'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 91,
+          "player": "M. Almiron",
+          "playerOff": "M. Almiron",
+          "playerOn": "G. Velazquez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "91:00",
+          "timerSeconds": 5460,
           "type": "Substitution"
         }
       ],
