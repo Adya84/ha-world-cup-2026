@@ -42268,15 +42268,14 @@
     },
     {
       "apiFootballFixtureId": 1565176,
-      "apiFootballStatus": "P",
-      "apiFootballStatusLong": "Penalty in progress",
+      "apiFootballStatus": "PEN",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 6,
       "awayFouls": 12,
       "awayOffsides": 1,
@@ -42400,7 +42399,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -42408,7 +42406,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "M. Galarza",
@@ -43345,9 +43342,8 @@
         "tla": "GER"
       },
       "id": 537415,
-      "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
-      "lastUpdated": "2026-06-30T01:29:06Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-29T23:29:26.795384+00:00",
+      "lastUpdated": "2026-06-30T01:29:24Z",
       "liveStatistics": {
         "away": {
           "corners": 6,
@@ -43372,40 +43368,8 @@
           "yellowCards": 2
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "120'",
-        "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
-        "seconds": 7200,
-        "source": "awaiting_api_football_minute",
-        "status": "P",
-        "timer": "120:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Boston",
-        "cloudCoverage": 0.8,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-29T23:23:51.857102+00:00",
-        "humidity": 61.6,
-        "latitude": 42.0909,
-        "longitude": -71.2643,
-        "name": "Gillette Stadium weather",
-        "observedAt": "2026-06-29T23:00:00Z",
-        "pressure": 1018.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Gillette Stadium",
-        "temperature": 23.8,
-        "temperatureUnit": "C",
-        "windBearing": 100.3,
-        "windSpeed": 3.2,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": null,
+      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -43464,7 +43428,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "P",
+      "status": "PEN",
       "substitutionEvents": [
         {
           "assist": "L. Goretzka",
@@ -43688,29 +43652,6 @@
         "city": "Boston",
         "id": 1618,
         "name": "Gillette Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Boston",
-        "cloudCoverage": 0.8,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-29T23:23:51.857102+00:00",
-        "humidity": 61.6,
-        "latitude": 42.0909,
-        "longitude": -71.2643,
-        "name": "Gillette Stadium weather",
-        "observedAt": "2026-06-29T23:00:00Z",
-        "pressure": 1018.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Gillette Stadium",
-        "temperature": 23.8,
-        "temperatureUnit": "C",
-        "windBearing": 100.3,
-        "windSpeed": 3.2,
-        "windSpeedUnit": "m/s"
       }
     },
     {
