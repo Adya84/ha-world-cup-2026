@@ -588,7 +588,7 @@
       },
       "id": 537415,
       "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
-      "lastUpdated": "2026-06-30T01:14:55Z",
+      "lastUpdated": "2026-06-30T01:18:03Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -674,7 +674,7 @@
         }
       ],
       "score": {
-        "duration": "EXTRA_TIME",
+        "duration": "PENALTY_SHOOTOUT",
         "extraTime": {
           "away": 0,
           "home": 0
@@ -687,11 +687,15 @@
           "away": 1,
           "home": 0
         },
+        "penalties": {
+          "away": 1,
+          "home": 1
+        },
         "regularTime": {
           "away": 1,
           "home": 1
         },
-        "winner": "DRAW"
+        "winner": null
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -1541,7 +1545,7 @@
       },
       "id": 537415,
       "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
-      "lastUpdated": "2026-06-30T01:14:55Z",
+      "lastUpdated": "2026-06-30T01:18:03Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1627,7 +1631,7 @@
         }
       ],
       "score": {
-        "duration": "EXTRA_TIME",
+        "duration": "PENALTY_SHOOTOUT",
         "extraTime": {
           "away": 0,
           "home": 0
@@ -1640,11 +1644,15 @@
           "away": 1,
           "home": 0
         },
+        "penalties": {
+          "away": 1,
+          "home": 1
+        },
         "regularTime": {
           "away": 1,
           "home": 1
         },
-        "winner": "DRAW"
+        "winner": null
       },
       "scoreSource": "api_football_live",
       "season": {
