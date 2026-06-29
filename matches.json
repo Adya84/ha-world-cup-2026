@@ -42268,14 +42268,15 @@
     },
     {
       "apiFootballFixtureId": 1565176,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "P",
+      "apiFootballStatusLong": "Penalty In Progress",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 6,
       "awayFouls": 12,
       "awayOffsides": 1,
@@ -42399,8 +42400,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7200,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -42408,7 +42408,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "120'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "Mat\u00edas Galarza",
@@ -42789,8 +42789,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 7200,
-      "fallbackClockText": "120'",
       "goalEvents": [
         {
           "assist": "Mat\u00edas Galarza",
@@ -42856,7 +42854,7 @@
       },
       "id": 537415,
       "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
-      "lastUpdated": "2026-06-30T01:13:18Z",
+      "lastUpdated": "2026-06-30T01:13:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -42887,36 +42885,35 @@
         "displayMinute": "120'",
         "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
         "seconds": 7200,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "120'"
+        "source": "awaiting_api_football_minute",
+        "status": "P",
+        "timer": "120:00"
       },
-      "manualClockText": "120'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
-        "cloudCoverage": 1.6,
+        "cloudCoverage": 0.8,
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-29T23:03:30.186643+00:00",
-        "humidity": 52.7,
+        "fetchedAt": "2026-06-29T23:13:39.423273+00:00",
+        "humidity": 61.6,
         "latitude": 42.0909,
         "longitude": -71.2643,
         "name": "Gillette Stadium weather",
-        "observedAt": "2026-06-29T22:00:00Z",
-        "pressure": 1018.4,
+        "observedAt": "2026-06-29T23:00:00Z",
+        "pressure": 1018.9,
         "pressureUnit": "hPa",
         "source": "met_no_stadium",
         "stadium": "Gillette Stadium",
-        "temperature": 25.3,
+        "temperature": 23.8,
         "temperatureUnit": "C",
-        "windBearing": 78.2,
-        "windSpeed": 3.6,
+        "windBearing": 100.3,
+        "windSpeed": 3.2,
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -42971,7 +42968,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "ET",
+      "status": "P",
       "substitutionEvents": [
         {
           "assist": "Leon Goretzka",
@@ -43199,24 +43196,24 @@
       "weather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
-        "cloudCoverage": 1.6,
+        "cloudCoverage": 0.8,
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-06-29T23:03:30.186643+00:00",
-        "humidity": 52.7,
+        "fetchedAt": "2026-06-29T23:13:39.423273+00:00",
+        "humidity": 61.6,
         "latitude": 42.0909,
         "longitude": -71.2643,
         "name": "Gillette Stadium weather",
-        "observedAt": "2026-06-29T22:00:00Z",
-        "pressure": 1018.4,
+        "observedAt": "2026-06-29T23:00:00Z",
+        "pressure": 1018.9,
         "pressureUnit": "hPa",
         "source": "met_no_stadium",
         "stadium": "Gillette Stadium",
-        "temperature": 25.3,
+        "temperature": 23.8,
         "temperatureUnit": "C",
-        "windBearing": 78.2,
-        "windSpeed": 3.6,
+        "windBearing": 100.3,
+        "windSpeed": 3.2,
         "windSpeedUnit": "m/s"
       }
     },
