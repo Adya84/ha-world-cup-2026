@@ -35565,10 +35565,10 @@
     "apiFootballFixtureId": 1565176,
     "awayScore": 1,
     "awayTeam": "Paraguay",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": "M. Galarza",
@@ -35587,6 +35587,24 @@
         "timer": "42:00",
         "timerSeconds": 2520,
         "type": "Goal"
+      },
+      {
+        "assist": "L. Goretzka",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "F. Nmecha",
+        "playerOff": "F. Nmecha",
+        "playerOn": "L. Goretzka",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Germany",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -35616,9 +35634,9 @@
     ],
     "homeScore": 0,
     "homeTeam": "Germany",
-    "lastApiSync": "2026-06-29T21:38:28.390305+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-06-29T21:38:28.390305+00:00",
+    "lastApiSync": "2026-06-29T21:38:49.445156+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-06-29T21:38:49.445156+00:00",
     "referees": [
       {
         "name": "Jalal Jayed",
@@ -35631,7 +35649,27 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "L. Goretzka",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "F. Nmecha",
+        "playerOff": "F. Nmecha",
+        "playerOn": "L. Goretzka",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Germany",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-06-29T20:30:00Z"
   },
   "537416": {
