@@ -2,14 +2,15 @@
   "live": [
     {
       "apiFootballFixtureId": 1565176,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 4,
       "awayFouls": 8,
       "awayOffsides": 1,
@@ -79,8 +80,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6660,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -88,7 +88,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "111'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "M. Galarza",
@@ -361,8 +361,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 6660,
-      "fallbackClockText": "111'",
       "goalEvents": [
         {
           "assist": "M. Galarza",
@@ -428,7 +426,7 @@
       },
       "id": 537415,
       "lastApiSync": "2026-06-29T22:53:52.449656+00:00",
-      "lastUpdated": "2026-06-30T00:53:51Z",
+      "lastUpdated": "2026-06-30T00:54:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -459,11 +457,11 @@
         "displayMinute": "111'",
         "lastApiSync": "2026-06-29T22:53:52.449656+00:00",
         "seconds": 6660,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "111'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "111:00"
       },
-      "manualClockText": "111'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -488,7 +486,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 111,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -543,7 +540,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "L. Goretzka",
@@ -742,14 +739,15 @@
   "matches": [
     {
       "apiFootballFixtureId": 1565176,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 4,
       "awayFouls": 8,
       "awayOffsides": 1,
@@ -819,8 +817,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6660,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -828,7 +825,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "111'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "M. Galarza",
@@ -1101,8 +1098,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 6660,
-      "fallbackClockText": "111'",
       "goalEvents": [
         {
           "assist": "M. Galarza",
@@ -1168,7 +1163,7 @@
       },
       "id": 537415,
       "lastApiSync": "2026-06-29T22:53:52.449656+00:00",
-      "lastUpdated": "2026-06-30T00:53:51Z",
+      "lastUpdated": "2026-06-30T00:54:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1199,11 +1194,11 @@
         "displayMinute": "111'",
         "lastApiSync": "2026-06-29T22:53:52.449656+00:00",
         "seconds": 6660,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "111'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "111:00"
       },
-      "manualClockText": "111'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -1228,7 +1223,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 111,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1283,7 +1277,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "L. Goretzka",
