@@ -40461,7 +40461,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3960,
+      "clockSeconds": 4020,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -40470,7 +40470,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "66'",
+      "displayMinute": "67'",
       "events": [
         {
           "assist": null,
@@ -40615,10 +40615,28 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Substitution"
+        },
+        {
+          "assist": "Y. Sugawara",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "R. Doan",
+          "playerOff": "R. Doan",
+          "playerOn": "Y. Sugawara",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3960,
-      "fallbackClockText": "66'",
+      "fallbackClock": 4020,
+      "fallbackClockText": "67'",
       "goalEvents": [
         {
           "assist": null,
@@ -40683,8 +40701,8 @@
         "tla": "BRA"
       },
       "id": 537423,
-      "lastApiSync": "2026-06-29T18:28:01.713903+00:00",
-      "lastUpdated": "2026-06-29T20:27:57Z",
+      "lastApiSync": "2026-06-29T18:28:24.102468+00:00",
+      "lastUpdated": "2026-06-29T20:28:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -40712,14 +40730,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "66'",
-        "lastApiSync": "2026-06-29T18:28:01.713903+00:00",
-        "seconds": 3960,
+        "displayMinute": "67'",
+        "lastApiSync": "2026-06-29T18:28:24.102468+00:00",
+        "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "66'"
+        "timer": "67'"
       },
-      "manualClockText": "66'",
+      "manualClockText": "67'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -40744,7 +40762,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 66,
+      "minute": 67,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -40827,6 +40845,24 @@
           "team": "Brazil",
           "timer": "66:00",
           "timerSeconds": 3960,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Y. Sugawara",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "R. Doan",
+          "playerOff": "R. Doan",
+          "playerOn": "Y. Sugawara",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "67:00",
+          "timerSeconds": 4020,
           "type": "Substitution"
         }
       ],
