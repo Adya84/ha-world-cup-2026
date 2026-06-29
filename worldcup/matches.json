@@ -40886,7 +40886,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6180,
+      "clockSeconds": 6240,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -40895,7 +40895,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "103'",
+      "displayMinute": "104'",
       "events": [
         {
           "assist": "M. Galarza",
@@ -41112,10 +41112,28 @@
           "timer": "99:00",
           "timerSeconds": 5940,
           "type": "Substitution"
+        },
+        {
+          "assist": "N. Brown",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "103'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 103,
+          "player": "J. Tah",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "103:00",
+          "timerSeconds": 6180,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 6180,
-      "fallbackClockText": "103'",
+      "fallbackClock": 6240,
+      "fallbackClockText": "104'",
       "goalEvents": [
         {
           "assist": "M. Galarza",
@@ -41162,6 +41180,29 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Goal"
+        },
+        {
+          "assist": "N. Brown",
+          "awayTeam": "Paraguay",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "103'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Germany",
+          "isDisallowed": false,
+          "matchId": 537415,
+          "matchUtcDate": "2026-06-29T20:30:00Z",
+          "minute": 103,
+          "player": "J. Tah",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "103:00",
+          "timerSeconds": 6180,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -41170,7 +41211,7 @@
       "homeFouls": 14,
       "homeOffsides": 4,
       "homePossession": "78%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/759.svg",
@@ -41180,7 +41221,7 @@
         "tla": "GER"
       },
       "id": 537415,
-      "lastApiSync": "2026-06-29T22:45:48.967215+00:00",
+      "lastApiSync": "2026-06-29T22:46:08.856796+00:00",
       "lastUpdated": "2026-06-30T00:45:17Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -41209,14 +41250,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "103'",
-        "lastApiSync": "2026-06-29T22:45:48.967215+00:00",
-        "seconds": 6180,
+        "displayMinute": "104'",
+        "lastApiSync": "2026-06-29T22:46:08.856796+00:00",
+        "seconds": 6240,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "103'"
+        "timer": "104'"
       },
-      "manualClockText": "103'",
+      "manualClockText": "104'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -41241,7 +41282,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 103,
+      "minute": 104,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -41275,7 +41316,7 @@
         },
         "fullTime": {
           "away": 1,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 1,
