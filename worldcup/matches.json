@@ -40845,8 +40845,8 @@
     },
     {
       "apiFootballFixtureId": 1565176,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -40866,7 +40866,7 @@
         "shortName": "Paraguay",
         "tla": "PAR"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -40875,7 +40875,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "M. Galarza",
@@ -40894,10 +40894,28 @@
           "timer": "42:00",
           "timerSeconds": 2520,
           "type": "Goal"
+        },
+        {
+          "assist": "L. Goretzka",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "F. Nmecha",
+          "playerOff": "F. Nmecha",
+          "playerOn": "L. Goretzka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "M. Galarza",
@@ -40939,8 +40957,8 @@
         "tla": "GER"
       },
       "id": 537415,
-      "lastApiSync": "2026-06-29T21:38:28.390305+00:00",
-      "lastUpdated": "2026-06-29T23:38:27Z",
+      "lastApiSync": "2026-06-29T21:38:49.445156+00:00",
+      "lastUpdated": "2026-06-29T23:38:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -40968,14 +40986,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-06-29T21:38:28.390305+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-06-29T21:38:49.445156+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -41000,7 +41018,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -41047,7 +41065,27 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "L. Goretzka",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "F. Nmecha",
+          "playerOff": "F. Nmecha",
+          "playerOn": "L. Goretzka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-29T20:30:00Z",
       "venue": {
         "city": "Boston",
