@@ -42771,6 +42771,24 @@
           "type": "Yellow Card"
         },
         {
+          "assist": null,
+          "comments": "Penalty Shootout",
+          "detail": "Missed Penalty",
+          "displayMinute": "120+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 120,
+          "player": "K. Havertz",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "121:00",
+          "timerSeconds": 7260,
+          "type": "Penalty"
+        },
+        {
           "assist": "Fabian Balbuena",
           "comments": null,
           "detail": "Substitution 6",
@@ -42835,6 +42853,29 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Paraguay",
+          "comments": "Penalty Shootout",
+          "detail": "Missed Penalty",
+          "displayMinute": "120+1'",
+          "extra": 1,
+          "goalNumber": 3,
+          "homeTeam": "Germany",
+          "isDisallowed": false,
+          "matchId": 537415,
+          "matchUtcDate": "2026-06-29T20:30:00Z",
+          "minute": 120,
+          "player": "K. Havertz",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "121:00",
+          "timerSeconds": 7260,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -42854,7 +42895,7 @@
       },
       "id": 537415,
       "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
-      "lastUpdated": "2026-06-30T01:18:51Z",
+      "lastUpdated": "2026-06-30T01:19:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
