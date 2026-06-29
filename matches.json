@@ -40854,7 +40854,7 @@
         "name": "World"
       },
       "awayCorners": 2,
-      "awayFouls": 2,
+      "awayFouls": 3,
       "awayOffsides": 0,
       "awayPossession": "22%",
       "awayScore": 1,
@@ -40966,6 +40966,24 @@
           "timer": "57:00",
           "timerSeconds": 3420,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Musiala",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "D. Undav",
+          "playerOff": "D. Undav",
+          "playerOn": "J. Musiala",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3780,
@@ -41021,7 +41039,7 @@
       "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 6,
-      "homeFouls": 9,
+      "homeFouls": 10,
       "homeOffsides": 3,
       "homePossession": "78%",
       "homeScore": 1,
@@ -41034,13 +41052,13 @@
         "tla": "GER"
       },
       "id": 537415,
-      "lastApiSync": "2026-06-29T21:56:02.735558+00:00",
-      "lastUpdated": "2026-06-29T23:56:00Z",
+      "lastApiSync": "2026-06-29T21:56:23.063985+00:00",
+      "lastUpdated": "2026-06-29T23:56:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
-          "fouls": 2,
+          "fouls": 3,
           "offsides": 0,
           "possession": "22%",
           "redCards": null,
@@ -41051,7 +41069,7 @@
         },
         "home": {
           "corners": 6,
-          "fouls": 9,
+          "fouls": 10,
           "offsides": 3,
           "possession": "78%",
           "redCards": null,
@@ -41064,7 +41082,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "63'",
-        "lastApiSync": "2026-06-29T21:56:02.735558+00:00",
+        "lastApiSync": "2026-06-29T21:56:23.063985+00:00",
         "seconds": 3780,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -41196,6 +41214,24 @@
           "team": "Paraguay",
           "timer": "57:00",
           "timerSeconds": 3420,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Musiala",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "D. Undav",
+          "playerOff": "D. Undav",
+          "playerOn": "J. Musiala",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Germany",
+          "timer": "63:00",
+          "timerSeconds": 3780,
           "type": "Substitution"
         }
       ],
