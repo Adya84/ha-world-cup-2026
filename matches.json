@@ -40377,7 +40377,7 @@
       "awayCorners": 2,
       "awayFouls": 8,
       "awayOffsides": 0,
-      "awayPossession": "31%",
+      "awayPossession": "32%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -40458,6 +40458,24 @@
           "team": "Brazil",
           "timer": "48:00",
           "timerSeconds": 2880,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "J. Suzuki",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "84:00",
+          "timerSeconds": 5040,
           "type": "Yellow Card"
         }
       ],
@@ -40687,6 +40705,24 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "84'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 84,
+          "player": "J. Suzuki",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "84:00",
+          "timerSeconds": 5040,
+          "type": "Yellow Card"
         }
       ],
       "fallbackClock": 5040,
@@ -40744,7 +40780,7 @@
       "homeCorners": 3,
       "homeFouls": 4,
       "homeOffsides": 1,
-      "homePossession": "69%",
+      "homePossession": "68%",
       "homeScore": 1,
       "homeShotsOnGoal": 6,
       "homeTeam": {
@@ -40755,15 +40791,15 @@
         "tla": "BRA"
       },
       "id": 537423,
-      "lastApiSync": "2026-06-29T18:45:09.250642+00:00",
-      "lastUpdated": "2026-06-29T20:45:00Z",
+      "lastApiSync": "2026-06-29T18:45:31.752162+00:00",
+      "lastUpdated": "2026-06-29T20:45:27Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
           "fouls": 8,
           "offsides": 0,
-          "possession": "31%",
+          "possession": "32%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 2,
@@ -40774,7 +40810,7 @@
           "corners": 3,
           "fouls": 4,
           "offsides": 1,
-          "possession": "69%",
+          "possession": "68%",
           "redCards": null,
           "shotsOffGoal": 5,
           "shotsOnGoal": 6,
@@ -40785,7 +40821,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "84'",
-        "lastApiSync": "2026-06-29T18:45:09.250642+00:00",
+        "lastApiSync": "2026-06-29T18:45:31.752162+00:00",
         "seconds": 5040,
         "source": "api_football_live_minute",
         "status": "2H",
