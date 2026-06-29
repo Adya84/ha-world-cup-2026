@@ -40377,7 +40377,7 @@
       "awayCorners": 2,
       "awayFouls": 8,
       "awayOffsides": 0,
-      "awayPossession": "35%",
+      "awayPossession": "33%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -40461,7 +40461,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -40470,7 +40470,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": null,
@@ -40620,23 +40620,41 @@
           "assist": "Y. Sugawara",
           "comments": null,
           "detail": "Substitution 1",
-          "displayMinute": "67'",
+          "displayMinute": "66'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 67,
+          "minute": 66,
           "player": "R. Doan",
           "playerOff": "R. Doan",
           "playerOn": "Y. Sugawara",
           "rawType": "subst",
           "source": "api_football",
           "team": "Japan",
-          "timer": "67:00",
-          "timerSeconds": 4020,
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Suzuki",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "66'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 66,
+          "player": "K. Nakamura",
+          "playerOff": "K. Nakamura",
+          "playerOn": "J. Suzuki",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "66:00",
+          "timerSeconds": 3960,
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": null,
@@ -40690,7 +40708,7 @@
       "homeCorners": 2,
       "homeFouls": 3,
       "homeOffsides": 1,
-      "homePossession": "65%",
+      "homePossession": "67%",
       "homeScore": 1,
       "homeShotsOnGoal": 6,
       "homeTeam": {
@@ -40701,15 +40719,15 @@
         "tla": "BRA"
       },
       "id": 537423,
-      "lastApiSync": "2026-06-29T18:29:08.960702+00:00",
-      "lastUpdated": "2026-06-29T20:29:06Z",
+      "lastApiSync": "2026-06-29T18:29:30.887443+00:00",
+      "lastUpdated": "2026-06-29T20:29:27Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
           "fouls": 8,
           "offsides": 0,
-          "possession": "35%",
+          "possession": "33%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 2,
@@ -40720,7 +40738,7 @@
           "corners": 2,
           "fouls": 3,
           "offsides": 1,
-          "possession": "65%",
+          "possession": "67%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 6,
@@ -40730,14 +40748,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-06-29T18:29:08.960702+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-06-29T18:29:30.887443+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -40762,7 +40780,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -40851,18 +40869,36 @@
           "assist": "Y. Sugawara",
           "comments": null,
           "detail": "Substitution 1",
-          "displayMinute": "67'",
+          "displayMinute": "66'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 67,
+          "minute": 66,
           "player": "R. Doan",
           "playerOff": "R. Doan",
           "playerOn": "Y. Sugawara",
           "rawType": "subst",
           "source": "api_football",
           "team": "Japan",
-          "timer": "67:00",
-          "timerSeconds": 4020,
+          "timer": "66:00",
+          "timerSeconds": 3960,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Suzuki",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "66'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 66,
+          "player": "K. Nakamura",
+          "playerOff": "K. Nakamura",
+          "playerOn": "J. Suzuki",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Japan",
+          "timer": "66:00",
+          "timerSeconds": 3960,
           "type": "Substitution"
         }
       ],
