@@ -40866,7 +40866,7 @@
         "shortName": "Paraguay",
         "tla": "PAR"
       },
-      "clockSeconds": 3480,
+      "clockSeconds": 3540,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -40875,7 +40875,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "58'",
+      "displayMinute": "59'",
       "events": [
         {
           "assist": "M. Galarza",
@@ -40948,10 +40948,28 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Substitution"
+        },
+        {
+          "assist": "Mauricio",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "J. Enciso",
+          "playerOff": "J. Enciso",
+          "playerOn": "Mauricio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "57:00",
+          "timerSeconds": 3420,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3480,
-      "fallbackClockText": "58'",
+      "fallbackClock": 3540,
+      "fallbackClockText": "59'",
       "goalEvents": [
         {
           "assist": "M. Galarza",
@@ -41016,8 +41034,8 @@
         "tla": "GER"
       },
       "id": 537415,
-      "lastApiSync": "2026-06-29T21:51:15.579460+00:00",
-      "lastUpdated": "2026-06-29T23:51:12Z",
+      "lastApiSync": "2026-06-29T21:51:35.419613+00:00",
+      "lastUpdated": "2026-06-29T23:51:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -41045,14 +41063,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "58'",
-        "lastApiSync": "2026-06-29T21:51:15.579460+00:00",
-        "seconds": 3480,
+        "displayMinute": "59'",
+        "lastApiSync": "2026-06-29T21:51:35.419613+00:00",
+        "seconds": 3540,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "58'"
+        "timer": "59'"
       },
-      "manualClockText": "58'",
+      "manualClockText": "59'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -41077,7 +41095,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 58,
+      "minute": 59,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -41160,6 +41178,24 @@
           "team": "Paraguay",
           "timer": "55:00",
           "timerSeconds": 3300,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Mauricio",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "J. Enciso",
+          "playerOff": "J. Enciso",
+          "playerOn": "Mauricio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "57:00",
+          "timerSeconds": 3420,
           "type": "Substitution"
         }
       ],
