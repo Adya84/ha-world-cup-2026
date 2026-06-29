@@ -42877,6 +42877,24 @@
           "timer": "123:00",
           "timerSeconds": 7380,
           "type": "Penalty"
+        },
+        {
+          "assist": null,
+          "comments": "Penalty Shootout",
+          "detail": "Penalty",
+          "displayMinute": "120+3'",
+          "extra": 3,
+          "isDisallowed": false,
+          "minute": 120,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "123:00",
+          "timerSeconds": 7380,
+          "type": "Penalty"
         }
       ],
       "goalEvents": [
@@ -43059,7 +43077,7 @@
       },
       "id": 537415,
       "lastApiSync": "2026-06-29T23:13:18.995713+00:00",
-      "lastUpdated": "2026-06-30T01:23:09Z",
+      "lastUpdated": "2026-06-30T01:23:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -43160,13 +43178,13 @@
         },
         "penalties": {
           "away": 3,
-          "home": 2
+          "home": 3
         },
         "regularTime": {
           "away": 1,
           "home": 1
         },
-        "winner": "AWAY_TEAM"
+        "winner": null
       },
       "scoreSource": "api_football_live",
       "season": {
