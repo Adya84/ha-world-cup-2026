@@ -40366,8 +40366,8 @@
     },
     {
       "apiFootballFixtureId": 1562344,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -40479,8 +40479,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -40488,7 +40486,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -40797,8 +40794,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -40886,9 +40881,8 @@
         "tla": "BRA"
       },
       "id": 537423,
-      "lastApiSync": "2026-06-29T19:02:57.167105+00:00",
-      "lastUpdated": "2026-06-29T21:02:51Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-29T19:03:19.476542+00:00",
+      "lastUpdated": "2026-06-29T21:03:15Z",
       "liveStatistics": {
         "away": {
           "corners": 2,
@@ -40912,39 +40906,6 @@
           "totalShots": 19,
           "yellowCards": 2
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-29T19:02:57.167105+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Houston",
-        "cloudCoverage": 12.5,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-29T19:02:56.994100+00:00",
-        "humidity": 50.0,
-        "latitude": 29.6847,
-        "longitude": -95.4107,
-        "name": "NRG Stadium weather",
-        "observedAt": "2026-06-29T19:00:00Z",
-        "pressure": 1016.4,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "NRG Stadium",
-        "temperature": 34.5,
-        "temperatureUnit": "C",
-        "windBearing": 164.2,
-        "windSpeed": 4.9,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -40994,7 +40955,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Endrick",
@@ -41164,29 +41125,6 @@
         "city": "Houston",
         "id": 0,
         "name": "NRG Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Houston",
-        "cloudCoverage": 12.5,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-29T19:02:56.994100+00:00",
-        "humidity": 50.0,
-        "latitude": 29.6847,
-        "longitude": -95.4107,
-        "name": "NRG Stadium weather",
-        "observedAt": "2026-06-29T19:00:00Z",
-        "pressure": 1016.4,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "NRG Stadium",
-        "temperature": 34.5,
-        "temperatureUnit": "C",
-        "windBearing": 164.2,
-        "windSpeed": 4.9,
-        "windSpeedUnit": "m/s"
       }
     },
     {
