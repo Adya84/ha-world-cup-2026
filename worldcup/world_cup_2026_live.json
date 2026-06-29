@@ -14,7 +14,7 @@
       "awayFouls": 2,
       "awayOffsides": 0,
       "awayPossession": "20%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/761.svg",
@@ -33,8 +33,49 @@
         "type": "CUP"
       },
       "displayMinute": "42'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "42'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 42,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 2520,
       "fallbackClockText": "42'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "42'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 42,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 2,
       "homeFouls": 8,
@@ -50,8 +91,8 @@
         "tla": "GER"
       },
       "id": 537415,
-      "lastApiSync": "2026-06-29T21:11:42.447653+00:00",
-      "lastUpdated": "2026-06-29T23:11:39Z",
+      "lastApiSync": "2026-06-29T21:12:05.415037+00:00",
+      "lastUpdated": "2026-06-29T23:11:59Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -80,7 +121,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "42'",
-        "lastApiSync": "2026-06-29T21:11:42.447653+00:00",
+        "lastApiSync": "2026-06-29T21:12:05.415037+00:00",
         "seconds": 2520,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -140,14 +181,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
-        "winner": "DRAW"
+        "winner": "AWAY_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
@@ -205,7 +246,7 @@
       "awayFouls": 2,
       "awayOffsides": 0,
       "awayPossession": "20%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/761.svg",
@@ -224,8 +265,49 @@
         "type": "CUP"
       },
       "displayMinute": "42'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "42'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 42,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 2520,
       "fallbackClockText": "42'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "42'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 42,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "42:00",
+          "timerSeconds": 2520,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 2,
       "homeFouls": 8,
@@ -241,8 +323,8 @@
         "tla": "GER"
       },
       "id": 537415,
-      "lastApiSync": "2026-06-29T21:11:42.447653+00:00",
-      "lastUpdated": "2026-06-29T23:11:39Z",
+      "lastApiSync": "2026-06-29T21:12:05.415037+00:00",
+      "lastUpdated": "2026-06-29T23:11:59Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -271,7 +353,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "42'",
-        "lastApiSync": "2026-06-29T21:11:42.447653+00:00",
+        "lastApiSync": "2026-06-29T21:12:05.415037+00:00",
         "seconds": 2520,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -331,14 +413,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
-        "winner": "DRAW"
+        "winner": "AWAY_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
