@@ -40525,6 +40525,24 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Lucas Paqueta",
+          "playerOff": "Lucas Paqueta",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 2760,
@@ -40570,8 +40588,8 @@
         "tla": "BRA"
       },
       "id": 537423,
-      "lastApiSync": "2026-06-29T18:07:23.805553+00:00",
-      "lastUpdated": "2026-06-29T20:07:21Z",
+      "lastApiSync": "2026-06-29T18:07:45.666871+00:00",
+      "lastUpdated": "2026-06-29T20:07:42Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -40600,7 +40618,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-06-29T18:07:23.805553+00:00",
+        "lastApiSync": "2026-06-29T18:07:45.666871+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -40679,6 +40697,26 @@
       },
       "stage": "LAST_32",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "Lucas Paqueta",
+          "playerOff": "Lucas Paqueta",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-06-29T17:00:00Z",
       "venue": {
         "city": "Houston",
