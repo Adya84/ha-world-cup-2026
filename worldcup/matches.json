@@ -40805,6 +40805,24 @@
           "timer": "124:00",
           "timerSeconds": 7440,
           "type": "Penalty"
+        },
+        {
+          "assist": null,
+          "comments": "Penalty Shootout",
+          "detail": "Missed Penalty",
+          "displayMinute": "120+5'",
+          "extra": 5,
+          "isDisallowed": false,
+          "minute": 120,
+          "player": "C. Summerville",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "125:00",
+          "timerSeconds": 7500,
+          "type": "Penalty"
         }
       ],
       "goalEvents": [
@@ -41037,6 +41055,29 @@
           "timer": "124:00",
           "timerSeconds": 7440,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Morocco",
+          "comments": "Penalty Shootout",
+          "detail": "Missed Penalty",
+          "displayMinute": "120+5'",
+          "extra": 5,
+          "goalNumber": 11,
+          "homeTeam": "Netherlands",
+          "isDisallowed": false,
+          "matchId": 537418,
+          "matchUtcDate": "2026-06-30T01:00:00Z",
+          "minute": 120,
+          "player": "C. Summerville",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Netherlands",
+          "timer": "125:00",
+          "timerSeconds": 7500,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -41056,7 +41097,7 @@
       },
       "id": 537418,
       "lastApiSync": "2026-06-30T03:39:50.562644+00:00",
-      "lastUpdated": "2026-06-30T05:52:39Z",
+      "lastUpdated": "2026-06-30T05:52:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
