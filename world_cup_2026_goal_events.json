@@ -37165,7 +37165,7 @@
     "apiFootballFixtureId": 1562345,
     "awayScore": 1,
     "awayTeam": "Morocco",
-    "base_seconds": 6600,
+    "base_seconds": 6660,
     "cardEvents": [
       {
         "assist": null,
@@ -37187,8 +37187,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 6600,
-    "displayMinute": "110'",
+    "clock_seconds": 6660,
+    "displayMinute": "111'",
     "events": [
       {
         "assist": null,
@@ -37405,6 +37405,24 @@
         "timer": "91:00",
         "timerSeconds": 5460,
         "type": "Goal"
+      },
+      {
+        "assist": "M. De Roon",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "110'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 110,
+        "player": "F. de Jong",
+        "playerOff": "F. de Jong",
+        "playerOn": "M. De Roon",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Netherlands",
+        "timer": "110:00",
+        "timerSeconds": 6600,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -37457,9 +37475,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Netherlands",
-    "lastApiSync": "2026-06-30T03:27:47.926405+00:00",
-    "manualClockText": "110'",
-    "phase_start": "2026-06-30T03:27:47.926405+00:00",
+    "lastApiSync": "2026-06-30T03:28:07.343658+00:00",
+    "manualClockText": "111'",
+    "phase_start": "2026-06-30T03:28:07.343658+00:00",
     "referees": [
       {
         "name": "Wilton Sampaio",
@@ -37634,6 +37652,24 @@
         "team": "Morocco",
         "timer": "87:00",
         "timerSeconds": 5220,
+        "type": "Substitution"
+      },
+      {
+        "assist": "M. De Roon",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "110'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 110,
+        "player": "F. de Jong",
+        "playerOff": "F. de Jong",
+        "playerOn": "M. De Roon",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Netherlands",
+        "timer": "110:00",
+        "timerSeconds": 6600,
         "type": "Substitution"
       }
     ],
