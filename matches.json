@@ -40366,6 +40366,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 8,
       "awayFouls": 15,
       "awayOffsides": 0,
@@ -40399,8 +40400,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7260,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -40408,7 +40408,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "121'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -40663,8 +40663,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 7260,
-      "fallbackClockText": "121'",
       "goalEvents": [
         {
           "assist": "C. Summerville",
@@ -40730,7 +40728,7 @@
       },
       "id": 537418,
       "lastApiSync": "2026-06-30T03:39:50.562644+00:00",
-      "lastUpdated": "2026-06-30T05:39:48Z",
+      "lastUpdated": "2026-06-30T05:40:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -40761,11 +40759,11 @@
         "displayMinute": "121'",
         "lastApiSync": "2026-06-30T03:39:50.562644+00:00",
         "seconds": 7260,
-        "source": "api_football_live_minute",
+        "source": "awaiting_api_football_minute",
         "status": "BT",
-        "timer": "121'"
+        "timer": "121:00"
       },
-      "manualClockText": "121'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -40790,7 +40788,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 121,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
