@@ -20881,6 +20881,11 @@ class WorldCup2026Panel extends HTMLElement {
     const existing = this.fixtureMatchNumber(match);
     if (existing && existing >= 73 && existing <= 104) return existing;
 
+    if (key && key !== "LAST_32") {
+      const routedMatchNumber = this.knockoutMatchNumberFromWinnerRoute(key, match);
+      if (routedMatchNumber) return routedMatchNumber;
+    }
+
     const start = this.knockoutRoundStarts()[key];
     if (!start) return existing;
 
@@ -21509,6 +21514,7 @@ class WorldCup2026Panel extends HTMLElement {
         if ((homeKey === first && awayKey === second) || (homeKey === second && awayKey === first)) {
           return Number(matchNumber);
         }
+        continue;
       }
 
       if (seedKeys.some((seedKey) => knownKeys.includes(seedKey))) {
@@ -21531,6 +21537,105 @@ class WorldCup2026Panel extends HTMLElement {
       FINAL: [104],
     };
     return orders[key] || null;
+  }
+
+  knockoutWinnerRouteMap() {
+    return {
+      89: [74, 77],
+      90: [73, 75],
+      93: [83, 84],
+      94: [81, 82],
+      91: [76, 78],
+      92: [79, 80],
+      95: [86, 88],
+      96: [85, 87],
+      97: [89, 90],
+      98: [93, 94],
+      99: [91, 92],
+      100: [95, 96],
+      101: [97, 98],
+      102: [99, 100],
+      104: [101, 102],
+    };
+  }
+
+  knockoutStageMatchNumbers(stage) {
+    const key = this.normaliseKnockoutStage(stage);
+    const map = {
+      LAST_16: [89, 90, 91, 92, 93, 94, 95, 96],
+      QUARTER_FINALS: [97, 98, 99, 100],
+      SEMI_FINALS: [101, 102],
+      FINAL: [104],
+    };
+    return map[key] || [];
+  }
+
+  knockoutMatchWinner(match) {
+    if (!match) return "";
+    const directWinner = match.winner || match.winnerTeam || match.winningTeam || match.qualifiedTeam || "";
+    if (directWinner) return directWinner;
+
+    const homeScore = Number(this.getHomeScore(match));
+    const awayScore = Number(this.getAwayScore(match));
+    if (Number.isFinite(homeScore) && Number.isFinite(awayScore)) {
+      if (homeScore > awayScore) return this.getHomeTeam(match);
+      if (awayScore > homeScore) return this.getAwayTeam(match);
+    }
+
+    const penalties = match.score?.penalties || match.penalties || match.penaltyScore || {};
+    const homePens = Number(penalties.home ?? penalties.homeTeam ?? penalties.home_score);
+    const awayPens = Number(penalties.away ?? penalties.awayTeam ?? penalties.away_score);
+    if (Number.isFinite(homePens) && Number.isFinite(awayPens)) {
+      if (homePens > awayPens) return this.getHomeTeam(match);
+      if (awayPens > homePens) return this.getAwayTeam(match);
+    }
+
+    return "";
+  }
+
+  knockoutWinnerByMatchNumber() {
+    const sources = [
+      ...(Array.isArray(this._data.results) ? this._data.results : []),
+      ...(Array.isArray(this._data.fixtures) ? this._data.fixtures : []),
+      ...(Array.isArray(this._data.live) ? this._data.live : []),
+    ];
+    const winners = new Map();
+
+    sources.forEach((match) => {
+      const stage = this.normaliseKnockoutStage(match?.stage);
+      if (!stage) return;
+      const number = this.fixtureMatchNumber(match) || (stage === "LAST_32" ? this.knockoutRound32MatchNumberFromTeams(match) : null);
+      if (!number || number < 73 || number > 104 || winners.has(number)) return;
+      const winner = this.knockoutMatchWinner(match);
+      if (winner) winners.set(number, winner);
+    });
+
+    return winners;
+  }
+
+  knockoutMatchNumberFromWinnerRoute(stage, match) {
+    if (!match) return null;
+    const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
+    const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
+    const matchKeys = [homeKey, awayKey].filter((key) => key && key !== "tbc");
+    if (matchKeys.length < 2) return null;
+
+    const winners = this.knockoutWinnerByMatchNumber();
+    const routes = this.knockoutWinnerRouteMap();
+    const possibleNumbers = this.knockoutStageMatchNumbers(stage);
+
+    for (const matchNumber of possibleNumbers) {
+      const previousMatches = routes[matchNumber] || [];
+      const routeKeys = previousMatches
+        .map((previousNumber) => this.fixtureTeamKey(winners.get(previousNumber)))
+        .filter((key) => key && key !== "tbc");
+      if (routeKeys.length < 2) continue;
+      if (matchKeys.every((key) => routeKeys.includes(key))) {
+        return matchNumber;
+      }
+    }
+
+    return null;
   }
 
   knockoutTeamFromSeed(seed, qualifiers) {
