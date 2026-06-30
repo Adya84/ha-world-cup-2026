@@ -10,7 +10,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 7,
       "awayFouls": 9,
       "awayOffsides": 0,
@@ -44,7 +43,8 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 5700,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "95'",
       "events": [
         {
           "assist": null,
@@ -271,6 +271,8 @@
           "type": "Goal"
         }
       ],
+      "fallbackClock": 5700,
+      "fallbackClockText": "95'",
       "goalEvents": [
         {
           "assist": "C. Summerville",
@@ -335,8 +337,8 @@
         "tla": "NED"
       },
       "id": 537418,
-      "lastApiSync": "2026-06-30T02:59:42.488526+00:00",
-      "lastUpdated": "2026-06-30T05:03:45Z",
+      "lastApiSync": "2026-06-30T03:04:05.518977+00:00",
+      "lastUpdated": "2026-06-30T05:04:03Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -364,14 +366,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-30T02:59:42.488526+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
+        "displayMinute": "95'",
+        "lastApiSync": "2026-06-30T03:04:05.518977+00:00",
+        "seconds": 5700,
+        "source": "api_football_live_minute",
         "status": "BT",
-        "timer": "90:00"
+        "timer": "95'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "95'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -396,6 +398,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
+      "minute": 95,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -649,7 +652,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 7,
       "awayFouls": 9,
       "awayOffsides": 0,
@@ -683,7 +685,8 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 5700,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -691,7 +694,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "95'",
       "events": [
         {
           "assist": null,
@@ -910,6 +913,8 @@
           "type": "Goal"
         }
       ],
+      "fallbackClock": 5700,
+      "fallbackClockText": "95'",
       "goalEvents": [
         {
           "assist": "C. Summerville",
@@ -974,8 +979,8 @@
         "tla": "NED"
       },
       "id": 537418,
-      "lastApiSync": "2026-06-30T02:59:42.488526+00:00",
-      "lastUpdated": "2026-06-30T05:03:45Z",
+      "lastApiSync": "2026-06-30T03:04:05.518977+00:00",
+      "lastUpdated": "2026-06-30T05:04:03Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1003,14 +1008,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-06-30T02:59:42.488526+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
+        "displayMinute": "95'",
+        "lastApiSync": "2026-06-30T03:04:05.518977+00:00",
+        "seconds": 5700,
+        "source": "api_football_live_minute",
         "status": "BT",
-        "timer": "90:00"
+        "timer": "95'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "95'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -1035,6 +1040,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
+      "minute": 95,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
