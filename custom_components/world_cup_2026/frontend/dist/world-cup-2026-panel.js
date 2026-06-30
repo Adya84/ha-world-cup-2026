@@ -21484,8 +21484,13 @@ class WorldCup2026Panel extends HTMLElement {
     const qualifiers = this.knockoutGroupQualifiers();
     const teamKey = (team) => this.fixtureTeamKey(team);
     const seedMap = this.knockoutRound32SeedMap();
+    const lockedMap = this.knockoutRound32LockedTeamMap();
 
     return Object.fromEntries(Object.entries(seedMap).map(([matchNumber, seeds]) => {
+      const lockedTeams = lockedMap[Number(matchNumber)];
+      if (lockedTeams) {
+        return [Number(matchNumber), lockedTeams.map((team) => ({ label: team, key: teamKey(team), seed: team }))];
+      }
       const teams = seeds.map((seed) => {
         const resolved = this.knockoutTeamFromSeed(seed, qualifiers);
         const value = resolved && !String(resolved).toLowerCase().startsWith("3rd ")
@@ -21497,12 +21502,66 @@ class WorldCup2026Panel extends HTMLElement {
     }));
   }
 
+  knockoutRound32LockedTeamMap() {
+    return {
+      73: ["South Africa", "Canada"],
+      74: ["Germany", "Paraguay"],
+      75: ["Netherlands", "Morocco"],
+      76: ["Brazil", "Japan"],
+      77: ["France", "Sweden"],
+      78: ["Ivory Coast", "Norway"],
+      79: ["Mexico", "Ecuador"],
+      80: ["England", "DR Congo"],
+      81: ["United States", "Bosnia & Herzegovina"],
+      82: ["Belgium", "Senegal"],
+      83: ["Portugal", "Croatia"],
+      84: ["Spain", "Austria"],
+      85: ["Switzerland", "Algeria"],
+      86: ["Argentina", "Cape Verde"],
+      87: ["Colombia", "Ghana"],
+      88: ["Australia", "Egypt"],
+    };
+  }
+
+  knockoutLockedTeamMap() {
+    return {
+      ...this.knockoutRound32LockedTeamMap(),
+      89: ["Paraguay", "Winner Match 77"],
+      90: ["Canada", "Morocco"],
+      91: ["Brazil", "Winner Match 78"],
+      92: ["Winner Match 79", "Winner Match 80"],
+      93: ["Winner Match 83", "Winner Match 84"],
+      94: ["Winner Match 81", "Winner Match 82"],
+      95: ["Winner Match 86", "Winner Match 88"],
+      96: ["Winner Match 85", "Winner Match 87"],
+      97: ["Winner Match 89", "Winner Match 90"],
+      98: ["Winner Match 93", "Winner Match 94"],
+      99: ["Winner Match 91", "Winner Match 92"],
+      100: ["Winner Match 95", "Winner Match 96"],
+      101: ["Winner Match 97", "Winner Match 98"],
+      102: ["Winner Match 99", "Winner Match 100"],
+      103: ["Loser Match 101", "Loser Match 102"],
+      104: ["Winner Match 101", "Winner Match 102"],
+    };
+  }
+
   knockoutRound32MatchNumberFromTeams(match) {
     if (!match) return null;
     const homeKey = this.fixtureTeamKey(this.getHomeTeam(match));
     const awayKey = this.fixtureTeamKey(this.getAwayTeam(match));
     const knownKeys = [homeKey, awayKey].filter((key) => key && key !== "tbc");
     if (!knownKeys.length) return null;
+
+    const lockedMap = this.knockoutRound32LockedTeamMap();
+    for (const [matchNumber, teams] of Object.entries(lockedMap)) {
+      const first = this.fixtureTeamKey(teams?.[0]);
+      const second = this.fixtureTeamKey(teams?.[1]);
+      if (homeKey && awayKey && homeKey !== "tbc" && awayKey !== "tbc") {
+        if ((homeKey === first && awayKey === second) || (homeKey === second && awayKey === first)) {
+          return Number(matchNumber);
+        }
+      }
+    }
 
     const seeds = this.knockoutRound32ResolvedSeedMap();
     for (const [matchNumber, teams] of Object.entries(seeds)) {
@@ -21658,18 +21717,18 @@ class WorldCup2026Panel extends HTMLElement {
   }
 
   knockoutSeededPlaceholder(stage, index, match = null, forcedMatchNumber = null) {
-    if (stage !== "LAST_32") return null;
     const matchNumber = forcedMatchNumber || this.knockoutDerivedMatchNumber(stage, index, match || {});
-    const seeds = this.knockoutRound32SeedMap()[matchNumber];
-    if (!seeds) return null;
+    const seeds = stage === "LAST_32" ? this.knockoutRound32SeedMap()[matchNumber] : null;
+    const lockedTeams = this.knockoutLockedTeamMap()[matchNumber];
+    if (!seeds && !lockedTeams) return null;
     const qualifiers = this.knockoutGroupQualifiers();
-    const home = this.knockoutTeamFromSeed(seeds[0], qualifiers) || seeds[0];
-    const away = this.knockoutTeamFromSeed(seeds[1], qualifiers) || seeds[1];
+    const home = lockedTeams?.[0] || this.knockoutTeamFromSeed(seeds[0], qualifiers) || seeds[0];
+    const away = lockedTeams?.[1] || this.knockoutTeamFromSeed(seeds[1], qualifiers) || seeds[1];
     return {
       id: `wc2026-derived-knockout-${matchNumber}`,
       matchNumber,
       fifaMatchNumber: matchNumber,
-      stage: "LAST_32",
+      stage,
       status: "TIMED",
       utcDate: match?.utcDate || match?.date || "",
       date: match?.utcDate || match?.date || "",
@@ -22124,6 +22183,13 @@ class WorldCup2026Panel extends HTMLElement {
       overflow.forEach((match) => {
         const emptyIndex = slots.findIndex((slot) => !slot);
         if (emptyIndex >= 0) slots[emptyIndex] = match;
+      });
+
+      slots.forEach((match, index) => {
+        if (match) return;
+        const orderedMatchNumber = displayOrder?.[index] || (start ? start + index : null);
+        const seeded = this.knockoutSeededPlaceholder(stage, index, null, orderedMatchNumber);
+        if (seeded) slots[index] = seeded;
       });
 
       if (stage === "LAST_32") {
