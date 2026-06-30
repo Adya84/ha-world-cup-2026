@@ -42735,10 +42735,10 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
+      "awayCorners": 0,
       "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "4%",
+      "awayPossession": "19%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -42748,7 +42748,7 @@
         "shortName": "Morocco",
         "tla": "MAR"
       },
-      "clockSeconds": 360,
+      "clockSeconds": 420,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -42757,14 +42757,14 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "6'",
-      "fallbackClock": 360,
-      "fallbackClockText": "6'",
+      "displayMinute": "7'",
+      "fallbackClock": 420,
+      "fallbackClockText": "7'",
       "group": null,
-      "homeCorners": null,
-      "homeFouls": 0,
+      "homeCorners": 1,
+      "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "96%",
+      "homePossession": "81%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -42775,15 +42775,15 @@
         "tla": "NED"
       },
       "id": 537418,
-      "lastApiSync": "2026-06-30T01:06:10.761821+00:00",
-      "lastUpdated": "2026-06-30T03:06:09Z",
+      "lastApiSync": "2026-06-30T01:06:30.641307+00:00",
+      "lastUpdated": "2026-06-30T03:06:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
+          "corners": 0,
           "fouls": 0,
           "offsides": null,
-          "possession": "4%",
+          "possession": "19%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -42791,10 +42791,10 @@
           "yellowCards": null
         },
         "home": {
-          "corners": null,
-          "fouls": 0,
+          "corners": 1,
+          "fouls": 1,
           "offsides": null,
-          "possession": "96%",
+          "possession": "81%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -42804,14 +42804,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "6'",
-        "lastApiSync": "2026-06-30T01:06:10.761821+00:00",
-        "seconds": 360,
+        "displayMinute": "7'",
+        "lastApiSync": "2026-06-30T01:06:30.641307+00:00",
+        "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "6'"
+        "timer": "7'"
       },
-      "manualClockText": "6'",
+      "manualClockText": "7'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Monterrey",
@@ -42836,7 +42836,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 6,
+      "minute": 7,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
