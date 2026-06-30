@@ -40358,15 +40358,14 @@
     },
     {
       "apiFootballFixtureId": 1562345,
-      "apiFootballStatus": "P",
-      "apiFootballStatusLong": "Penalty in progress",
+      "apiFootballStatus": "PEN",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 8,
       "awayFouls": 15,
       "awayOffsides": 0,
@@ -40400,7 +40399,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -40408,7 +40406,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -41114,9 +41111,8 @@
         "tla": "NED"
       },
       "id": 537418,
-      "lastApiSync": "2026-06-30T03:39:50.562644+00:00",
-      "lastUpdated": "2026-06-30T05:53:33Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-06-30T03:53:54.346028+00:00",
+      "lastUpdated": "2026-06-30T05:53:51Z",
       "liveStatistics": {
         "away": {
           "corners": 8,
@@ -41141,40 +41137,8 @@
           "yellowCards": 0
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "121'",
-        "lastApiSync": "2026-06-30T03:39:50.562644+00:00",
-        "seconds": 7260,
-        "source": "awaiting_api_football_minute",
-        "status": "P",
-        "timer": "121:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Monterrey",
-        "cloudCoverage": 15.6,
-        "condition": "fair_night",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-30T03:48:50.708716+00:00",
-        "humidity": 56.0,
-        "latitude": 25.6682,
-        "longitude": -100.2446,
-        "name": "Estadio BBVA weather",
-        "observedAt": "2026-06-30T03:00:00Z",
-        "pressure": 1011.7,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio BBVA",
-        "temperature": 28.6,
-        "temperatureUnit": "C",
-        "windBearing": 129.4,
-        "windSpeed": 8.9,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": null,
+      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -41233,7 +41197,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "P",
+      "status": "PEN",
       "substitutionEvents": [
         {
           "assist": "T. Koopmeiners",
@@ -41439,29 +41403,6 @@
         "city": "Monterrey",
         "id": 11905,
         "name": "Estadio BBVA"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Monterrey",
-        "cloudCoverage": 15.6,
-        "condition": "fair_night",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-06-30T03:48:50.708716+00:00",
-        "humidity": 56.0,
-        "latitude": 25.6682,
-        "longitude": -100.2446,
-        "name": "Estadio BBVA weather",
-        "observedAt": "2026-06-30T03:00:00Z",
-        "pressure": 1011.7,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio BBVA",
-        "temperature": 28.6,
-        "temperatureUnit": "C",
-        "windBearing": 129.4,
-        "windSpeed": 8.9,
-        "windSpeedUnit": "m/s"
       }
     },
     {
