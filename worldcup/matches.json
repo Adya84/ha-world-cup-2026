@@ -45125,8 +45125,8 @@
     },
     {
       "apiFootballFixtureId": 1567307,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -45134,7 +45134,7 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 11,
+      "awayFouls": 12,
       "awayOffsides": 4,
       "awayPossession": "40%",
       "awayScore": 1,
@@ -45184,8 +45184,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -45193,7 +45191,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "C. Mbemba",
@@ -45448,8 +45445,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "C. Mbemba",
@@ -45524,7 +45519,7 @@
       "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 5,
-      "homeFouls": 9,
+      "homeFouls": 10,
       "homeOffsides": 0,
       "homePossession": "60%",
       "homeScore": 2,
@@ -45537,13 +45532,12 @@
         "tla": "ENG"
       },
       "id": 537426,
-      "lastApiSync": "2026-07-01T18:00:36.862268+00:00",
-      "lastUpdated": "2026-07-01T19:59:57Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-01T18:01:24.941585+00:00",
+      "lastUpdated": "2026-07-01T20:00:54Z",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 11,
+          "fouls": 12,
           "offsides": 4,
           "possession": "40%",
           "redCards": null,
@@ -45554,7 +45548,7 @@
         },
         "home": {
           "corners": 5,
-          "fouls": 9,
+          "fouls": 10,
           "offsides": 0,
           "possession": "60%",
           "redCards": null,
@@ -45564,16 +45558,6 @@
           "yellowCards": 1
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-01T18:00:36.862268+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
       "matchday": null,
       "minute": 90,
       "odds": {
@@ -45622,7 +45606,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "A. Gordon",
@@ -45824,12 +45808,19 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastUpdated": "2026-07-01T15:20:12Z",
+      "lastUpdated": "2026-07-01T20:00:01Z",
       "matchday": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 190002,
+          "name": "Said Martinez",
+          "nationality": "Honduras",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
