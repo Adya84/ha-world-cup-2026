@@ -36533,7 +36533,7 @@
     "apiFootballFixtureId": 1567306,
     "awayScore": 0,
     "awayTeam": "Ecuador",
-    "base_seconds": 3120,
+    "base_seconds": 3600,
     "cardEvents": [
       {
         "assist": null,
@@ -36555,8 +36555,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3120,
-    "displayMinute": "52'",
+    "clock_seconds": 3600,
+    "displayMinute": "60'",
     "events": [
       {
         "assist": "R. Alvarado",
@@ -36647,6 +36647,42 @@
         "timer": "46:00",
         "timerSeconds": 2760,
         "type": "Substitution"
+      },
+      {
+        "assist": "B. Gutierrez",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "58'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 58,
+        "player": "G. Mora",
+        "playerOff": "G. Mora",
+        "playerOn": "B. Gutierrez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Mexico",
+        "timer": "58:00",
+        "timerSeconds": 3480,
+        "type": "Substitution"
+      },
+      {
+        "assist": "K. Rodriguez",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "59'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 59,
+        "player": "E. Valencia",
+        "playerOff": "E. Valencia",
+        "playerOn": "K. Rodriguez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Ecuador",
+        "timer": "59:00",
+        "timerSeconds": 3540,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -36699,9 +36735,9 @@
     ],
     "homeScore": 2,
     "homeTeam": "Mexico",
-    "lastApiSync": "2026-07-01T03:14:07.269047+00:00",
-    "manualClockText": "52'",
-    "phase_start": "2026-07-01T03:14:07.269047+00:00",
+    "lastApiSync": "2026-07-01T03:22:31.614497+00:00",
+    "manualClockText": "60'",
+    "phase_start": "2026-07-01T03:22:31.614497+00:00",
     "referees": [
       {
         "name": "Slavko Vin\u010di\u010d",
@@ -36750,6 +36786,42 @@
         "team": "Ecuador",
         "timer": "46:00",
         "timerSeconds": 2760,
+        "type": "Substitution"
+      },
+      {
+        "assist": "B. Gutierrez",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "58'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 58,
+        "player": "G. Mora",
+        "playerOff": "G. Mora",
+        "playerOn": "B. Gutierrez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Mexico",
+        "timer": "58:00",
+        "timerSeconds": 3480,
+        "type": "Substitution"
+      },
+      {
+        "assist": "K. Rodriguez",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "59'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 59,
+        "player": "E. Valencia",
+        "playerOff": "E. Valencia",
+        "playerOn": "K. Rodriguez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Ecuador",
+        "timer": "59:00",
+        "timerSeconds": 3540,
         "type": "Substitution"
       }
     ],
