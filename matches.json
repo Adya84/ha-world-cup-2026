@@ -45575,9 +45575,27 @@
           "timer": "64:00",
           "timerSeconds": 3840,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "L. Camara",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45586,7 +45604,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": null,
@@ -45731,10 +45749,28 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "L. Camara",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": null,
@@ -45786,7 +45822,7 @@
       "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 3,
-      "homeFouls": 9,
+      "homeFouls": 10,
       "homeOffsides": 0,
       "homePossession": "53%",
       "homeScore": 0,
@@ -45799,8 +45835,8 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T21:29:32.451627+00:00",
-      "lastUpdated": "2026-07-01T23:29:30Z",
+      "lastApiSync": "2026-07-01T21:29:53.202422+00:00",
+      "lastUpdated": "2026-07-01T23:29:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45812,30 +45848,30 @@
           "shotsOffGoal": 6,
           "shotsOnGoal": 4,
           "totalShots": 11,
-          "yellowCards": null
+          "yellowCards": 0
         },
         "home": {
           "corners": 3,
-          "fouls": 9,
+          "fouls": 10,
           "offsides": 0,
           "possession": "53%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 2,
           "totalShots": 9,
-          "yellowCards": null
+          "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-07-01T21:29:32.451627+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-07-01T21:29:53.202422+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -45860,7 +45896,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
