@@ -1,4 +1,782 @@
 {
-  "live": [],
-  "matches": []
+  "live": [
+    {
+      "apiFootballFixtureId": 1567306,
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayCorners": 5,
+      "awayFouls": 6,
+      "awayOffsides": null,
+      "awayPossession": "44%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 1,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/791.svg",
+        "id": 791,
+        "name": "Ecuador",
+        "shortName": "Ecuador",
+        "tla": "ECU"
+      },
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "45+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "A. Franco",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 3000,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "50'",
+      "events": [
+        {
+          "assist": "R. Alvarado",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "22'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 22,
+          "player": "J. Quinones",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
+        },
+        {
+          "assist": "J. Quinones",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "31'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 31,
+          "player": "R. Jimenez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "45+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "A. Franco",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": "Y. Medina",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Franco",
+          "playerOff": "A. Franco",
+          "playerOn": "Y. Medina",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Preciado",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Ordonez",
+          "playerOff": "J. Ordonez",
+          "playerOn": "A. Preciado",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 3000,
+      "fallbackClockText": "50'",
+      "goalEvents": [
+        {
+          "assist": "R. Alvarado",
+          "awayTeam": "Ecuador",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "22'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Mexico",
+          "isDisallowed": false,
+          "matchId": 537425,
+          "matchUtcDate": "2026-07-01T01:00:00Z",
+          "minute": 22,
+          "player": "J. Quinones",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
+        },
+        {
+          "assist": "J. Quinones",
+          "awayTeam": "Ecuador",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "31'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Mexico",
+          "isDisallowed": false,
+          "matchId": 537425,
+          "matchUtcDate": "2026-07-01T01:00:00Z",
+          "minute": 31,
+          "player": "R. Jimenez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
+      "group": null,
+      "homeCorners": 1,
+      "homeFouls": 5,
+      "homeOffsides": null,
+      "homePossession": "56%",
+      "homeScore": 2,
+      "homeShotsOnGoal": 2,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/769.svg",
+        "id": 769,
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX"
+      },
+      "id": 537425,
+      "lastApiSync": "2026-07-01T03:12:49.133981+00:00",
+      "lastUpdated": "2026-07-01T05:12:42Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 5,
+          "fouls": 6,
+          "offsides": null,
+          "possession": "44%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 5,
+          "offsides": null,
+          "possession": "56%",
+          "redCards": null,
+          "shotsOffGoal": 7,
+          "shotsOnGoal": 2,
+          "totalShots": 11,
+          "yellowCards": 0
+        }
+      },
+      "manualClock": {
+        "active": false,
+        "displayMinute": "50'",
+        "lastApiSync": "2026-07-01T03:12:49.133981+00:00",
+        "seconds": 3000,
+        "source": "api_football_live_minute",
+        "status": "2H",
+        "timer": "50'"
+      },
+      "manualClockText": "50'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 98.4,
+        "condition": "cloudy",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-01T03:12:45.569660+00:00",
+        "humidity": 78.9,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-07-01T03:00:00Z",
+        "pressure": 1019.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 16.0,
+        "temperatureUnit": "C",
+        "windBearing": 205.1,
+        "windSpeed": 0.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": null,
+      "minute": 50,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Slavko Vin\u010di\u010d",
+          "nationality": "Slovenia",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Slavko Vin\u010di\u0107, Slovenia",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Slavko Vin\u010di\u010d",
+          "nationality": "Slovenia",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Slavko Vin\u010di\u0107, Slovenia",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 2
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 2
+        },
+        "winner": "HOME_TEAM"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "LAST_32",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "Y. Medina",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Franco",
+          "playerOff": "A. Franco",
+          "playerOn": "Y. Medina",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Preciado",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Ordonez",
+          "playerOff": "J. Ordonez",
+          "playerOn": "A. Preciado",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "utcDate": "2026-07-01T01:00:00Z",
+      "venue": {
+        "city": "Mexico City",
+        "id": 1069,
+        "name": "Estadio Banorte"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 98.4,
+        "condition": "cloudy",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-01T03:12:45.569660+00:00",
+        "humidity": 78.9,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-07-01T03:00:00Z",
+        "pressure": 1019.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 16.0,
+        "temperatureUnit": "C",
+        "windBearing": 205.1,
+        "windSpeed": 0.7,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ],
+  "matches": [
+    {
+      "apiFootballFixtureId": 1567306,
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayCorners": 5,
+      "awayFouls": 6,
+      "awayOffsides": null,
+      "awayPossession": "44%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 1,
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/791.svg",
+        "id": 791,
+        "name": "Ecuador",
+        "shortName": "Ecuador",
+        "tla": "ECU"
+      },
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "45+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "A. Franco",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 3000,
+      "clockSource": "api_football_live_minute",
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "displayMinute": "50'",
+      "events": [
+        {
+          "assist": "R. Alvarado",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "22'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 22,
+          "player": "J. Quinones",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
+        },
+        {
+          "assist": "J. Quinones",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "31'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 31,
+          "player": "R. Jimenez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "45+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "A. Franco",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": "Y. Medina",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Franco",
+          "playerOff": "A. Franco",
+          "playerOn": "Y. Medina",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Preciado",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Ordonez",
+          "playerOff": "J. Ordonez",
+          "playerOn": "A. Preciado",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "fallbackClock": 3000,
+      "fallbackClockText": "50'",
+      "goalEvents": [
+        {
+          "assist": "R. Alvarado",
+          "awayTeam": "Ecuador",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "22'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Mexico",
+          "isDisallowed": false,
+          "matchId": 537425,
+          "matchUtcDate": "2026-07-01T01:00:00Z",
+          "minute": 22,
+          "player": "J. Quinones",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
+        },
+        {
+          "assist": "J. Quinones",
+          "awayTeam": "Ecuador",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "31'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Mexico",
+          "isDisallowed": false,
+          "matchId": 537425,
+          "matchUtcDate": "2026-07-01T01:00:00Z",
+          "minute": 31,
+          "player": "R. Jimenez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
+      "group": null,
+      "homeCorners": 1,
+      "homeFouls": 5,
+      "homeOffsides": null,
+      "homePossession": "56%",
+      "homeScore": 2,
+      "homeShotsOnGoal": 2,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/769.svg",
+        "id": 769,
+        "name": "Mexico",
+        "shortName": "Mexico",
+        "tla": "MEX"
+      },
+      "id": 537425,
+      "lastApiSync": "2026-07-01T03:12:49.133981+00:00",
+      "lastUpdated": "2026-07-01T05:12:42Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 5,
+          "fouls": 6,
+          "offsides": null,
+          "possession": "44%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 2,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 1,
+          "fouls": 5,
+          "offsides": null,
+          "possession": "56%",
+          "redCards": null,
+          "shotsOffGoal": 7,
+          "shotsOnGoal": 2,
+          "totalShots": 11,
+          "yellowCards": 0
+        }
+      },
+      "manualClock": {
+        "active": false,
+        "displayMinute": "50'",
+        "lastApiSync": "2026-07-01T03:12:49.133981+00:00",
+        "seconds": 3000,
+        "source": "api_football_live_minute",
+        "status": "2H",
+        "timer": "50'"
+      },
+      "manualClockText": "50'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 98.4,
+        "condition": "cloudy",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-01T03:12:45.569660+00:00",
+        "humidity": 78.9,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-07-01T03:00:00Z",
+        "pressure": 1019.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 16.0,
+        "temperatureUnit": "C",
+        "windBearing": 205.1,
+        "windSpeed": 0.7,
+        "windSpeedUnit": "m/s"
+      },
+      "matchday": null,
+      "minute": 50,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "officials": [
+        {
+          "name": "Slavko Vin\u010di\u010d",
+          "nationality": "Slovenia",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Slavko Vin\u010di\u0107, Slovenia",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Slavko Vin\u010di\u010d",
+          "nationality": "Slovenia",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Slavko Vin\u010di\u0107, Slovenia",
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 0,
+          "home": 2
+        },
+        "halfTime": {
+          "away": 0,
+          "home": 2
+        },
+        "winner": "HOME_TEAM"
+      },
+      "scoreSource": "api_football_live",
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "LAST_32",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "Y. Medina",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Franco",
+          "playerOff": "A. Franco",
+          "playerOn": "Y. Medina",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Preciado",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "J. Ordonez",
+          "playerOff": "J. Ordonez",
+          "playerOn": "A. Preciado",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
+      "utcDate": "2026-07-01T01:00:00Z",
+      "venue": {
+        "city": "Mexico City",
+        "id": 1069,
+        "name": "Estadio Banorte"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Mexico City",
+        "cloudCoverage": 98.4,
+        "condition": "cloudy",
+        "country": "Mexico",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-01T03:12:45.569660+00:00",
+        "humidity": 78.9,
+        "latitude": 19.303,
+        "longitude": -99.1505,
+        "name": "Estadio Banorte weather",
+        "observedAt": "2026-07-01T03:00:00Z",
+        "pressure": 1019.1,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Estadio Banorte",
+        "temperature": 16.0,
+        "temperatureUnit": "C",
+        "windBearing": 205.1,
+        "windSpeed": 0.7,
+        "windSpeedUnit": "m/s"
+      }
+    }
+  ]
 }
