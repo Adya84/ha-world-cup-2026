@@ -45557,7 +45557,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 3780,
+      "clockSeconds": 3840,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45566,7 +45566,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "63'",
+      "displayMinute": "64'",
       "events": [
         {
           "assist": null,
@@ -45657,10 +45657,28 @@
           "timer": "56:00",
           "timerSeconds": 3360,
           "type": "Substitution"
+        },
+        {
+          "assist": "D. Moreira",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "H. Vanaken",
+          "playerOff": "H. Vanaken",
+          "playerOn": "D. Moreira",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3780,
-      "fallbackClockText": "63'",
+      "fallbackClock": 3840,
+      "fallbackClockText": "64'",
       "goalEvents": [
         {
           "assist": null,
@@ -45725,8 +45743,8 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T21:25:23.122306+00:00",
-      "lastUpdated": "2026-07-01T23:25:21Z",
+      "lastApiSync": "2026-07-01T21:25:44.025915+00:00",
+      "lastUpdated": "2026-07-01T23:25:42Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45754,14 +45772,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "63'",
-        "lastApiSync": "2026-07-01T21:25:23.122306+00:00",
-        "seconds": 3780,
+        "displayMinute": "64'",
+        "lastApiSync": "2026-07-01T21:25:44.025915+00:00",
+        "seconds": 3840,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "63'"
+        "timer": "64'"
       },
-      "manualClockText": "63'",
+      "manualClockText": "64'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -45786,7 +45804,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 63,
+      "minute": 64,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -45887,6 +45905,24 @@
           "team": "Belgium",
           "timer": "56:00",
           "timerSeconds": 3360,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Moreira",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "H. Vanaken",
+          "playerOff": "H. Vanaken",
+          "playerOn": "D. Moreira",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "63:00",
+          "timerSeconds": 3780,
           "type": "Substitution"
         }
       ],
