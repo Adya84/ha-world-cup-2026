@@ -45074,6 +45074,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/bosnia.svg",
         "id": 1060,
@@ -45081,6 +45082,8 @@
         "shortName": "Bosnia-H.",
         "tla": "BIH"
       },
+      "clockSeconds": 0,
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -45088,6 +45091,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
+      "displayMinute": "Awaiting kickoff API data",
       "group": null,
       "homeTeam": {
         "crest": "https://crests.football-data.org/usa.svg",
@@ -45097,8 +45101,21 @@
         "tla": "USA"
       },
       "id": 537421,
+      "lastApiSync": null,
       "lastUpdated": "2026-07-02T00:59:03Z",
+      "liveSource": "pre_kickoff_window",
+      "manualClock": {
+        "active": false,
+        "displayMinute": "0'",
+        "lastApiSync": null,
+        "seconds": 0,
+        "source": "awaiting_api_football_minute",
+        "status": "LIVE",
+        "timer": "0:00"
+      },
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
+      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -45130,7 +45147,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "TIMED",
+      "status": "LIVE",
       "utcDate": "2026-07-02T00:00:00Z"
     },
     {
