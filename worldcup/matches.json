@@ -40809,8 +40809,8 @@
     },
     {
       "apiFootballFixtureId": 1567306,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -40904,8 +40904,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -40913,7 +40911,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "R. Alvarado",
@@ -41204,8 +41201,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "R. Alvarado",
@@ -41270,9 +41265,8 @@
         "tla": "MEX"
       },
       "id": 537425,
-      "lastApiSync": "2026-07-01T04:01:31.346495+00:00",
-      "lastUpdated": "2026-07-01T06:01:30Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-01T04:01:51.103769+00:00",
+      "lastUpdated": "2026-07-01T06:01:48Z",
       "liveStatistics": {
         "away": {
           "corners": 8,
@@ -41296,39 +41290,6 @@
           "totalShots": 15,
           "yellowCards": 0
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-01T04:01:31.346495+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Mexico City",
-        "cloudCoverage": 98.4,
-        "condition": "cloudy",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-01T03:53:24.009653+00:00",
-        "humidity": 78.9,
-        "latitude": 19.303,
-        "longitude": -99.1505,
-        "name": "Estadio Banorte weather",
-        "observedAt": "2026-07-01T03:00:00Z",
-        "pressure": 1019.1,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio Banorte",
-        "temperature": 16.0,
-        "temperatureUnit": "C",
-        "windBearing": 205.1,
-        "windSpeed": 0.7,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -41378,7 +41339,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Y. Medina",
@@ -41566,29 +41527,6 @@
         "city": "Mexico City",
         "id": 1069,
         "name": "Estadio Banorte"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Mexico City",
-        "cloudCoverage": 98.4,
-        "condition": "cloudy",
-        "country": "Mexico",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-01T03:53:24.009653+00:00",
-        "humidity": 78.9,
-        "latitude": 19.303,
-        "longitude": -99.1505,
-        "name": "Estadio Banorte weather",
-        "observedAt": "2026-07-01T03:00:00Z",
-        "pressure": 1019.1,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Estadio Banorte",
-        "temperature": 16.0,
-        "temperatureUnit": "C",
-        "windBearing": 205.1,
-        "windSpeed": 0.7,
-        "windSpeedUnit": "m/s"
       }
     },
     {
