@@ -11,9 +11,9 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 8,
+      "awayFouls": 9,
       "awayOffsides": 4,
-      "awayPossession": "40%",
+      "awayPossession": "39%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4500,
+      "clockSeconds": 4620,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "75'",
+      "displayMinute": "77'",
       "events": [
         {
           "assist": "C. Mbemba",
@@ -215,10 +215,46 @@
           "timer": "75:00",
           "timerSeconds": 4500,
           "type": "Goal"
+        },
+        {
+          "assist": "E. Kayembe",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "E. Kayembe",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Bongonda",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "B. Cipenga",
+          "playerOff": "B. Cipenga",
+          "playerOn": "T. Bongonda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4500,
-      "fallbackClockText": "75'",
+      "fallbackClock": 4620,
+      "fallbackClockText": "77'",
       "goalEvents": [
         {
           "assist": "C. Mbemba",
@@ -269,10 +305,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 4,
+      "homeCorners": 5,
       "homeFouls": 8,
       "homeOffsides": 0,
-      "homePossession": "60%",
+      "homePossession": "61%",
       "homeScore": 1,
       "homeShotsOnGoal": 4,
       "homeTeam": {
@@ -283,15 +319,15 @@
         "tla": "ENG"
       },
       "id": 537426,
-      "lastApiSync": "2026-07-01T17:38:24.307889+00:00",
-      "lastUpdated": "2026-07-01T19:37:30Z",
+      "lastApiSync": "2026-07-01T17:39:47.247360+00:00",
+      "lastUpdated": "2026-07-01T19:39:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 8,
+          "fouls": 9,
           "offsides": 4,
-          "possession": "40%",
+          "possession": "39%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -299,10 +335,10 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 8,
           "offsides": 0,
-          "possession": "60%",
+          "possession": "61%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 4,
@@ -312,16 +348,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "75'",
-        "lastApiSync": "2026-07-01T17:38:24.307889+00:00",
-        "seconds": 4500,
+        "displayMinute": "77'",
+        "lastApiSync": "2026-07-01T17:39:47.247360+00:00",
+        "seconds": 4620,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "75'"
+        "timer": "77'"
       },
-      "manualClockText": "75'",
+      "manualClockText": "77'",
       "matchday": null,
-      "minute": 75,
+      "minute": 77,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -440,6 +476,42 @@
           "team": "England",
           "timer": "70:00",
           "timerSeconds": 4200,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Kayembe",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "E. Kayembe",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Bongonda",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "B. Cipenga",
+          "playerOff": "B. Cipenga",
+          "playerOn": "T. Bongonda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
           "type": "Substitution"
         }
       ],
@@ -463,9 +535,9 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 8,
+      "awayFouls": 9,
       "awayOffsides": 4,
-      "awayPossession": "40%",
+      "awayPossession": "39%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -513,7 +585,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4500,
+      "clockSeconds": 4620,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -522,7 +594,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "75'",
+      "displayMinute": "77'",
       "events": [
         {
           "assist": "C. Mbemba",
@@ -667,10 +739,46 @@
           "timer": "75:00",
           "timerSeconds": 4500,
           "type": "Goal"
+        },
+        {
+          "assist": "E. Kayembe",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "E. Kayembe",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Bongonda",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "B. Cipenga",
+          "playerOff": "B. Cipenga",
+          "playerOn": "T. Bongonda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4500,
-      "fallbackClockText": "75'",
+      "fallbackClock": 4620,
+      "fallbackClockText": "77'",
       "goalEvents": [
         {
           "assist": "C. Mbemba",
@@ -721,10 +829,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 4,
+      "homeCorners": 5,
       "homeFouls": 8,
       "homeOffsides": 0,
-      "homePossession": "60%",
+      "homePossession": "61%",
       "homeScore": 1,
       "homeShotsOnGoal": 4,
       "homeTeam": {
@@ -735,15 +843,15 @@
         "tla": "ENG"
       },
       "id": 537426,
-      "lastApiSync": "2026-07-01T17:38:24.307889+00:00",
-      "lastUpdated": "2026-07-01T19:37:30Z",
+      "lastApiSync": "2026-07-01T17:39:47.247360+00:00",
+      "lastUpdated": "2026-07-01T19:39:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 8,
+          "fouls": 9,
           "offsides": 4,
-          "possession": "40%",
+          "possession": "39%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 1,
@@ -751,10 +859,10 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 4,
+          "corners": 5,
           "fouls": 8,
           "offsides": 0,
-          "possession": "60%",
+          "possession": "61%",
           "redCards": null,
           "shotsOffGoal": 3,
           "shotsOnGoal": 4,
@@ -764,16 +872,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "75'",
-        "lastApiSync": "2026-07-01T17:38:24.307889+00:00",
-        "seconds": 4500,
+        "displayMinute": "77'",
+        "lastApiSync": "2026-07-01T17:39:47.247360+00:00",
+        "seconds": 4620,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "75'"
+        "timer": "77'"
       },
-      "manualClockText": "75'",
+      "manualClockText": "77'",
       "matchday": null,
-      "minute": 75,
+      "minute": 77,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -892,6 +1000,42 @@
           "team": "England",
           "timer": "70:00",
           "timerSeconds": 4200,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Kayembe",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "E. Kayembe",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Bongonda",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "B. Cipenga",
+          "playerOff": "B. Cipenga",
+          "playerOn": "T. Bongonda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
           "type": "Substitution"
         }
       ],
