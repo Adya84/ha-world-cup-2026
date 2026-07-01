@@ -21975,7 +21975,7 @@
   },
   "537375": {
     "awayScore": 0,
-    "awayTeam": "France",
+    "awayTeam": "TBC",
     "clock_active": false,
     "goalEvents": [],
     "homeScore": 0,
@@ -21995,7 +21995,7 @@
   },
   "537377": {
     "awayScore": 0,
-    "awayTeam": "Norway",
+    "awayTeam": "TBC",
     "clock_active": false,
     "goalEvents": [],
     "homeScore": 0,
@@ -34114,7 +34114,7 @@
     "clock_active": false,
     "clock_seconds": 5400,
     "goalEvents": [],
-    "homeScore": 3,
+    "homeScore": 0,
     "homeTeam": "France",
     "referees": [
       {
@@ -34127,7 +34127,7 @@
         "type": "REFEREE"
       }
     ],
-    "status": "FINISHED",
+    "status": "TIMED",
     "utcDate": "2026-06-30T21:00:00Z"
   },
   "537417": {
@@ -36054,7 +36054,7 @@
   },
   "537424": {
     "apiFootballFixtureId": 1564789,
-    "awayScore": 2,
+    "awayScore": 0,
     "awayTeam": "Norway",
     "cardEvents": [
       {
@@ -36081,11 +36081,16 @@
     "events": [
       {
         "assist": "M. Odegaard",
+        "awayTeam": "Norway",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "39'",
         "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Ivory Coast",
         "isDisallowed": false,
+        "matchId": 537424,
+        "matchUtcDate": "2026-06-30T17:00:00Z",
         "minute": 39,
         "player": "A. Nusa",
         "playerOff": null,
@@ -36098,102 +36103,17 @@
         "type": "Goal"
       },
       {
-        "assist": null,
-        "comments": "Tripping",
-        "detail": "Yellow Card",
-        "displayMinute": "45+1'",
-        "extra": 1,
-        "isDisallowed": false,
-        "minute": 45,
-        "player": "A. Nusa",
-        "playerOff": null,
-        "playerOn": null,
-        "rawType": "Card",
-        "source": "api_football_post_match",
-        "team": "Norway",
-        "timer": "46:00",
-        "timerSeconds": 2760,
-        "type": "Yellow Card"
-      },
-      {
-        "assist": "A. Diallo",
-        "comments": null,
-        "detail": "Substitution 1",
-        "displayMinute": "60'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 60,
-        "player": "C. Inao Oulai",
-        "playerOff": "C. Inao Oulai",
-        "playerOn": "A. Diallo",
-        "rawType": "subst",
-        "source": "api_football_post_match",
-        "team": "Ivory Coast",
-        "timer": "60:00",
-        "timerSeconds": 3600,
-        "type": "Substitution"
-      },
-      {
-        "assist": "E. Wahi",
-        "comments": null,
-        "detail": "Substitution 2",
-        "displayMinute": "60'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 60,
-        "player": "A. Bonny",
-        "playerOff": "A. Bonny",
-        "playerOn": "E. Wahi",
-        "rawType": "subst",
-        "source": "api_football_post_match",
-        "team": "Ivory Coast",
-        "timer": "60:00",
-        "timerSeconds": 3600,
-        "type": "Substitution"
-      },
-      {
-        "assist": "A. Schjelderup",
-        "comments": null,
-        "detail": "Substitution 1",
-        "displayMinute": "71'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 71,
-        "player": "A. Nusa",
-        "playerOff": "A. Nusa",
-        "playerOn": "A. Schjelderup",
-        "rawType": "subst",
-        "source": "api_football_post_match",
-        "team": "Norway",
-        "timer": "71:00",
-        "timerSeconds": 4260,
-        "type": "Substitution"
-      },
-      {
-        "assist": "O. Bobb",
-        "comments": null,
-        "detail": "Substitution 2",
-        "displayMinute": "71'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 71,
-        "player": "A. Sorloth",
-        "playerOff": "A. Sorloth",
-        "playerOn": "O. Bobb",
-        "rawType": "subst",
-        "source": "api_football_post_match",
-        "team": "Norway",
-        "timer": "71:00",
-        "timerSeconds": 4260,
-        "type": "Substitution"
-      },
-      {
         "assist": "N. Pepe",
+        "awayTeam": "Norway",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "74'",
         "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "Ivory Coast",
         "isDisallowed": false,
+        "matchId": 537424,
+        "matchUtcDate": "2026-06-30T17:00:00Z",
         "minute": 74,
         "player": "A. Diallo",
         "playerOff": null,
@@ -36206,30 +36126,17 @@
         "type": "Goal"
       },
       {
-        "assist": "F. Aursnes",
-        "comments": null,
-        "detail": "Substitution 3",
-        "displayMinute": "83'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 83,
-        "player": "M. Pedersen",
-        "playerOff": "M. Pedersen",
-        "playerOn": "F. Aursnes",
-        "rawType": "subst",
-        "source": "api_football_post_match",
-        "team": "Norway",
-        "timer": "83:00",
-        "timerSeconds": 4980,
-        "type": "Substitution"
-      },
-      {
         "assist": "P. Berg",
+        "awayTeam": "Norway",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "86'",
         "extra": null,
+        "goalNumber": 3,
+        "homeTeam": "Ivory Coast",
         "isDisallowed": false,
+        "matchId": 537424,
+        "matchUtcDate": "2026-06-30T17:00:00Z",
         "minute": 86,
         "player": "E. Haaland",
         "playerOff": null,
@@ -36240,60 +36147,6 @@
         "timer": "86:00",
         "timerSeconds": 5160,
         "type": "Goal"
-      },
-      {
-        "assist": "O. Diakite",
-        "comments": null,
-        "detail": "Substitution 3",
-        "displayMinute": "87'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 87,
-        "player": "N. Pepe",
-        "playerOff": "N. Pepe",
-        "playerOn": "O. Diakite",
-        "rawType": "subst",
-        "source": "api_football_post_match",
-        "team": "Ivory Coast",
-        "timer": "87:00",
-        "timerSeconds": 5220,
-        "type": "Substitution"
-      },
-      {
-        "assist": "E. Guessand",
-        "comments": null,
-        "detail": "Substitution 4",
-        "displayMinute": "90+3'",
-        "extra": 3,
-        "isDisallowed": false,
-        "minute": 90,
-        "player": "Y. Diomande",
-        "playerOff": "Y. Diomande",
-        "playerOn": "E. Guessand",
-        "rawType": "subst",
-        "source": "api_football_post_match",
-        "team": "Ivory Coast",
-        "timer": "93:00",
-        "timerSeconds": 5580,
-        "type": "Substitution"
-      },
-      {
-        "assist": "B. Toure",
-        "comments": null,
-        "detail": "Substitution 5",
-        "displayMinute": "90+3'",
-        "extra": 3,
-        "isDisallowed": false,
-        "minute": 90,
-        "player": "G. Konan",
-        "playerOff": "G. Konan",
-        "playerOn": "B. Toure",
-        "rawType": "subst",
-        "source": "api_football_post_match",
-        "team": "Ivory Coast",
-        "timer": "93:00",
-        "timerSeconds": 5580,
-        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -36367,7 +36220,7 @@
         "type": "Goal"
       }
     ],
-    "homeScore": 1,
+    "homeScore": 0,
     "homeTeam": "Ivory Coast",
     "referees": [
       {
@@ -36380,7 +36233,7 @@
         "type": "REFEREE"
       }
     ],
-    "status": "FINISHED",
+    "status": "TIMED",
     "substitutionEvents": [
       {
         "assist": "A. Diallo",
@@ -36843,15 +36696,10 @@
     ],
     "homeScore": 2,
     "homeTeam": "Mexico",
-    "lastApiSync": "2026-07-01T03:52:11.561763+00:00",
+    "lastApiSync": "2026-07-01T03:52:31.532156+00:00",
     "manualClockText": "90'",
-    "phase_start": "2026-07-01T03:52:11.561763+00:00",
+    "phase_start": "2026-07-01T03:52:31.532156+00:00",
     "referees": [
-      {
-        "name": "Slavko Vin\u010di\u010d",
-        "nationality": "Slovenia",
-        "type": "REFEREE"
-      },
       {
         "name": "Slavko Vin\u010di\u0107, Slovenia",
         "type": "REFEREE"
