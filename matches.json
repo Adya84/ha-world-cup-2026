@@ -40818,7 +40818,7 @@
         "name": "World"
       },
       "awayCorners": 8,
-      "awayFouls": 11,
+      "awayFouls": 12,
       "awayOffsides": 1,
       "awayPossession": "57%",
       "awayScore": 0,
@@ -40866,6 +40866,24 @@
           "timer": "93:00",
           "timerSeconds": 5580,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Red Card",
+          "displayMinute": "90+5'",
+          "extra": 5,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "P. Hincapie",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "type": "Red Card"
         }
       ],
       "clockSeconds": 5400,
@@ -41130,6 +41148,24 @@
           "timer": "93:00",
           "timerSeconds": 5580,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Red Card",
+          "displayMinute": "90+5'",
+          "extra": 5,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "P. Hincapie",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "type": "Red Card"
         }
       ],
       "fallbackClock": 5400,
@@ -41198,13 +41234,13 @@
         "tla": "MEX"
       },
       "id": 537425,
-      "lastApiSync": "2026-07-01T03:57:07.451083+00:00",
-      "lastUpdated": "2026-07-01T05:57:06Z",
+      "lastApiSync": "2026-07-01T03:57:27.266129+00:00",
+      "lastUpdated": "2026-07-01T05:57:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 8,
-          "fouls": 11,
+          "fouls": 12,
           "offsides": 1,
           "possession": "57%",
           "redCards": null,
@@ -41219,16 +41255,16 @@
           "offsides": 0,
           "possession": "43%",
           "redCards": null,
-          "shotsOffGoal": 8,
+          "shotsOffGoal": 9,
           "shotsOnGoal": 3,
-          "totalShots": 14,
+          "totalShots": 15,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-01T03:57:07.451083+00:00",
+        "lastApiSync": "2026-07-01T03:57:27.266129+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
