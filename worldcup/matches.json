@@ -44848,8 +44848,8 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T21:59:51.513298+00:00",
-      "lastUpdated": "2026-07-01T23:59:48Z",
+      "lastApiSync": "2026-07-01T22:00:22.664548+00:00",
+      "lastUpdated": "2026-07-02T00:00:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -44878,7 +44878,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-01T21:59:51.513298+00:00",
+        "lastApiSync": "2026-07-01T22:00:22.664548+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -45163,12 +45163,19 @@
         "tla": "USA"
       },
       "id": 537421,
-      "lastUpdated": "2026-07-01T15:20:12Z",
+      "lastUpdated": "2026-07-02T00:00:00Z",
       "matchday": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 11260,
+          "name": "Raphael Claus",
+          "nationality": "Brazil",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
