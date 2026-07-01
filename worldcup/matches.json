@@ -45545,7 +45545,7 @@
         "name": "World"
       },
       "awayCorners": 1,
-      "awayFouls": 6,
+      "awayFouls": 7,
       "awayOffsides": 1,
       "awayPossession": "49%",
       "awayScore": 2,
@@ -45557,7 +45557,7 @@
         "shortName": "Senegal",
         "tla": "SEN"
       },
-      "clockSeconds": 3360,
+      "clockSeconds": 3420,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45566,7 +45566,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "56'",
+      "displayMinute": "57'",
       "events": [
         {
           "assist": null,
@@ -45621,10 +45621,46 @@
           "timer": "51:00",
           "timerSeconds": 3060,
           "type": "Goal"
+        },
+        {
+          "assist": "N. Raskin",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "K. De Bruyne",
+          "playerOff": "K. De Bruyne",
+          "playerOn": "N. Raskin",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Lukebakio",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "J. Doku",
+          "playerOff": "J. Doku",
+          "playerOn": "D. Lukebakio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3360,
-      "fallbackClockText": "56'",
+      "fallbackClock": 3420,
+      "fallbackClockText": "57'",
       "goalEvents": [
         {
           "assist": null,
@@ -45676,7 +45712,7 @@
       "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 2,
-      "homeFouls": 7,
+      "homeFouls": 8,
       "homeOffsides": 0,
       "homePossession": "51%",
       "homeScore": 0,
@@ -45689,13 +45725,13 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T21:18:26.281211+00:00",
-      "lastUpdated": "2026-07-01T23:18:24Z",
+      "lastApiSync": "2026-07-01T21:18:47.608850+00:00",
+      "lastUpdated": "2026-07-01T23:18:45Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
-          "fouls": 6,
+          "fouls": 7,
           "offsides": 1,
           "possession": "49%",
           "redCards": null,
@@ -45706,7 +45742,7 @@
         },
         "home": {
           "corners": 2,
-          "fouls": 7,
+          "fouls": 8,
           "offsides": 0,
           "possession": "51%",
           "redCards": null,
@@ -45718,14 +45754,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "56'",
-        "lastApiSync": "2026-07-01T21:18:26.281211+00:00",
-        "seconds": 3360,
+        "displayMinute": "57'",
+        "lastApiSync": "2026-07-01T21:18:47.608850+00:00",
+        "seconds": 3420,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "56'"
+        "timer": "57'"
       },
-      "manualClockText": "56'",
+      "manualClockText": "57'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -45750,7 +45786,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 56,
+      "minute": 57,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -45815,6 +45851,42 @@
           "team": "Belgium",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Raskin",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "K. De Bruyne",
+          "playerOff": "K. De Bruyne",
+          "playerOn": "N. Raskin",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "56:00",
+          "timerSeconds": 3360,
+          "type": "Substitution"
+        },
+        {
+          "assist": "D. Lukebakio",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "56'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 56,
+          "player": "J. Doku",
+          "playerOff": "J. Doku",
+          "playerOn": "D. Lukebakio",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "56:00",
+          "timerSeconds": 3360,
           "type": "Substitution"
         }
       ],
