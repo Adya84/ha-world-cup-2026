@@ -14,7 +14,7 @@
       "awayFouls": 0,
       "awayOffsides": 1,
       "awayPossession": "80%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/congo_dr.svg",
@@ -23,7 +23,7 @@
         "shortName": "Congo DR",
         "tla": "COD"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,9 +32,55 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "displayMinute": "8'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": "B. Cipenga",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Congo DR",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "England",
+          "isDisallowed": false,
+          "matchId": 537426,
+          "matchUtcDate": "2026-07-01T16:00:00Z",
+          "minute": 7,
+          "player": "B. Cipenga",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": null,
       "homeFouls": 1,
@@ -50,7 +96,7 @@
         "tla": "ENG"
       },
       "id": 537426,
-      "lastApiSync": "2026-07-01T16:07:18.548653+00:00",
+      "lastApiSync": "2026-07-01T16:07:44.354015+00:00",
       "lastUpdated": "2026-07-01T18:07:01Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -79,16 +125,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-07-01T16:07:18.548653+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-07-01T16:07:44.354015+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchday": null,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -117,11 +163,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "AWAY_TEAM"
@@ -159,7 +205,7 @@
       "awayFouls": 0,
       "awayOffsides": 1,
       "awayPossession": "80%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/congo_dr.svg",
@@ -168,7 +214,7 @@
         "shortName": "Congo DR",
         "tla": "COD"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -177,9 +223,55 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "displayMinute": "8'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 7,
+          "player": "B. Cipenga",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Congo DR",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "7'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "England",
+          "isDisallowed": false,
+          "matchId": 537426,
+          "matchUtcDate": "2026-07-01T16:00:00Z",
+          "minute": 7,
+          "player": "B. Cipenga",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "7:00",
+          "timerSeconds": 420,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": null,
       "homeFouls": 1,
@@ -195,7 +287,7 @@
         "tla": "ENG"
       },
       "id": 537426,
-      "lastApiSync": "2026-07-01T16:07:18.548653+00:00",
+      "lastApiSync": "2026-07-01T16:07:44.354015+00:00",
       "lastUpdated": "2026-07-01T18:07:01Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -224,16 +316,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-07-01T16:07:18.548653+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-07-01T16:07:44.354015+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchday": null,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -262,11 +354,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "AWAY_TEAM"
