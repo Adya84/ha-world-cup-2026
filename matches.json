@@ -44385,7 +44385,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 1,
       "awayFouls": 10,
       "awayOffsides": 2,
@@ -44455,7 +44454,8 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 5760,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -44463,7 +44463,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "96'",
       "events": [
         {
           "assist": null,
@@ -44736,6 +44736,8 @@
           "type": "Yellow Card"
         }
       ],
+      "fallbackClock": 5760,
+      "fallbackClockText": "96'",
       "goalEvents": [
         {
           "assist": null,
@@ -44846,8 +44848,8 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T22:00:22.664548+00:00",
-      "lastUpdated": "2026-07-02T00:05:21Z",
+      "lastApiSync": "2026-07-01T22:05:42.223680+00:00",
+      "lastUpdated": "2026-07-02T00:05:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -44875,14 +44877,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-01T22:00:22.664548+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
+        "displayMinute": "96'",
+        "lastApiSync": "2026-07-01T22:05:42.223680+00:00",
+        "seconds": 5760,
+        "source": "api_football_live_minute",
         "status": "BT",
-        "timer": "90:00"
+        "timer": "96'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "96'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -44907,6 +44909,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
+      "minute": 96,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
