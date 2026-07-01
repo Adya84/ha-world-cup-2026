@@ -45125,12 +45125,20 @@
     },
     {
       "apiFootballFixtureId": 1567307,
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 3,
+      "awayFouls": 12,
+      "awayOffsides": 4,
+      "awayPossession": "40%",
+      "awayScore": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/congo_dr.svg",
         "id": 1934,
@@ -45186,16 +45194,11 @@
       "events": [
         {
           "assist": "C. Mbemba",
-          "awayTeam": "Congo DR",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "7'",
           "extra": null,
-          "goalNumber": 1,
-          "homeTeam": "England",
           "isDisallowed": false,
-          "matchId": 537426,
-          "matchUtcDate": "2026-07-01T16:00:00Z",
           "minute": 7,
           "player": "B. Cipenga",
           "playerOff": null,
@@ -45208,17 +45211,120 @@
           "type": "Goal"
         },
         {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "19'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 19,
+          "player": "J. Bellingham",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "England",
+          "timer": "19:00",
+          "timerSeconds": 1140,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "28'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 28,
+          "player": "N. Sadiki",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "28:00",
+          "timerSeconds": 1680,
+          "type": "Yellow Card"
+        },
+        {
           "assist": "A. Gordon",
-          "awayTeam": "Congo DR",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "61'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 61,
+          "player": "M. Rashford",
+          "playerOff": "M. Rashford",
+          "playerOn": "A. Gordon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Saka",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "61'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 61,
+          "player": "N. Madueke",
+          "playerOff": "N. Madueke",
+          "playerOn": "B. Saka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Elia",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "64'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 64,
+          "player": "N. Mbuku",
+          "playerOff": "N. Mbuku",
+          "playerOn": "M. Elia",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "64:00",
+          "timerSeconds": 3840,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Eze",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "D. Spence",
+          "playerOff": "D. Spence",
+          "playerOn": "E. Eze",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Gordon",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "75'",
           "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "England",
           "isDisallowed": false,
-          "matchId": 537426,
-          "matchUtcDate": "2026-07-01T16:00:00Z",
           "minute": 75,
           "player": "H. Kane",
           "playerOff": null,
@@ -45231,17 +45337,48 @@
           "type": "Goal"
         },
         {
+          "assist": "E. Kayembe",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "N. Mukau",
+          "playerOff": "N. Mukau",
+          "playerOn": "E. Kayembe",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
+        },
+        {
+          "assist": "T. Bongonda",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "76'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 76,
+          "player": "B. Cipenga",
+          "playerOff": "B. Cipenga",
+          "playerOn": "T. Bongonda",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "76:00",
+          "timerSeconds": 4560,
+          "type": "Substitution"
+        },
+        {
           "assist": "A. Gordon",
-          "awayTeam": "Congo DR",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "86'",
           "extra": null,
-          "goalNumber": 3,
-          "homeTeam": "England",
           "isDisallowed": false,
-          "matchId": 537426,
-          "matchUtcDate": "2026-07-01T16:00:00Z",
           "minute": 86,
           "player": "H. Kane",
           "playerOff": null,
@@ -45252,6 +45389,60 @@
           "timer": "86:00",
           "timerSeconds": 5160,
           "type": "Goal"
+        },
+        {
+          "assist": "J. Kayembe",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "89'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 89,
+          "player": "A. Masuaku",
+          "playerOff": "A. Masuaku",
+          "playerOn": "J. Kayembe",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Mayele",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "89'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 89,
+          "player": "S. Moutoussamy",
+          "playerOff": "S. Moutoussamy",
+          "playerOn": "F. Mayele",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Congo DR",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Stones",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "D. Rice",
+          "playerOff": "D. Rice",
+          "playerOn": "J. Stones",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -45325,7 +45516,14 @@
           "type": "Goal"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "group": null,
+      "homeCorners": 5,
+      "homeFouls": 10,
+      "homeOffsides": 0,
+      "homePossession": "60%",
+      "homeScore": 2,
+      "homeShotsOnGoal": 7,
       "homeTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -45334,16 +45532,56 @@
         "tla": "ENG"
       },
       "id": 537426,
+      "lastApiSync": "2026-07-01T18:17:53.838500+00:00",
       "lastUpdated": "2026-07-01T20:01:21Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 3,
+          "fouls": 12,
+          "offsides": 4,
+          "possession": "40%",
+          "redCards": null,
+          "shotsOffGoal": 2,
+          "shotsOnGoal": 2,
+          "totalShots": 6,
+          "yellowCards": 1
+        },
+        "home": {
+          "corners": 5,
+          "fouls": 10,
+          "offsides": 0,
+          "possession": "60%",
+          "redCards": null,
+          "shotsOffGoal": 6,
+          "shotsOnGoal": 7,
+          "totalShots": 16,
+          "yellowCards": 1
+        }
+      },
       "matchday": null,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 129250,
           "name": "Adham Makhadmeh",
           "nationality": "Jordan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Adham Mohammad, Jordan",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Adham Makhadmeh",
+          "nationality": "Jordan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Adham Mohammad, Jordan",
           "type": "REFEREE"
         }
       ],
@@ -45359,6 +45597,7 @@
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -45532,7 +45771,12 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-01T16:00:00Z"
+      "utcDate": "2026-07-01T16:00:00Z",
+      "venue": {
+        "city": "Atlanta",
+        "id": 1898,
+        "name": "Mercedes-Benz Stadium"
+      }
     },
     {
       "area": {
