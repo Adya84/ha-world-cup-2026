@@ -12,7 +12,7 @@
       },
       "awayCorners": 1,
       "awayFouls": 10,
-      "awayOffsides": 1,
+      "awayOffsides": 2,
       "awayPossession": "46%",
       "awayScore": 2,
       "awayShotsOnGoal": 4,
@@ -61,7 +61,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5160,
+      "clockSeconds": 5220,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "86'",
+      "displayMinute": "87'",
       "events": [
         {
           "assist": null,
@@ -287,10 +287,28 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "R. Lukaku",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 5160,
-      "fallbackClockText": "86'",
+      "fallbackClock": 5220,
+      "fallbackClockText": "87'",
       "goalEvents": [
         {
           "assist": null,
@@ -337,6 +355,29 @@
           "timer": "51:00",
           "timerSeconds": 3060,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Senegal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "86'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Belgium",
+          "isDisallowed": false,
+          "matchId": 537422,
+          "matchUtcDate": "2026-07-01T20:00:00Z",
+          "minute": 86,
+          "player": "R. Lukaku",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -345,7 +386,7 @@
       "homeFouls": 13,
       "homeOffsides": 1,
       "homePossession": "54%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -355,14 +396,14 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T21:48:34.844270+00:00",
-      "lastUpdated": "2026-07-01T23:48:33Z",
+      "lastApiSync": "2026-07-01T21:48:55.222294+00:00",
+      "lastUpdated": "2026-07-01T23:48:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 10,
-          "offsides": 1,
+          "offsides": 2,
           "possession": "46%",
           "redCards": null,
           "shotsOffGoal": 6,
@@ -376,22 +417,22 @@
           "offsides": 1,
           "possession": "54%",
           "redCards": null,
-          "shotsOffGoal": 5,
+          "shotsOffGoal": 7,
           "shotsOnGoal": 2,
-          "totalShots": 11,
+          "totalShots": 13,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "86'",
-        "lastApiSync": "2026-07-01T21:48:34.844270+00:00",
-        "seconds": 5160,
+        "displayMinute": "87'",
+        "lastApiSync": "2026-07-01T21:48:55.222294+00:00",
+        "seconds": 5220,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "86'"
+        "timer": "87'"
       },
-      "manualClockText": "86'",
+      "manualClockText": "87'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -416,7 +457,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 86,
+      "minute": 87,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -446,7 +487,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 2,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 1,
@@ -654,7 +695,7 @@
       },
       "awayCorners": 1,
       "awayFouls": 10,
-      "awayOffsides": 1,
+      "awayOffsides": 2,
       "awayPossession": "46%",
       "awayScore": 2,
       "awayShotsOnGoal": 4,
@@ -703,7 +744,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5160,
+      "clockSeconds": 5220,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -712,7 +753,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "86'",
+      "displayMinute": "87'",
       "events": [
         {
           "assist": null,
@@ -929,10 +970,28 @@
           "timer": "78:00",
           "timerSeconds": 4680,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "R. Lukaku",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 5160,
-      "fallbackClockText": "86'",
+      "fallbackClock": 5220,
+      "fallbackClockText": "87'",
       "goalEvents": [
         {
           "assist": null,
@@ -979,6 +1038,29 @@
           "timer": "51:00",
           "timerSeconds": 3060,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Senegal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "86'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Belgium",
+          "isDisallowed": false,
+          "matchId": 537422,
+          "matchUtcDate": "2026-07-01T20:00:00Z",
+          "minute": 86,
+          "player": "R. Lukaku",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -987,7 +1069,7 @@
       "homeFouls": 13,
       "homeOffsides": 1,
       "homePossession": "54%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -997,14 +1079,14 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T21:48:34.844270+00:00",
-      "lastUpdated": "2026-07-01T23:48:33Z",
+      "lastApiSync": "2026-07-01T21:48:55.222294+00:00",
+      "lastUpdated": "2026-07-01T23:48:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 10,
-          "offsides": 1,
+          "offsides": 2,
           "possession": "46%",
           "redCards": null,
           "shotsOffGoal": 6,
@@ -1018,22 +1100,22 @@
           "offsides": 1,
           "possession": "54%",
           "redCards": null,
-          "shotsOffGoal": 5,
+          "shotsOffGoal": 7,
           "shotsOnGoal": 2,
-          "totalShots": 11,
+          "totalShots": 13,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "86'",
-        "lastApiSync": "2026-07-01T21:48:34.844270+00:00",
-        "seconds": 5160,
+        "displayMinute": "87'",
+        "lastApiSync": "2026-07-01T21:48:55.222294+00:00",
+        "seconds": 5220,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "86'"
+        "timer": "87'"
       },
-      "manualClockText": "86'",
+      "manualClockText": "87'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -1058,7 +1140,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 86,
+      "minute": 87,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1088,7 +1170,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 2,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 1,
