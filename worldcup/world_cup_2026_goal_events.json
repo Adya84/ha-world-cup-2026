@@ -40090,23 +40090,32 @@
     "utcDate": "2026-07-01T01:00:00Z"
   },
   "537426": {
+    "apiFootballFixtureId": 1567307,
     "awayScore": 0,
     "awayTeam": "Congo DR",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "England",
-    "phase_start": null,
+    "lastApiSync": "2026-07-01T16:01:00.634640+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-01T16:01:00.634640+00:00",
     "referees": [
       {
-        "id": 129250,
         "name": "Adham Makhadmeh",
         "nationality": "Jordan",
         "type": "REFEREE"
+      },
+      {
+        "name": "Adham Mohammad, Jordan",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-01T16:00:00Z"
   },
   "537427": {
