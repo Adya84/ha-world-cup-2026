@@ -38909,12 +38909,12 @@
   },
   "537422": {
     "apiFootballFixtureId": 1567308,
-    "awayScore": 1,
+    "awayScore": 2,
     "awayTeam": "Senegal",
-    "base_seconds": 3060,
+    "base_seconds": 3120,
     "clock_active": false,
-    "clock_seconds": 3060,
-    "displayMinute": "51'",
+    "clock_seconds": 3120,
+    "displayMinute": "52'",
     "events": [
       {
         "assist": null,
@@ -38951,6 +38951,24 @@
         "timer": "46:00",
         "timerSeconds": 2760,
         "type": "Substitution"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "51'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 51,
+        "player": "I. Sarr",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Senegal",
+        "timer": "51:00",
+        "timerSeconds": 3060,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -38976,13 +38994,36 @@
         "timer": "25:00",
         "timerSeconds": 1500,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Senegal",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "51'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "Belgium",
+        "isDisallowed": false,
+        "matchId": 537422,
+        "matchUtcDate": "2026-07-01T20:00:00Z",
+        "minute": 51,
+        "player": "I. Sarr",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Senegal",
+        "timer": "51:00",
+        "timerSeconds": 3060,
+        "type": "Goal"
       }
     ],
     "homeScore": 0,
     "homeTeam": "Belgium",
-    "lastApiSync": "2026-07-01T21:13:39.052670+00:00",
-    "manualClockText": "51'",
-    "phase_start": "2026-07-01T21:13:39.052670+00:00",
+    "lastApiSync": "2026-07-01T21:14:01.106888+00:00",
+    "manualClockText": "52'",
+    "phase_start": "2026-07-01T21:14:01.106888+00:00",
     "referees": [
       {
         "name": "Said Martinez",
