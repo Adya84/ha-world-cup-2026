@@ -45248,6 +45248,42 @@
           "timer": "28:00",
           "timerSeconds": 1680,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "A. Gordon",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "61'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 61,
+          "player": "M. Rashford",
+          "playerOff": "M. Rashford",
+          "playerOn": "A. Gordon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Saka",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "61'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 61,
+          "player": "N. Madueke",
+          "playerOff": "N. Madueke",
+          "playerOn": "B. Saka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3660,
@@ -45293,8 +45329,8 @@
         "tla": "ENG"
       },
       "id": 537426,
-      "lastApiSync": "2026-07-01T17:23:44.284926+00:00",
-      "lastUpdated": "2026-07-01T19:23:39Z",
+      "lastApiSync": "2026-07-01T17:24:07.229396+00:00",
+      "lastUpdated": "2026-07-01T19:24:00Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45323,7 +45359,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "61'",
-        "lastApiSync": "2026-07-01T17:23:44.284926+00:00",
+        "lastApiSync": "2026-07-01T17:24:07.229396+00:00",
         "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -45379,6 +45415,44 @@
       },
       "stage": "LAST_32",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "A. Gordon",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "61'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 61,
+          "player": "M. Rashford",
+          "playerOff": "M. Rashford",
+          "playerOn": "A. Gordon",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Saka",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "61'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 61,
+          "player": "N. Madueke",
+          "playerOff": "N. Madueke",
+          "playerOn": "B. Saka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "61:00",
+          "timerSeconds": 3660,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-01T16:00:00Z",
       "venue": {
         "city": "Atlanta",
