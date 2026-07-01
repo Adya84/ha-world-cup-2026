@@ -44454,7 +44454,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 8940,
+      "clockSeconds": 5520,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -44463,7 +44463,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "149'",
+      "displayMinute": "92'",
       "events": [
         {
           "assist": null,
@@ -44736,8 +44736,8 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 8940,
-      "fallbackClockText": "149'",
+      "fallbackClock": 5520,
+      "fallbackClockText": "92'",
       "goalEvents": [
         {
           "assist": null,
@@ -44848,8 +44848,8 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T22:06:04.420018+00:00",
-      "lastUpdated": "2026-07-02T00:06:00Z",
+      "lastApiSync": "2026-07-01T22:06:26.684155+00:00",
+      "lastUpdated": "2026-07-02T00:06:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -44877,14 +44877,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "149'",
-        "lastApiSync": "2026-07-01T22:06:04.420018+00:00",
-        "seconds": 8940,
+        "displayMinute": "92'",
+        "lastApiSync": "2026-07-01T22:06:26.684155+00:00",
+        "seconds": 5520,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "149'"
+        "timer": "92'"
       },
-      "manualClockText": "149'",
+      "manualClockText": "92'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -44909,7 +44909,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 149,
+      "minute": 92,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -44936,7 +44936,11 @@
         }
       ],
       "score": {
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
+        "extraTime": {
+          "away": 0,
+          "home": 0
+        },
         "fullTime": {
           "away": 2,
           "home": 2
@@ -44944,6 +44948,10 @@
         "halfTime": {
           "away": 1,
           "home": 0
+        },
+        "regularTime": {
+          "away": 2,
+          "home": 2
         },
         "winner": "DRAW"
       },
