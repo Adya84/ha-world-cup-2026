@@ -45567,8 +45567,54 @@
         "type": "CUP"
       },
       "displayMinute": "25'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "25'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 25,
+          "player": "H. Diarra",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "25:00",
+          "timerSeconds": 1500,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 1500,
       "fallbackClockText": "25'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Senegal",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "25'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Belgium",
+          "isDisallowed": false,
+          "matchId": 537422,
+          "matchUtcDate": "2026-07-01T20:00:00Z",
+          "minute": 25,
+          "player": "H. Diarra",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Senegal",
+          "timer": "25:00",
+          "timerSeconds": 1500,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 0,
       "homeFouls": 4,
@@ -45584,8 +45630,8 @@
         "tla": "BEL"
       },
       "id": 537422,
-      "lastApiSync": "2026-07-01T20:24:52.464575+00:00",
-      "lastUpdated": "2026-07-01T22:24:48Z",
+      "lastApiSync": "2026-07-01T20:25:12.485357+00:00",
+      "lastUpdated": "2026-07-01T22:25:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45614,7 +45660,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "25'",
-        "lastApiSync": "2026-07-01T20:24:52.464575+00:00",
+        "lastApiSync": "2026-07-01T20:25:12.485357+00:00",
         "seconds": 1500,
         "source": "api_football_live_minute",
         "status": "1H",
