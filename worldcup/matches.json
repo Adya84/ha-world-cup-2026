@@ -45124,13 +45124,16 @@
       "utcDate": "2026-07-01T01:00:00Z"
     },
     {
+      "apiFootballFixtureId": 1567307,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/congo_dr.svg",
         "id": 1934,
@@ -45138,8 +45141,8 @@
         "shortName": "Congo DR",
         "tla": "COD"
       },
-      "clockSeconds": 0,
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -45147,8 +45150,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": null,
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -45157,44 +45163,59 @@
         "tla": "ENG"
       },
       "id": 537426,
-      "lastApiSync": null,
-      "lastUpdated": "2026-07-01T16:54:09Z",
-      "liveSource": "pre_kickoff_window",
+      "lastApiSync": "2026-07-01T16:01:00.634640+00:00",
+      "lastUpdated": "2026-07-01T18:00:24Z",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "LIVE",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-07-01T16:01:00.634640+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
       "matchday": null,
-      "minute": null,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 129250,
           "name": "Adham Makhadmeh",
           "nationality": "Jordan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Adham Mohammad, Jordan",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Adham Makhadmeh",
+          "nationality": "Jordan",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Adham Mohammad, Jordan",
           "type": "REFEREE"
         }
       ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
-        "winner": null
+        "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -45203,8 +45224,13 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "LIVE",
-      "utcDate": "2026-07-01T16:00:00Z"
+      "status": "1H",
+      "utcDate": "2026-07-01T16:00:00Z",
+      "venue": {
+        "city": "Atlanta",
+        "id": 1898,
+        "name": "Mercedes-Benz Stadium"
+      }
     },
     {
       "area": {
