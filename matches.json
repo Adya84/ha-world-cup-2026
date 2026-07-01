@@ -40818,9 +40818,9 @@
         "name": "World"
       },
       "awayCorners": 5,
-      "awayFouls": 6,
-      "awayOffsides": null,
-      "awayPossession": "44%",
+      "awayFouls": 7,
+      "awayOffsides": 1,
+      "awayPossession": "52%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -40850,7 +40850,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3120,
+      "clockSeconds": 3600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -40859,7 +40859,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "52'",
+      "displayMinute": "60'",
       "events": [
         {
           "assist": "R. Alvarado",
@@ -40950,10 +40950,46 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": "B. Gutierrez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "G. Mora",
+          "playerOff": "G. Mora",
+          "playerOn": "B. Gutierrez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "K. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "E. Valencia",
+          "playerOff": "E. Valencia",
+          "playerOn": "K. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3120,
-      "fallbackClockText": "52'",
+      "fallbackClock": 3600,
+      "fallbackClockText": "60'",
       "goalEvents": [
         {
           "assist": "R. Alvarado",
@@ -41005,9 +41041,9 @@
       "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 1,
-      "homeFouls": 5,
-      "homeOffsides": null,
-      "homePossession": "56%",
+      "homeFouls": 7,
+      "homeOffsides": 0,
+      "homePossession": "48%",
       "homeScore": 2,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -41018,43 +41054,43 @@
         "tla": "MEX"
       },
       "id": 537425,
-      "lastApiSync": "2026-07-01T03:14:07.269047+00:00",
-      "lastUpdated": "2026-07-01T05:14:06Z",
+      "lastApiSync": "2026-07-01T03:22:31.614497+00:00",
+      "lastUpdated": "2026-07-01T05:22:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 5,
-          "fouls": 6,
-          "offsides": null,
-          "possession": "44%",
+          "fouls": 7,
+          "offsides": 1,
+          "possession": "52%",
           "redCards": null,
-          "shotsOffGoal": 1,
+          "shotsOffGoal": 2,
           "shotsOnGoal": 1,
-          "totalShots": 2,
+          "totalShots": 3,
           "yellowCards": 1
         },
         "home": {
           "corners": 1,
-          "fouls": 5,
-          "offsides": null,
-          "possession": "56%",
+          "fouls": 7,
+          "offsides": 0,
+          "possession": "48%",
           "redCards": null,
           "shotsOffGoal": 7,
           "shotsOnGoal": 2,
-          "totalShots": 11,
+          "totalShots": 12,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "52'",
-        "lastApiSync": "2026-07-01T03:14:07.269047+00:00",
-        "seconds": 3120,
+        "displayMinute": "60'",
+        "lastApiSync": "2026-07-01T03:22:31.614497+00:00",
+        "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "52'"
+        "timer": "60'"
       },
-      "manualClockText": "52'",
+      "manualClockText": "60'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -41079,7 +41115,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 52,
+      "minute": 60,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -41162,6 +41198,42 @@
           "team": "Ecuador",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "B. Gutierrez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "G. Mora",
+          "playerOff": "G. Mora",
+          "playerOn": "B. Gutierrez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "K. Rodriguez",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "59'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 59,
+          "player": "E. Valencia",
+          "playerOff": "E. Valencia",
+          "playerOn": "K. Rodriguez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Ecuador",
+          "timer": "59:00",
+          "timerSeconds": 3540,
           "type": "Substitution"
         }
       ],
