@@ -45102,8 +45102,8 @@
     },
     {
       "apiFootballFixtureId": 1567311,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -45143,8 +45143,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -45152,7 +45150,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "M. Cucurella",
@@ -45407,8 +45404,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "M. Cucurella",
@@ -45496,9 +45491,8 @@
         "tla": "ESP"
       },
       "id": 537420,
-      "lastApiSync": "2026-07-02T20:58:19.129910+00:00",
-      "lastUpdated": "2026-07-02T22:58:15Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-02T20:58:40.362907+00:00",
+      "lastUpdated": "2026-07-02T22:58:39Z",
       "liveStatistics": {
         "away": {
           "corners": 0,
@@ -45522,39 +45516,6 @@
           "totalShots": 22,
           "yellowCards": 0
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-02T20:58:19.129910+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Los Angeles",
-        "cloudCoverage": 1.6,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-02T20:53:10.227485+00:00",
-        "humidity": 49.6,
-        "latitude": 33.9535,
-        "longitude": -118.3392,
-        "name": "SoFi Stadium weather",
-        "observedAt": "2026-07-02T20:00:00Z",
-        "pressure": 1014.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "SoFi Stadium",
-        "temperature": 24.6,
-        "temperatureUnit": "C",
-        "windBearing": 229.6,
-        "windSpeed": 3.7,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -45604,7 +45565,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "C. Chukwuemeka",
@@ -45792,29 +45753,6 @@
         "city": "Inglewood",
         "id": null,
         "name": "SoFi Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Los Angeles",
-        "cloudCoverage": 1.6,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-02T20:53:10.227485+00:00",
-        "humidity": 49.6,
-        "latitude": 33.9535,
-        "longitude": -118.3392,
-        "name": "SoFi Stadium weather",
-        "observedAt": "2026-07-02T20:00:00Z",
-        "pressure": 1014.3,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "SoFi Stadium",
-        "temperature": 24.6,
-        "temperatureUnit": "C",
-        "windBearing": 229.6,
-        "windSpeed": 3.7,
-        "windSpeedUnit": "m/s"
       }
     },
     {
