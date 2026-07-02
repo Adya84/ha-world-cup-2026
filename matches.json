@@ -45143,7 +45143,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5340,
+      "clockSeconds": 5400,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45152,7 +45152,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "89'",
+      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -45369,10 +45369,28 @@
           "timer": "85:00",
           "timerSeconds": 5100,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "89'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 89,
+          "player": "Mikel Oyarzabal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 5340,
-      "fallbackClockText": "89'",
+      "fallbackClock": 5400,
+      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Marc Cucurella",
@@ -45419,6 +45437,29 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Austria",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "89'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537420,
+          "matchUtcDate": "2026-07-02T19:00:00Z",
+          "minute": 89,
+          "player": "Mikel Oyarzabal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "89:00",
+          "timerSeconds": 5340,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -45427,8 +45468,8 @@
       "homeFouls": 8,
       "homeOffsides": 2,
       "homePossession": "66%",
-      "homeScore": 2,
-      "homeShotsOnGoal": 9,
+      "homeScore": 3,
+      "homeShotsOnGoal": 10,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -45437,8 +45478,8 @@
         "tla": "ESP"
       },
       "id": 537420,
-      "lastApiSync": "2026-07-02T20:51:03.337585+00:00",
-      "lastUpdated": "2026-07-02T22:51:00Z",
+      "lastApiSync": "2026-07-02T20:51:24.299150+00:00",
+      "lastUpdated": "2026-07-02T22:51:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45459,21 +45500,21 @@
           "possession": "66%",
           "redCards": 0,
           "shotsOffGoal": 5,
-          "shotsOnGoal": 9,
-          "totalShots": 21,
+          "shotsOnGoal": 10,
+          "totalShots": 22,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "89'",
-        "lastApiSync": "2026-07-02T20:51:03.337585+00:00",
-        "seconds": 5340,
+        "displayMinute": "90'",
+        "lastApiSync": "2026-07-02T20:51:24.299150+00:00",
+        "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "89'"
+        "timer": "90'"
       },
-      "manualClockText": "89'",
+      "manualClockText": "90'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -45498,7 +45539,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 89,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -45528,7 +45569,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 2
+          "home": 3
         },
         "halfTime": {
           "away": 0,
