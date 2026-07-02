@@ -45169,6 +45169,42 @@
           "timer": "36:00",
           "timerSeconds": 2160,
           "type": "Goal"
+        },
+        {
+          "assist": "Florian Grillitsch",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "45'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Xaver Schlager",
+          "playerOff": "Xaver Schlager",
+          "playerOn": "Florian Grillitsch",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Carney Chukwuemeka",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "45'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Nicolas Seiwald",
+          "playerOff": "Nicolas Seiwald",
+          "playerOn": "Carney Chukwuemeka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 2700,
@@ -45214,8 +45250,8 @@
         "tla": "ESP"
       },
       "id": 537420,
-      "lastApiSync": "2026-07-02T20:07:03.504525+00:00",
-      "lastUpdated": "2026-07-02T22:07:00Z",
+      "lastApiSync": "2026-07-02T20:07:23.911559+00:00",
+      "lastUpdated": "2026-07-02T22:07:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45244,7 +45280,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-07-02T20:07:03.504525+00:00",
+        "lastApiSync": "2026-07-02T20:07:23.911559+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -45323,6 +45359,44 @@
       },
       "stage": "LAST_32",
       "status": "HT",
+      "substitutionEvents": [
+        {
+          "assist": "Florian Grillitsch",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "45'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Xaver Schlager",
+          "playerOff": "Xaver Schlager",
+          "playerOn": "Florian Grillitsch",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Carney Chukwuemeka",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "45'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Nicolas Seiwald",
+          "playerOff": "Nicolas Seiwald",
+          "playerOn": "Carney Chukwuemeka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Austria",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-02T19:00:00Z",
       "venue": {
         "city": "Inglewood",
