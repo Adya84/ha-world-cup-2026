@@ -45102,20 +45102,12 @@
     },
     {
       "apiFootballFixtureId": 1567311,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 0,
-      "awayFouls": 15,
-      "awayOffsides": 5,
-      "awayPossession": "35%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/816.svg",
         "id": 816,
@@ -45153,11 +45145,16 @@
       "events": [
         {
           "assist": "M. Cucurella",
+          "awayTeam": "Austria",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "36'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Spain",
           "isDisallowed": false,
+          "matchId": 537420,
+          "matchUtcDate": "2026-07-02T19:00:00Z",
           "minute": 36,
           "player": "M. Oyarzabal",
           "playerOff": null,
@@ -45170,84 +45167,17 @@
           "type": "Goal"
         },
         {
-          "assist": "C. Chukwuemeka",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "N. Seiwald",
-          "playerOff": "N. Seiwald",
-          "playerOn": "C. Chukwuemeka",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "F. Grillitsch",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "X. Schlager",
-          "playerOff": "X. Schlager",
-          "playerOn": "F. Grillitsch",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Arnautovic",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "M. Gregoritsch",
-          "playerOff": "M. Gregoritsch",
-          "playerOn": "M. Arnautovic",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Kalajdzic",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "R. Schmid",
-          "playerOff": "R. Schmid",
-          "playerOn": "S. Kalajdzic",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
           "assist": "A. Baena",
+          "awayTeam": "Austria",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "66'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Spain",
           "isDisallowed": false,
+          "matchId": 537420,
+          "matchUtcDate": "2026-07-02T19:00:00Z",
           "minute": 66,
           "player": "P. Porro",
           "playerOff": null,
@@ -45260,102 +45190,17 @@
           "type": "Goal"
         },
         {
-          "assist": "F. Torres",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "A. Baena",
-          "playerOff": "A. Baena",
-          "playerOn": "F. Torres",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Merino",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "D. Olmo",
-          "playerOff": "D. Olmo",
-          "playerOn": "M. Merino",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "S. Posch",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Austria",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "Gavi",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "Lamine Yamal",
-          "playerOff": "Lamine Yamal",
-          "playerOn": "Gavi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Prass",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "S. Posch",
-          "playerOff": "S. Posch",
-          "playerOn": "A. Prass",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
           "assist": "M. Cucurella",
+          "awayTeam": "Austria",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "89'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Spain",
           "isDisallowed": false,
+          "matchId": 537420,
+          "matchUtcDate": "2026-07-02T19:00:00Z",
           "minute": 89,
           "player": "M. Oyarzabal",
           "playerOff": null,
@@ -45366,42 +45211,6 @@
           "timer": "89:00",
           "timerSeconds": 5340,
           "type": "Goal"
-        },
-        {
-          "assist": "F. Ruiz",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "90+3'",
-          "extra": 3,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "Pedri",
-          "playerOff": "Pedri",
-          "playerOn": "F. Ruiz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "93:00",
-          "timerSeconds": 5580,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Pubill",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "90+3'",
-          "extra": 3,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "A. Laporte",
-          "playerOff": "A. Laporte",
-          "playerOn": "M. Pubill",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "93:00",
-          "timerSeconds": 5580,
-          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -45475,14 +45284,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 9,
-      "homeFouls": 8,
-      "homeOffsides": 2,
-      "homePossession": "65%",
-      "homeScore": 3,
-      "homeShotsOnGoal": 10,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -45491,56 +45293,16 @@
         "tla": "ESP"
       },
       "id": 537420,
-      "lastApiSync": "2026-07-02T22:14:40.442791+00:00",
       "lastUpdated": "2026-07-02T22:59:09Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 0,
-          "fouls": 15,
-          "offsides": 5,
-          "possession": "35%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 0,
-          "totalShots": 5,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 9,
-          "fouls": 8,
-          "offsides": 2,
-          "possession": "65%",
-          "redCards": null,
-          "shotsOffGoal": 6,
-          "shotsOnGoal": 10,
-          "totalShots": 23,
-          "yellowCards": 0
-        }
-      },
       "matchday": null,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Glenn Nyberg",
-          "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Glenn Nyberg, Sweden",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 30960,
           "name": "Glenn Nyberg",
           "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Glenn Nyberg, Sweden",
           "type": "REFEREE"
         }
       ],
@@ -45556,7 +45318,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -45748,12 +45509,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-02T19:00:00Z",
-      "venue": {
-        "city": "Inglewood",
-        "id": null,
-        "name": "SoFi Stadium"
-      }
+      "utcDate": "2026-07-02T19:00:00Z"
     },
     {
       "area": {
