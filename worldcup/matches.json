@@ -45512,13 +45512,16 @@
       "utcDate": "2026-07-02T19:00:00Z"
     },
     {
+      "apiFootballFixtureId": 1567309,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayScore": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/799.svg",
         "id": 799,
@@ -45526,8 +45529,8 @@
         "shortName": "Croatia",
         "tla": "CRO"
       },
-      "clockSeconds": 0,
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -45535,8 +45538,11 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": null,
+      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/765.svg",
         "id": 765,
@@ -45545,44 +45551,82 @@
         "tla": "POR"
       },
       "id": 537419,
-      "lastApiSync": null,
+      "lastApiSync": "2026-07-02T23:00:23.299197+00:00",
       "lastUpdated": "2026-07-03T00:09:36Z",
-      "liveSource": "pre_kickoff_window",
+      "liveSource": "api_football",
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "LIVE",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-07-02T23:00:23.299197+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Toronto",
+        "cloudCoverage": 35.9,
+        "condition": "fair_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-02T23:00:23.070329+00:00",
+        "humidity": 48.4,
+        "latitude": 43.6332,
+        "longitude": -79.4186,
+        "name": "BMO Field weather",
+        "observedAt": "2026-07-02T23:00:00Z",
+        "pressure": 1012.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BMO Field",
+        "temperature": 30.2,
+        "temperatureUnit": "C",
+        "windBearing": 267.7,
+        "windSpeed": 6.9,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": null,
-      "minute": null,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 215543,
           "name": "Espen Esk\u00e5s",
           "nationality": "Norway",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Espen Eskas, Norway",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Espen Esk\u00e5s",
+          "nationality": "Norway",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Espen Eskas, Norway",
           "type": "REFEREE"
         }
       ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": null
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -45591,8 +45635,36 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "LIVE",
-      "utcDate": "2026-07-02T23:00:00Z"
+      "status": "1H",
+      "utcDate": "2026-07-02T23:00:00Z",
+      "venue": {
+        "city": "Toronto",
+        "id": 312,
+        "name": "BMO Field"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Toronto",
+        "cloudCoverage": 35.9,
+        "condition": "fair_day",
+        "country": "Canada",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-02T23:00:23.070329+00:00",
+        "humidity": 48.4,
+        "latitude": 43.6332,
+        "longitude": -79.4186,
+        "name": "BMO Field weather",
+        "observedAt": "2026-07-02T23:00:00Z",
+        "pressure": 1012.7,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "BMO Field",
+        "temperature": 30.2,
+        "temperatureUnit": "C",
+        "windBearing": 267.7,
+        "windSpeed": 6.9,
+        "windSpeedUnit": "m/s"
+      }
     },
     {
       "area": {
