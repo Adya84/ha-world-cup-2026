@@ -43246,7 +43246,7 @@
         "shortName": "Cape Verde",
         "tla": "CPV"
       },
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -43255,7 +43255,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": "L. Martinez",
@@ -43346,10 +43346,28 @@
           "timer": "67:00",
           "timerSeconds": 4020,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Monteiro",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "L. Duarte",
+          "playerOff": "L. Duarte",
+          "playerOn": "J. Monteiro",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -43414,8 +43432,8 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-03T23:28:18.121053+00:00",
-      "lastUpdated": "2026-07-04T01:28:15Z",
+      "lastApiSync": "2026-07-03T23:28:37.750105+00:00",
+      "lastUpdated": "2026-07-04T01:28:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -43443,14 +43461,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-07-03T23:28:18.121053+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-07-03T23:28:37.750105+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -43475,7 +43493,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -43571,6 +43589,24 @@
           "player": "N. Da Costa",
           "playerOff": "N. Da Costa",
           "playerOn": "D. Livramento",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Monteiro",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "L. Duarte",
+          "playerOff": "L. Duarte",
+          "playerOn": "J. Monteiro",
           "rawType": "subst",
           "source": "api_football",
           "team": "Cape Verde Islands",
