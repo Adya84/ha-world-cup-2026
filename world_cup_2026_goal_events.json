@@ -37977,14 +37977,14 @@
     "displayMinute": "48'",
     "events": [
       {
-        "assist": "K. Hafez",
+        "assist": "Karim Hafez",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "13'",
         "extra": null,
         "isDisallowed": false,
         "minute": 13,
-        "player": "E. Ashour",
+        "player": "Emam Ashour",
         "playerOff": null,
         "playerOn": null,
         "rawType": "Goal",
@@ -37993,11 +37993,29 @@
         "timer": "13:00",
         "timerSeconds": 780,
         "type": "Goal"
+      },
+      {
+        "assist": "Kai Trewin",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "45'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "Jordan Bos",
+        "playerOff": "Jordan Bos",
+        "playerOn": "Kai Trewin",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Australia",
+        "timer": "45:00",
+        "timerSeconds": 2700,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
       {
-        "assist": "K. Hafez",
+        "assist": "Karim Hafez",
         "awayTeam": "Egypt",
         "comments": null,
         "detail": "Normal Goal",
@@ -38009,7 +38027,7 @@
         "matchId": 537428,
         "matchUtcDate": "2026-07-03T18:00:00Z",
         "minute": 13,
-        "player": "E. Ashour",
+        "player": "Emam Ashour",
         "playerOff": null,
         "playerOn": null,
         "rawType": "Goal",
@@ -38022,9 +38040,9 @@
     ],
     "homeScore": 0,
     "homeTeam": "Australia",
-    "lastApiSync": "2026-07-03T19:09:11.118883+00:00",
+    "lastApiSync": "2026-07-03T19:09:34.188702+00:00",
     "manualClockText": "48'",
-    "phase_start": "2026-07-03T19:09:11.118883+00:00",
+    "phase_start": "2026-07-03T19:09:34.188702+00:00",
     "referees": [
       {
         "name": "Gustavo Tejera",
@@ -38038,6 +38056,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "Kai Trewin",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "45'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "Jordan Bos",
+        "playerOff": "Jordan Bos",
+        "playerOn": "Kai Trewin",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Australia",
+        "timer": "45:00",
+        "timerSeconds": 2700,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-07-03T18:00:00Z"
   },
   "537429": {
