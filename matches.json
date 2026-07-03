@@ -47772,20 +47772,12 @@
     },
     {
       "apiFootballFixtureId": 1567312,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 12,
-      "awayOffsides": 2,
-      "awayPossession": "55%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/algeria.svg",
         "id": 778,
@@ -47841,11 +47833,16 @@
       "events": [
         {
           "assist": "J. Manzambi",
+          "awayTeam": "Algeria",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537429,
+          "matchUtcDate": "2026-07-03T03:00:00Z",
           "minute": 10,
           "player": "B. Embolo",
           "playerOff": null,
@@ -47859,29 +47856,16 @@
         },
         {
           "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "36'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 36,
-          "player": "F. Chaibi",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Algeria",
-          "timer": "36:00",
-          "timerSeconds": 2160,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
+          "awayTeam": "Algeria",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "46'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537429,
+          "matchUtcDate": "2026-07-03T03:00:00Z",
           "minute": 46,
           "player": "D. Ndoye",
           "playerOff": null,
@@ -47892,204 +47876,6 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Goal"
-        },
-        {
-          "assist": "J. Hadjam",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "H. Aouar",
-          "playerOff": "H. Aouar",
-          "playerOn": "J. Hadjam",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Algeria",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Gouiri",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "R. Zerrouki",
-          "playerOff": "R. Zerrouki",
-          "playerOn": "A. Gouiri",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Algeria",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "F. Rieder",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "R. Vargas",
-          "playerOff": "R. Vargas",
-          "playerOn": "F. Rieder",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Okafor",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "J. Manzambi",
-          "playerOff": "J. Manzambi",
-          "playerOn": "N. Okafor",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Hadj Moussa",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "R. Mahrez",
-          "playerOff": "R. Mahrez",
-          "playerOn": "A. Hadj Moussa",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Algeria",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "H. Boudaoui",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "N. Bentaleb",
-          "playerOff": "N. Bentaleb",
-          "playerOn": "H. Boudaoui",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Algeria",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Roughing",
-          "detail": "Yellow Card",
-          "displayMinute": "72'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 72,
-          "player": "H. Boudaoui",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Algeria",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "A. Boulbina",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "82'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 82,
-          "player": "R. Belghali",
-          "playerOff": "R. Belghali",
-          "playerOn": "A. Boulbina",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Algeria",
-          "timer": "82:00",
-          "timerSeconds": 4920,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Z. Amdouni",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "B. Embolo",
-          "playerOff": "B. Embolo",
-          "playerOn": "Z. Amdouni",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Widmer",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "87'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 87,
-          "player": "D. Zakaria",
-          "playerOff": "D. Zakaria",
-          "playerOn": "S. Widmer",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "87:00",
-          "timerSeconds": 5220,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Aebischer",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "87'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 87,
-          "player": "D. Ndoye",
-          "playerOff": "D. Ndoye",
-          "playerOn": "M. Aebischer",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "87:00",
-          "timerSeconds": 5220,
-          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -48140,14 +47926,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 4,
-      "homeFouls": 10,
-      "homeOffsides": 0,
-      "homePossession": "45%",
-      "homeScore": 2,
-      "homeShotsOnGoal": 5,
       "homeTeam": {
         "crest": "https://crests.football-data.org/788.svg",
         "id": 788,
@@ -48156,56 +47935,16 @@
         "tla": "SUI"
       },
       "id": 537429,
-      "lastApiSync": "2026-07-03T05:58:39.026857+00:00",
       "lastUpdated": "2026-07-03T06:58:24Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 2,
-          "fouls": 12,
-          "offsides": 2,
-          "possession": "55%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 2,
-          "totalShots": 8,
-          "yellowCards": 2
-        },
-        "home": {
-          "corners": 4,
-          "fouls": 10,
-          "offsides": 0,
-          "possession": "45%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 5,
-          "totalShots": 11,
-          "yellowCards": 0
-        }
-      },
       "matchday": null,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Yael Falc\u00f3n",
-          "nationality": "Argentina",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Yael Falcon Perez, Argentina",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 57435,
           "name": "Yael Falc\u00f3n",
           "nationality": "Argentina",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Yael Falcon Perez, Argentina",
           "type": "REFEREE"
         }
       ],
@@ -48221,7 +47960,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -48413,12 +48151,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-03T03:00:00Z",
-      "venue": {
-        "city": "Vancouver",
-        "id": 19445,
-        "name": "BC Place"
-      }
+      "utcDate": "2026-07-03T03:00:00Z"
     },
     {
       "area": {
