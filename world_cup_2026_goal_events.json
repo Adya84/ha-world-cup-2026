@@ -38285,23 +38285,32 @@
     "utcDate": "2026-07-03T22:00:00Z"
   },
   "537428": {
+    "apiFootballFixtureId": 1565178,
     "awayScore": 0,
     "awayTeam": "Egypt",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Australia",
-    "phase_start": null,
+    "lastApiSync": "2026-07-03T18:01:20.237085+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-03T18:01:20.237085+00:00",
     "referees": [
       {
-        "id": 260120,
         "name": "Gustavo Tejera",
         "nationality": "Uruguay",
         "type": "REFEREE"
+      },
+      {
+        "name": "Gustavo Tejera, Uruguay",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-03T18:00:00Z"
   },
   "537429": {
