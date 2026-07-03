@@ -47690,10 +47690,54 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "53'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 53,
+          "player": "I. Perisic",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 3240,
       "fallbackClockText": "54'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Croatia",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "53'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Portugal",
+          "isDisallowed": false,
+          "matchId": 537419,
+          "matchUtcDate": "2026-07-02T23:00:00Z",
+          "minute": 53,
+          "player": "I. Perisic",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "53:00",
+          "timerSeconds": 3180,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 6,
       "homeFouls": 5,
@@ -47709,8 +47753,8 @@
         "tla": "POR"
       },
       "id": 537419,
-      "lastApiSync": "2026-07-03T00:13:31.371798+00:00",
-      "lastUpdated": "2026-07-03T02:13:27Z",
+      "lastApiSync": "2026-07-03T00:13:53.114427+00:00",
+      "lastUpdated": "2026-07-03T02:13:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -47739,7 +47783,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "54'",
-        "lastApiSync": "2026-07-03T00:13:31.371798+00:00",
+        "lastApiSync": "2026-07-03T00:13:53.114427+00:00",
         "seconds": 3240,
         "source": "api_football_live_minute",
         "status": "2H",
