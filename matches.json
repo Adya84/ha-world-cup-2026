@@ -47748,10 +47748,10 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Goal Under Review - offside",
+          "detail": "Goal Disallowed - offside",
           "displayMinute": "61'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 61,
           "player": null,
           "playerOff": null,
@@ -47761,7 +47761,7 @@
           "team": "Portugal",
           "timer": "61:00",
           "timerSeconds": 3660,
-          "type": "VAR"
+          "type": "Disallowed Goal"
         },
         {
           "assist": "F. Conceicao",
@@ -47797,6 +47797,24 @@
           "team": "Portugal",
           "timer": "62:00",
           "timerSeconds": 3720,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "B. Fernandes",
+          "playerOff": "B. Fernandes",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "63:00",
+          "timerSeconds": 3780,
           "type": "Substitution"
         }
       ],
@@ -47843,8 +47861,8 @@
         "tla": "POR"
       },
       "id": 537419,
-      "lastApiSync": "2026-07-03T00:23:02.318711+00:00",
-      "lastUpdated": "2026-07-03T02:22:57Z",
+      "lastApiSync": "2026-07-03T00:23:23.641513+00:00",
+      "lastUpdated": "2026-07-03T02:23:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -47873,7 +47891,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "63'",
-        "lastApiSync": "2026-07-03T00:23:02.318711+00:00",
+        "lastApiSync": "2026-07-03T00:23:23.641513+00:00",
         "seconds": 3780,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -48005,6 +48023,24 @@
           "team": "Portugal",
           "timer": "62:00",
           "timerSeconds": 3720,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Semedo",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "B. Fernandes",
+          "playerOff": "B. Fernandes",
+          "playerOn": "N. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "63:00",
+          "timerSeconds": 3780,
           "type": "Substitution"
         }
       ],
