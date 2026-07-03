@@ -2,14 +2,15 @@
   "live": [
     {
       "apiFootballFixtureId": 1565178,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 1,
       "awayFouls": 8,
       "awayOffsides": 3,
@@ -23,8 +24,7 @@
         "shortName": "Egypt",
         "tla": "EGY"
       },
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "K. Hafez",
@@ -179,8 +179,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "K. Hafez",
@@ -246,7 +244,7 @@
       },
       "id": 537428,
       "lastApiSync": "2026-07-03T19:58:24.890694+00:00",
-      "lastUpdated": "2026-07-03T21:58:21Z",
+      "lastUpdated": "2026-07-03T21:58:42Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -277,13 +275,12 @@
         "displayMinute": "90'",
         "lastApiSync": "2026-07-03T19:58:24.890694+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -330,7 +327,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "K. Trewin",
@@ -452,14 +449,15 @@
   "matches": [
     {
       "apiFootballFixtureId": 1565178,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 1,
       "awayFouls": 8,
       "awayOffsides": 3,
@@ -473,8 +471,7 @@
         "shortName": "Egypt",
         "tla": "EGY"
       },
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -482,7 +479,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "K. Hafez",
@@ -629,8 +626,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "K. Hafez",
@@ -696,7 +691,7 @@
       },
       "id": 537428,
       "lastApiSync": "2026-07-03T19:58:24.890694+00:00",
-      "lastUpdated": "2026-07-03T21:58:21Z",
+      "lastUpdated": "2026-07-03T21:58:42Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -727,13 +722,12 @@
         "displayMinute": "90'",
         "lastApiSync": "2026-07-03T19:58:24.890694+00:00",
         "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "90:00"
       },
-      "manualClockText": "90'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -780,7 +774,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "K. Trewin",
