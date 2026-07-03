@@ -42686,15 +42686,14 @@
     },
     {
       "apiFootballFixtureId": 1565178,
-      "apiFootballStatus": "P",
-      "apiFootballStatusLong": "Penalty in progress",
+      "apiFootballStatus": "PEN",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 7,
       "awayFouls": 14,
       "awayOffsides": 3,
@@ -42746,7 +42745,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -42754,7 +42752,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "K. Hafez",
@@ -43419,9 +43416,8 @@
         "tla": "AUS"
       },
       "id": 537428,
-      "lastApiSync": "2026-07-03T20:38:28.264708+00:00",
+      "lastApiSync": "2026-07-03T20:52:46.697462+00:00",
       "lastUpdated": "2026-07-03T22:44:57Z",
-      "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 7,
@@ -43446,17 +43442,8 @@
           "yellowCards": 0
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "123'",
-        "lastApiSync": "2026-07-03T20:38:28.264708+00:00",
-        "seconds": 7380,
-        "source": "awaiting_api_football_minute",
-        "status": "P",
-        "timer": "123:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
+      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -43515,7 +43502,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "P",
+      "status": "PEN",
       "substitutionEvents": [
         {
           "assist": "K. Trewin",
