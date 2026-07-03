@@ -37762,23 +37762,32 @@
     "utcDate": "2026-07-01T16:00:00Z"
   },
   "537427": {
+    "apiFootballFixtureId": 1565179,
     "awayScore": 0,
     "awayTeam": "Cape Verde",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Argentina",
-    "phase_start": null,
+    "lastApiSync": "2026-07-03T22:01:09.824265+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-03T22:01:09.824265+00:00",
     "referees": [
       {
-        "id": 77052,
         "name": "Drew Fischer",
         "nationality": "Canada",
         "type": "REFEREE"
+      },
+      {
+        "name": "Drew Fischer, Canada",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-03T22:00:00Z"
   },
   "537428": {
