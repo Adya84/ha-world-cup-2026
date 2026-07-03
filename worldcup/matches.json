@@ -43246,7 +43246,7 @@
         "shortName": "Cape Verde",
         "tla": "CPV"
       },
-      "clockSeconds": 3540,
+      "clockSeconds": 3600,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -43255,7 +43255,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "59'",
+      "displayMinute": "60'",
       "events": [
         {
           "assist": "L. Martinez",
@@ -43276,14 +43276,14 @@
           "type": "Goal"
         },
         {
-          "assist": null,
+          "assist": "R. Mendes",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "59'",
           "extra": null,
           "isDisallowed": false,
           "minute": 59,
-          "player": null,
+          "player": "D. Duarte",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -43294,8 +43294,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3540,
-      "fallbackClockText": "59'",
+      "fallbackClock": 3600,
+      "fallbackClockText": "60'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -43319,6 +43319,29 @@
           "timer": "29:00",
           "timerSeconds": 1740,
           "type": "Goal"
+        },
+        {
+          "assist": "R. Mendes",
+          "awayTeam": "Cape Verde",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "59'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Argentina",
+          "isDisallowed": false,
+          "matchId": 537427,
+          "matchUtcDate": "2026-07-03T22:00:00Z",
+          "minute": 59,
+          "player": "D. Duarte",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "59:00",
+          "timerSeconds": 3540,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -43337,8 +43360,8 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-03T23:20:16.757181+00:00",
-      "lastUpdated": "2026-07-04T01:20:15Z",
+      "lastApiSync": "2026-07-03T23:20:38.110559+00:00",
+      "lastUpdated": "2026-07-04T01:20:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -43366,14 +43389,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "59'",
-        "lastApiSync": "2026-07-03T23:20:16.757181+00:00",
-        "seconds": 3540,
+        "displayMinute": "60'",
+        "lastApiSync": "2026-07-03T23:20:38.110559+00:00",
+        "seconds": 3600,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "59'"
+        "timer": "60'"
       },
-      "manualClockText": "59'",
+      "manualClockText": "60'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -43398,7 +43421,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 59,
+      "minute": 60,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
