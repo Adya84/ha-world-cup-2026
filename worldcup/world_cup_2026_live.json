@@ -281,8 +281,8 @@
         "tla": "AUS"
       },
       "id": 537428,
-      "lastApiSync": "2026-07-03T20:04:10.994007+00:00",
-      "lastUpdated": "2026-07-03T22:04:06Z",
+      "lastApiSync": "2026-07-03T20:04:32.625830+00:00",
+      "lastUpdated": "2026-07-03T22:04:27Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -311,7 +311,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "97'",
-        "lastApiSync": "2026-07-03T20:04:10.994007+00:00",
+        "lastApiSync": "2026-07-03T20:04:32.625830+00:00",
         "seconds": 5820,
         "source": "api_football_live_minute",
         "status": "ET",
@@ -346,7 +346,11 @@
         }
       ],
       "score": {
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
+        "extraTime": {
+          "away": 0,
+          "home": 0
+        },
         "fullTime": {
           "away": 1,
           "home": 1
@@ -354,6 +358,10 @@
         "halfTime": {
           "away": 1,
           "home": 0
+        },
+        "regularTime": {
+          "away": 1,
+          "home": 1
         },
         "winner": "DRAW"
       },
@@ -803,8 +811,8 @@
         "tla": "AUS"
       },
       "id": 537428,
-      "lastApiSync": "2026-07-03T20:04:10.994007+00:00",
-      "lastUpdated": "2026-07-03T22:04:06Z",
+      "lastApiSync": "2026-07-03T20:04:32.625830+00:00",
+      "lastUpdated": "2026-07-03T22:04:27Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -833,7 +841,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "97'",
-        "lastApiSync": "2026-07-03T20:04:10.994007+00:00",
+        "lastApiSync": "2026-07-03T20:04:32.625830+00:00",
         "seconds": 5820,
         "source": "api_football_live_minute",
         "status": "ET",
@@ -868,7 +876,11 @@
         }
       ],
       "score": {
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
+        "extraTime": {
+          "away": 0,
+          "home": 0
+        },
         "fullTime": {
           "away": 1,
           "home": 1
@@ -876,6 +888,10 @@
         "halfTime": {
           "away": 1,
           "home": 0
+        },
+        "regularTime": {
+          "away": 1,
+          "home": 1
         },
         "winner": "DRAW"
       },
