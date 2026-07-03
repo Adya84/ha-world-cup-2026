@@ -47343,8 +47343,8 @@
     },
     {
       "apiFootballFixtureId": 1567309,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -47420,8 +47420,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2760,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -47429,7 +47427,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "46'",
       "events": [
         {
           "assist": null,
@@ -47756,8 +47753,6 @@
           "type": "Disallowed Goal"
         }
       ],
-      "fallbackClock": 2760,
-      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": null,
@@ -47845,9 +47840,8 @@
         "tla": "POR"
       },
       "id": 537419,
-      "lastApiSync": "2026-07-03T01:09:10.985797+00:00",
-      "lastUpdated": "2026-07-03T03:09:09Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-03T01:09:31.900525+00:00",
+      "lastUpdated": "2026-07-03T03:09:30Z",
       "liveStatistics": {
         "away": {
           "corners": 5,
@@ -47872,41 +47866,8 @@
           "yellowCards": 1
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "46'",
-        "lastApiSync": "2026-07-03T01:09:10.985797+00:00",
-        "seconds": 2760,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "46'"
-      },
-      "manualClockText": "46'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Toronto",
-        "cloudCoverage": 7.8,
-        "condition": "clearsky_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-03T01:06:21.455530+00:00",
-        "humidity": 49.5,
-        "latitude": 43.6332,
-        "longitude": -79.4186,
-        "name": "BMO Field weather",
-        "observedAt": "2026-07-03T00:00:00Z",
-        "pressure": 1012.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BMO Field",
-        "temperature": 29.8,
-        "temperatureUnit": "C",
-        "windBearing": 271.0,
-        "windSpeed": 5.8,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": null,
-      "minute": 46,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -47953,7 +47914,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "I. Matanovic",
@@ -48123,29 +48084,6 @@
         "city": "Toronto",
         "id": 312,
         "name": "BMO Field"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Toronto",
-        "cloudCoverage": 7.8,
-        "condition": "clearsky_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-03T01:06:21.455530+00:00",
-        "humidity": 49.5,
-        "latitude": 43.6332,
-        "longitude": -79.4186,
-        "name": "BMO Field weather",
-        "observedAt": "2026-07-03T00:00:00Z",
-        "pressure": 1012.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BMO Field",
-        "temperature": 29.8,
-        "temperatureUnit": "C",
-        "windBearing": 271.0,
-        "windSpeed": 5.8,
-        "windSpeedUnit": "m/s"
       }
     },
     {
