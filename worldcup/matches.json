@@ -43266,7 +43266,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4740,
+      "clockSeconds": 4800,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -43275,7 +43275,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "79'",
+      "displayMinute": "80'",
       "events": [
         {
           "assist": "L. Martinez",
@@ -43402,10 +43402,28 @@
           "timer": "68:00",
           "timerSeconds": 4080,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "W. Semedo",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "80'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 80,
+          "player": "R. Mendes",
+          "playerOff": "R. Mendes",
+          "playerOn": "W. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4740,
-      "fallbackClockText": "79'",
+      "fallbackClock": 4800,
+      "fallbackClockText": "80'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -43470,8 +43488,8 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-03T23:40:13.563042+00:00",
-      "lastUpdated": "2026-07-04T01:40:09Z",
+      "lastApiSync": "2026-07-03T23:40:33.996512+00:00",
+      "lastUpdated": "2026-07-04T01:40:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -43499,14 +43517,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "79'",
-        "lastApiSync": "2026-07-03T23:40:13.563042+00:00",
-        "seconds": 4740,
+        "displayMinute": "80'",
+        "lastApiSync": "2026-07-03T23:40:33.996512+00:00",
+        "seconds": 4800,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "79'"
+        "timer": "80'"
       },
-      "manualClockText": "79'",
+      "manualClockText": "80'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -43531,7 +43549,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 79,
+      "minute": 80,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -43650,6 +43668,24 @@
           "team": "Cape Verde Islands",
           "timer": "67:00",
           "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "W. Semedo",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "80'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 80,
+          "player": "R. Mendes",
+          "playerOff": "R. Mendes",
+          "playerOn": "W. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "80:00",
+          "timerSeconds": 4800,
           "type": "Substitution"
         }
       ],
