@@ -38286,7 +38286,7 @@
   },
   "537428": {
     "apiFootballFixtureId": 1565178,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Egypt",
     "base_seconds": 780,
     "clock_active": false,
@@ -38294,14 +38294,14 @@
     "displayMinute": "13'",
     "events": [
       {
-        "assist": null,
+        "assist": "K. Hafez",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "13'",
         "extra": null,
         "isDisallowed": false,
         "minute": 13,
-        "player": null,
+        "player": "E. Ashour",
         "playerOff": null,
         "playerOn": null,
         "rawType": "Goal",
@@ -38312,12 +38312,36 @@
         "type": "Goal"
       }
     ],
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "assist": "K. Hafez",
+        "awayTeam": "Egypt",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "13'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Australia",
+        "isDisallowed": false,
+        "matchId": 537428,
+        "matchUtcDate": "2026-07-03T18:00:00Z",
+        "minute": 13,
+        "player": "E. Ashour",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Egypt",
+        "timer": "13:00",
+        "timerSeconds": 780,
+        "type": "Goal"
+      }
+    ],
     "homeScore": 0,
     "homeTeam": "Australia",
-    "lastApiSync": "2026-07-03T18:12:55.318512+00:00",
+    "lastApiSync": "2026-07-03T18:13:18.087604+00:00",
     "manualClockText": "13'",
-    "phase_start": "2026-07-03T18:12:55.318512+00:00",
+    "phase_start": "2026-07-03T18:13:18.087604+00:00",
     "referees": [
       {
         "name": "Gustavo Tejera",
