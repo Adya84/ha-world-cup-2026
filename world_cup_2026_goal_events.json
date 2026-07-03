@@ -38807,10 +38807,10 @@
       {
         "assist": null,
         "comments": null,
-        "detail": "Goal Under Review - offside",
+        "detail": "Goal Disallowed - offside",
         "displayMinute": "61'",
         "extra": null,
-        "isDisallowed": false,
+        "isDisallowed": true,
         "minute": 61,
         "player": null,
         "playerOff": null,
@@ -38820,7 +38820,7 @@
         "team": "Portugal",
         "timer": "61:00",
         "timerSeconds": 3660,
-        "type": "VAR"
+        "type": "Disallowed Goal"
       },
       {
         "assist": "F. Conceicao",
@@ -38857,6 +38857,24 @@
         "timer": "62:00",
         "timerSeconds": 3720,
         "type": "Substitution"
+      },
+      {
+        "assist": "N. Semedo",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "63'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 63,
+        "player": "B. Fernandes",
+        "playerOff": "B. Fernandes",
+        "playerOn": "N. Semedo",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Portugal",
+        "timer": "63:00",
+        "timerSeconds": 3780,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -38886,9 +38904,9 @@
     ],
     "homeScore": 0,
     "homeTeam": "Portugal",
-    "lastApiSync": "2026-07-03T00:23:02.318711+00:00",
+    "lastApiSync": "2026-07-03T00:23:23.641513+00:00",
     "manualClockText": "63'",
-    "phase_start": "2026-07-03T00:23:02.318711+00:00",
+    "phase_start": "2026-07-03T00:23:23.641513+00:00",
     "referees": [
       {
         "name": "Espen Esk\u00e5s",
@@ -38955,6 +38973,24 @@
         "team": "Portugal",
         "timer": "62:00",
         "timerSeconds": 3720,
+        "type": "Substitution"
+      },
+      {
+        "assist": "N. Semedo",
+        "comments": null,
+        "detail": "Substitution 3",
+        "displayMinute": "63'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 63,
+        "player": "B. Fernandes",
+        "playerOff": "B. Fernandes",
+        "playerOn": "N. Semedo",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Portugal",
+        "timer": "63:00",
+        "timerSeconds": 3780,
         "type": "Substitution"
       }
     ],
