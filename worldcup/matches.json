@@ -47772,8 +47772,8 @@
     },
     {
       "apiFootballFixtureId": 1567312,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -47831,8 +47831,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -47840,7 +47838,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "Johan Manzambi",
@@ -48095,8 +48092,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Johan Manzambi",
@@ -48161,9 +48156,8 @@
         "tla": "SUI"
       },
       "id": 537429,
-      "lastApiSync": "2026-07-03T04:56:31.919735+00:00",
-      "lastUpdated": "2026-07-03T06:56:30Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-03T04:56:51.881462+00:00",
+      "lastUpdated": "2026-07-03T06:56:51Z",
       "liveStatistics": {
         "away": {
           "corners": 2,
@@ -48187,39 +48181,6 @@
           "totalShots": 9,
           "yellowCards": 0
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-03T04:56:31.919735+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 100.0,
-        "condition": "rain",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-03T04:53:02.033161+00:00",
-        "humidity": 89.5,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-07-03T04:00:00Z",
-        "pressure": 1017.0,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 14.5,
-        "temperatureUnit": "C",
-        "windBearing": 77.1,
-        "windSpeed": 3.8,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -48269,7 +48230,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "Jaouen Hadjam",
@@ -48457,29 +48418,6 @@
         "city": "Vancouver",
         "id": 19445,
         "name": "BC Place"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 100.0,
-        "condition": "rain",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-03T04:53:02.033161+00:00",
-        "humidity": 89.5,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-07-03T04:00:00Z",
-        "pressure": 1017.0,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 14.5,
-        "temperatureUnit": "C",
-        "windBearing": 77.1,
-        "windSpeed": 3.8,
-        "windSpeedUnit": "m/s"
       }
     },
     {
