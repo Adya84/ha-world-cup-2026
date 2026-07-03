@@ -47672,6 +47672,24 @@
           "timer": "17:00",
           "timerSeconds": 1020,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "I. Matanovic",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Budimir",
+          "playerOff": "A. Budimir",
+          "playerOn": "I. Matanovic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 2760,
@@ -47691,8 +47709,8 @@
         "tla": "POR"
       },
       "id": 537419,
-      "lastApiSync": "2026-07-03T00:05:40.614197+00:00",
-      "lastUpdated": "2026-07-03T02:05:24Z",
+      "lastApiSync": "2026-07-03T00:06:12.047484+00:00",
+      "lastUpdated": "2026-07-03T02:06:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -47721,7 +47739,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-07-03T00:05:40.614197+00:00",
+        "lastApiSync": "2026-07-03T00:06:12.047484+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -47800,6 +47818,26 @@
       },
       "stage": "LAST_32",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "I. Matanovic",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Budimir",
+          "playerOff": "A. Budimir",
+          "playerOn": "I. Matanovic",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Croatia",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-02T23:00:00Z",
       "venue": {
         "city": "Toronto",
