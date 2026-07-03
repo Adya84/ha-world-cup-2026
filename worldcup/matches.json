@@ -42695,7 +42695,7 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 10,
+      "awayFouls": 11,
       "awayOffsides": 3,
       "awayPossession": "57%",
       "awayScore": 1,
@@ -42727,7 +42727,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5580,
+      "clockSeconds": 5640,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -42736,7 +42736,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "93'",
+      "displayMinute": "94'",
       "events": [
         {
           "assist": "K. Hafez",
@@ -42935,10 +42935,28 @@
           "timer": "105:00",
           "timerSeconds": 6300,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "H. Abdelkarim",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "106'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 106,
+          "player": "O. Marmoush",
+          "playerOff": "O. Marmoush",
+          "playerOn": "H. Abdelkarim",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "106:00",
+          "timerSeconds": 6360,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5580,
-      "fallbackClockText": "93'",
+      "fallbackClock": 5640,
+      "fallbackClockText": "94'",
       "goalEvents": [
         {
           "assist": "K. Hafez",
@@ -43003,20 +43021,20 @@
         "tla": "AUS"
       },
       "id": 537428,
-      "lastApiSync": "2026-07-03T20:21:50.459672+00:00",
-      "lastUpdated": "2026-07-03T22:21:45Z",
+      "lastApiSync": "2026-07-03T20:22:12.972581+00:00",
+      "lastUpdated": "2026-07-03T22:22:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 10,
+          "fouls": 11,
           "offsides": 3,
           "possession": "57%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 3,
           "totalShots": 12,
-          "yellowCards": null
+          "yellowCards": 1
         },
         "home": {
           "corners": 4,
@@ -43027,21 +43045,21 @@
           "shotsOffGoal": 4,
           "shotsOnGoal": 1,
           "totalShots": 12,
-          "yellowCards": null
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "93'",
-        "lastApiSync": "2026-07-03T20:21:50.459672+00:00",
-        "seconds": 5580,
+        "displayMinute": "94'",
+        "lastApiSync": "2026-07-03T20:22:12.972581+00:00",
+        "seconds": 5640,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "93'"
+        "timer": "94'"
       },
-      "manualClockText": "93'",
+      "manualClockText": "94'",
       "matchday": null,
-      "minute": 93,
+      "minute": 94,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -43240,6 +43258,24 @@
           "team": "Australia",
           "timer": "91:00",
           "timerSeconds": 5460,
+          "type": "Substitution"
+        },
+        {
+          "assist": "H. Abdelkarim",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "106'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 106,
+          "player": "O. Marmoush",
+          "playerOff": "O. Marmoush",
+          "playerOn": "H. Abdelkarim",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "106:00",
+          "timerSeconds": 6360,
           "type": "Substitution"
         }
       ],
