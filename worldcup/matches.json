@@ -47355,7 +47355,7 @@
       "awayFouls": 12,
       "awayOffsides": 3,
       "awayPossession": "40%",
-      "awayScore": 2,
+      "awayScore": 1,
       "awayShotsOnGoal": 6,
       "awayTeam": {
         "crest": "https://crests.football-data.org/799.svg",
@@ -47740,20 +47740,20 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - offside",
           "displayMinute": "90+13'",
           "extra": 13,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 90,
           "player": "J. Gvardiol",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Croatia",
           "timer": "103:00",
           "timerSeconds": 6180,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
       "fallbackClock": 2760,
@@ -47827,29 +47827,6 @@
           "timer": "94:00",
           "timerSeconds": 5640,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "awayTeam": "Croatia",
-          "comments": null,
-          "detail": "Normal Goal",
-          "displayMinute": "90+13'",
-          "extra": 13,
-          "goalNumber": 4,
-          "homeTeam": "Portugal",
-          "isDisallowed": false,
-          "matchId": 537419,
-          "matchUtcDate": "2026-07-02T23:00:00Z",
-          "minute": 90,
-          "player": "J. Gvardiol",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Croatia",
-          "timer": "103:00",
-          "timerSeconds": 6180,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -47868,8 +47845,8 @@
         "tla": "POR"
       },
       "id": 537419,
-      "lastApiSync": "2026-07-03T01:05:35.394985+00:00",
-      "lastUpdated": "2026-07-03T03:05:30Z",
+      "lastApiSync": "2026-07-03T01:05:59.794611+00:00",
+      "lastUpdated": "2026-07-03T03:05:57Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -47898,7 +47875,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-07-03T01:05:35.394985+00:00",
+        "lastApiSync": "2026-07-03T01:05:59.794611+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -47958,7 +47935,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 1,
           "home": 2
         },
         "halfTime": {
