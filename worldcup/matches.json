@@ -11217,11 +11217,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 7,
-      "awayOffsides": 6,
-      "awayPossession": "58%",
-      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/772.png",
         "id": 772,
@@ -11277,29 +11272,16 @@
       "events": [
         {
           "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "4'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 4,
-          "player": "Kang-in Lee",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "South Korea",
-          "timer": "4:00",
-          "timerSeconds": 240,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
+          "awayTeam": "Korea Republic",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "50'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Mexico",
           "isDisallowed": false,
+          "matchId": 537330,
+          "matchUtcDate": "2026-06-19T01:00:00Z",
           "minute": 50,
           "player": "L. Romo",
           "playerOff": null,
@@ -11310,204 +11292,6 @@
           "timer": "50:00",
           "timerSeconds": 3000,
           "type": "Goal"
-        },
-        {
-          "assist": "Hwang Hee-Chan",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "57'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 57,
-          "player": "Lee Jae-Sung",
-          "playerOff": "Lee Jae-Sung",
-          "playerOn": "Hwang Hee-Chan",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "South Korea",
-          "timer": "57:00",
-          "timerSeconds": 3420,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Oh Hyeon-Gyu",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "57'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 57,
-          "player": "Son Heung-Min",
-          "playerOff": "Son Heung-Min",
-          "playerOn": "Oh Hyeon-Gyu",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "South Korea",
-          "timer": "57:00",
-          "timerSeconds": 3420,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "Seung Ho Paik",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "South Korea",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "O. Vargas",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "L. Romo",
-          "playerOff": "L. Romo",
-          "playerOn": "O. Vargas",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Mexico",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "O. Pineda",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "B. Gutierrez",
-          "playerOff": "B. Gutierrez",
-          "playerOn": "O. Pineda",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Mexico",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Eom Ji-Sung",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "Kim Moon-Hwan",
-          "playerOff": "Kim Moon-Hwan",
-          "playerOn": "Eom Ji-Sung",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "South Korea",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Yang Hyun-Jun",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "Seol Young-Woo",
-          "playerOff": "Seol Young-Woo",
-          "playerOn": "Yang Hyun-Jun",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "South Korea",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Cho Gue-Sung",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "Paik Seung-Ho",
-          "playerOff": "Paik Seung-Ho",
-          "playerOn": "Cho Gue-Sung",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "South Korea",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "I. Reyes",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "80'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 80,
-          "player": "R. Alvarado",
-          "playerOff": "R. Alvarado",
-          "playerOn": "I. Reyes",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Mexico",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Gimenez",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "80'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 80,
-          "player": "R. Jimenez",
-          "playerOff": "R. Jimenez",
-          "playerOn": "S. Gimenez",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Mexico",
-          "timer": "80:00",
-          "timerSeconds": 4800,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. S. Huerta Valera",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "J. Quinones",
-          "playerOff": "J. Quinones",
-          "playerOn": "C. S. Huerta Valera",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Mexico",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -11535,13 +11319,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "group": "GROUP_A",
-      "homeCorners": 0,
-      "homeFouls": 9,
-      "homeOffsides": 3,
-      "homePossession": "42%",
-      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/769.svg",
         "id": 769,
@@ -11551,53 +11329,15 @@
       },
       "id": 537330,
       "lastUpdated": "2026-07-02T15:20:12Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 2,
-          "fouls": 7,
-          "offsides": 6,
-          "possession": "58%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 2,
-          "totalShots": 9,
-          "yellowCards": 2
-        },
-        "home": {
-          "corners": 0,
-          "fouls": 9,
-          "offsides": 3,
-          "possession": "42%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 4,
-          "totalShots": 8,
-          "yellowCards": 0
-        }
-      },
       "matchday": 2,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Gustavo Tejera",
-          "nationality": "Uruguay",
-          "type": "REFEREE"
-        },
-        {
-          "name": "G. Tejera",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 260120,
           "name": "Gustavo Tejera",
           "nationality": "Uruguay",
-          "type": "REFEREE"
-        },
-        {
-          "name": "G. Tejera",
           "type": "REFEREE"
         }
       ],
@@ -48087,8 +47827,8 @@
         "tla": "POR"
       },
       "id": 537419,
-      "lastApiSync": "2026-07-03T00:59:40.740878+00:00",
-      "lastUpdated": "2026-07-03T02:59:39Z",
+      "lastApiSync": "2026-07-03T01:00:25.780928+00:00",
+      "lastUpdated": "2026-07-03T03:00:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48117,7 +47857,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-03T00:59:40.740878+00:00",
+        "lastApiSync": "2026-07-03T01:00:25.780928+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -48420,12 +48160,19 @@
         "tla": "SUI"
       },
       "id": 537429,
-      "lastUpdated": "2026-07-02T15:20:12Z",
+      "lastUpdated": "2026-07-03T03:00:01Z",
       "matchday": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 57435,
+          "name": "Yael Falc\u00f3n",
+          "nationality": "Argentina",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
