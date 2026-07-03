@@ -43061,7 +43061,7 @@
       "awayFouls": 1,
       "awayOffsides": null,
       "awayPossession": "74%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/825.svg",
@@ -43082,14 +43082,14 @@
       "displayMinute": "13'",
       "events": [
         {
-          "assist": null,
+          "assist": "K. Hafez",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "13'",
           "extra": null,
           "isDisallowed": false,
           "minute": 13,
-          "player": null,
+          "player": "E. Ashour",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -43104,14 +43104,19 @@
       "fallbackClockText": "13'",
       "goalEvents": [
         {
-          "assist": null,
+          "assist": "K. Hafez",
+          "awayTeam": "Egypt",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "13'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Australia",
           "isDisallowed": false,
+          "matchId": 537428,
+          "matchUtcDate": "2026-07-03T18:00:00Z",
           "minute": 13,
-          "player": null,
+          "player": "E. Ashour",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -43138,8 +43143,8 @@
         "tla": "AUS"
       },
       "id": 537428,
-      "lastApiSync": "2026-07-03T18:12:55.318512+00:00",
-      "lastUpdated": "2026-07-03T20:12:51Z",
+      "lastApiSync": "2026-07-03T18:13:18.087604+00:00",
+      "lastUpdated": "2026-07-03T20:12:59Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -43168,7 +43173,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "13'",
-        "lastApiSync": "2026-07-03T18:12:55.318512+00:00",
+        "lastApiSync": "2026-07-03T18:13:18.087604+00:00",
         "seconds": 780,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -43205,14 +43210,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
-        "winner": "DRAW"
+        "winner": "AWAY_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
