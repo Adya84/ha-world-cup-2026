@@ -2,13 +2,20 @@
   "live": [
     {
       "apiFootballFixtureId": 1565179,
+      "apiFootballStatus": "HT",
+      "apiFootballStatusLong": "Halftime",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayCorners": null,
+      "awayFouls": 4,
+      "awayOffsides": 0,
+      "awayPossession": "36%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
         "id": 1930,
@@ -16,7 +23,8 @@
         "shortName": "Cape Verde",
         "tla": "CPV"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 2700,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -24,20 +32,15 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "45'",
       "events": [
         {
           "assist": "L. Martinez",
-          "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "29'",
           "extra": null,
-          "goalNumber": 1,
-          "homeTeam": "Argentina",
           "isDisallowed": false,
-          "matchId": 537427,
-          "matchUtcDate": "2026-07-03T22:00:00Z",
           "minute": 29,
           "player": "L. Messi",
           "playerOff": null,
@@ -50,6 +53,8 @@
           "type": "Goal"
         }
       ],
+      "fallbackClock": 2700,
+      "fallbackClockText": "45'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -75,7 +80,14 @@
           "type": "Goal"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "group": null,
+      "homeCorners": null,
+      "homeFouls": 4,
+      "homeOffsides": 2,
+      "homePossession": "64%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -84,27 +96,90 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-03T22:49:26.104765+00:00",
-      "lastUpdated": "2026-07-04T00:49:42Z",
+      "lastApiSync": "2026-07-03T22:50:08.457420+00:00",
+      "lastUpdated": "2026-07-04T00:50:03Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 4,
+          "offsides": 0,
+          "possession": "36%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 1,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 4,
+          "offsides": 2,
+          "possession": "64%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 3,
+          "totalShots": 4,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-07-03T22:49:26.104765+00:00",
+        "lastApiSync": "2026-07-03T22:50:08.457420+00:00",
         "seconds": 2700,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "45:00"
+        "source": "api_football_live_minute",
+        "status": "HT",
+        "timer": "45'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "45'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 52.3,
+        "condition": "lightrainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-03T22:42:10.176713+00:00",
+        "humidity": 76.3,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-07-03T22:00:00Z",
+        "pressure": 1016.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 29.0,
+        "temperatureUnit": "C",
+        "windBearing": 315.1,
+        "windSpeed": 1.5,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": null,
+      "minute": 45,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -115,11 +190,12 @@
           "home": 1
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 1
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -128,20 +204,55 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "IN_PLAY",
-      "utcDate": "2026-07-03T22:00:00Z"
+      "status": "HT",
+      "utcDate": "2026-07-03T22:00:00Z",
+      "venue": {
+        "city": "Miami",
+        "id": 0,
+        "name": "Hard Rock Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 52.3,
+        "condition": "lightrainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-03T22:42:10.176713+00:00",
+        "humidity": 76.3,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-07-03T22:00:00Z",
+        "pressure": 1016.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 29.0,
+        "temperatureUnit": "C",
+        "windBearing": 315.1,
+        "windSpeed": 1.5,
+        "windSpeedUnit": "m/s"
+      }
     }
   ],
   "matches": [
     {
       "apiFootballFixtureId": 1565179,
+      "apiFootballStatus": "HT",
+      "apiFootballStatusLong": "Halftime",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayCorners": null,
+      "awayFouls": 4,
+      "awayOffsides": 0,
+      "awayPossession": "36%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/cape_verde.svg",
         "id": 1930,
@@ -149,7 +260,8 @@
         "shortName": "Cape Verde",
         "tla": "CPV"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 2700,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -157,20 +269,15 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "45'",
       "events": [
         {
           "assist": "L. Martinez",
-          "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "29'",
           "extra": null,
-          "goalNumber": 1,
-          "homeTeam": "Argentina",
           "isDisallowed": false,
-          "matchId": 537427,
-          "matchUtcDate": "2026-07-03T22:00:00Z",
           "minute": 29,
           "player": "L. Messi",
           "playerOff": null,
@@ -183,6 +290,8 @@
           "type": "Goal"
         }
       ],
+      "fallbackClock": 2700,
+      "fallbackClockText": "45'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -208,7 +317,14 @@
           "type": "Goal"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "group": null,
+      "homeCorners": null,
+      "homeFouls": 4,
+      "homeOffsides": 2,
+      "homePossession": "64%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -217,27 +333,90 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-03T22:49:26.104765+00:00",
-      "lastUpdated": "2026-07-04T00:49:42Z",
+      "lastApiSync": "2026-07-03T22:50:08.457420+00:00",
+      "lastUpdated": "2026-07-04T00:50:03Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 4,
+          "offsides": 0,
+          "possession": "36%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 0,
+          "totalShots": 1,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 4,
+          "offsides": 2,
+          "possession": "64%",
+          "redCards": null,
+          "shotsOffGoal": 1,
+          "shotsOnGoal": 3,
+          "totalShots": 4,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-07-03T22:49:26.104765+00:00",
+        "lastApiSync": "2026-07-03T22:50:08.457420+00:00",
         "seconds": 2700,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "45:00"
+        "source": "api_football_live_minute",
+        "status": "HT",
+        "timer": "45'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "45'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 52.3,
+        "condition": "lightrainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-03T22:42:10.176713+00:00",
+        "humidity": 76.3,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-07-03T22:00:00Z",
+        "pressure": 1016.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 29.0,
+        "temperatureUnit": "C",
+        "windBearing": 315.1,
+        "windSpeed": 1.5,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": null,
+      "minute": 45,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 77052,
           "name": "Drew Fischer",
           "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Drew Fischer",
+          "nationality": "Canada",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Drew Fischer, Canada",
           "type": "REFEREE"
         }
       ],
@@ -248,11 +427,12 @@
           "home": 1
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 1
         },
         "winner": "HOME_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -261,8 +441,36 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "IN_PLAY",
-      "utcDate": "2026-07-03T22:00:00Z"
+      "status": "HT",
+      "utcDate": "2026-07-03T22:00:00Z",
+      "venue": {
+        "city": "Miami",
+        "id": 0,
+        "name": "Hard Rock Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "Miami",
+        "cloudCoverage": 52.3,
+        "condition": "lightrainshowers_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-03T22:42:10.176713+00:00",
+        "humidity": 76.3,
+        "latitude": 25.958,
+        "longitude": -80.2389,
+        "name": "Hard Rock Stadium weather",
+        "observedAt": "2026-07-03T22:00:00Z",
+        "pressure": 1016.8,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "Hard Rock Stadium",
+        "temperature": 29.0,
+        "temperatureUnit": "C",
+        "windBearing": 315.1,
+        "windSpeed": 1.5,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
