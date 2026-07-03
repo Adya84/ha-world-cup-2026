@@ -2,14 +2,15 @@
   "live": [
     {
       "apiFootballFixtureId": 1565178,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 7,
       "awayFouls": 13,
       "awayOffsides": 3,
@@ -61,8 +62,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7380,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -70,7 +70,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "123'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "K. Hafez",
@@ -343,8 +343,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 7380,
-      "fallbackClockText": "123'",
       "goalEvents": [
         {
           "assist": "K. Hafez",
@@ -441,13 +439,12 @@
         "displayMinute": "123'",
         "lastApiSync": "2026-07-03T20:38:28.264708+00:00",
         "seconds": 7380,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "123'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "123:00"
       },
-      "manualClockText": "123'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
-      "minute": 123,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -502,7 +499,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "K. Trewin",
@@ -714,14 +711,15 @@
   "matches": [
     {
       "apiFootballFixtureId": 1565178,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 7,
       "awayFouls": 13,
       "awayOffsides": 3,
@@ -773,8 +771,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7380,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -782,7 +779,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "123'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "K. Hafez",
@@ -1055,8 +1052,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 7380,
-      "fallbackClockText": "123'",
       "goalEvents": [
         {
           "assist": "K. Hafez",
@@ -1153,13 +1148,12 @@
         "displayMinute": "123'",
         "lastApiSync": "2026-07-03T20:38:28.264708+00:00",
         "seconds": 7380,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "123'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "123:00"
       },
-      "manualClockText": "123'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
-      "minute": 123,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1214,7 +1208,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "K. Trewin",
