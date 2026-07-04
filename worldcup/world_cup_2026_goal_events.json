@@ -20695,7 +20695,7 @@
     "apiFootballFixtureId": 1569870,
     "awayScore": 1,
     "awayTeam": "France",
-    "base_seconds": 4200,
+    "base_seconds": 4260,
     "cardEvents": [
       {
         "assist": null,
@@ -20717,8 +20717,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4200,
-    "displayMinute": "70'",
+    "clock_seconds": 4260,
+    "displayMinute": "71'",
     "events": [
       {
         "assist": null,
@@ -20791,14 +20791,56 @@
         "timer": "61:00",
         "timerSeconds": 3660,
         "type": "Substitution"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Penalty",
+        "displayMinute": "70'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 70,
+        "player": "K. Mbappe",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "France",
+        "timer": "70:00",
+        "timerSeconds": 4200,
+        "type": "Penalty"
       }
     ],
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "assist": null,
+        "awayTeam": "France",
+        "comments": null,
+        "detail": "Penalty",
+        "displayMinute": "70'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Paraguay",
+        "isDisallowed": false,
+        "matchId": 537375,
+        "matchUtcDate": "2026-07-04T21:00:00Z",
+        "minute": 70,
+        "player": "K. Mbappe",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "France",
+        "timer": "70:00",
+        "timerSeconds": 4200,
+        "type": "Goal"
+      }
+    ],
     "homeScore": 0,
     "homeTeam": "Paraguay",
-    "lastApiSync": "2026-07-04T22:34:04.900373+00:00",
-    "manualClockText": "70'",
-    "phase_start": "2026-07-04T22:34:04.900373+00:00",
+    "lastApiSync": "2026-07-04T22:34:26.405344+00:00",
+    "manualClockText": "71'",
+    "phase_start": "2026-07-04T22:34:26.405344+00:00",
     "referees": [
       {
         "name": "Il'giz Tantashev",
