@@ -21393,7 +21393,7 @@
   },
   "537376": {
     "apiFootballFixtureId": 1567824,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Morocco",
     "base_seconds": 3000,
     "cardEvents": [
@@ -21655,6 +21655,24 @@
         "type": "Yellow Card"
       },
       {
+        "assist": "A. Hakimi",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "50'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 50,
+        "player": "A. Ounahi",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Morocco",
+        "timer": "50:00",
+        "timerSeconds": 3000,
+        "type": "Goal"
+      },
+      {
         "assist": null,
         "comments": "Roughing",
         "detail": "Yellow Card",
@@ -21673,12 +21691,36 @@
         "type": "Yellow Card"
       }
     ],
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "assist": "A. Hakimi",
+        "awayTeam": "Morocco",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "50'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Canada",
+        "isDisallowed": false,
+        "matchId": 537376,
+        "matchUtcDate": "2026-07-04T17:00:00Z",
+        "minute": 50,
+        "player": "A. Ounahi",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Morocco",
+        "timer": "50:00",
+        "timerSeconds": 3000,
+        "type": "Goal"
+      }
+    ],
     "homeScore": 0,
     "homeTeam": "Canada",
-    "lastApiSync": "2026-07-04T18:13:58.404793+00:00",
+    "lastApiSync": "2026-07-04T18:14:23.081895+00:00",
     "manualClockText": "50'",
-    "phase_start": "2026-07-04T18:13:58.404793+00:00",
+    "phase_start": "2026-07-04T18:14:23.081895+00:00",
     "referees": [
       {
         "name": "Michael Oliver",
