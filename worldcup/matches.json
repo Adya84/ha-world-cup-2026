@@ -46059,20 +46059,20 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - offside",
           "displayMinute": "56'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 56,
           "player": "L. Diaz",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Colombia",
           "timer": "56:00",
           "timerSeconds": 3360,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
       "fallbackClock": 3480,
@@ -46100,29 +46100,6 @@
           "timer": "14:00",
           "timerSeconds": 840,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "awayTeam": "Ghana",
-          "comments": null,
-          "detail": "Normal Goal",
-          "displayMinute": "56'",
-          "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Colombia",
-          "isDisallowed": false,
-          "matchId": 537430,
-          "matchUtcDate": "2026-07-04T01:30:00Z",
-          "minute": 56,
-          "player": "L. Diaz",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "56:00",
-          "timerSeconds": 3360,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -46141,8 +46118,8 @@
         "tla": "COL"
       },
       "id": 537430,
-      "lastApiSync": "2026-07-04T02:51:14.307776+00:00",
-      "lastUpdated": "2026-07-04T04:51:12Z",
+      "lastApiSync": "2026-07-04T02:51:35.389093+00:00",
+      "lastUpdated": "2026-07-04T04:51:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -46171,7 +46148,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "58'",
-        "lastApiSync": "2026-07-04T02:51:14.307776+00:00",
+        "lastApiSync": "2026-07-04T02:51:35.389093+00:00",
         "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -46185,7 +46162,7 @@
         "condition": "rainshowers_night",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-04T02:41:29.885279+00:00",
+        "fetchedAt": "2026-07-04T02:51:35.191357+00:00",
         "humidity": 59.2,
         "latitude": 39.0489,
         "longitude": -94.4839,
@@ -46319,7 +46296,7 @@
         "condition": "rainshowers_night",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-04T02:41:29.885279+00:00",
+        "fetchedAt": "2026-07-04T02:51:35.191357+00:00",
         "humidity": 59.2,
         "latitude": 39.0489,
         "longitude": -94.4839,
