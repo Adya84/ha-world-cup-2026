@@ -45657,8 +45657,8 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-04T00:05:54.846878+00:00",
-      "lastUpdated": "2026-07-04T02:05:51Z",
+      "lastApiSync": "2026-07-04T00:06:14.895246+00:00",
+      "lastUpdated": "2026-07-04T02:06:12Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45687,7 +45687,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "97'",
-        "lastApiSync": "2026-07-04T00:05:54.846878+00:00",
+        "lastApiSync": "2026-07-04T00:06:14.895246+00:00",
         "seconds": 5820,
         "source": "api_football_live_minute",
         "status": "ET",
@@ -45745,13 +45745,21 @@
         }
       ],
       "score": {
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
+        "extraTime": {
+          "away": 0,
+          "home": 0
+        },
         "fullTime": {
           "away": 1,
           "home": 1
         },
         "halfTime": {
           "away": 0,
+          "home": 1
+        },
+        "regularTime": {
+          "away": 1,
           "home": 1
         },
         "winner": "DRAW"
