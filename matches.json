@@ -46083,9 +46083,9 @@
         "name": "World"
       },
       "awayCorners": 1,
-      "awayFouls": 13,
+      "awayFouls": 14,
       "awayOffsides": 3,
-      "awayPossession": "56%",
+      "awayPossession": "55%",
       "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -46665,10 +46665,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 10,
+      "homeCorners": 11,
       "homeFouls": 23,
       "homeOffsides": 2,
-      "homePossession": "44%",
+      "homePossession": "45%",
       "homeScore": 0,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -46679,15 +46679,15 @@
         "tla": "CAN"
       },
       "id": 537376,
-      "lastApiSync": "2026-07-04T18:59:46.143027+00:00",
-      "lastUpdated": "2026-07-04T20:59:39Z",
+      "lastApiSync": "2026-07-04T19:00:51.959575+00:00",
+      "lastUpdated": "2026-07-04T21:00:15Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
-          "fouls": 13,
+          "fouls": 14,
           "offsides": 3,
-          "possession": "56%",
+          "possession": "55%",
           "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 3,
@@ -46695,10 +46695,10 @@
           "yellowCards": 4
         },
         "home": {
-          "corners": 10,
+          "corners": 11,
           "fouls": 23,
           "offsides": 2,
-          "possession": "44%",
+          "possession": "45%",
           "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 3,
@@ -46709,7 +46709,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-04T18:59:46.143027+00:00",
+        "lastApiSync": "2026-07-04T19:00:51.959575+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -47030,12 +47030,19 @@
         "tla": "PAR"
       },
       "id": 537375,
-      "lastUpdated": "2026-07-04T15:20:12Z",
+      "lastUpdated": "2026-07-04T21:00:00Z",
       "matchday": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 236055,
+          "name": "Il'giz Tantashev",
+          "nationality": "Uzbekistan",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
