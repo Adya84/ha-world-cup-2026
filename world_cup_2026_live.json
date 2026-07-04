@@ -43,7 +43,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4200,
+      "clockSeconds": 4260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "70'",
+      "displayMinute": "71'",
       "events": [
         {
           "assist": null,
@@ -125,10 +125,54 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "K. Mbappe",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Penalty"
         }
       ],
-      "fallbackClock": 4200,
-      "fallbackClockText": "70'",
+      "fallbackClock": 4260,
+      "fallbackClockText": "71'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "France",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "70'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Paraguay",
+          "isDisallowed": false,
+          "matchId": 537375,
+          "matchUtcDate": "2026-07-04T21:00:00Z",
+          "minute": 70,
+          "player": "K. Mbappe",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 6,
@@ -144,7 +188,7 @@
         "tla": "PAR"
       },
       "id": 537375,
-      "lastApiSync": "2026-07-04T22:34:04.900373+00:00",
+      "lastApiSync": "2026-07-04T22:34:26.405344+00:00",
       "lastUpdated": "2026-07-05T00:33:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -173,14 +217,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "70'",
-        "lastApiSync": "2026-07-04T22:34:04.900373+00:00",
-        "seconds": 4200,
+        "displayMinute": "71'",
+        "lastApiSync": "2026-07-04T22:34:26.405344+00:00",
+        "seconds": 4260,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "70'"
+        "timer": "71'"
       },
-      "manualClockText": "70'",
+      "manualClockText": "71'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -205,7 +249,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 70,
+      "minute": 71,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -384,7 +428,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4200,
+      "clockSeconds": 4260,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -393,7 +437,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "70'",
+      "displayMinute": "71'",
       "events": [
         {
           "assist": null,
@@ -466,10 +510,54 @@
           "timer": "61:00",
           "timerSeconds": 3660,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "70'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 70,
+          "player": "K. Mbappe",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Penalty"
         }
       ],
-      "fallbackClock": 4200,
-      "fallbackClockText": "70'",
+      "fallbackClock": 4260,
+      "fallbackClockText": "71'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "France",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "70'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Paraguay",
+          "isDisallowed": false,
+          "matchId": 537375,
+          "matchUtcDate": "2026-07-04T21:00:00Z",
+          "minute": 70,
+          "player": "K. Mbappe",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "France",
+          "timer": "70:00",
+          "timerSeconds": 4200,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 6,
@@ -485,7 +573,7 @@
         "tla": "PAR"
       },
       "id": 537375,
-      "lastApiSync": "2026-07-04T22:34:04.900373+00:00",
+      "lastApiSync": "2026-07-04T22:34:26.405344+00:00",
       "lastUpdated": "2026-07-05T00:33:49Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -514,14 +602,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "70'",
-        "lastApiSync": "2026-07-04T22:34:04.900373+00:00",
-        "seconds": 4200,
+        "displayMinute": "71'",
+        "lastApiSync": "2026-07-04T22:34:26.405344+00:00",
+        "seconds": 4260,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "70'"
+        "timer": "71'"
       },
-      "manualClockText": "70'",
+      "manualClockText": "71'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -546,7 +634,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 70,
+      "minute": 71,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
