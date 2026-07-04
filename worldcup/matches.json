@@ -42768,15 +42768,12 @@
     },
     {
       "apiFootballFixtureId": 1561068,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayScore": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/816.svg",
         "id": 816,
@@ -42822,8 +42819,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -42831,15 +42826,19 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
+          "awayTeam": "Austria",
           "comments": null,
           "detail": "Penalty",
           "displayMinute": "20'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Spain",
           "isDisallowed": false,
+          "matchId": 537420,
+          "matchUtcDate": "2026-07-02T19:00:00Z",
           "minute": 20,
           "player": "A. Cerrato",
           "playerOff": null,
@@ -42849,15 +42848,20 @@
           "team": "Spain U19 W",
           "timer": "20:00",
           "timerSeconds": 1200,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Austria",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "43'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Spain",
           "isDisallowed": false,
+          "matchId": 537420,
+          "matchUtcDate": "2026-07-02T19:00:00Z",
           "minute": 43,
           "player": "E. Gurtubay",
           "playerOff": null,
@@ -42871,11 +42875,16 @@
         },
         {
           "assist": "K. Richter",
+          "awayTeam": "Austria",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "45'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Spain",
           "isDisallowed": false,
+          "matchId": 537420,
+          "matchUtcDate": "2026-07-02T19:00:00Z",
           "minute": 45,
           "player": "E. Makalic",
           "playerOff": null,
@@ -42886,172 +42895,8 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Goal"
-        },
-        {
-          "assist": "T. Krassnig",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "A. Kerschbaumer",
-          "playerOff": "A. Kerschbaumer",
-          "playerOn": "T. Krassnig",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria U19 W",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "T. Frizberg",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "K. Richter",
-          "playerOff": "K. Richter",
-          "playerOn": "T. Frizberg",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria U19 W",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "G. Spinn",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "D. Lueger",
-          "playerOff": "D. Lueger",
-          "playerOn": "G. Spinn",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria U19 W",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "E. Moreno",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "64'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 64,
-          "player": "C. Segura",
-          "playerOff": "C. Segura",
-          "playerOn": "E. Moreno",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain U19 W",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "type": "Substitution"
-        },
-        {
-          "assist": "I. Dorado",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "64'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 64,
-          "player": "A. Gomez",
-          "playerOff": "A. Gomez",
-          "playerOn": "I. Dorado",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Spain U19 W",
-          "timer": "64:00",
-          "timerSeconds": 3840,
-          "type": "Substitution"
-        },
-        {
-          "assist": "V. Potzl",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "M. Keckeis",
-          "playerOff": "M. Keckeis",
-          "playerOn": "V. Potzl",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria U19 W",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Yellow Card",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "I. Dorado",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Spain U19 W",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "R. Leidler",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "81'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 81,
-          "player": "S. Hoke",
-          "playerOff": "S. Hoke",
-          "playerOn": "R. Leidler",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Austria U19 W",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Yellow Card",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "E. Gurtubay",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Spain U19 W",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -43123,9 +42968,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeScore": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -43134,59 +42977,31 @@
         "tla": "ESP"
       },
       "id": 537420,
-      "lastApiSync": "2026-07-04T16:57:08.182555+00:00",
       "lastUpdated": "2026-07-04T15:20:12Z",
-      "liveSource": "api_football",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-04T16:57:08.182555+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
       "matchday": null,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Glenn Nyberg",
-          "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "M. Bockova",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 30960,
           "name": "Glenn Nyberg",
           "nationality": "Sweden",
-          "type": "REFEREE"
-        },
-        {
-          "name": "M. Bockova",
           "type": "REFEREE"
         }
       ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
-          "home": 2
+          "away": 0,
+          "home": 3
         },
         "halfTime": {
-          "away": 1,
-          "home": 2
+          "away": 0,
+          "home": 1
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -43195,7 +43010,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "T. Krassnig",
@@ -43324,12 +43139,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-02T19:00:00Z",
-      "venue": {
-        "city": "Zenica",
-        "id": null,
-        "name": "Bilino Polje"
-      }
+      "utcDate": "2026-07-02T19:00:00Z"
     },
     {
       "apiFootballFixtureId": 1567309,
