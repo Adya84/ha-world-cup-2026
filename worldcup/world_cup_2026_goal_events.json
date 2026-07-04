@@ -39013,7 +39013,7 @@
     "apiFootballFixtureId": 1565179,
     "awayScore": 2,
     "awayTeam": "Cape Verde",
-    "base_seconds": 6300,
+    "base_seconds": 6360,
     "cardEvents": [
       {
         "assist": null,
@@ -39035,8 +39035,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 6300,
-    "displayMinute": "105'",
+    "clock_seconds": 6360,
+    "displayMinute": "106'",
     "events": [
       {
         "assist": "L. Martinez",
@@ -39291,7 +39291,7 @@
         "type": "Substitution"
       },
       {
-        "assist": null,
+        "assist": "Y. Semedo",
         "comments": null,
         "detail": "Normal Goal",
         "displayMinute": "103'",
@@ -39307,6 +39307,24 @@
         "timer": "103:00",
         "timerSeconds": 6180,
         "type": "Goal"
+      },
+      {
+        "assist": "G. Montiel",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "105'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 105,
+        "player": "N. Molina",
+        "playerOff": "N. Molina",
+        "playerOn": "G. Montiel",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "105:00",
+        "timerSeconds": 6300,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -39380,7 +39398,7 @@
         "type": "Goal"
       },
       {
-        "assist": null,
+        "assist": "Y. Semedo",
         "awayTeam": "Cape Verde",
         "comments": null,
         "detail": "Normal Goal",
@@ -39405,9 +39423,9 @@
     ],
     "homeScore": 2,
     "homeTeam": "Argentina",
-    "lastApiSync": "2026-07-04T00:19:55.532676+00:00",
-    "manualClockText": "105'",
-    "phase_start": "2026-07-04T00:19:55.532676+00:00",
+    "lastApiSync": "2026-07-04T00:20:19.389040+00:00",
+    "manualClockText": "106'",
+    "phase_start": "2026-07-04T00:20:19.389040+00:00",
     "referees": [
       {
         "name": "Drew Fischer",
@@ -39600,6 +39618,24 @@
         "team": "Cape Verde Islands",
         "timer": "100:00",
         "timerSeconds": 6000,
+        "type": "Substitution"
+      },
+      {
+        "assist": "G. Montiel",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "105'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 105,
+        "player": "N. Molina",
+        "playerOff": "N. Molina",
+        "playerOn": "G. Montiel",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "105:00",
+        "timerSeconds": 6300,
         "type": "Substitution"
       }
     ],
