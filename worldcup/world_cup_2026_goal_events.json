@@ -40923,12 +40923,32 @@
     "clock_active": false,
     "clock_seconds": 480,
     "displayMinute": "8'",
+    "events": [
+      {
+        "assist": "L. Suarez",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "8'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 8,
+        "player": "J. Cordoba",
+        "playerOff": "J. Cordoba",
+        "playerOn": "L. Suarez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "8:00",
+        "timerSeconds": 480,
+        "type": "Substitution"
+      }
+    ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Colombia",
-    "lastApiSync": "2026-07-04T01:37:52.625221+00:00",
+    "lastApiSync": "2026-07-04T01:38:12.482579+00:00",
     "manualClockText": "8'",
-    "phase_start": "2026-07-04T01:37:52.625221+00:00",
+    "phase_start": "2026-07-04T01:38:12.482579+00:00",
     "referees": [
       {
         "name": "Cl\u00e9ment Turpin",
@@ -40942,6 +40962,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "1H",
+    "substitutionEvents": [
+      {
+        "assist": "L. Suarez",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "8'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 8,
+        "player": "J. Cordoba",
+        "playerOff": "J. Cordoba",
+        "playerOn": "L. Suarez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "8:00",
+        "timerSeconds": 480,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-07-04T01:30:00Z"
   }
 }
