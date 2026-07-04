@@ -45348,7 +45348,7 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
+      "awayCorners": 5,
       "awayFouls": 10,
       "awayOffsides": 1,
       "awayPossession": "34%",
@@ -45381,7 +45381,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6000,
+      "clockSeconds": 6060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45390,7 +45390,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "100'",
+      "displayMinute": "101'",
       "events": [
         {
           "assist": "L. Martinez",
@@ -45625,10 +45625,28 @@
           "timer": "100:00",
           "timerSeconds": 6000,
           "type": "Substitution"
+        },
+        {
+          "assist": "Benchimol",
+          "comments": null,
+          "detail": "Substitution 6",
+          "displayMinute": "100'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 100,
+          "player": "K. Lenini",
+          "playerOff": "K. Lenini",
+          "playerOn": "Benchimol",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "100:00",
+          "timerSeconds": 6000,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 6000,
-      "fallbackClockText": "100'",
+      "fallbackClock": 6060,
+      "fallbackClockText": "101'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -45702,7 +45720,7 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 6,
+      "homeCorners": 7,
       "homeFouls": 12,
       "homeOffsides": 2,
       "homePossession": "66%",
@@ -45716,43 +45734,43 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-04T00:15:16.419155+00:00",
-      "lastUpdated": "2026-07-04T02:15:12Z",
+      "lastApiSync": "2026-07-04T00:15:37.374275+00:00",
+      "lastUpdated": "2026-07-04T02:15:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 2,
+          "corners": 5,
           "fouls": 10,
           "offsides": 1,
           "possession": "34%",
           "redCards": null,
-          "shotsOffGoal": 2,
+          "shotsOffGoal": 3,
           "shotsOnGoal": 2,
-          "totalShots": 6,
+          "totalShots": 8,
           "yellowCards": 1
         },
         "home": {
-          "corners": 6,
+          "corners": 7,
           "fouls": 12,
           "offsides": 2,
           "possession": "66%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 9,
-          "totalShots": 16,
+          "totalShots": 19,
           "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "100'",
-        "lastApiSync": "2026-07-04T00:15:16.419155+00:00",
-        "seconds": 6000,
+        "displayMinute": "101'",
+        "lastApiSync": "2026-07-04T00:15:37.374275+00:00",
+        "seconds": 6060,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "100'"
+        "timer": "101'"
       },
-      "manualClockText": "100'",
+      "manualClockText": "101'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -45777,7 +45795,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 100,
+      "minute": 101,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -45989,6 +46007,24 @@
           "player": "D. Duarte",
           "playerOff": "D. Duarte",
           "playerOn": "Y. Semedo",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Cape Verde Islands",
+          "timer": "100:00",
+          "timerSeconds": 6000,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Benchimol",
+          "comments": null,
+          "detail": "Substitution 6",
+          "displayMinute": "100'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 100,
+          "player": "K. Lenini",
+          "playerOff": "K. Lenini",
+          "playerOn": "Benchimol",
           "rawType": "subst",
           "source": "api_football",
           "team": "Cape Verde Islands",
