@@ -46086,7 +46086,7 @@
       "awayFouls": 8,
       "awayOffsides": 3,
       "awayPossession": "61%",
-      "awayScore": 1,
+      "awayScore": 2,
       "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
@@ -46241,7 +46241,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4860,
+      "clockSeconds": 4920,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -46250,7 +46250,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "81'",
+      "displayMinute": "82'",
       "events": [
         {
           "assist": null,
@@ -46490,18 +46490,18 @@
           "assist": "P. David",
           "comments": null,
           "detail": "Substitution 2",
-          "displayMinute": "79'",
+          "displayMinute": "78'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 79,
+          "minute": 78,
           "player": "A. Ahmed",
           "playerOff": "A. Ahmed",
           "playerOn": "P. David",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
-          "timer": "79:00",
-          "timerSeconds": 4740,
+          "timer": "78:00",
+          "timerSeconds": 4680,
           "type": "Substitution"
         },
         {
@@ -46521,10 +46521,28 @@
           "timer": "79:00",
           "timerSeconds": 4740,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "82'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 82,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 4860,
-      "fallbackClockText": "81'",
+      "fallbackClock": 4920,
+      "fallbackClockText": "82'",
       "goalEvents": [
         {
           "assist": "A. Hakimi",
@@ -46566,8 +46584,8 @@
         "tla": "CAN"
       },
       "id": 537376,
-      "lastApiSync": "2026-07-04T18:45:44.907326+00:00",
-      "lastUpdated": "2026-07-04T20:45:39Z",
+      "lastApiSync": "2026-07-04T18:46:11.298810+00:00",
+      "lastUpdated": "2026-07-04T20:45:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -46595,14 +46613,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "81'",
-        "lastApiSync": "2026-07-04T18:45:44.907326+00:00",
-        "seconds": 4860,
+        "displayMinute": "82'",
+        "lastApiSync": "2026-07-04T18:46:11.298810+00:00",
+        "seconds": 4920,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "81'"
+        "timer": "82'"
       },
-      "manualClockText": "81'",
+      "manualClockText": "82'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -46627,7 +46645,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 81,
+      "minute": 82,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -46656,7 +46674,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 1,
+          "away": 2,
           "home": 0
         },
         "halfTime": {
@@ -46752,18 +46770,18 @@
           "assist": "P. David",
           "comments": null,
           "detail": "Substitution 2",
-          "displayMinute": "79'",
+          "displayMinute": "78'",
           "extra": null,
           "isDisallowed": false,
-          "minute": 79,
+          "minute": 78,
           "player": "A. Ahmed",
           "playerOff": "A. Ahmed",
           "playerOn": "P. David",
           "rawType": "subst",
           "source": "api_football",
           "team": "Canada",
-          "timer": "79:00",
-          "timerSeconds": 4740,
+          "timer": "78:00",
+          "timerSeconds": 4680,
           "type": "Substitution"
         },
         {
