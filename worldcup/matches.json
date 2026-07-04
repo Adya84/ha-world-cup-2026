@@ -45381,7 +45381,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6000,
+      "clockSeconds": 6060,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45390,7 +45390,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "100'",
+      "displayMinute": "101'",
       "events": [
         {
           "assist": "L. Martinez",
@@ -45609,8 +45609,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 6000,
-      "fallbackClockText": "100'",
+      "fallbackClock": 6060,
+      "fallbackClockText": "101'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -45698,8 +45698,8 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-04T00:09:05.322797+00:00",
-      "lastUpdated": "2026-07-04T02:09:00Z",
+      "lastApiSync": "2026-07-04T00:09:27.075834+00:00",
+      "lastUpdated": "2026-07-04T02:09:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45727,14 +45727,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "100'",
-        "lastApiSync": "2026-07-04T00:09:05.322797+00:00",
-        "seconds": 6000,
+        "displayMinute": "101'",
+        "lastApiSync": "2026-07-04T00:09:27.075834+00:00",
+        "seconds": 6060,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "100'"
+        "timer": "101'"
       },
-      "manualClockText": "100'",
+      "manualClockText": "101'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -45759,7 +45759,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 100,
+      "minute": 101,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -45789,7 +45789,7 @@
         "duration": "EXTRA_TIME",
         "extraTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "fullTime": {
           "away": 1,
@@ -45803,7 +45803,7 @@
           "away": 1,
           "home": 1
         },
-        "winner": "DRAW"
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
