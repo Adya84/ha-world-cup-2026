@@ -46082,7 +46082,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 1,
+      "awayOffsides": null,
+      "awayPossession": "73%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -46090,7 +46095,7 @@
         "shortName": "Morocco",
         "tla": "MAR"
       },
-      "clockSeconds": 120,
+      "clockSeconds": 180,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -46099,11 +46104,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "2'",
-      "fallbackClock": 120,
-      "fallbackClockText": "2'",
+      "displayMinute": "3'",
+      "fallbackClock": 180,
+      "fallbackClockText": "3'",
       "group": null,
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": "27%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/canada.svg",
         "id": 828,
@@ -46112,19 +46122,43 @@
         "tla": "CAN"
       },
       "id": 537376,
-      "lastApiSync": "2026-07-04T17:03:00.962618+00:00",
-      "lastUpdated": "2026-07-04T19:02:54Z",
+      "lastApiSync": "2026-07-04T17:03:22.950035+00:00",
+      "lastUpdated": "2026-07-04T19:03:18Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 1,
+          "offsides": null,
+          "possession": "73%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "27%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "2'",
-        "lastApiSync": "2026-07-04T17:03:00.962618+00:00",
-        "seconds": 120,
+        "displayMinute": "3'",
+        "lastApiSync": "2026-07-04T17:03:22.950035+00:00",
+        "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "2'"
+        "timer": "3'"
       },
-      "manualClockText": "2'",
+      "manualClockText": "3'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -46149,7 +46183,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 2,
+      "minute": 3,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
