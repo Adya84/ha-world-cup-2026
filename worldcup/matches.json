@@ -46074,8 +46074,8 @@
     },
     {
       "apiFootballFixtureId": 1567824,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -46087,7 +46087,7 @@
       "awayOffsides": 3,
       "awayPossession": "55%",
       "awayScore": 3,
-      "awayShotsOnGoal": 3,
+      "awayShotsOnGoal": 4,
       "awayTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -46241,8 +46241,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -46250,7 +46248,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -46631,8 +46628,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "A. Hakimi",
@@ -46720,19 +46715,18 @@
         "tla": "CAN"
       },
       "id": 537376,
-      "lastApiSync": "2026-07-04T19:04:14.649210+00:00",
-      "lastUpdated": "2026-07-04T21:04:03Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-04T19:04:41.283927+00:00",
+      "lastUpdated": "2026-07-04T21:04:21Z",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 14,
           "offsides": 3,
           "possession": "55%",
-          "redCards": 0,
+          "redCards": null,
           "shotsOffGoal": 1,
-          "shotsOnGoal": 3,
-          "totalShots": 4,
+          "shotsOnGoal": 4,
+          "totalShots": 5,
           "yellowCards": 4
         },
         "home": {
@@ -46740,45 +46734,12 @@
           "fouls": 24,
           "offsides": 2,
           "possession": "45%",
-          "redCards": 0,
+          "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 3,
-          "totalShots": 12,
+          "totalShots": 11,
           "yellowCards": 4
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-04T19:04:14.649210+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Houston",
-        "cloudCoverage": 24.2,
-        "condition": "fair_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-04T19:03:45.639553+00:00",
-        "humidity": 52.4,
-        "latitude": 29.6847,
-        "longitude": -95.4107,
-        "name": "NRG Stadium weather",
-        "observedAt": "2026-07-04T18:00:00Z",
-        "pressure": 1016.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "NRG Stadium",
-        "temperature": 33.9,
-        "temperatureUnit": "C",
-        "windBearing": 212.9,
-        "windSpeed": 1.2,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -46828,7 +46789,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "S. Rahimi",
@@ -47016,29 +46977,6 @@
         "city": "Houston",
         "id": null,
         "name": "NRG Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Houston",
-        "cloudCoverage": 24.2,
-        "condition": "fair_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-04T19:03:45.639553+00:00",
-        "humidity": 52.4,
-        "latitude": 29.6847,
-        "longitude": -95.4107,
-        "name": "NRG Stadium weather",
-        "observedAt": "2026-07-04T18:00:00Z",
-        "pressure": 1016.9,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "NRG Stadium",
-        "temperature": 33.9,
-        "temperatureUnit": "C",
-        "windBearing": 212.9,
-        "windSpeed": 1.2,
-        "windSpeedUnit": "m/s"
       }
     },
     {
