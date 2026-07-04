@@ -46241,7 +46241,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4920,
+      "clockSeconds": 4980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -46250,7 +46250,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "82'",
+      "displayMinute": "83'",
       "events": [
         {
           "assist": null,
@@ -46523,14 +46523,14 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
+          "assist": "B. Diaz",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "82'",
           "extra": null,
           "isDisallowed": false,
           "minute": 82,
-          "player": null,
+          "player": "A. Ounahi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -46541,8 +46541,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 4920,
-      "fallbackClockText": "82'",
+      "fallbackClock": 4980,
+      "fallbackClockText": "83'",
       "goalEvents": [
         {
           "assist": "A. Hakimi",
@@ -46566,6 +46566,29 @@
           "timer": "50:00",
           "timerSeconds": 3000,
           "type": "Goal"
+        },
+        {
+          "assist": "B. Diaz",
+          "awayTeam": "Morocco",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "82'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Canada",
+          "isDisallowed": false,
+          "matchId": 537376,
+          "matchUtcDate": "2026-07-04T17:00:00Z",
+          "minute": 82,
+          "player": "A. Ounahi",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "82:00",
+          "timerSeconds": 4920,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -46584,8 +46607,8 @@
         "tla": "CAN"
       },
       "id": 537376,
-      "lastApiSync": "2026-07-04T18:46:35.268812+00:00",
-      "lastUpdated": "2026-07-04T20:45:55Z",
+      "lastApiSync": "2026-07-04T18:46:59.598431+00:00",
+      "lastUpdated": "2026-07-04T20:46:53Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -46613,14 +46636,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "82'",
-        "lastApiSync": "2026-07-04T18:46:35.268812+00:00",
-        "seconds": 4920,
+        "displayMinute": "83'",
+        "lastApiSync": "2026-07-04T18:46:59.598431+00:00",
+        "seconds": 4980,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "82'"
+        "timer": "83'"
       },
-      "manualClockText": "82'",
+      "manualClockText": "83'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Houston",
@@ -46645,7 +46668,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 82,
+      "minute": 83,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
