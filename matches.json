@@ -48323,7 +48323,27 @@
         "shortName": "France",
         "tla": "FRA"
       },
-      "clockSeconds": 1020,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "19'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 19,
+          "player": "Bradley Barcola",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "France",
+          "timer": "19:00",
+          "timerSeconds": 1140,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 1200,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48332,9 +48352,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "17'",
-      "fallbackClock": 1020,
-      "fallbackClockText": "17'",
+      "displayMinute": "20'",
+      "events": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "19'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 19,
+          "player": "Bradley Barcola",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "France",
+          "timer": "19:00",
+          "timerSeconds": 1140,
+          "type": "Yellow Card"
+        }
+      ],
+      "fallbackClock": 1200,
+      "fallbackClockText": "20'",
       "group": null,
       "homeCorners": 0,
       "homeFouls": 0,
@@ -48350,8 +48390,8 @@
         "tla": "PAR"
       },
       "id": 537375,
-      "lastApiSync": "2026-07-04T21:22:50.826453+00:00",
-      "lastUpdated": "2026-07-04T23:22:48Z",
+      "lastApiSync": "2026-07-04T21:23:12.315621+00:00",
+      "lastUpdated": "2026-07-04T23:23:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48379,14 +48419,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "17'",
-        "lastApiSync": "2026-07-04T21:22:50.826453+00:00",
-        "seconds": 1020,
+        "displayMinute": "20'",
+        "lastApiSync": "2026-07-04T21:23:12.315621+00:00",
+        "seconds": 1200,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "17'"
+        "timer": "20'"
       },
-      "manualClockText": "17'",
+      "manualClockText": "20'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Philadelphia",
@@ -48411,7 +48451,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 17,
+      "minute": 20,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
