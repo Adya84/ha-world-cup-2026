@@ -45381,7 +45381,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6300,
+      "clockSeconds": 6360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45390,7 +45390,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "105'",
+      "displayMinute": "106'",
       "events": [
         {
           "assist": "L. Martinez",
@@ -45645,7 +45645,7 @@
           "type": "Substitution"
         },
         {
-          "assist": null,
+          "assist": "Y. Semedo",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "103'",
@@ -45661,10 +45661,28 @@
           "timer": "103:00",
           "timerSeconds": 6180,
           "type": "Goal"
+        },
+        {
+          "assist": "G. Montiel",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "105'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 105,
+          "player": "N. Molina",
+          "playerOff": "N. Molina",
+          "playerOn": "G. Montiel",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "105:00",
+          "timerSeconds": 6300,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 6300,
-      "fallbackClockText": "105'",
+      "fallbackClock": 6360,
+      "fallbackClockText": "106'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -45736,7 +45754,7 @@
           "type": "Goal"
         },
         {
-          "assist": null,
+          "assist": "Y. Semedo",
           "awayTeam": "Cape Verde",
           "comments": null,
           "detail": "Normal Goal",
@@ -45775,8 +45793,8 @@
         "tla": "ARG"
       },
       "id": 537427,
-      "lastApiSync": "2026-07-04T00:19:55.532676+00:00",
-      "lastUpdated": "2026-07-04T02:19:51Z",
+      "lastApiSync": "2026-07-04T00:20:19.389040+00:00",
+      "lastUpdated": "2026-07-04T02:20:12Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45804,14 +45822,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "105'",
-        "lastApiSync": "2026-07-04T00:19:55.532676+00:00",
-        "seconds": 6300,
+        "displayMinute": "106'",
+        "lastApiSync": "2026-07-04T00:20:19.389040+00:00",
+        "seconds": 6360,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "105'"
+        "timer": "106'"
       },
-      "manualClockText": "105'",
+      "manualClockText": "106'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -45836,7 +45854,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 105,
+      "minute": 106,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -46071,6 +46089,24 @@
           "team": "Cape Verde Islands",
           "timer": "100:00",
           "timerSeconds": 6000,
+          "type": "Substitution"
+        },
+        {
+          "assist": "G. Montiel",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "105'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 105,
+          "player": "N. Molina",
+          "playerOff": "N. Molina",
+          "playerOn": "G. Montiel",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "105:00",
+          "timerSeconds": 6300,
           "type": "Substitution"
         }
       ],
