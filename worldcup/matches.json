@@ -48302,8 +48302,8 @@
     },
     {
       "apiFootballFixtureId": 1569870,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -48379,8 +48379,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48388,7 +48386,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -48571,8 +48568,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -48614,9 +48609,8 @@
         "tla": "PAR"
       },
       "id": 537375,
-      "lastApiSync": "2026-07-04T23:04:39.945989+00:00",
-      "lastUpdated": "2026-07-05T01:04:36Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-04T23:05:07.338799+00:00",
+      "lastUpdated": "2026-07-05T01:05:00Z",
       "liveStatistics": {
         "away": {
           "corners": 11,
@@ -48640,39 +48634,6 @@
           "totalShots": 5,
           "yellowCards": 0
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-04T23:04:39.945989+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 93.7,
-        "condition": "cloudy",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-04T22:56:58.161069+00:00",
-        "humidity": 29.2,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-07-04T22:00:00Z",
-        "pressure": 1010.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 36.5,
-        "temperatureUnit": "C",
-        "windBearing": 295.8,
-        "windSpeed": 5.0,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -48722,7 +48683,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "J. Canale",
@@ -48838,29 +48799,6 @@
         "city": "Philadelphia",
         "id": 0,
         "name": "Lincoln Financial Field"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Philadelphia",
-        "cloudCoverage": 93.7,
-        "condition": "cloudy",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-04T22:56:58.161069+00:00",
-        "humidity": 29.2,
-        "latitude": 39.9008,
-        "longitude": -75.1675,
-        "name": "Lincoln Financial Field weather",
-        "observedAt": "2026-07-04T22:00:00Z",
-        "pressure": 1010.5,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lincoln Financial Field",
-        "temperature": 36.5,
-        "temperatureUnit": "C",
-        "windBearing": 295.8,
-        "windSpeed": 5.0,
-        "windSpeedUnit": "m/s"
       }
     },
     {
