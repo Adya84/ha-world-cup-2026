@@ -48371,6 +48371,24 @@
           "timer": "19:00",
           "timerSeconds": 1140,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "J. Canale",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "O. Alderete",
+          "playerOff": "O. Alderete",
+          "playerOn": "J. Canale",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 3540,
@@ -48390,8 +48408,8 @@
         "tla": "PAR"
       },
       "id": 537375,
-      "lastApiSync": "2026-07-04T22:22:32.188266+00:00",
-      "lastUpdated": "2026-07-05T00:22:27Z",
+      "lastApiSync": "2026-07-04T22:22:53.006034+00:00",
+      "lastUpdated": "2026-07-05T00:22:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48420,7 +48438,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "59'",
-        "lastApiSync": "2026-07-04T22:22:32.188266+00:00",
+        "lastApiSync": "2026-07-04T22:22:53.006034+00:00",
         "seconds": 3540,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -48499,6 +48517,26 @@
       },
       "stage": "LAST_16",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "J. Canale",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "O. Alderete",
+          "playerOff": "O. Alderete",
+          "playerOn": "J. Canale",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Paraguay",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-04T21:00:00Z",
       "venue": {
         "city": "Philadelphia",
