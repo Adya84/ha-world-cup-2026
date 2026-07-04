@@ -2,14 +2,15 @@
   "live": [
     {
       "apiFootballFixtureId": 1565179,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 2,
       "awayFouls": 10,
       "awayOffsides": 1,
@@ -43,8 +44,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5700,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -52,7 +52,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "95'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "L. Martinez",
@@ -271,8 +271,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5700,
-      "fallbackClockText": "95'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -361,7 +359,7 @@
       },
       "id": 537427,
       "lastApiSync": "2026-07-04T00:09:48.712049+00:00",
-      "lastUpdated": "2026-07-04T02:09:45Z",
+      "lastUpdated": "2026-07-04T02:10:06Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -392,11 +390,11 @@
         "displayMinute": "95'",
         "lastApiSync": "2026-07-04T00:09:48.712049+00:00",
         "seconds": 5700,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "95'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "95:00"
       },
-      "manualClockText": "95'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -421,7 +419,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 95,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -476,7 +473,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "J. Alvarez",
@@ -657,14 +654,15 @@
   "matches": [
     {
       "apiFootballFixtureId": 1565179,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 2,
       "awayFouls": 10,
       "awayOffsides": 1,
@@ -698,8 +696,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5700,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -707,7 +704,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "95'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "L. Martinez",
@@ -926,8 +923,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5700,
-      "fallbackClockText": "95'",
       "goalEvents": [
         {
           "assist": "L. Martinez",
@@ -1016,7 +1011,7 @@
       },
       "id": 537427,
       "lastApiSync": "2026-07-04T00:09:48.712049+00:00",
-      "lastUpdated": "2026-07-04T02:09:45Z",
+      "lastUpdated": "2026-07-04T02:10:06Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1047,11 +1042,11 @@
         "displayMinute": "95'",
         "lastApiSync": "2026-07-04T00:09:48.712049+00:00",
         "seconds": 5700,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "95'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "95:00"
       },
-      "manualClockText": "95'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -1076,7 +1071,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 95,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1131,7 +1125,7 @@
         "winner": null
       },
       "stage": "LAST_32",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "J. Alvarez",
