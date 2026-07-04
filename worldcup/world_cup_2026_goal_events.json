@@ -40919,7 +40919,7 @@
     "apiFootballFixtureId": 1567310,
     "awayScore": 0,
     "awayTeam": "Ghana",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "cardEvents": [
       {
         "assist": null,
@@ -40941,8 +40941,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": "L. Suarez",
@@ -41015,6 +41015,24 @@
         "timer": "14:00",
         "timerSeconds": 840,
         "type": "Goal"
+      },
+      {
+        "assist": "R. Rios",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "J. Rodriguez",
+        "playerOff": "J. Rodriguez",
+        "playerOn": "R. Rios",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "46:00",
+        "timerSeconds": 2760,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -41044,9 +41062,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Colombia",
-    "lastApiSync": "2026-07-04T02:39:20.266803+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-07-04T02:39:20.266803+00:00",
+    "lastApiSync": "2026-07-04T02:39:40.273069+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-07-04T02:39:40.273069+00:00",
     "referees": [
       {
         "name": "Cl\u00e9ment Turpin",
@@ -41059,7 +41077,7 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
     "substitutionEvents": [
       {
         "assist": "L. Suarez",
@@ -41095,6 +41113,24 @@
         "team": "Ghana",
         "timer": "13:00",
         "timerSeconds": 780,
+        "type": "Substitution"
+      },
+      {
+        "assist": "R. Rios",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "46'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 46,
+        "player": "J. Rodriguez",
+        "playerOff": "J. Rodriguez",
+        "playerOn": "R. Rios",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "46:00",
+        "timerSeconds": 2760,
         "type": "Substitution"
       }
     ],
