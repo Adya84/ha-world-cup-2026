@@ -2,8 +2,8 @@
   "live": [
     {
       "apiFootballFixtureId": 1568100,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -23,7 +23,7 @@
         "shortName": "Norway",
         "tla": "NOR"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "Bruno Guimaraes",
@@ -51,10 +51,46 @@
           "timer": "14:00",
           "timerSeconds": 840,
           "type": "Penalty"
+        },
+        {
+          "assist": "O. Bobb",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Sorloth",
+          "playerOff": "A. Sorloth",
+          "playerOn": "O. Bobb",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Schjelderup",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Nusa",
+          "playerOff": "A. Nusa",
+          "playerOn": "A. Schjelderup",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "Bruno Guimaraes",
@@ -96,8 +132,8 @@
         "tla": "BRA"
       },
       "id": 537377,
-      "lastApiSync": "2026-07-05T21:07:32.054182+00:00",
-      "lastUpdated": "2026-07-05T23:07:30Z",
+      "lastApiSync": "2026-07-05T21:07:52.177543+00:00",
+      "lastUpdated": "2026-07-05T23:07:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -125,14 +161,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-07-05T21:07:32.054182+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-07-05T21:07:52.177543+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -157,7 +193,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -204,7 +240,45 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "O. Bobb",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Sorloth",
+          "playerOff": "A. Sorloth",
+          "playerOn": "O. Bobb",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Schjelderup",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Nusa",
+          "playerOff": "A. Nusa",
+          "playerOn": "A. Schjelderup",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-05T20:00:00Z",
       "venue": {
         "city": "East Rutherford",
@@ -239,8 +313,8 @@
   "matches": [
     {
       "apiFootballFixtureId": 1568100,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -260,7 +334,7 @@
         "shortName": "Norway",
         "tla": "NOR"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -269,7 +343,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "Bruno Guimaraes",
@@ -288,10 +362,46 @@
           "timer": "14:00",
           "timerSeconds": 840,
           "type": "Penalty"
+        },
+        {
+          "assist": "O. Bobb",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Sorloth",
+          "playerOff": "A. Sorloth",
+          "playerOn": "O. Bobb",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Schjelderup",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Nusa",
+          "playerOff": "A. Nusa",
+          "playerOn": "A. Schjelderup",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "Bruno Guimaraes",
@@ -333,8 +443,8 @@
         "tla": "BRA"
       },
       "id": 537377,
-      "lastApiSync": "2026-07-05T21:07:32.054182+00:00",
-      "lastUpdated": "2026-07-05T23:07:30Z",
+      "lastApiSync": "2026-07-05T21:07:52.177543+00:00",
+      "lastUpdated": "2026-07-05T23:07:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -362,14 +472,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-07-05T21:07:32.054182+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-07-05T21:07:52.177543+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -394,7 +504,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -441,7 +551,45 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "O. Bobb",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Sorloth",
+          "playerOff": "A. Sorloth",
+          "playerOn": "O. Bobb",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Schjelderup",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Nusa",
+          "playerOff": "A. Nusa",
+          "playerOn": "A. Schjelderup",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-05T20:00:00Z",
       "venue": {
         "city": "East Rutherford",
