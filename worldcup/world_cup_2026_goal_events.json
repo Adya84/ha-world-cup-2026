@@ -22608,23 +22608,32 @@
     "utcDate": "2026-07-04T17:00:00Z"
   },
   "537377": {
+    "apiFootballFixtureId": 1568100,
     "awayScore": 0,
     "awayTeam": "Norway",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Brazil",
-    "phase_start": null,
+    "lastApiSync": "2026-07-05T20:00:53.760465+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-05T20:00:53.760465+00:00",
     "referees": [
       {
-        "id": 76608,
         "name": "Ismail Elfath",
         "nationality": "United States",
         "type": "REFEREE"
+      },
+      {
+        "name": "Ismail Elfath, USA",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-05T20:00:00Z"
   },
   "537378": {
