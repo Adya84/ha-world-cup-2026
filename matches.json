@@ -48302,20 +48302,12 @@
     },
     {
       "apiFootballFixtureId": 1569870,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 12,
-      "awayFouls": 11,
-      "awayOffsides": null,
-      "awayPossession": "76%",
-      "awayScore": 1,
-      "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -48389,83 +48381,16 @@
       "events": [
         {
           "assist": null,
-          "comments": "Roughing",
-          "detail": "Yellow Card",
-          "displayMinute": "19'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 19,
-          "player": "B. Barcola",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "France",
-          "timer": "19:00",
-          "timerSeconds": 1140,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "J. Canale",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "O. Alderete",
-          "playerOff": "O. Alderete",
-          "playerOn": "J. Canale",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "G. Caballero",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "61'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 61,
-          "player": "J. Enciso",
-          "playerOff": "J. Enciso",
-          "playerOn": "G. Caballero",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Doue",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "61'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 61,
-          "player": "B. Barcola",
-          "playerOff": "B. Barcola",
-          "playerOn": "D. Doue",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "61:00",
-          "timerSeconds": 3660,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
+          "awayTeam": "France",
           "comments": null,
           "detail": "Penalty",
           "displayMinute": "70'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Paraguay",
           "isDisallowed": false,
+          "matchId": 537375,
+          "matchUtcDate": "2026-07-04T21:00:00Z",
           "minute": 70,
           "player": "K. Mbappe",
           "playerOff": null,
@@ -48475,97 +48400,7 @@
           "team": "France",
           "timer": "70:00",
           "timerSeconds": 4200,
-          "type": "Penalty"
-        },
-        {
-          "assist": "Mauricio",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "G. Gomez",
-          "playerOff": "G. Gomez",
-          "playerOn": "Mauricio",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "G. Avalos",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "M. Almiron",
-          "playerOff": "M. Almiron",
-          "playerOn": "G. Avalos",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Paraguay",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "81'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 81,
-          "player": "M. Kone",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "France",
-          "timer": "81:00",
-          "timerSeconds": 4860,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "R. Cherki",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "O. Dembele",
-          "playerOff": "O. Dembele",
-          "playerOn": "R. Cherki",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Unsportsmanlike conduct",
-          "detail": "Yellow Card",
-          "displayMinute": "90+7'",
-          "extra": 7,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "M. Olise",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "France",
-          "timer": "97:00",
-          "timerSeconds": 5820,
-          "type": "Yellow Card"
+          "type": "Goal"
         }
       ],
       "goalEvents": [
@@ -48593,14 +48428,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 2,
-      "homeFouls": 13,
-      "homeOffsides": null,
-      "homePossession": "24%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/761.svg",
         "id": 761,
@@ -48609,34 +48437,8 @@
         "tla": "PAR"
       },
       "id": 537375,
-      "lastApiSync": "2026-07-05T00:11:59.688620+00:00",
       "lastUpdated": "2026-07-05T01:05:57Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 12,
-          "fouls": 11,
-          "offsides": null,
-          "possession": "76%",
-          "redCards": null,
-          "shotsOffGoal": 6,
-          "shotsOnGoal": 5,
-          "totalShots": 15,
-          "yellowCards": 3
-        },
-        "home": {
-          "corners": 2,
-          "fouls": 13,
-          "offsides": null,
-          "possession": "24%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 5,
-          "yellowCards": 0
-        }
-      },
       "matchday": null,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48674,7 +48476,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -48794,12 +48595,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-04T21:00:00Z",
-      "venue": {
-        "city": "Philadelphia",
-        "id": 0,
-        "name": "Lincoln Financial Field"
-      }
+      "utcDate": "2026-07-04T21:00:00Z"
     },
     {
       "area": {
