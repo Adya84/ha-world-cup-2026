@@ -22609,12 +22609,12 @@
   },
   "537377": {
     "apiFootballFixtureId": 1568100,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Norway",
-    "base_seconds": 4740,
+    "base_seconds": 4800,
     "clock_active": false,
-    "clock_seconds": 4740,
-    "displayMinute": "79'",
+    "clock_seconds": 4800,
+    "displayMinute": "80'",
     "events": [
       {
         "assist": "Bruno Guimaraes",
@@ -22759,6 +22759,24 @@
         "timer": "79:00",
         "timerSeconds": 4740,
         "type": "Substitution"
+      },
+      {
+        "assist": "A. Schjelderup",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "80'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 80,
+        "player": "E. Haaland",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "80:00",
+        "timerSeconds": 4800,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -22784,13 +22802,36 @@
         "timer": "14:00",
         "timerSeconds": 840,
         "type": "Goal"
+      },
+      {
+        "assist": "A. Schjelderup",
+        "awayTeam": "Norway",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "80'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "Brazil",
+        "isDisallowed": false,
+        "matchId": 537377,
+        "matchUtcDate": "2026-07-05T20:00:00Z",
+        "minute": 80,
+        "player": "E. Haaland",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "80:00",
+        "timerSeconds": 4800,
+        "type": "Goal"
       }
     ],
     "homeScore": 0,
     "homeTeam": "Brazil",
-    "lastApiSync": "2026-07-05T21:41:37.196085+00:00",
-    "manualClockText": "79'",
-    "phase_start": "2026-07-05T21:41:37.196085+00:00",
+    "lastApiSync": "2026-07-05T21:41:58.936159+00:00",
+    "manualClockText": "80'",
+    "phase_start": "2026-07-05T21:41:58.936159+00:00",
     "referees": [
       {
         "name": "Ismail Elfath",
