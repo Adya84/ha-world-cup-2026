@@ -95291,12 +95291,20 @@
     },
     {
       "apiFootballFixtureId": 1568100,
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 5,
+      "awayFouls": 6,
+      "awayOffsides": 1,
+      "awayPossession": "67%",
+      "awayScore": 2,
+      "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/813.svg",
         "id": 8872,
@@ -95334,16 +95342,11 @@
       "events": [
         {
           "assist": "Bruno Guimaraes",
-          "awayTeam": "Norway",
           "comments": null,
           "detail": "Missed Penalty",
           "displayMinute": "14'",
           "extra": null,
-          "goalNumber": 1,
-          "homeTeam": "Brazil",
           "isDisallowed": false,
-          "matchId": 537377,
-          "matchUtcDate": "2026-07-05T20:00:00Z",
           "minute": 14,
           "player": "Bruno Guimaraes",
           "playerOff": null,
@@ -95353,20 +95356,141 @@
           "team": "Brazil",
           "timer": "14:00",
           "timerSeconds": 840,
-          "type": "Goal"
+          "type": "Penalty"
+        },
+        {
+          "assist": "O. Bobb",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Sorloth",
+          "playerOff": "A. Sorloth",
+          "playerOn": "O. Bobb",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         },
         {
           "assist": "A. Schjelderup",
-          "awayTeam": "Norway",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Nusa",
+          "playerOff": "A. Nusa",
+          "playerOn": "A. Schjelderup",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Cunha",
+          "playerOff": "M. Cunha",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Aursnes",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "J. Ryerson",
+          "playerOff": "J. Ryerson",
+          "playerOn": "F. Aursnes",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Neymar",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "G. Martinelli",
+          "playerOff": "G. Martinelli",
+          "playerOn": "Neymar",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Danilo Santos",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "Rayan",
+          "playerOff": "Rayan",
+          "playerOn": "Danilo Santos",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Ederson",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "79'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 79,
+          "player": "Bruno Guimaraes",
+          "playerOff": "Bruno Guimaraes",
+          "playerOn": "Ederson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Schjelderup",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "79'",
           "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Brazil",
           "isDisallowed": false,
-          "matchId": 537377,
-          "matchUtcDate": "2026-07-05T20:00:00Z",
           "minute": 79,
           "player": "E. Haaland",
           "playerOff": null,
@@ -95380,16 +95504,11 @@
         },
         {
           "assist": "A. Schjelderup",
-          "awayTeam": "Norway",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90'",
           "extra": null,
-          "goalNumber": 3,
-          "homeTeam": "Brazil",
           "isDisallowed": false,
-          "matchId": 537377,
-          "matchUtcDate": "2026-07-05T20:00:00Z",
           "minute": 90,
           "player": "E. Haaland",
           "playerOff": null,
@@ -95402,17 +95521,48 @@
           "type": "Goal"
         },
         {
+          "assist": "L. Ostigard",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90+5'",
+          "extra": 5,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "D. Wolfe",
+          "playerOff": "D. Wolfe",
+          "playerOn": "L. Ostigard",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "type": "Substitution"
+        },
+        {
           "assist": null,
-          "awayTeam": "Norway",
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "90+6'",
+          "extra": 6,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "Neymar",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
           "comments": null,
           "detail": "Penalty",
           "displayMinute": "90+10'",
           "extra": 10,
-          "goalNumber": 4,
-          "homeTeam": "Brazil",
           "isDisallowed": false,
-          "matchId": 537377,
-          "matchUtcDate": "2026-07-05T20:00:00Z",
           "minute": 90,
           "player": "Neymar",
           "playerOff": null,
@@ -95422,7 +95572,7 @@
           "team": "Brazil",
           "timer": "100:00",
           "timerSeconds": 6000,
-          "type": "Goal"
+          "type": "Penalty"
         }
       ],
       "goalEvents": [
@@ -95519,7 +95669,14 @@
           "type": "Goal"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "group": null,
+      "homeCorners": 5,
+      "homeFouls": 7,
+      "homeOffsides": 1,
+      "homePossession": "33%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
         "id": 764,
@@ -95528,14 +95685,39 @@
         "tla": "BRA"
       },
       "id": 537377,
+      "lastApiSync": "2026-07-05T22:26:39.621198+00:00",
       "lastUpdated": "2026-07-06T00:08:45Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 5,
+          "fouls": 6,
+          "offsides": 1,
+          "possession": "67%",
+          "redCards": null,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 5,
+          "totalShots": 9,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": 5,
+          "fouls": 7,
+          "offsides": 1,
+          "possession": "33%",
+          "redCards": null,
+          "shotsOffGoal": 6,
+          "shotsOnGoal": 4,
+          "totalShots": 14,
+          "yellowCards": 1
+        }
+      },
       "matchDetails": {
         "apiFootballFixtureId": 1568100,
-        "awayCorners": null,
-        "awayFouls": null,
-        "awayOffsides": null,
-        "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayCorners": 5,
+        "awayFouls": 6,
+        "awayOffsides": 1,
+        "awayPossession": "67%",
+        "awayShotsOnGoal": 5,
         "cardEvents": [
           {
             "assist": null,
@@ -95559,16 +95741,11 @@
         "events": [
           {
             "assist": "Bruno Guimaraes",
-            "awayTeam": "Norway",
             "comments": null,
             "detail": "Missed Penalty",
             "displayMinute": "14'",
             "extra": null,
-            "goalNumber": 1,
-            "homeTeam": "Brazil",
             "isDisallowed": false,
-            "matchId": 537377,
-            "matchUtcDate": "2026-07-05T20:00:00Z",
             "minute": 14,
             "player": "Bruno Guimaraes",
             "playerOff": null,
@@ -95578,20 +95755,141 @@
             "team": "Brazil",
             "timer": "14:00",
             "timerSeconds": 840,
-            "type": "Goal"
+            "type": "Penalty"
+          },
+          {
+            "assist": "O. Bobb",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "A. Sorloth",
+            "playerOff": "A. Sorloth",
+            "playerOn": "O. Bobb",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
           },
           {
             "assist": "A. Schjelderup",
-            "awayTeam": "Norway",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "A. Nusa",
+            "playerOff": "A. Nusa",
+            "playerOn": "A. Schjelderup",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
+            "assist": "Endrick",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "58'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 58,
+            "player": "M. Cunha",
+            "playerOff": "M. Cunha",
+            "playerOn": "Endrick",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "58:00",
+            "timerSeconds": 3480,
+            "type": "Substitution"
+          },
+          {
+            "assist": "F. Aursnes",
+            "comments": null,
+            "detail": "Substitution 3",
+            "displayMinute": "63'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 63,
+            "player": "J. Ryerson",
+            "playerOff": "J. Ryerson",
+            "playerOn": "F. Aursnes",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "63:00",
+            "timerSeconds": 3780,
+            "type": "Substitution"
+          },
+          {
+            "assist": "Neymar",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "G. Martinelli",
+            "playerOff": "G. Martinelli",
+            "playerOn": "Neymar",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          },
+          {
+            "assist": "Danilo Santos",
+            "comments": null,
+            "detail": "Substitution 3",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "Rayan",
+            "playerOff": "Rayan",
+            "playerOn": "Danilo Santos",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          },
+          {
+            "assist": "Ederson",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "79'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 79,
+            "player": "Bruno Guimaraes",
+            "playerOff": "Bruno Guimaraes",
+            "playerOn": "Ederson",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "type": "Substitution"
+          },
+          {
+            "assist": "A. Schjelderup",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "79'",
             "extra": null,
-            "goalNumber": 2,
-            "homeTeam": "Brazil",
             "isDisallowed": false,
-            "matchId": 537377,
-            "matchUtcDate": "2026-07-05T20:00:00Z",
             "minute": 79,
             "player": "E. Haaland",
             "playerOff": null,
@@ -95605,16 +95903,11 @@
           },
           {
             "assist": "A. Schjelderup",
-            "awayTeam": "Norway",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "90'",
             "extra": null,
-            "goalNumber": 3,
-            "homeTeam": "Brazil",
             "isDisallowed": false,
-            "matchId": 537377,
-            "matchUtcDate": "2026-07-05T20:00:00Z",
             "minute": 90,
             "player": "E. Haaland",
             "playerOff": null,
@@ -95627,17 +95920,48 @@
             "type": "Goal"
           },
           {
+            "assist": "L. Ostigard",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "90+5'",
+            "extra": 5,
+            "isDisallowed": false,
+            "minute": 90,
+            "player": "D. Wolfe",
+            "playerOff": "D. Wolfe",
+            "playerOn": "L. Ostigard",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "95:00",
+            "timerSeconds": 5700,
+            "type": "Substitution"
+          },
+          {
             "assist": null,
-            "awayTeam": "Norway",
+            "comments": "Tripping",
+            "detail": "Yellow Card",
+            "displayMinute": "90+6'",
+            "extra": 6,
+            "isDisallowed": false,
+            "minute": 90,
+            "player": "Neymar",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Card",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "96:00",
+            "timerSeconds": 5760,
+            "type": "Yellow Card"
+          },
+          {
+            "assist": null,
             "comments": null,
             "detail": "Penalty",
             "displayMinute": "90+10'",
             "extra": 10,
-            "goalNumber": 4,
-            "homeTeam": "Brazil",
             "isDisallowed": false,
-            "matchId": 537377,
-            "matchUtcDate": "2026-07-05T20:00:00Z",
             "minute": 90,
             "player": "Neymar",
             "playerOff": null,
@@ -95647,7 +95971,7 @@
             "team": "Brazil",
             "timer": "100:00",
             "timerSeconds": 6000,
-            "type": "Goal"
+            "type": "Penalty"
           }
         ],
         "goalEvents": [
@@ -95744,28 +96068,57 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": null,
-        "homeCorners": null,
-        "homeFouls": null,
-        "homeOffsides": null,
-        "homePossession": null,
-        "homeShotsOnGoal": null,
+        "goalEventsSource": "api_football_live",
+        "homeCorners": 5,
+        "homeFouls": 7,
+        "homeOffsides": 1,
+        "homePossession": "33%",
+        "homeShotsOnGoal": 4,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": 5,
+            "fouls": 6,
+            "offsides": 1,
+            "possession": "67%",
+            "redCards": null,
+            "shotsOffGoal": 3,
+            "shotsOnGoal": 5,
+            "totalShots": 9,
+            "yellowCards": 0
+          },
+          "home": {
+            "corners": 5,
+            "fouls": 7,
+            "offsides": 1,
+            "possession": "33%",
+            "redCards": null,
+            "shotsOffGoal": 6,
+            "shotsOnGoal": 4,
+            "totalShots": 14,
+            "yellowCards": 1
+          }
+        },
         "officials": [
           {
-            "id": 76608,
             "name": "Ismail Elfath",
             "nationality": "United States",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ismail Elfath, USA",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 76608,
             "name": "Ismail Elfath",
             "nationality": "United States",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ismail Elfath, USA",
             "type": "REFEREE"
           }
         ],
@@ -95918,14 +96271,29 @@
         "weather": {}
       },
       "matchday": null,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 76608,
           "name": "Ismail Elfath",
           "nationality": "United States",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ismail Elfath, USA",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Ismail Elfath",
+          "nationality": "United States",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ismail Elfath, USA",
           "type": "REFEREE"
         }
       ],
@@ -95941,6 +96309,7 @@
         },
         "winner": "AWAY_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -96096,7 +96465,12 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-05T20:00:00Z"
+      "utcDate": "2026-07-05T20:00:00Z",
+      "venue": {
+        "city": "East Rutherford",
+        "id": 0,
+        "name": "MetLife Stadium"
+      }
     }
   ],
   "results": [
@@ -191391,12 +191765,20 @@
     },
     {
       "apiFootballFixtureId": 1568100,
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 5,
+      "awayFouls": 6,
+      "awayOffsides": 1,
+      "awayPossession": "67%",
+      "awayScore": 2,
+      "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/813.svg",
         "id": 8872,
@@ -191434,16 +191816,11 @@
       "events": [
         {
           "assist": "Bruno Guimaraes",
-          "awayTeam": "Norway",
           "comments": null,
           "detail": "Missed Penalty",
           "displayMinute": "14'",
           "extra": null,
-          "goalNumber": 1,
-          "homeTeam": "Brazil",
           "isDisallowed": false,
-          "matchId": 537377,
-          "matchUtcDate": "2026-07-05T20:00:00Z",
           "minute": 14,
           "player": "Bruno Guimaraes",
           "playerOff": null,
@@ -191453,20 +191830,141 @@
           "team": "Brazil",
           "timer": "14:00",
           "timerSeconds": 840,
-          "type": "Goal"
+          "type": "Penalty"
+        },
+        {
+          "assist": "O. Bobb",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Sorloth",
+          "playerOff": "A. Sorloth",
+          "playerOn": "O. Bobb",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         },
         {
           "assist": "A. Schjelderup",
-          "awayTeam": "Norway",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "A. Nusa",
+          "playerOff": "A. Nusa",
+          "playerOn": "A. Schjelderup",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Endrick",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "58'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 58,
+          "player": "M. Cunha",
+          "playerOff": "M. Cunha",
+          "playerOn": "Endrick",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "58:00",
+          "timerSeconds": 3480,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Aursnes",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "63'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 63,
+          "player": "J. Ryerson",
+          "playerOff": "J. Ryerson",
+          "playerOn": "F. Aursnes",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "63:00",
+          "timerSeconds": 3780,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Neymar",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "G. Martinelli",
+          "playerOff": "G. Martinelli",
+          "playerOn": "Neymar",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Danilo Santos",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "Rayan",
+          "playerOff": "Rayan",
+          "playerOn": "Danilo Santos",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Ederson",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "79'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 79,
+          "player": "Bruno Guimaraes",
+          "playerOff": "Bruno Guimaraes",
+          "playerOn": "Ederson",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Schjelderup",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "79'",
           "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Brazil",
           "isDisallowed": false,
-          "matchId": 537377,
-          "matchUtcDate": "2026-07-05T20:00:00Z",
           "minute": 79,
           "player": "E. Haaland",
           "playerOff": null,
@@ -191480,16 +191978,11 @@
         },
         {
           "assist": "A. Schjelderup",
-          "awayTeam": "Norway",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90'",
           "extra": null,
-          "goalNumber": 3,
-          "homeTeam": "Brazil",
           "isDisallowed": false,
-          "matchId": 537377,
-          "matchUtcDate": "2026-07-05T20:00:00Z",
           "minute": 90,
           "player": "E. Haaland",
           "playerOff": null,
@@ -191502,17 +191995,48 @@
           "type": "Goal"
         },
         {
+          "assist": "L. Ostigard",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90+5'",
+          "extra": 5,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "D. Wolfe",
+          "playerOff": "D. Wolfe",
+          "playerOn": "L. Ostigard",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "95:00",
+          "timerSeconds": 5700,
+          "type": "Substitution"
+        },
+        {
           "assist": null,
-          "awayTeam": "Norway",
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "90+6'",
+          "extra": 6,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "Neymar",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
           "comments": null,
           "detail": "Penalty",
           "displayMinute": "90+10'",
           "extra": 10,
-          "goalNumber": 4,
-          "homeTeam": "Brazil",
           "isDisallowed": false,
-          "matchId": 537377,
-          "matchUtcDate": "2026-07-05T20:00:00Z",
           "minute": 90,
           "player": "Neymar",
           "playerOff": null,
@@ -191522,7 +192046,7 @@
           "team": "Brazil",
           "timer": "100:00",
           "timerSeconds": 6000,
-          "type": "Goal"
+          "type": "Penalty"
         }
       ],
       "goalEvents": [
@@ -191619,7 +192143,14 @@
           "type": "Goal"
         }
       ],
+      "goalEventsSource": "api_football_live",
       "group": null,
+      "homeCorners": 5,
+      "homeFouls": 7,
+      "homeOffsides": 1,
+      "homePossession": "33%",
+      "homeScore": 1,
+      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
         "id": 764,
@@ -191628,14 +192159,39 @@
         "tla": "BRA"
       },
       "id": 537377,
+      "lastApiSync": "2026-07-05T22:26:39.621198+00:00",
       "lastUpdated": "2026-07-06T00:08:45Z",
+      "liveStatistics": {
+        "away": {
+          "corners": 5,
+          "fouls": 6,
+          "offsides": 1,
+          "possession": "67%",
+          "redCards": null,
+          "shotsOffGoal": 3,
+          "shotsOnGoal": 5,
+          "totalShots": 9,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": 5,
+          "fouls": 7,
+          "offsides": 1,
+          "possession": "33%",
+          "redCards": null,
+          "shotsOffGoal": 6,
+          "shotsOnGoal": 4,
+          "totalShots": 14,
+          "yellowCards": 1
+        }
+      },
       "matchDetails": {
         "apiFootballFixtureId": 1568100,
-        "awayCorners": null,
-        "awayFouls": null,
-        "awayOffsides": null,
-        "awayPossession": null,
-        "awayShotsOnGoal": null,
+        "awayCorners": 5,
+        "awayFouls": 6,
+        "awayOffsides": 1,
+        "awayPossession": "67%",
+        "awayShotsOnGoal": 5,
         "cardEvents": [
           {
             "assist": null,
@@ -191659,16 +192215,11 @@
         "events": [
           {
             "assist": "Bruno Guimaraes",
-            "awayTeam": "Norway",
             "comments": null,
             "detail": "Missed Penalty",
             "displayMinute": "14'",
             "extra": null,
-            "goalNumber": 1,
-            "homeTeam": "Brazil",
             "isDisallowed": false,
-            "matchId": 537377,
-            "matchUtcDate": "2026-07-05T20:00:00Z",
             "minute": 14,
             "player": "Bruno Guimaraes",
             "playerOff": null,
@@ -191678,20 +192229,141 @@
             "team": "Brazil",
             "timer": "14:00",
             "timerSeconds": 840,
-            "type": "Goal"
+            "type": "Penalty"
+          },
+          {
+            "assist": "O. Bobb",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "A. Sorloth",
+            "playerOff": "A. Sorloth",
+            "playerOn": "O. Bobb",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
           },
           {
             "assist": "A. Schjelderup",
-            "awayTeam": "Norway",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "46'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 46,
+            "player": "A. Nusa",
+            "playerOff": "A. Nusa",
+            "playerOn": "A. Schjelderup",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "46:00",
+            "timerSeconds": 2760,
+            "type": "Substitution"
+          },
+          {
+            "assist": "Endrick",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "58'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 58,
+            "player": "M. Cunha",
+            "playerOff": "M. Cunha",
+            "playerOn": "Endrick",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "58:00",
+            "timerSeconds": 3480,
+            "type": "Substitution"
+          },
+          {
+            "assist": "F. Aursnes",
+            "comments": null,
+            "detail": "Substitution 3",
+            "displayMinute": "63'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 63,
+            "player": "J. Ryerson",
+            "playerOff": "J. Ryerson",
+            "playerOn": "F. Aursnes",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "63:00",
+            "timerSeconds": 3780,
+            "type": "Substitution"
+          },
+          {
+            "assist": "Neymar",
+            "comments": null,
+            "detail": "Substitution 2",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "G. Martinelli",
+            "playerOff": "G. Martinelli",
+            "playerOn": "Neymar",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          },
+          {
+            "assist": "Danilo Santos",
+            "comments": null,
+            "detail": "Substitution 3",
+            "displayMinute": "67'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 67,
+            "player": "Rayan",
+            "playerOff": "Rayan",
+            "playerOn": "Danilo Santos",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "67:00",
+            "timerSeconds": 4020,
+            "type": "Substitution"
+          },
+          {
+            "assist": "Ederson",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "79'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 79,
+            "player": "Bruno Guimaraes",
+            "playerOff": "Bruno Guimaraes",
+            "playerOn": "Ederson",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "79:00",
+            "timerSeconds": 4740,
+            "type": "Substitution"
+          },
+          {
+            "assist": "A. Schjelderup",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "79'",
             "extra": null,
-            "goalNumber": 2,
-            "homeTeam": "Brazil",
             "isDisallowed": false,
-            "matchId": 537377,
-            "matchUtcDate": "2026-07-05T20:00:00Z",
             "minute": 79,
             "player": "E. Haaland",
             "playerOff": null,
@@ -191705,16 +192377,11 @@
           },
           {
             "assist": "A. Schjelderup",
-            "awayTeam": "Norway",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "90'",
             "extra": null,
-            "goalNumber": 3,
-            "homeTeam": "Brazil",
             "isDisallowed": false,
-            "matchId": 537377,
-            "matchUtcDate": "2026-07-05T20:00:00Z",
             "minute": 90,
             "player": "E. Haaland",
             "playerOff": null,
@@ -191727,17 +192394,48 @@
             "type": "Goal"
           },
           {
+            "assist": "L. Ostigard",
+            "comments": null,
+            "detail": "Substitution 4",
+            "displayMinute": "90+5'",
+            "extra": 5,
+            "isDisallowed": false,
+            "minute": 90,
+            "player": "D. Wolfe",
+            "playerOff": "D. Wolfe",
+            "playerOn": "L. Ostigard",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "Norway",
+            "timer": "95:00",
+            "timerSeconds": 5700,
+            "type": "Substitution"
+          },
+          {
             "assist": null,
-            "awayTeam": "Norway",
+            "comments": "Tripping",
+            "detail": "Yellow Card",
+            "displayMinute": "90+6'",
+            "extra": 6,
+            "isDisallowed": false,
+            "minute": 90,
+            "player": "Neymar",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Card",
+            "source": "api_football",
+            "team": "Brazil",
+            "timer": "96:00",
+            "timerSeconds": 5760,
+            "type": "Yellow Card"
+          },
+          {
+            "assist": null,
             "comments": null,
             "detail": "Penalty",
             "displayMinute": "90+10'",
             "extra": 10,
-            "goalNumber": 4,
-            "homeTeam": "Brazil",
             "isDisallowed": false,
-            "matchId": 537377,
-            "matchUtcDate": "2026-07-05T20:00:00Z",
             "minute": 90,
             "player": "Neymar",
             "playerOff": null,
@@ -191747,7 +192445,7 @@
             "team": "Brazil",
             "timer": "100:00",
             "timerSeconds": 6000,
-            "type": "Goal"
+            "type": "Penalty"
           }
         ],
         "goalEvents": [
@@ -191844,28 +192542,57 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": null,
-        "homeCorners": null,
-        "homeFouls": null,
-        "homeOffsides": null,
-        "homePossession": null,
-        "homeShotsOnGoal": null,
+        "goalEventsSource": "api_football_live",
+        "homeCorners": 5,
+        "homeFouls": 7,
+        "homeOffsides": 1,
+        "homePossession": "33%",
+        "homeShotsOnGoal": 4,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {},
+        "liveStatistics": {
+          "away": {
+            "corners": 5,
+            "fouls": 6,
+            "offsides": 1,
+            "possession": "67%",
+            "redCards": null,
+            "shotsOffGoal": 3,
+            "shotsOnGoal": 5,
+            "totalShots": 9,
+            "yellowCards": 0
+          },
+          "home": {
+            "corners": 5,
+            "fouls": 7,
+            "offsides": 1,
+            "possession": "33%",
+            "redCards": null,
+            "shotsOffGoal": 6,
+            "shotsOnGoal": 4,
+            "totalShots": 14,
+            "yellowCards": 1
+          }
+        },
         "officials": [
           {
-            "id": 76608,
             "name": "Ismail Elfath",
             "nationality": "United States",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ismail Elfath, USA",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
-            "id": 76608,
             "name": "Ismail Elfath",
             "nationality": "United States",
+            "type": "REFEREE"
+          },
+          {
+            "name": "Ismail Elfath, USA",
             "type": "REFEREE"
           }
         ],
@@ -192018,14 +192745,29 @@
         "weather": {}
       },
       "matchday": null,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 76608,
           "name": "Ismail Elfath",
           "nationality": "United States",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ismail Elfath, USA",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Ismail Elfath",
+          "nationality": "United States",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Ismail Elfath, USA",
           "type": "REFEREE"
         }
       ],
@@ -192041,6 +192783,7 @@
         },
         "winner": "AWAY_TEAM"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -192196,7 +192939,12 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-05T20:00:00Z"
+      "utcDate": "2026-07-05T20:00:00Z",
+      "venue": {
+        "city": "East Rutherford",
+        "id": 0,
+        "name": "MetLife Stadium"
+      }
     }
   ]
 }
