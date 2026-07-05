@@ -49846,6 +49846,24 @@
           "timer": "96:00",
           "timerSeconds": 5760,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "90+10'",
+          "extra": 10,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "Neymar",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "100:00",
+          "timerSeconds": 6000,
+          "type": "Penalty"
         }
       ],
       "fallbackClock": 5400,
@@ -49919,6 +49937,29 @@
           "timer": "90:00",
           "timerSeconds": 5400,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Norway",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "90+10'",
+          "extra": 10,
+          "goalNumber": 4,
+          "homeTeam": "Brazil",
+          "isDisallowed": false,
+          "matchId": 537377,
+          "matchUtcDate": "2026-07-05T20:00:00Z",
+          "minute": 90,
+          "player": "Neymar",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Brazil",
+          "timer": "100:00",
+          "timerSeconds": 6000,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -49927,7 +49968,7 @@
       "homeFouls": 7,
       "homeOffsides": 1,
       "homePossession": "33%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/764.svg",
@@ -49937,7 +49978,7 @@
         "tla": "BRA"
       },
       "id": 537377,
-      "lastApiSync": "2026-07-05T22:02:16.719765+00:00",
+      "lastApiSync": "2026-07-05T22:02:38.135846+00:00",
       "lastUpdated": "2026-07-06T00:02:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -49967,7 +50008,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-05T22:02:16.719765+00:00",
+        "lastApiSync": "2026-07-05T22:02:38.135846+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -50028,7 +50069,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 2,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
