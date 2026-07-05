@@ -49591,7 +49591,7 @@
       "awayFouls": 3,
       "awayOffsides": 1,
       "awayPossession": "69%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 3,
       "awayTeam": {
         "crest": "https://crests.football-data.org/813.svg",
@@ -49600,7 +49600,7 @@
         "shortName": "Norway",
         "tla": "NOR"
       },
-      "clockSeconds": 4740,
+      "clockSeconds": 4800,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -49609,7 +49609,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "79'",
+      "displayMinute": "80'",
       "events": [
         {
           "assist": "Bruno Guimaraes",
@@ -49754,10 +49754,28 @@
           "timer": "79:00",
           "timerSeconds": 4740,
           "type": "Substitution"
+        },
+        {
+          "assist": "A. Schjelderup",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "80'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 80,
+          "player": "E. Haaland",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 4740,
-      "fallbackClockText": "79'",
+      "fallbackClock": 4800,
+      "fallbackClockText": "80'",
       "goalEvents": [
         {
           "assist": "Bruno Guimaraes",
@@ -49781,6 +49799,29 @@
           "timer": "14:00",
           "timerSeconds": 840,
           "type": "Goal"
+        },
+        {
+          "assist": "A. Schjelderup",
+          "awayTeam": "Norway",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "80'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Brazil",
+          "isDisallowed": false,
+          "matchId": 537377,
+          "matchUtcDate": "2026-07-05T20:00:00Z",
+          "minute": 80,
+          "player": "E. Haaland",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "80:00",
+          "timerSeconds": 4800,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -49799,8 +49840,8 @@
         "tla": "BRA"
       },
       "id": 537377,
-      "lastApiSync": "2026-07-05T21:41:37.196085+00:00",
-      "lastUpdated": "2026-07-05T23:41:33Z",
+      "lastApiSync": "2026-07-05T21:41:58.936159+00:00",
+      "lastUpdated": "2026-07-05T23:41:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49828,14 +49869,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "79'",
-        "lastApiSync": "2026-07-05T21:41:37.196085+00:00",
-        "seconds": 4740,
+        "displayMinute": "80'",
+        "lastApiSync": "2026-07-05T21:41:58.936159+00:00",
+        "seconds": 4800,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "79'"
+        "timer": "80'"
       },
-      "manualClockText": "79'",
+      "manualClockText": "80'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -49860,7 +49901,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 79,
+      "minute": 80,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49889,14 +49930,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
           "away": 0,
           "home": 0
         },
-        "winner": "DRAW"
+        "winner": "AWAY_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
