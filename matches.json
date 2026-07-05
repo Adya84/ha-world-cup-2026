@@ -49579,8 +49579,8 @@
     },
     {
       "apiFootballFixtureId": 1568100,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -49620,8 +49620,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -49629,7 +49627,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "Bruno Guimaraes",
@@ -49866,8 +49863,6 @@
           "type": "Penalty"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "Bruno Guimaraes",
@@ -49978,9 +49973,8 @@
         "tla": "BRA"
       },
       "id": 537377,
-      "lastApiSync": "2026-07-05T22:04:04.298679+00:00",
-      "lastUpdated": "2026-07-06T00:04:00Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-05T22:04:25.625815+00:00",
+      "lastUpdated": "2026-07-06T00:04:18Z",
       "liveStatistics": {
         "away": {
           "corners": 5,
@@ -50004,39 +49998,6 @@
           "totalShots": 14,
           "yellowCards": 1
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-05T22:04:04.298679+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "New York/New Jersey",
-        "cloudCoverage": 97.7,
-        "condition": "rain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-05T22:02:58.951078+00:00",
-        "humidity": 88.5,
-        "latitude": 40.8135,
-        "longitude": -74.0745,
-        "name": "MetLife Stadium weather",
-        "observedAt": "2026-07-05T22:00:00Z",
-        "pressure": 1014.0,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "MetLife Stadium",
-        "temperature": 24.4,
-        "temperatureUnit": "C",
-        "windBearing": 42.8,
-        "windSpeed": 3.3,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -50086,7 +50047,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "O. Bobb",
@@ -50238,29 +50199,6 @@
         "city": "East Rutherford",
         "id": 0,
         "name": "MetLife Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "New York/New Jersey",
-        "cloudCoverage": 97.7,
-        "condition": "rain",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-05T22:02:58.951078+00:00",
-        "humidity": 88.5,
-        "latitude": 40.8135,
-        "longitude": -74.0745,
-        "name": "MetLife Stadium weather",
-        "observedAt": "2026-07-05T22:00:00Z",
-        "pressure": 1014.0,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "MetLife Stadium",
-        "temperature": 24.4,
-        "temperatureUnit": "C",
-        "windBearing": 42.8,
-        "windSpeed": 3.3,
-        "windSpeedUnit": "m/s"
       }
     },
     {
