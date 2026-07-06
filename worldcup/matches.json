@@ -49323,14 +49323,14 @@
           "type": "Yellow Card"
         },
         {
-          "assist": null,
+          "assist": "F. Torres",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90+1'",
           "extra": 1,
           "isDisallowed": false,
           "minute": 90,
-          "player": null,
+          "player": "M. Merino",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -49345,14 +49345,19 @@
       "fallbackClockText": "90'",
       "goalEvents": [
         {
-          "assist": null,
+          "assist": "F. Torres",
+          "awayTeam": "Spain",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90+1'",
           "extra": 1,
+          "goalNumber": 1,
+          "homeTeam": "Portugal",
           "isDisallowed": false,
+          "matchId": 537379,
+          "matchUtcDate": "2026-07-06T19:00:00Z",
           "minute": 90,
-          "player": null,
+          "player": "M. Merino",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -49379,8 +49384,8 @@
         "tla": "POR"
       },
       "id": 537379,
-      "lastApiSync": "2026-07-06T20:53:24.625759+00:00",
-      "lastUpdated": "2026-07-06T22:53:21Z",
+      "lastApiSync": "2026-07-06T20:53:45.109436+00:00",
+      "lastUpdated": "2026-07-06T22:53:25Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49409,7 +49414,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-06T20:53:24.625759+00:00",
+        "lastApiSync": "2026-07-06T20:53:45.109436+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -49453,7 +49458,7 @@
           "away": 0,
           "home": 0
         },
-        "winner": "DRAW"
+        "winner": "AWAY_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
