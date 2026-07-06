@@ -22988,9 +22988,9 @@
   },
   "537378": {
     "apiFootballFixtureId": 1570714,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "England",
-    "base_seconds": 2160,
+    "base_seconds": 2220,
     "cardEvents": [
       {
         "assist": null,
@@ -23012,8 +23012,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 2160,
-    "displayMinute": "36'",
+    "clock_seconds": 2220,
+    "displayMinute": "37'",
     "events": [
       {
         "assist": null,
@@ -23032,14 +23032,56 @@
         "timer": "1:00",
         "timerSeconds": 60,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "B. Saka",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "36'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 36,
+        "player": "J. Bellingham",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "36:00",
+        "timerSeconds": 2160,
+        "type": "Goal"
       }
     ],
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "assist": "B. Saka",
+        "awayTeam": "England",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "36'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Mexico",
+        "isDisallowed": false,
+        "matchId": 537378,
+        "matchUtcDate": "2026-07-06T01:00:00Z",
+        "minute": 36,
+        "player": "J. Bellingham",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "36:00",
+        "timerSeconds": 2160,
+        "type": "Goal"
+      }
+    ],
     "homeScore": 0,
     "homeTeam": "Mexico",
-    "lastApiSync": "2026-07-06T01:36:16.505640+00:00",
-    "manualClockText": "36'",
-    "phase_start": "2026-07-06T01:36:16.505640+00:00",
+    "lastApiSync": "2026-07-06T01:36:37.357169+00:00",
+    "manualClockText": "37'",
+    "phase_start": "2026-07-06T01:36:37.357169+00:00",
     "referees": [
       {
         "name": "Alireza Faghani",
