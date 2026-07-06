@@ -47521,7 +47521,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4140,
+      "clockSeconds": 4200,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -47530,7 +47530,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "69'",
+      "displayMinute": "70'",
       "events": [
         {
           "assist": null,
@@ -47729,10 +47729,28 @@
           "timer": "69:00",
           "timerSeconds": 4140,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "69'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 69,
+          "player": "R. Jimenez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Penalty"
         }
       ],
-      "fallbackClock": 4140,
-      "fallbackClockText": "69'",
+      "fallbackClock": 4200,
+      "fallbackClockText": "70'",
       "goalEvents": [
         {
           "assist": "B. Saka",
@@ -47825,6 +47843,29 @@
           "timer": "60:00",
           "timerSeconds": 3600,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "England",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "69'",
+          "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Mexico",
+          "isDisallowed": false,
+          "matchId": 537378,
+          "matchUtcDate": "2026-07-06T01:00:00Z",
+          "minute": 69,
+          "player": "R. Jimenez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "69:00",
+          "timerSeconds": 4140,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -47833,7 +47874,7 @@
       "homeFouls": 12,
       "homeOffsides": null,
       "homePossession": "60%",
-      "homeScore": 1,
+      "homeScore": 2,
       "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/769.svg",
@@ -47843,8 +47884,8 @@
         "tla": "MEX"
       },
       "id": 537378,
-      "lastApiSync": "2026-07-06T02:31:18.885859+00:00",
-      "lastUpdated": "2026-07-06T04:31:15Z",
+      "lastApiSync": "2026-07-06T02:31:38.722216+00:00",
+      "lastUpdated": "2026-07-06T04:31:36Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -47872,14 +47913,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "69'",
-        "lastApiSync": "2026-07-06T02:31:18.885859+00:00",
-        "seconds": 4140,
+        "displayMinute": "70'",
+        "lastApiSync": "2026-07-06T02:31:38.722216+00:00",
+        "seconds": 4200,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "69'"
+        "timer": "70'"
       },
-      "manualClockText": "69'",
+      "manualClockText": "70'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -47904,7 +47945,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 69,
+      "minute": 70,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -47934,7 +47975,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 3,
-          "home": 1
+          "home": 2
         },
         "halfTime": {
           "away": 2,
