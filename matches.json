@@ -49129,7 +49129,7 @@
         "shortName": "Spain",
         "tla": "ESP"
       },
-      "clockSeconds": 4920,
+      "clockSeconds": 4980,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -49138,7 +49138,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "82'",
+      "displayMinute": "83'",
       "events": [
         {
           "assist": "N. Semedo",
@@ -49211,10 +49211,28 @@
           "timer": "75:00",
           "timerSeconds": 4500,
           "type": "Substitution"
+        },
+        {
+          "assist": "F. Conceicao",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "P. Neto",
+          "playerOff": "P. Neto",
+          "playerOn": "F. Conceicao",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "83:00",
+          "timerSeconds": 4980,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4920,
-      "fallbackClockText": "82'",
+      "fallbackClock": 4980,
+      "fallbackClockText": "83'",
       "group": null,
       "homeCorners": 3,
       "homeFouls": 6,
@@ -49230,8 +49248,8 @@
         "tla": "POR"
       },
       "id": 537379,
-      "lastApiSync": "2026-07-06T20:44:51.567834+00:00",
-      "lastUpdated": "2026-07-06T22:44:48Z",
+      "lastApiSync": "2026-07-06T20:45:14.152229+00:00",
+      "lastUpdated": "2026-07-06T22:45:12Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49259,16 +49277,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "82'",
-        "lastApiSync": "2026-07-06T20:44:51.567834+00:00",
-        "seconds": 4920,
+        "displayMinute": "83'",
+        "lastApiSync": "2026-07-06T20:45:14.152229+00:00",
+        "seconds": 4980,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "82'"
+        "timer": "83'"
       },
-      "manualClockText": "82'",
+      "manualClockText": "83'",
       "matchday": null,
-      "minute": 82,
+      "minute": 83,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49387,6 +49405,24 @@
           "team": "Spain",
           "timer": "75:00",
           "timerSeconds": 4500,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Conceicao",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "83'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 83,
+          "player": "P. Neto",
+          "playerOff": "P. Neto",
+          "playerOn": "F. Conceicao",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Portugal",
+          "timer": "83:00",
+          "timerSeconds": 4980,
           "type": "Substitution"
         }
       ],
