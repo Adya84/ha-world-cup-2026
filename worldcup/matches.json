@@ -49120,7 +49120,7 @@
       "awayFouls": 12,
       "awayOffsides": 1,
       "awayPossession": "57%",
-      "awayScore": 0,
+      "awayScore": 1,
       "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/760.svg",
@@ -49321,10 +49321,49 @@
           "timer": "89:00",
           "timerSeconds": 5340,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 5400,
       "fallbackClockText": "90'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+1'",
+          "extra": 1,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 3,
       "homeFouls": 7,
@@ -49340,8 +49379,8 @@
         "tla": "POR"
       },
       "id": 537379,
-      "lastApiSync": "2026-07-06T20:53:03.870671+00:00",
-      "lastUpdated": "2026-07-06T22:53:00Z",
+      "lastApiSync": "2026-07-06T20:53:24.625759+00:00",
+      "lastUpdated": "2026-07-06T22:53:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49370,7 +49409,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-06T20:53:03.870671+00:00",
+        "lastApiSync": "2026-07-06T20:53:24.625759+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -49407,7 +49446,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
