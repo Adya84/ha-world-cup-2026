@@ -49129,7 +49129,7 @@
         "shortName": "Spain",
         "tla": "ESP"
       },
-      "clockSeconds": 4500,
+      "clockSeconds": 4560,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -49138,7 +49138,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "75'",
+      "displayMinute": "76'",
       "events": [
         {
           "assist": "N. Semedo",
@@ -49193,10 +49193,28 @@
           "timer": "71:00",
           "timerSeconds": 4260,
           "type": "Substitution"
+        },
+        {
+          "assist": "F. Torres",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "75'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 75,
+          "player": "A. Baena",
+          "playerOff": "A. Baena",
+          "playerOn": "F. Torres",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "75:00",
+          "timerSeconds": 4500,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4500,
-      "fallbackClockText": "75'",
+      "fallbackClock": 4560,
+      "fallbackClockText": "76'",
       "group": null,
       "homeCorners": 3,
       "homeFouls": 6,
@@ -49212,8 +49230,8 @@
         "tla": "POR"
       },
       "id": 537379,
-      "lastApiSync": "2026-07-06T20:37:50.056374+00:00",
-      "lastUpdated": "2026-07-06T22:37:48Z",
+      "lastApiSync": "2026-07-06T20:38:10.459497+00:00",
+      "lastUpdated": "2026-07-06T22:38:09Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49241,16 +49259,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "75'",
-        "lastApiSync": "2026-07-06T20:37:50.056374+00:00",
-        "seconds": 4500,
+        "displayMinute": "76'",
+        "lastApiSync": "2026-07-06T20:38:10.459497+00:00",
+        "seconds": 4560,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "75'"
+        "timer": "76'"
       },
-      "manualClockText": "75'",
+      "manualClockText": "76'",
       "matchday": null,
-      "minute": 75,
+      "minute": 76,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49351,6 +49369,24 @@
           "team": "Portugal",
           "timer": "71:00",
           "timerSeconds": 4260,
+          "type": "Substitution"
+        },
+        {
+          "assist": "F. Torres",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "75'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 75,
+          "player": "A. Baena",
+          "playerOff": "A. Baena",
+          "playerOn": "F. Torres",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "75:00",
+          "timerSeconds": 4500,
           "type": "Substitution"
         }
       ],
