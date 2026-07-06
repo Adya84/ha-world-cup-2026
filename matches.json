@@ -47455,7 +47455,7 @@
       "awayCorners": 2,
       "awayFouls": 3,
       "awayOffsides": null,
-      "awayPossession": "39%",
+      "awayPossession": "37%",
       "awayScore": 2,
       "awayShotsOnGoal": 3,
       "awayTeam": {
@@ -47567,6 +47567,24 @@
           "timer": "42:00",
           "timerSeconds": 2520,
           "type": "Goal"
+        },
+        {
+          "assist": "E. Alvarez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "C. Montes",
+          "playerOff": "C. Montes",
+          "playerOn": "E. Alvarez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
         }
       ],
       "fallbackClock": 2760,
@@ -47644,10 +47662,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 2,
-      "homeFouls": 7,
+      "homeCorners": 4,
+      "homeFouls": 8,
       "homeOffsides": null,
-      "homePossession": "61%",
+      "homePossession": "63%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -47658,15 +47676,15 @@
         "tla": "MEX"
       },
       "id": 537378,
-      "lastApiSync": "2026-07-06T02:08:05.507177+00:00",
-      "lastUpdated": "2026-07-06T04:08:03Z",
+      "lastApiSync": "2026-07-06T02:08:26.125367+00:00",
+      "lastUpdated": "2026-07-06T04:08:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
           "fouls": 3,
           "offsides": null,
-          "possession": "39%",
+          "possession": "37%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 3,
@@ -47674,10 +47692,10 @@
           "yellowCards": 1
         },
         "home": {
-          "corners": 2,
-          "fouls": 7,
+          "corners": 4,
+          "fouls": 8,
           "offsides": null,
-          "possession": "61%",
+          "possession": "63%",
           "redCards": null,
           "shotsOffGoal": 2,
           "shotsOnGoal": 3,
@@ -47688,7 +47706,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-07-06T02:08:05.507177+00:00",
+        "lastApiSync": "2026-07-06T02:08:26.125367+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -47767,6 +47785,26 @@
       },
       "stage": "LAST_16",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "E. Alvarez",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "C. Montes",
+          "playerOff": "C. Montes",
+          "playerOn": "E. Alvarez",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Mexico",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-06T01:00:00Z",
       "venue": {
         "city": "Mexico City",
