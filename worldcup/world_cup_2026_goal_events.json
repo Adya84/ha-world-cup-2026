@@ -23541,10 +23541,10 @@
     "apiFootballFixtureId": 1576756,
     "awayScore": 0,
     "awayTeam": "Spain",
-    "base_seconds": 4500,
+    "base_seconds": 4560,
     "clock_active": false,
-    "clock_seconds": 4500,
-    "displayMinute": "75'",
+    "clock_seconds": 4560,
+    "displayMinute": "76'",
     "events": [
       {
         "assist": "N. Semedo",
@@ -23599,14 +23599,32 @@
         "timer": "71:00",
         "timerSeconds": 4260,
         "type": "Substitution"
+      },
+      {
+        "assist": "F. Torres",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "75'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 75,
+        "player": "A. Baena",
+        "playerOff": "A. Baena",
+        "playerOn": "F. Torres",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "75:00",
+        "timerSeconds": 4500,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Portugal",
-    "lastApiSync": "2026-07-06T20:37:50.056374+00:00",
-    "manualClockText": "75'",
-    "phase_start": "2026-07-06T20:37:50.056374+00:00",
+    "lastApiSync": "2026-07-06T20:38:10.459497+00:00",
+    "manualClockText": "76'",
+    "phase_start": "2026-07-06T20:38:10.459497+00:00",
     "referees": [
       {
         "name": "Anthony Taylor",
@@ -23673,6 +23691,24 @@
         "team": "Portugal",
         "timer": "71:00",
         "timerSeconds": 4260,
+        "type": "Substitution"
+      },
+      {
+        "assist": "F. Torres",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "75'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 75,
+        "player": "A. Baena",
+        "playerOff": "A. Baena",
+        "playerOn": "F. Torres",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "75:00",
+        "timerSeconds": 4500,
         "type": "Substitution"
       }
     ],
