@@ -22320,9 +22320,9 @@
   },
   "537378": {
     "apiFootballFixtureId": 1570714,
-    "awayScore": 2,
+    "awayScore": 3,
     "awayTeam": "England",
-    "base_seconds": 3600,
+    "base_seconds": 3660,
     "cardEvents": [
       {
         "assist": null,
@@ -22362,8 +22362,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3600,
-    "displayMinute": "60'",
+    "clock_seconds": 3660,
+    "displayMinute": "61'",
     "events": [
       {
         "assist": null,
@@ -22490,6 +22490,24 @@
         "timer": "57:00",
         "timerSeconds": 3420,
         "type": "Substitution"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Penalty",
+        "displayMinute": "60'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 60,
+        "player": "H. Kane",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "60:00",
+        "timerSeconds": 3600,
+        "type": "Penalty"
       }
     ],
     "goalEvents": [
@@ -22561,13 +22579,36 @@
         "timer": "42:00",
         "timerSeconds": 2520,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "England",
+        "comments": null,
+        "detail": "Penalty",
+        "displayMinute": "60'",
+        "extra": null,
+        "goalNumber": 4,
+        "homeTeam": "Mexico",
+        "isDisallowed": false,
+        "matchId": 537378,
+        "matchUtcDate": "2026-07-06T01:00:00Z",
+        "minute": 60,
+        "player": "H. Kane",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "60:00",
+        "timerSeconds": 3600,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "Mexico",
-    "lastApiSync": "2026-07-06T02:22:18.100564+00:00",
-    "manualClockText": "60'",
-    "phase_start": "2026-07-06T02:22:18.100564+00:00",
+    "lastApiSync": "2026-07-06T02:22:38.668147+00:00",
+    "manualClockText": "61'",
+    "phase_start": "2026-07-06T02:22:38.668147+00:00",
     "referees": [
       {
         "name": "Alireza Faghani",
