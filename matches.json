@@ -47503,7 +47503,7 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 3420,
+      "clockSeconds": 3480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -47512,7 +47512,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "57'",
+      "displayMinute": "58'",
       "events": [
         {
           "assist": null,
@@ -47621,10 +47621,28 @@
           "timer": "54:00",
           "timerSeconds": 3240,
           "type": "Red Card"
+        },
+        {
+          "assist": "J. Stones",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "B. Saka",
+          "playerOff": "B. Saka",
+          "playerOn": "J. Stones",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "57:00",
+          "timerSeconds": 3420,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3420,
-      "fallbackClockText": "57'",
+      "fallbackClock": 3480,
+      "fallbackClockText": "58'",
       "goalEvents": [
         {
           "assist": "B. Saka",
@@ -47712,8 +47730,8 @@
         "tla": "MEX"
       },
       "id": 537378,
-      "lastApiSync": "2026-07-06T02:19:31.601899+00:00",
-      "lastUpdated": "2026-07-06T04:19:30Z",
+      "lastApiSync": "2026-07-06T02:19:52.284973+00:00",
+      "lastUpdated": "2026-07-06T04:19:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -47741,14 +47759,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "57'",
-        "lastApiSync": "2026-07-06T02:19:31.601899+00:00",
-        "seconds": 3420,
+        "displayMinute": "58'",
+        "lastApiSync": "2026-07-06T02:19:52.284973+00:00",
+        "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "57'"
+        "timer": "58'"
       },
-      "manualClockText": "57'",
+      "manualClockText": "58'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Mexico City",
@@ -47773,7 +47791,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 57,
+      "minute": 58,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -47838,6 +47856,24 @@
           "team": "Mexico",
           "timer": "46:00",
           "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Stones",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "B. Saka",
+          "playerOff": "B. Saka",
+          "playerOn": "J. Stones",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "57:00",
+          "timerSeconds": 3420,
           "type": "Substitution"
         }
       ],
