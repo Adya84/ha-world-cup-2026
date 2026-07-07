@@ -49262,7 +49262,27 @@
         "shortName": "Belgium",
         "tla": "BEL"
       },
-      "clockSeconds": 2100,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "35'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 35,
+          "player": "W. McKennie",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "35:00",
+          "timerSeconds": 2100,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 2160,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -49271,7 +49291,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "35'",
+      "displayMinute": "36'",
       "events": [
         {
           "assist": "N. Raskin",
@@ -49344,10 +49364,28 @@
           "timer": "33:00",
           "timerSeconds": 1980,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "comments": "Tripping",
+          "detail": "Yellow Card",
+          "displayMinute": "35'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 35,
+          "player": "W. McKennie",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "35:00",
+          "timerSeconds": 2100,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 2100,
-      "fallbackClockText": "35'",
+      "fallbackClock": 2160,
+      "fallbackClockText": "36'",
       "goalEvents": [
         {
           "assist": "N. Raskin",
@@ -49435,8 +49473,8 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T00:35:30.494011+00:00",
-      "lastUpdated": "2026-07-07T02:35:27Z",
+      "lastApiSync": "2026-07-07T00:35:51.509175+00:00",
+      "lastUpdated": "2026-07-07T02:35:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49464,14 +49502,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "35'",
-        "lastApiSync": "2026-07-07T00:35:30.494011+00:00",
-        "seconds": 2100,
+        "displayMinute": "36'",
+        "lastApiSync": "2026-07-07T00:35:51.509175+00:00",
+        "seconds": 2160,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "35'"
+        "timer": "36'"
       },
-      "manualClockText": "35'",
+      "manualClockText": "36'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -49496,7 +49534,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 35,
+      "minute": 36,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
