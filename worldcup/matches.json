@@ -49262,7 +49262,7 @@
         "shortName": "Belgium",
         "tla": "BEL"
       },
-      "clockSeconds": 1980,
+      "clockSeconds": 2040,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -49271,7 +49271,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "33'",
+      "displayMinute": "34'",
       "events": [
         {
           "assist": "N. Raskin",
@@ -49326,10 +49326,28 @@
           "timer": "31:00",
           "timerSeconds": 1860,
           "type": "Goal"
+        },
+        {
+          "assist": "L. Trossard",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "33'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 33,
+          "player": "C. De Ketelaere",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "33:00",
+          "timerSeconds": 1980,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 1980,
-      "fallbackClockText": "33'",
+      "fallbackClock": 2040,
+      "fallbackClockText": "34'",
       "goalEvents": [
         {
           "assist": "N. Raskin",
@@ -49376,6 +49394,29 @@
           "timer": "31:00",
           "timerSeconds": 1860,
           "type": "Goal"
+        },
+        {
+          "assist": "L. Trossard",
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "33'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "USA",
+          "isDisallowed": false,
+          "matchId": 537380,
+          "matchUtcDate": "2026-07-07T00:00:00Z",
+          "minute": 33,
+          "player": "C. De Ketelaere",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "33:00",
+          "timerSeconds": 1980,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -49394,8 +49435,8 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T00:33:25.742509+00:00",
-      "lastUpdated": "2026-07-07T02:33:24Z",
+      "lastApiSync": "2026-07-07T00:33:46.336345+00:00",
+      "lastUpdated": "2026-07-07T02:33:42Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49423,14 +49464,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "33'",
-        "lastApiSync": "2026-07-07T00:33:25.742509+00:00",
-        "seconds": 1980,
+        "displayMinute": "34'",
+        "lastApiSync": "2026-07-07T00:33:46.336345+00:00",
+        "seconds": 2040,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "33'"
+        "timer": "34'"
       },
-      "manualClockText": "33'",
+      "manualClockText": "34'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -49455,7 +49496,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 33,
+      "minute": 34,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
