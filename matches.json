@@ -49249,12 +49249,12 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": null,
-      "awayFouls": 2,
+      "awayCorners": 1,
+      "awayFouls": 0,
       "awayOffsides": null,
-      "awayPossession": "100%",
+      "awayPossession": "50%",
       "awayScore": 0,
-      "awayShotsOnGoal": 1,
+      "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
         "id": 805,
@@ -49262,7 +49262,7 @@
         "shortName": "Belgium",
         "tla": "BEL"
       },
-      "clockSeconds": 360,
+      "clockSeconds": 420,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -49271,14 +49271,14 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "6'",
-      "fallbackClock": 360,
-      "fallbackClockText": "6'",
+      "displayMinute": "7'",
+      "fallbackClock": 420,
+      "fallbackClockText": "7'",
       "group": null,
-      "homeCorners": null,
+      "homeCorners": 0,
       "homeFouls": 0,
       "homeOffsides": null,
-      "homePossession": "0%",
+      "homePossession": "50%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -49289,26 +49289,26 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T00:06:32.678386+00:00",
-      "lastUpdated": "2026-07-07T02:06:30Z",
+      "lastApiSync": "2026-07-07T00:06:54.028305+00:00",
+      "lastUpdated": "2026-07-07T02:06:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": null,
-          "fouls": 2,
+          "corners": 1,
+          "fouls": 0,
           "offsides": null,
-          "possession": "100%",
+          "possession": "50%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 1,
-          "totalShots": 2,
+          "shotsOnGoal": 2,
+          "totalShots": 4,
           "yellowCards": null
         },
         "home": {
-          "corners": null,
+          "corners": 0,
           "fouls": 0,
           "offsides": null,
-          "possession": "0%",
+          "possession": "50%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -49318,14 +49318,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "6'",
-        "lastApiSync": "2026-07-07T00:06:32.678386+00:00",
-        "seconds": 360,
+        "displayMinute": "7'",
+        "lastApiSync": "2026-07-07T00:06:54.028305+00:00",
+        "seconds": 420,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "6'"
+        "timer": "7'"
       },
-      "manualClockText": "6'",
+      "manualClockText": "7'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -49350,7 +49350,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 6,
+      "minute": 7,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
