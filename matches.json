@@ -48801,8 +48801,8 @@
     },
     {
       "apiFootballFixtureId": 1570715,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -48860,8 +48860,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48869,7 +48867,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "N. Raskin",
@@ -49178,8 +49175,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "N. Raskin",
@@ -49313,9 +49308,8 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T01:58:40.360066+00:00",
-      "lastUpdated": "2026-07-07T03:58:39Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-07T01:59:01.153892+00:00",
+      "lastUpdated": "2026-07-07T03:59:00Z",
       "liveStatistics": {
         "away": {
           "corners": 5,
@@ -49339,39 +49333,6 @@
           "totalShots": 7,
           "yellowCards": 2
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-07T01:58:40.360066+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Seattle",
-        "cloudCoverage": 0.0,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-07T01:52:31.003092+00:00",
-        "humidity": 36.9,
-        "latitude": 47.5952,
-        "longitude": -122.3316,
-        "name": "Lumen Field weather",
-        "observedAt": "2026-07-07T01:00:00Z",
-        "pressure": 1012.7,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lumen Field",
-        "temperature": 25.5,
-        "temperatureUnit": "C",
-        "windBearing": 348.8,
-        "windSpeed": 4.7,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -49421,7 +49382,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "H. Vanaken",
@@ -49609,29 +49570,6 @@
         "city": "Seattle",
         "id": 11534,
         "name": "Lumen Field"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Seattle",
-        "cloudCoverage": 0.0,
-        "condition": "clearsky_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-07T01:52:31.003092+00:00",
-        "humidity": 36.9,
-        "latitude": 47.5952,
-        "longitude": -122.3316,
-        "name": "Lumen Field weather",
-        "observedAt": "2026-07-07T01:00:00Z",
-        "pressure": 1012.7,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Lumen Field",
-        "temperature": 25.5,
-        "temperatureUnit": "C",
-        "windBearing": 348.8,
-        "windSpeed": 4.7,
-        "windSpeedUnit": "m/s"
       }
     },
     {
