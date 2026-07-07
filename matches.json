@@ -51244,7 +51244,7 @@
       "awayCorners": 4,
       "awayFouls": 6,
       "awayOffsides": 1,
-      "awayPossession": "51%",
+      "awayPossession": "44%",
       "awayScore": 0,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -51254,7 +51254,27 @@
         "shortName": "Colombia",
         "tla": "COL"
       },
-      "clockSeconds": 3060,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "51'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 51,
+          "player": "Granit Xhaka",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Switzerland",
+          "timer": "51:00",
+          "timerSeconds": 3060,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 3120,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -51263,7 +51283,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "51'",
+      "displayMinute": "52'",
       "events": [
         {
           "assist": null,
@@ -51300,15 +51320,33 @@
           "timer": "45:00",
           "timerSeconds": 2700,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "51'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 51,
+          "player": "Granit Xhaka",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Switzerland",
+          "timer": "51:00",
+          "timerSeconds": 3060,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 3060,
-      "fallbackClockText": "51'",
+      "fallbackClock": 3120,
+      "fallbackClockText": "52'",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 6,
-      "homeOffsides": 1,
-      "homePossession": "49%",
+      "homeOffsides": 3,
+      "homePossession": "56%",
       "homeScore": 0,
       "homeShotsOnGoal": 2,
       "homeTeam": {
@@ -51319,43 +51357,43 @@
         "tla": "SUI"
       },
       "id": 537382,
-      "lastApiSync": "2026-07-07T21:11:00.577450+00:00",
-      "lastUpdated": "2026-07-07T23:10:57Z",
+      "lastApiSync": "2026-07-07T21:11:21.706227+00:00",
+      "lastUpdated": "2026-07-07T23:11:18Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 4,
           "fouls": 6,
           "offsides": 1,
-          "possession": "51%",
-          "redCards": null,
+          "possession": "44%",
+          "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
           "totalShots": 5,
-          "yellowCards": null
+          "yellowCards": 0
         },
         "home": {
           "corners": 1,
           "fouls": 6,
-          "offsides": 1,
-          "possession": "49%",
-          "redCards": null,
-          "shotsOffGoal": 0,
+          "offsides": 3,
+          "possession": "56%",
+          "redCards": 0,
+          "shotsOffGoal": 1,
           "shotsOnGoal": 2,
-          "totalShots": 2,
-          "yellowCards": null
+          "totalShots": 3,
+          "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "51'",
-        "lastApiSync": "2026-07-07T21:11:00.577450+00:00",
-        "seconds": 3060,
+        "displayMinute": "52'",
+        "lastApiSync": "2026-07-07T21:11:21.706227+00:00",
+        "seconds": 3120,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "51'"
+        "timer": "52'"
       },
-      "manualClockText": "51'",
+      "manualClockText": "52'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -51380,7 +51418,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 51,
+      "minute": 52,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
