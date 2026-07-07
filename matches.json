@@ -48860,7 +48860,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4320,
+      "clockSeconds": 4380,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48869,7 +48869,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "72'",
+      "displayMinute": "73'",
       "events": [
         {
           "assist": "N. Raskin",
@@ -49068,10 +49068,28 @@
           "timer": "69:00",
           "timerSeconds": 4140,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "R. Pepi",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "T. Adams",
+          "playerOff": "T. Adams",
+          "playerOn": "R. Pepi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "72:00",
+          "timerSeconds": 4320,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4320,
-      "fallbackClockText": "72'",
+      "fallbackClock": 4380,
+      "fallbackClockText": "73'",
       "goalEvents": [
         {
           "assist": "N. Raskin",
@@ -49182,8 +49200,8 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T01:35:56.279919+00:00",
-      "lastUpdated": "2026-07-07T03:35:54Z",
+      "lastApiSync": "2026-07-07T01:36:16.943951+00:00",
+      "lastUpdated": "2026-07-07T03:36:15Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49206,19 +49224,19 @@
           "shotsOffGoal": 3,
           "shotsOnGoal": 1,
           "totalShots": 4,
-          "yellowCards": 1
+          "yellowCards": 2
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "72'",
-        "lastApiSync": "2026-07-07T01:35:56.279919+00:00",
-        "seconds": 4320,
+        "displayMinute": "73'",
+        "lastApiSync": "2026-07-07T01:36:16.943951+00:00",
+        "seconds": 4380,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "72'"
+        "timer": "73'"
       },
-      "manualClockText": "72'",
+      "manualClockText": "73'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -49243,7 +49261,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 72,
+      "minute": 73,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49380,6 +49398,24 @@
           "team": "Belgium",
           "timer": "67:00",
           "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Pepi",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "72'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 72,
+          "player": "T. Adams",
+          "playerOff": "T. Adams",
+          "playerOn": "R. Pepi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "72:00",
+          "timerSeconds": 4320,
           "type": "Substitution"
         }
       ],
