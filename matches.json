@@ -48777,15 +48777,14 @@
     },
     {
       "apiFootballFixtureId": 1576805,
-      "apiFootballStatus": "P",
-      "apiFootballStatusLong": "Penalty in progress",
+      "apiFootballStatus": "PEN",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 4,
       "awayFouls": 6,
       "awayOffsides": 1,
@@ -48891,7 +48890,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48899,7 +48897,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "D. Sow",
@@ -49595,9 +49592,8 @@
         "tla": "SUI"
       },
       "id": 537382,
-      "lastApiSync": "2026-07-07T22:35:30.578488+00:00",
-      "lastUpdated": "2026-07-08T00:50:45Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-07T22:51:06.533003+00:00",
+      "lastUpdated": "2026-07-08T00:51:03Z",
       "liveStatistics": {
         "away": {
           "corners": 4,
@@ -49622,40 +49618,8 @@
           "yellowCards": null
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "122'",
-        "lastApiSync": "2026-07-07T22:35:30.578488+00:00",
-        "seconds": 7320,
-        "source": "awaiting_api_football_minute",
-        "status": "P",
-        "timer": "122:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 98.4,
-        "condition": "partlycloudy_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-07T22:43:55.024255+00:00",
-        "humidity": 48.7,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-07-07T22:00:00Z",
-        "pressure": 1016.8,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 22.5,
-        "temperatureUnit": "C",
-        "windBearing": 142.6,
-        "windSpeed": 3.0,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": null,
+      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49712,7 +49676,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "P",
+      "status": "PEN",
       "substitutionEvents": [
         {
           "assist": "D. Sow",
@@ -49918,29 +49882,6 @@
         "city": "Vancouver",
         "id": 19445,
         "name": "BC Place"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Vancouver",
-        "cloudCoverage": 98.4,
-        "condition": "partlycloudy_day",
-        "country": "Canada",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-07T22:43:55.024255+00:00",
-        "humidity": 48.7,
-        "latitude": 49.2768,
-        "longitude": -123.1119,
-        "name": "BC Place weather",
-        "observedAt": "2026-07-07T22:00:00Z",
-        "pressure": 1016.8,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "BC Place",
-        "temperature": 22.5,
-        "temperatureUnit": "C",
-        "windBearing": 142.6,
-        "windSpeed": 3.0,
-        "windSpeedUnit": "m/s"
       }
     },
     {
