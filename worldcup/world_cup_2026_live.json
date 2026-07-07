@@ -13,7 +13,7 @@
       "awayCorners": 1,
       "awayFouls": 5,
       "awayOffsides": 0,
-      "awayPossession": "41%",
+      "awayPossession": "40%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -35,14 +35,14 @@
       "displayMinute": "45'",
       "events": [
         {
-          "assist": "M. Attia",
+          "assist": "Marwan Attia",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "15'",
           "extra": null,
           "isDisallowed": false,
           "minute": 15,
-          "player": "Y. Ibrahim",
+          "player": "Yasser Ibrahim Hanafi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -53,14 +53,14 @@
           "type": "Goal"
         },
         {
-          "assist": "L. Messi",
+          "assist": null,
           "comments": null,
           "detail": "Missed Penalty",
           "displayMinute": "21'",
           "extra": null,
           "isDisallowed": false,
           "minute": 21,
-          "player": "L. Messi",
+          "player": "Lionel Messi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -69,13 +69,31 @@
           "timer": "21:00",
           "timerSeconds": 1260,
           "type": "Penalty"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": null,
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "Lionel Messi",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Var",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "VAR"
         }
       ],
       "fallbackClock": 2700,
       "fallbackClockText": "45'",
       "goalEvents": [
         {
-          "assist": "M. Attia",
+          "assist": "Marwan Attia",
           "awayTeam": "Egypt",
           "comments": null,
           "detail": "Normal Goal",
@@ -87,7 +105,7 @@
           "matchId": 537381,
           "matchUtcDate": "2026-07-07T16:00:00Z",
           "minute": 15,
-          "player": "Y. Ibrahim",
+          "player": "Yasser Ibrahim Hanafi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -98,7 +116,7 @@
           "type": "Goal"
         },
         {
-          "assist": "L. Messi",
+          "assist": null,
           "awayTeam": "Egypt",
           "comments": null,
           "detail": "Missed Penalty",
@@ -110,7 +128,7 @@
           "matchId": 537381,
           "matchUtcDate": "2026-07-07T16:00:00Z",
           "minute": 21,
-          "player": "L. Messi",
+          "player": "Lionel Messi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -126,7 +144,7 @@
       "homeCorners": 1,
       "homeFouls": 8,
       "homeOffsides": 2,
-      "homePossession": "59%",
+      "homePossession": "60%",
       "homeScore": 0,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -137,37 +155,37 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T16:58:14.525457+00:00",
-      "lastUpdated": "2026-07-07T18:58:12Z",
+      "lastApiSync": "2026-07-07T16:58:36.473499+00:00",
+      "lastUpdated": "2026-07-07T18:58:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 5,
           "offsides": 0,
-          "possession": "41%",
-          "redCards": null,
+          "possession": "40%",
+          "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
           "totalShots": 2,
-          "yellowCards": null
+          "yellowCards": 0
         },
         "home": {
           "corners": 1,
           "fouls": 8,
           "offsides": 2,
-          "possession": "59%",
-          "redCards": null,
+          "possession": "60%",
+          "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 3,
           "totalShots": 7,
-          "yellowCards": null
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-07-07T16:58:14.525457+00:00",
+        "lastApiSync": "2026-07-07T16:58:36.473499+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
@@ -245,7 +263,7 @@
       "awayCorners": 1,
       "awayFouls": 5,
       "awayOffsides": 0,
-      "awayPossession": "41%",
+      "awayPossession": "40%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -267,14 +285,14 @@
       "displayMinute": "45'",
       "events": [
         {
-          "assist": "M. Attia",
+          "assist": "Marwan Attia",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "15'",
           "extra": null,
           "isDisallowed": false,
           "minute": 15,
-          "player": "Y. Ibrahim",
+          "player": "Yasser Ibrahim Hanafi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -285,14 +303,14 @@
           "type": "Goal"
         },
         {
-          "assist": "L. Messi",
+          "assist": null,
           "comments": null,
           "detail": "Missed Penalty",
           "displayMinute": "21'",
           "extra": null,
           "isDisallowed": false,
           "minute": 21,
-          "player": "L. Messi",
+          "player": "Lionel Messi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -301,13 +319,31 @@
           "timer": "21:00",
           "timerSeconds": 1260,
           "type": "Penalty"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": null,
+          "displayMinute": "32'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 32,
+          "player": "Lionel Messi",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Var",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "32:00",
+          "timerSeconds": 1920,
+          "type": "VAR"
         }
       ],
       "fallbackClock": 2700,
       "fallbackClockText": "45'",
       "goalEvents": [
         {
-          "assist": "M. Attia",
+          "assist": "Marwan Attia",
           "awayTeam": "Egypt",
           "comments": null,
           "detail": "Normal Goal",
@@ -319,7 +355,7 @@
           "matchId": 537381,
           "matchUtcDate": "2026-07-07T16:00:00Z",
           "minute": 15,
-          "player": "Y. Ibrahim",
+          "player": "Yasser Ibrahim Hanafi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -330,7 +366,7 @@
           "type": "Goal"
         },
         {
-          "assist": "L. Messi",
+          "assist": null,
           "awayTeam": "Egypt",
           "comments": null,
           "detail": "Missed Penalty",
@@ -342,7 +378,7 @@
           "matchId": 537381,
           "matchUtcDate": "2026-07-07T16:00:00Z",
           "minute": 21,
-          "player": "L. Messi",
+          "player": "Lionel Messi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -358,7 +394,7 @@
       "homeCorners": 1,
       "homeFouls": 8,
       "homeOffsides": 2,
-      "homePossession": "59%",
+      "homePossession": "60%",
       "homeScore": 0,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -369,37 +405,37 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T16:58:14.525457+00:00",
-      "lastUpdated": "2026-07-07T18:58:12Z",
+      "lastApiSync": "2026-07-07T16:58:36.473499+00:00",
+      "lastUpdated": "2026-07-07T18:58:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 5,
           "offsides": 0,
-          "possession": "41%",
-          "redCards": null,
+          "possession": "40%",
+          "redCards": 0,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
           "totalShots": 2,
-          "yellowCards": null
+          "yellowCards": 0
         },
         "home": {
           "corners": 1,
           "fouls": 8,
           "offsides": 2,
-          "possession": "59%",
-          "redCards": null,
+          "possession": "60%",
+          "redCards": 0,
           "shotsOffGoal": 3,
           "shotsOnGoal": 3,
           "totalShots": 7,
-          "yellowCards": null
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
-        "lastApiSync": "2026-07-07T16:58:14.525457+00:00",
+        "lastApiSync": "2026-07-07T16:58:36.473499+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
         "status": "HT",
