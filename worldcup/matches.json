@@ -48785,7 +48785,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 4,
       "awayFouls": 6,
       "awayOffsides": 1,
@@ -48855,7 +48854,8 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 5460,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48863,7 +48863,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "91'",
       "events": [
         {
           "assist": "D. Sow",
@@ -49082,6 +49082,8 @@
           "type": "Substitution"
         }
       ],
+      "fallbackClock": 5460,
+      "fallbackClockText": "91'",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 6,
@@ -49097,7 +49099,7 @@
         "tla": "SUI"
       },
       "id": 537382,
-      "lastApiSync": "2026-07-07T21:54:49.467670+00:00",
+      "lastApiSync": "2026-07-07T22:00:18.011421+00:00",
       "lastUpdated": "2026-07-07T23:56:00Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -49126,14 +49128,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-07T21:54:49.467670+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
+        "displayMinute": "91'",
+        "lastApiSync": "2026-07-07T22:00:18.011421+00:00",
+        "seconds": 5460,
+        "source": "api_football_live_minute",
         "status": "BT",
-        "timer": "90:00"
+        "timer": "91'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "91'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -49158,6 +49160,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
+      "minute": 91,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
