@@ -51241,7 +51241,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 0,
+      "awayOffsides": null,
+      "awayPossession": null,
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/818.svg",
         "id": 818,
@@ -51262,7 +51267,12 @@
       "fallbackClock": 60,
       "fallbackClockText": "1'",
       "group": null,
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": null,
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/788.svg",
         "id": 788,
@@ -51271,13 +51281,37 @@
         "tla": "SUI"
       },
       "id": 537382,
-      "lastApiSync": "2026-07-07T20:01:01.155244+00:00",
-      "lastUpdated": "2026-07-07T22:00:57Z",
+      "lastApiSync": "2026-07-07T20:01:24.608281+00:00",
+      "lastUpdated": "2026-07-07T22:01:21Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": null,
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "1'",
-        "lastApiSync": "2026-07-07T20:01:01.155244+00:00",
+        "lastApiSync": "2026-07-07T20:01:24.608281+00:00",
         "seconds": 60,
         "source": "api_football_live_minute",
         "status": "1H",
