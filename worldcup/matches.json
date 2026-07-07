@@ -50969,14 +50969,14 @@
       "displayMinute": "27'",
       "events": [
         {
-          "assist": "M. Attia",
+          "assist": "Marwan Attia",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "15'",
           "extra": null,
           "isDisallowed": false,
           "minute": 15,
-          "player": "Y. Ibrahim",
+          "player": "Yasser Ibrahim Hanafi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -50985,31 +50985,13 @@
           "timer": "15:00",
           "timerSeconds": 900,
           "type": "Goal"
-        },
-        {
-          "assist": "L. Messi",
-          "comments": null,
-          "detail": "Missed Penalty",
-          "displayMinute": "21'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 21,
-          "player": "L. Messi",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Argentina",
-          "timer": "21:00",
-          "timerSeconds": 1260,
-          "type": "Penalty"
         }
       ],
       "fallbackClock": 1620,
       "fallbackClockText": "27'",
       "goalEvents": [
         {
-          "assist": "M. Attia",
+          "assist": "Marwan Attia",
           "awayTeam": "Egypt",
           "comments": null,
           "detail": "Normal Goal",
@@ -51021,7 +51003,7 @@
           "matchId": 537381,
           "matchUtcDate": "2026-07-07T16:00:00Z",
           "minute": 15,
-          "player": "Y. Ibrahim",
+          "player": "Yasser Ibrahim Hanafi",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -51030,35 +51012,12 @@
           "timer": "15:00",
           "timerSeconds": 900,
           "type": "Goal"
-        },
-        {
-          "assist": "L. Messi",
-          "awayTeam": "Egypt",
-          "comments": null,
-          "detail": "Missed Penalty",
-          "displayMinute": "21'",
-          "extra": null,
-          "goalNumber": 2,
-          "homeTeam": "Argentina",
-          "isDisallowed": false,
-          "matchId": 537381,
-          "matchUtcDate": "2026-07-07T16:00:00Z",
-          "minute": 21,
-          "player": "L. Messi",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Argentina",
-          "timer": "21:00",
-          "timerSeconds": 1260,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 0,
-      "homeFouls": 4,
+      "homeFouls": 6,
       "homeOffsides": 1,
       "homePossession": "55%",
       "homeScore": 0,
@@ -51071,8 +51030,8 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T16:28:09.357428+00:00",
-      "lastUpdated": "2026-07-07T18:28:00Z",
+      "lastApiSync": "2026-07-07T16:28:31.899695+00:00",
+      "lastUpdated": "2026-07-07T18:28:27Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -51080,28 +51039,28 @@
           "fouls": 2,
           "offsides": 0,
           "possession": "45%",
-          "redCards": null,
+          "redCards": 0,
           "shotsOffGoal": 0,
           "shotsOnGoal": 1,
           "totalShots": 1,
-          "yellowCards": null
+          "yellowCards": 0
         },
         "home": {
           "corners": 0,
-          "fouls": 4,
+          "fouls": 6,
           "offsides": 1,
           "possession": "55%",
-          "redCards": null,
+          "redCards": 0,
           "shotsOffGoal": 0,
           "shotsOnGoal": 1,
           "totalShots": 1,
-          "yellowCards": null
+          "yellowCards": 0
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "27'",
-        "lastApiSync": "2026-07-07T16:28:09.357428+00:00",
+        "lastApiSync": "2026-07-07T16:28:31.899695+00:00",
         "seconds": 1620,
         "source": "api_football_live_minute",
         "status": "1H",
