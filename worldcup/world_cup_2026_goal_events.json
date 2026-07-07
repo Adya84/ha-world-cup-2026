@@ -24122,7 +24122,7 @@
     "apiFootballFixtureId": 1576805,
     "awayScore": 0,
     "awayTeam": "Colombia",
-    "base_seconds": 7080,
+    "base_seconds": 7140,
     "cardEvents": [
       {
         "assist": null,
@@ -24216,8 +24216,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 7080,
-    "displayMinute": "118'",
+    "clock_seconds": 7140,
+    "displayMinute": "119'",
     "events": [
       {
         "assist": "D. Sow",
@@ -24488,14 +24488,32 @@
         "timer": "105:00",
         "timerSeconds": 6300,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "Y. Mina",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "119'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 119,
+        "player": "J. Lucumi",
+        "playerOff": "J. Lucumi",
+        "playerOn": "Y. Mina",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "119:00",
+        "timerSeconds": 7140,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Switzerland",
-    "lastApiSync": "2026-07-07T22:32:18.743784+00:00",
-    "manualClockText": "118'",
-    "phase_start": "2026-07-07T22:32:18.743784+00:00",
+    "lastApiSync": "2026-07-07T22:32:39.897753+00:00",
+    "manualClockText": "119'",
+    "phase_start": "2026-07-07T22:32:39.897753+00:00",
     "referees": [
       {
         "name": "Ivan Barton",
@@ -24687,6 +24705,24 @@
         "team": "Switzerland",
         "timer": "103:00",
         "timerSeconds": 6180,
+        "type": "Substitution"
+      },
+      {
+        "assist": "Y. Mina",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "119'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 119,
+        "player": "J. Lucumi",
+        "playerOff": "J. Lucumi",
+        "playerOn": "Y. Mina",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Colombia",
+        "timer": "119:00",
+        "timerSeconds": 7140,
         "type": "Substitution"
       }
     ],
