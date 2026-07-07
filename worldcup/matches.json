@@ -49206,7 +49206,7 @@
       },
       "id": 537382,
       "lastApiSync": "2026-07-07T22:35:30.578488+00:00",
-      "lastUpdated": "2026-07-08T00:40:00Z",
+      "lastUpdated": "2026-07-08T00:40:27Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49290,7 +49290,7 @@
         }
       ],
       "score": {
-        "duration": "EXTRA_TIME",
+        "duration": "PENALTY_SHOOTOUT",
         "extraTime": {
           "away": 0,
           "home": 0
@@ -49303,11 +49303,15 @@
           "away": 0,
           "home": 0
         },
+        "penalties": {
+          "away": 0,
+          "home": 0
+        },
         "regularTime": {
           "away": 0,
           "home": 0
         },
-        "winner": "DRAW"
+        "winner": null
       },
       "scoreSource": "api_football_live",
       "season": {
