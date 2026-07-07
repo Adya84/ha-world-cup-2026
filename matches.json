@@ -49249,7 +49249,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": null,
+      "awayFouls": 2,
+      "awayOffsides": null,
+      "awayPossession": "100%",
       "awayScore": 0,
+      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
         "id": 805,
@@ -49270,7 +49275,12 @@
       "fallbackClock": 180,
       "fallbackClockText": "3'",
       "group": null,
+      "homeCorners": null,
+      "homeFouls": 0,
+      "homeOffsides": null,
+      "homePossession": "0%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/usa.svg",
         "id": 771,
@@ -49279,13 +49289,37 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T00:02:57.892284+00:00",
-      "lastUpdated": "2026-07-07T02:02:57Z",
+      "lastApiSync": "2026-07-07T00:03:18.710159+00:00",
+      "lastUpdated": "2026-07-07T02:03:15Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": null,
+          "fouls": 2,
+          "offsides": null,
+          "possession": "100%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 1,
+          "totalShots": 2,
+          "yellowCards": null
+        },
+        "home": {
+          "corners": null,
+          "fouls": 0,
+          "offsides": null,
+          "possession": "0%",
+          "redCards": null,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": null
+        }
+      },
       "manualClock": {
         "active": false,
         "displayMinute": "3'",
-        "lastApiSync": "2026-07-07T00:02:57.892284+00:00",
+        "lastApiSync": "2026-07-07T00:03:18.710159+00:00",
         "seconds": 180,
         "source": "api_football_live_minute",
         "status": "1H",
