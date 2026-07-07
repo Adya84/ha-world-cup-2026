@@ -24313,12 +24313,12 @@
   },
   "537381": {
     "apiFootballFixtureId": 1576804,
-    "awayScore": 2,
+    "awayScore": 1,
     "awayTeam": "Egypt",
-    "base_seconds": 3600,
+    "base_seconds": 3660,
     "clock_active": false,
-    "clock_seconds": 3600,
-    "displayMinute": "60'",
+    "clock_seconds": 3660,
+    "displayMinute": "61'",
     "events": [
       {
         "assist": "M. Attia",
@@ -24375,22 +24375,22 @@
         "type": "Substitution"
       },
       {
-        "assist": "M. Salah",
+        "assist": null,
         "comments": null,
-        "detail": "Normal Goal",
+        "detail": "Goal Disallowed - Foul",
         "displayMinute": "58'",
         "extra": null,
-        "isDisallowed": false,
+        "isDisallowed": true,
         "minute": 58,
         "player": "M. Ziko",
         "playerOff": null,
         "playerOn": null,
-        "rawType": "Goal",
+        "rawType": "Var",
         "source": "api_football",
         "team": "Egypt",
         "timer": "58:00",
         "timerSeconds": 3480,
-        "type": "Goal"
+        "type": "Disallowed Goal"
       }
     ],
     "goalEvents": [
@@ -24439,36 +24439,13 @@
         "timer": "21:00",
         "timerSeconds": 1260,
         "type": "Goal"
-      },
-      {
-        "assist": "M. Salah",
-        "awayTeam": "Egypt",
-        "comments": null,
-        "detail": "Normal Goal",
-        "displayMinute": "58'",
-        "extra": null,
-        "goalNumber": 3,
-        "homeTeam": "Argentina",
-        "isDisallowed": false,
-        "matchId": 537381,
-        "matchUtcDate": "2026-07-07T16:00:00Z",
-        "minute": 58,
-        "player": "M. Ziko",
-        "playerOff": null,
-        "playerOn": null,
-        "rawType": "Goal",
-        "source": "api_football",
-        "team": "Egypt",
-        "timer": "58:00",
-        "timerSeconds": 3480,
-        "type": "Goal"
       }
     ],
     "homeScore": 0,
     "homeTeam": "Argentina",
-    "lastApiSync": "2026-07-07T17:24:08.090633+00:00",
-    "manualClockText": "60'",
-    "phase_start": "2026-07-07T17:24:08.090633+00:00",
+    "lastApiSync": "2026-07-07T17:24:30.662611+00:00",
+    "manualClockText": "61'",
+    "phase_start": "2026-07-07T17:24:30.662611+00:00",
     "referees": [
       {
         "name": "Fran\u00e7ois Letexier",
