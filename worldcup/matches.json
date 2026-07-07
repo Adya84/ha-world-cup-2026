@@ -48543,20 +48543,12 @@
     },
     {
       "apiFootballFixtureId": 1576805,
-      "apiFootballStatus": "PEN",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
-      "awayFouls": 6,
-      "awayOffsides": 1,
-      "awayPossession": "51%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/818.svg",
         "id": 818,
@@ -48665,300 +48657,17 @@
       },
       "events": [
         {
-          "assist": "D. Sow",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "A. Jashari",
-          "playerOff": "A. Jashari",
-          "playerOn": "D. Sow",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "51'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 51,
-          "player": "G. Xhaka",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "51:00",
-          "timerSeconds": 3060,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Tripping",
-          "detail": "Yellow Card",
-          "displayMinute": "59'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 59,
-          "player": "D. Zakaria",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "L. Suarez",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "J. Quintero",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "66'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 66,
-          "player": "J. Rodriguez",
-          "playerOff": "J. Rodriguez",
-          "playerOn": "J. Quintero",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "66:00",
-          "timerSeconds": 3960,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Campaz",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "66'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 66,
-          "player": "J. Arias",
-          "playerOff": "J. Arias",
-          "playerOn": "J. Campaz",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "66:00",
-          "timerSeconds": 3960,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Muheim",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "R. Rodriguez",
-          "playerOff": "R. Rodriguez",
-          "playerOn": "M. Muheim",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Hernandez",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "82'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 82,
-          "player": "L. Suarez",
-          "playerOff": "L. Suarez",
-          "playerOn": "C. Hernandez",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "82:00",
-          "timerSeconds": 4920,
-          "type": "Substitution"
-        },
-        {
-          "assist": "R. Rios",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "82'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 82,
-          "player": "J. Lerma",
-          "playerOff": "J. Lerma",
-          "playerOn": "R. Rios",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "82:00",
-          "timerSeconds": 4920,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Itten",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "87'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 87,
-          "player": "B. Embolo",
-          "playerOff": "B. Embolo",
-          "playerOn": "C. Itten",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "87:00",
-          "timerSeconds": 5220,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Widmer",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "87'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 87,
-          "player": "D. Zakaria",
-          "playerOff": "D. Zakaria",
-          "playerOn": "S. Widmer",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "87:00",
-          "timerSeconds": 5220,
-          "type": "Substitution"
-        },
-        {
-          "assist": "R. Vargas",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "D. Ndoye",
-          "playerOff": "D. Ndoye",
-          "playerOn": "R. Vargas",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Holding",
-          "detail": "Yellow Card",
-          "displayMinute": "95'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 95,
-          "player": "D. Sanchez",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "95:00",
-          "timerSeconds": 5700,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "Z. Amdouni",
-          "comments": null,
-          "detail": "Substitution 6",
-          "displayMinute": "103'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 103,
-          "player": "F. Rieder",
-          "playerOff": "F. Rieder",
-          "playerOn": "Z. Amdouni",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "103:00",
-          "timerSeconds": 6180,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Roughing",
-          "detail": "Yellow Card",
-          "displayMinute": "105'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 105,
-          "player": "M. Muheim",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Switzerland",
-          "timer": "105:00",
-          "timerSeconds": 6300,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "Y. Mina",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "119'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 119,
-          "player": "J. Lucumi",
-          "playerOff": "J. Lucumi",
-          "playerOn": "Y. Mina",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Colombia",
-          "timer": "119:00",
-          "timerSeconds": 7140,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Penalty",
           "displayMinute": "120+1'",
           "extra": 1,
+          "goalNumber": 1,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "J. Quintero",
           "playerOff": null,
@@ -48968,15 +48677,20 @@
           "team": "Colombia",
           "timer": "121:00",
           "timerSeconds": 7260,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Penalty",
           "displayMinute": "120+1'",
           "extra": 1,
+          "goalNumber": 2,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "G. Xhaka",
           "playerOff": null,
@@ -48986,15 +48700,20 @@
           "team": "Switzerland",
           "timer": "121:00",
           "timerSeconds": 7260,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Missed Penalty",
           "displayMinute": "120+2'",
           "extra": 2,
+          "goalNumber": 3,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "D. Sanchez",
           "playerOff": null,
@@ -49004,15 +48723,20 @@
           "team": "Colombia",
           "timer": "122:00",
           "timerSeconds": 7320,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Penalty",
           "displayMinute": "120+2'",
           "extra": 2,
+          "goalNumber": 4,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "Z. Amdouni",
           "playerOff": null,
@@ -49022,15 +48746,20 @@
           "team": "Switzerland",
           "timer": "122:00",
           "timerSeconds": 7320,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Penalty",
           "displayMinute": "120+3'",
           "extra": 3,
+          "goalNumber": 5,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "J. Campaz",
           "playerOff": null,
@@ -49040,15 +48769,20 @@
           "team": "Colombia",
           "timer": "123:00",
           "timerSeconds": 7380,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Missed Penalty",
           "displayMinute": "120+3'",
           "extra": 3,
+          "goalNumber": 6,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "M. Akanji",
           "playerOff": null,
@@ -49058,15 +48792,20 @@
           "team": "Switzerland",
           "timer": "123:00",
           "timerSeconds": 7380,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Missed Penalty",
           "displayMinute": "120+4'",
           "extra": 4,
+          "goalNumber": 7,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "C. Hernandez",
           "playerOff": null,
@@ -49076,15 +48815,20 @@
           "team": "Colombia",
           "timer": "124:00",
           "timerSeconds": 7440,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Penalty",
           "displayMinute": "120+4'",
           "extra": 4,
+          "goalNumber": 8,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "C. Itten",
           "playerOff": null,
@@ -49094,15 +48838,20 @@
           "team": "Switzerland",
           "timer": "124:00",
           "timerSeconds": 7440,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Penalty",
           "displayMinute": "120+5'",
           "extra": 5,
+          "goalNumber": 9,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "L. Diaz",
           "playerOff": null,
@@ -49112,15 +48861,20 @@
           "team": "Colombia",
           "timer": "125:00",
           "timerSeconds": 7500,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Colombia",
           "comments": "Penalty Shootout",
           "detail": "Penalty",
           "displayMinute": "120+5'",
           "extra": 5,
+          "goalNumber": 10,
+          "homeTeam": "Switzerland",
           "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
           "minute": 120,
           "player": "R. Vargas",
           "playerOff": null,
@@ -49130,7 +48884,7 @@
           "team": "Switzerland",
           "timer": "125:00",
           "timerSeconds": 7500,
-          "type": "Penalty"
+          "type": "Goal"
         }
       ],
       "goalEvents": [
@@ -49365,14 +49119,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 1,
-      "homeFouls": 6,
-      "homeOffsides": 1,
-      "homePossession": "49%",
-      "homeScore": 0,
-      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/788.svg",
         "id": 788,
@@ -49381,54 +49128,16 @@
         "tla": "SUI"
       },
       "id": 537382,
-      "lastApiSync": "2026-07-07T23:13:18.508006+00:00",
       "lastUpdated": "2026-07-08T00:52:22Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 4,
-          "fouls": 6,
-          "offsides": 1,
-          "possession": "51%",
-          "redCards": null,
-          "shotsOffGoal": 1,
-          "shotsOnGoal": 1,
-          "totalShots": 5,
-          "yellowCards": null
-        },
-        "home": {
-          "corners": 1,
-          "fouls": 6,
-          "offsides": 1,
-          "possession": "49%",
-          "redCards": null,
-          "shotsOffGoal": 0,
-          "shotsOnGoal": 2,
-          "totalShots": 2,
-          "yellowCards": null
-        }
-      },
       "matchday": null,
-      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Ivan Barton",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Iv\u00e1n Barton, El Salvador",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 190010,
           "name": "Ivan Barton",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Iv\u00e1n Barton, El Salvador",
+          "nationality": null,
           "type": "REFEREE"
         }
       ],
@@ -49439,8 +49148,8 @@
           "home": 0
         },
         "fullTime": {
-          "away": 0,
-          "home": 0
+          "away": 3,
+          "home": 4
         },
         "halfTime": {
           "away": 0,
@@ -49456,7 +49165,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -49465,7 +49173,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "PEN",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "D. Sow",
@@ -49666,12 +49374,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-07T20:00:00Z",
-      "venue": {
-        "city": "Vancouver",
-        "id": 19445,
-        "name": "BC Place"
-      }
+      "utcDate": "2026-07-07T20:00:00Z"
     },
     {
       "area": {
