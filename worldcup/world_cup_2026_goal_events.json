@@ -24315,10 +24315,10 @@
     "apiFootballFixtureId": 1576804,
     "awayScore": 1,
     "awayTeam": "Egypt",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": "Marwan Attia",
@@ -24373,6 +24373,24 @@
         "timer": "32:00",
         "timerSeconds": 1920,
         "type": "Disallowed Goal"
+      },
+      {
+        "assist": "Hamdy Fathy",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "45'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "Emam Ashour",
+        "playerOff": "Emam Ashour",
+        "playerOn": "Hamdy Fathy",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Egypt",
+        "timer": "45:00",
+        "timerSeconds": 2700,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24425,9 +24443,9 @@
     ],
     "homeScore": 0,
     "homeTeam": "Argentina",
-    "lastApiSync": "2026-07-07T17:09:32.179409+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-07-07T17:09:32.179409+00:00",
+    "lastApiSync": "2026-07-07T17:09:56.931873+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-07-07T17:09:56.931873+00:00",
     "referees": [
       {
         "name": "Fran\u00e7ois Letexier",
@@ -24440,7 +24458,27 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "Hamdy Fathy",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "45'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "Emam Ashour",
+        "playerOff": "Emam Ashour",
+        "playerOn": "Hamdy Fathy",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Egypt",
+        "timer": "45:00",
+        "timerSeconds": 2700,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-07-07T16:00:00Z"
   },
   "537382": {
