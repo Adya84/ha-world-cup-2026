@@ -50690,7 +50690,7 @@
       "awayFouls": 7,
       "awayOffsides": 0,
       "awayPossession": "39%",
-      "awayScore": 2,
+      "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
         "crest": "https://crests.football-data.org/825.svg",
@@ -50699,7 +50699,7 @@
         "shortName": "Egypt",
         "tla": "EGY"
       },
-      "clockSeconds": 3600,
+      "clockSeconds": 3660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -50708,7 +50708,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "60'",
+      "displayMinute": "61'",
       "events": [
         {
           "assist": "M. Attia",
@@ -50765,26 +50765,26 @@
           "type": "Substitution"
         },
         {
-          "assist": "M. Salah",
+          "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - Foul",
           "displayMinute": "58'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 58,
           "player": "M. Ziko",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Egypt",
           "timer": "58:00",
           "timerSeconds": 3480,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
-      "fallbackClock": 3600,
-      "fallbackClockText": "60'",
+      "fallbackClock": 3660,
+      "fallbackClockText": "61'",
       "goalEvents": [
         {
           "assist": "M. Attia",
@@ -50831,29 +50831,6 @@
           "timer": "21:00",
           "timerSeconds": 1260,
           "type": "Goal"
-        },
-        {
-          "assist": "M. Salah",
-          "awayTeam": "Egypt",
-          "comments": null,
-          "detail": "Normal Goal",
-          "displayMinute": "58'",
-          "extra": null,
-          "goalNumber": 3,
-          "homeTeam": "Argentina",
-          "isDisallowed": false,
-          "matchId": 537381,
-          "matchUtcDate": "2026-07-07T16:00:00Z",
-          "minute": 58,
-          "player": "M. Ziko",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Egypt",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -50872,8 +50849,8 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T17:24:08.090633+00:00",
-      "lastUpdated": "2026-07-07T19:24:00Z",
+      "lastApiSync": "2026-07-07T17:24:30.662611+00:00",
+      "lastUpdated": "2026-07-07T19:24:27Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -50901,16 +50878,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "60'",
-        "lastApiSync": "2026-07-07T17:24:08.090633+00:00",
-        "seconds": 3600,
+        "displayMinute": "61'",
+        "lastApiSync": "2026-07-07T17:24:30.662611+00:00",
+        "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "60'"
+        "timer": "61'"
       },
-      "manualClockText": "60'",
+      "manualClockText": "61'",
       "matchday": null,
-      "minute": 60,
+      "minute": 61,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -50939,7 +50916,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
