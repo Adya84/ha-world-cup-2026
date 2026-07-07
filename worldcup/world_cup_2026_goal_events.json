@@ -24312,23 +24312,32 @@
     "utcDate": "2026-07-07T00:00:00Z"
   },
   "537381": {
+    "apiFootballFixtureId": 1576804,
     "awayScore": 0,
     "awayTeam": "Egypt",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Argentina",
-    "phase_start": null,
+    "lastApiSync": "2026-07-07T16:02:31.429803+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-07T16:02:31.429803+00:00",
     "referees": [
       {
-        "id": 43918,
         "name": "Fran\u00e7ois Letexier",
         "nationality": "France",
         "type": "REFEREE"
+      },
+      {
+        "name": "Fran\u00e7ois Letexier, France",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-07T16:00:00Z"
   },
   "537382": {
