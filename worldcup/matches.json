@@ -49308,6 +49308,24 @@
           "timer": "21:00",
           "timerSeconds": 1260,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "31'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 31,
+          "player": "M. Tillman",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 1860,
@@ -49335,6 +49353,29 @@
           "timer": "9:00",
           "timerSeconds": 540,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "31'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "USA",
+          "isDisallowed": false,
+          "matchId": 537380,
+          "matchUtcDate": "2026-07-07T00:00:00Z",
+          "minute": 31,
+          "player": "M. Tillman",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "USA",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -49343,7 +49384,7 @@
       "homeFouls": 3,
       "homeOffsides": 0,
       "homePossession": "44%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/usa.svg",
@@ -49353,8 +49394,8 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T00:31:19.092367+00:00",
-      "lastUpdated": "2026-07-07T02:31:15Z",
+      "lastApiSync": "2026-07-07T00:31:40.728899+00:00",
+      "lastUpdated": "2026-07-07T02:31:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49383,7 +49424,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "31'",
-        "lastApiSync": "2026-07-07T00:31:19.092367+00:00",
+        "lastApiSync": "2026-07-07T00:31:40.728899+00:00",
         "seconds": 1860,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -49397,7 +49438,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-07T00:21:39.194966+00:00",
+        "fetchedAt": "2026-07-07T00:31:40.481880+00:00",
         "humidity": 35.0,
         "latitude": 47.5952,
         "longitude": -122.3316,
@@ -49444,11 +49485,11 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 1,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 1,
-          "home": 0
+          "home": 1
         },
         "winner": "AWAY_TEAM"
       },
@@ -49495,7 +49536,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-07T00:21:39.194966+00:00",
+        "fetchedAt": "2026-07-07T00:31:40.481880+00:00",
         "humidity": 35.0,
         "latitude": 47.5952,
         "longitude": -122.3316,
