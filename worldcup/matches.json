@@ -49251,7 +49251,7 @@
           "extra": 2,
           "isDisallowed": false,
           "minute": 120,
-          "player": null,
+          "player": "Z. Amdouni",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -49331,6 +49331,29 @@
           "timer": "122:00",
           "timerSeconds": 7320,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Colombia",
+          "comments": "Penalty Shootout",
+          "detail": "Penalty",
+          "displayMinute": "120+2'",
+          "extra": 2,
+          "goalNumber": 4,
+          "homeTeam": "Switzerland",
+          "isDisallowed": false,
+          "matchId": 537382,
+          "matchUtcDate": "2026-07-07T20:00:00Z",
+          "minute": 120,
+          "player": "Z. Amdouni",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Switzerland",
+          "timer": "122:00",
+          "timerSeconds": 7320,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -49350,7 +49373,7 @@
       },
       "id": 537382,
       "lastApiSync": "2026-07-07T22:35:30.578488+00:00",
-      "lastUpdated": "2026-07-08T00:45:21Z",
+      "lastUpdated": "2026-07-08T00:45:42Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49449,13 +49472,13 @@
         },
         "penalties": {
           "away": 1,
-          "home": 1
+          "home": 2
         },
         "regularTime": {
           "away": 0,
           "home": 0
         },
-        "winner": null
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
