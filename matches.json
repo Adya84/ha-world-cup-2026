@@ -48813,7 +48813,7 @@
       "awayFouls": 9,
       "awayOffsides": 1,
       "awayPossession": "44%",
-      "awayScore": 3,
+      "awayScore": 4,
       "awayShotsOnGoal": 6,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -49158,6 +49158,24 @@
           "timer": "92:00",
           "timerSeconds": 5520,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "90+3'",
+          "extra": 3,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "93:00",
+          "timerSeconds": 5580,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 5400,
@@ -49272,8 +49290,8 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T01:56:37.390996+00:00",
-      "lastUpdated": "2026-07-07T03:56:36Z",
+      "lastApiSync": "2026-07-07T01:56:57.428393+00:00",
+      "lastUpdated": "2026-07-07T03:56:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49302,7 +49320,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-07T01:56:37.390996+00:00",
+        "lastApiSync": "2026-07-07T01:56:57.428393+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -49362,7 +49380,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 3,
+          "away": 4,
           "home": 1
         },
         "halfTime": {
