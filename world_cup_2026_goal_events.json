@@ -23166,9 +23166,9 @@
   },
   "537380": {
     "apiFootballFixtureId": 1570715,
-    "awayScore": 2,
+    "awayScore": 3,
     "awayTeam": "Belgium",
-    "base_seconds": 3420,
+    "base_seconds": 3480,
     "cardEvents": [
       {
         "assist": null,
@@ -23190,8 +23190,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3420,
-    "displayMinute": "57'",
+    "clock_seconds": 3480,
+    "displayMinute": "58'",
     "events": [
       {
         "assist": "N. Raskin",
@@ -23300,6 +23300,24 @@
         "timer": "46:00",
         "timerSeconds": 2760,
         "type": "Substitution"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "57'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 57,
+        "player": "H. Vanaken",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "57:00",
+        "timerSeconds": 3420,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -23371,13 +23389,36 @@
         "timer": "33:00",
         "timerSeconds": 1980,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Belgium",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "57'",
+        "extra": null,
+        "goalNumber": 4,
+        "homeTeam": "USA",
+        "isDisallowed": false,
+        "matchId": 537380,
+        "matchUtcDate": "2026-07-07T00:00:00Z",
+        "minute": 57,
+        "player": "H. Vanaken",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "57:00",
+        "timerSeconds": 3420,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "USA",
-    "lastApiSync": "2026-07-07T01:21:02.857845+00:00",
-    "manualClockText": "57'",
-    "phase_start": "2026-07-07T01:21:02.857845+00:00",
+    "lastApiSync": "2026-07-07T01:21:22.859446+00:00",
+    "manualClockText": "58'",
+    "phase_start": "2026-07-07T01:21:22.859446+00:00",
     "referees": [
       {
         "name": "Adham Makhadmeh",
