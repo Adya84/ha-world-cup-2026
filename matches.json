@@ -48777,14 +48777,15 @@
     },
     {
       "apiFootballFixtureId": 1576805,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 4,
       "awayFouls": 6,
       "awayOffsides": 1,
@@ -48890,8 +48891,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7320,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48899,7 +48899,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "122'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "D. Sow",
@@ -49190,8 +49190,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 7320,
-      "fallbackClockText": "122'",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 6,
@@ -49208,7 +49206,7 @@
       },
       "id": 537382,
       "lastApiSync": "2026-07-07T22:35:30.578488+00:00",
-      "lastUpdated": "2026-07-08T00:35:27Z",
+      "lastUpdated": "2026-07-08T00:35:31Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49239,11 +49237,11 @@
         "displayMinute": "122'",
         "lastApiSync": "2026-07-07T22:35:30.578488+00:00",
         "seconds": 7320,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "122'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "122:00"
       },
-      "manualClockText": "122'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Vancouver",
@@ -49268,7 +49266,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 122,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49321,7 +49318,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "D. Sow",
