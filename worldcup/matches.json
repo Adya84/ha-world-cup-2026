@@ -48842,7 +48842,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 4020,
+      "clockSeconds": 4080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48851,7 +48851,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "67'",
+      "displayMinute": "68'",
       "events": [
         {
           "assist": "N. Raskin",
@@ -48996,10 +48996,46 @@
           "timer": "59:00",
           "timerSeconds": 3540,
           "type": "Substitution"
+        },
+        {
+          "assist": "J. Doku",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "D. Lukebakio",
+          "playerOff": "D. Lukebakio",
+          "playerOn": "J. Doku",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Lukaku",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "C. De Ketelaere",
+          "playerOff": "C. De Ketelaere",
+          "playerOn": "R. Lukaku",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 4020,
-      "fallbackClockText": "67'",
+      "fallbackClock": 4080,
+      "fallbackClockText": "68'",
       "goalEvents": [
         {
           "assist": "N. Raskin",
@@ -49110,8 +49146,8 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T01:31:05.157712+00:00",
-      "lastUpdated": "2026-07-07T03:31:03Z",
+      "lastApiSync": "2026-07-07T01:31:25.941167+00:00",
+      "lastUpdated": "2026-07-07T03:31:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49139,14 +49175,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "67'",
-        "lastApiSync": "2026-07-07T01:31:05.157712+00:00",
-        "seconds": 4020,
+        "displayMinute": "68'",
+        "lastApiSync": "2026-07-07T01:31:25.941167+00:00",
+        "seconds": 4080,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "67'"
+        "timer": "68'"
       },
-      "manualClockText": "67'",
+      "manualClockText": "68'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -49171,7 +49207,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 67,
+      "minute": 68,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49272,6 +49308,42 @@
           "team": "USA",
           "timer": "59:00",
           "timerSeconds": 3540,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Doku",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "D. Lukebakio",
+          "playerOff": "D. Lukebakio",
+          "playerOn": "J. Doku",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Substitution"
+        },
+        {
+          "assist": "R. Lukaku",
+          "comments": null,
+          "detail": "Substitution 3",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "C. De Ketelaere",
+          "playerOff": "C. De Ketelaere",
+          "playerOn": "R. Lukaku",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "67:00",
+          "timerSeconds": 4020,
           "type": "Substitution"
         }
       ],
