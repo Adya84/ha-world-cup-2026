@@ -50891,6 +50891,24 @@
           "timer": "73:00",
           "timerSeconds": 4380,
           "type": "Substitution"
+        },
+        {
+          "assist": "L. Messi",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "79'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 79,
+          "player": "C. Romero",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 4800,
@@ -50964,6 +50982,29 @@
           "timer": "67:00",
           "timerSeconds": 4020,
           "type": "Goal"
+        },
+        {
+          "assist": "L. Messi",
+          "awayTeam": "Egypt",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "79'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Argentina",
+          "isDisallowed": false,
+          "matchId": 537381,
+          "matchUtcDate": "2026-07-07T16:00:00Z",
+          "minute": 79,
+          "player": "C. Romero",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "79:00",
+          "timerSeconds": 4740,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -50982,8 +51023,8 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T17:43:28.537143+00:00",
-      "lastUpdated": "2026-07-07T19:43:24Z",
+      "lastApiSync": "2026-07-07T17:43:52.331230+00:00",
+      "lastUpdated": "2026-07-07T19:43:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -51005,14 +51046,14 @@
           "redCards": null,
           "shotsOffGoal": 7,
           "shotsOnGoal": 4,
-          "totalShots": 14,
+          "totalShots": 15,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "80'",
-        "lastApiSync": "2026-07-07T17:43:28.537143+00:00",
+        "lastApiSync": "2026-07-07T17:43:52.331230+00:00",
         "seconds": 4800,
         "source": "api_football_live_minute",
         "status": "2H",
