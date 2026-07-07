@@ -50678,8 +50678,8 @@
     },
     {
       "apiFootballFixtureId": 1576804,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -50773,8 +50773,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -50782,7 +50780,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "M. Attia",
@@ -51145,8 +51142,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "M. Attia",
@@ -51303,9 +51298,8 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T18:05:45.255179+00:00",
-      "lastUpdated": "2026-07-07T20:05:42Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-07T18:06:09.957382+00:00",
+      "lastUpdated": "2026-07-07T20:06:06Z",
       "liveStatistics": {
         "away": {
           "corners": 1,
@@ -51330,16 +51324,6 @@
           "yellowCards": 0
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-07T18:05:45.255179+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
       "matchday": null,
       "minute": 90,
       "odds": {
@@ -51388,7 +51372,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "H. Fathy",
