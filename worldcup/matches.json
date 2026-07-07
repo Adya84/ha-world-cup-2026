@@ -49189,8 +49189,8 @@
         "tla": "SUI"
       },
       "id": 537382,
-      "lastApiSync": "2026-07-07T22:20:48.005121+00:00",
-      "lastUpdated": "2026-07-08T00:19:16Z",
+      "lastApiSync": "2026-07-07T22:21:09.056658+00:00",
+      "lastUpdated": "2026-07-08T00:21:08Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49219,7 +49219,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "95'",
-        "lastApiSync": "2026-07-07T22:20:48.005121+00:00",
+        "lastApiSync": "2026-07-07T22:21:09.056658+00:00",
         "seconds": 5700,
         "source": "api_football_live_minute",
         "status": "ET",
@@ -49275,12 +49275,20 @@
         }
       ],
       "score": {
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
+        "extraTime": {
+          "away": 0,
+          "home": 0
+        },
         "fullTime": {
           "away": 0,
           "home": 0
         },
         "halfTime": {
+          "away": 0,
+          "home": 0
+        },
+        "regularTime": {
           "away": 0,
           "home": 0
         },
