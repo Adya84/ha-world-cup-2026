@@ -50689,7 +50689,7 @@
       "awayCorners": 1,
       "awayFouls": 7,
       "awayOffsides": 0,
-      "awayPossession": "39%",
+      "awayPossession": "38%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -50855,6 +50855,24 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Substitution"
+        },
+        {
+          "assist": "H. Hassan",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "67'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 67,
+          "player": "M. Ziko",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 4020,
@@ -50905,6 +50923,29 @@
           "timer": "21:00",
           "timerSeconds": 1260,
           "type": "Goal"
+        },
+        {
+          "assist": "H. Hassan",
+          "awayTeam": "Egypt",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "67'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Argentina",
+          "isDisallowed": false,
+          "matchId": 537381,
+          "matchUtcDate": "2026-07-07T16:00:00Z",
+          "minute": 67,
+          "player": "M. Ziko",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "67:00",
+          "timerSeconds": 4020,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -50912,7 +50953,7 @@
       "homeCorners": 2,
       "homeFouls": 11,
       "homeOffsides": 2,
-      "homePossession": "61%",
+      "homePossession": "62%",
       "homeScore": 0,
       "homeShotsOnGoal": 4,
       "homeTeam": {
@@ -50923,15 +50964,15 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T17:30:57.077957+00:00",
-      "lastUpdated": "2026-07-07T19:30:54Z",
+      "lastApiSync": "2026-07-07T17:31:19.526771+00:00",
+      "lastUpdated": "2026-07-07T19:31:15Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 7,
           "offsides": 0,
-          "possession": "39%",
+          "possession": "38%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 1,
@@ -50942,9 +50983,9 @@
           "corners": 2,
           "fouls": 11,
           "offsides": 2,
-          "possession": "61%",
+          "possession": "62%",
           "redCards": null,
-          "shotsOffGoal": 4,
+          "shotsOffGoal": 5,
           "shotsOnGoal": 4,
           "totalShots": 11,
           "yellowCards": 0
@@ -50953,7 +50994,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "67'",
-        "lastApiSync": "2026-07-07T17:30:57.077957+00:00",
+        "lastApiSync": "2026-07-07T17:31:19.526771+00:00",
         "seconds": 4020,
         "source": "api_football_live_minute",
         "status": "2H",
