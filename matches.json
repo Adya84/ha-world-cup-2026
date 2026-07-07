@@ -50678,14 +50678,15 @@
     },
     {
       "apiFootballFixtureId": 1576804,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 1,
       "awayFouls": 5,
       "awayOffsides": 0,
@@ -50699,8 +50700,7 @@
         "shortName": "Egypt",
         "tla": "EGY"
       },
-      "clockSeconds": 2700,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -50708,7 +50708,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": "M. Attia",
@@ -50747,8 +50747,6 @@
           "type": "Penalty"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
       "goalEvents": [
         {
           "assist": "M. Attia",
@@ -50814,7 +50812,7 @@
       },
       "id": 537381,
       "lastApiSync": "2026-07-07T17:07:34.682879+00:00",
-      "lastUpdated": "2026-07-07T19:07:30Z",
+      "lastUpdated": "2026-07-07T19:07:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -50845,13 +50843,12 @@
         "displayMinute": "45'",
         "lastApiSync": "2026-07-07T17:07:34.682879+00:00",
         "seconds": 2700,
-        "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "source": "awaiting_api_football_minute",
+        "status": "2H",
+        "timer": "45:00"
       },
-      "manualClockText": "45'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
-      "minute": 45,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -50898,7 +50895,7 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "HT",
+      "status": "2H",
       "utcDate": "2026-07-07T16:00:00Z",
       "venue": {
         "city": "Atlanta",
