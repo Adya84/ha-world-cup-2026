@@ -2,8 +2,8 @@
   "live": [
     {
       "apiFootballFixtureId": 1576804,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -23,7 +23,7 @@
         "shortName": "Egypt",
         "tla": "EGY"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "Marwan Attia",
@@ -87,10 +87,28 @@
           "timer": "32:00",
           "timerSeconds": 1920,
           "type": "Disallowed Goal"
+        },
+        {
+          "assist": "Hamdy Fathy",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "45'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Emam Ashour",
+          "playerOff": "Emam Ashour",
+          "playerOn": "Hamdy Fathy",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "Marwan Attia",
@@ -155,8 +173,8 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T17:09:32.179409+00:00",
-      "lastUpdated": "2026-07-07T19:09:27Z",
+      "lastApiSync": "2026-07-07T17:09:56.931873+00:00",
+      "lastUpdated": "2026-07-07T19:09:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -184,16 +202,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-07-07T17:09:32.179409+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-07-07T17:09:56.931873+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchday": null,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -240,7 +258,27 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "Hamdy Fathy",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "45'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Emam Ashour",
+          "playerOff": "Emam Ashour",
+          "playerOn": "Hamdy Fathy",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-07T16:00:00Z",
       "venue": {
         "city": "Atlanta",
@@ -252,8 +290,8 @@
   "matches": [
     {
       "apiFootballFixtureId": 1576804,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
+      "apiFootballStatus": "2H",
+      "apiFootballStatusLong": "Second Half",
       "area": {
         "code": "INT",
         "flag": null,
@@ -273,7 +311,7 @@
         "shortName": "Egypt",
         "tla": "EGY"
       },
-      "clockSeconds": 2700,
+      "clockSeconds": 2760,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -282,7 +320,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "46'",
       "events": [
         {
           "assist": "Marwan Attia",
@@ -337,10 +375,28 @@
           "timer": "32:00",
           "timerSeconds": 1920,
           "type": "Disallowed Goal"
+        },
+        {
+          "assist": "Hamdy Fathy",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "45'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Emam Ashour",
+          "playerOff": "Emam Ashour",
+          "playerOn": "Hamdy Fathy",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
+      "fallbackClock": 2760,
+      "fallbackClockText": "46'",
       "goalEvents": [
         {
           "assist": "Marwan Attia",
@@ -405,8 +461,8 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T17:09:32.179409+00:00",
-      "lastUpdated": "2026-07-07T19:09:27Z",
+      "lastApiSync": "2026-07-07T17:09:56.931873+00:00",
+      "lastUpdated": "2026-07-07T19:09:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -434,16 +490,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "45'",
-        "lastApiSync": "2026-07-07T17:09:32.179409+00:00",
-        "seconds": 2700,
+        "displayMinute": "46'",
+        "lastApiSync": "2026-07-07T17:09:56.931873+00:00",
+        "seconds": 2760,
         "source": "api_football_live_minute",
-        "status": "HT",
-        "timer": "45'"
+        "status": "2H",
+        "timer": "46'"
       },
-      "manualClockText": "45'",
+      "manualClockText": "46'",
       "matchday": null,
-      "minute": 45,
+      "minute": 46,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -490,7 +546,27 @@
         "winner": null
       },
       "stage": "LAST_16",
-      "status": "HT",
+      "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "Hamdy Fathy",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "45'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 45,
+          "player": "Emam Ashour",
+          "playerOff": "Emam Ashour",
+          "playerOn": "Hamdy Fathy",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "45:00",
+          "timerSeconds": 2700,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-07T16:00:00Z",
       "venue": {
         "city": "Atlanta",
