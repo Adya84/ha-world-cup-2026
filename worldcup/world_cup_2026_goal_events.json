@@ -24873,23 +24873,31 @@
     "utcDate": "2026-07-07T16:00:00Z"
   },
   "537382": {
+    "apiFootballFixtureId": 1576805,
     "awayScore": 0,
     "awayTeam": "Colombia",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Switzerland",
-    "phase_start": null,
+    "lastApiSync": "2026-07-07T20:01:01.155244+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-07T20:01:01.155244+00:00",
     "referees": [
       {
-        "id": 190010,
         "name": "Ivan Barton",
-        "nationality": null,
+        "type": "REFEREE"
+      },
+      {
+        "name": "Iv\u00e1n Barton, El Salvador",
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-07T20:00:00Z"
   },
   "537383": {
