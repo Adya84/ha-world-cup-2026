@@ -49350,6 +49350,24 @@
           "timer": "125:00",
           "timerSeconds": 7500,
           "type": "Penalty"
+        },
+        {
+          "assist": null,
+          "comments": "Penalty Shootout",
+          "detail": "Penalty",
+          "displayMinute": "120+5'",
+          "extra": 5,
+          "isDisallowed": false,
+          "minute": 120,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Switzerland",
+          "timer": "125:00",
+          "timerSeconds": 7500,
+          "type": "Penalty"
         }
       ],
       "goalEvents": [
@@ -49578,7 +49596,7 @@
       },
       "id": 537382,
       "lastApiSync": "2026-07-07T22:35:30.578488+00:00",
-      "lastUpdated": "2026-07-08T00:50:27Z",
+      "lastUpdated": "2026-07-08T00:50:45Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49676,14 +49694,14 @@
           "home": 0
         },
         "penalties": {
-          "away": 2,
+          "away": 3,
           "home": 3
         },
         "regularTime": {
           "away": 0,
           "home": 0
         },
-        "winner": "HOME_TEAM"
+        "winner": null
       },
       "scoreSource": "api_football_live",
       "season": {
