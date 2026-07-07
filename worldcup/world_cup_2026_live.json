@@ -13,8 +13,8 @@
       "awayCorners": null,
       "awayFouls": 0,
       "awayOffsides": 0,
-      "awayPossession": "50%",
-      "awayScore": 0,
+      "awayPossession": "45%",
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/825.svg",
@@ -33,13 +33,59 @@
         "type": "CUP"
       },
       "displayMinute": "15'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "15'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 15,
+          "player": "Y. Ibrahim",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "15:00",
+          "timerSeconds": 900,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 900,
       "fallbackClockText": "15'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Egypt",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "15'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Argentina",
+          "isDisallowed": false,
+          "matchId": 537381,
+          "matchUtcDate": "2026-07-07T16:00:00Z",
+          "minute": 15,
+          "player": "Y. Ibrahim",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "15:00",
+          "timerSeconds": 900,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": null,
-      "homeFouls": 3,
+      "homeFouls": 4,
       "homeOffsides": 1,
-      "homePossession": "50%",
+      "homePossession": "55%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -50,15 +96,15 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T16:16:11.359376+00:00",
-      "lastUpdated": "2026-07-07T18:16:06Z",
+      "lastApiSync": "2026-07-07T16:16:33.907382+00:00",
+      "lastUpdated": "2026-07-07T18:16:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 0,
           "offsides": 0,
-          "possession": "50%",
+          "possession": "45%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -67,9 +113,9 @@
         },
         "home": {
           "corners": null,
-          "fouls": 3,
+          "fouls": 4,
           "offsides": 1,
-          "possession": "50%",
+          "possession": "55%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -80,7 +126,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "15'",
-        "lastApiSync": "2026-07-07T16:16:11.359376+00:00",
+        "lastApiSync": "2026-07-07T16:16:33.907382+00:00",
         "seconds": 900,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -117,11 +163,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
@@ -158,8 +204,8 @@
       "awayCorners": null,
       "awayFouls": 0,
       "awayOffsides": 0,
-      "awayPossession": "50%",
-      "awayScore": 0,
+      "awayPossession": "45%",
+      "awayScore": 1,
       "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/825.svg",
@@ -178,13 +224,59 @@
         "type": "CUP"
       },
       "displayMinute": "15'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "15'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 15,
+          "player": "Y. Ibrahim",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "15:00",
+          "timerSeconds": 900,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 900,
       "fallbackClockText": "15'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Egypt",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "15'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Argentina",
+          "isDisallowed": false,
+          "matchId": 537381,
+          "matchUtcDate": "2026-07-07T16:00:00Z",
+          "minute": 15,
+          "player": "Y. Ibrahim",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Egypt",
+          "timer": "15:00",
+          "timerSeconds": 900,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": null,
-      "homeFouls": 3,
+      "homeFouls": 4,
       "homeOffsides": 1,
-      "homePossession": "50%",
+      "homePossession": "55%",
       "homeScore": 0,
       "homeShotsOnGoal": 0,
       "homeTeam": {
@@ -195,15 +287,15 @@
         "tla": "ARG"
       },
       "id": 537381,
-      "lastApiSync": "2026-07-07T16:16:11.359376+00:00",
-      "lastUpdated": "2026-07-07T18:16:06Z",
+      "lastApiSync": "2026-07-07T16:16:33.907382+00:00",
+      "lastUpdated": "2026-07-07T18:16:30Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": null,
           "fouls": 0,
           "offsides": 0,
-          "possession": "50%",
+          "possession": "45%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -212,9 +304,9 @@
         },
         "home": {
           "corners": null,
-          "fouls": 3,
+          "fouls": 4,
           "offsides": 1,
-          "possession": "50%",
+          "possession": "55%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 0,
@@ -225,7 +317,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "15'",
-        "lastApiSync": "2026-07-07T16:16:11.359376+00:00",
+        "lastApiSync": "2026-07-07T16:16:33.907382+00:00",
         "seconds": 900,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -262,11 +354,11 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "halfTime": {
-          "away": 0,
+          "away": 1,
           "home": 0
         },
         "winner": "DRAW"
