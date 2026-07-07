@@ -23833,23 +23833,32 @@
     "utcDate": "2026-07-06T19:00:00Z"
   },
   "537380": {
+    "apiFootballFixtureId": 1570715,
     "awayScore": 0,
     "awayTeam": "Belgium",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "USA",
-    "phase_start": null,
+    "lastApiSync": "2026-07-07T00:01:11.505087+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-07T00:01:11.505087+00:00",
     "referees": [
       {
-        "id": 129250,
         "name": "Adham Makhadmeh",
         "nationality": "Jordan",
         "type": "REFEREE"
+      },
+      {
+        "name": "Adham Mohammad, Jordan",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-07T00:00:00Z"
   },
   "537381": {
