@@ -48813,7 +48813,7 @@
       "awayFouls": 5,
       "awayOffsides": 1,
       "awayPossession": "50%",
-      "awayScore": 2,
+      "awayScore": 3,
       "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/805.svg",
@@ -48842,7 +48842,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3420,
+      "clockSeconds": 3480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48851,7 +48851,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "57'",
+      "displayMinute": "58'",
       "events": [
         {
           "assist": "N. Raskin",
@@ -48960,10 +48960,28 @@
           "timer": "46:00",
           "timerSeconds": 2760,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "57'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 57,
+          "player": "H. Vanaken",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "57:00",
+          "timerSeconds": 3420,
+          "type": "Goal"
         }
       ],
-      "fallbackClock": 3420,
-      "fallbackClockText": "57'",
+      "fallbackClock": 3480,
+      "fallbackClockText": "58'",
       "goalEvents": [
         {
           "assist": "N. Raskin",
@@ -49033,6 +49051,29 @@
           "timer": "33:00",
           "timerSeconds": 1980,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "57'",
+          "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "USA",
+          "isDisallowed": false,
+          "matchId": 537380,
+          "matchUtcDate": "2026-07-07T00:00:00Z",
+          "minute": 57,
+          "player": "H. Vanaken",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "57:00",
+          "timerSeconds": 3420,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -49051,8 +49092,8 @@
         "tla": "USA"
       },
       "id": 537380,
-      "lastApiSync": "2026-07-07T01:21:02.857845+00:00",
-      "lastUpdated": "2026-07-07T03:21:00Z",
+      "lastApiSync": "2026-07-07T01:21:22.859446+00:00",
+      "lastUpdated": "2026-07-07T03:21:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49080,14 +49121,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "57'",
-        "lastApiSync": "2026-07-07T01:21:02.857845+00:00",
-        "seconds": 3420,
+        "displayMinute": "58'",
+        "lastApiSync": "2026-07-07T01:21:22.859446+00:00",
+        "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "57'"
+        "timer": "58'"
       },
-      "manualClockText": "57'",
+      "manualClockText": "58'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Seattle",
@@ -49112,7 +49153,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 57,
+      "minute": 58,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49141,7 +49182,7 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": 2,
+          "away": 3,
           "home": 1
         },
         "halfTime": {
