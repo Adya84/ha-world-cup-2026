@@ -98712,20 +98712,12 @@
     },
     {
       "apiFootballFixtureId": 1578539,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 5,
-      "awayFouls": 12,
-      "awayOffsides": null,
-      "awayPossession": "52%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -98763,11 +98755,16 @@
       "events": [
         {
           "assist": "K. Mbappe",
+          "awayTeam": "Morocco",
           "comments": null,
           "detail": "Missed Penalty",
           "displayMinute": "28'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537383,
+          "matchUtcDate": "2026-07-09T20:00:00Z",
           "minute": 28,
           "player": "K. Mbappe",
           "playerOff": null,
@@ -98777,15 +98774,20 @@
           "team": "France",
           "timer": "28:00",
           "timerSeconds": 1680,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": "D. Doue",
+          "awayTeam": "Morocco",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "60'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537383,
+          "matchUtcDate": "2026-07-09T20:00:00Z",
           "minute": 60,
           "player": "K. Mbappe",
           "playerOff": null,
@@ -98798,66 +98800,17 @@
           "type": "Goal"
         },
         {
-          "assist": "S. Amrabat",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "62'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 62,
-          "player": "A. Bouaddi",
-          "playerOff": "A. Bouaddi",
-          "playerOn": "S. Amrabat",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Rahimi",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "62'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 62,
-          "player": "B. El Khannouss",
-          "playerOff": "B. El Khannouss",
-          "playerOn": "S. Rahimi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Yellow Card",
-          "displayMinute": "63'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 63,
-          "player": "I. Diop",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "63:00",
-          "timerSeconds": 3780,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "K. Mbappe",
+          "awayTeam": "Morocco",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "66'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537383,
+          "matchUtcDate": "2026-07-09T20:00:00Z",
           "minute": 66,
           "player": "O. Dembele",
           "playerOff": null,
@@ -98868,132 +98821,6 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Goal"
-        },
-        {
-          "assist": "W. Zaire-Emery",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "M. Kone",
-          "playerOff": "M. Kone",
-          "playerOn": "W. Zaire-Emery",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "G. Yassine",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "74'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 74,
-          "player": "B. Diaz",
-          "playerOff": "B. Diaz",
-          "playerOn": "G. Yassine",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "74:00",
-          "timerSeconds": 4440,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Z. El Ouahdi",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "74'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 74,
-          "player": "A. Salah-Eddine",
-          "playerOff": "A. Salah-Eddine",
-          "playerOn": "Z. El Ouahdi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "74:00",
-          "timerSeconds": 4440,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Mateta",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "K. Mbappe",
-          "playerOff": "K. Mbappe",
-          "playerOn": "J. Mateta",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Barcola",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "D. Doue",
-          "playerOff": "D. Doue",
-          "playerOn": "B. Barcola",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Sbai",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "C. Talbi",
-          "playerOff": "C. Talbi",
-          "playerOn": "A. Sbai",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Gusto",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "87'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 87,
-          "player": "J. Kounde",
-          "playerOff": "J. Kounde",
-          "playerOn": "M. Gusto",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "87:00",
-          "timerSeconds": 5220,
-          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -99067,14 +98894,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 5,
-      "homeFouls": 10,
-      "homeOffsides": null,
-      "homePossession": "48%",
-      "homeScore": 2,
-      "homeShotsOnGoal": 8,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -99083,39 +98903,14 @@
         "tla": "FRA"
       },
       "id": 537383,
-      "lastApiSync": "2026-07-09T22:09:15.188024+00:00",
       "lastUpdated": "2026-07-10T00:00:53Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 5,
-          "fouls": 12,
-          "offsides": null,
-          "possession": "52%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 5,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 5,
-          "fouls": 10,
-          "offsides": null,
-          "possession": "48%",
-          "redCards": null,
-          "shotsOffGoal": 8,
-          "shotsOnGoal": 8,
-          "totalShots": 21,
-          "yellowCards": 0
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1578539,
-        "awayCorners": 5,
-        "awayFouls": 12,
+        "awayCorners": null,
+        "awayFouls": null,
         "awayOffsides": null,
-        "awayPossession": "52%",
-        "awayShotsOnGoal": 1,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -99139,11 +98934,16 @@
         "events": [
           {
             "assist": "K. Mbappe",
+            "awayTeam": "Morocco",
             "comments": null,
             "detail": "Missed Penalty",
             "displayMinute": "28'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "France",
             "isDisallowed": false,
+            "matchId": 537383,
+            "matchUtcDate": "2026-07-09T20:00:00Z",
             "minute": 28,
             "player": "K. Mbappe",
             "playerOff": null,
@@ -99153,15 +98953,20 @@
             "team": "France",
             "timer": "28:00",
             "timerSeconds": 1680,
-            "type": "Penalty"
+            "type": "Goal"
           },
           {
             "assist": "D. Doue",
+            "awayTeam": "Morocco",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "60'",
             "extra": null,
+            "goalNumber": 2,
+            "homeTeam": "France",
             "isDisallowed": false,
+            "matchId": 537383,
+            "matchUtcDate": "2026-07-09T20:00:00Z",
             "minute": 60,
             "player": "K. Mbappe",
             "playerOff": null,
@@ -99174,66 +98979,17 @@
             "type": "Goal"
           },
           {
-            "assist": "S. Amrabat",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "62'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 62,
-            "player": "A. Bouaddi",
-            "playerOff": "A. Bouaddi",
-            "playerOn": "S. Amrabat",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "62:00",
-            "timerSeconds": 3720,
-            "type": "Substitution"
-          },
-          {
-            "assist": "S. Rahimi",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "62'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 62,
-            "player": "B. El Khannouss",
-            "playerOff": "B. El Khannouss",
-            "playerOn": "S. Rahimi",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "62:00",
-            "timerSeconds": 3720,
-            "type": "Substitution"
-          },
-          {
-            "assist": null,
-            "comments": null,
-            "detail": "Yellow Card",
-            "displayMinute": "63'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 63,
-            "player": "I. Diop",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "63:00",
-            "timerSeconds": 3780,
-            "type": "Yellow Card"
-          },
-          {
             "assist": "K. Mbappe",
+            "awayTeam": "Morocco",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "66'",
             "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "France",
             "isDisallowed": false,
+            "matchId": 537383,
+            "matchUtcDate": "2026-07-09T20:00:00Z",
             "minute": 66,
             "player": "O. Dembele",
             "playerOff": null,
@@ -99244,132 +99000,6 @@
             "timer": "66:00",
             "timerSeconds": 3960,
             "type": "Goal"
-          },
-          {
-            "assist": "W. Zaire-Emery",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "71'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 71,
-            "player": "M. Kone",
-            "playerOff": "M. Kone",
-            "playerOn": "W. Zaire-Emery",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "France",
-            "timer": "71:00",
-            "timerSeconds": 4260,
-            "type": "Substitution"
-          },
-          {
-            "assist": "G. Yassine",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "74'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 74,
-            "player": "B. Diaz",
-            "playerOff": "B. Diaz",
-            "playerOn": "G. Yassine",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "74:00",
-            "timerSeconds": 4440,
-            "type": "Substitution"
-          },
-          {
-            "assist": "Z. El Ouahdi",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "74'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 74,
-            "player": "A. Salah-Eddine",
-            "playerOff": "A. Salah-Eddine",
-            "playerOn": "Z. El Ouahdi",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "74:00",
-            "timerSeconds": 4440,
-            "type": "Substitution"
-          },
-          {
-            "assist": "J. Mateta",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "77'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 77,
-            "player": "K. Mbappe",
-            "playerOff": "K. Mbappe",
-            "playerOn": "J. Mateta",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "France",
-            "timer": "77:00",
-            "timerSeconds": 4620,
-            "type": "Substitution"
-          },
-          {
-            "assist": "B. Barcola",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "77'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 77,
-            "player": "D. Doue",
-            "playerOff": "D. Doue",
-            "playerOn": "B. Barcola",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "France",
-            "timer": "77:00",
-            "timerSeconds": 4620,
-            "type": "Substitution"
-          },
-          {
-            "assist": "A. Sbai",
-            "comments": null,
-            "detail": "Substitution 5",
-            "displayMinute": "85'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 85,
-            "player": "C. Talbi",
-            "playerOff": "C. Talbi",
-            "playerOn": "A. Sbai",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "85:00",
-            "timerSeconds": 5100,
-            "type": "Substitution"
-          },
-          {
-            "assist": "M. Gusto",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "87'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 87,
-            "player": "J. Kounde",
-            "playerOff": "J. Kounde",
-            "playerOn": "M. Gusto",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "France",
-            "timer": "87:00",
-            "timerSeconds": 5220,
-            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -99443,57 +99073,28 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": "api_football_live",
-        "homeCorners": 5,
-        "homeFouls": 10,
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
         "homeOffsides": null,
-        "homePossession": "48%",
-        "homeShotsOnGoal": 8,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 5,
-            "fouls": 12,
-            "offsides": null,
-            "possession": "52%",
-            "redCards": null,
-            "shotsOffGoal": 3,
-            "shotsOnGoal": 1,
-            "totalShots": 5,
-            "yellowCards": 1
-          },
-          "home": {
-            "corners": 5,
-            "fouls": 10,
-            "offsides": null,
-            "possession": "48%",
-            "redCards": null,
-            "shotsOffGoal": 8,
-            "shotsOnGoal": 8,
-            "totalShots": 21,
-            "yellowCards": 0
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 57301,
             "name": "Facundo Tello",
             "nationality": "Argentina",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Facundo Raul Tello Figueroa, Argentina",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 57301,
             "name": "Facundo Tello",
             "nationality": "Argentina",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Facundo Raul Tello Figueroa, Argentina",
             "type": "REFEREE"
           }
         ],
@@ -99664,29 +99265,14 @@
         "weather": {}
       },
       "matchday": null,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Facundo Tello",
-          "nationality": "Argentina",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Facundo Raul Tello Figueroa, Argentina",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 57301,
           "name": "Facundo Tello",
           "nationality": "Argentina",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Facundo Raul Tello Figueroa, Argentina",
           "type": "REFEREE"
         }
       ],
@@ -99702,7 +99288,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -99876,12 +99461,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-09T20:00:00Z",
-      "venue": {
-        "city": "Boston",
-        "id": 1618,
-        "name": "Gillette Stadium"
-      }
+      "utcDate": "2026-07-09T20:00:00Z"
     }
   ],
   "results": [
@@ -198597,20 +198177,12 @@
     },
     {
       "apiFootballFixtureId": 1578539,
-      "apiFootballStatus": "FT",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 5,
-      "awayFouls": 12,
-      "awayOffsides": null,
-      "awayPossession": "52%",
-      "awayScore": 0,
-      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/morocco.svg",
         "id": 815,
@@ -198648,11 +198220,16 @@
       "events": [
         {
           "assist": "K. Mbappe",
+          "awayTeam": "Morocco",
           "comments": null,
           "detail": "Missed Penalty",
           "displayMinute": "28'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537383,
+          "matchUtcDate": "2026-07-09T20:00:00Z",
           "minute": 28,
           "player": "K. Mbappe",
           "playerOff": null,
@@ -198662,15 +198239,20 @@
           "team": "France",
           "timer": "28:00",
           "timerSeconds": 1680,
-          "type": "Penalty"
+          "type": "Goal"
         },
         {
           "assist": "D. Doue",
+          "awayTeam": "Morocco",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "60'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537383,
+          "matchUtcDate": "2026-07-09T20:00:00Z",
           "minute": 60,
           "player": "K. Mbappe",
           "playerOff": null,
@@ -198683,66 +198265,17 @@
           "type": "Goal"
         },
         {
-          "assist": "S. Amrabat",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "62'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 62,
-          "player": "A. Bouaddi",
-          "playerOff": "A. Bouaddi",
-          "playerOn": "S. Amrabat",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Rahimi",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "62'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 62,
-          "player": "B. El Khannouss",
-          "playerOff": "B. El Khannouss",
-          "playerOn": "S. Rahimi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": null,
-          "detail": "Yellow Card",
-          "displayMinute": "63'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 63,
-          "player": "I. Diop",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "63:00",
-          "timerSeconds": 3780,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "K. Mbappe",
+          "awayTeam": "Morocco",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "66'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537383,
+          "matchUtcDate": "2026-07-09T20:00:00Z",
           "minute": 66,
           "player": "O. Dembele",
           "playerOff": null,
@@ -198753,132 +198286,6 @@
           "timer": "66:00",
           "timerSeconds": 3960,
           "type": "Goal"
-        },
-        {
-          "assist": "W. Zaire-Emery",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "M. Kone",
-          "playerOff": "M. Kone",
-          "playerOn": "W. Zaire-Emery",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "G. Yassine",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "74'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 74,
-          "player": "B. Diaz",
-          "playerOff": "B. Diaz",
-          "playerOn": "G. Yassine",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "74:00",
-          "timerSeconds": 4440,
-          "type": "Substitution"
-        },
-        {
-          "assist": "Z. El Ouahdi",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "74'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 74,
-          "player": "A. Salah-Eddine",
-          "playerOff": "A. Salah-Eddine",
-          "playerOn": "Z. El Ouahdi",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "74:00",
-          "timerSeconds": 4440,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Mateta",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "K. Mbappe",
-          "playerOff": "K. Mbappe",
-          "playerOn": "J. Mateta",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "B. Barcola",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "D. Doue",
-          "playerOff": "D. Doue",
-          "playerOn": "B. Barcola",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Sbai",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "85'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 85,
-          "player": "C. Talbi",
-          "playerOff": "C. Talbi",
-          "playerOn": "A. Sbai",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Morocco",
-          "timer": "85:00",
-          "timerSeconds": 5100,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Gusto",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "87'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 87,
-          "player": "J. Kounde",
-          "playerOff": "J. Kounde",
-          "playerOn": "M. Gusto",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "87:00",
-          "timerSeconds": 5220,
-          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -198952,14 +198359,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 5,
-      "homeFouls": 10,
-      "homeOffsides": null,
-      "homePossession": "48%",
-      "homeScore": 2,
-      "homeShotsOnGoal": 8,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -198968,39 +198368,14 @@
         "tla": "FRA"
       },
       "id": 537383,
-      "lastApiSync": "2026-07-09T22:09:15.188024+00:00",
       "lastUpdated": "2026-07-10T00:00:53Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 5,
-          "fouls": 12,
-          "offsides": null,
-          "possession": "52%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 1,
-          "totalShots": 5,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 5,
-          "fouls": 10,
-          "offsides": null,
-          "possession": "48%",
-          "redCards": null,
-          "shotsOffGoal": 8,
-          "shotsOnGoal": 8,
-          "totalShots": 21,
-          "yellowCards": 0
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1578539,
-        "awayCorners": 5,
-        "awayFouls": 12,
+        "awayCorners": null,
+        "awayFouls": null,
         "awayOffsides": null,
-        "awayPossession": "52%",
-        "awayShotsOnGoal": 1,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -199024,11 +198399,16 @@
         "events": [
           {
             "assist": "K. Mbappe",
+            "awayTeam": "Morocco",
             "comments": null,
             "detail": "Missed Penalty",
             "displayMinute": "28'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "France",
             "isDisallowed": false,
+            "matchId": 537383,
+            "matchUtcDate": "2026-07-09T20:00:00Z",
             "minute": 28,
             "player": "K. Mbappe",
             "playerOff": null,
@@ -199038,15 +198418,20 @@
             "team": "France",
             "timer": "28:00",
             "timerSeconds": 1680,
-            "type": "Penalty"
+            "type": "Goal"
           },
           {
             "assist": "D. Doue",
+            "awayTeam": "Morocco",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "60'",
             "extra": null,
+            "goalNumber": 2,
+            "homeTeam": "France",
             "isDisallowed": false,
+            "matchId": 537383,
+            "matchUtcDate": "2026-07-09T20:00:00Z",
             "minute": 60,
             "player": "K. Mbappe",
             "playerOff": null,
@@ -199059,66 +198444,17 @@
             "type": "Goal"
           },
           {
-            "assist": "S. Amrabat",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "62'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 62,
-            "player": "A. Bouaddi",
-            "playerOff": "A. Bouaddi",
-            "playerOn": "S. Amrabat",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "62:00",
-            "timerSeconds": 3720,
-            "type": "Substitution"
-          },
-          {
-            "assist": "S. Rahimi",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "62'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 62,
-            "player": "B. El Khannouss",
-            "playerOff": "B. El Khannouss",
-            "playerOn": "S. Rahimi",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "62:00",
-            "timerSeconds": 3720,
-            "type": "Substitution"
-          },
-          {
-            "assist": null,
-            "comments": null,
-            "detail": "Yellow Card",
-            "displayMinute": "63'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 63,
-            "player": "I. Diop",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "63:00",
-            "timerSeconds": 3780,
-            "type": "Yellow Card"
-          },
-          {
             "assist": "K. Mbappe",
+            "awayTeam": "Morocco",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "66'",
             "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "France",
             "isDisallowed": false,
+            "matchId": 537383,
+            "matchUtcDate": "2026-07-09T20:00:00Z",
             "minute": 66,
             "player": "O. Dembele",
             "playerOff": null,
@@ -199129,132 +198465,6 @@
             "timer": "66:00",
             "timerSeconds": 3960,
             "type": "Goal"
-          },
-          {
-            "assist": "W. Zaire-Emery",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "71'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 71,
-            "player": "M. Kone",
-            "playerOff": "M. Kone",
-            "playerOn": "W. Zaire-Emery",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "France",
-            "timer": "71:00",
-            "timerSeconds": 4260,
-            "type": "Substitution"
-          },
-          {
-            "assist": "G. Yassine",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "74'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 74,
-            "player": "B. Diaz",
-            "playerOff": "B. Diaz",
-            "playerOn": "G. Yassine",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "74:00",
-            "timerSeconds": 4440,
-            "type": "Substitution"
-          },
-          {
-            "assist": "Z. El Ouahdi",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "74'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 74,
-            "player": "A. Salah-Eddine",
-            "playerOff": "A. Salah-Eddine",
-            "playerOn": "Z. El Ouahdi",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "74:00",
-            "timerSeconds": 4440,
-            "type": "Substitution"
-          },
-          {
-            "assist": "J. Mateta",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "77'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 77,
-            "player": "K. Mbappe",
-            "playerOff": "K. Mbappe",
-            "playerOn": "J. Mateta",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "France",
-            "timer": "77:00",
-            "timerSeconds": 4620,
-            "type": "Substitution"
-          },
-          {
-            "assist": "B. Barcola",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "77'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 77,
-            "player": "D. Doue",
-            "playerOff": "D. Doue",
-            "playerOn": "B. Barcola",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "France",
-            "timer": "77:00",
-            "timerSeconds": 4620,
-            "type": "Substitution"
-          },
-          {
-            "assist": "A. Sbai",
-            "comments": null,
-            "detail": "Substitution 5",
-            "displayMinute": "85'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 85,
-            "player": "C. Talbi",
-            "playerOff": "C. Talbi",
-            "playerOn": "A. Sbai",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "Morocco",
-            "timer": "85:00",
-            "timerSeconds": 5100,
-            "type": "Substitution"
-          },
-          {
-            "assist": "M. Gusto",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "87'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 87,
-            "player": "J. Kounde",
-            "playerOff": "J. Kounde",
-            "playerOn": "M. Gusto",
-            "rawType": "subst",
-            "source": "api_football",
-            "team": "France",
-            "timer": "87:00",
-            "timerSeconds": 5220,
-            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -199328,57 +198538,28 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": "api_football_live",
-        "homeCorners": 5,
-        "homeFouls": 10,
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
         "homeOffsides": null,
-        "homePossession": "48%",
-        "homeShotsOnGoal": 8,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 5,
-            "fouls": 12,
-            "offsides": null,
-            "possession": "52%",
-            "redCards": null,
-            "shotsOffGoal": 3,
-            "shotsOnGoal": 1,
-            "totalShots": 5,
-            "yellowCards": 1
-          },
-          "home": {
-            "corners": 5,
-            "fouls": 10,
-            "offsides": null,
-            "possession": "48%",
-            "redCards": null,
-            "shotsOffGoal": 8,
-            "shotsOnGoal": 8,
-            "totalShots": 21,
-            "yellowCards": 0
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 57301,
             "name": "Facundo Tello",
             "nationality": "Argentina",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Facundo Raul Tello Figueroa, Argentina",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 57301,
             "name": "Facundo Tello",
             "nationality": "Argentina",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Facundo Raul Tello Figueroa, Argentina",
             "type": "REFEREE"
           }
         ],
@@ -199549,29 +198730,14 @@
         "weather": {}
       },
       "matchday": null,
-      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Facundo Tello",
-          "nationality": "Argentina",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Facundo Raul Tello Figueroa, Argentina",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 57301,
           "name": "Facundo Tello",
           "nationality": "Argentina",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Facundo Raul Tello Figueroa, Argentina",
           "type": "REFEREE"
         }
       ],
@@ -199587,7 +198753,6 @@
         },
         "winner": "HOME_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -199761,12 +198926,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-09T20:00:00Z",
-      "venue": {
-        "city": "Boston",
-        "id": 1618,
-        "name": "Gillette Stadium"
-      }
+      "utcDate": "2026-07-09T20:00:00Z"
     }
   ]
 }
