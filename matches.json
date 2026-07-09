@@ -51317,8 +51317,8 @@
     },
     {
       "apiFootballFixtureId": 1578539,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -51358,8 +51358,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -51367,7 +51365,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -51604,8 +51601,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -51693,9 +51688,8 @@
         "tla": "FRA"
       },
       "id": 537383,
-      "lastApiSync": "2026-07-09T22:01:05.972327+00:00",
+      "lastApiSync": "2026-07-09T22:01:31.700368+00:00",
       "lastUpdated": "2026-07-10T00:00:53Z",
-      "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 5,
@@ -51719,39 +51713,6 @@
           "totalShots": 21,
           "yellowCards": 0
         }
-      },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-09T22:01:05.972327+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Boston",
-        "cloudCoverage": 99.2,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-09T21:53:18.545168+00:00",
-        "humidity": 65.3,
-        "latitude": 42.0909,
-        "longitude": -71.2643,
-        "name": "Gillette Stadium weather",
-        "observedAt": "2026-07-09T21:00:00Z",
-        "pressure": 1008.2,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Gillette Stadium",
-        "temperature": 28.3,
-        "temperatureUnit": "C",
-        "windBearing": 224.4,
-        "windSpeed": 4.9,
-        "windSpeedUnit": "m/s"
       },
       "matchday": null,
       "minute": 90,
@@ -51801,7 +51762,7 @@
         "winner": null
       },
       "stage": "QUARTER_FINALS",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "S. Amrabat",
@@ -51971,29 +51932,6 @@
         "city": "Boston",
         "id": 1618,
         "name": "Gillette Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Boston",
-        "cloudCoverage": 99.2,
-        "condition": "partlycloudy_day",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-09T21:53:18.545168+00:00",
-        "humidity": 65.3,
-        "latitude": 42.0909,
-        "longitude": -71.2643,
-        "name": "Gillette Stadium weather",
-        "observedAt": "2026-07-09T21:00:00Z",
-        "pressure": 1008.2,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Gillette Stadium",
-        "temperature": 28.3,
-        "temperatureUnit": "C",
-        "windBearing": 224.4,
-        "windSpeed": 4.9,
-        "windSpeedUnit": "m/s"
       }
     },
     {
