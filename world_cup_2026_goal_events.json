@@ -24943,10 +24943,10 @@
     "apiFootballFixtureId": 1578539,
     "awayScore": 0,
     "awayTeam": "Morocco",
-    "base_seconds": 3660,
+    "base_seconds": 3720,
     "clock_active": false,
-    "clock_seconds": 3660,
-    "displayMinute": "61'",
+    "clock_seconds": 3720,
+    "displayMinute": "62'",
     "events": [
       {
         "assist": "K. Mbappe",
@@ -24983,6 +24983,24 @@
         "timer": "60:00",
         "timerSeconds": 3600,
         "type": "Goal"
+      },
+      {
+        "assist": "S. Amrabat",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "62'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 62,
+        "player": "A. Bouaddi",
+        "playerOff": "A. Bouaddi",
+        "playerOn": "S. Amrabat",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Morocco",
+        "timer": "62:00",
+        "timerSeconds": 3720,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -25035,9 +25053,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "France",
-    "lastApiSync": "2026-07-09T21:25:36.968455+00:00",
-    "manualClockText": "61'",
-    "phase_start": "2026-07-09T21:25:36.968455+00:00",
+    "lastApiSync": "2026-07-09T21:25:59.581456+00:00",
+    "manualClockText": "62'",
+    "phase_start": "2026-07-09T21:25:59.581456+00:00",
     "referees": [
       {
         "name": "Facundo Tello",
@@ -25051,6 +25069,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "S. Amrabat",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "62'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 62,
+        "player": "A. Bouaddi",
+        "playerOff": "A. Bouaddi",
+        "playerOn": "S. Amrabat",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Morocco",
+        "timer": "62:00",
+        "timerSeconds": 3720,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-07-09T20:00:00Z"
   },
   "537384": {
