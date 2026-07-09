@@ -24940,23 +24940,32 @@
     "utcDate": "2026-07-07T20:00:00Z"
   },
   "537383": {
+    "apiFootballFixtureId": 1578539,
     "awayScore": 0,
     "awayTeam": "Morocco",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "France",
-    "phase_start": null,
+    "lastApiSync": "2026-07-09T20:01:19.361370+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-09T20:01:19.361370+00:00",
     "referees": [
       {
-        "id": 57301,
         "name": "Facundo Tello",
         "nationality": "Argentina",
         "type": "REFEREE"
+      },
+      {
+        "name": "Facundo Raul Tello Figueroa, Argentina",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-09T20:00:00Z"
   },
   "537384": {
