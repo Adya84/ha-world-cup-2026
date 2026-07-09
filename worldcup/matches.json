@@ -51338,7 +51338,7 @@
         "shortName": "Morocco",
         "tla": "MAR"
       },
-      "clockSeconds": 3660,
+      "clockSeconds": 3720,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -51347,7 +51347,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "61'",
+      "displayMinute": "62'",
       "events": [
         {
           "assist": "K. Mbappe",
@@ -51384,10 +51384,28 @@
           "timer": "60:00",
           "timerSeconds": 3600,
           "type": "Goal"
+        },
+        {
+          "assist": "S. Amrabat",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "A. Bouaddi",
+          "playerOff": "A. Bouaddi",
+          "playerOn": "S. Amrabat",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3660,
-      "fallbackClockText": "61'",
+      "fallbackClock": 3720,
+      "fallbackClockText": "62'",
       "goalEvents": [
         {
           "assist": "K. Mbappe",
@@ -51452,8 +51470,8 @@
         "tla": "FRA"
       },
       "id": 537383,
-      "lastApiSync": "2026-07-09T21:25:36.968455+00:00",
-      "lastUpdated": "2026-07-09T23:25:36Z",
+      "lastApiSync": "2026-07-09T21:25:59.581456+00:00",
+      "lastUpdated": "2026-07-09T23:25:57Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -51481,14 +51499,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "61'",
-        "lastApiSync": "2026-07-09T21:25:36.968455+00:00",
-        "seconds": 3660,
+        "displayMinute": "62'",
+        "lastApiSync": "2026-07-09T21:25:59.581456+00:00",
+        "seconds": 3720,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "61'"
+        "timer": "62'"
       },
-      "manualClockText": "61'",
+      "manualClockText": "62'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Boston",
@@ -51513,7 +51531,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 61,
+      "minute": 62,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -51561,6 +51579,26 @@
       },
       "stage": "QUARTER_FINALS",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "S. Amrabat",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "62'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 62,
+          "player": "A. Bouaddi",
+          "playerOff": "A. Bouaddi",
+          "playerOn": "S. Amrabat",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Morocco",
+          "timer": "62:00",
+          "timerSeconds": 3720,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-09T20:00:00Z",
       "venue": {
         "city": "Boston",
