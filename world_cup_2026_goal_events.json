@@ -24943,10 +24943,10 @@
     "apiFootballFixtureId": 1578539,
     "awayScore": 0,
     "awayTeam": "Morocco",
-    "base_seconds": 3480,
+    "base_seconds": 3660,
     "clock_active": false,
-    "clock_seconds": 3480,
-    "displayMinute": "58'",
+    "clock_seconds": 3660,
+    "displayMinute": "61'",
     "events": [
       {
         "assist": "K. Mbappe",
@@ -24965,6 +24965,24 @@
         "timer": "28:00",
         "timerSeconds": 1680,
         "type": "Penalty"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "60'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 60,
+        "player": "K. Mbappe",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "France",
+        "timer": "60:00",
+        "timerSeconds": 3600,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -24990,13 +25008,36 @@
         "timer": "28:00",
         "timerSeconds": 1680,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Morocco",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "60'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "France",
+        "isDisallowed": false,
+        "matchId": 537383,
+        "matchUtcDate": "2026-07-09T20:00:00Z",
+        "minute": 60,
+        "player": "K. Mbappe",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "France",
+        "timer": "60:00",
+        "timerSeconds": 3600,
+        "type": "Goal"
       }
     ],
-    "homeScore": 0,
+    "homeScore": 1,
     "homeTeam": "France",
-    "lastApiSync": "2026-07-09T21:24:28.051454+00:00",
-    "manualClockText": "58'",
-    "phase_start": "2026-07-09T21:24:28.051454+00:00",
+    "lastApiSync": "2026-07-09T21:24:52.653223+00:00",
+    "manualClockText": "61'",
+    "phase_start": "2026-07-09T21:24:52.653223+00:00",
     "referees": [
       {
         "name": "Facundo Tello",
