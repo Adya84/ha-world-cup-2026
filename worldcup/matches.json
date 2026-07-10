@@ -48894,7 +48894,7 @@
       "awayCorners": 1,
       "awayFouls": 9,
       "awayOffsides": 1,
-      "awayPossession": "36%",
+      "awayPossession": "35%",
       "awayScore": 1,
       "awayShotsOnGoal": 1,
       "awayTeam": {
@@ -48924,7 +48924,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48933,7 +48933,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": null,
@@ -48988,10 +48988,46 @@
           "timer": "43:00",
           "timerSeconds": 2580,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "F. Torres",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "55'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 55,
+          "player": "A. Baena",
+          "playerOff": "A. Baena",
+          "playerOn": "F. Torres",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Pedri",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "55'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 55,
+          "player": "F. Ruiz",
+          "playerOff": "F. Ruiz",
+          "playerOn": "Pedri",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": null,
@@ -49042,10 +49078,10 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 3,
+      "homeCorners": 4,
       "homeFouls": 7,
       "homeOffsides": 2,
-      "homePossession": "64%",
+      "homePossession": "65%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -49056,15 +49092,15 @@
         "tla": "ESP"
       },
       "id": 537384,
-      "lastApiSync": "2026-07-10T20:17:20.816247+00:00",
-      "lastUpdated": "2026-07-10T22:17:15Z",
+      "lastApiSync": "2026-07-10T20:17:45.677211+00:00",
+      "lastUpdated": "2026-07-10T22:17:40Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 9,
           "offsides": 1,
-          "possession": "36%",
+          "possession": "35%",
           "redCards": null,
           "shotsOffGoal": 0,
           "shotsOnGoal": 1,
@@ -49072,27 +49108,27 @@
           "yellowCards": 0
         },
         "home": {
-          "corners": 3,
+          "corners": 4,
           "fouls": 7,
           "offsides": 2,
-          "possession": "64%",
+          "possession": "65%",
           "redCards": null,
-          "shotsOffGoal": 3,
+          "shotsOffGoal": 4,
           "shotsOnGoal": 3,
-          "totalShots": 9,
+          "totalShots": 11,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-07-10T20:17:20.816247+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-07-10T20:17:45.677211+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -49117,7 +49153,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49165,6 +49201,44 @@
       },
       "stage": "QUARTER_FINALS",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "F. Torres",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "55'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 55,
+          "player": "A. Baena",
+          "playerOff": "A. Baena",
+          "playerOn": "F. Torres",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Substitution"
+        },
+        {
+          "assist": "Pedri",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "55'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 55,
+          "player": "F. Ruiz",
+          "playerOff": "F. Ruiz",
+          "playerOn": "Pedri",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-10T19:00:00Z",
       "venue": {
         "city": "Los Angeles",
