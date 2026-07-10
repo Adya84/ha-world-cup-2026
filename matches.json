@@ -48892,9 +48892,9 @@
         "name": "World"
       },
       "awayCorners": 1,
-      "awayFouls": 13,
+      "awayFouls": 14,
       "awayOffsides": 1,
-      "awayPossession": "31%",
+      "awayPossession": "32%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -48921,6 +48921,24 @@
           "team": "Spain",
           "timer": "43:00",
           "timerSeconds": 2580,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "K. De Bruyne",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
           "type": "Yellow Card"
         }
       ],
@@ -49114,6 +49132,24 @@
           "timer": "79:00",
           "timerSeconds": 4740,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "85'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 85,
+          "player": "K. De Bruyne",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "85:00",
+          "timerSeconds": 5100,
+          "type": "Yellow Card"
         }
       ],
       "fallbackClock": 5100,
@@ -49171,7 +49207,7 @@
       "homeCorners": 5,
       "homeFouls": 11,
       "homeOffsides": 3,
-      "homePossession": "69%",
+      "homePossession": "68%",
       "homeScore": 1,
       "homeShotsOnGoal": 5,
       "homeTeam": {
@@ -49182,26 +49218,26 @@
         "tla": "ESP"
       },
       "id": 537384,
-      "lastApiSync": "2026-07-10T20:47:14.567821+00:00",
-      "lastUpdated": "2026-07-10T22:47:10Z",
+      "lastApiSync": "2026-07-10T20:47:37.261485+00:00",
+      "lastUpdated": "2026-07-10T22:47:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
-          "fouls": 13,
+          "fouls": 14,
           "offsides": 1,
-          "possession": "31%",
+          "possession": "32%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 2,
-          "totalShots": 4,
+          "totalShots": 5,
           "yellowCards": 0
         },
         "home": {
           "corners": 5,
           "fouls": 11,
           "offsides": 3,
-          "possession": "69%",
+          "possession": "68%",
           "redCards": null,
           "shotsOffGoal": 4,
           "shotsOnGoal": 5,
@@ -49212,7 +49248,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "85'",
-        "lastApiSync": "2026-07-10T20:47:14.567821+00:00",
+        "lastApiSync": "2026-07-10T20:47:37.261485+00:00",
         "seconds": 5100,
         "source": "api_football_live_minute",
         "status": "2H",
