@@ -24660,7 +24660,7 @@
     "apiFootballFixtureId": 1581821,
     "awayScore": 1,
     "awayTeam": "Belgium",
-    "base_seconds": 3300,
+    "base_seconds": 3360,
     "cardEvents": [
       {
         "assist": null,
@@ -24682,8 +24682,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3300,
-    "displayMinute": "55'",
+    "clock_seconds": 3360,
+    "displayMinute": "56'",
     "events": [
       {
         "assist": null,
@@ -24738,6 +24738,42 @@
         "timer": "43:00",
         "timerSeconds": 2580,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "F. Torres",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "55'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 55,
+        "player": "A. Baena",
+        "playerOff": "A. Baena",
+        "playerOn": "F. Torres",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "55:00",
+        "timerSeconds": 3300,
+        "type": "Substitution"
+      },
+      {
+        "assist": "Pedri",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "55'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 55,
+        "player": "F. Ruiz",
+        "playerOff": "F. Ruiz",
+        "playerOn": "Pedri",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "55:00",
+        "timerSeconds": 3300,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24790,9 +24826,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Spain",
-    "lastApiSync": "2026-07-10T20:17:20.816247+00:00",
-    "manualClockText": "55'",
-    "phase_start": "2026-07-10T20:17:20.816247+00:00",
+    "lastApiSync": "2026-07-10T20:17:45.677211+00:00",
+    "manualClockText": "56'",
+    "phase_start": "2026-07-10T20:17:45.677211+00:00",
     "referees": [
       {
         "name": "Michael Oliver",
@@ -24806,6 +24842,44 @@
     ],
     "source": "api_football_live_minute",
     "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "F. Torres",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "55'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 55,
+        "player": "A. Baena",
+        "playerOff": "A. Baena",
+        "playerOn": "F. Torres",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "55:00",
+        "timerSeconds": 3300,
+        "type": "Substitution"
+      },
+      {
+        "assist": "Pedri",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "55'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 55,
+        "player": "F. Ruiz",
+        "playerOff": "F. Ruiz",
+        "playerOn": "Pedri",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "55:00",
+        "timerSeconds": 3300,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-07-10T19:00:00Z"
   },
   "537385": {
