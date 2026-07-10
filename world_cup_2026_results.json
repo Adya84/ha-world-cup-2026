@@ -46860,11 +46860,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 9,
-      "awayFouls": 13,
-      "awayOffsides": 5,
-      "awayPossession": "53%",
-      "awayShotsOnGoal": 7,
       "awayTeam": {
         "crest": "https://crests.football-data.org/usa.svg",
         "id": 771,
@@ -46902,11 +46897,16 @@
       "events": [
         {
           "assist": "S. Berhalter",
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "3'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 3,
           "player": "A. Trusty",
           "playerOff": null,
@@ -46920,11 +46920,16 @@
         },
         {
           "assist": "B. Yilmaz",
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 10,
           "player": "A. Guler",
           "playerOff": null,
@@ -46937,30 +46942,17 @@
           "type": "Goal"
         },
         {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "19'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 19,
-          "player": "Sebastian Berhalter",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "19:00",
-          "timerSeconds": 1140,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "O. Kokcu",
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "31'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 31,
           "player": "B. Yilmaz",
           "playerOff": null,
@@ -46974,11 +46966,16 @@
         },
         {
           "assist": null,
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "49'",
           "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 49,
           "player": "S. Berhalter",
           "playerOff": null,
@@ -46991,156 +46988,17 @@
           "type": "Goal"
         },
         {
-          "assist": "C. Pulisic",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "T. Weah",
-          "playerOff": "T. Weah",
-          "playerOn": "C. Pulisic",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Dest",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "G. Reyna",
-          "playerOff": "G. Reyna",
-          "playerOn": "S. Dest",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Zendejas",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "B. Aaronson",
-          "playerOff": "B. Aaronson",
-          "playerOn": "A. Zendejas",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Freeman",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "J. Scally",
-          "playerOff": "J. Scally",
-          "playerOn": "A. Freeman",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Soyuncu",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "Z. Celik",
-          "playerOff": "Z. Celik",
-          "playerOn": "C. Soyuncu",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Uzun",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "K. Yildiz",
-          "playerOff": "K. Yildiz",
-          "playerOn": "C. Uzun",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Tillman",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "86'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 86,
-          "player": "W. McKennie",
-          "playerOff": "W. McKennie",
-          "playerOn": "M. Tillman",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "86:00",
-          "timerSeconds": 5160,
-          "type": "Substitution"
-        },
-        {
-          "assist": "K. Ayhan",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "88'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 88,
-          "player": "O. Kokcu",
-          "playerOff": "O. Kokcu",
-          "playerOn": "K. Ayhan",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "88:00",
-          "timerSeconds": 5280,
-          "type": "Substitution"
-        },
-        {
           "assist": null,
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90'",
           "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 90,
           "player": "K. Ayhan",
           "playerOff": null,
@@ -47151,42 +47009,6 @@
           "timer": "90:00",
           "timerSeconds": 5400,
           "type": "Goal"
-        },
-        {
-          "assist": "M. Muldur",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "O. Aydin",
-          "playerOff": "O. Aydin",
-          "playerOn": "M. Muldur",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
-        },
-        {
-          "assist": "I. Kahveci",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "B. Yilmaz",
-          "playerOff": "B. Yilmaz",
-          "playerOn": "I. Kahveci",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -47306,13 +47128,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "group": "GROUP_D",
-      "homeCorners": 2,
-      "homeFouls": 13,
-      "homeOffsides": 2,
-      "homePossession": "47%",
-      "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/803.svg",
         "id": 803,
@@ -47322,37 +47138,13 @@
       },
       "id": 537349,
       "lastUpdated": "2026-07-10T00:20:09Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 9,
-          "fouls": 13,
-          "offsides": 5,
-          "possession": "53%",
-          "redCards": null,
-          "shotsOffGoal": 6,
-          "shotsOnGoal": 7,
-          "totalShots": 18,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 2,
-          "fouls": 13,
-          "offsides": 2,
-          "possession": "47%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 3,
-          "totalShots": 9,
-          "yellowCards": 0
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1539012,
-        "awayCorners": 9,
-        "awayFouls": 13,
-        "awayOffsides": 5,
-        "awayPossession": "53%",
-        "awayShotsOnGoal": 7,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -47376,11 +47168,16 @@
         "events": [
           {
             "assist": "S. Berhalter",
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "3'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 3,
             "player": "A. Trusty",
             "playerOff": null,
@@ -47394,11 +47191,16 @@
           },
           {
             "assist": "B. Yilmaz",
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "10'",
             "extra": null,
+            "goalNumber": 2,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 10,
             "player": "A. Guler",
             "playerOff": null,
@@ -47411,30 +47213,17 @@
             "type": "Goal"
           },
           {
-            "assist": null,
-            "comments": "Foul",
-            "detail": "Yellow Card",
-            "displayMinute": "19'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 19,
-            "player": "Sebastian Berhalter",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "19:00",
-            "timerSeconds": 1140,
-            "type": "Yellow Card"
-          },
-          {
             "assist": "O. Kokcu",
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "31'",
             "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 31,
             "player": "B. Yilmaz",
             "playerOff": null,
@@ -47448,11 +47237,16 @@
           },
           {
             "assist": null,
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "49'",
             "extra": null,
+            "goalNumber": 4,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 49,
             "player": "S. Berhalter",
             "playerOff": null,
@@ -47465,156 +47259,17 @@
             "type": "Goal"
           },
           {
-            "assist": "C. Pulisic",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "58'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 58,
-            "player": "T. Weah",
-            "playerOff": "T. Weah",
-            "playerOn": "C. Pulisic",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "58:00",
-            "timerSeconds": 3480,
-            "type": "Substitution"
-          },
-          {
-            "assist": "S. Dest",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "76'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 76,
-            "player": "G. Reyna",
-            "playerOff": "G. Reyna",
-            "playerOn": "S. Dest",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "type": "Substitution"
-          },
-          {
-            "assist": "A. Zendejas",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "77'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 77,
-            "player": "B. Aaronson",
-            "playerOff": "B. Aaronson",
-            "playerOn": "A. Zendejas",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "77:00",
-            "timerSeconds": 4620,
-            "type": "Substitution"
-          },
-          {
-            "assist": "A. Freeman",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "77'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 77,
-            "player": "J. Scally",
-            "playerOff": "J. Scally",
-            "playerOn": "A. Freeman",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "77:00",
-            "timerSeconds": 4620,
-            "type": "Substitution"
-          },
-          {
-            "assist": "C. Soyuncu",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "84'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 84,
-            "player": "Z. Celik",
-            "playerOff": "Z. Celik",
-            "playerOn": "C. Soyuncu",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "type": "Substitution"
-          },
-          {
-            "assist": "C. Uzun",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "84'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 84,
-            "player": "K. Yildiz",
-            "playerOff": "K. Yildiz",
-            "playerOn": "C. Uzun",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "type": "Substitution"
-          },
-          {
-            "assist": "M. Tillman",
-            "comments": null,
-            "detail": "Substitution 5",
-            "displayMinute": "86'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 86,
-            "player": "W. McKennie",
-            "playerOff": "W. McKennie",
-            "playerOn": "M. Tillman",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "86:00",
-            "timerSeconds": 5160,
-            "type": "Substitution"
-          },
-          {
-            "assist": "K. Ayhan",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "88'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 88,
-            "player": "O. Kokcu",
-            "playerOff": "O. Kokcu",
-            "playerOn": "K. Ayhan",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "88:00",
-            "timerSeconds": 5280,
-            "type": "Substitution"
-          },
-          {
             "assist": null,
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "90'",
             "extra": null,
+            "goalNumber": 5,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 90,
             "player": "K. Ayhan",
             "playerOff": null,
@@ -47625,42 +47280,6 @@
             "timer": "90:00",
             "timerSeconds": 5400,
             "type": "Goal"
-          },
-          {
-            "assist": "M. Muldur",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "90+2'",
-            "extra": 2,
-            "isDisallowed": false,
-            "minute": 90,
-            "player": "O. Aydin",
-            "playerOff": "O. Aydin",
-            "playerOn": "M. Muldur",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "type": "Substitution"
-          },
-          {
-            "assist": "I. Kahveci",
-            "comments": null,
-            "detail": "Substitution 5",
-            "displayMinute": "90+2'",
-            "extra": 2,
-            "isDisallowed": false,
-            "minute": 90,
-            "player": "B. Yilmaz",
-            "playerOff": "B. Yilmaz",
-            "playerOn": "I. Kahveci",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -47780,55 +47399,28 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": "api_football_post_match",
-        "homeCorners": 2,
-        "homeFouls": 13,
-        "homeOffsides": 2,
-        "homePossession": "47%",
-        "homeShotsOnGoal": 3,
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 9,
-            "fouls": 13,
-            "offsides": 5,
-            "possession": "53%",
-            "redCards": null,
-            "shotsOffGoal": 6,
-            "shotsOnGoal": 7,
-            "totalShots": 18,
-            "yellowCards": 1
-          },
-          "home": {
-            "corners": 2,
-            "fouls": 13,
-            "offsides": 2,
-            "possession": "47%",
-            "redCards": null,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 3,
-            "totalShots": 9,
-            "yellowCards": 0
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 190017,
             "name": "Mustapha Ghorbal",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Mustapha Ghorbal, Algeria",
+            "nationality": null,
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 190017,
             "name": "Mustapha Ghorbal",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Mustapha Ghorbal, Algeria",
+            "nationality": null,
             "type": "REFEREE"
           }
         ],
@@ -48020,23 +47612,11 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Mustapha Ghorbal",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Mustapha Ghorbal, Algeria",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 190017,
           "name": "Mustapha Ghorbal",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Mustapha Ghorbal, Algeria",
+          "nationality": null,
           "type": "REFEREE"
         }
       ],
@@ -48253,11 +47833,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 3,
-      "awayFouls": 6,
-      "awayOffsides": null,
-      "awayPossession": "56%",
-      "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/779.svg",
         "id": 779,
@@ -48493,11 +48068,6 @@
         }
       ],
       "group": "GROUP_D",
-      "homeCorners": 1,
-      "homeFouls": 9,
-      "homeOffsides": null,
-      "homePossession": "44%",
-      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/761.svg",
         "id": 761,
@@ -48507,37 +48077,13 @@
       },
       "id": 537350,
       "lastUpdated": "2026-07-10T00:20:09Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 3,
-          "fouls": 6,
-          "offsides": null,
-          "possession": "56%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 5,
-          "totalShots": 12,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 1,
-          "fouls": 9,
-          "offsides": null,
-          "possession": "44%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 2,
-          "totalShots": 7,
-          "yellowCards": 1
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1489411,
-        "awayCorners": 3,
-        "awayFouls": 6,
+        "awayCorners": null,
+        "awayFouls": null,
         "awayOffsides": null,
-        "awayPossession": "56%",
-        "awayShotsOnGoal": 5,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -48760,56 +48306,27 @@
         ],
         "goalEvents": [],
         "goalEventsSource": null,
-        "homeCorners": 1,
-        "homeFouls": 9,
+        "homeCorners": null,
+        "homeFouls": null,
         "homeOffsides": null,
-        "homePossession": "44%",
-        "homeShotsOnGoal": 2,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 3,
-            "fouls": 6,
-            "offsides": null,
-            "possession": "56%",
-            "redCards": null,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 5,
-            "totalShots": 12,
-            "yellowCards": 1
-          },
-          "home": {
-            "corners": 1,
-            "fouls": 9,
-            "offsides": null,
-            "possession": "44%",
-            "redCards": null,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 2,
-            "totalShots": 7,
-            "yellowCards": 1
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 9374,
             "name": "Cl\u00e9ment Turpin",
             "nationality": "France",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Clement Turpin, France",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 9374,
             "name": "Cl\u00e9ment Turpin",
             "nationality": "France",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Clement Turpin, France",
             "type": "REFEREE"
           }
         ],
@@ -48965,25 +48482,11 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Cl\u00e9ment Turpin",
-          "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Clement Turpin, France",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 9374,
           "name": "Cl\u00e9ment Turpin",
           "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Clement Turpin, France",
           "type": "REFEREE"
         }
       ],
@@ -146325,11 +145828,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 9,
-      "awayFouls": 13,
-      "awayOffsides": 5,
-      "awayPossession": "53%",
-      "awayShotsOnGoal": 7,
       "awayTeam": {
         "crest": "https://crests.football-data.org/usa.svg",
         "id": 771,
@@ -146367,11 +145865,16 @@
       "events": [
         {
           "assist": "S. Berhalter",
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "3'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 3,
           "player": "A. Trusty",
           "playerOff": null,
@@ -146385,11 +145888,16 @@
         },
         {
           "assist": "B. Yilmaz",
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 10,
           "player": "A. Guler",
           "playerOff": null,
@@ -146402,30 +145910,17 @@
           "type": "Goal"
         },
         {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "19'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 19,
-          "player": "Sebastian Berhalter",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "19:00",
-          "timerSeconds": 1140,
-          "type": "Yellow Card"
-        },
-        {
           "assist": "O. Kokcu",
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "31'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 31,
           "player": "B. Yilmaz",
           "playerOff": null,
@@ -146439,11 +145934,16 @@
         },
         {
           "assist": null,
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "49'",
           "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 49,
           "player": "S. Berhalter",
           "playerOff": null,
@@ -146456,156 +145956,17 @@
           "type": "Goal"
         },
         {
-          "assist": "C. Pulisic",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "58'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 58,
-          "player": "T. Weah",
-          "playerOff": "T. Weah",
-          "playerOn": "C. Pulisic",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "58:00",
-          "timerSeconds": 3480,
-          "type": "Substitution"
-        },
-        {
-          "assist": "S. Dest",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "76'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 76,
-          "player": "G. Reyna",
-          "playerOff": "G. Reyna",
-          "playerOn": "S. Dest",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "76:00",
-          "timerSeconds": 4560,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Zendejas",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "B. Aaronson",
-          "playerOff": "B. Aaronson",
-          "playerOn": "A. Zendejas",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Freeman",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "77'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 77,
-          "player": "J. Scally",
-          "playerOff": "J. Scally",
-          "playerOn": "A. Freeman",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "77:00",
-          "timerSeconds": 4620,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Soyuncu",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "Z. Celik",
-          "playerOff": "Z. Celik",
-          "playerOn": "C. Soyuncu",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "C. Uzun",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "84'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 84,
-          "player": "K. Yildiz",
-          "playerOff": "K. Yildiz",
-          "playerOn": "C. Uzun",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "84:00",
-          "timerSeconds": 5040,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Tillman",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "86'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 86,
-          "player": "W. McKennie",
-          "playerOff": "W. McKennie",
-          "playerOn": "M. Tillman",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "USA",
-          "timer": "86:00",
-          "timerSeconds": 5160,
-          "type": "Substitution"
-        },
-        {
-          "assist": "K. Ayhan",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "88'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 88,
-          "player": "O. Kokcu",
-          "playerOff": "O. Kokcu",
-          "playerOn": "K. Ayhan",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "88:00",
-          "timerSeconds": 5280,
-          "type": "Substitution"
-        },
-        {
           "assist": null,
+          "awayTeam": "USA",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90'",
           "extra": null,
+          "goalNumber": 5,
+          "homeTeam": "Turkey",
           "isDisallowed": false,
+          "matchId": 537349,
+          "matchUtcDate": "2026-06-26T02:00:00Z",
           "minute": 90,
           "player": "K. Ayhan",
           "playerOff": null,
@@ -146616,42 +145977,6 @@
           "timer": "90:00",
           "timerSeconds": 5400,
           "type": "Goal"
-        },
-        {
-          "assist": "M. Muldur",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "O. Aydin",
-          "playerOff": "O. Aydin",
-          "playerOn": "M. Muldur",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
-        },
-        {
-          "assist": "I. Kahveci",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "90+2'",
-          "extra": 2,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "B. Yilmaz",
-          "playerOff": "B. Yilmaz",
-          "playerOn": "I. Kahveci",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "T\u00fcrkiye",
-          "timer": "92:00",
-          "timerSeconds": 5520,
-          "type": "Substitution"
         }
       ],
       "goalEvents": [
@@ -146771,13 +146096,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "group": "GROUP_D",
-      "homeCorners": 2,
-      "homeFouls": 13,
-      "homeOffsides": 2,
-      "homePossession": "47%",
-      "homeShotsOnGoal": 3,
       "homeTeam": {
         "crest": "https://crests.football-data.org/803.svg",
         "id": 803,
@@ -146787,37 +146106,13 @@
       },
       "id": 537349,
       "lastUpdated": "2026-07-10T00:20:09Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 9,
-          "fouls": 13,
-          "offsides": 5,
-          "possession": "53%",
-          "redCards": null,
-          "shotsOffGoal": 6,
-          "shotsOnGoal": 7,
-          "totalShots": 18,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 2,
-          "fouls": 13,
-          "offsides": 2,
-          "possession": "47%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 3,
-          "totalShots": 9,
-          "yellowCards": 0
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1539012,
-        "awayCorners": 9,
-        "awayFouls": 13,
-        "awayOffsides": 5,
-        "awayPossession": "53%",
-        "awayShotsOnGoal": 7,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -146841,11 +146136,16 @@
         "events": [
           {
             "assist": "S. Berhalter",
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "3'",
             "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 3,
             "player": "A. Trusty",
             "playerOff": null,
@@ -146859,11 +146159,16 @@
           },
           {
             "assist": "B. Yilmaz",
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "10'",
             "extra": null,
+            "goalNumber": 2,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 10,
             "player": "A. Guler",
             "playerOff": null,
@@ -146876,30 +146181,17 @@
             "type": "Goal"
           },
           {
-            "assist": null,
-            "comments": "Foul",
-            "detail": "Yellow Card",
-            "displayMinute": "19'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 19,
-            "player": "Sebastian Berhalter",
-            "playerOff": null,
-            "playerOn": null,
-            "rawType": "Card",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "19:00",
-            "timerSeconds": 1140,
-            "type": "Yellow Card"
-          },
-          {
             "assist": "O. Kokcu",
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "31'",
             "extra": null,
+            "goalNumber": 3,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 31,
             "player": "B. Yilmaz",
             "playerOff": null,
@@ -146913,11 +146205,16 @@
           },
           {
             "assist": null,
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "49'",
             "extra": null,
+            "goalNumber": 4,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 49,
             "player": "S. Berhalter",
             "playerOff": null,
@@ -146930,156 +146227,17 @@
             "type": "Goal"
           },
           {
-            "assist": "C. Pulisic",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "58'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 58,
-            "player": "T. Weah",
-            "playerOff": "T. Weah",
-            "playerOn": "C. Pulisic",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "58:00",
-            "timerSeconds": 3480,
-            "type": "Substitution"
-          },
-          {
-            "assist": "S. Dest",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "76'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 76,
-            "player": "G. Reyna",
-            "playerOff": "G. Reyna",
-            "playerOn": "S. Dest",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "76:00",
-            "timerSeconds": 4560,
-            "type": "Substitution"
-          },
-          {
-            "assist": "A. Zendejas",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "77'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 77,
-            "player": "B. Aaronson",
-            "playerOff": "B. Aaronson",
-            "playerOn": "A. Zendejas",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "77:00",
-            "timerSeconds": 4620,
-            "type": "Substitution"
-          },
-          {
-            "assist": "A. Freeman",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "77'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 77,
-            "player": "J. Scally",
-            "playerOff": "J. Scally",
-            "playerOn": "A. Freeman",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "77:00",
-            "timerSeconds": 4620,
-            "type": "Substitution"
-          },
-          {
-            "assist": "C. Soyuncu",
-            "comments": null,
-            "detail": "Substitution 1",
-            "displayMinute": "84'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 84,
-            "player": "Z. Celik",
-            "playerOff": "Z. Celik",
-            "playerOn": "C. Soyuncu",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "type": "Substitution"
-          },
-          {
-            "assist": "C. Uzun",
-            "comments": null,
-            "detail": "Substitution 2",
-            "displayMinute": "84'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 84,
-            "player": "K. Yildiz",
-            "playerOff": "K. Yildiz",
-            "playerOn": "C. Uzun",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "84:00",
-            "timerSeconds": 5040,
-            "type": "Substitution"
-          },
-          {
-            "assist": "M. Tillman",
-            "comments": null,
-            "detail": "Substitution 5",
-            "displayMinute": "86'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 86,
-            "player": "W. McKennie",
-            "playerOff": "W. McKennie",
-            "playerOn": "M. Tillman",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "USA",
-            "timer": "86:00",
-            "timerSeconds": 5160,
-            "type": "Substitution"
-          },
-          {
-            "assist": "K. Ayhan",
-            "comments": null,
-            "detail": "Substitution 3",
-            "displayMinute": "88'",
-            "extra": null,
-            "isDisallowed": false,
-            "minute": 88,
-            "player": "O. Kokcu",
-            "playerOff": "O. Kokcu",
-            "playerOn": "K. Ayhan",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "88:00",
-            "timerSeconds": 5280,
-            "type": "Substitution"
-          },
-          {
             "assist": null,
+            "awayTeam": "USA",
             "comments": null,
             "detail": "Normal Goal",
             "displayMinute": "90'",
             "extra": null,
+            "goalNumber": 5,
+            "homeTeam": "Turkey",
             "isDisallowed": false,
+            "matchId": 537349,
+            "matchUtcDate": "2026-06-26T02:00:00Z",
             "minute": 90,
             "player": "K. Ayhan",
             "playerOff": null,
@@ -147090,42 +146248,6 @@
             "timer": "90:00",
             "timerSeconds": 5400,
             "type": "Goal"
-          },
-          {
-            "assist": "M. Muldur",
-            "comments": null,
-            "detail": "Substitution 4",
-            "displayMinute": "90+2'",
-            "extra": 2,
-            "isDisallowed": false,
-            "minute": 90,
-            "player": "O. Aydin",
-            "playerOff": "O. Aydin",
-            "playerOn": "M. Muldur",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "type": "Substitution"
-          },
-          {
-            "assist": "I. Kahveci",
-            "comments": null,
-            "detail": "Substitution 5",
-            "displayMinute": "90+2'",
-            "extra": 2,
-            "isDisallowed": false,
-            "minute": 90,
-            "player": "B. Yilmaz",
-            "playerOff": "B. Yilmaz",
-            "playerOn": "I. Kahveci",
-            "rawType": "subst",
-            "source": "api_football_post_match",
-            "team": "T\u00fcrkiye",
-            "timer": "92:00",
-            "timerSeconds": 5520,
-            "type": "Substitution"
           }
         ],
         "goalEvents": [
@@ -147245,55 +146367,28 @@
             "type": "Goal"
           }
         ],
-        "goalEventsSource": "api_football_post_match",
-        "homeCorners": 2,
-        "homeFouls": 13,
-        "homeOffsides": 2,
-        "homePossession": "47%",
-        "homeShotsOnGoal": 3,
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 9,
-            "fouls": 13,
-            "offsides": 5,
-            "possession": "53%",
-            "redCards": null,
-            "shotsOffGoal": 6,
-            "shotsOnGoal": 7,
-            "totalShots": 18,
-            "yellowCards": 1
-          },
-          "home": {
-            "corners": 2,
-            "fouls": 13,
-            "offsides": 2,
-            "possession": "47%",
-            "redCards": null,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 3,
-            "totalShots": 9,
-            "yellowCards": 0
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 190017,
             "name": "Mustapha Ghorbal",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Mustapha Ghorbal, Algeria",
+            "nationality": null,
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 190017,
             "name": "Mustapha Ghorbal",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Mustapha Ghorbal, Algeria",
+            "nationality": null,
             "type": "REFEREE"
           }
         ],
@@ -147485,23 +146580,11 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Mustapha Ghorbal",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Mustapha Ghorbal, Algeria",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 190017,
           "name": "Mustapha Ghorbal",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Mustapha Ghorbal, Algeria",
+          "nationality": null,
           "type": "REFEREE"
         }
       ],
@@ -147718,11 +146801,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 3,
-      "awayFouls": 6,
-      "awayOffsides": null,
-      "awayPossession": "56%",
-      "awayShotsOnGoal": 5,
       "awayTeam": {
         "crest": "https://crests.football-data.org/779.svg",
         "id": 779,
@@ -147958,11 +147036,6 @@
         }
       ],
       "group": "GROUP_D",
-      "homeCorners": 1,
-      "homeFouls": 9,
-      "homeOffsides": null,
-      "homePossession": "44%",
-      "homeShotsOnGoal": 2,
       "homeTeam": {
         "crest": "https://crests.football-data.org/761.svg",
         "id": 761,
@@ -147972,37 +147045,13 @@
       },
       "id": 537350,
       "lastUpdated": "2026-07-10T00:20:09Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 3,
-          "fouls": 6,
-          "offsides": null,
-          "possession": "56%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 5,
-          "totalShots": 12,
-          "yellowCards": 1
-        },
-        "home": {
-          "corners": 1,
-          "fouls": 9,
-          "offsides": null,
-          "possession": "44%",
-          "redCards": null,
-          "shotsOffGoal": 4,
-          "shotsOnGoal": 2,
-          "totalShots": 7,
-          "yellowCards": 1
-        }
-      },
       "matchDetails": {
         "apiFootballFixtureId": 1489411,
-        "awayCorners": 3,
-        "awayFouls": 6,
+        "awayCorners": null,
+        "awayFouls": null,
         "awayOffsides": null,
-        "awayPossession": "56%",
-        "awayShotsOnGoal": 5,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
         "cardEvents": [
           {
             "assist": null,
@@ -148225,56 +147274,27 @@
         ],
         "goalEvents": [],
         "goalEventsSource": null,
-        "homeCorners": 1,
-        "homeFouls": 9,
+        "homeCorners": null,
+        "homeFouls": null,
         "homeOffsides": null,
-        "homePossession": "44%",
-        "homeShotsOnGoal": 2,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
         "lineups": [],
         "lineupsData": [],
-        "liveStatistics": {
-          "away": {
-            "corners": 3,
-            "fouls": 6,
-            "offsides": null,
-            "possession": "56%",
-            "redCards": null,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 5,
-            "totalShots": 12,
-            "yellowCards": 1
-          },
-          "home": {
-            "corners": 1,
-            "fouls": 9,
-            "offsides": null,
-            "possession": "44%",
-            "redCards": null,
-            "shotsOffGoal": 4,
-            "shotsOnGoal": 2,
-            "totalShots": 7,
-            "yellowCards": 1
-          }
-        },
+        "liveStatistics": {},
         "officials": [
           {
+            "id": 9374,
             "name": "Cl\u00e9ment Turpin",
             "nationality": "France",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Clement Turpin, France",
             "type": "REFEREE"
           }
         ],
         "referees": [
           {
+            "id": 9374,
             "name": "Cl\u00e9ment Turpin",
             "nationality": "France",
-            "type": "REFEREE"
-          },
-          {
-            "name": "Clement Turpin, France",
             "type": "REFEREE"
           }
         ],
@@ -148430,25 +147450,11 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Cl\u00e9ment Turpin",
-          "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Clement Turpin, France",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 9374,
           "name": "Cl\u00e9ment Turpin",
           "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Clement Turpin, France",
           "type": "REFEREE"
         }
       ],
