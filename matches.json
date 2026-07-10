@@ -48894,7 +48894,7 @@
       "awayCorners": 1,
       "awayFouls": 14,
       "awayOffsides": 1,
-      "awayPossession": "32%",
+      "awayPossession": "31%",
       "awayScore": 1,
       "awayShotsOnGoal": 2,
       "awayTeam": {
@@ -49195,7 +49195,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 88,
-          "player": null,
+          "player": "M. Merino",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -49254,6 +49254,29 @@
           "timer": "41:00",
           "timerSeconds": 2460,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "88'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537384,
+          "matchUtcDate": "2026-07-10T19:00:00Z",
+          "minute": 88,
+          "player": "M. Merino",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "88:00",
+          "timerSeconds": 5280,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -49261,9 +49284,9 @@
       "homeCorners": 5,
       "homeFouls": 11,
       "homeOffsides": 3,
-      "homePossession": "68%",
+      "homePossession": "69%",
       "homeScore": 2,
-      "homeShotsOnGoal": 5,
+      "homeShotsOnGoal": 7,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -49272,15 +49295,15 @@
         "tla": "ESP"
       },
       "id": 537384,
-      "lastApiSync": "2026-07-10T20:50:07.851449+00:00",
-      "lastUpdated": "2026-07-10T22:50:01Z",
+      "lastApiSync": "2026-07-10T20:50:35.086292+00:00",
+      "lastUpdated": "2026-07-10T22:50:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 1,
           "fouls": 14,
           "offsides": 1,
-          "possession": "32%",
+          "possession": "31%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 2,
@@ -49291,18 +49314,18 @@
           "corners": 5,
           "fouls": 11,
           "offsides": 3,
-          "possession": "68%",
+          "possession": "69%",
           "redCards": null,
           "shotsOffGoal": 4,
-          "shotsOnGoal": 5,
-          "totalShots": 14,
+          "shotsOnGoal": 7,
+          "totalShots": 16,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "88'",
-        "lastApiSync": "2026-07-10T20:50:07.851449+00:00",
+        "lastApiSync": "2026-07-10T20:50:35.086292+00:00",
         "seconds": 5280,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -49369,7 +49392,7 @@
           "away": 1,
           "home": 1
         },
-        "winner": "DRAW"
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
