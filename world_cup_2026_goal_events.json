@@ -24657,23 +24657,32 @@
     "utcDate": "2026-07-09T20:00:00Z"
   },
   "537384": {
+    "apiFootballFixtureId": 1581821,
     "awayScore": 0,
     "awayTeam": "Belgium",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Spain",
-    "phase_start": null,
+    "lastApiSync": "2026-07-10T19:01:35.811880+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-10T19:01:35.811880+00:00",
     "referees": [
       {
-        "id": 11605,
         "name": "Michael Oliver",
         "nationality": "England",
         "type": "REFEREE"
+      },
+      {
+        "name": "Michael Oliver, England",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-10T19:00:00Z"
   },
   "537385": {
