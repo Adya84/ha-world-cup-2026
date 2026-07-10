@@ -48914,8 +48914,54 @@
         "type": "CUP"
       },
       "displayMinute": "30'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "30'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 30,
+          "player": "F. Ruiz",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "30:00",
+          "timerSeconds": 1800,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 1800,
       "fallbackClockText": "30'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Belgium",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "30'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537384,
+          "matchUtcDate": "2026-07-10T19:00:00Z",
+          "minute": 30,
+          "player": "F. Ruiz",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "30:00",
+          "timerSeconds": 1800,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": null,
       "homeFouls": 2,
@@ -48931,8 +48977,8 @@
         "tla": "ESP"
       },
       "id": 537384,
-      "lastApiSync": "2026-07-10T19:29:59.371116+00:00",
-      "lastUpdated": "2026-07-10T21:29:51Z",
+      "lastApiSync": "2026-07-10T19:30:35.550319+00:00",
+      "lastUpdated": "2026-07-10T21:30:18Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48961,7 +49007,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "30'",
-        "lastApiSync": "2026-07-10T19:29:59.371116+00:00",
+        "lastApiSync": "2026-07-10T19:30:35.550319+00:00",
         "seconds": 1800,
         "source": "api_football_live_minute",
         "status": "1H",
