@@ -24660,7 +24660,7 @@
     "apiFootballFixtureId": 1581821,
     "awayScore": 1,
     "awayTeam": "Belgium",
-    "base_seconds": 5100,
+    "base_seconds": 5160,
     "cardEvents": [
       {
         "assist": null,
@@ -24700,8 +24700,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 5100,
-    "displayMinute": "85'",
+    "clock_seconds": 5160,
+    "displayMinute": "86'",
     "events": [
       {
         "assist": null,
@@ -24900,6 +24900,42 @@
         "timer": "85:00",
         "timerSeconds": 5100,
         "type": "Yellow Card"
+      },
+      {
+        "assist": "A. Saelemaekers",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "86'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 86,
+        "player": "K. De Bruyne",
+        "playerOff": "K. De Bruyne",
+        "playerOn": "A. Saelemaekers",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "86:00",
+        "timerSeconds": 5160,
+        "type": "Substitution"
+      },
+      {
+        "assist": "M. Merino",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "86'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 86,
+        "player": "D. Olmo",
+        "playerOff": "D. Olmo",
+        "playerOn": "M. Merino",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "86:00",
+        "timerSeconds": 5160,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24952,9 +24988,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Spain",
-    "lastApiSync": "2026-07-10T20:47:37.261485+00:00",
-    "manualClockText": "85'",
-    "phase_start": "2026-07-10T20:47:37.261485+00:00",
+    "lastApiSync": "2026-07-10T20:48:00.561859+00:00",
+    "manualClockText": "86'",
+    "phase_start": "2026-07-10T20:48:00.561859+00:00",
     "referees": [
       {
         "name": "Michael Oliver",
@@ -25093,6 +25129,42 @@
         "team": "Spain",
         "timer": "79:00",
         "timerSeconds": 4740,
+        "type": "Substitution"
+      },
+      {
+        "assist": "A. Saelemaekers",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "86'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 86,
+        "player": "K. De Bruyne",
+        "playerOff": "K. De Bruyne",
+        "playerOn": "A. Saelemaekers",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "86:00",
+        "timerSeconds": 5160,
+        "type": "Substitution"
+      },
+      {
+        "assist": "M. Merino",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "86'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 86,
+        "player": "D. Olmo",
+        "playerOff": "D. Olmo",
+        "playerOn": "M. Merino",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "86:00",
+        "timerSeconds": 5160,
         "type": "Substitution"
       }
     ],
