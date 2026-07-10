@@ -48924,7 +48924,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 3600,
+      "clockSeconds": 3660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48933,7 +48933,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "60'",
+      "displayMinute": "61'",
       "events": [
         {
           "assist": null,
@@ -49024,10 +49024,28 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Substitution"
+        },
+        {
+          "assist": "A. Witsel",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "L. Trossard",
+          "playerOff": "L. Trossard",
+          "playerOn": "A. Witsel",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "60:00",
+          "timerSeconds": 3600,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 3600,
-      "fallbackClockText": "60'",
+      "fallbackClock": 3660,
+      "fallbackClockText": "61'",
       "goalEvents": [
         {
           "assist": null,
@@ -49079,7 +49097,7 @@
       "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 4,
-      "homeFouls": 7,
+      "homeFouls": 8,
       "homeOffsides": 2,
       "homePossession": "65%",
       "homeScore": 1,
@@ -49092,8 +49110,8 @@
         "tla": "ESP"
       },
       "id": 537384,
-      "lastApiSync": "2026-07-10T20:22:10.427854+00:00",
-      "lastUpdated": "2026-07-10T22:22:06Z",
+      "lastApiSync": "2026-07-10T20:22:39.788105+00:00",
+      "lastUpdated": "2026-07-10T22:22:33Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -49109,7 +49127,7 @@
         },
         "home": {
           "corners": 4,
-          "fouls": 7,
+          "fouls": 8,
           "offsides": 2,
           "possession": "65%",
           "redCards": null,
@@ -49121,14 +49139,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "60'",
-        "lastApiSync": "2026-07-10T20:22:10.427854+00:00",
-        "seconds": 3600,
+        "displayMinute": "61'",
+        "lastApiSync": "2026-07-10T20:22:39.788105+00:00",
+        "seconds": 3660,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "60'"
+        "timer": "61'"
       },
-      "manualClockText": "60'",
+      "manualClockText": "61'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Los Angeles",
@@ -49153,7 +49171,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 60,
+      "minute": 61,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49236,6 +49254,24 @@
           "team": "Spain",
           "timer": "55:00",
           "timerSeconds": 3300,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Witsel",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "60'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 60,
+          "player": "L. Trossard",
+          "playerOff": "L. Trossard",
+          "playerOn": "A. Witsel",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Belgium",
+          "timer": "60:00",
+          "timerSeconds": 3600,
           "type": "Substitution"
         }
       ],
