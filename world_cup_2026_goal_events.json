@@ -24658,7 +24658,7 @@
   },
   "537384": {
     "apiFootballFixtureId": 1581821,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Belgium",
     "base_seconds": 2460,
     "clock_active": false,
@@ -24681,6 +24681,24 @@
         "team": "Spain",
         "timer": "30:00",
         "timerSeconds": 1800,
+        "type": "Goal"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "41'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 41,
+        "player": "C. De Ketelaere",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "41:00",
+        "timerSeconds": 2460,
         "type": "Goal"
       }
     ],
@@ -24707,13 +24725,36 @@
         "timer": "30:00",
         "timerSeconds": 1800,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "Belgium",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "41'",
+        "extra": null,
+        "goalNumber": 2,
+        "homeTeam": "Spain",
+        "isDisallowed": false,
+        "matchId": 537384,
+        "matchUtcDate": "2026-07-10T19:00:00Z",
+        "minute": 41,
+        "player": "C. De Ketelaere",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "41:00",
+        "timerSeconds": 2460,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "Spain",
-    "lastApiSync": "2026-07-10T19:41:10.643334+00:00",
+    "lastApiSync": "2026-07-10T19:41:39.704725+00:00",
     "manualClockText": "41'",
-    "phase_start": "2026-07-10T19:41:10.643334+00:00",
+    "phase_start": "2026-07-10T19:41:39.704725+00:00",
     "referees": [
       {
         "name": "Michael Oliver",
