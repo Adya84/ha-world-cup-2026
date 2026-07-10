@@ -24660,7 +24660,7 @@
     "apiFootballFixtureId": 1581821,
     "awayScore": 1,
     "awayTeam": "Belgium",
-    "base_seconds": 3600,
+    "base_seconds": 3660,
     "cardEvents": [
       {
         "assist": null,
@@ -24682,8 +24682,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 3600,
-    "displayMinute": "60'",
+    "clock_seconds": 3660,
+    "displayMinute": "61'",
     "events": [
       {
         "assist": null,
@@ -24774,6 +24774,24 @@
         "timer": "55:00",
         "timerSeconds": 3300,
         "type": "Substitution"
+      },
+      {
+        "assist": "A. Witsel",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "60'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 60,
+        "player": "L. Trossard",
+        "playerOff": "L. Trossard",
+        "playerOn": "A. Witsel",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "60:00",
+        "timerSeconds": 3600,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24826,9 +24844,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Spain",
-    "lastApiSync": "2026-07-10T20:22:10.427854+00:00",
-    "manualClockText": "60'",
-    "phase_start": "2026-07-10T20:22:10.427854+00:00",
+    "lastApiSync": "2026-07-10T20:22:39.788105+00:00",
+    "manualClockText": "61'",
+    "phase_start": "2026-07-10T20:22:39.788105+00:00",
     "referees": [
       {
         "name": "Michael Oliver",
@@ -24877,6 +24895,24 @@
         "team": "Spain",
         "timer": "55:00",
         "timerSeconds": 3300,
+        "type": "Substitution"
+      },
+      {
+        "assist": "A. Witsel",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "60'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 60,
+        "player": "L. Trossard",
+        "playerOff": "L. Trossard",
+        "playerOn": "A. Witsel",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Belgium",
+        "timer": "60:00",
+        "timerSeconds": 3600,
         "type": "Substitution"
       }
     ],
