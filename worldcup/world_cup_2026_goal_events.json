@@ -24320,12 +24320,12 @@
   },
   "537385": {
     "apiFootballFixtureId": 1581037,
-    "awayScore": 1,
+    "awayScore": 2,
     "awayTeam": "England",
-    "base_seconds": 5940,
+    "base_seconds": 6000,
     "clock_active": false,
-    "clock_seconds": 5940,
-    "displayMinute": "99'",
+    "clock_seconds": 6000,
+    "displayMinute": "100'",
     "events": [
       {
         "assist": "M. Odegaard",
@@ -24560,6 +24560,24 @@
         "timer": "91:00",
         "timerSeconds": 5460,
         "type": "Substitution"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "93'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 93,
+        "player": "J. Bellingham",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "93:00",
+        "timerSeconds": 5580,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -24608,13 +24626,36 @@
         "timer": "47:00",
         "timerSeconds": 2820,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "England",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "93'",
+        "extra": null,
+        "goalNumber": 3,
+        "homeTeam": "Norway",
+        "isDisallowed": false,
+        "matchId": 537385,
+        "matchUtcDate": "2026-07-11T21:00:00Z",
+        "minute": 93,
+        "player": "J. Bellingham",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "93:00",
+        "timerSeconds": 5580,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "Norway",
-    "lastApiSync": "2026-07-11T23:10:03.646676+00:00",
-    "manualClockText": "99'",
-    "phase_start": "2026-07-11T23:10:03.646676+00:00",
+    "lastApiSync": "2026-07-11T23:10:50.772900+00:00",
+    "manualClockText": "100'",
+    "phase_start": "2026-07-11T23:10:50.772900+00:00",
     "referees": [
       {
         "name": "Cl\u00e9ment Turpin",
