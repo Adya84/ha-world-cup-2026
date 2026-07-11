@@ -29519,25 +29519,11 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Alireza Faghani",
-          "nationality": "Iran",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Alireza Faghani, Australia",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 55970,
           "name": "Alireza Faghani",
           "nationality": "Iran",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Alireza Faghani, Australia",
           "type": "REFEREE"
         }
       ],
@@ -29754,11 +29740,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
-      "awayFouls": 16,
-      "awayOffsides": 1,
-      "awayPossession": "42%",
-      "awayShotsOnGoal": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/8070.png",
         "id": 8070,
@@ -29868,11 +29849,16 @@
       "events": [
         {
           "assist": "A. Mozgovoy",
+          "awayTeam": "Uzbekistan",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Congo DR",
           "isDisallowed": false,
+          "matchId": 537408,
+          "matchUtcDate": "2026-06-27T23:30:00Z",
           "minute": 10,
           "player": "E. Shomurodov",
           "playerOff": null,
@@ -29886,173 +29872,16 @@
         },
         {
           "assist": null,
-          "comments": null,
-          "detail": "Goal cancelled",
-          "displayMinute": "18'",
-          "extra": null,
-          "isDisallowed": true,
-          "minute": 18,
-          "player": "Nathana\u00ebl Mbuku",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Var",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "18:00",
-          "timerSeconds": 1080,
-          "type": "Disallowed Goal"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "21'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 21,
-          "player": "Noah Sadiki",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "21:00",
-          "timerSeconds": 1260,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "43'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 43,
-          "player": "Abdukodir Khusanov",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Uzbekistan",
-          "timer": "43:00",
-          "timerSeconds": 2580,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "48'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 48,
-          "player": "Sherzod Nasrullaev",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Uzbekistan",
-          "timer": "48:00",
-          "timerSeconds": 2880,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "45+5'",
-          "extra": 5,
-          "isDisallowed": false,
-          "minute": 45,
-          "player": "Nathana\u00ebl Mbuku",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "50:00",
-          "timerSeconds": 3000,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": "F. Mayele",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "51'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 51,
-          "player": "C. Bakambu",
-          "playerOff": "C. Bakambu",
-          "playerOn": "F. Mayele",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "51:00",
-          "timerSeconds": 3060,
-          "type": "Substitution"
-        },
-        {
-          "assist": "O. Khamrobekov",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "59'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 59,
-          "player": "O. Shukurov",
-          "playerOff": "O. Shukurov",
-          "playerOn": "O. Khamrobekov",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Uzbekistan",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Ganiev",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "59'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 59,
-          "player": "D. Khamdamov",
-          "playerOff": "D. Khamdamov",
-          "playerOn": "A. Ganiev",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Uzbekistan",
-          "timer": "59:00",
-          "timerSeconds": 3540,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "62'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 62,
-          "player": "Samuel Moutoussamy",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "62:00",
-          "timerSeconds": 3720,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
+          "awayTeam": "Uzbekistan",
           "comments": null,
           "detail": "Penalty",
           "displayMinute": "68'",
           "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "Congo DR",
           "isDisallowed": false,
+          "matchId": 537408,
+          "matchUtcDate": "2026-06-27T23:30:00Z",
           "minute": 68,
           "player": "Y. Wissa",
           "playerOff": null,
@@ -30062,87 +29891,20 @@
           "team": "Congo DR",
           "timer": "68:00",
           "timerSeconds": 4080,
-          "type": "Penalty"
-        },
-        {
-          "assist": "T. Bongonda",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "72'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 72,
-          "player": "B. Cipenga",
-          "playerOff": "B. Cipenga",
-          "playerOn": "T. Bongonda",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Elia",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "72'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 72,
-          "player": "N. Mbuku",
-          "playerOff": "N. Mbuku",
-          "playerOn": "M. Elia",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "type": "Substitution"
-        },
-        {
-          "assist": "N. Mukau",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "72'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 72,
-          "player": "S. Moutoussamy",
-          "playerOff": "S. Moutoussamy",
-          "playerOn": "N. Mukau",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "72:00",
-          "timerSeconds": 4320,
-          "type": "Substitution"
-        },
-        {
-          "assist": "O. Urunov",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "73'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 73,
-          "player": "A. Fayzullaev",
-          "playerOff": "A. Fayzullaev",
-          "playerOn": "O. Urunov",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Uzbekistan",
-          "timer": "73:00",
-          "timerSeconds": 4380,
-          "type": "Substitution"
+          "type": "Goal"
         },
         {
           "assist": null,
+          "awayTeam": "Uzbekistan",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "78'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Congo DR",
           "isDisallowed": false,
+          "matchId": 537408,
+          "matchUtcDate": "2026-06-27T23:30:00Z",
           "minute": 78,
           "player": "F. Mayele",
           "playerOff": null,
@@ -30155,66 +29917,17 @@
           "type": "Goal"
         },
         {
-          "assist": "I. Sergeev",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "82'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 82,
-          "player": "J. Urozov",
-          "playerOff": "J. Urozov",
-          "playerOn": "I. Sergeev",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Uzbekistan",
-          "timer": "82:00",
-          "timerSeconds": 4920,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Iskanderov",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "82'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 82,
-          "player": "A. Mozgovoy",
-          "playerOff": "A. Mozgovoy",
-          "playerOn": "J. Iskanderov",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Uzbekistan",
-          "timer": "82:00",
-          "timerSeconds": 4920,
-          "type": "Substitution"
-        },
-        {
-          "assist": "J. Kayembe",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "83'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 83,
-          "player": "A. Masuaku",
-          "playerOff": "A. Masuaku",
-          "playerOn": "J. Kayembe",
-          "rawType": "subst",
-          "source": "api_football_post_match",
-          "team": "Congo DR",
-          "timer": "83:00",
-          "timerSeconds": 4980,
-          "type": "Substitution"
-        },
-        {
           "assist": "M. Elia",
+          "awayTeam": "Uzbekistan",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "90'",
           "extra": null,
+          "goalNumber": 4,
+          "homeTeam": "Congo DR",
           "isDisallowed": false,
+          "matchId": 537408,
+          "matchUtcDate": "2026-06-27T23:30:00Z",
           "minute": 90,
           "player": "Y. Wissa",
           "playerOff": null,
@@ -30321,13 +30034,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_post_match",
       "group": "GROUP_K",
-      "homeCorners": 2,
-      "homeFouls": 6,
-      "homeOffsides": 3,
-      "homePossession": "58%",
-      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/congo_dr.svg",
         "id": 1934,
@@ -30337,53 +30044,15 @@
       },
       "id": 537408,
       "lastUpdated": "2026-07-11T20:20:11Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 4,
-          "fouls": 16,
-          "offsides": 1,
-          "possession": "42%",
-          "redCards": null,
-          "shotsOffGoal": 2,
-          "shotsOnGoal": 1,
-          "totalShots": 3,
-          "yellowCards": 2
-        },
-        "home": {
-          "corners": 2,
-          "fouls": 6,
-          "offsides": 3,
-          "possession": "58%",
-          "redCards": null,
-          "shotsOffGoal": 14,
-          "shotsOnGoal": 4,
-          "totalShots": 19,
-          "yellowCards": 3
-        }
-      },
       "matchday": 3,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Felix Zwayer",
-          "nationality": "Germany",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Felix Zwayer, Germany",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 43878,
           "name": "Felix Zwayer",
           "nationality": "Germany",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Felix Zwayer, Germany",
           "type": "REFEREE"
         }
       ],
@@ -48356,7 +48025,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 6540,
+      "clockSeconds": 5700,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48365,7 +48034,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "109'",
+      "displayMinute": "95'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -48618,10 +48287,28 @@
           "timer": "93:00",
           "timerSeconds": 5580,
           "type": "Goal"
+        },
+        {
+          "assist": "J. Larsen",
+          "comments": null,
+          "detail": "Substitution 6",
+          "displayMinute": "106'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 106,
+          "player": "E. Haaland",
+          "playerOff": "E. Haaland",
+          "playerOn": "J. Larsen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "106:00",
+          "timerSeconds": 6360,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 6540,
-      "fallbackClockText": "109'",
+      "fallbackClock": 5700,
+      "fallbackClockText": "95'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -48709,8 +48396,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T23:29:37.639336+00:00",
-      "lastUpdated": "2026-07-12T01:29:33Z",
+      "lastApiSync": "2026-07-11T23:30:18.430195+00:00",
+      "lastUpdated": "2026-07-12T01:30:07Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48738,14 +48425,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "109'",
-        "lastApiSync": "2026-07-11T23:29:37.639336+00:00",
-        "seconds": 6540,
+        "displayMinute": "95'",
+        "lastApiSync": "2026-07-11T23:30:18.430195+00:00",
+        "seconds": 5700,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "109'"
+        "timer": "95'"
       },
-      "manualClockText": "109'",
+      "manualClockText": "95'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -48770,7 +48457,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 109,
+      "minute": 95,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49005,6 +48692,24 @@
           "team": "Norway",
           "timer": "91:00",
           "timerSeconds": 5460,
+          "type": "Substitution"
+        },
+        {
+          "assist": "J. Larsen",
+          "comments": null,
+          "detail": "Substitution 6",
+          "displayMinute": "106'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 106,
+          "player": "E. Haaland",
+          "playerOff": "E. Haaland",
+          "playerOn": "J. Larsen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "106:00",
+          "timerSeconds": 6360,
           "type": "Substitution"
         }
       ],
