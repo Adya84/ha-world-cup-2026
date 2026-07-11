@@ -48356,7 +48356,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 3300,
+      "clockSeconds": 3360,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48365,7 +48365,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "55'",
+      "displayMinute": "56'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -48447,7 +48447,7 @@
           "extra": null,
           "isDisallowed": false,
           "minute": 55,
-          "player": null,
+          "player": "T. Heggem",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -48458,8 +48458,8 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 3300,
-      "fallbackClockText": "55'",
+      "fallbackClock": 3360,
+      "fallbackClockText": "56'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -48506,6 +48506,29 @@
           "timer": "47:00",
           "timerSeconds": 2820,
           "type": "Goal"
+        },
+        {
+          "assist": null,
+          "awayTeam": "England",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "55'",
+          "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Norway",
+          "isDisallowed": false,
+          "matchId": 537385,
+          "matchUtcDate": "2026-07-11T21:00:00Z",
+          "minute": 55,
+          "player": "T. Heggem",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "55:00",
+          "timerSeconds": 3300,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -48524,8 +48547,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T22:17:29.118454+00:00",
-      "lastUpdated": "2026-07-12T00:17:24Z",
+      "lastApiSync": "2026-07-11T22:18:03.434572+00:00",
+      "lastUpdated": "2026-07-12T00:17:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48553,14 +48576,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "55'",
-        "lastApiSync": "2026-07-11T22:17:29.118454+00:00",
-        "seconds": 3300,
+        "displayMinute": "56'",
+        "lastApiSync": "2026-07-11T22:18:03.434572+00:00",
+        "seconds": 3360,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "55'"
+        "timer": "56'"
       },
-      "manualClockText": "55'",
+      "manualClockText": "56'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -48585,7 +48608,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 55,
+      "minute": 56,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48621,7 +48644,7 @@
           "away": 1,
           "home": 1
         },
-        "winner": "DRAW"
+        "winner": "HOME_TEAM"
       },
       "scoreSource": "api_football_live",
       "season": {
