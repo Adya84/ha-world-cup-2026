@@ -48013,7 +48013,7 @@
         "name": "World"
       },
       "awayCorners": 4,
-      "awayFouls": 6,
+      "awayFouls": 7,
       "awayOffsides": 5,
       "awayPossession": "53%",
       "awayScore": 2,
@@ -48025,7 +48025,27 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 7020,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Unsportsmanlike conduct",
+          "detail": "Yellow Card",
+          "displayMinute": "117'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 117,
+          "player": "K. Ajer",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "117:00",
+          "timerSeconds": 7020,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 7080,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48034,7 +48054,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "117'",
+      "displayMinute": "118'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -48323,10 +48343,28 @@
           "timer": "111:00",
           "timerSeconds": 6660,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Unsportsmanlike conduct",
+          "detail": "Yellow Card",
+          "displayMinute": "117'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 117,
+          "player": "K. Ajer",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "117:00",
+          "timerSeconds": 7020,
+          "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 7020,
-      "fallbackClockText": "117'",
+      "fallbackClock": 7080,
+      "fallbackClockText": "118'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -48414,13 +48452,13 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T23:41:30.484327+00:00",
-      "lastUpdated": "2026-07-12T01:41:27Z",
+      "lastApiSync": "2026-07-11T23:42:03.257257+00:00",
+      "lastUpdated": "2026-07-12T01:41:57Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 4,
-          "fouls": 6,
+          "fouls": 7,
           "offsides": 5,
           "possession": "53%",
           "redCards": null,
@@ -48443,14 +48481,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "117'",
-        "lastApiSync": "2026-07-11T23:41:30.484327+00:00",
-        "seconds": 7020,
+        "displayMinute": "118'",
+        "lastApiSync": "2026-07-11T23:42:03.257257+00:00",
+        "seconds": 7080,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "117'"
+        "timer": "118'"
       },
-      "manualClockText": "117'",
+      "manualClockText": "118'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -48475,7 +48513,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 117,
+      "minute": 118,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
