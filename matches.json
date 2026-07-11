@@ -48348,7 +48348,6 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 0,
       "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
@@ -48368,20 +48367,18 @@
       },
       "id": 537385,
       "lastApiSync": null,
-      "lastUpdated": "2026-07-11T22:07:16Z",
-      "liveSource": "pre_kickoff_window",
+      "lastUpdated": "2026-07-11T23:01:18Z",
       "manualClock": {
         "active": false,
         "displayMinute": "0'",
         "lastApiSync": null,
         "seconds": 0,
         "source": "awaiting_api_football_minute",
-        "status": "LIVE",
+        "status": "IN_PLAY",
         "timer": "0:00"
       },
       "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
-      "minute": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48396,14 +48393,14 @@
       "score": {
         "duration": "REGULAR",
         "fullTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "halfTime": {
           "away": null,
           "home": null
         },
-        "winner": null
+        "winner": "DRAW"
       },
       "season": {
         "currentMatchday": 3,
@@ -48413,7 +48410,7 @@
         "winner": null
       },
       "stage": "QUARTER_FINALS",
-      "status": "LIVE",
+      "status": "IN_PLAY",
       "utcDate": "2026-07-11T21:00:00Z"
     },
     {
