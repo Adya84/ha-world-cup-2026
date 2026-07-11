@@ -48335,15 +48335,14 @@
     },
     {
       "apiFootballFixtureId": 1581037,
-      "apiFootballStatus": "BT",
-      "apiFootballStatusLong": "Break Time",
+      "apiFootballStatus": "ET",
+      "apiFootballStatusLong": "Extra Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 3,
       "awayFouls": 5,
       "awayOffsides": 3,
@@ -48357,7 +48356,8 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 5820,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48365,7 +48365,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "97'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -48582,8 +48582,28 @@
           "timer": "90:00",
           "timerSeconds": 5400,
           "type": "Substitution"
+        },
+        {
+          "assist": "L. Ostigard",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "91'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 91,
+          "player": "T. Heggem",
+          "playerOff": "T. Heggem",
+          "playerOn": "L. Ostigard",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "91:00",
+          "timerSeconds": 5460,
+          "type": "Substitution"
         }
       ],
+      "fallbackClock": 5820,
+      "fallbackClockText": "97'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -48648,8 +48668,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T23:01:11.934985+00:00",
-      "lastUpdated": "2026-07-12T01:07:25Z",
+      "lastApiSync": "2026-07-11T23:07:48.959953+00:00",
+      "lastUpdated": "2026-07-12T01:07:45Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48677,14 +48697,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-11T23:01:11.934985+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "BT",
-        "timer": "90:00"
+        "displayMinute": "97'",
+        "lastApiSync": "2026-07-11T23:07:48.959953+00:00",
+        "seconds": 5820,
+        "source": "api_football_live_minute",
+        "status": "ET",
+        "timer": "97'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "97'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -48709,6 +48729,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
+      "minute": 97,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48755,7 +48776,7 @@
         "winner": null
       },
       "stage": "QUARTER_FINALS",
-      "status": "BT",
+      "status": "ET",
       "substitutionEvents": [
         {
           "assist": "B. Saka",
@@ -48917,6 +48938,24 @@
           "team": "Norway",
           "timer": "90:00",
           "timerSeconds": 5400,
+          "type": "Substitution"
+        },
+        {
+          "assist": "L. Ostigard",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "91'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 91,
+          "player": "T. Heggem",
+          "playerOff": "T. Heggem",
+          "playerOn": "L. Ostigard",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "91:00",
+          "timerSeconds": 5460,
           "type": "Substitution"
         }
       ],
