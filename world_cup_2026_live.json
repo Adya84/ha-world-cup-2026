@@ -10,8 +10,8 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 3,
+      "awayCorners": 3,
+      "awayFouls": 4,
       "awayOffsides": 3,
       "awayPossession": "58%",
       "awayScore": 1,
@@ -23,7 +23,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 5340,
+      "clockSeconds": 5400,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "89'",
+      "displayMinute": "90'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -231,10 +231,28 @@
           "timer": "89:00",
           "timerSeconds": 5340,
           "type": "Substitution"
+        },
+        {
+          "assist": "M. Pedersen",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "D. Wolfe",
+          "playerOff": "D. Wolfe",
+          "playerOn": "M. Pedersen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "90:00",
+          "timerSeconds": 5400,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5340,
-      "fallbackClockText": "89'",
+      "fallbackClock": 5400,
+      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -299,13 +317,13 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T22:51:53.630138+00:00",
-      "lastUpdated": "2026-07-12T00:51:51Z",
+      "lastApiSync": "2026-07-11T22:52:15.230656+00:00",
+      "lastUpdated": "2026-07-12T00:52:12Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 2,
-          "fouls": 3,
+          "corners": 3,
+          "fouls": 4,
           "offsides": 3,
           "possession": "58%",
           "redCards": null,
@@ -328,14 +346,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "89'",
-        "lastApiSync": "2026-07-11T22:51:53.630138+00:00",
-        "seconds": 5340,
+        "displayMinute": "90'",
+        "lastApiSync": "2026-07-11T22:52:15.230656+00:00",
+        "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "89'"
+        "timer": "90'"
       },
-      "manualClockText": "89'",
+      "manualClockText": "90'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -360,7 +378,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 89,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -551,6 +569,24 @@
           "team": "England",
           "timer": "89:00",
           "timerSeconds": 5340,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Pedersen",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "D. Wolfe",
+          "playerOff": "D. Wolfe",
+          "playerOn": "M. Pedersen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "90:00",
+          "timerSeconds": 5400,
           "type": "Substitution"
         }
       ],
@@ -596,8 +632,8 @@
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 2,
-      "awayFouls": 3,
+      "awayCorners": 3,
+      "awayFouls": 4,
       "awayOffsides": 3,
       "awayPossession": "58%",
       "awayScore": 1,
@@ -609,7 +645,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 5340,
+      "clockSeconds": 5400,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -618,7 +654,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "89'",
+      "displayMinute": "90'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -817,10 +853,28 @@
           "timer": "89:00",
           "timerSeconds": 5340,
           "type": "Substitution"
+        },
+        {
+          "assist": "M. Pedersen",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "D. Wolfe",
+          "playerOff": "D. Wolfe",
+          "playerOn": "M. Pedersen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "90:00",
+          "timerSeconds": 5400,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5340,
-      "fallbackClockText": "89'",
+      "fallbackClock": 5400,
+      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -885,13 +939,13 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T22:51:53.630138+00:00",
-      "lastUpdated": "2026-07-12T00:51:51Z",
+      "lastApiSync": "2026-07-11T22:52:15.230656+00:00",
+      "lastUpdated": "2026-07-12T00:52:12Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
-          "corners": 2,
-          "fouls": 3,
+          "corners": 3,
+          "fouls": 4,
           "offsides": 3,
           "possession": "58%",
           "redCards": null,
@@ -914,14 +968,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "89'",
-        "lastApiSync": "2026-07-11T22:51:53.630138+00:00",
-        "seconds": 5340,
+        "displayMinute": "90'",
+        "lastApiSync": "2026-07-11T22:52:15.230656+00:00",
+        "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
-        "timer": "89'"
+        "timer": "90'"
       },
-      "manualClockText": "89'",
+      "manualClockText": "90'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -946,7 +1000,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 89,
+      "minute": 90,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1137,6 +1191,24 @@
           "team": "England",
           "timer": "89:00",
           "timerSeconds": 5340,
+          "type": "Substitution"
+        },
+        {
+          "assist": "M. Pedersen",
+          "comments": null,
+          "detail": "Substitution 4",
+          "displayMinute": "90'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 90,
+          "player": "D. Wolfe",
+          "playerOff": "D. Wolfe",
+          "playerOn": "M. Pedersen",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "90:00",
+          "timerSeconds": 5400,
           "type": "Substitution"
         }
       ],
