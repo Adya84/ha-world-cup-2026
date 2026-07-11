@@ -109,20 +109,20 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - Foul",
           "displayMinute": "55'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 55,
           "player": "T. Heggem",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Norway",
           "timer": "55:00",
           "timerSeconds": 3300,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
       "fallbackClock": 3480,
@@ -173,29 +173,6 @@
           "timer": "47:00",
           "timerSeconds": 2820,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "awayTeam": "England",
-          "comments": null,
-          "detail": "Normal Goal",
-          "displayMinute": "55'",
-          "extra": null,
-          "goalNumber": 3,
-          "homeTeam": "Norway",
-          "isDisallowed": false,
-          "matchId": 537385,
-          "matchUtcDate": "2026-07-11T21:00:00Z",
-          "minute": 55,
-          "player": "T. Heggem",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "55:00",
-          "timerSeconds": 3300,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -214,8 +191,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T22:20:14.543721+00:00",
-      "lastUpdated": "2026-07-12T00:19:22Z",
+      "lastApiSync": "2026-07-11T22:20:43.008920+00:00",
+      "lastUpdated": "2026-07-12T00:20:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -244,7 +221,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "58'",
-        "lastApiSync": "2026-07-11T22:20:14.543721+00:00",
+        "lastApiSync": "2026-07-11T22:20:43.008920+00:00",
         "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -502,20 +479,20 @@
         {
           "assist": null,
           "comments": null,
-          "detail": "Normal Goal",
+          "detail": "Goal Disallowed - Foul",
           "displayMinute": "55'",
           "extra": null,
-          "isDisallowed": false,
+          "isDisallowed": true,
           "minute": 55,
           "player": "T. Heggem",
           "playerOff": null,
           "playerOn": null,
-          "rawType": "Goal",
+          "rawType": "Var",
           "source": "api_football",
           "team": "Norway",
           "timer": "55:00",
           "timerSeconds": 3300,
-          "type": "Goal"
+          "type": "Disallowed Goal"
         }
       ],
       "fallbackClock": 3480,
@@ -566,29 +543,6 @@
           "timer": "47:00",
           "timerSeconds": 2820,
           "type": "Goal"
-        },
-        {
-          "assist": null,
-          "awayTeam": "England",
-          "comments": null,
-          "detail": "Normal Goal",
-          "displayMinute": "55'",
-          "extra": null,
-          "goalNumber": 3,
-          "homeTeam": "Norway",
-          "isDisallowed": false,
-          "matchId": 537385,
-          "matchUtcDate": "2026-07-11T21:00:00Z",
-          "minute": 55,
-          "player": "T. Heggem",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Goal",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "55:00",
-          "timerSeconds": 3300,
-          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -607,8 +561,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T22:20:14.543721+00:00",
-      "lastUpdated": "2026-07-12T00:19:22Z",
+      "lastApiSync": "2026-07-11T22:20:43.008920+00:00",
+      "lastUpdated": "2026-07-12T00:20:39Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -637,7 +591,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "58'",
-        "lastApiSync": "2026-07-11T22:20:14.543721+00:00",
+        "lastApiSync": "2026-07-11T22:20:43.008920+00:00",
         "seconds": 3480,
         "source": "api_football_live_minute",
         "status": "2H",
