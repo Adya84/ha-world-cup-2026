@@ -48004,8 +48004,8 @@
     },
     {
       "apiFootballFixtureId": 1581037,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "AET",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -48045,8 +48045,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7380,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48054,7 +48052,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "123'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -48363,8 +48360,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 7380,
-      "fallbackClockText": "123'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -48452,9 +48447,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T23:46:54.877521+00:00",
-      "lastUpdated": "2026-07-12T01:46:51Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-11T23:47:19.381754+00:00",
+      "lastUpdated": "2026-07-12T01:47:15Z",
       "liveStatistics": {
         "away": {
           "corners": 4,
@@ -48479,41 +48473,8 @@
           "yellowCards": 1
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "123'",
-        "lastApiSync": "2026-07-11T23:46:54.877521+00:00",
-        "seconds": 7380,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "123'"
-      },
-      "manualClockText": "123'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Miami",
-        "cloudCoverage": 98.4,
-        "condition": "cloudy",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-11T23:46:04.754648+00:00",
-        "humidity": 66.2,
-        "latitude": 25.958,
-        "longitude": -80.2389,
-        "name": "Hard Rock Stadium weather",
-        "observedAt": "2026-07-11T23:00:00Z",
-        "pressure": 1019.8,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Hard Rock Stadium",
-        "temperature": 30.5,
-        "temperatureUnit": "C",
-        "windBearing": 143.2,
-        "windSpeed": 2.8,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": null,
-      "minute": 123,
+      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48568,7 +48529,7 @@
         "winner": null
       },
       "stage": "QUARTER_FINALS",
-      "status": "ET",
+      "status": "AET",
       "substitutionEvents": [
         {
           "assist": "B. Saka",
@@ -48792,29 +48753,6 @@
         "city": "Miami",
         "id": 0,
         "name": "Hard Rock Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Miami",
-        "cloudCoverage": 98.4,
-        "condition": "cloudy",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-11T23:46:04.754648+00:00",
-        "humidity": 66.2,
-        "latitude": 25.958,
-        "longitude": -80.2389,
-        "name": "Hard Rock Stadium weather",
-        "observedAt": "2026-07-11T23:00:00Z",
-        "pressure": 1019.8,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Hard Rock Stadium",
-        "temperature": 30.5,
-        "temperatureUnit": "C",
-        "windBearing": 143.2,
-        "windSpeed": 2.8,
-        "windSpeedUnit": "m/s"
       }
     },
     {
