@@ -24322,10 +24322,10 @@
     "apiFootballFixtureId": 1581037,
     "awayScore": 1,
     "awayTeam": "England",
-    "base_seconds": 3600,
+    "base_seconds": 3660,
     "clock_active": false,
-    "clock_seconds": 3600,
-    "displayMinute": "60'",
+    "clock_seconds": 3660,
+    "displayMinute": "61'",
     "events": [
       {
         "assist": "M. Odegaard",
@@ -24416,6 +24416,24 @@
         "timer": "55:00",
         "timerSeconds": 3300,
         "type": "Disallowed Goal"
+      },
+      {
+        "assist": "F. Aursnes",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "60'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 60,
+        "player": "J. Ryerson",
+        "playerOff": "J. Ryerson",
+        "playerOn": "F. Aursnes",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "60:00",
+        "timerSeconds": 3600,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24468,9 +24486,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Norway",
-    "lastApiSync": "2026-07-11T22:22:27.527044+00:00",
-    "manualClockText": "60'",
-    "phase_start": "2026-07-11T22:22:27.527044+00:00",
+    "lastApiSync": "2026-07-11T22:22:58.029406+00:00",
+    "manualClockText": "61'",
+    "phase_start": "2026-07-11T22:22:58.029406+00:00",
     "referees": [
       {
         "name": "Cl\u00e9ment Turpin",
@@ -24519,6 +24537,24 @@
         "team": "England",
         "timer": "46:00",
         "timerSeconds": 2760,
+        "type": "Substitution"
+      },
+      {
+        "assist": "F. Aursnes",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "60'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 60,
+        "player": "J. Ryerson",
+        "playerOff": "J. Ryerson",
+        "playerOn": "F. Aursnes",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "60:00",
+        "timerSeconds": 3600,
         "type": "Substitution"
       }
     ],
