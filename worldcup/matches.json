@@ -48344,7 +48344,7 @@
         "name": "World"
       },
       "awayCorners": 3,
-      "awayFouls": 4,
+      "awayFouls": 5,
       "awayOffsides": 3,
       "awayPossession": "58%",
       "awayScore": 1,
@@ -48650,13 +48650,13 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T22:59:53.530347+00:00",
-      "lastUpdated": "2026-07-12T00:59:52Z",
+      "lastApiSync": "2026-07-11T23:00:24.473222+00:00",
+      "lastUpdated": "2026-07-12T01:00:13Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 3,
-          "fouls": 4,
+          "fouls": 5,
           "offsides": 3,
           "possession": "58%",
           "redCards": null,
@@ -48680,7 +48680,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "90'",
-        "lastApiSync": "2026-07-11T22:59:53.530347+00:00",
+        "lastApiSync": "2026-07-11T23:00:24.473222+00:00",
         "seconds": 5400,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -48983,12 +48983,19 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastUpdated": "2026-07-11T20:20:11Z",
+      "lastUpdated": "2026-07-12T01:00:01Z",
       "matchday": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [],
+      "referees": [
+        {
+          "id": 38806,
+          "name": "Jo\u00e3o Pinheiro",
+          "nationality": "Portugal",
+          "type": "REFEREE"
+        }
+      ],
       "score": {
         "duration": "REGULAR",
         "fullTime": {
