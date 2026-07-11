@@ -48366,8 +48366,49 @@
         "type": "CUP"
       },
       "displayMinute": "35'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 36,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
+        }
+      ],
       "fallbackClock": 2100,
       "fallbackClockText": "35'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "36'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 36,
+          "player": null,
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Norway",
+          "timer": "36:00",
+          "timerSeconds": 2160,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 0,
       "homeFouls": 3,
@@ -48383,8 +48424,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T21:36:31.240751+00:00",
-      "lastUpdated": "2026-07-11T23:36:27Z",
+      "lastApiSync": "2026-07-11T21:36:53.351770+00:00",
+      "lastUpdated": "2026-07-11T23:36:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48413,7 +48454,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "35'",
-        "lastApiSync": "2026-07-11T21:36:31.240751+00:00",
+        "lastApiSync": "2026-07-11T21:36:53.351770+00:00",
         "seconds": 2100,
         "source": "api_football_live_minute",
         "status": "1H",
