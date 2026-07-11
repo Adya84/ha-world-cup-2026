@@ -23,7 +23,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 5820,
+      "clockSeconds": 5880,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,7 +32,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "97'",
+      "displayMinute": "98'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -269,8 +269,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5820,
-      "fallbackClockText": "97'",
+      "fallbackClock": 5880,
+      "fallbackClockText": "98'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -335,8 +335,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T23:08:14.679286+00:00",
-      "lastUpdated": "2026-07-12T01:08:09Z",
+      "lastApiSync": "2026-07-11T23:08:40.196619+00:00",
+      "lastUpdated": "2026-07-12T01:08:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -364,14 +364,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "97'",
-        "lastApiSync": "2026-07-11T23:08:14.679286+00:00",
-        "seconds": 5820,
+        "displayMinute": "98'",
+        "lastApiSync": "2026-07-11T23:08:40.196619+00:00",
+        "seconds": 5880,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "97'"
+        "timer": "98'"
       },
-      "manualClockText": "97'",
+      "manualClockText": "98'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -396,7 +396,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 97,
+      "minute": 98,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -423,12 +423,20 @@
         }
       ],
       "score": {
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
+        "extraTime": {
+          "away": 0,
+          "home": 0
+        },
         "fullTime": {
           "away": 1,
           "home": 1
         },
         "halfTime": {
+          "away": 1,
+          "home": 1
+        },
+        "regularTime": {
           "away": 1,
           "home": 1
         },
@@ -681,7 +689,7 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 5820,
+      "clockSeconds": 5880,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -690,7 +698,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "97'",
+      "displayMinute": "98'",
       "events": [
         {
           "assist": "M. Odegaard",
@@ -927,8 +935,8 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5820,
-      "fallbackClockText": "97'",
+      "fallbackClock": 5880,
+      "fallbackClockText": "98'",
       "goalEvents": [
         {
           "assist": "M. Odegaard",
@@ -993,8 +1001,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T23:08:14.679286+00:00",
-      "lastUpdated": "2026-07-12T01:08:09Z",
+      "lastApiSync": "2026-07-11T23:08:40.196619+00:00",
+      "lastUpdated": "2026-07-12T01:08:37Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1022,14 +1030,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "97'",
-        "lastApiSync": "2026-07-11T23:08:14.679286+00:00",
-        "seconds": 5820,
+        "displayMinute": "98'",
+        "lastApiSync": "2026-07-11T23:08:40.196619+00:00",
+        "seconds": 5880,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "97'"
+        "timer": "98'"
       },
-      "manualClockText": "97'",
+      "manualClockText": "98'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Miami",
@@ -1054,7 +1062,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 97,
+      "minute": 98,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1081,12 +1089,20 @@
         }
       ],
       "score": {
-        "duration": "REGULAR",
+        "duration": "EXTRA_TIME",
+        "extraTime": {
+          "away": 0,
+          "home": 0
+        },
         "fullTime": {
           "away": 1,
           "home": 1
         },
         "halfTime": {
+          "away": 1,
+          "home": 1
+        },
+        "regularTime": {
           "away": 1,
           "home": 1
         },
