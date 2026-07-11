@@ -48386,6 +48386,42 @@
           "type": "Goal"
         },
         {
+          "assist": "B. Saka",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "N. Madueke",
+          "playerOff": "N. Madueke",
+          "playerOn": "B. Saka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Eze",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Rice",
+          "playerOff": "D. Rice",
+          "playerOn": "E. Eze",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
           "assist": "A. Gordon",
           "comments": null,
           "detail": "Normal Goal",
@@ -48470,8 +48506,8 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-11T22:08:06.520779+00:00",
-      "lastUpdated": "2026-07-12T00:08:04Z",
+      "lastApiSync": "2026-07-11T22:08:32.075474+00:00",
+      "lastUpdated": "2026-07-12T00:08:28Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48500,7 +48536,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "46'",
-        "lastApiSync": "2026-07-11T22:08:06.520779+00:00",
+        "lastApiSync": "2026-07-11T22:08:32.075474+00:00",
         "seconds": 2760,
         "source": "api_football_live_minute",
         "status": "2H",
@@ -48579,6 +48615,44 @@
       },
       "stage": "QUARTER_FINALS",
       "status": "2H",
+      "substitutionEvents": [
+        {
+          "assist": "B. Saka",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "N. Madueke",
+          "playerOff": "N. Madueke",
+          "playerOn": "B. Saka",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "E. Eze",
+          "comments": null,
+          "detail": "Substitution 2",
+          "displayMinute": "46'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 46,
+          "player": "D. Rice",
+          "playerOff": "D. Rice",
+          "playerOn": "E. Eze",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "England",
+          "timer": "46:00",
+          "timerSeconds": 2760,
+          "type": "Substitution"
+        }
+      ],
       "utcDate": "2026-07-11T21:00:00Z",
       "venue": {
         "city": "Miami",
