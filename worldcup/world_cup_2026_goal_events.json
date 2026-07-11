@@ -24322,10 +24322,10 @@
     "apiFootballFixtureId": 1581037,
     "awayScore": 0,
     "awayTeam": "England",
-    "base_seconds": 2100,
+    "base_seconds": 2160,
     "clock_active": false,
-    "clock_seconds": 2100,
-    "displayMinute": "35'",
+    "clock_seconds": 2160,
+    "displayMinute": "36'",
     "events": [
       {
         "assist": null,
@@ -24335,7 +24335,7 @@
         "extra": null,
         "isDisallowed": false,
         "minute": 36,
-        "player": null,
+        "player": "A. Schjelderup",
         "playerOff": null,
         "playerOn": null,
         "rawType": "Goal",
@@ -24346,12 +24346,36 @@
         "type": "Goal"
       }
     ],
-    "goalEvents": [],
-    "homeScore": 0,
+    "goalEvents": [
+      {
+        "assist": null,
+        "awayTeam": "England",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "36'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "Norway",
+        "isDisallowed": false,
+        "matchId": 537385,
+        "matchUtcDate": "2026-07-11T21:00:00Z",
+        "minute": 36,
+        "player": "A. Schjelderup",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "36:00",
+        "timerSeconds": 2160,
+        "type": "Goal"
+      }
+    ],
+    "homeScore": 1,
     "homeTeam": "Norway",
-    "lastApiSync": "2026-07-11T21:36:53.351770+00:00",
-    "manualClockText": "35'",
-    "phase_start": "2026-07-11T21:36:53.351770+00:00",
+    "lastApiSync": "2026-07-11T21:37:15.151770+00:00",
+    "manualClockText": "36'",
+    "phase_start": "2026-07-11T21:37:15.151770+00:00",
     "referees": [
       {
         "name": "Cl\u00e9ment Turpin",
