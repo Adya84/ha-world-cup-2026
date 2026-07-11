@@ -24322,10 +24322,10 @@
     "apiFootballFixtureId": 1581037,
     "awayScore": 1,
     "awayTeam": "England",
-    "base_seconds": 5400,
+    "base_seconds": 5820,
     "clock_active": false,
-    "clock_seconds": 5400,
-    "displayMinute": "90'",
+    "clock_seconds": 5820,
+    "displayMinute": "97'",
     "events": [
       {
         "assist": "M. Odegaard",
@@ -24542,6 +24542,24 @@
         "timer": "90:00",
         "timerSeconds": 5400,
         "type": "Substitution"
+      },
+      {
+        "assist": "L. Ostigard",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "91'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 91,
+        "player": "T. Heggem",
+        "playerOff": "T. Heggem",
+        "playerOn": "L. Ostigard",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "91:00",
+        "timerSeconds": 5460,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24594,9 +24612,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Norway",
-    "lastApiSync": "2026-07-11T23:01:11.934985+00:00",
-    "manualClockText": "90'",
-    "phase_start": null,
+    "lastApiSync": "2026-07-11T23:07:48.959953+00:00",
+    "manualClockText": "97'",
+    "phase_start": "2026-07-11T23:07:48.959953+00:00",
     "referees": [
       {
         "name": "Cl\u00e9ment Turpin",
@@ -24608,8 +24626,8 @@
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "BT",
+    "source": "api_football_live_minute",
+    "status": "ET",
     "substitutionEvents": [
       {
         "assist": "B. Saka",
@@ -24771,6 +24789,24 @@
         "team": "Norway",
         "timer": "90:00",
         "timerSeconds": 5400,
+        "type": "Substitution"
+      },
+      {
+        "assist": "L. Ostigard",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "91'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 91,
+        "player": "T. Heggem",
+        "playerOff": "T. Heggem",
+        "playerOn": "L. Ostigard",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Norway",
+        "timer": "91:00",
+        "timerSeconds": 5460,
         "type": "Substitution"
       }
     ],
