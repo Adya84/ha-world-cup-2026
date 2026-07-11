@@ -24319,23 +24319,32 @@
     "utcDate": "2026-07-10T19:00:00Z"
   },
   "537385": {
+    "apiFootballFixtureId": 1581037,
     "awayScore": 0,
     "awayTeam": "England",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Norway",
-    "phase_start": null,
+    "lastApiSync": "2026-07-11T21:01:52.766769+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-11T21:01:52.766769+00:00",
     "referees": [
       {
-        "id": 9374,
         "name": "Cl\u00e9ment Turpin",
         "nationality": "France",
         "type": "REFEREE"
+      },
+      {
+        "name": "Clement Turpin, France",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-11T21:00:00Z"
   },
   "537386": {
