@@ -48237,8 +48237,8 @@
     },
     {
       "apiFootballFixtureId": 1582681,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "AET",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -48368,8 +48368,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7440,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48377,7 +48375,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "124'",
       "events": [
         {
           "assist": "L. Messi",
@@ -48776,8 +48773,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 7440,
-      "fallbackClockText": "124'",
       "goalEvents": [
         {
           "assist": "L. Messi",
@@ -48888,9 +48883,8 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastApiSync": "2026-07-12T03:44:33.332314+00:00",
-      "lastUpdated": "2026-07-12T05:44:30Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-12T03:44:56.763467+00:00",
+      "lastUpdated": "2026-07-12T05:44:55Z",
       "liveStatistics": {
         "away": {
           "corners": 2,
@@ -48915,41 +48909,8 @@
           "yellowCards": 3
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "124'",
-        "lastApiSync": "2026-07-12T03:44:33.332314+00:00",
-        "seconds": 7440,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "124'"
-      },
-      "manualClockText": "124'",
-      "matchWeather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Kansas City",
-        "cloudCoverage": 0.0,
-        "condition": "clearsky_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-12T03:34:57.921724+00:00",
-        "humidity": 65.7,
-        "latitude": 39.0489,
-        "longitude": -94.4839,
-        "name": "Arrowhead Stadium weather",
-        "observedAt": "2026-07-12T03:00:00Z",
-        "pressure": 1018.4,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Arrowhead Stadium",
-        "temperature": 26.1,
-        "temperatureUnit": "C",
-        "windBearing": 83.2,
-        "windSpeed": 3.2,
-        "windSpeedUnit": "m/s"
-      },
       "matchday": null,
-      "minute": 124,
+      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -49004,7 +48965,7 @@
         "winner": null
       },
       "stage": "QUARTER_FINALS",
-      "status": "ET",
+      "status": "AET",
       "substitutionEvents": [
         {
           "assist": "N. Gonzalez",
@@ -49228,29 +49189,6 @@
         "city": "Kansas City",
         "id": 0,
         "name": "Arrowhead Stadium"
-      },
-      "weather": {
-        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
-        "city": "Kansas City",
-        "cloudCoverage": 0.0,
-        "condition": "clearsky_night",
-        "country": "USA",
-        "dewPoint": null,
-        "fetchedAt": "2026-07-12T03:34:57.921724+00:00",
-        "humidity": 65.7,
-        "latitude": 39.0489,
-        "longitude": -94.4839,
-        "name": "Arrowhead Stadium weather",
-        "observedAt": "2026-07-12T03:00:00Z",
-        "pressure": 1018.4,
-        "pressureUnit": "hPa",
-        "source": "met_no_stadium",
-        "stadium": "Arrowhead Stadium",
-        "temperature": 26.1,
-        "temperatureUnit": "C",
-        "windBearing": 83.2,
-        "windSpeed": 3.2,
-        "windSpeedUnit": "m/s"
       }
     },
     {
