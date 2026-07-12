@@ -13,7 +13,7 @@
       "awayCorners": 0,
       "awayFouls": 2,
       "awayOffsides": null,
-      "awayPossession": "54%",
+      "awayPossession": "53%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -23,7 +23,7 @@
         "shortName": "Switzerland",
         "tla": "SUI"
       },
-      "clockSeconds": 600,
+      "clockSeconds": 660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -32,17 +32,17 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "10'",
+      "displayMinute": "11'",
       "events": [
         {
-          "assist": null,
+          "assist": "L. Messi",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
           "isDisallowed": false,
           "minute": 10,
-          "player": null,
+          "player": "A. Mac Allister",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -53,18 +53,23 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 600,
-      "fallbackClockText": "10'",
+      "fallbackClock": 660,
+      "fallbackClockText": "11'",
       "goalEvents": [
         {
-          "assist": null,
+          "assist": "L. Messi",
+          "awayTeam": "Switzerland",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Argentina",
           "isDisallowed": false,
+          "matchId": 537386,
+          "matchUtcDate": "2026-07-12T01:00:00Z",
           "minute": 10,
-          "player": null,
+          "player": "A. Mac Allister",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -77,12 +82,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 1,
+      "homeCorners": 2,
       "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "46%",
+      "homePossession": "47%",
       "homeScore": 1,
-      "homeShotsOnGoal": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -91,15 +96,15 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastApiSync": "2026-07-12T01:11:03.171857+00:00",
-      "lastUpdated": "2026-07-12T03:10:57Z",
+      "lastApiSync": "2026-07-12T01:11:29.116853+00:00",
+      "lastUpdated": "2026-07-12T03:11:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 2,
           "offsides": null,
-          "possession": "54%",
+          "possession": "53%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -107,27 +112,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 1,
+          "corners": 2,
           "fouls": 1,
           "offsides": null,
-          "possession": "46%",
+          "possession": "47%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 2,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "10'",
-        "lastApiSync": "2026-07-12T01:11:03.171857+00:00",
-        "seconds": 600,
+        "displayMinute": "11'",
+        "lastApiSync": "2026-07-12T01:11:29.116853+00:00",
+        "seconds": 660,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "10'"
+        "timer": "11'"
       },
-      "manualClockText": "10'",
+      "manualClockText": "11'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -135,7 +140,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-12T01:01:13.692652+00:00",
+        "fetchedAt": "2026-07-12T01:11:28.933344+00:00",
         "humidity": 56.6,
         "latitude": 39.0489,
         "longitude": -94.4839,
@@ -152,7 +157,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 10,
+      "minute": 11,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -199,7 +204,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-12T01:01:13.692652+00:00",
+        "fetchedAt": "2026-07-12T01:11:28.933344+00:00",
         "humidity": 56.6,
         "latitude": 39.0489,
         "longitude": -94.4839,
@@ -231,7 +236,7 @@
       "awayCorners": 0,
       "awayFouls": 2,
       "awayOffsides": null,
-      "awayPossession": "54%",
+      "awayPossession": "53%",
       "awayScore": 0,
       "awayShotsOnGoal": 0,
       "awayTeam": {
@@ -241,7 +246,7 @@
         "shortName": "Switzerland",
         "tla": "SUI"
       },
-      "clockSeconds": 600,
+      "clockSeconds": 660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -250,17 +255,17 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "10'",
+      "displayMinute": "11'",
       "events": [
         {
-          "assist": null,
+          "assist": "L. Messi",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
           "isDisallowed": false,
           "minute": 10,
-          "player": null,
+          "player": "A. Mac Allister",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -271,18 +276,23 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 600,
-      "fallbackClockText": "10'",
+      "fallbackClock": 660,
+      "fallbackClockText": "11'",
       "goalEvents": [
         {
-          "assist": null,
+          "assist": "L. Messi",
+          "awayTeam": "Switzerland",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "10'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Argentina",
           "isDisallowed": false,
+          "matchId": 537386,
+          "matchUtcDate": "2026-07-12T01:00:00Z",
           "minute": 10,
-          "player": null,
+          "player": "A. Mac Allister",
           "playerOff": null,
           "playerOn": null,
           "rawType": "Goal",
@@ -295,12 +305,12 @@
       ],
       "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 1,
+      "homeCorners": 2,
       "homeFouls": 1,
       "homeOffsides": null,
-      "homePossession": "46%",
+      "homePossession": "47%",
       "homeScore": 1,
-      "homeShotsOnGoal": 0,
+      "homeShotsOnGoal": 1,
       "homeTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -309,15 +319,15 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastApiSync": "2026-07-12T01:11:03.171857+00:00",
-      "lastUpdated": "2026-07-12T03:10:57Z",
+      "lastApiSync": "2026-07-12T01:11:29.116853+00:00",
+      "lastUpdated": "2026-07-12T03:11:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 0,
           "fouls": 2,
           "offsides": null,
-          "possession": "54%",
+          "possession": "53%",
           "redCards": null,
           "shotsOffGoal": 1,
           "shotsOnGoal": 0,
@@ -325,27 +335,27 @@
           "yellowCards": null
         },
         "home": {
-          "corners": 1,
+          "corners": 2,
           "fouls": 1,
           "offsides": null,
-          "possession": "46%",
+          "possession": "47%",
           "redCards": null,
           "shotsOffGoal": 0,
-          "shotsOnGoal": 0,
-          "totalShots": 1,
+          "shotsOnGoal": 1,
+          "totalShots": 2,
           "yellowCards": null
         }
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "10'",
-        "lastApiSync": "2026-07-12T01:11:03.171857+00:00",
-        "seconds": 600,
+        "displayMinute": "11'",
+        "lastApiSync": "2026-07-12T01:11:29.116853+00:00",
+        "seconds": 660,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "10'"
+        "timer": "11'"
       },
-      "manualClockText": "10'",
+      "manualClockText": "11'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -353,7 +363,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-12T01:01:13.692652+00:00",
+        "fetchedAt": "2026-07-12T01:11:28.933344+00:00",
         "humidity": 56.6,
         "latitude": 39.0489,
         "longitude": -94.4839,
@@ -370,7 +380,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 10,
+      "minute": 11,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -417,7 +427,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-12T01:01:13.692652+00:00",
+        "fetchedAt": "2026-07-12T01:11:28.933344+00:00",
         "humidity": 56.6,
         "latitude": 39.0489,
         "longitude": -94.4839,
