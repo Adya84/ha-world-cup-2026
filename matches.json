@@ -48314,7 +48314,7 @@
           "type": "Red Card"
         }
       ],
-      "clockSeconds": 5760,
+      "clockSeconds": 5820,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48323,7 +48323,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "96'",
+      "displayMinute": "97'",
       "events": [
         {
           "assist": "L. Messi",
@@ -48558,10 +48558,28 @@
           "timer": "95:00",
           "timerSeconds": 5700,
           "type": "Substitution"
+        },
+        {
+          "assist": "A. Jashari",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "96'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 96,
+          "player": "D. Zakaria",
+          "playerOff": "D. Zakaria",
+          "playerOn": "A. Jashari",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Switzerland",
+          "timer": "96:00",
+          "timerSeconds": 5760,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 5760,
-      "fallbackClockText": "96'",
+      "fallbackClock": 5820,
+      "fallbackClockText": "97'",
       "goalEvents": [
         {
           "assist": "L. Messi",
@@ -48626,8 +48644,8 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastApiSync": "2026-07-12T03:11:27.929749+00:00",
-      "lastUpdated": "2026-07-12T05:11:24Z",
+      "lastApiSync": "2026-07-12T03:11:58.857383+00:00",
+      "lastUpdated": "2026-07-12T05:11:54Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48655,14 +48673,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "96'",
-        "lastApiSync": "2026-07-12T03:11:27.929749+00:00",
-        "seconds": 5760,
+        "displayMinute": "97'",
+        "lastApiSync": "2026-07-12T03:11:58.857383+00:00",
+        "seconds": 5820,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "96'"
+        "timer": "97'"
       },
-      "manualClockText": "96'",
+      "manualClockText": "97'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -48687,7 +48705,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 96,
+      "minute": 97,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48886,6 +48904,24 @@
           "team": "Switzerland",
           "timer": "95:00",
           "timerSeconds": 5700,
+          "type": "Substitution"
+        },
+        {
+          "assist": "A. Jashari",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "96'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 96,
+          "player": "D. Zakaria",
+          "playerOff": "D. Zakaria",
+          "playerOn": "A. Jashari",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Switzerland",
+          "timer": "96:00",
+          "timerSeconds": 5760,
           "type": "Substitution"
         }
       ],
