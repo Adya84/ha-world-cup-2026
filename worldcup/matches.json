@@ -48350,7 +48350,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6420,
+      "clockSeconds": 6660,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -48359,7 +48359,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "107'",
+      "displayMinute": "111'",
       "events": [
         {
           "assist": "L. Messi",
@@ -48648,10 +48648,28 @@
           "timer": "98:00",
           "timerSeconds": 5880,
           "type": "Yellow Card"
+        },
+        {
+          "assist": "N. Otamendi",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "106'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 106,
+          "player": "C. Romero",
+          "playerOff": "C. Romero",
+          "playerOn": "N. Otamendi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "106:00",
+          "timerSeconds": 6360,
+          "type": "Substitution"
         }
       ],
-      "fallbackClock": 6420,
-      "fallbackClockText": "107'",
+      "fallbackClock": 6660,
+      "fallbackClockText": "111'",
       "goalEvents": [
         {
           "assist": "L. Messi",
@@ -48716,8 +48734,8 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastApiSync": "2026-07-12T03:25:54.919580+00:00",
-      "lastUpdated": "2026-07-12T05:25:51Z",
+      "lastApiSync": "2026-07-12T03:26:21.654198+00:00",
+      "lastUpdated": "2026-07-12T05:26:19Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48745,14 +48763,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "107'",
-        "lastApiSync": "2026-07-12T03:25:54.919580+00:00",
-        "seconds": 6420,
+        "displayMinute": "111'",
+        "lastApiSync": "2026-07-12T03:26:21.654198+00:00",
+        "seconds": 6660,
         "source": "api_football_live_minute",
         "status": "ET",
-        "timer": "107'"
+        "timer": "111'"
       },
-      "manualClockText": "107'",
+      "manualClockText": "111'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -48777,7 +48795,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 107,
+      "minute": 111,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48994,6 +49012,24 @@
           "team": "Switzerland",
           "timer": "96:00",
           "timerSeconds": 5760,
+          "type": "Substitution"
+        },
+        {
+          "assist": "N. Otamendi",
+          "comments": null,
+          "detail": "Substitution 5",
+          "displayMinute": "106'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 106,
+          "player": "C. Romero",
+          "playerOff": "C. Romero",
+          "playerOn": "N. Otamendi",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "106:00",
+          "timerSeconds": 6360,
           "type": "Substitution"
         }
       ],
