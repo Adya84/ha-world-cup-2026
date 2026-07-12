@@ -48004,20 +48004,12 @@
     },
     {
       "apiFootballFixtureId": 1581037,
-      "apiFootballStatus": "AET",
-      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayCorners": 4,
-      "awayFouls": 8,
-      "awayOffsides": 5,
-      "awayPossession": "53%",
-      "awayScore": 2,
-      "awayShotsOnGoal": 8,
       "awayTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -48055,11 +48047,16 @@
       "events": [
         {
           "assist": "M. Odegaard",
+          "awayTeam": "England",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "36'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Norway",
           "isDisallowed": false,
+          "matchId": 537385,
+          "matchUtcDate": "2026-07-11T21:00:00Z",
           "minute": 36,
           "player": "A. Schjelderup",
           "playerOff": null,
@@ -48072,48 +48069,17 @@
           "type": "Goal"
         },
         {
-          "assist": "B. Saka",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "N. Madueke",
-          "playerOff": "N. Madueke",
-          "playerOn": "B. Saka",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "England",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
-          "assist": "E. Eze",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "46'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 46,
-          "player": "D. Rice",
-          "playerOff": "D. Rice",
-          "playerOn": "E. Eze",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "England",
-          "timer": "46:00",
-          "timerSeconds": 2760,
-          "type": "Substitution"
-        },
-        {
           "assist": "A. Gordon",
+          "awayTeam": "England",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "45+2'",
           "extra": 2,
+          "goalNumber": 2,
+          "homeTeam": "Norway",
           "isDisallowed": false,
+          "matchId": 537385,
+          "matchUtcDate": "2026-07-11T21:00:00Z",
           "minute": 45,
           "player": "J. Bellingham",
           "playerOff": null,
@@ -48127,173 +48093,16 @@
         },
         {
           "assist": null,
-          "comments": null,
-          "detail": "Goal Disallowed - Foul",
-          "displayMinute": "55'",
-          "extra": null,
-          "isDisallowed": true,
-          "minute": 55,
-          "player": "T. Heggem",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Var",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "55:00",
-          "timerSeconds": 3300,
-          "type": "Disallowed Goal"
-        },
-        {
-          "assist": "F. Aursnes",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "60'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 60,
-          "player": "J. Ryerson",
-          "playerOff": "J. Ryerson",
-          "playerOn": "F. Aursnes",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "60:00",
-          "timerSeconds": 3600,
-          "type": "Substitution"
-        },
-        {
-          "assist": "O. Bobb",
-          "comments": null,
-          "detail": "Substitution 2",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 68,
-          "player": "A. Sorloth",
-          "playerOff": "A. Sorloth",
-          "playerOn": "O. Bobb",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
-        },
-        {
-          "assist": "A. Nusa",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "68'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 68,
-          "player": "A. Schjelderup",
-          "playerOff": "A. Schjelderup",
-          "playerOn": "A. Nusa",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "68:00",
-          "timerSeconds": 4080,
-          "type": "Substitution"
-        },
-        {
-          "assist": "R. James",
-          "comments": null,
-          "detail": "Substitution 3",
-          "displayMinute": "71'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 71,
-          "player": "A. Gordon",
-          "playerOff": "A. Gordon",
-          "playerOn": "R. James",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "England",
-          "timer": "71:00",
-          "timerSeconds": 4260,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Spence",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "86'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 86,
-          "player": "N. O'Reilly",
-          "playerOff": "N. O'Reilly",
-          "playerOn": "D. Spence",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "England",
-          "timer": "86:00",
-          "timerSeconds": 5160,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Rogers",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "89'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 89,
-          "player": "E. Konsa",
-          "playerOff": "E. Konsa",
-          "playerOn": "M. Rogers",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "England",
-          "timer": "89:00",
-          "timerSeconds": 5340,
-          "type": "Substitution"
-        },
-        {
-          "assist": "M. Pedersen",
-          "comments": null,
-          "detail": "Substitution 4",
-          "displayMinute": "90'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 90,
-          "player": "D. Wolfe",
-          "playerOff": "D. Wolfe",
-          "playerOn": "M. Pedersen",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "90:00",
-          "timerSeconds": 5400,
-          "type": "Substitution"
-        },
-        {
-          "assist": "L. Ostigard",
-          "comments": null,
-          "detail": "Substitution 5",
-          "displayMinute": "91'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 91,
-          "player": "T. Heggem",
-          "playerOff": "T. Heggem",
-          "playerOn": "L. Ostigard",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "91:00",
-          "timerSeconds": 5460,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
+          "awayTeam": "England",
           "comments": null,
           "detail": "Normal Goal",
           "displayMinute": "93'",
           "extra": null,
+          "goalNumber": 3,
+          "homeTeam": "Norway",
           "isDisallowed": false,
+          "matchId": 537385,
+          "matchUtcDate": "2026-07-11T21:00:00Z",
           "minute": 93,
           "player": "J. Bellingham",
           "playerOff": null,
@@ -48304,60 +48113,6 @@
           "timer": "93:00",
           "timerSeconds": 5580,
           "type": "Goal"
-        },
-        {
-          "assist": "J. Larsen",
-          "comments": null,
-          "detail": "Substitution 6",
-          "displayMinute": "106'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 106,
-          "player": "E. Haaland",
-          "playerOff": "E. Haaland",
-          "playerOn": "J. Larsen",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "106:00",
-          "timerSeconds": 6360,
-          "type": "Substitution"
-        },
-        {
-          "assist": "D. Burn",
-          "comments": null,
-          "detail": "Substitution 6",
-          "displayMinute": "111'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 111,
-          "player": "J. Bellingham",
-          "playerOff": "J. Bellingham",
-          "playerOn": "D. Burn",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "England",
-          "timer": "111:00",
-          "timerSeconds": 6660,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Unsportsmanlike conduct",
-          "detail": "Yellow Card",
-          "displayMinute": "117'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 117,
-          "player": "K. Ajer",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Norway",
-          "timer": "117:00",
-          "timerSeconds": 7020,
-          "type": "Yellow Card"
         }
       ],
       "goalEvents": [
@@ -48431,14 +48186,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeCorners": 7,
-      "homeFouls": 10,
-      "homeOffsides": 1,
-      "homePossession": "47%",
-      "homeScore": 1,
-      "homeShotsOnGoal": 4,
       "homeTeam": {
         "crest": "https://crests.football-data.org/813.svg",
         "id": 8872,
@@ -48447,56 +48195,16 @@
         "tla": "NOR"
       },
       "id": 537385,
-      "lastApiSync": "2026-07-12T00:14:07.048146+00:00",
       "lastUpdated": "2026-07-12T01:48:31Z",
-      "liveStatistics": {
-        "away": {
-          "corners": 4,
-          "fouls": 8,
-          "offsides": 5,
-          "possession": "53%",
-          "redCards": null,
-          "shotsOffGoal": 3,
-          "shotsOnGoal": 8,
-          "totalShots": 14,
-          "yellowCards": 0
-        },
-        "home": {
-          "corners": 7,
-          "fouls": 10,
-          "offsides": 1,
-          "possession": "47%",
-          "redCards": null,
-          "shotsOffGoal": 6,
-          "shotsOnGoal": 4,
-          "totalShots": 13,
-          "yellowCards": 1
-        }
-      },
       "matchday": null,
-      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Cl\u00e9ment Turpin",
-          "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Clement Turpin, France",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 9374,
           "name": "Cl\u00e9ment Turpin",
           "nationality": "France",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Clement Turpin, France",
           "type": "REFEREE"
         }
       ],
@@ -48520,7 +48228,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -48529,7 +48236,7 @@
         "winner": null
       },
       "stage": "QUARTER_FINALS",
-      "status": "AET",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "B. Saka",
@@ -48748,12 +48455,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-11T21:00:00Z",
-      "venue": {
-        "city": "Miami",
-        "id": 0,
-        "name": "Hard Rock Stadium"
-      }
+      "utcDate": "2026-07-11T21:00:00Z"
     },
     {
       "area": {
