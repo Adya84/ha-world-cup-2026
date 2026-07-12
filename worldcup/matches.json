@@ -48248,7 +48248,7 @@
       "awayCorners": 2,
       "awayFouls": 15,
       "awayOffsides": 2,
-      "awayPossession": "43%",
+      "awayPossession": "42%",
       "awayScore": 1,
       "awayShotsOnGoal": 5,
       "awayTeam": {
@@ -48312,6 +48312,24 @@
           "timer": "72:00",
           "timerSeconds": 4320,
           "type": "Red Card"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "97'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 97,
+          "player": "T. Almada",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "97:00",
+          "timerSeconds": 5820,
+          "type": "Yellow Card"
         }
       ],
       "clockSeconds": 5820,
@@ -48576,6 +48594,24 @@
           "timer": "96:00",
           "timerSeconds": 5760,
           "type": "Substitution"
+        },
+        {
+          "assist": null,
+          "comments": "Holding",
+          "detail": "Yellow Card",
+          "displayMinute": "97'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 97,
+          "player": "T. Almada",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "97:00",
+          "timerSeconds": 5820,
+          "type": "Yellow Card"
         }
       ],
       "fallbackClock": 5820,
@@ -48633,7 +48669,7 @@
       "homeCorners": 6,
       "homeFouls": 10,
       "homeOffsides": 3,
-      "homePossession": "57%",
+      "homePossession": "58%",
       "homeScore": 1,
       "homeShotsOnGoal": 3,
       "homeTeam": {
@@ -48644,15 +48680,15 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastApiSync": "2026-07-12T03:12:24.773151+00:00",
-      "lastUpdated": "2026-07-12T05:12:21Z",
+      "lastApiSync": "2026-07-12T03:12:54.126257+00:00",
+      "lastUpdated": "2026-07-12T05:12:51Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
           "corners": 2,
           "fouls": 15,
           "offsides": 2,
-          "possession": "43%",
+          "possession": "42%",
           "redCards": 1,
           "shotsOffGoal": 1,
           "shotsOnGoal": 5,
@@ -48663,18 +48699,18 @@
           "corners": 6,
           "fouls": 10,
           "offsides": 3,
-          "possession": "57%",
+          "possession": "58%",
           "redCards": 0,
-          "shotsOffGoal": 6,
+          "shotsOffGoal": 7,
           "shotsOnGoal": 3,
-          "totalShots": 13,
+          "totalShots": 14,
           "yellowCards": 1
         }
       },
       "manualClock": {
         "active": false,
         "displayMinute": "97'",
-        "lastApiSync": "2026-07-12T03:12:24.773151+00:00",
+        "lastApiSync": "2026-07-12T03:12:54.126257+00:00",
         "seconds": 5820,
         "source": "api_football_live_minute",
         "status": "ET",
