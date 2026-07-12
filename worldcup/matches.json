@@ -48237,15 +48237,14 @@
     },
     {
       "apiFootballFixtureId": 1582681,
-      "apiFootballStatus": "BT",
-      "apiFootballStatusLong": "Break Time",
+      "apiFootballStatus": "ET",
+      "apiFootballStatusLong": "Extra Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 2,
       "awayFouls": 15,
       "awayOffsides": 2,
@@ -48315,7 +48314,8 @@
           "type": "Red Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 5700,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -48323,7 +48323,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "95'",
       "events": [
         {
           "assist": "L. Messi",
@@ -48542,6 +48542,8 @@
           "type": "Substitution"
         }
       ],
+      "fallbackClock": 5700,
+      "fallbackClockText": "95'",
       "goalEvents": [
         {
           "assist": "L. Messi",
@@ -48606,8 +48608,8 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastApiSync": "2026-07-12T03:01:06.762063+00:00",
-      "lastUpdated": "2026-07-12T05:05:34Z",
+      "lastApiSync": "2026-07-12T03:05:56.640527+00:00",
+      "lastUpdated": "2026-07-12T05:05:55Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48635,14 +48637,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-12T03:01:06.762063+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "BT",
-        "timer": "90:00"
+        "displayMinute": "95'",
+        "lastApiSync": "2026-07-12T03:05:56.640527+00:00",
+        "seconds": 5700,
+        "source": "api_football_live_minute",
+        "status": "ET",
+        "timer": "95'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "95'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "Kansas City",
@@ -48667,6 +48669,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
+      "minute": 95,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -48713,7 +48716,7 @@
         "winner": null
       },
       "stage": "QUARTER_FINALS",
-      "status": "BT",
+      "status": "ET",
       "substitutionEvents": [
         {
           "assist": "N. Gonzalez",
