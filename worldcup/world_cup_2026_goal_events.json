@@ -24724,13 +24724,19 @@
     "utcDate": "2026-07-11T21:00:00Z"
   },
   "537386": {
+    "apiFootballFixtureId": 1582681,
     "awayScore": 0,
     "awayTeam": "Switzerland",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Argentina",
-    "phase_start": null,
+    "lastApiSync": "2026-07-12T01:01:13.878171+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-12T01:01:13.878171+00:00",
     "referees": [
       {
         "id": 38806,
@@ -24739,8 +24745,8 @@
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-12T01:00:00Z"
   },
   "537387": {
