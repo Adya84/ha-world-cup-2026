@@ -48553,8 +48553,8 @@
         "tla": "ARG"
       },
       "id": 537386,
-      "lastApiSync": "2026-07-12T01:32:21.328352+00:00",
-      "lastUpdated": "2026-07-12T03:32:18Z",
+      "lastApiSync": "2026-07-12T01:32:50.817421+00:00",
+      "lastUpdated": "2026-07-12T03:32:48Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -48583,7 +48583,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "32'",
-        "lastApiSync": "2026-07-12T01:32:21.328352+00:00",
+        "lastApiSync": "2026-07-12T01:32:50.817421+00:00",
         "seconds": 1920,
         "source": "api_football_live_minute",
         "status": "1H",
@@ -48618,11 +48618,25 @@
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 38806,
           "name": "Jo\u00e3o Pinheiro",
           "nationality": "Portugal",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Joao Pedro Pinheiro, Portugal",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Jo\u00e3o Pinheiro",
+          "nationality": "Portugal",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Joao Pedro Pinheiro, Portugal",
           "type": "REFEREE"
         }
       ],
