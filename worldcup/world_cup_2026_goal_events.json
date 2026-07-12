@@ -24727,7 +24727,7 @@
     "apiFootballFixtureId": 1582681,
     "awayScore": 1,
     "awayTeam": "Switzerland",
-    "base_seconds": 4680,
+    "base_seconds": 4740,
     "cardEvents": [
       {
         "assist": null,
@@ -24785,8 +24785,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4680,
-    "displayMinute": "78'",
+    "clock_seconds": 4740,
+    "displayMinute": "79'",
     "events": [
       {
         "assist": "L. Messi",
@@ -24877,6 +24877,24 @@
         "timer": "72:00",
         "timerSeconds": 4320,
         "type": "Red Card"
+      },
+      {
+        "assist": "N. Gonzalez",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "78'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 78,
+        "player": "N. Tagliafico",
+        "playerOff": "N. Tagliafico",
+        "playerOn": "N. Gonzalez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "78:00",
+        "timerSeconds": 4680,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24929,9 +24947,9 @@
     ],
     "homeScore": 1,
     "homeTeam": "Argentina",
-    "lastApiSync": "2026-07-12T02:39:47.089928+00:00",
-    "manualClockText": "78'",
-    "phase_start": "2026-07-12T02:39:47.089928+00:00",
+    "lastApiSync": "2026-07-12T02:40:10.693264+00:00",
+    "manualClockText": "79'",
+    "phase_start": "2026-07-12T02:40:10.693264+00:00",
     "referees": [
       {
         "name": "Jo\u00e3o Pinheiro",
@@ -24945,6 +24963,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "2H",
+    "substitutionEvents": [
+      {
+        "assist": "N. Gonzalez",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "78'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 78,
+        "player": "N. Tagliafico",
+        "playerOff": "N. Tagliafico",
+        "playerOn": "N. Gonzalez",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "78:00",
+        "timerSeconds": 4680,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-07-12T01:00:00Z"
   },
   "537387": {
