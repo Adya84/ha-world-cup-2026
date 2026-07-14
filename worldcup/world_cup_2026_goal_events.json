@@ -24075,29 +24075,16 @@
     "events": [
       {
         "assist": null,
-        "comments": "Foul",
-        "detail": "Yellow Card",
-        "displayMinute": "9'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 9,
-        "player": "Adrien Rabiot",
-        "playerOff": null,
-        "playerOn": null,
-        "rawType": "Card",
-        "source": "api_football",
-        "team": "France",
-        "timer": "9:00",
-        "timerSeconds": 540,
-        "type": "Yellow Card"
-      },
-      {
-        "assist": null,
+        "awayTeam": "Spain",
         "comments": null,
         "detail": "Penalty",
         "displayMinute": "22'",
         "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "France",
         "isDisallowed": false,
+        "matchId": 537387,
+        "matchUtcDate": "2026-07-14T19:00:00Z",
         "minute": 22,
         "player": "Mikel Oyarzabal",
         "playerOff": null,
@@ -24107,43 +24094,7 @@
         "team": "Spain",
         "timer": "22:00",
         "timerSeconds": 1320,
-        "type": "Penalty"
-      },
-      {
-        "assist": "Maxence Lacroix",
-        "comments": null,
-        "detail": "Substitution 1",
-        "displayMinute": "30'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 30,
-        "player": "William Saliba",
-        "playerOff": "William Saliba",
-        "playerOn": "Maxence Lacroix",
-        "rawType": "subst",
-        "source": "api_football",
-        "team": "France",
-        "timer": "30:00",
-        "timerSeconds": 1800,
-        "type": "Substitution"
-      },
-      {
-        "assist": null,
-        "comments": "Foul",
-        "detail": "Yellow Card",
-        "displayMinute": "31'",
-        "extra": null,
-        "isDisallowed": false,
-        "minute": 31,
-        "player": "Marc Cucurella",
-        "playerOff": null,
-        "playerOn": null,
-        "rawType": "Card",
-        "source": "api_football",
-        "team": "Spain",
-        "timer": "31:00",
-        "timerSeconds": 1860,
-        "type": "Yellow Card"
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -24175,19 +24126,17 @@
     "homeTeam": "France",
     "lastApiSync": "2026-07-14T19:59:48.317033+00:00",
     "manualClockText": "45'",
-    "phase_start": "2026-07-14T19:59:48.317033+00:00",
+    "phase_start": null,
     "referees": [
       {
+        "id": 190010,
         "name": "Ivan Barton",
-        "type": "REFEREE"
-      },
-      {
-        "name": "Iv\u00e1n Barton, El Salvador",
+        "nationality": null,
         "type": "REFEREE"
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "PAUSED",
     "substitutionEvents": [
       {
         "assist": "Maxence Lacroix",
