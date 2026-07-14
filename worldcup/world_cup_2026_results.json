@@ -84956,6 +84956,323 @@
         }
       ],
       "utcDate": "2026-07-12T01:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1585131,
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/760.svg",
+        "id": 760,
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP"
+      },
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "9'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 9,
+          "player": "Adrien Rabiot",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "France",
+          "timer": "9:00",
+          "timerSeconds": 540,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "31'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 31,
+          "player": "Marc Cucurella",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Yellow Card"
+        }
+      ],
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "events": [
+        {
+          "assist": null,
+          "awayTeam": "Spain",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "22'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
+          "isDisallowed": false,
+          "matchId": 537387,
+          "matchUtcDate": "2026-07-14T19:00:00Z",
+          "minute": 22,
+          "player": "Mikel Oyarzabal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
+        }
+      ],
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Spain",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "22'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
+          "isDisallowed": false,
+          "matchId": 537387,
+          "matchUtcDate": "2026-07-14T19:00:00Z",
+          "minute": 22,
+          "player": "Mikel Oyarzabal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
+        }
+      ],
+      "group": null,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/773.svg",
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA"
+      },
+      "id": 537387,
+      "lastUpdated": "2026-07-14T22:59:16Z",
+      "matchDetails": {
+        "apiFootballFixtureId": 1585131,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [
+          {
+            "assist": null,
+            "comments": "Foul",
+            "detail": "Yellow Card",
+            "displayMinute": "9'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 9,
+            "player": "Adrien Rabiot",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Card",
+            "source": "api_football",
+            "team": "France",
+            "timer": "9:00",
+            "timerSeconds": 540,
+            "type": "Yellow Card"
+          },
+          {
+            "assist": null,
+            "comments": "Foul",
+            "detail": "Yellow Card",
+            "displayMinute": "31'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 31,
+            "player": "Marc Cucurella",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Card",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "31:00",
+            "timerSeconds": 1860,
+            "type": "Yellow Card"
+          }
+        ],
+        "events": [
+          {
+            "assist": null,
+            "awayTeam": "Spain",
+            "comments": null,
+            "detail": "Penalty",
+            "displayMinute": "22'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "France",
+            "isDisallowed": false,
+            "matchId": 537387,
+            "matchUtcDate": "2026-07-14T19:00:00Z",
+            "minute": 22,
+            "player": "Mikel Oyarzabal",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "22:00",
+            "timerSeconds": 1320,
+            "type": "Goal"
+          }
+        ],
+        "goalEvents": [
+          {
+            "assist": null,
+            "awayTeam": "Spain",
+            "comments": null,
+            "detail": "Penalty",
+            "displayMinute": "22'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "France",
+            "isDisallowed": false,
+            "matchId": 537387,
+            "matchUtcDate": "2026-07-14T19:00:00Z",
+            "minute": 22,
+            "player": "Mikel Oyarzabal",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "22:00",
+            "timerSeconds": 1320,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 190010,
+            "name": "Ivan Barton",
+            "nationality": null,
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 190010,
+            "name": "Ivan Barton",
+            "nationality": null,
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [
+          {
+            "assist": "Maxence Lacroix",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "30'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 30,
+            "player": "William Saliba",
+            "playerOff": "William Saliba",
+            "playerOn": "Maxence Lacroix",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "France",
+            "timer": "30:00",
+            "timerSeconds": 1800,
+            "type": "Substitution"
+          }
+        ],
+        "weather": {}
+      },
+      "matchday": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 190010,
+          "name": "Ivan Barton",
+          "nationality": null,
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 2,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 1,
+          "home": 0
+        },
+        "winner": "AWAY_TEAM"
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "SEMI_FINALS",
+      "status": "FINISHED",
+      "substitutionEvents": [
+        {
+          "assist": "Maxence Lacroix",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "30'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 30,
+          "player": "William Saliba",
+          "playerOff": "William Saliba",
+          "playerOn": "Maxence Lacroix",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "France",
+          "timer": "30:00",
+          "timerSeconds": 1800,
+          "type": "Substitution"
+        }
+      ],
+      "utcDate": "2026-07-14T19:00:00Z"
     }
   ],
   "results": [
@@ -169915,6 +170232,323 @@
         }
       ],
       "utcDate": "2026-07-12T01:00:00Z"
+    },
+    {
+      "apiFootballFixtureId": 1585131,
+      "area": {
+        "code": "INT",
+        "flag": null,
+        "id": 2267,
+        "name": "World"
+      },
+      "awayTeam": {
+        "crest": "https://crests.football-data.org/760.svg",
+        "id": 760,
+        "name": "Spain",
+        "shortName": "Spain",
+        "tla": "ESP"
+      },
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "9'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 9,
+          "player": "Adrien Rabiot",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "France",
+          "timer": "9:00",
+          "timerSeconds": 540,
+          "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": "Foul",
+          "detail": "Yellow Card",
+          "displayMinute": "31'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 31,
+          "player": "Marc Cucurella",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "31:00",
+          "timerSeconds": 1860,
+          "type": "Yellow Card"
+        }
+      ],
+      "competition": {
+        "code": "WC",
+        "emblem": "https://crests.football-data.org/wm26.png",
+        "id": 2000,
+        "name": "FIFA World Cup",
+        "type": "CUP"
+      },
+      "events": [
+        {
+          "assist": null,
+          "awayTeam": "Spain",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "22'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
+          "isDisallowed": false,
+          "matchId": 537387,
+          "matchUtcDate": "2026-07-14T19:00:00Z",
+          "minute": 22,
+          "player": "Mikel Oyarzabal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
+        }
+      ],
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Spain",
+          "comments": null,
+          "detail": "Penalty",
+          "displayMinute": "22'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
+          "isDisallowed": false,
+          "matchId": 537387,
+          "matchUtcDate": "2026-07-14T19:00:00Z",
+          "minute": 22,
+          "player": "Mikel Oyarzabal",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "22:00",
+          "timerSeconds": 1320,
+          "type": "Goal"
+        }
+      ],
+      "group": null,
+      "homeTeam": {
+        "crest": "https://crests.football-data.org/773.svg",
+        "id": 773,
+        "name": "France",
+        "shortName": "France",
+        "tla": "FRA"
+      },
+      "id": 537387,
+      "lastUpdated": "2026-07-14T22:59:16Z",
+      "matchDetails": {
+        "apiFootballFixtureId": 1585131,
+        "awayCorners": null,
+        "awayFouls": null,
+        "awayOffsides": null,
+        "awayPossession": null,
+        "awayShotsOnGoal": null,
+        "cardEvents": [
+          {
+            "assist": null,
+            "comments": "Foul",
+            "detail": "Yellow Card",
+            "displayMinute": "9'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 9,
+            "player": "Adrien Rabiot",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Card",
+            "source": "api_football",
+            "team": "France",
+            "timer": "9:00",
+            "timerSeconds": 540,
+            "type": "Yellow Card"
+          },
+          {
+            "assist": null,
+            "comments": "Foul",
+            "detail": "Yellow Card",
+            "displayMinute": "31'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 31,
+            "player": "Marc Cucurella",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Card",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "31:00",
+            "timerSeconds": 1860,
+            "type": "Yellow Card"
+          }
+        ],
+        "events": [
+          {
+            "assist": null,
+            "awayTeam": "Spain",
+            "comments": null,
+            "detail": "Penalty",
+            "displayMinute": "22'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "France",
+            "isDisallowed": false,
+            "matchId": 537387,
+            "matchUtcDate": "2026-07-14T19:00:00Z",
+            "minute": 22,
+            "player": "Mikel Oyarzabal",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "22:00",
+            "timerSeconds": 1320,
+            "type": "Goal"
+          }
+        ],
+        "goalEvents": [
+          {
+            "assist": null,
+            "awayTeam": "Spain",
+            "comments": null,
+            "detail": "Penalty",
+            "displayMinute": "22'",
+            "extra": null,
+            "goalNumber": 1,
+            "homeTeam": "France",
+            "isDisallowed": false,
+            "matchId": 537387,
+            "matchUtcDate": "2026-07-14T19:00:00Z",
+            "minute": 22,
+            "player": "Mikel Oyarzabal",
+            "playerOff": null,
+            "playerOn": null,
+            "rawType": "Goal",
+            "source": "api_football",
+            "team": "Spain",
+            "timer": "22:00",
+            "timerSeconds": 1320,
+            "type": "Goal"
+          }
+        ],
+        "goalEventsSource": null,
+        "homeCorners": null,
+        "homeFouls": null,
+        "homeOffsides": null,
+        "homePossession": null,
+        "homeShotsOnGoal": null,
+        "lineups": [],
+        "lineupsData": [],
+        "liveStatistics": {},
+        "officials": [
+          {
+            "id": 190010,
+            "name": "Ivan Barton",
+            "nationality": null,
+            "type": "REFEREE"
+          }
+        ],
+        "referees": [
+          {
+            "id": 190010,
+            "name": "Ivan Barton",
+            "nationality": null,
+            "type": "REFEREE"
+          }
+        ],
+        "substitutionEvents": [
+          {
+            "assist": "Maxence Lacroix",
+            "comments": null,
+            "detail": "Substitution 1",
+            "displayMinute": "30'",
+            "extra": null,
+            "isDisallowed": false,
+            "minute": 30,
+            "player": "William Saliba",
+            "playerOff": "William Saliba",
+            "playerOn": "Maxence Lacroix",
+            "rawType": "subst",
+            "source": "api_football",
+            "team": "France",
+            "timer": "30:00",
+            "timerSeconds": 1800,
+            "type": "Substitution"
+          }
+        ],
+        "weather": {}
+      },
+      "matchday": null,
+      "odds": {
+        "msg": "Activate Odds-Package in User-Panel to retrieve odds."
+      },
+      "referees": [
+        {
+          "id": 190010,
+          "name": "Ivan Barton",
+          "nationality": null,
+          "type": "REFEREE"
+        }
+      ],
+      "score": {
+        "duration": "REGULAR",
+        "fullTime": {
+          "away": 2,
+          "home": 0
+        },
+        "halfTime": {
+          "away": 1,
+          "home": 0
+        },
+        "winner": "AWAY_TEAM"
+      },
+      "season": {
+        "currentMatchday": 3,
+        "endDate": "2026-07-19",
+        "id": 2398,
+        "startDate": "2026-06-11",
+        "winner": null
+      },
+      "stage": "SEMI_FINALS",
+      "status": "FINISHED",
+      "substitutionEvents": [
+        {
+          "assist": "Maxence Lacroix",
+          "comments": null,
+          "detail": "Substitution 1",
+          "displayMinute": "30'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 30,
+          "player": "William Saliba",
+          "playerOff": "William Saliba",
+          "playerOn": "Maxence Lacroix",
+          "rawType": "subst",
+          "source": "api_football",
+          "team": "France",
+          "timer": "30:00",
+          "timerSeconds": 1800,
+          "type": "Substitution"
+        }
+      ],
+      "utcDate": "2026-07-14T19:00:00Z"
     }
   ]
 }
