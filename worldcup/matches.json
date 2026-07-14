@@ -44164,7 +44164,12 @@
         "id": 2267,
         "name": "World"
       },
+      "awayCorners": 0,
+      "awayFouls": null,
+      "awayOffsides": null,
+      "awayPossession": "69%",
       "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -44172,7 +44177,7 @@
         "shortName": "Spain",
         "tla": "ESP"
       },
-      "clockSeconds": 420,
+      "clockSeconds": 480,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -44181,11 +44186,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "7'",
-      "fallbackClock": 420,
-      "fallbackClockText": "7'",
+      "displayMinute": "8'",
+      "fallbackClock": 480,
+      "fallbackClockText": "8'",
       "group": null,
+      "homeCorners": 1,
+      "homeFouls": null,
+      "homeOffsides": null,
+      "homePossession": "31%",
       "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -44194,21 +44204,45 @@
         "tla": "FRA"
       },
       "id": 537387,
-      "lastApiSync": "2026-07-14T19:06:59.062896+00:00",
-      "lastUpdated": "2026-07-14T21:06:52Z",
+      "lastApiSync": "2026-07-14T19:07:23.324878+00:00",
+      "lastUpdated": "2026-07-14T21:07:16Z",
       "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 0,
+          "fouls": null,
+          "offsides": null,
+          "possession": "69%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": null,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": 1,
+          "fouls": null,
+          "offsides": null,
+          "possession": "31%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": null,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "7'",
-        "lastApiSync": "2026-07-14T19:06:59.062896+00:00",
-        "seconds": 420,
+        "displayMinute": "8'",
+        "lastApiSync": "2026-07-14T19:07:23.324878+00:00",
+        "seconds": 480,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "7'"
+        "timer": "8'"
       },
-      "manualClockText": "7'",
+      "manualClockText": "8'",
       "matchday": null,
-      "minute": 7,
+      "minute": 8,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
