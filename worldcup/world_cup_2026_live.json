@@ -8,6 +8,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -53,8 +54,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -62,7 +62,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -88,8 +88,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
       "goalEvents": [
         {
           "assist": null,
@@ -125,17 +123,17 @@
       },
       "id": 537387,
       "lastApiSync": "2026-07-14T19:59:48.317033+00:00",
-      "lastUpdated": "2026-07-14T22:08:19Z",
+      "lastUpdated": "2026-07-14T22:08:34Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
         "lastApiSync": "2026-07-14T19:59:48.317033+00:00",
         "seconds": 2700,
-        "source": "api_football_live_minute",
-        "status": "PAUSED",
-        "timer": "45'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "45:00"
       },
-      "manualClockText": "45'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
@@ -168,7 +166,7 @@
         "winner": null
       },
       "stage": "SEMI_FINALS",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "Maxence Lacroix",
@@ -201,6 +199,7 @@
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -246,8 +245,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 2700,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -255,7 +253,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "45'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -281,8 +279,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 2700,
-      "fallbackClockText": "45'",
       "goalEvents": [
         {
           "assist": null,
@@ -318,17 +314,17 @@
       },
       "id": 537387,
       "lastApiSync": "2026-07-14T19:59:48.317033+00:00",
-      "lastUpdated": "2026-07-14T22:08:19Z",
+      "lastUpdated": "2026-07-14T22:08:34Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
         "lastApiSync": "2026-07-14T19:59:48.317033+00:00",
         "seconds": 2700,
-        "source": "api_football_live_minute",
-        "status": "PAUSED",
-        "timer": "45'"
+        "source": "awaiting_api_football_minute",
+        "status": "IN_PLAY",
+        "timer": "45:00"
       },
-      "manualClockText": "45'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchday": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
@@ -361,7 +357,7 @@
         "winner": null
       },
       "stage": "SEMI_FINALS",
-      "status": "PAUSED",
+      "status": "IN_PLAY",
       "substitutionEvents": [
         {
           "assist": "Maxence Lacroix",
