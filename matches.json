@@ -44156,15 +44156,12 @@
     },
     {
       "apiFootballFixtureId": 1585131,
-      "apiFootballStatus": "HT",
-      "apiFootballStatusLong": "Halftime",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awayScore": 1,
       "awayTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -44223,29 +44220,16 @@
       "events": [
         {
           "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "9'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 9,
-          "player": "Adrien Rabiot",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "France",
-          "timer": "9:00",
-          "timerSeconds": 540,
-          "type": "Yellow Card"
-        },
-        {
-          "assist": null,
+          "awayTeam": "Spain",
           "comments": null,
           "detail": "Penalty",
           "displayMinute": "22'",
           "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "France",
           "isDisallowed": false,
+          "matchId": 537387,
+          "matchUtcDate": "2026-07-14T19:00:00Z",
           "minute": 22,
           "player": "Mikel Oyarzabal",
           "playerOff": null,
@@ -44255,43 +44239,7 @@
           "team": "Spain",
           "timer": "22:00",
           "timerSeconds": 1320,
-          "type": "Penalty"
-        },
-        {
-          "assist": "Maxence Lacroix",
-          "comments": null,
-          "detail": "Substitution 1",
-          "displayMinute": "30'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 30,
-          "player": "William Saliba",
-          "playerOff": "William Saliba",
-          "playerOn": "Maxence Lacroix",
-          "rawType": "subst",
-          "source": "api_football",
-          "team": "France",
-          "timer": "30:00",
-          "timerSeconds": 1800,
-          "type": "Substitution"
-        },
-        {
-          "assist": null,
-          "comments": "Foul",
-          "detail": "Yellow Card",
-          "displayMinute": "31'",
-          "extra": null,
-          "isDisallowed": false,
-          "minute": 31,
-          "player": "Marc Cucurella",
-          "playerOff": null,
-          "playerOn": null,
-          "rawType": "Card",
-          "source": "api_football",
-          "team": "Spain",
-          "timer": "31:00",
-          "timerSeconds": 1860,
-          "type": "Yellow Card"
+          "type": "Goal"
         }
       ],
       "fallbackClock": 2700,
@@ -44321,9 +44269,7 @@
           "type": "Goal"
         }
       ],
-      "goalEventsSource": "api_football_live",
       "group": null,
-      "homeScore": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/773.svg",
         "id": 773,
@@ -44333,40 +44279,26 @@
       },
       "id": 537387,
       "lastApiSync": "2026-07-14T19:59:48.317033+00:00",
-      "lastUpdated": "2026-07-14T21:59:46Z",
-      "liveSource": "api_football",
+      "lastUpdated": "2026-07-14T22:00:07Z",
       "manualClock": {
         "active": false,
         "displayMinute": "45'",
         "lastApiSync": "2026-07-14T19:59:48.317033+00:00",
         "seconds": 2700,
         "source": "api_football_live_minute",
-        "status": "HT",
+        "status": "PAUSED",
         "timer": "45'"
       },
       "manualClockText": "45'",
       "matchday": null,
-      "minute": 45,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "officials": [
-        {
-          "name": "Ivan Barton",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Iv\u00e1n Barton, El Salvador",
-          "type": "REFEREE"
-        }
-      ],
       "referees": [
         {
+          "id": 190010,
           "name": "Ivan Barton",
-          "type": "REFEREE"
-        },
-        {
-          "name": "Iv\u00e1n Barton, El Salvador",
+          "nationality": null,
           "type": "REFEREE"
         }
       ],
@@ -44382,7 +44314,6 @@
         },
         "winner": "AWAY_TEAM"
       },
-      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -44391,7 +44322,7 @@
         "winner": null
       },
       "stage": "SEMI_FINALS",
-      "status": "HT",
+      "status": "PAUSED",
       "substitutionEvents": [
         {
           "assist": "Maxence Lacroix",
@@ -44412,12 +44343,7 @@
           "type": "Substitution"
         }
       ],
-      "utcDate": "2026-07-14T19:00:00Z",
-      "venue": {
-        "city": null,
-        "id": 0,
-        "name": null
-      }
+      "utcDate": "2026-07-14T19:00:00Z"
     },
     {
       "area": {
