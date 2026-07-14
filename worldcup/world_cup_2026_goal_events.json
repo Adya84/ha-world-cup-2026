@@ -24030,7 +24030,7 @@
     "apiFootballFixtureId": 1585131,
     "awayScore": 1,
     "awayTeam": "Spain",
-    "base_seconds": 1800,
+    "base_seconds": 1860,
     "cardEvents": [
       {
         "assist": null,
@@ -24052,8 +24052,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 1800,
-    "displayMinute": "30'",
+    "clock_seconds": 1860,
+    "displayMinute": "31'",
     "events": [
       {
         "assist": null,
@@ -24090,6 +24090,24 @@
         "timer": "22:00",
         "timerSeconds": 1320,
         "type": "Penalty"
+      },
+      {
+        "assist": "Maxence Lacroix",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "30'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 30,
+        "player": "William Saliba",
+        "playerOff": "William Saliba",
+        "playerOn": "Maxence Lacroix",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "France",
+        "timer": "30:00",
+        "timerSeconds": 1800,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [
@@ -24119,9 +24137,9 @@
     ],
     "homeScore": 0,
     "homeTeam": "France",
-    "lastApiSync": "2026-07-14T19:30:31.711759+00:00",
-    "manualClockText": "30'",
-    "phase_start": "2026-07-14T19:30:31.711759+00:00",
+    "lastApiSync": "2026-07-14T19:30:55.544531+00:00",
+    "manualClockText": "31'",
+    "phase_start": "2026-07-14T19:30:55.544531+00:00",
     "referees": [
       {
         "name": "Ivan Barton",
@@ -24134,6 +24152,26 @@
     ],
     "source": "api_football_live_minute",
     "status": "1H",
+    "substitutionEvents": [
+      {
+        "assist": "Maxence Lacroix",
+        "comments": null,
+        "detail": "Substitution 1",
+        "displayMinute": "30'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 30,
+        "player": "William Saliba",
+        "playerOff": "William Saliba",
+        "playerOn": "Maxence Lacroix",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "France",
+        "timer": "30:00",
+        "timerSeconds": 1800,
+        "type": "Substitution"
+      }
+    ],
     "utcDate": "2026-07-14T19:00:00Z"
   },
   "537388": {
