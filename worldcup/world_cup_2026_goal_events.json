@@ -24028,7 +24028,7 @@
   },
   "537387": {
     "apiFootballFixtureId": 1585131,
-    "awayScore": 0,
+    "awayScore": 1,
     "awayTeam": "Spain",
     "base_seconds": 1380,
     "cardEvents": [
@@ -24072,14 +24072,56 @@
         "timer": "9:00",
         "timerSeconds": 540,
         "type": "Yellow Card"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Penalty",
+        "displayMinute": "22'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 22,
+        "player": "Mikel Oyarzabal",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "22:00",
+        "timerSeconds": 1320,
+        "type": "Penalty"
       }
     ],
-    "goalEvents": [],
+    "goalEvents": [
+      {
+        "assist": null,
+        "awayTeam": "Spain",
+        "comments": null,
+        "detail": "Penalty",
+        "displayMinute": "22'",
+        "extra": null,
+        "goalNumber": 1,
+        "homeTeam": "France",
+        "isDisallowed": false,
+        "matchId": 537387,
+        "matchUtcDate": "2026-07-14T19:00:00Z",
+        "minute": 22,
+        "player": "Mikel Oyarzabal",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "Spain",
+        "timer": "22:00",
+        "timerSeconds": 1320,
+        "type": "Goal"
+      }
+    ],
     "homeScore": 0,
     "homeTeam": "France",
-    "lastApiSync": "2026-07-14T19:22:21.402459+00:00",
+    "lastApiSync": "2026-07-14T19:22:44.508894+00:00",
     "manualClockText": "23'",
-    "phase_start": "2026-07-14T19:22:21.402459+00:00",
+    "phase_start": "2026-07-14T19:22:44.508894+00:00",
     "referees": [
       {
         "name": "Ivan Barton",
