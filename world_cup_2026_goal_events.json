@@ -24027,23 +24027,31 @@
     "utcDate": "2026-07-12T01:00:00Z"
   },
   "537387": {
+    "apiFootballFixtureId": 1585131,
     "awayScore": 0,
     "awayTeam": "Spain",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "France",
-    "phase_start": null,
+    "lastApiSync": "2026-07-14T19:01:14.120499+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-14T19:01:14.120499+00:00",
     "referees": [
       {
-        "id": 190010,
         "name": "Ivan Barton",
-        "nationality": null,
+        "type": "REFEREE"
+      },
+      {
+        "name": "Iv\u00e1n Barton, El Salvador",
         "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-14T19:00:00Z"
   },
   "537388": {
