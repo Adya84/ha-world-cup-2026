@@ -45449,6 +45449,24 @@
           "timer": "82:00",
           "timerSeconds": 4920,
           "type": "Substitution"
+        },
+        {
+          "assist": "L. Messi",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "86'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 86,
+          "player": "E. Fernandez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 5160,
@@ -45476,6 +45494,29 @@
           "timer": "55:00",
           "timerSeconds": 3300,
           "type": "Goal"
+        },
+        {
+          "assist": "L. Messi",
+          "awayTeam": "Argentina",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "86'",
+          "extra": null,
+          "goalNumber": 2,
+          "homeTeam": "England",
+          "isDisallowed": false,
+          "matchId": 537388,
+          "matchUtcDate": "2026-07-15T19:00:00Z",
+          "minute": 86,
+          "player": "E. Fernandez",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Argentina",
+          "timer": "86:00",
+          "timerSeconds": 5160,
+          "type": "Goal"
         }
       ],
       "goalEventsSource": "api_football_live",
@@ -45494,7 +45535,7 @@
         "tla": "ENG"
       },
       "id": 537388,
-      "lastApiSync": "2026-07-15T20:46:42.687235+00:00",
+      "lastApiSync": "2026-07-15T20:47:04.491779+00:00",
       "lastUpdated": "2026-07-15T22:46:27Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -45524,7 +45565,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "86'",
-        "lastApiSync": "2026-07-15T20:46:42.687235+00:00",
+        "lastApiSync": "2026-07-15T20:47:04.491779+00:00",
         "seconds": 5160,
         "source": "api_football_live_minute",
         "status": "2H",
