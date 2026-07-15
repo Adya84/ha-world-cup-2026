@@ -45167,7 +45167,27 @@
         "shortName": "Argentina",
         "tla": "ARG"
       },
-      "clockSeconds": 2220,
+      "cardEvents": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "38'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 38,
+          "player": "E. Anderson",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "England",
+          "timer": "38:00",
+          "timerSeconds": 2280,
+          "type": "Yellow Card"
+        }
+      ],
+      "clockSeconds": 2280,
       "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
@@ -45176,9 +45196,29 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "37'",
-      "fallbackClock": 2220,
-      "fallbackClockText": "37'",
+      "displayMinute": "38'",
+      "events": [
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Yellow Card",
+          "displayMinute": "38'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 38,
+          "player": "E. Anderson",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Card",
+          "source": "api_football",
+          "team": "England",
+          "timer": "38:00",
+          "timerSeconds": 2280,
+          "type": "Yellow Card"
+        }
+      ],
+      "fallbackClock": 2280,
+      "fallbackClockText": "38'",
       "group": null,
       "homeCorners": 1,
       "homeFouls": 6,
@@ -45194,8 +45234,8 @@
         "tla": "ENG"
       },
       "id": 537388,
-      "lastApiSync": "2026-07-15T19:37:28.468199+00:00",
-      "lastUpdated": "2026-07-15T21:37:25Z",
+      "lastApiSync": "2026-07-15T19:37:50.192438+00:00",
+      "lastUpdated": "2026-07-15T21:37:46Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -45223,16 +45263,16 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "37'",
-        "lastApiSync": "2026-07-15T19:37:28.468199+00:00",
-        "seconds": 2220,
+        "displayMinute": "38'",
+        "lastApiSync": "2026-07-15T19:37:50.192438+00:00",
+        "seconds": 2280,
         "source": "api_football_live_minute",
         "status": "1H",
-        "timer": "37'"
+        "timer": "38'"
       },
-      "manualClockText": "37'",
+      "manualClockText": "38'",
       "matchday": null,
-      "minute": 37,
+      "minute": 38,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
