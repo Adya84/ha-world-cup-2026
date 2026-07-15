@@ -24166,23 +24166,32 @@
     "utcDate": "2026-07-14T19:00:00Z"
   },
   "537388": {
+    "apiFootballFixtureId": 1586077,
     "awayScore": 0,
     "awayTeam": "Argentina",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "England",
-    "phase_start": null,
+    "lastApiSync": "2026-07-15T19:00:22.282627+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-15T19:00:22.282627+00:00",
     "referees": [
       {
-        "id": 76608,
         "name": "Ismail Elfath",
         "nationality": "United States",
         "type": "REFEREE"
+      },
+      {
+        "name": "Ismail Elfath, USA",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-15T19:00:00Z"
   },
   "537389": {
