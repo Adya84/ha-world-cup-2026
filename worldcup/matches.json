@@ -45146,8 +45146,8 @@
     },
     {
       "apiFootballFixtureId": 1586077,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -45241,8 +45241,6 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -45250,7 +45248,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -45559,8 +45556,6 @@
           "type": "Substitution"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": "M. Rogers",
@@ -45648,9 +45643,8 @@
         "tla": "ENG"
       },
       "id": 537388,
-      "lastApiSync": "2026-07-15T21:03:06.819594+00:00",
-      "lastUpdated": "2026-07-15T23:03:04Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-15T21:03:27.019435+00:00",
+      "lastUpdated": "2026-07-15T23:03:25Z",
       "liveStatistics": {
         "away": {
           "corners": 6,
@@ -45675,16 +45669,6 @@
           "yellowCards": 1
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-15T21:03:06.819594+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
       "matchday": null,
       "minute": 90,
       "odds": {
@@ -45733,7 +45717,7 @@
         "winner": null
       },
       "stage": "SEMI_FINALS",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "N. Gonzalez",
