@@ -45033,8 +45033,8 @@
     },
     {
       "apiFootballFixtureId": 1591865,
-      "apiFootballStatus": "2H",
-      "apiFootballStatusLong": "Second Half",
+      "apiFootballStatus": "FT",
+      "apiFootballStatusLong": "Match Finished",
       "area": {
         "code": "INT",
         "flag": null,
@@ -45054,8 +45054,6 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSeconds": 5400,
-      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -45063,7 +45061,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "90'",
       "events": [
         {
           "assist": null,
@@ -45426,8 +45423,6 @@
           "type": "Goal"
         }
       ],
-      "fallbackClock": 5400,
-      "fallbackClockText": "90'",
       "goalEvents": [
         {
           "assist": null,
@@ -45676,9 +45671,8 @@
         "tla": "FRA"
       },
       "id": 537389,
-      "lastApiSync": "2026-07-18T23:01:57.044468+00:00",
-      "lastUpdated": "2026-07-19T01:01:54Z",
-      "liveSource": "api_football",
+      "lastApiSync": "2026-07-18T23:02:19.720806+00:00",
+      "lastUpdated": "2026-07-19T01:02:15Z",
       "liveStatistics": {
         "away": {
           "corners": 4,
@@ -45703,16 +45697,6 @@
           "yellowCards": null
         }
       },
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-18T23:01:57.044468+00:00",
-        "seconds": 5400,
-        "source": "api_football_live_minute",
-        "status": "2H",
-        "timer": "90'"
-      },
-      "manualClockText": "90'",
       "matchday": null,
       "minute": 90,
       "odds": {
@@ -45761,7 +45745,7 @@
         "winner": null
       },
       "stage": "THIRD_PLACE",
-      "status": "2H",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "O. Dembele",
