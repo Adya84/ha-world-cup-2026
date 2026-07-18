@@ -24752,23 +24752,32 @@
     "utcDate": "2026-07-15T19:00:00Z"
   },
   "537389": {
+    "apiFootballFixtureId": 1591865,
     "awayScore": 0,
     "awayTeam": "England",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "France",
-    "phase_start": null,
+    "lastApiSync": "2026-07-18T21:01:20.235763+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-18T21:01:20.235763+00:00",
     "referees": [
       {
-        "id": 28805,
         "name": "Jes\u00fas Valenzuela",
         "nationality": "Venezuela",
         "type": "REFEREE"
+      },
+      {
+        "name": "Jes\u00fas Valenzuela, Venezuela",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "LIVE",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-18T21:00:00Z"
   },
   "537390": {
