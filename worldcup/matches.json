@@ -45039,7 +45039,6 @@
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayTeam": {
         "crest": "https://crests.football-data.org/770.svg",
         "id": 770,
@@ -45047,7 +45046,6 @@
         "shortName": "England",
         "tla": "ENG"
       },
-      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -45055,7 +45053,6 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -45529,18 +45526,7 @@
         "tla": "FRA"
       },
       "id": 537389,
-      "lastApiSync": "2026-07-18T23:01:57.044468+00:00",
-      "lastUpdated": "2026-07-19T01:02:42Z",
-      "manualClock": {
-        "active": false,
-        "displayMinute": "90'",
-        "lastApiSync": "2026-07-18T23:01:57.044468+00:00",
-        "seconds": 5400,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "90:00"
-      },
-      "manualClockText": "Awaiting kickoff API data",
+      "lastUpdated": "2026-07-19T01:03:00Z",
       "matchday": null,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
@@ -45573,7 +45559,7 @@
         "winner": null
       },
       "stage": "THIRD_PLACE",
-      "status": "IN_PLAY",
+      "status": "FINISHED",
       "substitutionEvents": [
         {
           "assist": "O. Dembele",
