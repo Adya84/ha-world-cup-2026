@@ -24755,10 +24755,10 @@
     "apiFootballFixtureId": 1591865,
     "awayScore": 4,
     "awayTeam": "England",
-    "base_seconds": 3240,
+    "base_seconds": 3300,
     "clock_active": false,
-    "clock_seconds": 3240,
-    "displayMinute": "54'",
+    "clock_seconds": 3300,
+    "displayMinute": "55'",
     "events": [
       {
         "assist": null,
@@ -24939,6 +24939,24 @@
         "timer": "48:00",
         "timerSeconds": 2880,
         "type": "Goal"
+      },
+      {
+        "assist": "K. Mbappe",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "54'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 54,
+        "player": "B. Barcola",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "France",
+        "timer": "54:00",
+        "timerSeconds": 3240,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -25056,13 +25074,36 @@
         "timer": "48:00",
         "timerSeconds": 2880,
         "type": "Goal"
+      },
+      {
+        "assist": "K. Mbappe",
+        "awayTeam": "England",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "54'",
+        "extra": null,
+        "goalNumber": 6,
+        "homeTeam": "France",
+        "isDisallowed": false,
+        "matchId": 537389,
+        "matchUtcDate": "2026-07-18T21:00:00Z",
+        "minute": 54,
+        "player": "B. Barcola",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "France",
+        "timer": "54:00",
+        "timerSeconds": 3240,
+        "type": "Goal"
       }
     ],
     "homeScore": 1,
     "homeTeam": "France",
-    "lastApiSync": "2026-07-18T22:17:14.604891+00:00",
-    "manualClockText": "54'",
-    "phase_start": "2026-07-18T22:17:14.604891+00:00",
+    "lastApiSync": "2026-07-18T22:17:35.681737+00:00",
+    "manualClockText": "55'",
+    "phase_start": "2026-07-18T22:17:35.681737+00:00",
     "referees": [
       {
         "name": "Jes\u00fas Valenzuela",
