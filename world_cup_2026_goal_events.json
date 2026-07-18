@@ -24753,7 +24753,7 @@
   },
   "537389": {
     "apiFootballFixtureId": 1591865,
-    "awayScore": 3,
+    "awayScore": 4,
     "awayTeam": "England",
     "base_seconds": 2700,
     "clock_active": false,
@@ -24812,6 +24812,24 @@
         "team": "England",
         "timer": "37:00",
         "timerSeconds": 2220,
+        "type": "Goal"
+      },
+      {
+        "assist": "E. Eze",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "45+2'",
+        "extra": 2,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "B. Saka",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "47:00",
+        "timerSeconds": 2820,
         "type": "Goal"
       }
     ],
@@ -24884,13 +24902,36 @@
         "timer": "37:00",
         "timerSeconds": 2220,
         "type": "Goal"
+      },
+      {
+        "assist": "E. Eze",
+        "awayTeam": "England",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "45+2'",
+        "extra": 2,
+        "goalNumber": 4,
+        "homeTeam": "France",
+        "isDisallowed": false,
+        "matchId": 537389,
+        "matchUtcDate": "2026-07-18T21:00:00Z",
+        "minute": 45,
+        "player": "B. Saka",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "47:00",
+        "timerSeconds": 2820,
+        "type": "Goal"
       }
     ],
     "homeScore": 0,
     "homeTeam": "France",
-    "lastApiSync": "2026-07-18T21:46:43.296421+00:00",
+    "lastApiSync": "2026-07-18T21:47:04.516487+00:00",
     "manualClockText": "45'",
-    "phase_start": "2026-07-18T21:46:43.296421+00:00",
+    "phase_start": "2026-07-18T21:47:04.516487+00:00",
     "referees": [
       {
         "name": "Jes\u00fas Valenzuela",
