@@ -24753,7 +24753,7 @@
   },
   "537389": {
     "apiFootballFixtureId": 1591865,
-    "awayScore": 5,
+    "awayScore": 6,
     "awayTeam": "England",
     "base_seconds": 5400,
     "clock_active": false,
@@ -25101,6 +25101,24 @@
         "timer": "96:00",
         "timerSeconds": 5760,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "90+8'",
+        "extra": 8,
+        "isDisallowed": false,
+        "minute": 90,
+        "player": "J. Bellingham",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "98:00",
+        "timerSeconds": 5880,
+        "type": "Goal"
       }
     ],
     "goalEvents": [
@@ -25310,13 +25328,36 @@
         "timer": "96:00",
         "timerSeconds": 5760,
         "type": "Goal"
+      },
+      {
+        "assist": null,
+        "awayTeam": "England",
+        "comments": null,
+        "detail": "Normal Goal",
+        "displayMinute": "90+8'",
+        "extra": 8,
+        "goalNumber": 10,
+        "homeTeam": "France",
+        "isDisallowed": false,
+        "matchId": 537389,
+        "matchUtcDate": "2026-07-18T21:00:00Z",
+        "minute": 90,
+        "player": "J. Bellingham",
+        "playerOff": null,
+        "playerOn": null,
+        "rawType": "Goal",
+        "source": "api_football",
+        "team": "England",
+        "timer": "98:00",
+        "timerSeconds": 5880,
+        "type": "Goal"
       }
     ],
     "homeScore": 4,
     "homeTeam": "France",
-    "lastApiSync": "2026-07-18T23:00:51.144294+00:00",
+    "lastApiSync": "2026-07-18T23:01:14.005058+00:00",
     "manualClockText": "90'",
-    "phase_start": "2026-07-18T23:00:51.144294+00:00",
+    "phase_start": "2026-07-18T23:01:14.005058+00:00",
     "referees": [
       {
         "name": "Jes\u00fas Valenzuela",
