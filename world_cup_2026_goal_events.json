@@ -25763,7 +25763,7 @@
     "apiFootballFixtureId": 1591866,
     "awayScore": 0,
     "awayTeam": "Argentina",
-    "base_seconds": 4200,
+    "base_seconds": 4260,
     "cardEvents": [
       {
         "assist": null,
@@ -25803,8 +25803,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 4200,
-    "displayMinute": "70'",
+    "clock_seconds": 4260,
+    "displayMinute": "71'",
     "events": [
       {
         "assist": null,
@@ -25931,14 +25931,50 @@
         "timer": "62:00",
         "timerSeconds": 3720,
         "type": "Substitution"
+      },
+      {
+        "assist": "Facundo Medina",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "70'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 70,
+        "player": "Cristian Romero",
+        "playerOff": "Cristian Romero",
+        "playerOn": "Facundo Medina",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "70:00",
+        "timerSeconds": 4200,
+        "type": "Substitution"
+      },
+      {
+        "assist": "Giuliano Simeone Baldini",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "70'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 70,
+        "player": "Rodrigo De Paul",
+        "playerOff": "Rodrigo De Paul",
+        "playerOn": "Giuliano Simeone Baldini",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "70:00",
+        "timerSeconds": 4200,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Spain",
-    "lastApiSync": "2026-07-19T20:47:27.043419+00:00",
-    "manualClockText": "70'",
-    "phase_start": "2026-07-19T20:47:27.043419+00:00",
+    "lastApiSync": "2026-07-19T20:47:47.450757+00:00",
+    "manualClockText": "71'",
+    "phase_start": "2026-07-19T20:47:47.450757+00:00",
     "referees": [
       {
         "name": "Slavko Vin\u010di\u010d",
@@ -26041,6 +26077,42 @@
         "team": "Spain",
         "timer": "62:00",
         "timerSeconds": 3720,
+        "type": "Substitution"
+      },
+      {
+        "assist": "Facundo Medina",
+        "comments": null,
+        "detail": "Substitution 4",
+        "displayMinute": "70'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 70,
+        "player": "Cristian Romero",
+        "playerOff": "Cristian Romero",
+        "playerOn": "Facundo Medina",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "70:00",
+        "timerSeconds": 4200,
+        "type": "Substitution"
+      },
+      {
+        "assist": "Giuliano Simeone Baldini",
+        "comments": null,
+        "detail": "Substitution 5",
+        "displayMinute": "70'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 70,
+        "player": "Rodrigo De Paul",
+        "playerOff": "Rodrigo De Paul",
+        "playerOn": "Giuliano Simeone Baldini",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "70:00",
+        "timerSeconds": 4200,
         "type": "Substitution"
       }
     ],
