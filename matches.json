@@ -46557,16 +46557,60 @@
           "timer": "104:00",
           "timerSeconds": 6240,
           "type": "Yellow Card"
+        },
+        {
+          "assist": null,
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "106'",
+          "extra": null,
+          "isDisallowed": false,
+          "minute": 106,
+          "player": "Ferr\u00e1n Torres",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "106:00",
+          "timerSeconds": 6360,
+          "type": "Goal"
         }
       ],
       "fallbackClock": 6420,
       "fallbackClockText": "107'",
+      "goalEvents": [
+        {
+          "assist": null,
+          "awayTeam": "Argentina",
+          "comments": null,
+          "detail": "Normal Goal",
+          "displayMinute": "106'",
+          "extra": null,
+          "goalNumber": 1,
+          "homeTeam": "Spain",
+          "isDisallowed": false,
+          "matchId": 537390,
+          "matchUtcDate": "2026-07-19T19:00:00Z",
+          "minute": 106,
+          "player": "Ferr\u00e1n Torres",
+          "playerOff": null,
+          "playerOn": null,
+          "rawType": "Goal",
+          "source": "api_football",
+          "team": "Spain",
+          "timer": "106:00",
+          "timerSeconds": 6360,
+          "type": "Goal"
+        }
+      ],
+      "goalEventsSource": "api_football_live",
       "group": null,
       "homeCorners": 9,
       "homeFouls": 16,
       "homeOffsides": 2,
       "homePossession": "67%",
-      "homeScore": 0,
+      "homeScore": 1,
       "homeShotsOnGoal": 11,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
@@ -46576,7 +46620,7 @@
         "tla": "ESP"
       },
       "id": 537390,
-      "lastApiSync": "2026-07-19T21:43:25.876459+00:00",
+      "lastApiSync": "2026-07-19T21:43:45.875875+00:00",
       "lastUpdated": "2026-07-19T23:42:52Z",
       "liveSource": "api_football",
       "liveStatistics": {
@@ -46606,7 +46650,7 @@
       "manualClock": {
         "active": false,
         "displayMinute": "107'",
-        "lastApiSync": "2026-07-19T21:43:25.876459+00:00",
+        "lastApiSync": "2026-07-19T21:43:45.875875+00:00",
         "seconds": 6420,
         "source": "api_football_live_minute",
         "status": "ET",
@@ -46667,7 +46711,7 @@
         "duration": "REGULAR",
         "fullTime": {
           "away": 0,
-          "home": 0
+          "home": 1
         },
         "halfTime": {
           "away": 0,
