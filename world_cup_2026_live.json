@@ -2,14 +2,15 @@
   "live": [
     {
       "apiFootballFixtureId": 1591866,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 4,
       "awayFouls": 25,
       "awayOffsides": 1,
@@ -133,8 +134,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7200,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -142,7 +142,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "120'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -487,8 +487,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 7200,
-      "fallbackClockText": "120'",
       "goalEvents": [
         {
           "assist": "Nico Williams",
@@ -562,11 +560,11 @@
         "displayMinute": "120'",
         "lastApiSync": "2026-07-19T22:02:28.845157+00:00",
         "seconds": 7200,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "120'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "120:00"
       },
-      "manualClockText": "120'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -591,7 +589,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -646,7 +643,7 @@
         "winner": null
       },
       "stage": "FINAL",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "Nicol\u00e1s Otamendi",
@@ -899,14 +896,15 @@
   "matches": [
     {
       "apiFootballFixtureId": 1591866,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 4,
       "awayFouls": 25,
       "awayOffsides": 1,
@@ -1030,8 +1028,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 7200,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -1039,7 +1036,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "120'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -1384,8 +1381,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 7200,
-      "fallbackClockText": "120'",
       "goalEvents": [
         {
           "assist": "Nico Williams",
@@ -1459,11 +1454,11 @@
         "displayMinute": "120'",
         "lastApiSync": "2026-07-19T22:02:28.845157+00:00",
         "seconds": 7200,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "120'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "120:00"
       },
-      "manualClockText": "120'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -1488,7 +1483,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 120,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1543,7 +1537,7 @@
         "winner": null
       },
       "stage": "FINAL",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "Nicol\u00e1s Otamendi",
