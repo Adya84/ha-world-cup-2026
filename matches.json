@@ -46336,13 +46336,21 @@
       "utcDate": "2026-07-18T21:00:00Z"
     },
     {
+      "apiFootballFixtureId": 1591866,
+      "apiFootballStatus": "1H",
+      "apiFootballStatusLong": "First Half",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
+      "awayCorners": 0,
+      "awayFouls": null,
+      "awayOffsides": null,
+      "awayPossession": "50%",
+      "awayScore": 0,
+      "awayShotsOnGoal": 0,
       "awayTeam": {
         "crest": "https://crests.football-data.org/762.png",
         "id": 762,
@@ -46350,7 +46358,8 @@
         "shortName": "Argentina",
         "tla": "ARG"
       },
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 60,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -46358,8 +46367,16 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "1'",
+      "fallbackClock": 60,
+      "fallbackClockText": "1'",
       "group": null,
+      "homeCorners": 0,
+      "homeFouls": null,
+      "homeOffsides": null,
+      "homePossession": "50%",
+      "homeScore": 0,
+      "homeShotsOnGoal": 0,
       "homeTeam": {
         "crest": "https://crests.football-data.org/760.svg",
         "id": 760,
@@ -46368,27 +46385,90 @@
         "tla": "ESP"
       },
       "id": 537390,
-      "lastApiSync": null,
-      "lastUpdated": "2026-07-19T21:06:21Z",
+      "lastApiSync": "2026-07-19T19:06:40.661913+00:00",
+      "lastUpdated": "2026-07-19T21:06:36Z",
+      "liveSource": "api_football",
+      "liveStatistics": {
+        "away": {
+          "corners": 0,
+          "fouls": null,
+          "offsides": null,
+          "possession": "50%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": 0
+        },
+        "home": {
+          "corners": 0,
+          "fouls": null,
+          "offsides": null,
+          "possession": "50%",
+          "redCards": 0,
+          "shotsOffGoal": 0,
+          "shotsOnGoal": 0,
+          "totalShots": 0,
+          "yellowCards": 0
+        }
+      },
       "manualClock": {
         "active": false,
-        "displayMinute": "0'",
-        "lastApiSync": null,
-        "seconds": 0,
-        "source": "awaiting_api_football_minute",
-        "status": "IN_PLAY",
-        "timer": "0:00"
+        "displayMinute": "1'",
+        "lastApiSync": "2026-07-19T19:06:40.661913+00:00",
+        "seconds": 60,
+        "source": "api_football_live_minute",
+        "status": "1H",
+        "timer": "1'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "1'",
+      "matchWeather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 1.6,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-19T19:06:40.484808+00:00",
+        "humidity": 49.1,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-07-19T18:00:00Z",
+        "pressure": 1010.4,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 25.0,
+        "temperatureUnit": "C",
+        "windBearing": 315.7,
+        "windSpeed": 4.0,
+        "windSpeedUnit": "m/s"
+      },
       "matchday": null,
+      "minute": 1,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
-      "referees": [
+      "officials": [
         {
-          "id": 9351,
           "name": "Slavko Vin\u010di\u010d",
           "nationality": "Slovenia",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Slavko Vin\u010di\u0107, Slovenia",
+          "type": "REFEREE"
+        }
+      ],
+      "referees": [
+        {
+          "name": "Slavko Vin\u010di\u010d",
+          "nationality": "Slovenia",
+          "type": "REFEREE"
+        },
+        {
+          "name": "Slavko Vin\u010di\u0107, Slovenia",
           "type": "REFEREE"
         }
       ],
@@ -46399,11 +46479,12 @@
           "home": 0
         },
         "halfTime": {
-          "away": null,
-          "home": null
+          "away": 0,
+          "home": 0
         },
         "winner": "DRAW"
       },
+      "scoreSource": "api_football_live",
       "season": {
         "currentMatchday": 3,
         "endDate": "2026-07-19",
@@ -46412,8 +46493,36 @@
         "winner": null
       },
       "stage": "FINAL",
-      "status": "IN_PLAY",
-      "utcDate": "2026-07-19T19:00:00Z"
+      "status": "1H",
+      "utcDate": "2026-07-19T19:00:00Z",
+      "venue": {
+        "city": "East Rutherford",
+        "id": 0,
+        "name": "MetLife Stadium"
+      },
+      "weather": {
+        "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
+        "city": "New York/New Jersey",
+        "cloudCoverage": 1.6,
+        "condition": "clearsky_day",
+        "country": "USA",
+        "dewPoint": null,
+        "fetchedAt": "2026-07-19T19:06:40.484808+00:00",
+        "humidity": 49.1,
+        "latitude": 40.8135,
+        "longitude": -74.0745,
+        "name": "MetLife Stadium weather",
+        "observedAt": "2026-07-19T18:00:00Z",
+        "pressure": 1010.4,
+        "pressureUnit": "hPa",
+        "source": "met_no_stadium",
+        "stadium": "MetLife Stadium",
+        "temperature": 25.0,
+        "temperatureUnit": "C",
+        "windBearing": 315.7,
+        "windSpeed": 4.0,
+        "windSpeedUnit": "m/s"
+      }
     }
   ]
 }
