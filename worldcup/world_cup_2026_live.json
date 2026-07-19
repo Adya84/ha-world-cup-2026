@@ -2,15 +2,14 @@
   "live": [
     {
       "apiFootballFixtureId": 1591866,
-      "apiFootballStatus": "BT",
-      "apiFootballStatusLong": "Break Time",
+      "apiFootballStatus": "ET",
+      "apiFootballStatusLong": "Extra Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 1,
       "awayFouls": 22,
       "awayOffsides": 1,
@@ -116,7 +115,8 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 6360,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -124,7 +124,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "106'",
       "events": [
         {
           "assist": null,
@@ -433,6 +433,8 @@
           "type": "Yellow Card"
         }
       ],
+      "fallbackClock": 6360,
+      "fallbackClockText": "106'",
       "group": null,
       "homeCorners": 9,
       "homeFouls": 16,
@@ -448,8 +450,8 @@
         "tla": "ESP"
       },
       "id": 537390,
-      "lastApiSync": "2026-07-19T21:39:04.930622+00:00",
-      "lastUpdated": "2026-07-19T23:42:03Z",
+      "lastApiSync": "2026-07-19T21:42:24.292541+00:00",
+      "lastUpdated": "2026-07-19T23:42:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -477,14 +479,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "108'",
-        "lastApiSync": "2026-07-19T21:39:04.930622+00:00",
-        "seconds": 6480,
-        "source": "awaiting_api_football_minute",
-        "status": "BT",
-        "timer": "108:00"
+        "displayMinute": "106'",
+        "lastApiSync": "2026-07-19T21:42:24.292541+00:00",
+        "seconds": 6360,
+        "source": "api_football_live_minute",
+        "status": "ET",
+        "timer": "106'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "106'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -509,6 +511,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
+      "minute": 106,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -555,7 +558,7 @@
         "winner": null
       },
       "stage": "FINAL",
-      "status": "BT",
+      "status": "ET",
       "substitutionEvents": [
         {
           "assist": "Nicol\u00e1s Otamendi",
@@ -808,15 +811,14 @@
   "matches": [
     {
       "apiFootballFixtureId": 1591866,
-      "apiFootballStatus": "BT",
-      "apiFootballStatusLong": "Break Time",
+      "apiFootballStatus": "ET",
+      "apiFootballStatusLong": "Extra Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
-      "awaitingLiveApiData": true,
       "awayCorners": 1,
       "awayFouls": 22,
       "awayOffsides": 1,
@@ -922,7 +924,8 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSource": "awaiting_api_football_minute",
+      "clockSeconds": 6360,
+      "clockSource": "api_football_live_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -930,7 +933,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "Awaiting kickoff API data",
+      "displayMinute": "106'",
       "events": [
         {
           "assist": null,
@@ -1239,6 +1242,8 @@
           "type": "Yellow Card"
         }
       ],
+      "fallbackClock": 6360,
+      "fallbackClockText": "106'",
       "group": null,
       "homeCorners": 9,
       "homeFouls": 16,
@@ -1254,8 +1259,8 @@
         "tla": "ESP"
       },
       "id": 537390,
-      "lastApiSync": "2026-07-19T21:39:04.930622+00:00",
-      "lastUpdated": "2026-07-19T23:42:03Z",
+      "lastApiSync": "2026-07-19T21:42:24.292541+00:00",
+      "lastUpdated": "2026-07-19T23:42:21Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1283,14 +1288,14 @@
       },
       "manualClock": {
         "active": false,
-        "displayMinute": "108'",
-        "lastApiSync": "2026-07-19T21:39:04.930622+00:00",
-        "seconds": 6480,
-        "source": "awaiting_api_football_minute",
-        "status": "BT",
-        "timer": "108:00"
+        "displayMinute": "106'",
+        "lastApiSync": "2026-07-19T21:42:24.292541+00:00",
+        "seconds": 6360,
+        "source": "api_football_live_minute",
+        "status": "ET",
+        "timer": "106'"
       },
-      "manualClockText": "Awaiting kickoff API data",
+      "manualClockText": "106'",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -1315,6 +1320,7 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
+      "minute": 106,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1361,7 +1367,7 @@
         "winner": null
       },
       "stage": "FINAL",
-      "status": "BT",
+      "status": "ET",
       "substitutionEvents": [
         {
           "assist": "Nicol\u00e1s Otamendi",
