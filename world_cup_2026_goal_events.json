@@ -25923,23 +25923,32 @@
     "utcDate": "2026-07-18T21:00:00Z"
   },
   "537390": {
+    "apiFootballFixtureId": 1591866,
     "awayScore": 0,
     "awayTeam": "Argentina",
+    "base_seconds": 60,
     "clock_active": false,
+    "clock_seconds": 60,
+    "displayMinute": "1'",
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Spain",
-    "phase_start": null,
+    "lastApiSync": "2026-07-19T19:06:40.661913+00:00",
+    "manualClockText": "1'",
+    "phase_start": "2026-07-19T19:06:40.661913+00:00",
     "referees": [
       {
-        "id": 9351,
         "name": "Slavko Vin\u010di\u010d",
         "nationality": "Slovenia",
         "type": "REFEREE"
+      },
+      {
+        "name": "Slavko Vin\u010di\u0107, Slovenia",
+        "type": "REFEREE"
       }
     ],
-    "source": "awaiting_api_football_minute",
-    "status": "IN_PLAY",
+    "source": "api_football_live_minute",
+    "status": "1H",
     "utcDate": "2026-07-19T19:00:00Z"
   },
   "537391": {
