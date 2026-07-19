@@ -2,14 +2,15 @@
   "live": [
     {
       "apiFootballFixtureId": 1591866,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 1,
       "awayFouls": 21,
       "awayOffsides": 1,
@@ -115,8 +116,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6480,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -124,7 +124,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "108'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -433,8 +433,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 6480,
-      "fallbackClockText": "108'",
       "group": null,
       "homeCorners": 9,
       "homeFouls": 16,
@@ -451,7 +449,7 @@
       },
       "id": 537390,
       "lastApiSync": "2026-07-19T21:39:04.930622+00:00",
-      "lastUpdated": "2026-07-19T23:39:03Z",
+      "lastUpdated": "2026-07-19T23:39:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -482,11 +480,11 @@
         "displayMinute": "108'",
         "lastApiSync": "2026-07-19T21:39:04.930622+00:00",
         "seconds": 6480,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "108'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "108:00"
       },
-      "manualClockText": "108'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -494,7 +492,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-19T21:29:21.552339+00:00",
+        "fetchedAt": "2026-07-19T21:39:25.216993+00:00",
         "humidity": 42.0,
         "latitude": 40.8135,
         "longitude": -74.0745,
@@ -511,7 +509,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 108,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -558,7 +555,7 @@
         "winner": null
       },
       "stage": "FINAL",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "Nicol\u00e1s Otamendi",
@@ -790,7 +787,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-19T21:29:21.552339+00:00",
+        "fetchedAt": "2026-07-19T21:39:25.216993+00:00",
         "humidity": 42.0,
         "latitude": 40.8135,
         "longitude": -74.0745,
@@ -811,14 +808,15 @@
   "matches": [
     {
       "apiFootballFixtureId": 1591866,
-      "apiFootballStatus": "ET",
-      "apiFootballStatusLong": "Extra Time",
+      "apiFootballStatus": "BT",
+      "apiFootballStatusLong": "Break Time",
       "area": {
         "code": "INT",
         "flag": null,
         "id": 2267,
         "name": "World"
       },
+      "awaitingLiveApiData": true,
       "awayCorners": 1,
       "awayFouls": 21,
       "awayOffsides": 1,
@@ -924,8 +922,7 @@
           "type": "Yellow Card"
         }
       ],
-      "clockSeconds": 6480,
-      "clockSource": "api_football_live_minute",
+      "clockSource": "awaiting_api_football_minute",
       "competition": {
         "code": "WC",
         "emblem": "https://crests.football-data.org/wm26.png",
@@ -933,7 +930,7 @@
         "name": "FIFA World Cup",
         "type": "CUP"
       },
-      "displayMinute": "108'",
+      "displayMinute": "Awaiting kickoff API data",
       "events": [
         {
           "assist": null,
@@ -1242,8 +1239,6 @@
           "type": "Yellow Card"
         }
       ],
-      "fallbackClock": 6480,
-      "fallbackClockText": "108'",
       "group": null,
       "homeCorners": 9,
       "homeFouls": 16,
@@ -1260,7 +1255,7 @@
       },
       "id": 537390,
       "lastApiSync": "2026-07-19T21:39:04.930622+00:00",
-      "lastUpdated": "2026-07-19T23:39:03Z",
+      "lastUpdated": "2026-07-19T23:39:24Z",
       "liveSource": "api_football",
       "liveStatistics": {
         "away": {
@@ -1291,11 +1286,11 @@
         "displayMinute": "108'",
         "lastApiSync": "2026-07-19T21:39:04.930622+00:00",
         "seconds": 6480,
-        "source": "api_football_live_minute",
-        "status": "ET",
-        "timer": "108'"
+        "source": "awaiting_api_football_minute",
+        "status": "BT",
+        "timer": "108:00"
       },
-      "manualClockText": "108'",
+      "manualClockText": "Awaiting kickoff API data",
       "matchWeather": {
         "attribution": "Weather forecast from met.no, delivered by the Norwegian Meteorological Institute.",
         "city": "New York/New Jersey",
@@ -1303,7 +1298,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-19T21:29:21.552339+00:00",
+        "fetchedAt": "2026-07-19T21:39:25.216993+00:00",
         "humidity": 42.0,
         "latitude": 40.8135,
         "longitude": -74.0745,
@@ -1320,7 +1315,6 @@
         "windSpeedUnit": "m/s"
       },
       "matchday": null,
-      "minute": 108,
       "odds": {
         "msg": "Activate Odds-Package in User-Panel to retrieve odds."
       },
@@ -1367,7 +1361,7 @@
         "winner": null
       },
       "stage": "FINAL",
-      "status": "ET",
+      "status": "BT",
       "substitutionEvents": [
         {
           "assist": "Nicol\u00e1s Otamendi",
@@ -1599,7 +1593,7 @@
         "condition": "clearsky_day",
         "country": "USA",
         "dewPoint": null,
-        "fetchedAt": "2026-07-19T21:29:21.552339+00:00",
+        "fetchedAt": "2026-07-19T21:39:25.216993+00:00",
         "humidity": 42.0,
         "latitude": 40.8135,
         "longitude": -74.0745,
