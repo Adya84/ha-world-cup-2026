@@ -25763,7 +25763,7 @@
     "apiFootballFixtureId": 1591866,
     "awayScore": 0,
     "awayTeam": "Argentina",
-    "base_seconds": 2700,
+    "base_seconds": 2760,
     "cardEvents": [
       {
         "assist": null,
@@ -25785,8 +25785,8 @@
       }
     ],
     "clock_active": false,
-    "clock_seconds": 2700,
-    "displayMinute": "45'",
+    "clock_seconds": 2760,
+    "displayMinute": "46'",
     "events": [
       {
         "assist": null,
@@ -25823,14 +25823,32 @@
         "timer": "44:00",
         "timerSeconds": 2640,
         "type": "Substitution"
+      },
+      {
+        "assist": "Leandro Paredes",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "45'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "Nicol\u00e1s Iv\u00e1n Gonzalez",
+        "playerOff": "Nicol\u00e1s Iv\u00e1n Gonzalez",
+        "playerOn": "Leandro Paredes",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "45:00",
+        "timerSeconds": 2700,
+        "type": "Substitution"
       }
     ],
     "goalEvents": [],
     "homeScore": 0,
     "homeTeam": "Spain",
-    "lastApiSync": "2026-07-19T20:22:21.020493+00:00",
-    "manualClockText": "45'",
-    "phase_start": "2026-07-19T20:22:21.020493+00:00",
+    "lastApiSync": "2026-07-19T20:22:41.572909+00:00",
+    "manualClockText": "46'",
+    "phase_start": "2026-07-19T20:22:41.572909+00:00",
     "referees": [
       {
         "name": "Slavko Vin\u010di\u010d",
@@ -25843,7 +25861,7 @@
       }
     ],
     "source": "api_football_live_minute",
-    "status": "HT",
+    "status": "2H",
     "substitutionEvents": [
       {
         "assist": "Nicol\u00e1s Otamendi",
@@ -25861,6 +25879,24 @@
         "team": "Argentina",
         "timer": "44:00",
         "timerSeconds": 2640,
+        "type": "Substitution"
+      },
+      {
+        "assist": "Leandro Paredes",
+        "comments": null,
+        "detail": "Substitution 2",
+        "displayMinute": "45'",
+        "extra": null,
+        "isDisallowed": false,
+        "minute": 45,
+        "player": "Nicol\u00e1s Iv\u00e1n Gonzalez",
+        "playerOff": "Nicol\u00e1s Iv\u00e1n Gonzalez",
+        "playerOn": "Leandro Paredes",
+        "rawType": "subst",
+        "source": "api_football",
+        "team": "Argentina",
+        "timer": "45:00",
+        "timerSeconds": 2700,
         "type": "Substitution"
       }
     ],
